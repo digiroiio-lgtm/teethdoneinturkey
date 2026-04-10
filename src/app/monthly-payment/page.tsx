@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const ukVsTurkeyComparison = [
   { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "£190–£250", monthly: "From £6/mo" },
-  { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "£3,200–£5,000", monthly: "From £95/mo" },
+  { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "£3,800–£5,000", monthly: "From £106/mo" },
   { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£420–£600", monthly: "From £14/mo" },
   { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,000–£5,500", monthly: "From £120/mo" },
   { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "£5,000–£7,000", monthly: "From £150/mo" },
@@ -100,7 +100,7 @@ export default function MonthlyPaymentPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-500 mt-3">Monthly figures based on 36-month term. Representative example: £3,200 over 36 months = £95/month. Subject to credit approval.</p>
+          <p className="text-xs text-gray-500 mt-3">Monthly figures based on 36-month term. Representative example: £3,800 over 36 months = £106/month. Subject to credit approval.</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Full veneers cost guide</Link>
             <Link href="/prices/dental-implants-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Full implants cost guide</Link>
@@ -116,7 +116,7 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Cost of Dental Treatment in Turkey with Monthly Payments</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Turkish dental treatment is already <strong>65–82% cheaper</strong> than equivalent UK private dental prices. When you add monthly payment finance, that saving becomes even more accessible: a full smile makeover that would cost £16,000–£20,000 in the UK costs £3,200 in Turkey — and can be spread over 36 months for just £95/month.
+              Turkish dental treatment is already <strong>65–82% cheaper</strong> than equivalent UK private dental prices. When you add monthly payment finance, that saving becomes even more accessible: a full smile makeover that would cost £16,000–£20,000 in the UK costs £3,800 in Turkey — and can be spread over 36 months for just £106/month.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               Compare that to UK monthly finance for the same treatment: £16,000 over 36 months would require payments of approximately £470/month. The Turkey option is <strong>nearly 5× cheaper per month</strong> — for clinically identical results using the same materials.
@@ -127,7 +127,7 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Veneers Turkey Monthly Payment Plans</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Porcelain veneers in Turkey cost <strong>£190–£250 per tooth</strong> using Ivoclar E-max — the same brand used in the UK&apos;s leading cosmetic dental practices. A full set of 20 veneers (£3,200–£5,000) can be financed from:
+              Porcelain veneers in Turkey cost <strong>£190–£250 per tooth</strong> using Ivoclar E-max — the same brand used in the UK&apos;s leading cosmetic dental practices. A full set of 20 veneers (£3,800–£5,000) can be financed from:
             </p>
             <div className="grid grid-cols-3 gap-4 mb-4">
               {[

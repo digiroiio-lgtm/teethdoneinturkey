@@ -14,7 +14,7 @@ const defaultFaqs: FAQItem[] = [
   },
   {
     question: 'How much do veneers cost in Turkey?',
-    answer: 'Veneers in Turkey cost from £190 per tooth, compared to £900+ in the UK — a saving of around 79%. A full set of 20 veneers typically costs £3,200–£4,000 including accommodation support, compared to £18,000+ in the UK.',
+    answer: 'Veneers in Turkey cost from £190 per tooth, compared to £900+ in the UK — a saving of around 79%. A full set of 20 veneers costs £3,800 in Turkey vs £18,000 in the UK.',
   },
   {
     question: 'Can I pay monthly for dental treatment?',
