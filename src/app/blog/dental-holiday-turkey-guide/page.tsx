@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/dental-holiday-turkey-guide" },
   title: "The Dental Holiday Turkey Guide",
   description: "Everything you need to plan a dental holiday in Turkey — flights, accommodation, what to expect, tips from patients, and how to get the most from your trip.",
 };
@@ -14,6 +16,7 @@ export default function DentalHolidayGuideBlogPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Travel</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">The Complete Dental Holiday Turkey Guide for UK Patients</h1>
           <p className="text-gray-500 text-sm">Published September 2024 · 7 min read</p>
+          <MedicalReviewBadge />
         </div>
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>A dental holiday in Turkey has become one of the most popular choices for UK patients seeking high-quality cosmetic and restorative dental work without the eye-watering UK price tag. Here&apos;s everything you need to know to plan your trip.</p>

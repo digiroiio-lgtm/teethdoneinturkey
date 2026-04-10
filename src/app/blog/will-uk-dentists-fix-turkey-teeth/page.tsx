@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/will-uk-dentists-fix-turkey-teeth" },
   title: "Will UK Dentists Fix Turkey Teeth?",
   description: "Will UK dentists treat or fix dental work done in Turkey? An honest guide to what to expect from UK dentists regarding Turkey dental tourism work.",
 };
@@ -14,6 +16,7 @@ export default function UKDentistsFixTurkeyTeethPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Safety</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Will UK Dentists Fix Turkey Teeth?</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 6 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

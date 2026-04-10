@@ -4,6 +4,7 @@ import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/teeth-done-in-turkey-guide" },
   title: "Turkey Dental Guide for UK Patients",
   description: "The complete guide to getting teeth done in Turkey for UK patients. Costs, safety, clinics, veneers, implants, travel tips and monthly payment options. Save up to 70%.",
 };

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/are-veneers-in-turkey-worth-it" },
   title: "Are Turkey Veneers Worth It? UK Guide",
   description: "Are Turkey veneers worth it for UK patients? An honest assessment of the quality, savings, risks, and overall value. Real patient experiences included.",
 };
@@ -14,6 +16,7 @@ export default function AreVeneersWorthItPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Veneers</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Are Veneers in Turkey Worth It? An Honest UK Patient Guide</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 7 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

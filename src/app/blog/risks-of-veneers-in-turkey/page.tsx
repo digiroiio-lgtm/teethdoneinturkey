@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/risks-of-veneers-in-turkey" },
   title: "Risks of Veneers in Turkey – UK Guide",
   description: "The honest truth about the risks of getting veneers in Turkey. What can go wrong, how to reduce risk, and what to do if there's a problem after you return home.",
 };
@@ -14,6 +16,7 @@ export default function RisksVeneersPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Safety</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Risks of Veneers in Turkey: What UK Patients Should Know</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 7 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

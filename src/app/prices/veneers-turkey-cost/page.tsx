@@ -3,6 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/prices/veneers-turkey-cost" },
   title: "Veneers Turkey Cost: UK Price Guide",
   description: "Veneers Turkey cost guide 2024. E-max from £190/tooth, Zirconia from £250/tooth. Full UK vs Turkey price comparison. Save up to 79%.",
 };

@@ -1,12 +1,15 @@
 import { MetadataRoute } from 'next';
 
-const BASE = 'https://teethdoneinturkey.co.uk';
+const BASE = 'https://www.teethdoneinturkey.co.uk';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '',
     '/about-us',
     '/teeth-done-in-turkey-guide',
+    '/why-choose-turkey-for-dental-work',
+    '/teeth-done-in-turkey-problems',
+    '/turkey-teeth-before-after',
     '/treatments',
     '/treatments/veneers-turkey',
     '/treatments/dental-implants-turkey',

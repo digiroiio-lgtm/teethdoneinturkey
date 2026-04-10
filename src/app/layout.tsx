@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   description:
     "Save up to 70% on dental treatments in Turkey. Veneers, dental implants and full smile makeovers for UK patients with monthly payment options.",
-  metadataBase: new URL("https://teethdoneinturkey.co.uk"),
+  metadataBase: new URL("https://www.teethdoneinturkey.co.uk"),
 };
 
 const dentistSchema = {

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/veneers-turkey-cost-uk-vs-turkey" },
   title: "Veneers Turkey vs UK Cost Comparison",
   description: "Detailed comparison of veneers cost in Turkey vs UK. E-max from £190/tooth in Turkey vs £900+ in UK. What's included, quality comparison, patient tips.",
 };
@@ -14,6 +16,7 @@ export default function VeneersCostBlogPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Pricing</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Veneers Turkey Cost: UK vs Turkey Price Comparison 2024</h1>
           <p className="text-gray-500 text-sm">Published December 2024 · 5 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="prose prose-gray max-w-none space-y-6 text-gray-700 leading-relaxed">

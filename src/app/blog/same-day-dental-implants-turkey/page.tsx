@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/same-day-dental-implants-turkey" },
   title: "Same Day Implants Turkey – UK Guide",
   description: "Everything UK patients need to know about same day dental implants in Turkey. How they work, who is suitable, costs, and what to expect.",
 };
@@ -14,6 +16,7 @@ export default function SameDayImplantsPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Same Day Dental Implants in Turkey: A UK Patient Guide</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 6 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

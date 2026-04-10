@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/best-dental-clinics-turkey" },
   title: "Best Dental Clinics Turkey – UK Guide",
   description: "How to find the best dental clinic in Turkey. What accreditations to look for, red flags to avoid, and how to verify quality before you book.",
 };
@@ -14,6 +16,7 @@ export default function BestClinicsBlogPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Clinics</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Best Dental Clinics in Turkey for UK Patients 2024</h1>
           <p className="text-gray-500 text-sm">Published October 2024 · 5 min read</p>
+          <MedicalReviewBadge />
         </div>
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>Turkey has hundreds of dental clinics competing for international patients, and the quality varies enormously. Knowing what to look for — and what to avoid — can mean the difference between a life-changing result and a costly mistake.</p>

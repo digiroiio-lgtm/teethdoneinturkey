@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/dental-treatment-turkey-payment-plans" },
   title: "Dental Treatment Turkey Payment Plans",
   description: "How payment plans work for dental treatment in Turkey. Everything UK patients need to know about spreading costs for veneers, implants, and smile makeovers.",
 };
@@ -14,6 +16,7 @@ export default function PaymentPlansTurkeyPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Finance</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Dental Treatment Turkey Payment Plans: UK Patient Guide</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 6 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

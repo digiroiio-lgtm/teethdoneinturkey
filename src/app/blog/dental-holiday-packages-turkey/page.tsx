@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/dental-holiday-packages-turkey" },
   title: "Dental Holiday Packages Turkey",
   description: "Everything about dental holiday packages in Turkey for UK patients. What's included, how packages work, costs, and how to book your treatment and stay.",
 };
@@ -14,6 +16,7 @@ export default function DentalHolidayPackagesPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Travel</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Dental Holiday Packages Turkey: UK Patient Guide</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 6 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

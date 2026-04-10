@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BookingForm from "./BookingForm";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/book-consultation" },
   title: "Book Free Dental Consultation Turkey",
   description: "Book a free dental consultation for treatment in Turkey. No obligation. Get a personalised treatment plan and cost estimate within 24 hours.",
 };
@@ -49,6 +50,42 @@ export default function BookConsultationPage() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <h2 className="text-2xl font-bold text-gray-900">Why Book a Consultation First?</h2>
+          <p className="text-gray-600">Every patient&apos;s dental situation is different. Before recommending any treatment, our team wants to understand your dental history, your goals, and your budget. A free consultation allows our partner dentists to review your case properly — so that when you do travel to Turkey, your treatment is already planned, costed, and ready to begin. This avoids surprises and ensures the best possible outcome.</p>
+
+          <h2 className="text-2xl font-bold text-gray-900">What We Discuss in the Consultation</h2>
+          <ul className="space-y-2 text-gray-600">
+            {[
+              "Your dental goals — cosmetic improvement, tooth replacement, or both",
+              "A review of your current dental health and any existing treatment",
+              "Recommended treatments and the expected results",
+              "A transparent, all-inclusive cost estimate in GBP",
+              "Typical treatment timeline and how many days you&apos;ll need in Turkey",
+              "Finance options if you&apos;d like to spread the cost monthly",
+              "Travel logistics — flights, accommodation, and airport transfers",
+            ].map((item, i) => (
+              <li key={i} className="flex gap-2 items-start"><span className="text-green-500 mt-0.5">✓</span><span>{item}</span></li>
+            ))}
+          </ul>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { icon: "🏆", title: "JCI-Accredited Clinics", desc: "All partner clinics hold international healthcare accreditation equivalent to top UK standards." },
+              { icon: "💳", title: "Finance Available", desc: "Spread costs from £82/month with 0% options. Soft credit check, no impact on your score." },
+              { icon: "🇬🇧", title: "UK Support Throughout", desc: "A UK-based patient coordinator supports you before, during, and after your treatment." },
+            ].map(item => (
+              <div key={item.title} className="bg-gray-50 rounded-xl p-5 border border-gray-200 text-center">
+                <div className="text-3xl mb-2">{item.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                <p className="text-sm text-gray-600">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/travel-to-turkey/dental-holiday-turkey" },
   title: "Dental Holiday Turkey – UK Guide",
   description: "Everything you need to plan a dental holiday in Turkey. Flights from the UK, hotels near clinics, what to pack, tips from patients who've done it.",
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/travel-to-turkey" },
   title: "Travel to Turkey for Dental Treatment",
   description: "Everything UK patients need to know about travelling to Turkey for dental treatment. Flights, hotels, what to expect.",
 };

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/how-long-do-dental-veneers-last" },
   title: "How Long Do Veneers Last in Turkey?",
   description: "How long do veneers last? E-max, zirconia and composite lifespan compared. Does getting veneers in Turkey affect how long they last?",
 };
@@ -14,6 +16,7 @@ export default function VeneersLastBlogPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Veneers</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">How Long Do Dental Veneers Last? Turkey vs UK</h1>
           <p className="text-gray-500 text-sm">Published November 2024 · 4 min read</p>
+          <MedicalReviewBadge />
         </div>
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>One of the most common concerns about getting veneers in Turkey is whether they will last as long as those done in the UK. The honest answer: with the same materials and technique, they last exactly as long. Here&apos;s what you need to know.</p>

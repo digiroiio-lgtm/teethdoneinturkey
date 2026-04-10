@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/aftercare-for-dental-work-in-turkey" },
   title: "Aftercare for Dental Work in Turkey",
   description: "How to look after your dental work after returning from Turkey. Complete aftercare guide for veneers and implants, including what to expect and when to seek help.",
 };
@@ -14,6 +16,7 @@ export default function AftercarePage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Aftercare</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Aftercare for Dental Work in Turkey: Complete UK Patient Guide</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 8 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

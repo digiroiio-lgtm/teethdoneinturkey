@@ -4,6 +4,7 @@ import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/monthly-payment" },
   title: "Monthly Payment for Teeth in Turkey",
   description: "Pay for your dental treatment in Turkey monthly from £82/month. 0% interest options available over 12, 24 or 36 months. Pre-qualify in 60 seconds.",
 };

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/e-max-vs-zirconia-veneers-turkey" },
   title: "E-max vs Zirconia Veneers in Turkey",
   description: "Comparing E-max and zirconia veneers in Turkey for UK patients. Durability, aesthetics, cost, and which option is right for you. Full 2026 comparison guide.",
 };
@@ -14,6 +16,7 @@ export default function EmaxVsZirconiPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Veneers</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">E-max vs Zirconia Veneers in Turkey: Which Is Better?</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 6 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

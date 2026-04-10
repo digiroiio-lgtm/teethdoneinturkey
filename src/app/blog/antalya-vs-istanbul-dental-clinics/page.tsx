@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/antalya-vs-istanbul-dental-clinics" },
   title: "Antalya vs Istanbul: Dental Treatment",
   description: "Comparing Antalya and Istanbul for dental treatment as a UK patient. Costs, clinic quality, travel, and which city suits different types of patients.",
 };
@@ -14,6 +16,7 @@ export default function AntalyaVsIstanbulPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Travel</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Antalya vs Istanbul for Dental Treatment: Which Is Better for UK Patients?</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 7 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

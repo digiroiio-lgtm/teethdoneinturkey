@@ -3,6 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/treatments/all-on-4-turkey" },
   title: "All-on-4 Dental Implants Turkey",
   description: "All-on-4 dental implants in Turkey from £4,500. Full arch restoration in 5-7 days. JCI-accredited clinics. Compare to £15,000+ in the UK.",
 };

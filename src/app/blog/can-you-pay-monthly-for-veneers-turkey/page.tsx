@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/can-you-pay-monthly-for-veneers-turkey" },
   title: "Pay Monthly for Veneers Turkey",
   description: "Yes — you can pay monthly for veneers in Turkey. A complete guide to dental finance options for UK patients, from £82/month with 0% interest options available.",
 };
@@ -14,6 +16,7 @@ export default function MonthlyVeneersPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Finance</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Can You Pay Monthly for Veneers in Turkey?</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 5 min read</p>
+          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
