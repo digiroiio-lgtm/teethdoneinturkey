@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dental Turkey Blog | Tips, Guides & Patient Advice",
+  title: "Dental Turkey Blog – Tips & Guides",
   description: "Expert guides on dental treatment in Turkey. Costs, safety, how to choose a clinic, patient experiences and more.",
 };
 

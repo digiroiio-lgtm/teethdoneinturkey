@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How Long Do Dental Veneers Last? Turkey vs UK Comparison",
+  title: "How Long Do Veneers Last in Turkey?",
   description: "How long do veneers last? E-max, zirconia and composite lifespan compared. Does getting veneers in Turkey affect how long they last?",
 };
 

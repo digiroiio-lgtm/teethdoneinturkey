@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Will UK Dentists Fix Turkey Teeth? What to Expect",
+  title: "Will UK Dentists Fix Turkey Teeth?",
   description: "Will UK dentists treat or fix dental work done in Turkey? An honest guide to what to expect from UK dentists regarding Turkey dental tourism work.",
 };
 

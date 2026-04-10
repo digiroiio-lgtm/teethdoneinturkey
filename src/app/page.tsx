@@ -9,7 +9,7 @@ import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Teeth Done in Turkey | Cost, Veneers & Dental Implants Turkey",
+  title: "Teeth Done in Turkey | Dental Veneers & Implants",
   description:
     "Save up to 70% on dental treatments in Turkey. Veneers from £190/tooth, dental implants from £450. UK patient support, JCI-accredited clinics, monthly payment options.",
 };

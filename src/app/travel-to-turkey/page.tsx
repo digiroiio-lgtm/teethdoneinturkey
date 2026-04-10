@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Travel to Turkey for Dental Treatment – UK Patient Guide",
+  title: "Travel to Turkey for Dental Treatment",
   description: "Everything UK patients need to know about travelling to Turkey for dental treatment. Flights, hotels, what to expect.",
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "UK Dentist vs Turkey Dentist: Key Differences for UK Patients",
+  title: "UK vs Turkey Dentist: Key Differences",
   description: "An honest comparison of UK dentists vs Turkish dentists. Training, materials, technology, costs, and what the differences actually mean for your treatment outcome.",
 };
 

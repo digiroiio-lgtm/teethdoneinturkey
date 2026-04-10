@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Same Day Dental Implants Turkey: What UK Patients Need to Know",
+  title: "Same Day Implants Turkey – UK Guide",
   description: "Everything UK patients need to know about same day dental implants in Turkey. How they work, who is suitable, costs, and what to expect.",
 };
 

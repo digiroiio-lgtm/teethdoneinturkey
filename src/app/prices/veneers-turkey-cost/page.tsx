@@ -3,7 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Veneers Turkey Cost 2024 – How Much Do Veneers Cost in Turkey?",
+  title: "Veneers Turkey Cost: UK Price Guide",
   description: "Veneers Turkey cost guide 2024. E-max from £190/tooth, Zirconia from £250/tooth. Full UK vs Turkey price comparison. Save up to 79%.",
 };
 

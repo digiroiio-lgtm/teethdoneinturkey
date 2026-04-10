@@ -3,7 +3,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Patient Reviews – Teeth Done in Turkey | Real UK Patient Experiences",
+  title: "UK Patient Reviews – Dental Turkey",
   description: "Read genuine reviews from UK patients who had dental treatment in Turkey. Veneers, implants, smile makeovers — real experiences from real people.",
 };
 

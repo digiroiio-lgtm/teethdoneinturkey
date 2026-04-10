@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Turkey Teeth Explained: What UK Patients Need to Know (2026)",
+  title: "Turkey Teeth Explained – UK Guide",
   description: "What are 'Turkey teeth'? An honest explanation of the term, the reality of dental veneers in Turkey, and what UK patients should actually expect.",
 };
 

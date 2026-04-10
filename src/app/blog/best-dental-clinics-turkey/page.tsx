@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Dental Clinics in Turkey for UK Patients 2024",
+  title: "Best Dental Clinics Turkey – UK Guide",
   description: "How to find the best dental clinic in Turkey. What accreditations to look for, red flags to avoid, and how to verify quality before you book.",
 };
 

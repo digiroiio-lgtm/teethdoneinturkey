@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "The 4-8-10 Rule for Veneers: What It Means for Turkey Patients",
+  title: "The 4-8-10 Rule for Veneers: Turkey",
   description: "What is the 4-8-10 rule for veneers? A clear explanation for UK patients considering veneers in Turkey, and how it affects your treatment plan.",
 };
 

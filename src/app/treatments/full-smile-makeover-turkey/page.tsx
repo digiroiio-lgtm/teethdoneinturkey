@@ -3,7 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Full Smile Makeover Turkey – From £3,500",
+  title: "Full Smile Makeover Turkey – £3,500",
   description: "Complete smile makeover in Turkey from £3,500. Veneers, whitening, reshaping and more. Compare to £12,000+ in the UK. JCI clinics.",
 };
 

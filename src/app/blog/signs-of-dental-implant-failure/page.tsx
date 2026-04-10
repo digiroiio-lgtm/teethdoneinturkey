@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Signs of Dental Implant Failure: What to Watch For",
+  title: "Signs of Dental Implant Failure",
   description: "How to recognise the signs of dental implant failure. A guide for UK patients who've had implants in Turkey — symptoms, causes, and what to do.",
 };
 

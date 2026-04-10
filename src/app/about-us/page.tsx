@@ -3,7 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Us – Dental Tourism Turkey for UK Patients",
+  title: "About Us – Dental Tourism Turkey",
   description: "Learn about Teeth Done in Turkey — helping UK patients access premium dental care in Turkey at up to 70% less than UK prices.",
 };
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Before & After Teeth Turkey | Dental Transformation Photos",
+  title: "Before & After Turkey Dental Results",
   description: "See real before and after photos from UK patients who had dental treatment in Turkey. Veneers, implants, smile makeovers.",
 };
 

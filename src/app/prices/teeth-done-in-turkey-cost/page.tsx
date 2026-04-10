@@ -3,7 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "How Much Does Teeth Done in Turkey Cost? 2024 Price Guide",
+  title: "Teeth Done in Turkey Cost – UK Guide",
   description: "Complete guide to teeth done in Turkey cost. Compare veneers, implants, All-on-4 prices UK vs Turkey. Save up to 82% on dental treatment.",
 };
 

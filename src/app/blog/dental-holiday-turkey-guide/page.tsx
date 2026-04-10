@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "The Complete Dental Holiday Turkey Guide for UK Patients 2024",
+  title: "The Dental Holiday Turkey Guide",
   description: "Everything you need to plan a dental holiday in Turkey — flights, accommodation, what to expect, tips from patients, and how to get the most from your trip.",
 };
 

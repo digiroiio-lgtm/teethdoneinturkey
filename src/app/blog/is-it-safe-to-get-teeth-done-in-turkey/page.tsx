@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Is It Safe to Get Teeth Done in Turkey? Honest 2024 Guide",
+  title: "Is Getting Teeth Done in Turkey Safe?",
   description: "The honest answer to whether it's safe to get dental treatment in Turkey. Accreditation, risk factors, how to choose safely, and what patients say.",
 };
 

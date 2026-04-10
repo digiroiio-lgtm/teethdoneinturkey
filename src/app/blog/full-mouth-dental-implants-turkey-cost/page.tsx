@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Full Mouth Dental Implants Turkey Cost 2026 | UK Patient Guide",
+  title: "Full Mouth Implants Turkey Cost 2026",
   description: "How much does a full mouth of dental implants cost in Turkey? Complete cost breakdown for All-on-4, All-on-6, and full mouth implants for UK patients.",
 };
 

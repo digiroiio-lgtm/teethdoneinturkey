@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "How Long Do You Need to Stay in Turkey for Dental Treatment? 2024",
+  title: "How Long for Dental Work in Turkey",
   description: "Find out exactly how many days you need in Turkey for veneers, implants, All-on-4, and other dental treatments. Day-by-day treatment timelines.",
 };
 

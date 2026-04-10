@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dental Holiday Packages Turkey – UK Patient Guide 2026",
+  title: "Dental Holiday Packages Turkey",
   description: "Everything about dental holiday packages in Turkey for UK patients. What's included, how packages work, costs, and how to book your treatment and stay.",
 };
 

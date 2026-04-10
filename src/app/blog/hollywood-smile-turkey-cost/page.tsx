@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Hollywood Smile Turkey Cost 2026 | UK Patient Price Guide",
+  title: "Hollywood Smile Turkey Cost 2026",
   description: "How much does a Hollywood Smile cost in Turkey for UK patients? Full cost breakdown, what's included, and how to get a naturally glamorous result.",
 };
 

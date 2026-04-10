@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Composite vs Porcelain Veneers in Turkey: Which to Choose?",
+  title: "Composite vs Porcelain Veneers Turkey",
   description: "Composite vs porcelain veneers in Turkey for UK patients. A clear comparison of cost, durability, appearance, and procedure to help you decide.",
 };
 

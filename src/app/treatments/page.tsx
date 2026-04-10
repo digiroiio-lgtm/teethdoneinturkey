@@ -3,7 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Dental Treatments in Turkey | Veneers, Implants & More",
+  title: "Dental Treatments Turkey – UK Prices",
   description: "Explore all dental treatments available in Turkey — veneers, dental implants, All-on-4, smile makeovers and more. Save up to 70% vs UK prices.",
 };
 

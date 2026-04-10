@@ -3,7 +3,7 @@ import Link from "next/link";
 import TestimonialCard from "@/components/TestimonialCard";
 
 export const metadata: Metadata = {
-  title: "Turkey Teeth Reviews: Real UK Patient Experiences 2024",
+  title: "Turkey Teeth Reviews – UK Patients",
   description: "Real patient reviews of dental treatment in Turkey. What UK patients actually experienced — the process, the results, and whether they'd recommend it.",
 };
 

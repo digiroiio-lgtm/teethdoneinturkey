@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dental Treatment Turkey Payment Plans: UK Patient Guide 2026",
+  title: "Dental Treatment Turkey Payment Plans",
   description: "How payment plans work for dental treatment in Turkey. Everything UK patients need to know about spreading costs for veneers, implants, and smile makeovers.",
 };
 

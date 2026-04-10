@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Antalya vs Istanbul for Dental Treatment: Which Is Better?",
+  title: "Antalya vs Istanbul: Dental Treatment",
   description: "Comparing Antalya and Istanbul for dental treatment as a UK patient. Costs, clinic quality, travel, and which city suits different types of patients.",
 };
 

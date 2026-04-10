@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Why Are Dental Treatments Cheaper in Turkey? The Real Reason",
+  title: "Why Is Dental Care Cheaper in Turkey?",
   description: "Discover exactly why dental treatment costs 70–80% less in Turkey vs the UK. It's not lower quality — it's lower overheads. A full, honest explanation for UK patients.",
 };
 

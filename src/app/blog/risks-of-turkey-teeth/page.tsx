@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Risks of Turkey Teeth: What UK Patients Should Know",
+  title: "Risks of Turkey Teeth – What to Know",
   description: "An honest guide to the risks of getting teeth done in Turkey. What can go wrong, how likely it is, and how to protect yourself before booking.",
 };
 

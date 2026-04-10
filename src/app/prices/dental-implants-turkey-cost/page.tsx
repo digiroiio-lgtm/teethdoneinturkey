@@ -3,7 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Dental Implants Turkey Cost 2024 – How Much Are Implants in Turkey?",
+  title: "Dental Implants Turkey Cost: UK Guide",
   description: "Dental implants Turkey cost 2024. Single implants from £450, All-on-4 from £4,500. Full price breakdown vs UK. Save up to 82%.",
 };
 

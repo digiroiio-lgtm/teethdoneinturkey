@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "E-max vs Zirconia Veneers in Turkey: Which Is Better?",
+  title: "E-max vs Zirconia Veneers in Turkey",
   description: "Comparing E-max and zirconia veneers in Turkey for UK patients. Durability, aesthetics, cost, and which option is right for you. Full 2026 comparison guide.",
 };
 

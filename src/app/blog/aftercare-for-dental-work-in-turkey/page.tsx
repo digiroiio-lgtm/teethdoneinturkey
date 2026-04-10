@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Aftercare for Dental Work in Turkey: UK Patient Guide",
+  title: "Aftercare for Dental Work in Turkey",
   description: "How to look after your dental work after returning from Turkey. Complete aftercare guide for veneers and implants, including what to expect and when to seek help.",
 };
 

@@ -4,7 +4,7 @@ import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Dental Implants Turkey – From £450 | Straumann & Nobel Biocare",
+  title: "Dental Implants Turkey – From £450",
   description: "Get permanent dental implants in Turkey from £450. Same Straumann and Nobel Biocare brands as UK at 82% less. JCI clinics, 10-year guarantee.",
 };
 

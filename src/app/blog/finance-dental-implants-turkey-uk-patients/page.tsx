@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Finance Dental Implants Turkey – UK Patient Payment Guide",
+  title: "Finance Implants Turkey – UK Guide",
   description: "How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from £54/month.",
 };
 

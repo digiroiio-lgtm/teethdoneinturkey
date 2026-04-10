@@ -4,7 +4,7 @@ import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Teeth Done in Turkey – Complete Guide for UK Patients 2026",
+  title: "Turkey Dental Guide for UK Patients",
   description: "The complete guide to getting teeth done in Turkey for UK patients. Costs, safety, clinics, veneers, implants, travel tips and monthly payment options. Save up to 70%.",
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Can You Pay Monthly for Teeth in Turkey? UK Finance Guide",
+  title: "Monthly Payment for Teeth in Turkey",
   description: "Yes — you can pay monthly for teeth done in Turkey. Everything UK patients need to know about dental finance, monthly payment plans, and 0% interest options.",
 };
 

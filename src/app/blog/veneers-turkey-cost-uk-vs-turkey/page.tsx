@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Veneers Turkey Cost: UK vs Turkey Price Comparison 2024",
+  title: "Veneers Turkey vs UK Cost Comparison",
   description: "Detailed comparison of veneers cost in Turkey vs UK. E-max from £190/tooth in Turkey vs £900+ in UK. What's included, quality comparison, patient tips.",
 };
 

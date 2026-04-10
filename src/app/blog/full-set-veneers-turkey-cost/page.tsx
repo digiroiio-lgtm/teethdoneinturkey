@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Full Set of Veneers in Turkey: Cost Breakdown 2026",
+  title: "Full Set of Veneers in Turkey – Cost",
   description: "Exactly how much does a full set of veneers cost in Turkey? A complete cost breakdown for 8, 10, 16, and 20 veneers, including travel, for UK patients.",
 };
 

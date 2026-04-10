@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Are Veneers in Turkey Worth It? Honest UK Patient Guide 2026",
+  title: "Are Turkey Veneers Worth It? UK Guide",
   description: "Are Turkey veneers worth it for UK patients? An honest assessment of the quality, savings, risks, and overall value. Real patient experiences included.",
 };
 

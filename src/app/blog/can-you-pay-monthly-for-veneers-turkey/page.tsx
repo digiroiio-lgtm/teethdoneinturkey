@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Can You Pay Monthly for Veneers in Turkey? Finance Guide 2026",
+  title: "Pay Monthly for Veneers Turkey",
   description: "Yes — you can pay monthly for veneers in Turkey. A complete guide to dental finance options for UK patients, from £82/month with 0% interest options available.",
 };
 

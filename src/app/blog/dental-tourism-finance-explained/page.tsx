@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dental Tourism Finance Explained: UK Patient Guide",
+  title: "Dental Tourism Finance Explained – UK",
   description: "How dental tourism finance works for UK patients. A complete explanation of how to fund dental treatment abroad, from monthly payment plans to medical loans.",
 };
 

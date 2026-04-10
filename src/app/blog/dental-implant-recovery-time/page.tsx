@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dental Implant Recovery Time: What to Expect | Turkey Guide",
+  title: "Implant Recovery Time in Turkey",
   description: "How long does dental implant recovery take? A complete timeline for UK patients having implants in Turkey — from surgery day through to final crown fitting.",
 };
 

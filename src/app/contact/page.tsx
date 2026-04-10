@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Teeth Done in Turkey – Get in Touch",
+  title: "Contact Us – Get a Free Consultation",
   description: "Contact our UK team about dental treatment in Turkey. Call, WhatsApp, or fill in our contact form for a response within 24 hours.",
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Risks of Veneers in Turkey: What UK Patients Should Know",
+  title: "Risks of Veneers in Turkey – UK Guide",
   description: "The honest truth about the risks of getting veneers in Turkey. What can go wrong, how to reduce risk, and what to do if there's a problem after you return home.",
 };
 

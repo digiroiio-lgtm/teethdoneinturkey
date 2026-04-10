@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Single Tooth Implant Turkey Cost 2026 | UK Patient Guide",
+  title: "Single Tooth Implant Turkey Cost 2026",
   description: "How much does a single tooth implant cost in Turkey? Full 2026 price guide for UK patients, including brands used, what's included, and monthly payment options.",
 };
 
