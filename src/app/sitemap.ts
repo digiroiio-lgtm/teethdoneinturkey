@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '',
     '/about-us',
+    '/teeth-done-in-turkey-guide',
     '/treatments',
     '/treatments/veneers-turkey',
     '/treatments/dental-implants-turkey',
@@ -22,12 +23,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/travel-to-turkey/dental-holiday-turkey',
     '/travel-to-turkey/how-long-stay-turkey-dental',
     '/blog',
+    // Core cluster
     '/blog/veneers-turkey-cost-uk-vs-turkey',
     '/blog/is-it-safe-to-get-teeth-done-in-turkey',
     '/blog/how-long-do-dental-veneers-last',
     '/blog/best-dental-clinics-turkey',
     '/blog/turkey-teeth-reviews',
     '/blog/dental-holiday-turkey-guide',
+    '/blog/why-are-dental-treatments-cheaper-in-turkey',
+    '/blog/uk-dentist-vs-turkey-dentist',
+    '/blog/turkey-teeth-explained',
+    // Veneers cluster
+    '/blog/e-max-vs-zirconia-veneers-turkey',
+    '/blog/full-set-veneers-turkey-cost',
+    '/blog/are-veneers-in-turkey-worth-it',
+    '/blog/risks-of-veneers-in-turkey',
+    '/blog/can-you-pay-monthly-for-veneers-turkey',
+    '/blog/4-8-10-rule-for-veneers',
+    '/blog/composite-vs-porcelain-veneers-turkey',
+    // Implants cluster
+    '/blog/full-mouth-dental-implants-turkey-cost',
+    '/blog/same-day-dental-implants-turkey',
+    '/blog/dental-implant-recovery-time',
+    '/blog/signs-of-dental-implant-failure',
+    '/blog/single-tooth-implant-turkey-cost',
+    // Finance cluster
+    '/blog/can-you-pay-monthly-for-teeth-in-turkey',
+    '/blog/dental-treatment-turkey-payment-plans',
+    '/blog/finance-dental-implants-turkey-uk-patients',
+    '/blog/dental-tourism-finance-explained',
+    // Safety cluster
+    '/blog/risks-of-turkey-teeth',
+    '/blog/aftercare-for-dental-work-in-turkey',
+    '/blog/will-uk-dentists-fix-turkey-teeth',
+    // Travel & cost cluster
+    '/blog/hollywood-smile-turkey-cost',
+    '/blog/antalya-vs-istanbul-dental-clinics',
+    '/blog/dental-holiday-packages-turkey',
     '/contact',
     '/book-consultation',
   ];

@@ -34,6 +34,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-3">Prices & Info</h3>
             <ul className="space-y-2 text-sm">
+              <li><Link href="/teeth-done-in-turkey-guide" className="hover:text-white transition-colors">Complete UK Patient Guide</Link></li>
               <li><Link href="/prices/teeth-done-in-turkey-cost" className="hover:text-white transition-colors">Turkey Dental Costs</Link></li>
               <li><Link href="/prices/veneers-turkey-cost" className="hover:text-white transition-colors">Veneers Cost</Link></li>
               <li><Link href="/prices/dental-implants-turkey-cost" className="hover:text-white transition-colors">Implants Cost</Link></li>
