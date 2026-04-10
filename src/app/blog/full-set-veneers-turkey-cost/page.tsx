@@ -112,6 +112,31 @@ export default function FullSetVeneersCostPage() {
             <p className="text-blue-200 text-sm mb-4">Send us your photos — we&apos;ll provide a detailed treatment plan and exact cost breakdown within 24 hours.</p>
             <Link href="/book-consultation" className="inline-block bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Get Free Quote</Link>
           </div>
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <h2 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <Link href="/treatments/veneers-turkey" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Veneers Turkey</span>
+              <span className="text-xs text-gray-500 mt-0.5">Treatment guide & pricing</span>
+            </Link>
+            <Link href="/treatments/full-smile-makeover-turkey" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Full Smile Makeover</span>
+              <span className="text-xs text-gray-500 mt-0.5">Veneers + more</span>
+            </Link>
+            <Link href="/treatments/dental-implants-turkey" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Dental Implants Turkey</span>
+              <span className="text-xs text-gray-500 mt-0.5">Full treatment guide</span>
+            </Link>
+            <Link href="/prices/veneers-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Veneers Cost Guide</span>
+              <span className="text-xs text-gray-500 mt-0.5">Prices & comparisons</span>
+            </Link>
+            <Link href="/prices/teeth-done-in-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">All Treatment Costs</span>
+              <span className="text-xs text-gray-500 mt-0.5">Full price guide</span>
+            </Link>
+            </div>
+          </div>
         </div>
       </div>
     </article>

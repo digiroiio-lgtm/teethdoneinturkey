@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/prices/teeth-done-in-turkey-cost',
     '/prices/veneers-turkey-cost',
     '/prices/dental-implants-turkey-cost',
+    '/prices/turkey-teeth-cost',
     '/monthly-payment',
     '/reviews',
     '/before-after',
@@ -63,6 +64,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/hollywood-smile-turkey-cost',
     '/blog/antalya-vs-istanbul-dental-clinics',
     '/blog/dental-holiday-packages-turkey',
+    // UK vs Turkey comparison cluster
+    '/blog/implants-cost-uk-vs-turkey',
+    '/blog/hollywood-smile-uk-vs-turkey',
+    '/blog/full-mouth-implants-uk-vs-turkey',
     '/contact',
     '/book-consultation',
   ];
