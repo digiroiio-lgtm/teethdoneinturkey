@@ -7,7 +7,7 @@ const treatments = [
   { id: 'veneers_emax', label: 'E-max Porcelain Veneers', unit: 'per tooth', priceMin: 190, priceMax: 220 },
   { id: 'veneers_zirconia', label: 'Zirconia Crowns', unit: 'per tooth', priceMin: 130, priceMax: 150 },
   { id: 'composite', label: 'Composite Veneers', unit: 'per tooth', priceMin: 80, priceMax: 120 },
-  { id: 'implant_osstem', label: 'Osstem Implant + Crown', unit: 'per implant', priceMin: 380, priceMax: 420 },
+  { id: 'implant_osstem', label: 'Osstem Implant + Crown', unit: 'per implant', priceMin: 250, priceMax: 280 },
   { id: 'implant_straumann', label: 'Straumann Implant + Crown', unit: 'per implant', priceMin: 800, priceMax: 930 },
   { id: 'allon4', label: 'All-on-4 (per arch)', unit: 'fixed', priceMin: 4500, priceMax: 5500 },
   { id: 'allon6', label: 'All-on-6 Package (both arches, inc. hotel)', unit: 'fixed', priceMin: 5600, priceMax: 5600 },

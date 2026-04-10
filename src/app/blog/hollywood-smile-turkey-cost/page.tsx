@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/hollywood-smile-turkey-cost" },
   title: "Hollywood Smile Turkey Cost 2026",
-  description: "How much does a Hollywood Smile cost in Turkey for UK patients? Full cost breakdown, what's included, and how to get a naturally glamorous result.",
+  description: "How much does a Hollywood Smile cost in Turkey for UK patients? Full cost breakdown for zirconia crown packages, what's included, and how to get a naturally glamorous result.",
 };
 
 export default function HollywoodSmilePage() {
@@ -27,29 +27,29 @@ export default function HollywoodSmilePage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Is a Hollywood Smile?</h2>
           <p>A Hollywood Smile is a comprehensive cosmetic dental treatment that creates a uniform, bright, perfectly shaped smile covering all visible teeth. It typically combines:</p>
           <ul className="list-disc list-inside space-y-1 my-3">
-            <li>Porcelain veneers (usually E-max) on upper and lower front teeth</li>
+            <li>Zirconia crowns on upper and lower front teeth (20 or 24 crowns)</li>
             <li>Digital Smile Design to preview the result before treatment</li>
             <li>Shade selection tailored to your skin tone and preferences</li>
-            <li>Sometimes teeth whitening of back teeth not covered by veneers</li>
+            <li>Hotel accommodation and VIP airport transfers included</li>
             <li>Gum contouring if needed for symmetry</li>
           </ul>
-          <p>A standard Hollywood Smile involves 20 veneers (10 upper + 10 lower), though the exact number varies by patient.</p>
+          <p>A standard Hollywood Smile involves 20 zirconia crowns (10 upper + 10 lower), though the exact number varies by patient. A 24-crown package includes Digital Smile Design.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Hollywood Smile Cost in Turkey vs UK</h2>
           <div className="grid grid-cols-2 gap-4 my-4">
             <div className="bg-red-50 rounded-2xl p-5 text-center border border-red-200">
               <p className="text-sm text-gray-500 mb-1">UK Private Price</p>
-              <p className="text-3xl font-extrabold text-red-500 line-through">£20,000+</p>
-              <p className="text-xs text-gray-500">20 E-max veneers, London</p>
+              <p className="text-3xl font-extrabold text-red-500 line-through">£15,000+</p>
+              <p className="text-xs text-gray-500">20 zirconia crowns, London</p>
             </div>
             <div className="bg-green-50 rounded-2xl p-5 text-center border border-green-200">
               <p className="text-sm text-gray-500 mb-1">Turkey All-Inclusive</p>
-              <p className="text-3xl font-extrabold text-green-600">£3,800–£5,000</p>
-              <p className="text-xs text-green-600 font-semibold">Save up to £16,000</p>
+              <p className="text-3xl font-extrabold text-green-600">£2,800–£3,100</p>
+              <p className="text-xs text-green-600 font-semibold">Save up to £12,000+</p>
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Hollywood Smile Price Breakdown</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Hollywood Smile Package Breakdown</h2>
           <div className="overflow-x-auto rounded-2xl shadow-sm my-4">
             <table className="w-full bg-white text-sm">
               <thead>
@@ -61,10 +61,9 @@ export default function HollywoodSmilePage() {
               </thead>
               <tbody>
                 {[
-                  { pkg: "Standard (16 E-max veneers)", price: "£3,040", inc: "Upper 10 + Lower 6" },
-                  { pkg: "Full Hollywood (20 E-max)", price: "£3,800", inc: "Full upper + lower" },
-                  { pkg: "Premium (20 Zirconia)", price: "£4,400", inc: "Max durability" },
-                  { pkg: "Hollywood + Gum Contouring", price: "£4,200–£5,000", inc: "Veneers + gum symmetry" },
+                  { pkg: "Hollywood Smile – 20 Zirconia Crowns", price: "£2,800", inc: "Hotel + VIP transfers" },
+                  { pkg: "Hollywood Smile – 24 Zirconia Crowns", price: "£3,100", inc: "Hotel + transfers + DSD" },
+                  { pkg: "Zirconia Crown (individual)", price: "£130/tooth", inc: "Per crown" },
                 ].map((r, i) => (
                   <tr key={r.pkg} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3 font-medium">{r.pkg}</td>
@@ -81,9 +80,9 @@ export default function HollywoodSmilePage() {
             {[
               { title: "Digital Smile Design Consultation", desc: "Your dentist photographs your smile and designs your ideal result digitally. You see exactly what your new smile will look like before any treatment begins." },
               { title: "Shade Selection", desc: "You choose your preferred shade from a wide spectrum — from natural-looking off-white to dramatic bright white. Your dentist will advise on what looks most harmonious with your skin tone." },
-              { title: "Preparation", desc: "A minimal layer of enamel (0.3–0.5mm) is removed to make space for the veneers. Temporary veneers are placed immediately." },
-              { title: "Laboratory Fabrication", desc: "Your permanent E-max veneers are crafted in an in-house laboratory by specialist ceramists. This typically takes 3–5 days." },
-              { title: "Final Fitting", desc: "Permanent veneers are bonded with dental adhesive. Each tooth is checked for shade match, fit, and bite. Fine adjustments ensure a perfect result." },
+              { title: "Preparation", desc: "A minimal layer of enamel is removed to prepare teeth for zirconia crowns. Temporary crowns are placed immediately." },
+              { title: "Laboratory Fabrication", desc: "Your permanent zirconia crowns are crafted in an in-house laboratory by specialist ceramists. This typically takes 3–5 days." },
+              { title: "Final Fitting", desc: "Permanent crowns are bonded with dental adhesive. Each tooth is checked for shade match, fit, and bite. Fine adjustments ensure a perfect result." },
             ].map((step, i) => (
               <li key={i} className="flex gap-3 list-none">
                 <span className="bg-[#1e40af] text-white rounded-full w-7 h-7 flex-shrink-0 flex items-center justify-center font-bold text-sm">{i + 1}</span>
@@ -96,11 +95,11 @@ export default function HollywoodSmilePage() {
           </ol>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Does a Hollywood Smile Look Natural?</h2>
-          <p>This is entirely your choice. Modern Hollywood Smiles range from naturally beautiful (translucent E-max, shade A1 or A2, mimicking natural teeth) to bold and dramatic (brighter shades like B0 or BL1). Digital Smile Design lets you preview any shade and shape option before committing.</p>
+          <p>This is entirely your choice. Modern Hollywood Smiles range from naturally beautiful (natural-looking shades mimicking real teeth) to bold and dramatic (bright white shades). Digital Smile Design lets you preview any shade and shape option before committing.</p>
           <p>The &quot;fake-looking&quot; Hollywood Smile associated with early Turkish dental tourism was typically a specific aesthetic choice (very white, very uniform) made by patients wanting that exact look. Today&apos;s patients can choose a natural-looking result that no one would identify as dental work.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Pay Monthly for Your Hollywood Smile</h2>
-          <p>A Hollywood Smile in Turkey, financed over 36 months, costs from approximately £106/month — making a genuinely transformative treatment accessible at a fraction of UK costs.</p>
+          <p>A Hollywood Smile in Turkey (20 zirconia crowns), financed over 36 months, costs from approximately £78/month — making a genuinely transformative treatment accessible at a fraction of UK costs.</p>
           <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">

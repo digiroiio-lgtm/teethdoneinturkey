@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/dental-implants-turkey-cost" },
   title: "Dental Implants Turkey Cost: UK Guide",
-  description: "Dental implants Turkey cost 2024. Single implants from £450, All-on-4 from £4,500. Full price breakdown vs UK. Save up to 82%.",
+  description: "Dental implants Turkey cost 2026. Single implants from £250, All-on-4 from £4,500. Full price breakdown vs UK. Save up to 90%.",
 };
 
 export default function ImplantsCostPage() {
@@ -35,10 +35,10 @@ export default function ImplantsCostPage() {
                 </thead>
                 <tbody>
                   {[
-                    { t: "Single Osstem Implant + Crown", uk: "£2,000–£3,000", turkey: "£380", s: "~85%" },
+                    { t: "Single Osstem Implant + Crown", uk: "£2,000–£3,000", turkey: "£250", s: "~90%" },
                     { t: "Single Medentika Implant + Crown", uk: "£2,500–£3,500", turkey: "£430", s: "~85%" },
                     { t: "Single Straumann Implant + Crown", uk: "£3,000–£4,500", turkey: "£930", s: "~78%" },
-                    { t: "Osstem Implant + Bone Graft", uk: "£3,000–£4,500", turkey: "£450", s: "~87%" },
+                    { t: "Osstem Implant + Crown (basic)", uk: "£3,000–£4,500", turkey: "£250", s: "~92%" },
                     { t: "All-on-6 Package (per arch, incl. hotel)", uk: "£15,000–£22,000", turkey: "£5,600", s: "~70%" },
                   ].map((r, i) => (
                     <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>

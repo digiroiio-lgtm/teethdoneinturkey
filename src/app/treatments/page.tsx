@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 
 const treatments = [
   { href: "/treatments/veneers-turkey", title: "Veneers Turkey", desc: "Porcelain and E-max veneers from £190/tooth. Transform your smile in just 5 days.", price: "From £190/tooth", icon: "✨" },
-  { href: "/treatments/dental-implants-turkey", title: "Dental Implants Turkey", desc: "Permanent titanium implants using Straumann and Nobel Biocare. From £450 per implant.", price: "From £450", icon: "🦷" },
+  { href: "/treatments/dental-implants-turkey", title: "Dental Implants Turkey", desc: "Permanent titanium implants using Straumann and Nobel Biocare. From £250 per implant.", price: "From £250", icon: "🦷" },
   { href: "/treatments/all-on-4-turkey", title: "All-on-4 Implants Turkey", desc: "Full arch restoration with 4 implants. Complete smile transformation in 5–7 days.", price: "From £4,500", icon: "💪" },
-  { href: "/treatments/all-on-6-turkey", title: "All-on-6 Implants Turkey", desc: "Enhanced full arch with 6 implants for superior stability and longevity.", price: "From £5,500", icon: "🏆" },
+  { href: "/treatments/all-on-6-turkey", title: "All-on-6 Implants Turkey", desc: "Enhanced full arch with 6 implants for superior stability and longevity.", price: "From £5,600", icon: "🏆" },
   { href: "/treatments/full-smile-makeover-turkey", title: "Full Smile Makeover Turkey", desc: "Combine veneers, whitening, and reshaping for a complete transformation.", price: "From £3,500", icon: "🌟" },
 ];
 

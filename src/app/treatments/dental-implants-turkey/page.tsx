@@ -8,8 +8,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/dental-implants-turkey" },
-  title: "Dental Implants Turkey – From £450",
-  description: "Get permanent dental implants in Turkey from £450. Same Straumann and Nobel Biocare brands as UK at 82% less. JCI clinics, 10-year guarantee.",
+  title: "Dental Implants Turkey – From £250",
+  description: "Get permanent dental implants in Turkey from £250. Same Straumann and Nobel Biocare brands as UK at 90% less. JCI clinics, 10-year guarantee.",
 };
 
 const faqs = [
@@ -17,7 +17,7 @@ const faqs = [
   { question: "How many trips do I need to Turkey for implants?", answer: "Usually two trips. The first (3–5 days) is for implant placement. After 3–6 months of osseointegration, you return for the crown fitting (3–4 days). Some cases with good bone density can be done as a single trip." },
   { question: "What brands of implants are used?", answer: "Our partner clinics use Straumann, Nobel Biocare, Astra Tech, and other premium implant brands — the same systems used in top UK practices." },
   { question: "How long do dental implants last?", answer: "With proper care, implants can last a lifetime. The crown on top may need replacing after 15–20 years. Our clinics offer a 10-year guarantee on implant work." },
-  { question: "Can I pay monthly for dental implants in Turkey?", answer: "Yes. Finance is available over 12, 24, or 36 months. A single implant at £450 is available from approximately £13/month over 36 months. Pre-qualify with no impact on your credit score." },
+  { question: "Can I pay monthly for dental implants in Turkey?", answer: "Yes. Finance is available over 12, 24, or 36 months. A single implant at £250 is available from approximately £7/month over 36 months. Pre-qualify with no impact on your credit score." },
 ];
 
 const jsonLd = {
@@ -36,7 +36,7 @@ export default function DentalImplantsTurkeyPage() {
       <Script id="faq-schema-implants" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="bg-[#1e40af] text-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey – From £450</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey – From £250</h1>
           <p className="text-xl text-blue-200 mb-6">Permanent tooth replacement using premium Straumann & Nobel Biocare implants</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
@@ -56,7 +56,7 @@ export default function DentalImplantsTurkeyPage() {
               </div>
               <div className="text-center p-4 bg-green-50 rounded-xl">
                 <p className="text-sm text-gray-500 mb-1">Turkey Price (per implant)</p>
-                <p className="text-3xl font-extrabold text-green-600">£450</p>
+                <p className="text-3xl font-extrabold text-green-600">£250</p>
                 <p className="text-xs text-green-600 font-semibold">Save 82%</p>
               </div>
             </div>
@@ -104,9 +104,9 @@ export default function DentalImplantsTurkeyPage() {
             <p className="text-gray-600 mb-4">Finance your implants over 12, 24, or 36 months with no upfront fees.</p>
             <div className="grid grid-cols-3 gap-3 mb-4">
               {[
-                { label: "Single implant / 12mo", price: "£38/mo" },
-                { label: "Single implant / 24mo", price: "£19/mo" },
-                { label: "Single implant / 36mo", price: "£13/mo" },
+                { label: "Single implant / 12mo", price: "£21/mo" },
+                { label: "Single implant / 24mo", price: "£11/mo" },
+                { label: "Single implant / 36mo", price: "£7/mo" },
               ].map(p => (
                 <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
                   <p className="text-xs text-gray-500 mb-1">{p.label}</p>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   title: "Teeth Done in Turkey | Dental Veneers & Implants",
   description:
-    "Save up to 70% on dental treatments in Turkey. Veneers from £190/tooth, dental implants from £450. UK patient support, JCI-accredited clinics, monthly payment options.",
+    "Save up to 70% on dental treatments in Turkey. Veneers from £190/tooth, dental implants from £250. UK patient support, JCI-accredited clinics, monthly payment options.",
 };
 
 const treatments = [
@@ -29,7 +29,7 @@ const treatments = [
   {
     title: "Dental Implants",
     description: "Permanent tooth replacement with titanium implants. Same Straumann and Nobel Biocare brands as UK — at a fraction of the cost.",
-    price: "From £450",
+    price: "From £250",
     ukPrice: "£2,500",
     href: "/treatments/dental-implants-turkey",
     icon: "🦷",
@@ -45,7 +45,7 @@ const treatments = [
   {
     title: "All-on-6 Implants",
     description: "Enhanced full arch restoration with 6 implants for superior stability and load distribution.",
-    price: "From £5,500",
+    price: "From £5,600",
     ukPrice: "£18,000+",
     href: "/treatments/all-on-6-turkey",
     icon: "🏆",
@@ -82,7 +82,7 @@ const testimonials = [
     location: "Birmingham",
     treatment: "Dental Implants x3",
     rating: 5,
-    review: "Three implants for £1,350 versus £7,500 in Birmingham — the maths was obvious. I was nervous about going abroad for dental work but the whole experience was incredible. The clinic used Straumann implants (the gold standard) and I've had zero issues. My UK dentist was impressed with the quality.",
+    review: "Three implants for £750 versus £7,500 in Birmingham — the maths was obvious. I was nervous about going abroad for dental work but the whole experience was incredible. The clinic used premium implants and I've had zero issues. My UK dentist was impressed with the quality.",
     date: "September 2024",
   },
 ];

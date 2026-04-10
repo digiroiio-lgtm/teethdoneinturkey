@@ -18,7 +18,7 @@ const ukVsTurkeyComparison = [
   { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£420–£600", monthly: "From £14/mo" },
   { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,000–£5,500", monthly: "From £120/mo" },
   { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "£5,000–£7,000", monthly: "From £150/mo" },
-  { treatment: "Hollywood Smile (20 veneers + DSD)", uk: "£18,000–£22,000", turkey: "£3,800–£5,000", monthly: "From £106/mo" },
+  { treatment: "Hollywood Smile (20 zirconia crowns, inc. hotel)", uk: "£18,000–£22,000", turkey: "£2,800", monthly: "From £78/mo" },
 ];
 
 export default function MonthlyPaymentPage() {

@@ -129,7 +129,7 @@ export default function WhyChooseTurkeyPage() {
                 <tbody>
                   {[
                     { t: "Single Porcelain Veneer", uk: "£900–£1,200", turkey: "From £190" },
-                    { t: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "From £450" },
+                    { t: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "From £250" },
                     { t: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "From £4,500" },
                     { t: "Full Smile Makeover", uk: "£15,000–£25,000", turkey: "From £3,500" },
                   ].map((r, i) => (

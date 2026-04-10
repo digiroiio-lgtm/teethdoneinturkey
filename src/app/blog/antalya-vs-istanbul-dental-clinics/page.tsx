@@ -89,7 +89,7 @@ export default function AntalyaVsIstanbulPage() {
               <tbody>
                 {[
                   { f: "Veneer treatment (E-max)", ist: "From £190/tooth", ant: "From £190/tooth" },
-                  { f: "Implant treatment", ist: "From £450", ant: "From £450" },
+                  { f: "Implant treatment", ist: "From £250", ant: "From £250" },
                   { f: "Mid-range hotel (per night)", ist: "£60–£100", ant: "£40–£70" },
                   { f: "Flights from London", ist: "£60–£120", ant: "£70–£130" },
                   { f: "Daily food/transport", ist: "£30–£60", ant: "£25–£50" },

@@ -86,7 +86,7 @@ export default function SameDayImplantsPage() {
               {[
                 { item: "Single tooth same day implant (incl. temporary)", cost: "From £600" },
                 { item: "All-on-4 (immediate loading, full arch)", cost: "From £4,500" },
-                { item: "All-on-6 (immediate loading, full arch)", cost: "From £5,500" },
+                { item: "All-on-6 (immediate loading, full arch)", cost: "From £5,600" },
                 { item: "Final crown/bridge fitting (second trip)", cost: "Included in package" },
               ].map(row => (
                 <div key={row.item} className="flex justify-between">

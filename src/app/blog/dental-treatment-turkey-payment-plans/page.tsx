@@ -29,11 +29,11 @@ export default function PaymentPlansTurkeyPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 my-4">
             {[
               { t: "Veneers", p: "From £190/tooth" },
-              { t: "Dental Implants", p: "From £450" },
+              { t: "Dental Implants", p: "From £250" },
               { t: "All-on-4", p: "From £4,500" },
-              { t: "All-on-6", p: "From £5,500" },
+              { t: "All-on-6", p: "From £5,600" },
               { t: "Smile Makeover", p: "From £3,500" },
-              { t: "Hollywood Smile", p: "From £4,500" },
+              { t: "Hollywood Smile", p: "From £2,800" },
             ].map(item => (
               <div key={item.t} className="bg-blue-50 rounded-xl p-3 text-center border border-blue-200">
                 <p className="font-bold text-gray-900 text-sm">{item.t}</p>

@@ -23,7 +23,7 @@ const schema = {
 
 const faqs = [
   { question: "Is it worth getting teeth done in Turkey?", answer: "For most UK patients, yes. You save 70–80% on dental costs while receiving the same brand materials and highly skilled dentists. The savings on a full smile makeover alone can exceed £15,000." },
-  { question: "How much can I save getting teeth done in Turkey?", answer: "The average UK patient saves between £3,000 and £15,000 depending on the treatment. Veneers cost from £190/tooth in Turkey vs £900+ in the UK. Implants from £450 vs £2,500 in the UK." },
+  { question: "How much can I save getting teeth done in Turkey?", answer: "The average UK patient saves between £3,000 and £15,000 depending on the treatment. Veneers cost from £190/tooth in Turkey vs £900+ in the UK. Implants from £250 vs £2,500 in the UK." },
   { question: "How do I choose a safe clinic in Turkey?", answer: "Look for JCI accreditation or Turkish Ministry of Health certification, verified reviews on Google or Trustpilot, confirmed brand-name materials (Straumann, Nobel Biocare, Ivoclar E-max), and a written guarantee." },
   { question: "Do I need multiple trips to Turkey for dental treatment?", answer: "For veneers: typically one trip of 5–7 days. For implants: two trips (implant placement, then crown fitting 3–6 months later). All-on-4/6: one trip of 5–7 days for the initial phase." },
   { question: "Can I get a free consultation before committing?", answer: "Yes. We offer a free, no-obligation consultation. Share your photos and dental goals and we'll provide a personalised treatment plan and cost estimate within 24 hours." },
@@ -100,7 +100,7 @@ export default function TeethDoneInTurkeyGuidePage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { icon: "💰", title: "Save Up to 70–80%", desc: "Veneers from £190/tooth. Implants from £450. Full smile makeovers from £3,500." },
+                { icon: "💰", title: "Save Up to 70–90%", desc: "Veneers from £190/tooth. Implants from £250. Full smile makeovers from £2,800." },
                 { icon: "🏥", title: "World-Class Clinics", desc: "JCI-accredited clinics with digital dentistry, same-day labs, and state-of-the-art equipment." },
                 { icon: "🦷", title: "Same Brand Materials", desc: "Ivoclar E-max veneers, Straumann implants, Nobel Biocare — same as top UK practices." },
                 { icon: "🌍", title: "Expert Dentists", desc: "Many Turkish dentists trained in Europe or the USA with specialist aesthetic certifications." },
@@ -137,11 +137,11 @@ export default function TeethDoneInTurkeyGuidePage() {
                   {[
                     { t: "Single Veneer (E-max)", uk: "£900", turkey: "£190", save: "79%" },
                     { t: "Full Set 20 Veneers", uk: "£18,000", turkey: "£3,800", save: "79%" },
-                    { t: "Single Dental Implant", uk: "£2,500", turkey: "£450", save: "82%" },
+                    { t: "Single Dental Implant", uk: "£2,500", turkey: "£250", save: "90%" },
                     { t: "All-on-4 Implants (arch)", uk: "£15,000", turkey: "£4,500", save: "70%" },
-                    { t: "All-on-6 Implants (arch)", uk: "£18,000", turkey: "£5,500", save: "69%" },
+                    { t: "All-on-6 Implants (arch)", uk: "£18,000", turkey: "£5,600", save: "69%" },
                     { t: "Full Smile Makeover", uk: "£12,000+", turkey: "£3,500", save: "71%" },
-                    { t: "Hollywood Smile (20 teeth)", uk: "£20,000+", turkey: "£4,500", save: "78%" },
+                    { t: "Hollywood Smile (20 zirconia crowns)", uk: "£20,000+", turkey: "£2,800", save: "86%" },
                   ].map((r, i) => (
                     <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="px-4 py-3 font-medium">{r.t}</td>
@@ -164,9 +164,9 @@ export default function TeethDoneInTurkeyGuidePage() {
             <div className="space-y-4">
               {[
                 { title: "Dental Veneers", desc: "Ultra-thin porcelain or E-max shells bonded to the front of teeth to correct colour, shape, chips, or gaps. The most popular treatment for UK patients seeking a dramatic smile transformation.", price: "From £190/tooth", href: "/treatments/veneers-turkey" },
-                { title: "Dental Implants", desc: "Permanent titanium tooth roots topped with a porcelain crown. The gold standard for missing teeth. Turkish clinics use premium Straumann, Nobel Biocare, and Astra Tech implant systems.", price: "From £450/implant", href: "/treatments/dental-implants-turkey" },
+                { title: "Dental Implants", desc: "Permanent titanium tooth roots topped with a porcelain crown. The gold standard for missing teeth. Turkish clinics use premium Straumann, Nobel Biocare, and Astra Tech implant systems.", price: "From £250/implant", href: "/treatments/dental-implants-turkey" },
                 { title: "All-on-4 Dental Implants", desc: "Full arch tooth replacement supported by just 4 strategically placed implants. Walk in with failing teeth; leave with a full smile. Typically completed within 5–7 days.", price: "From £4,500/arch", href: "/treatments/all-on-4-turkey" },
-                { title: "All-on-6 Dental Implants", desc: "A more stable version of All-on-4, using 6 implants for enhanced support and longer-lasting results. Ideal for patients who want maximum reliability.", price: "From £5,500/arch", href: "/treatments/all-on-6-turkey" },
+                { title: "All-on-6 Dental Implants", desc: "A more stable version of All-on-4, using 6 implants for enhanced support and longer-lasting results. Ideal for patients who want maximum reliability.", price: "From £5,600/arch", href: "/treatments/all-on-6-turkey" },
                 { title: "Full Smile Makeover", desc: "A combination of veneers, crowns, whitening, and other treatments custom-designed for your face and smile goals using Digital Smile Design technology.", price: "From £3,500", href: "/treatments/full-smile-makeover-turkey" },
               ].map(item => (
                 <div key={item.title} className="bg-gray-50 rounded-2xl p-5 border border-gray-200 flex items-start justify-between gap-4">
@@ -311,9 +311,9 @@ export default function TeethDoneInTurkeyGuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { href: "/treatments/veneers-turkey", label: "Veneers Turkey", desc: "E-max from £190/tooth" },
-                { href: "/treatments/dental-implants-turkey", label: "Dental Implants Turkey", desc: "From £450 per implant" },
+                { href: "/treatments/dental-implants-turkey", label: "Dental Implants Turkey", desc: "From £250 per implant" },
                 { href: "/treatments/all-on-4-turkey", label: "All-on-4 Implants", desc: "Full arch from £4,500" },
-                { href: "/treatments/all-on-6-turkey", label: "All-on-6 Implants", desc: "Full arch from £5,500" },
+                { href: "/treatments/all-on-6-turkey", label: "All-on-6 Implants", desc: "Full arch from £5,600" },
                 { href: "/treatments/full-smile-makeover-turkey", label: "Smile Makeover", desc: "Complete transformation" },
                 { href: "/monthly-payment", label: "Monthly Payment", desc: "From £82/month" },
               ].map(item => (

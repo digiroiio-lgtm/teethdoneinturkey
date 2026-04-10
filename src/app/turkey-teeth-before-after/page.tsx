@@ -93,7 +93,7 @@ export default function TurkeyTeethBeforeAfterPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { title: "Porcelain & E-max Veneers", href: "/treatments/veneers-turkey", desc: "From £190 per tooth. Ultra-thin shells to correct colour, shape, chips, and gaps in 5 days." },
-                { title: "Dental Implants", href: "/treatments/dental-implants-turkey", desc: "From £450 per implant. Permanent titanium replacements using Straumann & Nobel Biocare." },
+                { title: "Dental Implants", href: "/treatments/dental-implants-turkey", desc: "From £250 per implant. Permanent titanium replacements using Straumann & Nobel Biocare." },
                 { title: "All-on-4 Dental Implants", href: "/treatments/all-on-4-turkey", desc: "From £4,500 per arch. Full smile restoration across two clinic visits." },
                 { title: "Full Smile Makeover", href: "/treatments/full-smile-makeover-turkey", desc: "From £3,500. A bespoke combination of veneers, crowns, and whitening." },
               ].map(item => (

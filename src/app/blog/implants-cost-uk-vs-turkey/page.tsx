@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/implants-cost-uk-vs-turkey" },
   title: "Dental Implants Cost: UK vs Turkey 2026",
-  description: "Dental implants cost UK vs Turkey: full comparison. Single implants from £450 in Turkey vs £2,500+ in the UK. What's included, brand comparison, and tips.",
+  description: "Dental implants cost UK vs Turkey: full comparison. Single implants from £250 in Turkey vs £2,500+ in the UK. What's included, brand comparison, and tips.",
 };
 
 export default function ImplantsCostUKvsTurkeyPage() {

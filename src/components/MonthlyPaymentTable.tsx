@@ -5,7 +5,7 @@ const plans = [
   { treatment: 'Veneers Package (10 veneers)', total: '£2,800', monthly36: '£82/month', monthly24: '£122/month', popular: false },
   { treatment: 'Implants Package (single arch)', total: '£4,500', monthly36: '£135/month', monthly24: '£196/month', popular: false },
   { treatment: 'All-on-4', total: '£4,500', monthly36: '£135/month', monthly24: '£196/month', popular: false },
-  { treatment: 'All-on-6', total: '£5,500', monthly36: '£163/month', monthly24: '£240/month', popular: false },
+  { treatment: 'All-on-6', total: '£5,600', monthly36: '£156/month', monthly24: '£233/month', popular: false },
 ];
 
 export default function MonthlyPaymentTable() {

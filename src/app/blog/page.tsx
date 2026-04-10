@@ -32,13 +32,13 @@ const posts = [
   { href: "/blog/same-day-dental-implants-turkey", title: "Same Day Dental Implants Turkey", excerpt: "Everything UK patients need to know about same day (immediate loading) dental implants in Turkey.", date: "January 2026", tag: "Implants" },
   { href: "/blog/dental-implant-recovery-time", title: "Dental Implant Recovery Time: Complete Timeline", excerpt: "A complete recovery timeline from surgery day to final crown — what to expect at every stage.", date: "January 2026", tag: "Implants" },
   { href: "/blog/signs-of-dental-implant-failure", title: "Signs of Dental Implant Failure: What to Watch For", excerpt: "How to recognise implant failure symptoms, what causes them, and what to do if you notice warning signs.", date: "January 2026", tag: "Implants" },
-  { href: "/blog/single-tooth-implant-turkey-cost", title: "Single Tooth Implant Turkey Cost 2026", excerpt: "From £450 for a Straumann implant in Turkey vs £2,500+ in the UK. Full cost breakdown.", date: "January 2026", tag: "Implants" },
+  { href: "/blog/single-tooth-implant-turkey-cost", title: "Single Tooth Implant Turkey Cost 2026", excerpt: "From £250 for a dental implant in Turkey vs £2,500+ in the UK. Full cost breakdown.", date: "January 2026", tag: "Implants" },
   // Safety cluster
   { href: "/blog/risks-of-turkey-teeth", title: "Risks of Turkey Teeth: What UK Patients Should Know", excerpt: "An honest guide to the real risks of getting dental work in Turkey — and how to avoid every one of them.", date: "January 2026", tag: "Safety" },
   { href: "/blog/aftercare-for-dental-work-in-turkey", title: "Aftercare for Dental Work in Turkey", excerpt: "Complete aftercare guide for UK patients returning home after veneers or implants in Turkey.", date: "January 2026", tag: "Aftercare" },
   { href: "/blog/will-uk-dentists-fix-turkey-teeth", title: "Will UK Dentists Fix Turkey Teeth?", excerpt: "The honest answer: what UK dentists will and won't do for dental work that was done in Turkey.", date: "January 2026", tag: "Safety" },
   // Travel & cost cluster
-  { href: "/blog/hollywood-smile-turkey-cost", title: "Hollywood Smile Turkey Cost 2026", excerpt: "Full cost breakdown for a Hollywood Smile in Turkey. From £3,800 for 20 veneers vs £20,000+ in the UK.", date: "January 2026", tag: "Treatments" },
+  { href: "/blog/hollywood-smile-turkey-cost", title: "Hollywood Smile Turkey Cost 2026", excerpt: "Full cost breakdown for a Hollywood Smile in Turkey. From £2,800 for 20 zirconia crowns vs £15,000+ in the UK.", date: "January 2026", tag: "Treatments" },
   { href: "/blog/antalya-vs-istanbul-dental-clinics", title: "Antalya vs Istanbul for Dental Treatment", excerpt: "Which Turkish city is better for your dental treatment? An honest comparison for UK patients.", date: "January 2026", tag: "Travel" },
   { href: "/blog/dental-holiday-packages-turkey", title: "Dental Holiday Packages Turkey", excerpt: "How dental holiday packages work — what's included, how much they cost, and how to book.", date: "January 2026", tag: "Travel" },
   // Existing posts

@@ -39,14 +39,14 @@ export default function FullMouthImplantsPage() {
               {
                 name: "All-on-6",
                 desc: "6 implants support a full arch, offering greater stability and load distribution than All-on-4. Better for patients with good bone volume who want maximum longevity.",
-                turkeyPrice: "From £5,500/arch",
+                turkeyPrice: "From £5,600/arch",
                 ukPrice: "£15,000–£22,000/arch",
                 implants: "6 per arch",
               },
               {
                 name: "Individual Implants (Full Mouth)",
                 desc: "Each missing tooth is replaced with its own implant and crown. Most like natural teeth. Best outcome but highest cost and longest treatment time.",
-                turkeyPrice: "£450/implant",
+                turkeyPrice: "£250/implant",
                 ukPrice: "£2,000–£2,800/implant",
                 implants: "1 per missing tooth",
               },

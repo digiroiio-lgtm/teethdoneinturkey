@@ -2,13 +2,13 @@ import Link from 'next/link';
 
 const prices = [
   { treatment: 'Porcelain Veneers', uk: '£900/tooth', turkey: '£190/tooth', saving: '79%' },
-  { treatment: 'Dental Implants', uk: '£2,500', turkey: '£450', saving: '82%' },
+  { treatment: 'Dental Implants', uk: '£2,500', turkey: '£250', saving: '90%' },
   { treatment: 'All-on-4 Implants', uk: '£15,000+', turkey: '£4,500', saving: '70%' },
-  { treatment: 'All-on-6 Implants', uk: '£18,000+', turkey: '£5,500', saving: '69%' },
+  { treatment: 'All-on-6 Implants', uk: '£18,000+', turkey: '£5,600', saving: '69%' },
   { treatment: 'Full Smile Makeover', uk: '£12,000+', turkey: '£3,500', saving: '71%' },
   { treatment: 'Teeth Whitening', uk: '£600', turkey: '£120', saving: '80%' },
   { treatment: 'Composite Bonding', uk: '£400/tooth', turkey: '£90/tooth', saving: '78%' },
-  { treatment: 'Zirconia Crown', uk: '£1,200', turkey: '£250', saving: '79%' },
+  { treatment: 'Zirconia Crown', uk: '£1,200', turkey: '£130', saving: '89%' },
 ];
 
 export default function PriceTable() {

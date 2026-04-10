@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/hollywood-smile-uk-vs-turkey" },
   title: "Hollywood Smile Cost: UK vs Turkey 2026",
-  description: "Hollywood Smile cost UK vs Turkey compared. 20 E-max veneers from £3,800 in Turkey vs £20,000+ in the UK. What's included, quality, and how to book.",
+  description: "Hollywood Smile cost UK vs Turkey compared. 20 zirconia crowns from £2,800 in Turkey vs £15,000+ in the UK. What's included, quality, and how to book.",
 };
 
 export default function HollywoodSmileUKvsTurkeyPage() {
@@ -23,25 +23,25 @@ export default function HollywoodSmileUKvsTurkeyPage() {
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
-            The Hollywood Smile — a perfectly uniform, brilliantly white full set of veneers — is one of the most sought-after cosmetic dental treatments. In the UK, it&apos;s priced beyond the reach of most patients. In Turkey, the same result is available for a fraction of the cost. This guide breaks down exactly what you get, what you pay, and what to watch out for.
+            The Hollywood Smile — a perfectly uniform, brilliantly white full set of zirconia crowns — is one of the most sought-after cosmetic dental treatments. In the UK, it&apos;s priced beyond the reach of most patients. In Turkey, the same result is available for a fraction of the cost. This guide breaks down exactly what you get, what you pay, and what to watch out for.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Hollywood Smile Price: UK vs Turkey</h2>
           <div className="grid grid-cols-2 gap-4 my-4">
             <div className="bg-red-50 rounded-2xl p-5 text-center border border-red-200">
-              <p className="text-sm text-gray-500 mb-1">UK Private (20 veneers)</p>
-              <p className="text-3xl font-extrabold text-red-500">£18,000–£22,000</p>
-              <p className="text-xs text-gray-500">E-max at £900–£1,100 per tooth</p>
+              <p className="text-sm text-gray-500 mb-1">UK Private (20 crowns)</p>
+              <p className="text-3xl font-extrabold text-red-500">£15,000+</p>
+              <p className="text-xs text-gray-500">Zirconia crowns at £900–£1,200 each</p>
             </div>
             <div className="bg-green-50 rounded-2xl p-5 text-center border border-green-200">
-              <p className="text-sm text-gray-500 mb-1">Turkey (20 E-max veneers)</p>
-              <p className="text-3xl font-extrabold text-green-600">£3,800–£5,000</p>
-              <p className="text-xs text-green-600 font-semibold">Save up to £17,200</p>
+              <p className="text-sm text-gray-500 mb-1">Turkey (20 zirconia crowns)</p>
+              <p className="text-3xl font-extrabold text-green-600">£2,800</p>
+              <p className="text-xs text-green-600 font-semibold">Save up to £12,000+</p>
             </div>
           </div>
 
           <p>
-            Even adding £500–£700 for a week&apos;s flights and hotel in Turkey, the total cost remains around <strong>£4,500–£5,700</strong> — still saving over £12,000 compared to UK prices.
+            Even adding £500–£700 for a week&apos;s flights and hotel in Turkey, the total cost remains around <strong>£3,300–£3,500</strong> — still saving over £11,000 compared to UK prices.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Hollywood Smile Package Comparison</h2>
@@ -57,11 +57,10 @@ export default function HollywoodSmileUKvsTurkeyPage() {
               </thead>
               <tbody>
                 {[
-                  { pkg: "16 E-max Veneers", uk: "£14,400–£17,600", tr: "£3,040–£4,000", s: "74–79%" },
-                  { pkg: "20 E-max Veneers (Hollywood)", uk: "£18,000–£22,000", tr: "£3,800–£5,000", s: "74–79%" },
-                  { pkg: "20 Zirconia Veneers", uk: "£18,000–£24,000", tr: "£4,400–£5,600", s: "74–78%" },
-                  { pkg: "Hollywood + Gum Contouring", uk: "£19,000–£25,000", tr: "£4,200–£5,500", s: "74–78%" },
-                  { pkg: "Hollywood + Whitening", uk: "£19,000–£23,000", tr: "£4,000–£5,200", s: "74–79%" },
+                  { pkg: "20 Zirconia Crowns (Hollywood Smile)", uk: "£18,000–£24,000", tr: "£2,800", s: "~85%" },
+                  { pkg: "24 Zirconia Crowns + hotel + transfers", uk: "£21,600–£28,800", tr: "£3,100", s: "~86%" },
+                  { pkg: "Hollywood + Gum Contouring", uk: "£19,000–£25,000", tr: "£3,300–£3,500", s: "~83%" },
+                  { pkg: "Individual Zirconia Crown", uk: "£900–£1,200", tr: "£130", s: "~90%" },
                 ].map((r, i) => (
                   <tr key={r.pkg} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3 font-medium">{r.pkg}</td>
@@ -81,7 +80,7 @@ export default function HollywoodSmileUKvsTurkeyPage() {
             The materials used at reputable Turkish clinics are identical to those used in the UK&apos;s leading cosmetic dental practices. A Hollywood Smile in Turkey typically uses:
           </p>
           <ul className="list-disc list-inside space-y-2 my-3">
-            <li><strong>Ivoclar E-max</strong> — the world&apos;s leading lithium disilicate ceramic, made in Liechtenstein. Widely considered the gold standard for translucent, natural-looking veneers.</li>
+            <li><strong>Zirconia</strong> — the industry-leading material for Hollywood Smile packages in Turkey. Highly durable, natural-looking, and resistant to chipping. Available in full-arch packages with hotel and transfers included.</li>
             <li><strong>Digital Smile Design (DSD)</strong> — software that maps the patient&apos;s facial proportions and previews the smile result before any treatment begins.</li>
             <li><strong>In-house CAD/CAM laboratory</strong> — allowing precision milling of veneers to consistent tolerances.</li>
             <li><strong>3Shape or similar digital impressions</strong> — eliminating the need for messy traditional impression materials.</li>
@@ -97,7 +96,7 @@ export default function HollywoodSmileUKvsTurkeyPage() {
               "Shade selection — from natural off-white to dramatic bright white",
               "Tooth preparation (minimal enamel reduction)",
               "Temporary veneers while permanent ones are crafted",
-              "Permanent E-max veneer fabrication (in-house lab, 3–5 days)",
+              "Permanent zirconia crown fabrication (in-house lab, 3–5 days)",
               "Final fitting, bonding, and bite adjustment",
               "5–10 year written guarantee",
               "Post-treatment aftercare instructions and WhatsApp follow-up",
@@ -122,7 +121,7 @@ export default function HollywoodSmileUKvsTurkeyPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Can You Get a Natural-Looking Hollywood Smile in Turkey?</h2>
           <p>
-            Absolutely. The term &ldquo;Hollywood Smile&rdquo; encompasses a wide range of aesthetics — from the very white, very uniform result popularised in celebrity culture to a subtler, more natural enhancement. Modern E-max veneers are available in dozens of shades, from bright BL1 to natural-looking A1 or A2. Digital Smile Design technology lets you preview any shade and shape before committing.
+            Absolutely. The term &ldquo;Hollywood Smile&rdquo; encompasses a wide range of aesthetics — from the very white, very uniform result popularised in celebrity culture to a subtler, more natural enhancement. Modern zirconia crowns are available in dozens of shades, from bright white to natural-looking tones. Digital Smile Design technology lets you preview any shade and shape before committing.
           </p>
           <p>
             Our partner clinics specialise in natural-looking results. They advise patients on the shade and shape that will look most harmonious with their skin tone, face shape, and age — not simply the whitest option available.
@@ -135,13 +134,13 @@ export default function HollywoodSmileUKvsTurkeyPage() {
           <ol className="list-decimal list-inside space-y-2 my-3">
             <li><strong>Day 1:</strong> Consultation, photos, Digital Smile Design, shade selection</li>
             <li><strong>Day 2:</strong> Tooth preparation, temporary veneers fitted</li>
-            <li><strong>Days 3–4:</strong> In-house lab fabricates permanent E-max veneers</li>
+            <li><strong>Days 3–4:</strong> In-house lab fabricates permanent zirconia crowns</li>
             <li><strong>Day 5:</strong> Permanent veneer fitting, bonding, final adjustments</li>
           </ol>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Pay Monthly for Your Hollywood Smile</h2>
           <p>
-            A Hollywood Smile (20 E-max veneers) financed over 36 months costs approximately <strong>£106/month</strong> — less than many people spend on subscription services, and far less than UK finance for equivalent treatment.
+            A Hollywood Smile (20 zirconia crowns) financed over 36 months costs approximately <strong>£78/month</strong> — less than many people spend on subscription services, and far less than UK finance for equivalent treatment.
           </p>
           <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ See all monthly payment options</Link>
 
