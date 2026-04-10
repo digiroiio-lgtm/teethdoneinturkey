@@ -33,7 +33,7 @@ export default function HeroSection() {
         </div>
 
         <a
-          href="https://wa.me/905000000000"
+          href="https://wa.me/905353998999"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-colors"

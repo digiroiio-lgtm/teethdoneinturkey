@@ -23,7 +23,7 @@ export default function CTASection({ title, subtitle, buttonText, buttonHref, wh
           </Link>
           {whatsapp && (
             <a
-              href="https://wa.me/905000000000"
+              href="https://wa.me/905353998999"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors flex items-center justify-center gap-2"

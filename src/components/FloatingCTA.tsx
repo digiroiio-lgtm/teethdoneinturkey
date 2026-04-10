@@ -7,7 +7,7 @@ export default function FloatingCTA() {
     <>
       {/* Floating WhatsApp button - bottom right */}
       <a
-        href="https://wa.me/905000000000"
+        href="https://wa.me/905353998999"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-4 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-3.5 shadow-lg transition-transform hover:scale-110 flex items-center gap-2"
@@ -22,7 +22,7 @@ export default function FloatingCTA() {
       {/* Mobile bottom bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-white border-t border-gray-200 flex">
         <a
-          href="https://wa.me/905000000000"
+          href="https://wa.me/905353998999"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 bg-green-500 text-white py-3 text-center text-sm font-semibold"

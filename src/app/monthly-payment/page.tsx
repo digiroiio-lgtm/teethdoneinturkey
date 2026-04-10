@@ -55,7 +55,7 @@ export default function MonthlyPaymentPage() {
             <Link href="/book-consultation" className="border-2 border-white text-white px-5 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors text-sm">
               📤 Upload Dental X-Ray
             </Link>
-            <a href="https://wa.me/447700000000" className="bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold hover:bg-green-600 transition-colors text-sm flex items-center justify-center gap-2">
+            <a href="https://wa.me/905353998999" className="bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold hover:bg-green-600 transition-colors text-sm flex items-center justify-center gap-2">
               💬 WhatsApp a Treatment Coordinator
             </a>
           </div>
