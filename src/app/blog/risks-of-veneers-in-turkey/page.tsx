@@ -66,7 +66,7 @@ export default function RisksVeneersPage() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-200">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h2>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             <Link href="/treatments/veneers-turkey" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Veneers Turkey</span>

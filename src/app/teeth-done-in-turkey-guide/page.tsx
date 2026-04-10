@@ -69,7 +69,7 @@ export default function TeethDoneInTurkeyGuidePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
           <nav className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-            <h2 className="text-lg font-bold text-gray-900 mb-3">Contents</h2>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Contents</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
               {[
                 ["#why-turkey", "Why Choose Turkey?"],
@@ -305,7 +305,7 @@ export default function TeethDoneInTurkeyGuidePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Further</h2>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Explore Further</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { href: "/treatments/veneers-turkey", label: "Veneers Turkey", desc: "E-max from £190/tooth" },

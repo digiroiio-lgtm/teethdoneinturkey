@@ -150,7 +150,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-200">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h2>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
                 { href: "/treatments/dental-implants-turkey", label: "Dental Implants Turkey", sub: "Full treatment guide" },
