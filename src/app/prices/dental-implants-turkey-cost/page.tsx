@@ -33,11 +33,11 @@ export default function ImplantsCostPage() {
                 </thead>
                 <tbody>
                   {[
-                    { t: "Single Implant (implant + crown)", uk: "£2,000–£3,000", turkey: "£420–£600", s: "80–82%" },
-                    { t: "Implant + Bone Graft", uk: "£3,000–£4,500", turkey: "£700–£1,000", s: "77–79%" },
-                    { t: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,000–£5,500", s: "67–72%" },
-                    { t: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "£5,000–£7,000", s: "66–71%" },
-                    { t: "Full Mouth (2 arches All-on-4)", uk: "£25,000–£36,000", turkey: "£8,000–£11,000", s: "67–72%" },
+                    { t: "Single Osstem Implant + Crown", uk: "£2,000–£3,000", turkey: "£380", s: "~85%" },
+                    { t: "Single Medentika Implant + Crown", uk: "£2,500–£3,500", turkey: "£430", s: "~85%" },
+                    { t: "Single Straumann Implant + Crown", uk: "£3,000–£4,500", turkey: "£930", s: "~78%" },
+                    { t: "Osstem Implant + Bone Graft", uk: "£3,000–£4,500", turkey: "£450", s: "~87%" },
+                    { t: "All-on-6 Package (per arch, incl. hotel)", uk: "£15,000–£22,000", turkey: "£5,600", s: "~70%" },
                   ].map((r, i) => (
                     <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="px-4 py-3 font-medium">{r.t}</td>
@@ -58,7 +58,10 @@ export default function ImplantsCostPage() {
               ))}
             </ul>
           </div>
-          <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get My Implant Quote</Link>
+          <div className="flex gap-4 flex-wrap">
+            <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get My Implant Quote</Link>
+            <Link href="/prices/all-on-6-dental-implants-turkey-package" className="inline-block border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">All-on-6 Package Details</Link>
+          </div>
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Are Dental Implants Cheaper in Turkey?</h2>

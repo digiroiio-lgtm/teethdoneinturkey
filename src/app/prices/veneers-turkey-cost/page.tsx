@@ -34,10 +34,11 @@ export default function VeneersCostPage() {
                 </thead>
                 <tbody>
                   {[
-                    { type: "E-max Porcelain", uk: "£800–£1,000", turkey: "£190–£220", saving: "78%" },
-                    { type: "Zirconia", uk: "£900–£1,200", turkey: "£220–£280", saving: "75%" },
+                    { type: "Zirconia Crown", uk: "£1,000–£1,500", turkey: "£130", saving: "~90%" },
+                    { type: "E-max Porcelain Veneer", uk: "£800–£1,000", turkey: "£190–£220", saving: "78%" },
                     { type: "Composite (direct)", uk: "£300–£500", turkey: "£80–£120", saving: "75%" },
-                    { type: "Full set 20 (E-max)", uk: "£16,000–£20,000", turkey: "£3,800–£4,400", saving: "78%" },
+                    { type: "Hollywood Smile 20 Crowns (package)", uk: "£20,000–£30,000", turkey: "£2,800", saving: "~87%" },
+                    { type: "Hollywood Smile 24 Crowns (package)", uk: "£24,000–£36,000", turkey: "£3,100", saving: "~87%" },
                   ].map((r, i) => (
                     <tr key={r.type} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="px-4 py-3 font-medium">{r.type}</td>
@@ -66,7 +67,10 @@ export default function VeneersCostPage() {
               ))}
             </ul>
           </div>
-          <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get My Veneer Quote</Link>
+          <div className="flex gap-4 flex-wrap">
+            <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get My Veneer Quote</Link>
+            <Link href="/prices/hollywood-smile-turkey-package" className="inline-block border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Hollywood Smile Packages</Link>
+          </div>
         </div>
       </section>
       <CTASection title="Find Out Exactly What Your Veneers Will Cost" subtitle="Send us your photos and we'll prepare a personalised veneer quote within 24 hours — free, no obligation." buttonText="Get Free Quote" buttonHref="/book-consultation" whatsapp={true} />

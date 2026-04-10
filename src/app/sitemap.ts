@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/prices/veneers-turkey-cost',
     '/prices/dental-implants-turkey-cost',
     '/prices/turkey-teeth-cost',
+    '/prices/all-on-6-dental-implants-turkey-package',
+    '/prices/hollywood-smile-turkey-package',
     '/monthly-payment',
     '/reviews',
     '/before-after',
