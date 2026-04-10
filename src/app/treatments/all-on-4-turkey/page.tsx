@@ -4,6 +4,8 @@ import Script from "next/script";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/all-on-4-turkey" },
   title: "All-on-4 Dental Implants Turkey – From £4,500 per Arch",

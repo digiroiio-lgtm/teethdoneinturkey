@@ -4,6 +4,8 @@ import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 import CTASection from "@/components/CTASection";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/monthly-payment" },
   title: "Dental Treatment Turkey Monthly Payment – From £82/Month",

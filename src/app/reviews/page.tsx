@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTASection from "@/components/CTASection";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/reviews" },
   title: "UK Patient Reviews – Dental Turkey",

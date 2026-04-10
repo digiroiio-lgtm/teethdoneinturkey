@@ -8,6 +8,8 @@ import TestimonialCard from "@/components/TestimonialCard";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   title: "Teeth Done in Turkey | Dental Veneers & Implants",

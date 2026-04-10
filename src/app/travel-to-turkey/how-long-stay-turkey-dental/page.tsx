@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import CTASection from "@/components/CTASection";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/travel-to-turkey/how-long-stay-turkey-dental" },
   title: "How Long for Dental Work in Turkey",

@@ -3,6 +3,8 @@ import Link from "next/link";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/teeth-done-in-turkey-guide" },
   title: "Turkey Dental Guide for UK Patients",

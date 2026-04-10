@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/how-long-do-dental-veneers-last" },
   title: "How Long Do Veneers Last in Turkey?",

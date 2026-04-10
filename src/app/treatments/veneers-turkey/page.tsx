@@ -4,6 +4,8 @@ import Script from "next/script";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/veneers-turkey" },
   title: "Veneers Turkey – From £190 Per Tooth",

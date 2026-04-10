@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/all-on-6-dental-implants-turkey-package" },
   title: "All-on-6 Dental Implants Turkey Package – £5,600 All-Inclusive",

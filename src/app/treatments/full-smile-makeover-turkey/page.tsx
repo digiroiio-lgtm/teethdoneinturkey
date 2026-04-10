@@ -4,6 +4,8 @@ import Script from "next/script";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/full-smile-makeover-turkey" },
   title: "Smile Makeover Turkey – Full Transformation from £3,500",

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/e-max-vs-zirconia-veneers-turkey" },
   title: "E-max vs Zirconia Veneers in Turkey",

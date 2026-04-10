@@ -3,6 +3,8 @@ import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import TestimonialCard from "@/components/TestimonialCard";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/turkey-teeth-reviews" },
   title: "Turkey Teeth Reviews – UK Patients",
