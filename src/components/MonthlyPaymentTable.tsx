@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 const plans = [
-  { treatment: 'Smile Makeover (20 veneers)', total: '£3,200', monthly36: '£95/month', monthly24: '£140/month' },
-  { treatment: 'Veneers Package (10 veneers)', total: '£2,800', monthly36: '£82/month', monthly24: '£122/month' },
-  { treatment: 'Implants Package (single arch)', total: '£4,500', monthly36: '£135/month', monthly24: '£196/month' },
-  { treatment: 'All-on-4', total: '£4,500', monthly36: '£135/month', monthly24: '£196/month' },
-  { treatment: 'All-on-6', total: '£5,500', monthly36: '£163/month', monthly24: '£240/month' },
+  { treatment: 'Smile Makeover (20 veneers)', total: '£3,200', monthly36: '£95/month', monthly24: '£140/month', popular: true },
+  { treatment: 'Veneers Package (10 veneers)', total: '£2,800', monthly36: '£82/month', monthly24: '£122/month', popular: false },
+  { treatment: 'Implants Package (single arch)', total: '£4,500', monthly36: '£135/month', monthly24: '£196/month', popular: false },
+  { treatment: 'All-on-4', total: '£4,500', monthly36: '£135/month', monthly24: '£196/month', popular: false },
+  { treatment: 'All-on-6', total: '£5,500', monthly36: '£163/month', monthly24: '£240/month', popular: false },
 ];
 
 export default function MonthlyPaymentTable() {
@@ -33,8 +33,13 @@ export default function MonthlyPaymentTable() {
             </thead>
             <tbody>
               {plans.map((row, i) => (
-                <tr key={row.treatment} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-4 py-3 font-medium text-gray-800">{row.treatment}</td>
+                <tr key={row.treatment} className={row.popular ? 'bg-blue-50 border-l-4 border-[#1e40af]' : i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td className="px-4 py-3 font-medium text-gray-800">
+                    <span>{row.treatment}</span>
+                    {row.popular && (
+                      <span className="ml-2 inline-block bg-[#1e40af] text-white text-xs font-bold px-2 py-0.5 rounded-full">MOST POPULAR</span>
+                    )}
+                  </td>
                   <td className="px-4 py-3 text-right font-bold text-[#1e40af]">{row.total}</td>
                   <td className="px-4 py-3 text-right">
                     <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-bold">{row.monthly36}</span>
