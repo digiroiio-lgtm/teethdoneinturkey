@@ -19,6 +19,14 @@ export const metadata: Metadata = {
 
 const treatments = [
   {
+    title: "Crowns & Full Veneers",
+    description: "Transform your smile with zirconia crowns & full veneers crafted by expert Turkish dentists using world-class materials.",
+    price: "From £130/tooth",
+    ukPrice: "£900–£1,200/tooth",
+    href: "/prices/hollywood-smile-turkey-package",
+    icon: "👑",
+  },
+  {
     title: "Veneers Turkey",
     description: "Transform your smile with porcelain or E-max veneers crafted by expert Turkish dentists using world-class materials.",
     price: "From £190/tooth",
