@@ -23,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/prices/all-on-6-dental-implants-turkey-package',
     '/prices/hollywood-smile-turkey-package',
     '/monthly-payment',
+    '/ai-price-estimate',
+    '/price-calculator',
     '/reviews',
     '/before-after',
     '/travel-to-turkey',

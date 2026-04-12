@@ -7,6 +7,7 @@ import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 import TestimonialCard from "@/components/TestimonialCard";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import AIPriceEstimator from "@/components/AIPriceEstimator";
 
 export const revalidate = 86400;
 
@@ -119,6 +120,25 @@ export default function HomePage() {
       </section>
 
       <PriceTable />
+
+      {/* AI Price Estimator */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-block bg-blue-100 text-[#1e40af] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+              🤖 New — AI Price Estimator
+            </div>
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-3">
+              Tell Us What You Need — Get an Instant Estimate
+            </h2>
+            <p className="text-gray-600 max-w-xl mx-auto">
+              Just describe your dental goals in plain English. Our AI instantly matches your needs to our price list and shows what you&apos;d pay in Turkey vs the UK.
+            </p>
+          </div>
+          <AIPriceEstimator />
+        </div>
+      </section>
+
       <MonthlyPaymentTable />
 
       {/* Testimonials */}

@@ -47,6 +47,9 @@ export default function Header() {
               )}
             </div>
             <Link href="/prices/teeth-done-in-turkey-cost" className="text-gray-700 hover:text-[#1e40af] font-medium">Prices</Link>
+            <Link href="/ai-price-estimate" className="text-gray-700 hover:text-[#1e40af] font-medium flex items-center gap-1">
+              <span>🤖</span> AI Estimate
+            </Link>
             <Link href="/monthly-payment" className="text-gray-700 hover:text-[#1e40af] font-medium">Monthly Payment</Link>
             <Link href="/reviews" className="text-gray-700 hover:text-[#1e40af] font-medium">Reviews</Link>
             <Link href="/blog" className="text-gray-700 hover:text-[#1e40af] font-medium">Blog</Link>
@@ -82,6 +85,7 @@ export default function Header() {
           ))}
           <hr />
           <Link href="/prices/teeth-done-in-turkey-cost" className="block py-2 text-gray-700 hover:text-[#1e40af]" onClick={() => setMobileOpen(false)}>Prices</Link>
+          <Link href="/ai-price-estimate" className="block py-2 text-gray-700 hover:text-[#1e40af]" onClick={() => setMobileOpen(false)}>🤖 AI Price Estimate</Link>
           <Link href="/monthly-payment" className="block py-2 text-gray-700 hover:text-[#1e40af]" onClick={() => setMobileOpen(false)}>Monthly Payment</Link>
           <Link href="/reviews" className="block py-2 text-gray-700 hover:text-[#1e40af]" onClick={() => setMobileOpen(false)}>Reviews</Link>
           <Link href="/blog" className="block py-2 text-gray-700 hover:text-[#1e40af]" onClick={() => setMobileOpen(false)}>Blog</Link>
