@@ -10,7 +10,7 @@ export default function FloatingCTA() {
         href="https://wa.me/905353998999"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-4 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-3.5 shadow-lg transition-transform hover:scale-110 flex items-center gap-2"
+        className="fixed bottom-6 right-4 z-50 hidden sm:flex items-center gap-2 rounded-full bg-green-500 p-3.5 text-white shadow-lg transition-transform hover:scale-110 hover:bg-green-600"
         aria-label="Chat on WhatsApp"
       >
         <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
