@@ -90,6 +90,9 @@ export default function FinanceOptionsUKPage() {
             <p className="text-lg text-gray-700 leading-relaxed">
               You don&apos;t need to have the full cost of your treatment ready upfront. Our monthly payment plans let you spread the cost of dental work in Turkey over 12, 24, or 36 months — with 0% APR available, so you pay no more than the treatment cost itself.
             </p>
+            <p className="mt-3">
+              <Link href="/blog/dental-monthly-payments-uk" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Read: Dental Monthly Payments UK complete guide (2026)</Link>
+            </p>
           </div>
 
           <div>

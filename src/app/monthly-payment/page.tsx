@@ -324,6 +324,7 @@ export default function MonthlyPaymentPage() {
                 { href: "/prices/turkey-teeth-cost", label: "All Turkey Teeth Prices", sub: "Complete price guide" },
                 { href: "/treatments/veneers-turkey", label: "Veneers Treatment Guide", sub: "What to expect" },
                 { href: "/treatments/dental-implants-turkey", label: "Implants Treatment Guide", sub: "Full implant process" },
+                { href: "/blog/dental-monthly-payments-uk", label: "Dental Monthly Payments UK Guide", sub: "2026 finance explainer" },
                 { href: "/teeth-done-in-turkey-guide", label: "Turkey Dental Guide", sub: "Complete patient guide" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="flex flex-col bg-white rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
