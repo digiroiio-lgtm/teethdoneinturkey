@@ -54,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/signs-of-dental-implant-failure',
     '/blog/single-tooth-implant-turkey-cost',
     // Finance cluster
+    '/blog/dental-monthly-payments-uk',
     '/blog/can-you-pay-monthly-for-teeth-in-turkey',
     '/blog/dental-treatment-turkey-payment-plans',
     '/blog/finance-dental-implants-turkey-uk-patients',

@@ -147,6 +147,7 @@ export default function VeneersTurkeyPage() {
                 { title: "Hollywood Smile Packages", href: "/prices/hollywood-smile-turkey-package", desc: "20 or 24 crown all-inclusive packages with hotel and transfers." },
                 { title: "Smile Makeover Turkey", href: "/treatments/full-smile-makeover-turkey", desc: "Full smile transformation including veneers, whitening and more." },
                 { title: "Veneers Cost Guide", href: "/prices/veneers-turkey-cost", desc: "Complete UK vs Turkey price breakdown by veneer type." },
+                { title: "Dental Monthly Payments UK", href: "/blog/dental-monthly-payments-uk", desc: "See 2026 monthly finance examples for veneers and more." },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-blue-50 rounded-xl p-4 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition-colors block">
                   <h3 className="font-bold text-gray-900 text-sm mb-1">{item.title}</h3>
