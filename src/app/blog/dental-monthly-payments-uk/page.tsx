@@ -164,7 +164,7 @@ export default function DentalMonthlyPaymentsUKPage() {
             ))}
           </div>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">CTA Section</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Get Started With Your Treatment Plan</h2>
           <div className="mt-2 p-6 bg-[#1e40af] text-white rounded-2xl">
             <p className="font-bold text-xl mb-2">Check your finance options in under 60 seconds</p>
             <p className="text-blue-200 mb-4">
