@@ -117,13 +117,11 @@ const medicalBusinessSchema = {
     addressRegion: "Antalya",
   },
   email: "hello@teethdoneinturkey.co.uk",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "1284",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  // NOTE: aggregateRating intentionally omitted. Google requires review
+  // structured data to reflect genuine, auditable reviews collected by the
+  // site. Re-add an AggregateRating here only once a real review source
+  // (e.g. Google Business Profile, Trustpilot) is connected and the figures
+  // can be verified.
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Dental Treatments in Turkey",
