@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default function DentalImplantsTurkeyCostRedirect() {
-  redirect("/prices/dental-implants-turkey-cost");
+  permanentRedirect("/prices/dental-implants-turkey-cost");
 }

@@ -1,6 +1,6 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export const revalidate = 86400;
 export default function PricesPage() {
-  redirect("/prices/teeth-done-in-turkey-cost");
+  permanentRedirect("/prices/teeth-done-in-turkey-cost");
 }
