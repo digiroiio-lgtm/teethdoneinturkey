@@ -47,12 +47,13 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  // Single-locale en-GB site: canonical is the meaningful signal. Locale is
+  // already conveyed by <html lang="en-GB"> and og:locale. A self-referential
+  // hreflang adds negligible value here and, because per-page metadata replaces
+  // (not deep-merges) `alternates`, it would be dropped on any page that sets
+  // its own canonical — so it is intentionally omitted.
   alternates: {
     canonical: "/",
-    languages: {
-      "en-GB": SITE_URL,
-      "x-default": SITE_URL,
-    },
   },
   openGraph: {
     type: "website",

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";
 import TreatmentCard from "@/components/TreatmentCard";
@@ -167,7 +166,10 @@ const homePageJsonLd = {
 export default function HomePage() {
   return (
     <>
-      <Script id="home-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }} />
+      {/* Rendered as a plain server-side <script> so the graph is present in
+          the initial HTML for crawlers and generative engines, rather than
+          injected client-side by next/script. */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }} />
       <HeroSection />
       <TrustBar />
 
