@@ -96,7 +96,7 @@ export default function ContactForm() {
           required
           value={formValues.name}
           onChange={handleChange('name')}
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
           placeholder="Your full name"
         />
       </div>
@@ -107,7 +107,7 @@ export default function ContactForm() {
           required
           value={formValues.email}
           onChange={handleChange('email')}
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
           placeholder="your@email.com"
         />
       </div>
@@ -117,7 +117,7 @@ export default function ContactForm() {
           type="tel"
           value={formValues.phone}
           onChange={handleChange('phone')}
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
           placeholder="+44 7..."
         />
       </div>
@@ -126,7 +126,7 @@ export default function ContactForm() {
         <select
           value={formValues.treatmentInterest}
           onChange={handleChange('treatmentInterest')}
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
         >
           <option value="">Select treatment...</option>
           <option>Veneers</option>
@@ -144,7 +144,7 @@ export default function ContactForm() {
           rows={4}
           value={formValues.message}
           onChange={handleChange('message')}
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]"
           placeholder="Tell us about your dental goals or any questions you have..."
         ></textarea>
       </div>

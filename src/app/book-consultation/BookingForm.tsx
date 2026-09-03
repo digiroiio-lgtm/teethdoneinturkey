@@ -25,24 +25,24 @@ export default function BookingForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
-          <input type="text" required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" />
+          <input type="text" required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
-          <input type="text" required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" />
+          <input type="text" required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" />
         </div>
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-        <input type="email" required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" />
+        <input type="email" required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">Phone / WhatsApp *</label>
-        <input type="tel" required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" placeholder="+44 7..." />
+        <input type="tel" required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" placeholder="+44 7..." />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">Treatment Interest *</label>
-        <select required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]">
+        <select required className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]">
           <option value="">Select treatment...</option>
           <option>Veneers</option>
           <option>Dental Implants</option>
@@ -54,11 +54,11 @@ export default function BookingForm() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Contact Date</label>
-        <input type="date" className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" />
+        <input type="date" className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">Tell Us About Your Goals</label>
-        <textarea rows={3} className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" placeholder="What would you like to achieve? Any concerns or questions?"></textarea>
+        <textarea rows={3} className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]" placeholder="What would you like to achieve? Any concerns or questions?"></textarea>
       </div>
       <button type="submit" className="w-full bg-[#1e40af] text-white py-3.5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors">
         Request Free Consultation →

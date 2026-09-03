@@ -52,6 +52,32 @@ body {
   border-radius: 4px;
 }
 
+/* Form fields render on a white surface regardless of the visitor's OS color
+   scheme, but Tailwind preflight makes them inherit `color` from body, which
+   switches to a near-white --foreground in dark mode. Pin entered text to a
+   dark, high-contrast color here so it never inherits that light value. */
+input,
+select,
+textarea {
+  color: #111827;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #111827;
+  caret-color: #111827;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 /* Modern mesh-gradient hero background, used across every page's hero band */
 .hero-gradient {
   background-image:

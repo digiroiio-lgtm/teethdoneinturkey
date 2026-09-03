@@ -85,7 +85,7 @@ export default function PriceCalculator() {
                 <select
                   value={item.id}
                   onChange={e => updateItem(index, 'id', e.target.value)}
-                  className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   {treatments.map(t => (
                     <option key={t.id} value={t.id}>{t.label} — from £{t.priceMin}{t.unit !== 'fixed' ? `/${t.unit}` : ''}</option>
@@ -101,7 +101,7 @@ export default function PriceCalculator() {
                       max={32}
                       value={item.qty}
                       onChange={e => updateItem(index, 'qty', Math.max(1, parseInt(e.target.value) || 1))}
-                      className="w-16 border border-gray-300 rounded-lg px-2 py-2 text-sm text-center focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-16 border border-gray-300 rounded-lg px-2 py-2 text-sm text-gray-900 text-center focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <span className="text-xs text-gray-500">{t?.unit}</span>
                   </div>
