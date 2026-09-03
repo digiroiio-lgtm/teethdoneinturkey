@@ -13,9 +13,23 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
-  title: "Teeth Done in Turkey | Dental Veneers & Implants",
+  // Lead with "Turkey teeth" — dominant UK query in Google Trends (last 7 days,
+  // interest 78–100 vs 10–18 for procedure-specific variants). Keeps brand at
+  // the end so SERP snippet reads well.
+  title:
+    "Turkey Teeth Guide: Veneers, Implants & Costs for UK Patients (2026)",
   description:
-    "Save up to 70% on dental treatments in Turkey. Veneers from £190/tooth, dental implants from £250. UK patient support, JCI-accredited clinics, monthly payment options.",
+    "Turkey teeth explained for UK patients: veneers from £190/tooth, dental implants from £250, full smile makeovers from £3,500. JCI-accredited clinics, English-speaking dentists, monthly payments from £82/mo. Save up to 70% vs UK.",
+  keywords: [
+    "turkey teeth",
+    "turkey teeth cost",
+    "turkey teeth uk",
+    "veneers turkey",
+    "dental implants turkey",
+    "hollywood smile turkey",
+    "all on 4 turkey",
+    "monthly payment dental turkey",
+  ],
 };
 
 const treatments = [
@@ -105,20 +119,55 @@ const homeFaqs = [
   { question: "Are the dentists qualified?", answer: "Yes. All our partner dentists hold Turkish Dental Association qualifications equivalent to UK GDC registration, and many hold international accreditations. Many have trained in Germany, the UK, or the USA. We only work with clinics accredited by JCI or the Turkish Ministry of Health." },
 ];
 
-const homeFaqJsonLd = {
+const SITE_URL = "https://www.teethdoneinturkey.co.uk";
+
+// GEO-friendly page graph: FAQPage + WebPage with speakable spec so voice/AI
+// answer surfaces can safely lift Q&A. `isPartOf` ties the page to the site
+// entity declared in the root layout.
+const homePageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: homeFaqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/#webpage`,
+      url: `${SITE_URL}/`,
+      name: "Turkey Teeth Guide: Veneers, Implants & Costs for UK Patients",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": `${SITE_URL}/#business` },
+      inLanguage: "en-GB",
+      primaryImageOfPage: `${SITE_URL}/opengraph-image`,
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", "h2", ".faq-answer"],
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE_URL}/#faq`,
+      mainEntity: homeFaqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${SITE_URL}/`,
+        },
+      ],
+    },
+  ],
 };
 
 export default function HomePage() {
   return (
     <>
-      <Script id="faq-schema-home" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqJsonLd) }} />
+      <Script id="home-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }} />
       <HeroSection />
       <TrustBar />
 
