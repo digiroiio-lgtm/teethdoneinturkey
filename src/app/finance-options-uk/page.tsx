@@ -71,6 +71,14 @@ const faqs = [
     q: "Can I pay part upfront and finance the rest?",
     a: "Yes. You can put any amount as a deposit and finance the remainder. This reduces your monthly payments and may mean you qualify for a shorter term.",
   },
+  {
+    q: "Is this a dental loan or a dental payment plan?",
+    a: "It's a payment plan: finance arranged specifically for your dental treatment, with 0% APR representative available and fixed monthly instalments. A dental loan usually means a general personal loan used for the same purpose, which can carry interest where this plan would not.",
+  },
+  {
+    q: "I have bad credit. Can I still get approved?",
+    a: "We can't guarantee approval, and no dental finance provider honestly can. The pre-qualification check is a soft search, so it won't affect your credit score, and the outcome depends on your individual circumstances and the finance provider's own criteria at the time you apply.",
+  },
 ];
 
 const faqJsonLd = {
@@ -179,6 +187,32 @@ export default function FinanceOptionsUKPage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Payment Plan, Finance, Loan or NHS Charge: What&apos;s the Difference?</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              These terms get used interchangeably online, but they are not the same thing. Here is what each one actually means, so you can be sure you&apos;re comparing like for like.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { term: "Dental payment plan", desc: "Spreading the cost of one specific treatment over fixed monthly instalments, often at 0% interest for a set term. This is what the plans on this page are." },
+                { term: "Dental finance", desc: "The broader term for borrowing arranged specifically to pay for dental treatment, which usually works the same way as a payment plan." },
+                { term: "Dental loan", desc: "A personal loan used to cover dental costs. It may not be dental specific, and unlike a 0% dental finance plan it can carry interest." },
+                { term: "Dental insurance", desc: "A monthly premium that contributes toward the cost of future treatment, typically with annual limits and exclusions. This is different from financing treatment you need now." },
+                { term: "NHS dental charges", desc: "Fixed charges (£27.90, £76.60 or £306.80 in England from 1 April 2026) for treatment the NHS actually provides. Cosmetic work such as veneers isn't covered." },
+                { term: "Clinic membership plan", desc: "A fixed monthly fee to a dental practice covering routine check-ups and hygiene visits, not a way of financing a one-off treatment like implants or veneers." },
+              ].map(item => (
+                <div key={item.term} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                  <h3 className="font-bold text-gray-900 mb-1">{item.term}</h3>
+                  <p className="text-sm text-gray-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-gray-500 mt-4">
+              For the full picture, including whether the NHS can help before you consider financing private treatment, see the{" "}
+              <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">Can&apos;t Afford Dental Treatment in the UK guide</Link>.
+            </p>
           </div>
 
           <div>

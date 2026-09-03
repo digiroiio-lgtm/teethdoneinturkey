@@ -302,7 +302,7 @@ export default function MonthlyPaymentPage() {
               {[
                 { q: "Is the finance 0% interest?", a: "We offer 0% interest plans for qualifying applicants on 12- and 24-month terms. Some plans may carry interest depending on your credit profile and term length. Full APR details are provided before you commit — no surprises." },
                 { q: "Does applying affect my credit score?", a: "Pre-qualification uses a soft credit check with no impact on your credit score. Only a full application (which you choose to proceed with after seeing your options) will show on your credit file." },
-                { q: "Can I apply if I have bad credit?", a: "Yes. We work with specialist finance providers who consider all credit profiles, including those with CCJs, defaults, or limited credit history. Pre-qualify today to see your available options." },
+                { q: "Can I apply if I have bad credit?", a: "You can still pre-qualify. We can't guarantee approval for any applicant, since that depends on your individual circumstances and the finance provider's own criteria at the time you apply. The pre-qualification check is a soft search, so checking your eligibility won't affect your credit score." },
                 { q: "How quickly can I get finance?", a: "Pre-qualification decisions are instant. Full approval typically takes 24–48 hours. Treatment can usually be booked within 2–4 weeks of approval." },
                 { q: "What if I need to cancel after finance is approved?", a: "Finance can be cancelled during the statutory 14-day cooling-off period at no cost. If you cancel after this period, the finance agreement terms will apply — full details provided at the time of application." },
               ].map(faq => (
@@ -325,6 +325,8 @@ export default function MonthlyPaymentPage() {
                 { href: "/treatments/veneers-turkey", label: "Veneers Treatment Guide", sub: "What to expect" },
                 { href: "/treatments/dental-implants-turkey", label: "Implants Treatment Guide", sub: "Full implant process" },
                 { href: "/teeth-done-in-turkey-guide", label: "Turkey Dental Guide", sub: "Complete patient guide" },
+                { href: "/finance-options-uk", label: "Dental Finance Options", sub: "Payment plan vs loan vs NHS" },
+                { href: "/guides/cant-afford-dental-treatment-uk", label: "Can't Afford Treatment?", sub: "NHS, finance and lower-cost options" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="flex flex-col bg-white rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
                   <span className="font-semibold text-gray-900 text-sm">{item.label}</span>

@@ -44,6 +44,15 @@ const guides = [
     updated: "3 September 2026",
     href: "/guides/turkey-teeth-cost",
   },
+  {
+    category: "Cost & Finance",
+    title: "Can't Afford Dental Treatment in the UK? Your Options",
+    description:
+      "NHS charges, private costs, payment plans, dental finance and treatment abroad, laid out step by step so you can work out what you can actually afford.",
+    readingTime: "9 min",
+    updated: "3 September 2026",
+    href: "/guides/cant-afford-dental-treatment-uk",
+  },
 ];
 
 const breadcrumbJsonLd = {
