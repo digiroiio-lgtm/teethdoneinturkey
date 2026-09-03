@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import AiReferralTracking from "@/components/AiReferralTracking";
 
 // GA4 (Google Analytics)
 const GA_MEASUREMENT_ID = "G-57QGPCQQKT";
@@ -207,6 +208,9 @@ const medicalBusinessSchema = {
   },
 };
 
+// NOTE: no `potentialAction`/SearchAction here — the site has no on-site search
+// route, and declaring one that 404s is a false capability claim to crawlers and
+// answer engines. Re-add it only if a real /search route is built.
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -215,11 +219,6 @@ const websiteSchema = {
   name: SITE_NAME,
   inLanguage: "en-GB",
   publisher: { "@id": `${SITE_URL}/#business` },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${SITE_URL}/search?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
 };
 
 const organizationSchema = {
@@ -268,6 +267,7 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
+        <AiReferralTracking />
         <Header />
         <main>{children}</main>
         <Footer />

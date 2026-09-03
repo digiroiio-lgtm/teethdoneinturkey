@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 import TestimonialCard from "@/components/TestimonialCard";
 
 export const revalidate = 86400;
@@ -20,6 +21,18 @@ const reviews = [
 export default function TurkeyTeethReviewsBlogPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-turkey-teeth-reviews"
+        path="/blog/turkey-teeth-reviews"
+        headline="Turkey Teeth Reviews – UK Patients"
+        description="Real patient reviews of dental treatment in Turkey. What UK patients actually experienced — the process, the results, and whether they'd recommend it."
+        datePublished="2024-10-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Turkey Teeth Reviews – UK Patients", path: "/blog/turkey-teeth-reviews" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Reviews</span>

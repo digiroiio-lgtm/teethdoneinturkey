@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function WhyCheaperPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-why-are-dental-treatments-cheaper-in-turkey"
+        path="/blog/why-are-dental-treatments-cheaper-in-turkey"
+        headline="Why Is Dental Care Cheaper in Turkey?"
+        description="Discover exactly why dental treatment costs 70–80% less in Turkey vs the UK. It's not lower quality — it's lower overheads. A full, honest explanation for UK patients."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Why Is Dental Care Cheaper in Turkey?", path: "/blog/why-are-dental-treatments-cheaper-in-turkey" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Guide</span>

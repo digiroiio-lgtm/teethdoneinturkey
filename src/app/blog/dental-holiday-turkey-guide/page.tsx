@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function DentalHolidayGuideBlogPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-dental-holiday-turkey-guide"
+        path="/blog/dental-holiday-turkey-guide"
+        headline="The Dental Holiday Turkey Guide"
+        description="Everything you need to plan a dental holiday in Turkey — flights, accommodation, what to expect, tips from patients, and how to get the most from your trip."
+        datePublished="2024-09-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "The Dental Holiday Turkey Guide", path: "/blog/dental-holiday-turkey-guide" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Travel</span>

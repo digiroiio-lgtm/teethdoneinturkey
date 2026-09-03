@@ -119,14 +119,6 @@ const jsonLd = {
         { "@type": "ListItem", position: 3, name: "Teeth in Turkey", item: PAGE_URL },
       ],
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: faqs.map((f) => ({
-        "@type": "Question",
-        name: f.question,
-        acceptedAnswer: { "@type": "Answer", text: f.answer },
-      })),
-    },
   ],
 };
 

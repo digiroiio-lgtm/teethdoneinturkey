@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function PaymentPlansTurkeyPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-dental-treatment-turkey-payment-plans"
+        path="/blog/dental-treatment-turkey-payment-plans"
+        headline="Dental Treatment Turkey Payment Plans"
+        description="How payment plans work for dental treatment in Turkey. Everything UK patients need to know about spreading costs for veneers, implants, and smile makeovers."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Dental Treatment Turkey Payment Plans", path: "/blog/dental-treatment-turkey-payment-plans" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Finance</span>

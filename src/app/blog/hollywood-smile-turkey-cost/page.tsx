@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function HollywoodSmilePage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-hollywood-smile-turkey-cost"
+        path="/blog/hollywood-smile-turkey-cost"
+        headline="Hollywood Smile Turkey Cost 2026"
+        description="How much does a Hollywood Smile cost in Turkey for UK patients? Full cost breakdown for zirconia crown packages, what's included, and how to get a naturally glamorous result."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Hollywood Smile Turkey Cost 2026", path: "/blog/hollywood-smile-turkey-cost" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Treatments</span>

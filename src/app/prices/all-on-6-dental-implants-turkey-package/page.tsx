@@ -10,9 +10,28 @@ export const metadata: Metadata = {
   description: "All-on-6 dental implants Turkey package from £5,600. Includes Osstem implants, hotel, VIP transfers, temporary and final teeth. Full UK vs Turkey price breakdown.",
 };
 
+const faqs = [
+  { q: "What implant brand is used in the All-on-6 package?", a: "The standard package uses Osstem implants — one of the world's largest implant manufacturers, widely used across Europe and clinically proven over decades. An upgrade to Medentika (Straumann Group) or Straumann implants is available." },
+  { q: "Is the titanium bar upgrade worth it?", a: "For most patients, we recommend the titanium bar reinforcement (+£1,500). It significantly improves the durability and rigidity of your final prosthesis, especially for patients with a strong bite or those who grind their teeth." },
+  { q: "Can I get All-on-6 on finance?", a: "Yes. We offer monthly payment plans to spread the cost over 12, 24, or 36 months. Contact us to see your options." },
+  { q: "What if something goes wrong after I return home?", a: "Our UK team provides ongoing aftercare support, and your Turkish clinic is available via WhatsApp and video call. All work is covered by a written guarantee." },
+  { q: "Is the hotel in Antalya or Istanbul?", a: "Our partner clinics are based in Antalya. Hotel and transfer arrangements are co-ordinated for you as part of the package." },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
+};
+
 export default function AllOn6PackagePage() {
   return (
     <>
+      <script id="faq-schema-all-on-6-package" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block bg-yellow-400 text-[#1e40af] text-xs font-extrabold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">Most Popular</div>
@@ -143,13 +162,7 @@ export default function AllOn6PackagePage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <div className="space-y-4">
-              {[
-                { q: "What implant brand is used in the All-on-6 package?", a: "The standard package uses Osstem implants — one of the world's largest implant manufacturers, widely used across Europe and clinically proven over decades. An upgrade to Medentika (Straumann Group) or Straumann implants is available." },
-                { q: "Is the titanium bar upgrade worth it?", a: "For most patients, we recommend the titanium bar reinforcement (+£1,500). It significantly improves the durability and rigidity of your final prosthesis, especially for patients with a strong bite or those who grind their teeth." },
-                { q: "Can I get All-on-6 on finance?", a: "Yes. We offer monthly payment plans to spread the cost over 12, 24, or 36 months. Contact us to see your options." },
-                { q: "What if something goes wrong after I return home?", a: "Our UK team provides ongoing aftercare support, and your Turkish clinic is available via WhatsApp and video call. All work is covered by a written guarantee." },
-                { q: "Is the hotel in Antalya or Istanbul?", a: "Our partner clinics are based in Antalya. Hotel and transfer arrangements are co-ordinated for you as part of the package." },
-              ].map(item => (
+              {faqs.map(item => (
                 <div key={item.q} className="border-b border-gray-200 pb-4 last:border-0 last:pb-0">
                   <p className="font-semibold text-gray-900 mb-1">{item.q}</p>
                   <p className="text-sm text-gray-600">{item.a}</p>

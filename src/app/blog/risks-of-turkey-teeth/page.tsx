@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function RisksTurkeyTeethPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-risks-of-turkey-teeth"
+        path="/blog/risks-of-turkey-teeth"
+        headline="Risks of Turkey Teeth – What to Know"
+        description="An honest guide to the risks of getting teeth done in Turkey. What can go wrong, how likely it is, and how to protect yourself before booking."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Risks of Turkey Teeth – What to Know", path: "/blog/risks-of-turkey-teeth" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Safety</span>

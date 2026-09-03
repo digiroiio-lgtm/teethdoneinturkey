@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function ImplantFailurePage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-signs-of-dental-implant-failure"
+        path="/blog/signs-of-dental-implant-failure"
+        headline="Signs of Dental Implant Failure"
+        description="How to recognise the signs of dental implant failure. A guide for UK patients who've had implants in Turkey — symptoms, causes, and what to do."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Signs of Dental Implant Failure", path: "/blog/signs-of-dental-implant-failure" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>

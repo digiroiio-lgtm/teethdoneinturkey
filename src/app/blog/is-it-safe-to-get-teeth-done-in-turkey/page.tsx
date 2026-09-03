@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function SafetyBlogPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-is-it-safe-to-get-teeth-done-in-turkey"
+        path="/blog/is-it-safe-to-get-teeth-done-in-turkey"
+        headline="Is Getting Teeth Done in Turkey Safe?"
+        description="The honest answer to whether it's safe to get dental treatment in Turkey. Accreditation, risk factors, how to choose safely, and what patients say."
+        datePublished="2024-11-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Is Getting Teeth Done in Turkey Safe?", path: "/blog/is-it-safe-to-get-teeth-done-in-turkey" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Safety</span>

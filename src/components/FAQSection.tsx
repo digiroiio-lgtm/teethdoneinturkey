@@ -42,8 +42,22 @@ interface FAQSectionProps {
 export default function FAQSection({ faqs = defaultFaqs, title = 'Frequently Asked Questions' }: FAQSectionProps) {
   const [open, setOpen] = useState<number | null>(null);
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+
   return (
     <section className="py-16 bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center tracking-tight">{title}</h2>
         <div className="space-y-3">
@@ -79,7 +93,7 @@ export default function FAQSection({ faqs = defaultFaqs, title = 'Frequently Ask
                   className={`grid transition-all duration-300 ease-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{faq.answer}</div>
+                    <div className="faq-answer px-5 pb-4 text-gray-600 text-sm leading-relaxed">{faq.answer}</div>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
@@ -20,20 +19,9 @@ const faqs = [
   { question: "Can I pay monthly for dental implants in Turkey?", answer: "Yes. Finance is available over 12, 24, or 36 months. A single implant at £250 is available from approximately £7/month over 36 months. Pre-qualify with no impact on your credit score." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(f => ({
-    "@type": "Question",
-    "name": f.question,
-    "acceptedAnswer": { "@type": "Answer", "text": f.answer },
-  })),
-};
-
 export default function DentalImplantsTurkeyPage() {
   return (
     <>
-      <Script id="faq-schema-implants" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey – From £250</h1>

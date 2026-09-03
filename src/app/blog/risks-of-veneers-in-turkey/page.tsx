@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function RisksVeneersPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-risks-of-veneers-in-turkey"
+        path="/blog/risks-of-veneers-in-turkey"
+        headline="Risks of Veneers in Turkey – UK Guide"
+        description="The honest truth about the risks of getting veneers in Turkey. What can go wrong, how to reduce risk, and what to do if there's a problem after you return home."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Risks of Veneers in Turkey – UK Guide", path: "/blog/risks-of-veneers-in-turkey" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Safety</span>

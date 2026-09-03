@@ -40,9 +40,28 @@ const packages = [
   },
 ];
 
+const faqs = [
+  { q: "What is the difference between 24 and 20 crown packages?", a: "The 24-crown package covers all visible upper and lower teeth, giving a complete transformation of your entire smile. The 20-crown package focuses on the upper arch and front lower teeth — perfect if your lower teeth are less of a concern." },
+  { q: "Are the crowns porcelain or full zirconia?", a: "Both packages use full-contour zirconia crowns, which are stronger and more lifelike than older porcelain-fused-to-metal crowns. No dark metal lines at the gumline." },
+  { q: "Does the price include flights?", a: "Flights are not included — you book these yourself. We arrange your hotel and all transfers. Return flights from the UK to Antalya typically cost £100–£250." },
+  { q: "Can I add teeth whitening to the package?", a: "Professional cleaning is included in the 24-crown package. For whitening of any remaining natural teeth, this can be added for £250." },
+  { q: "Is there a guarantee?", a: "Yes. All crown work is covered by a written guarantee from your treating dentist. Contact our UK team if you have any concerns after your return." },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
+};
+
 export default function HollywoodSmilePackagePage() {
   return (
     <>
+      <script id="faq-schema-hollywood-smile-package" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Hollywood Smile Turkey Packages</h1>
@@ -180,13 +199,7 @@ export default function HollywoodSmilePackagePage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <div className="space-y-4">
-              {[
-                { q: "What is the difference between 24 and 20 crown packages?", a: "The 24-crown package covers all visible upper and lower teeth, giving a complete transformation of your entire smile. The 20-crown package focuses on the upper arch and front lower teeth — perfect if your lower teeth are less of a concern." },
-                { q: "Are the crowns porcelain or full zirconia?", a: "Both packages use full-contour zirconia crowns, which are stronger and more lifelike than older porcelain-fused-to-metal crowns. No dark metal lines at the gumline." },
-                { q: "Does the price include flights?", a: "Flights are not included — you book these yourself. We arrange your hotel and all transfers. Return flights from the UK to Antalya typically cost £100–£250." },
-                { q: "Can I add teeth whitening to the package?", a: "Professional cleaning is included in the 24-crown package. For whitening of any remaining natural teeth, this can be added for £250." },
-                { q: "Is there a guarantee?", a: "Yes. All crown work is covered by a written guarantee from your treating dentist. Contact our UK team if you have any concerns after your return." },
-              ].map(item => (
+              {faqs.map(item => (
                 <div key={item.q} className="border-b border-gray-200 pb-4 last:border-0 last:pb-0">
                   <p className="font-semibold text-gray-900 mb-1">{item.q}</p>
                   <p className="text-sm text-gray-600">{item.a}</p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function AntalyaVsIstanbulPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-antalya-vs-istanbul-dental-clinics"
+        path="/blog/antalya-vs-istanbul-dental-clinics"
+        headline="Antalya vs Istanbul: Dental Treatment"
+        description="Comparing Antalya and Istanbul for dental treatment as a UK patient. Costs, clinic quality, travel, and which city suits different types of patients."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Antalya vs Istanbul: Dental Treatment", path: "/blog/antalya-vs-istanbul-dental-clinics" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Travel</span>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function AftercarePage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-aftercare-for-dental-work-in-turkey"
+        path="/blog/aftercare-for-dental-work-in-turkey"
+        headline="Aftercare for Dental Work in Turkey"
+        description="How to look after your dental work after returning from Turkey. Complete aftercare guide for veneers and implants, including what to expect and when to seek help."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Aftercare for Dental Work in Turkey", path: "/blog/aftercare-for-dental-work-in-turkey" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Aftercare</span>

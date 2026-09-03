@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function SingleToothImplantPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-single-tooth-implant-turkey-cost"
+        path="/blog/single-tooth-implant-turkey-cost"
+        headline="Single Tooth Implant Turkey Cost 2026"
+        description="How much does a single tooth implant cost in Turkey? Full 2026 price guide for UK patients, including brands used, what's included, and monthly payment options."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Single Tooth Implant Turkey Cost 2026", path: "/blog/single-tooth-implant-turkey-cost" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>

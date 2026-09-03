@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
@@ -20,20 +19,9 @@ const faqs = [
   { question: "Can I pay monthly for All-on-6?", answer: "Yes. Finance plans are available over 12, 24, or 36 months. An All-on-6 arch at £5,600 is available from around £156/month over 36 months. Pre-qualify with no credit impact." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(f => ({
-    "@type": "Question",
-    "name": f.question,
-    "acceptedAnswer": { "@type": "Answer", "text": f.answer },
-  })),
-};
-
 export default function AllOn6Page() {
   return (
     <>
-      <Script id="faq-schema-all-on-6" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">

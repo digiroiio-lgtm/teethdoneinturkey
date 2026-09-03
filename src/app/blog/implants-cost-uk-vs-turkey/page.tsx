@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function ImplantsCostUKvsTurkeyPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-implants-cost-uk-vs-turkey"
+        path="/blog/implants-cost-uk-vs-turkey"
+        headline="Dental Implants Cost: UK vs Turkey 2026"
+        description="Dental implants cost UK vs Turkey: full comparison. Single implants from £250 in Turkey vs £2,500+ in the UK. What's included, brand comparison, and tips."
+        datePublished="2026-04-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Dental Implants Cost: UK vs Turkey 2026", path: "/blog/implants-cost-uk-vs-turkey" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>

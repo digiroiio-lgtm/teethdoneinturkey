@@ -7,9 +7,26 @@ export const metadata: Metadata = {
   description: "Contact our UK team about dental treatment in Turkey. Call, WhatsApp, or fill in our contact form for a response within 24 hours.",
 };
 
+const faqs = [
+  { q: "How long does the consultation take?", a: "Initial phone or video consultations typically last 15–30 minutes. There's no obligation to proceed at any stage." },
+  { q: "Do I need to send photos?", a: "Photos help our dental team give you more accurate guidance and pricing, but they're not required to get in touch." },
+  { q: "Is the consultation really free?", a: "Yes — there is absolutely no charge for the initial consultation. We provide a personalised treatment plan and cost estimate free of charge." },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script id="faq-schema-contact" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Contact Us</h1>
@@ -75,11 +92,7 @@ export default function ContactPage() {
           <div className="mt-10 bg-gray-50 rounded-2xl p-6 border border-gray-200">
             <h3 className="font-bold text-gray-900 mb-3">Frequently Asked Questions</h3>
             <div className="space-y-4">
-              {[
-                { q: "How long does the consultation take?", a: "Initial phone or video consultations typically last 15–30 minutes. There's no obligation to proceed at any stage." },
-                { q: "Do I need to send photos?", a: "Photos help our dental team give you more accurate guidance and pricing, but they're not required to get in touch." },
-                { q: "Is the consultation really free?", a: "Yes — there is absolutely no charge for the initial consultation. We provide a personalised treatment plan and cost estimate free of charge." },
-              ].map(item => (
+              {faqs.map(item => (
                 <div key={item.q} className="border-b border-gray-200 pb-4 last:border-0 last:pb-0">
                   <p className="font-semibold text-gray-900 mb-1">{item.q}</p>
                   <p className="text-sm text-gray-600">{item.a}</p>

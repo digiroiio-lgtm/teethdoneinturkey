@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function FinanceImplantsPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-finance-dental-implants-turkey-uk-patients"
+        path="/blog/finance-dental-implants-turkey-uk-patients"
+        headline="Finance Implants Turkey – UK Guide"
+        description="How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from £54/month."
+        datePublished="2026-01-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Finance Implants Turkey – UK Guide", path: "/blog/finance-dental-implants-turkey-uk-patients" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Finance</span>

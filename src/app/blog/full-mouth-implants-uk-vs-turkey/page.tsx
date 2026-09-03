@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const revalidate = 86400;
 
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
 export default function FullMouthImplantsUKvsTurkeyPage() {
   return (
     <article className="py-16 bg-white">
+      <ArticleJsonLd
+        id="article-schema-full-mouth-implants-uk-vs-turkey"
+        path="/blog/full-mouth-implants-uk-vs-turkey"
+        headline="Full Mouth Implants Cost: UK vs Turkey 2026"
+        description="Full mouth dental implants cost UK vs Turkey. All-on-4 from £9,000 (both arches) in Turkey vs £24,000–£44,000 in the UK. Complete breakdown for UK patients."
+        datePublished="2026-04-01"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Full Mouth Implants Cost: UK vs Turkey 2026", path: "/blog/full-mouth-implants-uk-vs-turkey" },
+        ]}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>

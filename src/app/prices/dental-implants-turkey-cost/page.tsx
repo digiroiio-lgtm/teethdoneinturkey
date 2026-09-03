@@ -10,9 +10,26 @@ export const metadata: Metadata = {
   description: "Dental implants Turkey cost 2026. Single implants from £250, All-on-4 from £4,500. Full price breakdown vs UK. Save up to 90%.",
 };
 
+const faqs = [
+  { q: "Are Turkish dental implants guaranteed?", a: "Yes. Our partner clinics provide written guarantees of 5–10 years on all implant work. This covers the implant itself and the crown." },
+  { q: "Can I get implants on finance?", a: "Yes. We offer monthly payment plans from £82/month, allowing UK patients to spread the cost of their treatment over 12, 24, or 36 months." },
+  { q: "What happens if something goes wrong after I return home?", a: "Our UK team provides ongoing support, and our partner clinics are available via WhatsApp and video call for follow-up. Any issues covered under guarantee will be addressed at no additional cost." },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
+};
+
 export default function ImplantsCostPage() {
   return (
     <>
+      <script id="faq-schema-implants-cost" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey Cost – 2024 Guide</h1>
@@ -99,11 +116,7 @@ export default function ImplantsCostPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <div className="space-y-4">
-              {[
-                { q: "Are Turkish dental implants guaranteed?", a: "Yes. Our partner clinics provide written guarantees of 5–10 years on all implant work. This covers the implant itself and the crown." },
-                { q: "Can I get implants on finance?", a: "Yes. We offer monthly payment plans from £82/month, allowing UK patients to spread the cost of their treatment over 12, 24, or 36 months." },
-                { q: "What happens if something goes wrong after I return home?", a: "Our UK team provides ongoing support, and our partner clinics are available via WhatsApp and video call for follow-up. Any issues covered under guarantee will be addressed at no additional cost." },
-              ].map(item => (
+              {faqs.map(item => (
                 <div key={item.q} className="border-b border-gray-200 pb-4 last:border-0 last:pb-0">
                   <p className="font-semibold text-gray-900 mb-1">{item.q}</p>
                   <p className="text-sm text-gray-600">{item.a}</p>
