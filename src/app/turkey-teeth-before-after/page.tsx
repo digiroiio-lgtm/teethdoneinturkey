@@ -22,7 +22,7 @@ const cases = [
 export default function TurkeyTeethBeforeAfterPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Turkey Teeth Before &amp; After</h1>
           <p className="text-xl text-blue-200">Real UK patient results — honest outcomes from verified clinics</p>

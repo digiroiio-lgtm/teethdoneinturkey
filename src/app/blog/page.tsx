@@ -78,7 +78,7 @@ const tagGroups = [
 export default function BlogPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Turkey Blog</h1>
           <p className="text-xl text-blue-200">Expert guides, tips and advice for UK patients considering dental treatment in Turkey</p>

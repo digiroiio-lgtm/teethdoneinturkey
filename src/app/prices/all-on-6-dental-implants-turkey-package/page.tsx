@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function AllOn6PackagePage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block bg-yellow-400 text-[#1e40af] text-xs font-extrabold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">Most Popular</div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">All-on-6 Dental Implants Turkey Package</h1>
@@ -90,7 +90,7 @@ export default function AllOn6PackagePage() {
             <div className="overflow-x-auto rounded-2xl shadow-md">
               <table className="w-full bg-white text-sm">
                 <thead>
-                  <tr className="bg-[#1e40af] text-white">
+                  <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                     <th className="px-4 py-3 text-left">What&apos;s included</th>
                     <th className="px-4 py-3 text-right">UK Price</th>
                     <th className="px-4 py-3 text-right">Turkey Package</th>

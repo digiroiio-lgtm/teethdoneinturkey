@@ -25,7 +25,7 @@ export default function MonthlyPaymentPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-3">Dental Treatment in Turkey with Monthly Payments</h1>
           <p className="text-xl text-blue-200 mb-2">Spread the Cost of Veneers and Implants from £82 per Month</p>
@@ -79,7 +79,7 @@ export default function MonthlyPaymentPage() {
           <div className="overflow-x-auto rounded-2xl shadow-md">
             <table className="w-full bg-white text-sm">
               <thead>
-                <tr className="bg-[#1e40af] text-white">
+                <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                   <th className="px-4 py-3 text-left">Treatment</th>
                   <th className="px-4 py-3 text-right">UK Price</th>
                   <th className="px-4 py-3 text-right">Turkey Price</th>

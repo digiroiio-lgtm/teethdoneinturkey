@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function HowLongStayPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">How Long Do You Need to Stay in Turkey for Dental Treatment?</h1>
           <p className="text-xl text-blue-200">Day-by-day timelines for every major dental procedure</p>

@@ -45,30 +45,46 @@ export default function FAQSection({ faqs = defaultFaqs, title = 'Frequently Ask
   return (
     <section className="py-16 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">{title}</h2>
+        <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center tracking-tight">{title}</h2>
         <div className="space-y-3">
-          {faqs.map((faq, i) => (
-            <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
-              <button
-                className="w-full flex items-center justify-between px-5 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors"
-                onClick={() => setOpen(open === i ? null : i)}
-                aria-expanded={open === i}
+          {faqs.map((faq, i) => {
+            const isOpen = open === i;
+            return (
+              <div
+                key={i}
+                className={`rounded-xl overflow-hidden border transition-colors ${
+                  isOpen ? 'border-blue-200 shadow-md shadow-blue-900/5' : 'border-gray-200'
+                }`}
               >
-                <span>{faq.question}</span>
-                <svg
-                  className={`w-5 h-5 text-[#1e40af] transition-transform flex-shrink-0 ml-3 ${open === i ? 'rotate-180' : ''}`}
-                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <button
+                  className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors"
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  aria-expanded={isOpen}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {open === i && (
-                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">
-                  {faq.answer}
+                  <span>{faq.question}</span>
+                  <span
+                    className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                      isOpen ? 'bg-[#1e40af] text-white' : 'bg-gray-100 text-[#1e40af]'
+                    }`}
+                  >
+                    <svg
+                      className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  className={`grid transition-all duration-300 ease-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">{faq.answer}</div>
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

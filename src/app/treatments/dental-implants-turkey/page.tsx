@@ -34,7 +34,7 @@ export default function DentalImplantsTurkeyPage() {
   return (
     <>
       <Script id="faq-schema-implants" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey – From £250</h1>
           <p className="text-xl text-blue-200 mb-6">Permanent tooth replacement using premium Straumann & Nobel Biocare implants</p>

@@ -51,7 +51,7 @@ const faqs = [
 export default function TurkeyTeethCostPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Turkey Teeth Cost – 2026 Price Guide</h1>
           <p className="text-xl text-blue-200">How much do veneers, implants and smile makeovers really cost in Turkey?</p>
@@ -93,7 +93,7 @@ export default function TurkeyTeethCostPage() {
             <div className="overflow-x-auto rounded-2xl shadow-md">
               <table className="w-full bg-white text-sm">
                 <thead>
-                  <tr className="bg-[#1e40af] text-white">
+                  <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                     <th className="px-4 py-3 text-left">Treatment</th>
                     <th className="px-4 py-3 text-right">UK Price</th>
                     <th className="px-4 py-3 text-right">Turkey Price</th>

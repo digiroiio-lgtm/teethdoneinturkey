@@ -43,7 +43,7 @@ const packages = [
 export default function HollywoodSmilePackagePage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Hollywood Smile Turkey Packages</h1>
           <p className="text-xl text-blue-200">Zirconia crown packages with hotel, transfers &amp; digital smile design included</p>
@@ -127,7 +127,7 @@ export default function HollywoodSmilePackagePage() {
             <div className="overflow-x-auto rounded-2xl shadow-md">
               <table className="w-full bg-white text-sm">
                 <thead>
-                  <tr className="bg-[#1e40af] text-white">
+                  <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                     <th className="px-4 py-3 text-left">Package</th>
                     <th className="px-4 py-3 text-right">UK Estimate</th>
                     <th className="px-4 py-3 text-right">Turkey Package</th>

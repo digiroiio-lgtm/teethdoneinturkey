@@ -79,7 +79,7 @@ const faqs = [
 export default function FreeTreatmentPlanPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-yellow-400 text-[#1e40af] text-sm font-extrabold px-4 py-1 rounded-full mb-4 uppercase tracking-wide">
             100% Free · No Obligation

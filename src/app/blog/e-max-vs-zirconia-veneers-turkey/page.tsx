@@ -50,7 +50,7 @@ export default function EmaxVsZirconiPage() {
           <div className="overflow-x-auto rounded-2xl shadow-sm mb-4">
             <table className="w-full bg-white text-sm">
               <thead>
-                <tr className="bg-[#1e40af] text-white">
+                <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                   <th className="px-4 py-3 text-left">Feature</th>
                   <th className="px-4 py-3 text-center">E-max</th>
                   <th className="px-4 py-3 text-center">Zirconia</th>

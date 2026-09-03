@@ -31,7 +31,7 @@ export default function FullSetVeneersCostPage() {
           <div className="overflow-x-auto rounded-2xl shadow-sm mb-4">
             <table className="w-full bg-white text-sm">
               <thead>
-                <tr className="bg-[#1e40af] text-white">
+                <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                   <th className="px-4 py-3 text-left">Number of Veneers</th>
                   <th className="px-4 py-3 text-right">E-max Turkey</th>
                   <th className="px-4 py-3 text-right">Zirconia Turkey</th>

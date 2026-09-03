@@ -26,7 +26,7 @@ export default function VeneersLastBlogPage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How Long Do Different Veneers Last?</h2>
           <div className="overflow-x-auto rounded-xl shadow-sm">
             <table className="w-full text-sm bg-white">
-              <thead><tr className="bg-[#1e40af] text-white"><th className="px-4 py-3 text-left">Type</th><th className="px-4 py-3 text-center">Expected Lifespan</th><th className="px-4 py-3 text-left">Notes</th></tr></thead>
+              <thead><tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white"><th className="px-4 py-3 text-left">Type</th><th className="px-4 py-3 text-center">Expected Lifespan</th><th className="px-4 py-3 text-left">Notes</th></tr></thead>
               <tbody>
                 {[
                   { type: "E-max Porcelain", life: "10–15 years", notes: "Gold standard. Highly resistant to staining." },

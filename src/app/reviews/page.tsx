@@ -24,7 +24,7 @@ const reviews = [
 export default function ReviewsPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Patient Reviews</h1>
           <p className="text-xl text-blue-200 mb-4">Real experiences from UK patients who&apos;ve had teeth done in Turkey</p>

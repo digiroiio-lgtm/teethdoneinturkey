@@ -53,7 +53,7 @@ export default function CompositeVsPorcelainPage() {
           <div className="overflow-x-auto rounded-2xl shadow-sm mb-4">
             <table className="w-full bg-white text-sm">
               <thead>
-                <tr className="bg-[#1e40af] text-white">
+                <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                   <th className="px-4 py-3 text-left">Factor</th>
                   <th className="px-4 py-3 text-center">Composite</th>
                   <th className="px-4 py-3 text-center">Porcelain (E-max)</th>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function WhyChooseTurkeyPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Why Choose Turkey for Dental Work?</h1>
           <p className="text-xl text-blue-200">Over 500,000 international patients visit Turkey for dental treatment every year — here&apos;s why</p>
@@ -120,7 +120,7 @@ export default function WhyChooseTurkeyPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="bg-[#1e40af] text-white">
+                  <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                     <th className="px-4 py-2 text-left">Treatment</th>
                     <th className="px-4 py-2 text-right">UK Price</th>
                     <th className="px-4 py-2 text-right">Turkey Price</th>

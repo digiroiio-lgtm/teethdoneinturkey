@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function TravelPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Travel to Turkey for Dental Treatment</h1>
           <p className="text-xl text-blue-200">Your complete UK patient guide to dental tourism in Turkey</p>

@@ -76,7 +76,7 @@ const faqs = [
 export default function FinanceOptionsUKPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Finance Options for UK Patients</h1>
           <p className="text-xl text-blue-200">Pay monthly for your dental treatment in Turkey. 0% APR plans from £82/month over 12, 24, or 36 months.</p>

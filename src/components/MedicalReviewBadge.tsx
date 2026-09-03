@@ -12,8 +12,8 @@ export default function MedicalReviewBadge({
   reviewedDate,
 }: MedicalReviewBadgeProps) {
   return (
-    <div className="flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-xl px-4 py-3 text-sm mb-6">
-      <div className="bg-[#1e40af] text-white rounded-full w-9 h-9 flex-shrink-0 flex items-center justify-center font-bold text-base mt-0.5">
+    <div className="flex items-start gap-3 bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-xl px-4 py-3 text-sm mb-6 shadow-sm shadow-blue-900/5">
+      <div className="bg-gradient-to-br from-[#1e40af] to-blue-600 text-white rounded-full w-9 h-9 flex-shrink-0 flex items-center justify-center font-bold text-base mt-0.5 shadow-sm">
         🦷
       </div>
       <div>

@@ -16,27 +16,30 @@ export default function PriceTable() {
     <section className="py-16 bg-gray-50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-3">UK vs Turkey Dental Prices</h2>
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">UK vs Turkey Dental Prices</h2>
           <p className="text-gray-600">See how much you could save with dental treatment in Turkey</p>
         </div>
-        <div className="overflow-x-auto rounded-2xl shadow-md">
+        <div className="overflow-x-auto rounded-2xl shadow-xl shadow-blue-900/5 ring-1 ring-gray-100">
           <table className="w-full bg-white text-sm">
             <thead>
-              <tr className="bg-[#1e40af] text-white">
-                <th className="px-4 py-3 text-left font-semibold">Treatment</th>
-                <th className="px-4 py-3 text-right font-semibold">UK Price</th>
-                <th className="px-4 py-3 text-right font-semibold">Turkey Price</th>
-                <th className="px-4 py-3 text-right font-semibold">Saving</th>
+              <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
+                <th className="px-4 py-3.5 text-left font-semibold">Treatment</th>
+                <th className="px-4 py-3.5 text-right font-semibold">UK Price</th>
+                <th className="px-4 py-3.5 text-right font-semibold">Turkey Price</th>
+                <th className="px-4 py-3.5 text-right font-semibold">Saving</th>
               </tr>
             </thead>
             <tbody>
               {prices.map((row, i) => (
-                <tr key={row.treatment} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-4 py-3 font-medium text-gray-800">{row.treatment}</td>
-                  <td className="px-4 py-3 text-right text-red-500 line-through">{row.uk}</td>
-                  <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{row.turkey}</td>
-                  <td className="px-4 py-3 text-right">
-                    <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-bold">
+                <tr
+                  key={row.treatment}
+                  className={`${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/70'} hover:bg-blue-50/60 transition-colors`}
+                >
+                  <td className="px-4 py-3.5 font-medium text-gray-800">{row.treatment}</td>
+                  <td className="px-4 py-3.5 text-right text-red-500 line-through">{row.uk}</td>
+                  <td className="px-4 py-3.5 text-right text-[#1e40af] font-bold">{row.turkey}</td>
+                  <td className="px-4 py-3.5 text-right">
+                    <span className="bg-green-100 text-green-700 px-2.5 py-0.5 rounded-full text-xs font-bold">
                       Save {row.saving}
                     </span>
                   </td>
@@ -47,7 +50,7 @@ export default function PriceTable() {
         </div>
         <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/prices/teeth-done-in-turkey-cost"
-            className="bg-[#1e40af] text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">
+            className="bg-[#1e40af] text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 hover:-translate-y-0.5 transition-all shadow-md">
             See Full Price Guide
           </Link>
           <Link href="/book-consultation"

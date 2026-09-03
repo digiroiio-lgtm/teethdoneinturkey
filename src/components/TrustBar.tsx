@@ -8,11 +8,14 @@ export default function TrustBar() {
   ];
 
   return (
-    <section className="bg-white border-b border-gray-100 py-4">
+    <section className="bg-white/80 backdrop-blur-sm border-b border-gray-100 py-4 relative z-10 shadow-[0_1px_0_rgba(0,0,0,0.03)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-gray-700">
+        <div className="flex flex-wrap justify-center gap-x-3 gap-y-2 text-sm text-gray-700">
           {items.map((item) => (
-            <div key={item.label} className="flex items-center gap-2 font-medium">
+            <div
+              key={item.label}
+              className="flex items-center gap-2 font-medium bg-gray-50 hover:bg-blue-50 transition-colors rounded-full px-3.5 py-1.5 border border-gray-100"
+            >
               <span className="text-[#1e40af]">{item.icon}</span>
               <span>{item.label}</span>
             </div>

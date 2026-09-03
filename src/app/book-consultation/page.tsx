@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function BookConsultationPage() {
   return (
     <>
-      <div className="bg-[#1e40af] text-white py-16 px-4">
+      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Book Your Free Dental Consultation</h1>
           <p className="text-xl text-blue-200 mb-3">Get a personalised treatment plan and cost estimate within 24 hours</p>
