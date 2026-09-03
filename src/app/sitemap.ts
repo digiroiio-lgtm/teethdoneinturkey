@@ -23,6 +23,12 @@ const routes: Route[] = [
   { path: '/before-after', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/turkey-teeth-before-after', priority: 0.8, changeFrequency: 'weekly' },
 
+  // Guides — evergreen patient education cluster, separate from /blog
+  { path: '/guides', priority: 0.9, changeFrequency: 'weekly' },
+  { path: '/guides/teeth-in-turkey', priority: 0.95, changeFrequency: 'monthly' },
+  { path: '/guides/dental-implants-turkey', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/guides/turkey-teeth-cost', priority: 0.9, changeFrequency: 'monthly' },
+
   // Money pages — treatments cluster
   { path: '/treatments', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/treatments/veneers-turkey', priority: 0.9, changeFrequency: 'weekly' },

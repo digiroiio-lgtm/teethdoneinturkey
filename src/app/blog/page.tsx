@@ -86,6 +86,17 @@ export default function BlogPage() {
       </div>
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/guides"
+            className="group flex items-center justify-between gap-4 bg-white rounded-2xl p-6 border-2 border-blue-200 hover:border-blue-400 hover:shadow-md transition-all mb-8"
+          >
+            <div>
+              <span className="inline-block bg-[#1e40af] text-white text-xs font-bold uppercase tracking-wide px-2.5 py-1 rounded-full mb-2">Guides</span>
+              <h2 className="text-lg font-bold text-gray-900 group-hover:text-[#1e40af]">Looking for the complete picture, not a single question?</h2>
+              <p className="text-gray-600 text-sm mt-1">Our evergreen Patient Guide Library covers treatments, costs and safety in full — start with the Guides Hub.</p>
+            </div>
+            <span className="text-[#1e40af] font-bold flex-shrink-0">→</span>
+          </Link>
           <div className="space-y-4">
             {posts.map(post => (
               <Link key={post.href} href={post.href} className="group block bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#1e40af] hover:shadow-md transition-all">

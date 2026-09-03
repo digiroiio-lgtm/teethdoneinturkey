@@ -88,6 +88,10 @@ export default function WhyCheaperPage() {
               <span className="font-semibold text-gray-900 text-sm">Veneers Cost Guide</span>
               <span className="text-xs text-gray-500 mt-0.5">Prices & comparisons</span>
             </Link>
+            <Link href="/guides/turkey-teeth-cost" className="flex flex-col bg-blue-50 rounded-xl p-4 border border-blue-200 hover:border-blue-400 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">📘 Turkey Teeth Cost Guide</span>
+              <span className="text-xs text-gray-500 mt-0.5">Full 2026 price guide</span>
+            </Link>
             </div>
           </div>
         </div>

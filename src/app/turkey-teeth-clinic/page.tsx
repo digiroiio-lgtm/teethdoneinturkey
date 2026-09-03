@@ -212,6 +212,11 @@ export default function TurkeyTeethClinicPage() {
             <Link href="/reviews" className="border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Read Patient Reviews</Link>
             <Link href="/prices/turkey-teeth-cost" className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">View Price Guide</Link>
           </div>
+
+          <p className="text-sm text-gray-500 mt-6">
+            For the full picture beyond choosing a clinic, see the{" "}
+            <Link href="/guides/teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">Teeth in Turkey: Complete UK Patient Guide</Link>.
+          </p>
         </div>
       </section>
 

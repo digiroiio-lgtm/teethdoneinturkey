@@ -144,6 +144,7 @@ export default function VeneersTurkeyPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Further</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
+                { title: "📘 Teeth in Turkey Guide", href: "/guides/teeth-in-turkey", desc: "The complete patient guide to treatments, safety and cost." },
                 { title: "Hollywood Smile Packages", href: "/prices/hollywood-smile-turkey-package", desc: "20 or 24 crown all-inclusive packages with hotel and transfers." },
                 { title: "Smile Makeover Turkey", href: "/treatments/full-smile-makeover-turkey", desc: "Full smile transformation including veneers, whitening and more." },
                 { title: "Veneers Cost Guide", href: "/prices/veneers-turkey-cost", desc: "Complete UK vs Turkey price breakdown by veneer type." },

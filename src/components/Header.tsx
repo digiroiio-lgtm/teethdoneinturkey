@@ -62,6 +62,7 @@ export default function Header() {
               )}
             </div>
             {[
+              { href: '/guides', label: 'Guides' },
               { href: '/prices/teeth-done-in-turkey-cost', label: 'Prices' },
               { href: '/monthly-payment', label: 'Monthly Payment' },
               { href: '/reviews', label: 'Reviews' },
@@ -109,6 +110,7 @@ export default function Header() {
             </Link>
           ))}
           <hr />
+          <Link href="/guides" className="block py-2 text-gray-700 hover:text-[#1e40af]" onClick={() => setMobileOpen(false)}>Guides</Link>
           <Link href="/prices/teeth-done-in-turkey-cost" className="block py-2 text-gray-700 hover:text-[#1e40af]" onClick={() => setMobileOpen(false)}>Prices</Link>
           <Link href="/monthly-payment" className="block py-2 text-gray-700 hover:text-[#1e40af]" onClick={() => setMobileOpen(false)}>Monthly Payment</Link>
           <Link href="/reviews" className="block py-2 text-gray-700 hover:text-[#1e40af]" onClick={() => setMobileOpen(false)}>Reviews</Link>

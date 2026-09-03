@@ -138,6 +138,7 @@ export default function AllOn6Page() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Further</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
+                { title: "📘 Dental Implants Guide", href: "/guides/dental-implants-turkey", desc: "Full-mouth options, brands, timelines and risks explained." },
                 { title: "All-on-4 Implants", href: "/treatments/all-on-4-turkey", desc: "Four-implant full arch solution — ideal for patients with bone loss." },
                 { title: "All-on-6 Package Prices", href: "/prices/all-on-6-dental-implants-turkey-package", desc: "All-inclusive package with hotel, transfers & same-day teeth." },
                 { title: "Full Implant Cost Guide", href: "/prices/dental-implants-turkey-cost", desc: "UK vs Turkey price breakdown for all implant procedures." },

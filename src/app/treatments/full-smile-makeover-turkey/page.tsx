@@ -136,6 +136,7 @@ export default function SmileMakeoverPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Further</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
+                { title: "📘 Teeth in Turkey Guide", href: "/guides/teeth-in-turkey", desc: "The complete patient guide to treatments, safety and cost." },
                 { title: "Veneers Turkey", href: "/treatments/veneers-turkey", desc: "E-max porcelain veneers from £190 per tooth." },
                 { title: "Hollywood Smile Packages", href: "/prices/hollywood-smile-turkey-package", desc: "20 or 24 crown packages with hotel and transfers included." },
                 { title: "Veneers Cost Guide", href: "/prices/veneers-turkey-cost", desc: "Full UK vs Turkey price comparison for all veneer types." },

@@ -135,6 +135,10 @@ export default function ImplantRecoveryPage() {
               <span className="font-semibold text-gray-900 text-sm">All Treatment Costs</span>
               <span className="text-xs text-gray-500 mt-0.5">Full price guide</span>
             </Link>
+            <Link href="/guides/dental-implants-turkey" className="flex flex-col bg-blue-50 rounded-xl p-4 border border-blue-200 hover:border-blue-400 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">📘 Dental Implants Guide</span>
+              <span className="text-xs text-gray-500 mt-0.5">Healing & osseointegration</span>
+            </Link>
             </div>
           </div>
         </div>

@@ -190,6 +190,8 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
+                { href: "/guides/dental-implants-turkey", label: "📘 Dental Implants Guide", sub: "Brands, process & timelines" },
+                { href: "/guides/turkey-teeth-cost", label: "📘 Turkey Teeth Cost Guide", sub: "Full 2026 price guide" },
                 { href: "/treatments/all-on-4-turkey", label: "All-on-4 Turkey", sub: "Full arch restoration" },
                 { href: "/treatments/all-on-6-turkey", label: "All-on-6 Turkey", sub: "6-implant full arch" },
                 { href: "/treatments/dental-implants-turkey", label: "Dental Implants Turkey", sub: "Full treatment guide" },

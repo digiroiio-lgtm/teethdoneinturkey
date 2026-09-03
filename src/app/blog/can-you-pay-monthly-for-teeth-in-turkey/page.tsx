@@ -122,6 +122,8 @@ export default function PayMonthlyTeethTurkeyPage() {
           <div className="mt-4 p-5 bg-gray-50 rounded-2xl border border-gray-200">
             <p className="font-semibold text-gray-900 mb-2">Related:</p>
             <ul className="space-y-1 text-sm">
+              <li><Link href="/guides/turkey-teeth-cost" className="text-[#1e40af] hover:underline">→ Turkey Teeth Cost: Complete 2026 Price Guide</Link></li>
+              <li><Link href="/finance-options-uk" className="text-[#1e40af] hover:underline">→ Finance Options UK</Link></li>
               <li><Link href="/monthly-payment" className="text-[#1e40af] hover:underline">→ Full monthly payment guide</Link></li>
               <li><Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] hover:underline">→ Dental tourism finance explained</Link></li>
               <li><Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] hover:underline">→ Finance dental implants Turkey</Link></li>

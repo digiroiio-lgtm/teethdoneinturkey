@@ -136,6 +136,7 @@ export default function AllOn4Page() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Further</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
+                { title: "📘 Dental Implants Guide", href: "/guides/dental-implants-turkey", desc: "Full-mouth options, brands, timelines and risks explained." },
                 { title: "All-on-6 Implants", href: "/treatments/all-on-6-turkey", desc: "Six implants for superior stability and load distribution." },
                 { title: "Implant Package Prices", href: "/prices/all-on-6-dental-implants-turkey-package", desc: "All-inclusive packages with hotel, transfers & temps." },
                 { title: "Full Implant Cost Guide", href: "/prices/dental-implants-turkey-cost", desc: "Detailed UK vs Turkey price comparison for all implant types." },

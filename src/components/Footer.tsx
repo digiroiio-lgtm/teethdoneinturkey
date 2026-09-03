@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="relative bg-gradient-to-b from-gray-900 to-slate-950 text-gray-300">
       <div className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2.5 mb-3 group">
@@ -33,6 +33,17 @@ export default function Footer() {
               <li><Link href="/treatments/all-on-4-turkey" className="hover:text-white hover:pl-1 transition-all">All-on-4</Link></li>
               <li><Link href="/treatments/all-on-6-turkey" className="hover:text-white hover:pl-1 transition-all">All-on-6</Link></li>
               <li><Link href="/treatments/full-smile-makeover-turkey" className="hover:text-white hover:pl-1 transition-all">Smile Makeover</Link></li>
+            </ul>
+          </div>
+
+          {/* Guides */}
+          <div>
+            <h3 className="text-white font-semibold mb-3 tracking-wide">Guides</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/guides" className="hover:text-white hover:pl-1 transition-all">Guides Hub</Link></li>
+              <li><Link href="/guides/teeth-in-turkey" className="hover:text-white hover:pl-1 transition-all">Teeth in Turkey Guide</Link></li>
+              <li><Link href="/guides/dental-implants-turkey" className="hover:text-white hover:pl-1 transition-all">Dental Implants Guide</Link></li>
+              <li><Link href="/guides/turkey-teeth-cost" className="hover:text-white hover:pl-1 transition-all">Turkey Teeth Cost Guide</Link></li>
             </ul>
           </div>
 
