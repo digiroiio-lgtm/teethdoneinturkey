@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default function VeneersTurkeyCostRedirect() {
-  redirect("/prices/veneers-turkey-cost");
+  permanentRedirect("/prices/veneers-turkey-cost");
 }

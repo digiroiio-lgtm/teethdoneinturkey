@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default function TurkeyTeethDangersRedirect() {
-  redirect("/teeth-done-in-turkey-problems");
+  permanentRedirect("/teeth-done-in-turkey-problems");
 }

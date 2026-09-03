@@ -38,7 +38,11 @@ export default function Footer() {
               <li><Link href="/prices/teeth-done-in-turkey-cost" className="hover:text-white transition-colors">Turkey Dental Costs</Link></li>
               <li><Link href="/prices/veneers-turkey-cost" className="hover:text-white transition-colors">Veneers Cost</Link></li>
               <li><Link href="/prices/dental-implants-turkey-cost" className="hover:text-white transition-colors">Implants Cost</Link></li>
+              <li><Link href="/price-calculator" className="hover:text-white transition-colors">Price Calculator</Link></li>
               <li><Link href="/monthly-payment" className="hover:text-white transition-colors">Monthly Payment</Link></li>
+              <li><Link href="/finance-options-uk" className="hover:text-white transition-colors">Finance Options</Link></li>
+              <li><Link href="/turkey-teeth-clinic" className="hover:text-white transition-colors">Choosing a Clinic</Link></li>
+              <li><Link href="/free-treatment-plan" className="hover:text-white transition-colors">Free Treatment Plan</Link></li>
               <li><Link href="/travel-to-turkey/dental-holiday-turkey" className="hover:text-white transition-colors">Dental Holiday Turkey</Link></li>
             </ul>
           </div>
