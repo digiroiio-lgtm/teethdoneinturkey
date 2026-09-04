@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTASection from "@/components/CTASection";
 
@@ -43,6 +44,11 @@ export default function ReviewsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.map(r => <TestimonialCard key={r.name} {...r} />)}
           </div>
+          <p className="text-center text-gray-600 mt-10">
+            Want to see the results rather than read about them? Browse our{" "}
+            <Link href="/turkey-teeth-before-after" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth before and after case studies</Link>{" "}
+            for the treatment, timeline and cost behind each smile.
+          </p>
         </div>
       </section>
       <CTASection title="Ready to Write Your Own Success Story?" subtitle="Join hundreds of UK patients who've transformed their smiles in Turkey. Book your free consultation today." buttonText="Book Free Consultation" buttonHref="/book-consultation" whatsapp={true} />

@@ -5,7 +5,7 @@ const BASE = 'https://www.teethdoneinturkey.co.uk';
 // Stable lastModified — use a fixed release date rather than `new Date()`,
 // which would flip on every build/revalidate and dilute GSC crawl signals.
 // Update this when there's a meaningful content refresh across the site.
-const LAST_MODIFIED = new Date('2026-09-03T00:00:00Z');
+const LAST_MODIFIED = new Date('2026-09-04T00:00:00Z');
 
 type Route = {
   path: string;

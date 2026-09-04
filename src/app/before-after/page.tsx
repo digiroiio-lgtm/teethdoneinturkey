@@ -67,6 +67,10 @@ export default function BeforeAfterPage() {
               <Link href="/book-consultation" className="bg-[#1e40af] text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">See My Potential Results</Link>
               <Link href="/reviews" className="border-2 border-[#1e40af] text-[#1e40af] px-8 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Read Patient Reviews</Link>
             </div>
+            <p className="text-gray-600 mt-6 text-sm">
+              For longer case write-ups — treatment, timeline and the exact UK price each patient was quoted — see our{" "}
+              <Link href="/turkey-teeth-before-after" className="text-[#1e40af] hover:underline font-semibold">Turkey teeth before and after case studies</Link>.
+            </p>
           </div>
         </div>
       </section>

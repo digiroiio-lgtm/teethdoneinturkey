@@ -111,6 +111,8 @@ export default function HollywoodSmilePage() {
           <p>This is entirely your choice. Modern Hollywood Smiles range from naturally beautiful (natural-looking shades mimicking real teeth) to bold and dramatic (bright white shades). Digital Smile Design lets you preview any shade and shape option before committing.</p>
           <p>The &quot;fake-looking&quot; Hollywood Smile associated with early Turkish dental tourism was typically a specific aesthetic choice (very white, very uniform) made by patients wanting that exact look. Today&apos;s patients can choose a natural-looking result that no one would identify as dental work.</p>
 
+          <p>For a like-for-like breakdown against UK private pricing — what each quote includes, and where the difference actually comes from — see our <Link href="/blog/hollywood-smile-uk-vs-turkey" className="text-[#1e40af] hover:underline font-semibold">Hollywood Smile cost comparison: UK vs Turkey</Link>.</p>
+
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Pay Monthly for Your Hollywood Smile</h2>
           <p>A Hollywood Smile in Turkey (20 zirconia crowns), financed over 36 months, costs from approximately £78/month — making a genuinely transformative treatment accessible at a fraction of UK costs.</p>
           <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
@@ -145,6 +147,10 @@ export default function HollywoodSmilePage() {
             <Link href="/prices/teeth-done-in-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">All Treatment Costs</span>
               <span className="text-xs text-gray-500 mt-0.5">Full price guide</span>
+            </Link>
+            <Link href="/blog/hollywood-smile-uk-vs-turkey" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Hollywood Smile: UK vs Turkey</span>
+              <span className="text-xs text-gray-500 mt-0.5">Side-by-side price comparison</span>
             </Link>
             </div>
           </div>

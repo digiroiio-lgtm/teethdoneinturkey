@@ -71,6 +71,7 @@ export default function RisksTurkeyTeethPage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">The Bottom Line on Risk</h2>
           <p>The honest reality: getting dental treatment in Turkey carries the same fundamental clinical risks as any dental treatment anywhere in the world. The additional factors are distance (complicating follow-up) and clinic selection variability (the market spans excellent to poor).</p>
           <p>Both additional risks are manageable and largely within your control. The thousands of UK patients who have excellent Turkey dental outcomes each year are those who choose wisely.</p>
+          <p>If you want the specific complications rather than the risk categories — what actually goes wrong, how often, and what the fix looks like once you are back in the UK — read our companion guide to the <Link href="/teeth-done-in-turkey-problems" className="text-[#1e40af] hover:underline font-semibold">problems people report after getting teeth done in Turkey</Link>.</p>
 
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
             <p className="font-semibold text-gray-900 mb-2">We&apos;ve done the risk assessment for you</p>
@@ -102,6 +103,10 @@ export default function RisksTurkeyTeethPage() {
             <Link href="/prices/veneers-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Veneers Cost Guide</span>
               <span className="text-xs text-gray-500 mt-0.5">Prices & comparisons</span>
+            </Link>
+            <Link href="/teeth-done-in-turkey-problems" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Turkey Teeth Problems</span>
+              <span className="text-xs text-gray-500 mt-0.5">What goes wrong & the fixes</span>
             </Link>
             </div>
           </div>

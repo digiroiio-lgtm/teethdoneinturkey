@@ -70,6 +70,7 @@ export default function WhyCheaperPage() {
               <li><Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] hover:underline">→ Veneers Turkey cost guide</Link></li>
               <li><Link href="/prices/dental-implants-turkey-cost" className="text-[#1e40af] hover:underline">→ Dental implants Turkey cost guide</Link></li>
               <li><Link href="/teeth-done-in-turkey-guide" className="text-[#1e40af] hover:underline">→ Complete guide: teeth done in Turkey</Link></li>
+              <li><Link href="/why-choose-turkey-for-dental-work" className="text-[#1e40af] hover:underline">→ Beyond price: why patients choose Turkey for dental work</Link></li>
             </ul>
           </div>
 
