@@ -32,7 +32,7 @@ export default function ImplantsCostPage() {
       <script id="faq-schema-implants-cost" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey Cost – 2024 Guide</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey Cost – UK Price Guide</h1>
           <p className="text-xl text-blue-200">Complete price breakdown for all implant treatments in Turkey</p>
         </div>
       </div>
