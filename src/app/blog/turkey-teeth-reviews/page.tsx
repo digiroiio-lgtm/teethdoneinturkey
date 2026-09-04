@@ -36,7 +36,7 @@ export default function TurkeyTeethReviewsBlogPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Reviews</span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Turkey Teeth Reviews: Real UK Patient Experiences 2024</h1>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Turkey Teeth Reviews: Real UK Patient Experiences</h1>
           <p className="text-gray-500 text-sm">Published October 2024 · 5 min read</p>
           <MedicalReviewBadge />
         </div>
