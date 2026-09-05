@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/veneers-turkey-cost" },
   title: "Veneers Turkey Cost: UK Price Guide",
-  description: "Veneers Turkey cost guide 2026. E-max from £190/tooth, Zirconia from £250/tooth. Full UK vs Turkey price comparison. Save up to 79%.",
+  description: "Veneers Turkey cost guide 2026. E-max from £190/tooth, Zirconia crowns from £130/tooth. Full UK vs Turkey price comparison. Save up to 79%.",
 };
 
 export default function VeneersCostPage() {
@@ -23,7 +23,7 @@ export default function VeneersCostPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">How Much Do Veneers Cost in Turkey?</h2>
-            <p className="text-gray-600 leading-relaxed mb-6">Veneers in Turkey typically cost between £190–£280 per tooth depending on the material and clinic. Compare this to £800–£1,200 per tooth in the UK — a saving of up to 79%.</p>
+            <p className="text-gray-600 leading-relaxed mb-6">Veneers in Turkey typically cost between £190–£220 per tooth depending on the material and clinic. Compare this to £800–£1,000 per tooth in the UK — a saving of up to 79%.</p>
             <div className="overflow-x-auto rounded-2xl shadow-md">
               <table className="w-full bg-white text-sm">
                 <thead>

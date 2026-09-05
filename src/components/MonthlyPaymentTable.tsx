@@ -3,8 +3,8 @@ import Link from 'next/link';
 const plans = [
   { treatment: 'Smile Makeover (20 veneers)', total: '£3,800', monthly36: '£106/month', monthly24: '£158/month', popular: true },
   { treatment: 'Veneers Package (10 veneers)', total: '£2,800', monthly36: '£82/month', monthly24: '£122/month', popular: false },
-  { treatment: 'Implants Package (single arch)', total: '£4,500', monthly36: '£135/month', monthly24: '£196/month', popular: false },
-  { treatment: 'All-on-4', total: '£4,500', monthly36: '£135/month', monthly24: '£196/month', popular: false },
+  { treatment: 'Implants Package (single arch)', total: '£4,500', monthly36: '£125/month', monthly24: '£188/month', popular: false },
+  { treatment: 'All-on-4', total: '£4,500', monthly36: '£125/month', monthly24: '£188/month', popular: false },
   { treatment: 'All-on-6', total: '£5,600', monthly36: '£156/month', monthly24: '£233/month', popular: false },
 ];
 

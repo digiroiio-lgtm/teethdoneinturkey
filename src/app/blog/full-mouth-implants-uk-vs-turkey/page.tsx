@@ -52,8 +52,8 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
               </thead>
               <tbody>
                 {[
-                  { t: "All-on-4 (single arch)", uk: "£12,000–£18,000", tr: "£4,000–£5,500", s: "67–72%" },
-                  { t: "All-on-6 (single arch)", uk: "£15,000–£22,000", tr: "£5,000–£7,000", s: "66–71%" },
+                  { t: "All-on-4 (single arch)", uk: "£12,000–£18,000", tr: "£4,500–£5,500", s: "67–72%" },
+                  { t: "All-on-6 (single arch)", uk: "£15,000–£22,000", tr: "From £5,600", s: "66–71%" },
                   { t: "All-on-4 (both arches)", uk: "£24,000–£36,000", tr: "£8,000–£11,000", s: "67–72%" },
                   { t: "All-on-6 (both arches)", uk: "£30,000–£44,000", tr: "£10,000–£14,000", s: "66–70%" },
                   { t: "Individual implants (full mouth, 20)", uk: "£40,000–£60,000", tr: "£8,400–£12,000", s: "78–80%" },

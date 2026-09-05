@@ -74,8 +74,8 @@ export default function ImplantsCostUKvsTurkeyPage() {
                   { t: "Implant + Bone Graft", uk: "£3,000–£4,500", tr: "£700–£1,000", s: "77–79%" },
                   { t: "2 Implants", uk: "£4,000–£6,000", tr: "£840–£1,200", s: "78–80%" },
                   { t: "4 Implants", uk: "£8,000–£12,000", tr: "£1,680–£2,400", s: "78–80%" },
-                  { t: "All-on-4 (per arch)", uk: "£12,000–£18,000", tr: "£4,000–£5,500", s: "67–72%" },
-                  { t: "All-on-6 (per arch)", uk: "£15,000–£22,000", tr: "£5,000–£7,000", s: "66–71%" },
+                  { t: "All-on-4 (per arch)", uk: "£12,000–£18,000", tr: "£4,500–£5,500", s: "67–72%" },
+                  { t: "All-on-6 (per arch)", uk: "£15,000–£22,000", tr: "From £5,600", s: "66–71%" },
                   { t: "Full Mouth (2 arches All-on-4)", uk: "£24,000–£36,000", tr: "£8,000–£11,000", s: "67–72%" },
                 ].map((r, i) => (
                   <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>

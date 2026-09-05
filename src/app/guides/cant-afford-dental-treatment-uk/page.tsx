@@ -42,8 +42,8 @@ const ukVsTurkeyRows = [
   { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "£190–£250", monthly: "From £6/mo" },
   { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "£3,800–£5,000", monthly: "From £106/mo" },
   { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£420–£600", monthly: "From £14/mo" },
-  { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,000–£5,500", monthly: "From £120/mo" },
-  { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "£5,000–£7,000", monthly: "From £150/mo" },
+  { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,500–£5,500", monthly: "From £125/mo" },
+  { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "From £5,600", monthly: "From £156/mo" },
 ];
 
 const faqs = [

@@ -29,7 +29,7 @@ export default function WhyChooseTurkeyPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Dramatically Lower Costs — Without Compromising Quality</h2>
             <p className="text-gray-600 mb-4">
-              The most obvious reason is cost. A single dental veneer in the UK typically costs £900–£1,200. The same veneer — using the same Ivoclar E-max material, crafted by an equally qualified dentist — costs £190–£250 in Turkey. For a patient replacing 16–20 teeth with veneers, that&apos;s a saving of £11,000–£19,000 on a single treatment.
+              The most obvious reason is cost. A single dental veneer in the UK typically costs £800–£1,000. The same veneer — using the same Ivoclar E-max material, crafted by an equally qualified dentist — costs £190–£250 in Turkey. For a patient replacing 16–20 teeth with veneers, that&apos;s a saving of £9,000–£16,000 on a single treatment.
             </p>
             <p className="text-gray-600">
               This is not because Turkish dentists cut corners. Turkey&apos;s lower cost of living means that salaries, rent, and laboratory costs are all significantly lower. The patient benefits from those lower overheads without any reduction in the quality of care.
@@ -128,7 +128,7 @@ export default function WhyChooseTurkeyPage() {
                 </thead>
                 <tbody>
                   {[
-                    { t: "Single Porcelain Veneer", uk: "£900–£1,200", turkey: "From £190" },
+                    { t: "Single Porcelain Veneer", uk: "£800–£1,000", turkey: "From £190" },
                     { t: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "From £250" },
                     { t: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "From £4,500" },
                     { t: "Full Smile Makeover", uk: "£15,000–£25,000", turkey: "From £3,500" },
