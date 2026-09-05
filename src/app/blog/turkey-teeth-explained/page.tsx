@@ -58,6 +58,7 @@ export default function TurkeyTeethExplainedPage() {
           <p>The best Turkish dental clinics offer:</p>
           <ul className="list-disc list-inside space-y-2 my-3">
             <li><strong>Thin-prep veneers</strong> — minimal enamel removal, typically 0.3–0.5mm, preserving more tooth structure</li>
+            <li><strong>Crowns</strong> — the whole tooth is reduced on every surface, which is what most full-mouth makeovers actually involve. See <Link href="/guides/turkey-teeth-veneers-or-crowns" className="text-[#1e40af] font-semibold hover:underline">veneers or crowns, and how much tooth is removed</Link></li>
             <li><strong>Natural-shade matching</strong> — translucent ceramics that mimic natural tooth colour gradients</li>
             <li><strong>Digital Smile Design previews</strong> — you see your new smile before treatment starts</li>
             <li><strong>Individual customisation</strong> — veneers are hand-finished by skilled ceramists to your specifications</li>

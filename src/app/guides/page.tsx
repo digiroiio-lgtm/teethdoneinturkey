@@ -45,6 +45,15 @@ const guides = [
     href: "/guides/turkey-teeth-cost",
   },
   {
+    category: "Treatment",
+    title: "Turkey Teeth: Veneers or Crowns, and How Much Tooth Is Removed?",
+    description:
+      "The difference between a veneer and a crown, how much enamel each removes, what cannot be undone, and how to tell which one you are actually being quoted.",
+    readingTime: "8 min",
+    updated: "4 September 2026",
+    href: "/guides/turkey-teeth-veneers-or-crowns",
+  },
+  {
     category: "Cost & Finance",
     title: "Can't Afford Dental Treatment in the UK? Your Options",
     description:

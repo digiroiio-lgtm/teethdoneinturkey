@@ -376,6 +376,7 @@ export default function TeethInTurkeyPillarGuide() {
           title="Related Treatments"
           links={[
             { title: "Veneers Turkey", desc: "Porcelain/E-max veneers from £190/tooth.", href: "/treatments/veneers-turkey" },
+            { title: "Veneers or Crowns?", desc: "How much tooth each removes, and what is irreversible.", href: "/guides/turkey-teeth-veneers-or-crowns" },
             { title: "Dental Implants Turkey", desc: "Implants from £250, JCI-accredited clinics.", href: "/treatments/dental-implants-turkey" },
             { title: "All-on-4 Turkey", desc: "Full arch restoration on 4 implants from £4,500.", href: "/treatments/all-on-4-turkey" },
             { title: "Full Smile Makeover", desc: "Combined veneers, whitening and contouring from £3,500.", href: "/treatments/full-smile-makeover-turkey" },

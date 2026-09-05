@@ -46,7 +46,7 @@ export default function RisksTurkeyTeethPage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Risk 2: Unnecessary Tooth Reduction</h2>
           <p><strong>Likelihood:</strong> Low at accredited clinics; higher at budget providers<br /><strong>Severity:</strong> Irreversible</p>
           <p>Some providers have been known to aggressively file down otherwise healthy teeth to &quot;pegs&quot; for veneer placement — far more preparation than is clinically necessary. This is irreversible.</p>
-          <p><strong>How to avoid:</strong> Ask explicitly what preparation approach the clinic uses. Modern E-max veneers require only 0.3–0.5mm of enamel removal. Request a no-prep or minimal-prep consultation before any work begins. Obtain a Digital Smile Design preview first.</p>
+          <p><strong>How to avoid:</strong> Ask explicitly what preparation approach the clinic uses, and read <Link href="/guides/turkey-teeth-veneers-or-crowns" className="text-[#1e40af] font-semibold hover:underline">our guide to veneers vs crowns and tooth removal</Link> first. Modern E-max veneers require only 0.3–0.5mm of enamel removal. Request a no-prep or minimal-prep consultation before any work begins. Obtain a Digital Smile Design preview first.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Risk 3: Communication Barriers</h2>
           <p><strong>Likelihood:</strong> Low at internationally-focused clinics<br /><strong>Severity:</strong> Can affect treatment outcome</p>

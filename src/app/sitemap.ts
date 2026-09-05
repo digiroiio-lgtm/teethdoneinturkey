@@ -29,6 +29,7 @@ const routes: Route[] = [
   { path: '/guides/dental-implants-turkey', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/guides/turkey-teeth-cost', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/guides/cant-afford-dental-treatment-uk', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/guides/turkey-teeth-veneers-or-crowns', priority: 0.95, changeFrequency: 'monthly' },
 
   // Money pages — treatments cluster
   { path: '/treatments', priority: 0.9, changeFrequency: 'weekly' },

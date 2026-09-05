@@ -8,8 +8,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/monthly-payment" },
-  title: "Dental Treatment Turkey Monthly Payment – From £82/Month",
-  description: "Spread the cost of veneers and implants in Turkey from £82/month. 0% finance available over 12, 24 or 36 months for UK patients. Pre-qualify in 60 seconds.",
+  title: "Turkey Teeth Finance: Pay Monthly from £82/Month",
+  description: "Turkey teeth on finance for UK patients. Spread veneers, implants and full smile makeovers from £82/month with 0% APR representative over 12, 24 or 36 months. Soft-search pre-qualification.",
 };
 
 const ukVsTurkeyComparison = [
@@ -21,14 +21,34 @@ const ukVsTurkeyComparison = [
   { treatment: "Hollywood Smile (20 zirconia crowns, inc. hotel)", uk: "£18,000–£22,000", turkey: "£2,800", monthly: "From £78/mo" },
 ];
 
+const financeFaqs = [
+  { q: "Can I get Turkey teeth on finance from the UK?", a: "Yes. UK patients can spread the cost of treatment in Turkey over 12, 24 or 36 months, with 0% APR representative available on qualifying plans. You pay in pounds from the UK, and a soft-search pre-qualification lets you check eligibility without affecting your credit score." },
+  { q: "Is the finance 0% interest?", a: "We offer 0% interest plans for qualifying applicants on 12- and 24-month terms. Some plans may carry interest depending on your credit profile and term length. Full APR details are provided before you commit — no surprises." },
+  { q: "Does applying affect my credit score?", a: "Pre-qualification uses a soft credit check with no impact on your credit score. Only a full application (which you choose to proceed with after seeing your options) will show on your credit file." },
+  { q: "Can I apply if I have bad credit?", a: "You can still pre-qualify. We can't guarantee approval for any applicant, since that depends on your individual circumstances and the finance provider's own criteria at the time you apply. The pre-qualification check is a soft search, so checking your eligibility won't affect your credit score." },
+  { q: "How quickly can I get finance?", a: "Pre-qualification decisions are instant. Full approval typically takes 24–48 hours. Treatment can usually be booked within 2–4 weeks of approval." },
+  { q: "What if I need to cancel after finance is approved?", a: "Finance can be cancelled during the statutory 14-day cooling-off period at no cost. If you cancel after this period, the finance agreement terms will apply — full details provided at the time of application." },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": financeFaqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
+};
+
 export default function MonthlyPaymentPage() {
   return (
     <>
+      <script id="faq-schema-turkey-teeth-finance" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {/* ── Hero ── */}
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-3">Dental Treatment in Turkey with Monthly Payments</h1>
-          <p className="text-xl text-blue-200 mb-2">Spread the Cost of Veneers and Implants from £82 per Month</p>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-3">Turkey Teeth Finance: Pay Monthly for Dental Treatment in Turkey</h1>
+          <p className="text-xl text-blue-200 mb-2">Spread the cost of veneers, implants and full smile makeovers from £82 per month</p>
           <p className="text-blue-300 text-sm mb-8">0% interest available · No obligation · Free treatment plan included</p>
 
           {/* Trust signals */}
@@ -112,6 +132,18 @@ export default function MonthlyPaymentPage() {
       {/* ── Content sections ── */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">What &ldquo;Turkey Teeth on Finance&rdquo; Actually Means</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              &ldquo;Turkey teeth finance&rdquo;, &ldquo;turkey teeth on finance&rdquo; and &ldquo;Turkey dental payment plan&rdquo; all describe the same thing: borrowing arranged in the UK, in pounds, so you do not have to pay the full treatment cost upfront. You are assessed and repay in the UK; the clinic is paid for your treatment in Turkey. It is not a loan taken out in Turkey, and it is not paid in lira.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Two things decide what you actually pay: the treatment total and the term you choose. At 0% APR representative, a longer term simply divides the same total across more months rather than adding interest. For the difference between a payment plan, dental finance, a personal loan and NHS charges, see{" "}
+              <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">dental finance options for UK patients</Link>, and if you are weighing up affordability more broadly, read{" "}
+              <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">what to do if you cannot afford dental treatment in the UK</Link>.
+            </p>
+          </div>
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Cost of Dental Treatment in Turkey with Monthly Payments</h2>
@@ -299,13 +331,7 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Finance FAQs</h2>
             <div className="space-y-4">
-              {[
-                { q: "Is the finance 0% interest?", a: "We offer 0% interest plans for qualifying applicants on 12- and 24-month terms. Some plans may carry interest depending on your credit profile and term length. Full APR details are provided before you commit — no surprises." },
-                { q: "Does applying affect my credit score?", a: "Pre-qualification uses a soft credit check with no impact on your credit score. Only a full application (which you choose to proceed with after seeing your options) will show on your credit file." },
-                { q: "Can I apply if I have bad credit?", a: "You can still pre-qualify. We can't guarantee approval for any applicant, since that depends on your individual circumstances and the finance provider's own criteria at the time you apply. The pre-qualification check is a soft search, so checking your eligibility won't affect your credit score." },
-                { q: "How quickly can I get finance?", a: "Pre-qualification decisions are instant. Full approval typically takes 24–48 hours. Treatment can usually be booked within 2–4 weeks of approval." },
-                { q: "What if I need to cancel after finance is approved?", a: "Finance can be cancelled during the statutory 14-day cooling-off period at no cost. If you cancel after this period, the finance agreement terms will apply — full details provided at the time of application." },
-              ].map(faq => (
+              {financeFaqs.map(faq => (
                 <div key={faq.q} className="bg-white rounded-xl p-5 border border-gray-200">
                   <h3 className="font-semibold text-gray-900 mb-2">{faq.q}</h3>
                   <p className="text-gray-600 text-sm">{faq.a}</p>
@@ -313,6 +339,7 @@ export default function MonthlyPaymentPage() {
               ))}
             </div>
           </div>
+
 
           {/* Internal links */}
           <div className="pt-8 border-t border-gray-200">
@@ -327,6 +354,7 @@ export default function MonthlyPaymentPage() {
                 { href: "/teeth-done-in-turkey-guide", label: "Turkey Dental Guide", sub: "Complete patient guide" },
                 { href: "/finance-options-uk", label: "Dental Finance Options", sub: "Payment plan vs loan vs NHS" },
                 { href: "/guides/cant-afford-dental-treatment-uk", label: "Can't Afford Treatment?", sub: "NHS, finance and lower-cost options" },
+                { href: "/guides/turkey-teeth-veneers-or-crowns", label: "Veneers or Crowns?", sub: "How much tooth is actually removed" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="flex flex-col bg-white rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
                   <span className="font-semibold text-gray-900 text-sm">{item.label}</span>
