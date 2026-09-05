@@ -20,6 +20,7 @@ export default function SafetyBlogPage() {
         headline="Is Getting Teeth Done in Turkey Safe?"
         description="The honest answer to whether it's safe to get dental treatment in Turkey. Accreditation, risk factors, how to choose safely, and what patients say."
         datePublished="2024-11-01"
+        dateModified="2026-09-04"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -29,8 +30,8 @@ export default function SafetyBlogPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Safety</span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Is It Safe to Get Teeth Done in Turkey? Honest 2024 Guide</h1>
-          <p className="text-gray-500 text-sm">Published November 2024 · 6 min read</p>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Is It Safe to Get Teeth Done in Turkey? Honest 2026 Guide</h1>
+          <p className="text-gray-500 text-sm">Published November 2024 · Updated September 2026 · 6 min read</p>
           <MedicalReviewBadge />
         </div>
         <div className="space-y-6 text-gray-700 leading-relaxed">

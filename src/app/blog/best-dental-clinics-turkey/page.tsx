@@ -20,6 +20,7 @@ export default function BestClinicsBlogPage() {
         headline="Best Dental Clinics Turkey – UK Guide"
         description="How to find the best dental clinic in Turkey. What accreditations to look for, red flags to avoid, and how to verify quality before you book."
         datePublished="2024-10-01"
+        dateModified="2026-09-04"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -29,8 +30,8 @@ export default function BestClinicsBlogPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Clinics</span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Best Dental Clinics in Turkey for UK Patients 2024</h1>
-          <p className="text-gray-500 text-sm">Published October 2024 · 5 min read</p>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Best Dental Clinics in Turkey for UK Patients 2026</h1>
+          <p className="text-gray-500 text-sm">Published October 2024 · Updated September 2026 · 5 min read</p>
           <MedicalReviewBadge />
         </div>
         <div className="space-y-6 text-gray-700 leading-relaxed">

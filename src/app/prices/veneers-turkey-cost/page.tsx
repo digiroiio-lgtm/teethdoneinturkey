@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/veneers-turkey-cost" },
   title: "Veneers Turkey Cost: UK Price Guide",
-  description: "Veneers Turkey cost guide 2024. E-max from £190/tooth, Zirconia from £250/tooth. Full UK vs Turkey price comparison. Save up to 79%.",
+  description: "Veneers Turkey cost guide 2026. E-max from £190/tooth, Zirconia from £250/tooth. Full UK vs Turkey price comparison. Save up to 79%.",
 };
 
 export default function VeneersCostPage() {
@@ -15,7 +15,7 @@ export default function VeneersCostPage() {
     <>
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Veneers Turkey Cost – 2024 Price Guide</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Veneers Turkey Cost – 2026 Price Guide</h1>
           <p className="text-xl text-blue-200">Everything you need to know about veneer prices in Turkey</p>
         </div>
       </div>
