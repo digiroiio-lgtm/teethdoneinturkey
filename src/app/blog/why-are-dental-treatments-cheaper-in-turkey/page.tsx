@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/why-are-dental-treatments-cheaper-in-turkey" },
   title: "Why Is Dental Care Cheaper in Turkey?",
-  description: "Discover exactly why dental treatment costs 70–80% less in Turkey vs the UK. It's not lower quality — it's lower overheads. A full, honest explanation for UK patients.",
+  description: "Why dental treatment costs 70-80% less in Turkey than the UK: lower overheads, not lower quality. An honest explanation for UK patients.",
 };
 
 export default function WhyCheaperPage() {

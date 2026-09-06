@@ -6,7 +6,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/turkey-teeth-before-after" },
-  title: "Turkey Teeth Before & After – UK Patient Results",
+  title: { absolute: "Turkey Teeth Before & After: UK Patient Results" },
   description: "See Turkey teeth before and after results from real UK patients. Veneers, dental implants, and full smile makeovers. All treatments completed in Turkey.",
 };
 

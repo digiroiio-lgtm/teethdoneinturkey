@@ -13,16 +13,16 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-cost`;
-const TITLE = "Turkey Teeth Cost 2026: UK Patient Price Guide";
+const TITLE = "Turkey Teeth Cost 2026: UK Price Guide";
 const H1 = "Turkey Teeth Cost: Complete 2026 Price Guide";
 const DESCRIPTION =
-  "How much do teeth cost in Turkey? A complete, source-checked 2026 price guide for UK patients — implants, veneers, crowns, packages, and how to get an accurate quote.";
+  "How much do teeth cost in Turkey? Source-checked 2026 prices for implants, veneers, crowns and packages, with UK comparisons.";
 const DATE_PUBLISHED = "2026-09-03";
 const DATE_MODIFIED = "2026-09-03";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/turkey-teeth-cost" },
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
 };
 
@@ -273,6 +273,7 @@ export default function TurkeyTeethCostGuidePage() {
           links={[
             { title: "Teeth in Turkey: The Complete UK Patient Guide", desc: "The primary guide covering treatment, process, safety and cost.", href: "/guides/teeth-in-turkey" },
             { title: "Dental Implants in Turkey: Complete Guide", desc: "Brands, procedure, timelines, and implant-specific costs.", href: "/guides/dental-implants-turkey" },
+            { title: "Turkey Teeth Finance", desc: "Spread the cost from £82/month over 12 to 36 months.", href: "/finance-options-uk" },
           ]}
         />
 

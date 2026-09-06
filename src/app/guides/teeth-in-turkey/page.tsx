@@ -13,16 +13,16 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/teeth-in-turkey`;
-const TITLE = "Teeth in Turkey: Complete UK Patient Guide 2026";
+const TITLE = "Teeth in Turkey: Complete UK Patient Guide";
 const H1 = "Teeth in Turkey: The Complete UK Patient Guide";
 const DESCRIPTION =
-  "The complete, medically reviewed guide to teeth in Turkey for UK patients — treatments, process, costs, safety, clinic evaluation, recovery and travel, in one place.";
+  "The complete guide to teeth in Turkey for UK patients: treatments, process, costs, safety, clinic evaluation, recovery and travel.";
 const DATE_PUBLISHED = "2026-09-03";
 const DATE_MODIFIED = "2026-09-03";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/teeth-in-turkey" },
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
 };
 
@@ -377,6 +377,8 @@ export default function TeethInTurkeyPillarGuide() {
           links={[
             { title: "Veneers Turkey", desc: "Porcelain/E-max veneers from £190/tooth.", href: "/treatments/veneers-turkey" },
             { title: "Veneers or Crowns?", desc: "How much tooth each removes, and what is irreversible.", href: "/guides/turkey-teeth-veneers-or-crowns" },
+            { title: "Dental Finance Options UK", desc: "Payment plan, finance and loan differences explained.", href: "/finance-options-uk" },
+            { title: "About Teeth Done in Turkey", desc: "Who we are and how our UK patient support works.", href: "/about-us" },
             { title: "Dental Implants Turkey", desc: "Implants from £250, JCI-accredited clinics.", href: "/treatments/dental-implants-turkey" },
             { title: "All-on-4 Turkey", desc: "Full arch restoration on 4 implants from £4,500.", href: "/treatments/all-on-4-turkey" },
             { title: "Full Smile Makeover", desc: "Combined veneers, whitening and contouring from £3,500.", href: "/treatments/full-smile-makeover-turkey" },

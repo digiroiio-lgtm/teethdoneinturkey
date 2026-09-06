@@ -6,7 +6,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/turkey-teeth-clinic" },
-  title: "Turkey Teeth Clinic – How to Choose the Right One",
+  title: { absolute: "Turkey Teeth Clinic: How to Choose Safely" },
   description: "How to choose the best turkey teeth clinic for UK patients. What accreditations to look for, questions to ask, and red flags to avoid. Expert guide 2026.",
 };
 

@@ -6,8 +6,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/turkey-teeth-cost" },
-  title: "Turkey Teeth Cost – Full UK Price Guide 2026",
-  description: "How much do turkey teeth cost? Complete 2026 price guide for veneers, implants, and smile makeovers in Turkey for UK patients. Packages from £2,800. Save up to 90%.",
+  title: { absolute: "Turkey Teeth Cost: UK Price Guide 2026" },
+  description: "Turkey teeth cost 2026: full price guide for veneers, implants and smile makeovers. All-inclusive packages from £2,800 for UK patients.",
 };
 
 const prices = [

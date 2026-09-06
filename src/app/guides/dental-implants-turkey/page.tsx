@@ -13,16 +13,16 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/dental-implants-turkey`;
-const TITLE = "Dental Implants Turkey: Complete UK Patient Guide 2026";
+const TITLE = "Dental Implants Turkey: Complete UK Guide 2026";
 const H1 = "Dental Implants in Turkey: Complete Guide for UK Patients";
 const DESCRIPTION =
-  "How dental implants in Turkey work for UK patients: brands, the procedure, healing timelines, All-on-4/All-on-6, costs, risks, and how to choose a clinic. Medically reviewed.";
+  "Dental implants in Turkey for UK patients: brands, procedure, healing times, All-on-4 and All-on-6, costs from £250, risks and clinic choice.";
 const DATE_PUBLISHED = "2026-09-03";
 const DATE_MODIFIED = "2026-09-03";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/dental-implants-turkey" },
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
 };
 

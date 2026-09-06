@@ -6,8 +6,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/hollywood-smile-turkey-package" },
-  title: "Hollywood Smile Turkey Package – Zirconia Crowns from £2,800",
-  description: "Hollywood Smile Turkey packages with zirconia crowns. 24 crowns £3,100 or 20 crowns £2,800 — all-inclusive with hotel and VIP transfers. Digital smile design included.",
+  title: { absolute: "Hollywood Smile Turkey: Zirconia Crowns from £2,800" },
+  description: "Hollywood Smile Turkey: 20 zirconia crowns £2,800 or 24 crowns £3,100, all-inclusive with hotel, VIP transfers and digital smile design.",
 };
 
 const packages = [

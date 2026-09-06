@@ -15,10 +15,9 @@ export const metadata: Metadata = {
   // Lead with "Turkey teeth" — dominant UK query in Google Trends (last 7 days,
   // interest 78–100 vs 10–18 for procedure-specific variants). Keeps brand at
   // the end so SERP snippet reads well.
-  title:
-    "Turkey Teeth Guide: Veneers, Implants & Costs for UK Patients (2026)",
+  title: { absolute: "Turkey Teeth: Veneers & Implants for UK Patients" },
   description:
-    "Turkey teeth explained for UK patients: veneers from £190/tooth, dental implants from £250, full smile makeovers from £3,500. JCI-accredited clinics, English-speaking dentists, monthly payments from £82/mo. Save up to 70% vs UK.",
+    "Turkey teeth for UK patients: veneers from £190/tooth, implants from £250. JCI-accredited clinics, 0% finance from £82/mo. Save up to 70% vs UK.",
   keywords: [
     "turkey teeth",
     "turkey teeth cost",

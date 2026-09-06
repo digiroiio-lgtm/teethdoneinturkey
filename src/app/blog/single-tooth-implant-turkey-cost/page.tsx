@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/single-tooth-implant-turkey-cost" },
   title: "Single Tooth Implant Turkey Cost 2026",
-  description: "How much does a single tooth implant cost in Turkey? Full 2026 price guide for UK patients, including brands used, what's included, and monthly payment options.",
+  description: "Single tooth implant cost in Turkey for UK patients: 2026 prices by implant brand, what is included, and monthly payment options.",
 };
 
 export default function SingleToothImplantPage() {

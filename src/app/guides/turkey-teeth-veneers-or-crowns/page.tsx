@@ -12,16 +12,16 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-veneers-or-crowns`;
-const TITLE = "Turkey Teeth: Veneers or Crowns? How Much Tooth Is Removed";
+const TITLE = "Turkey Teeth: Veneers or Crowns? What Is Removed";
 const H1 = "Turkey Teeth: Are They Veneers or Crowns, and How Much Tooth Gets Removed?";
 const DESCRIPTION =
-  "Most 'Turkey teeth' makeovers are crowns, not veneers, and the two remove very different amounts of tooth. A straight answer on preparation, what is reversible, and what to ask before you agree.";
+  "Most Turkey teeth makeovers are crowns, not veneers. How much tooth each removes, what cannot be undone, and what to ask before you agree.";
 const DATE_PUBLISHED = "2026-09-04";
 const DATE_MODIFIED = "2026-09-04";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/turkey-teeth-veneers-or-crowns" },
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
 };
 
@@ -250,7 +250,7 @@ export default function TurkeyTeethVeneersOrCrownsPage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             This is the single reason to slow down and get the plan in writing. Read our{" "}
             <Link href="/blog/risks-of-turkey-teeth" className="text-[#1e40af] font-semibold hover:underline">guide to the risks of Turkey teeth</Link>{" "}
-            for the wider list of complications and how to reduce them.
+            for the wider list of complications and how to reduce them, or <Link href="/contact" className="text-[#1e40af] font-semibold hover:underline">contact our UK team</Link> if you want a second opinion on a quote you have already been given.
           </p>
 
           <h2 id="when-crown-is-right" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">When a Crown Is the Right Choice</h2>

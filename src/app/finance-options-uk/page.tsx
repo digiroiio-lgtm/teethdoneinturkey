@@ -7,7 +7,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/finance-options-uk" },
-  title: "Dental Finance Options UK – Pay Monthly for Turkey Treatment",
+  title: { absolute: "Dental Finance UK: Pay Monthly for Turkey Treatment" },
   description: "Finance options for UK patients getting dental treatment in Turkey. Monthly payment plans from £82/month. 0% interest available over 12, 24 and 36 months.",
 };
 

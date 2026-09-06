@@ -7,8 +7,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/all-on-4-turkey" },
-  title: "All-on-4 Dental Implants Turkey – From £4,500 per Arch",
-  description: "All-on-4 dental implants in Turkey from £4,500 per arch. Full arch restoration in 5–7 days. JCI-accredited clinics, same-day teeth, 10-year guarantee. Save 70%+ vs UK.",
+  title: { absolute: "All-on-4 Implants Turkey: From £4,500 per Arch" },
+  description: "All-on-4 implants in Turkey from £4,500 per arch. Full arch restoration in 5-7 days with same-day teeth and a 10-year guarantee.",
 };
 
 const faqs = [

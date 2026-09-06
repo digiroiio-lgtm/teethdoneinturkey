@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/teeth-done-in-turkey-guide" },
   title: "Turkey Dental Guide for UK Patients",
-  description: "The complete guide to getting teeth done in Turkey for UK patients. Costs, safety, clinics, veneers, implants, travel tips and monthly payment options. Save up to 70%.",
+  description: "Getting teeth done in Turkey: costs, safety, clinic selection, veneers, implants, travel and monthly payment options for UK patients.",
 };
 
 const schema = {

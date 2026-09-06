@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/risks-of-veneers-in-turkey" },
   title: "Risks of Veneers in Turkey – UK Guide",
-  description: "The honest truth about the risks of getting veneers in Turkey. What can go wrong, how to reduce risk, and what to do if there's a problem after you return home.",
+  description: "The honest risks of getting veneers in Turkey, how to reduce each one, and what to do if a problem appears after you return home.",
 };
 
 export default function RisksVeneersPage() {

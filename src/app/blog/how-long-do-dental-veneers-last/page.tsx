@@ -9,7 +9,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/how-long-do-dental-veneers-last" },
-  title: "How Long Do Turkey Teeth Last? Veneers & Crowns",
+  title: { absolute: "How Long Do Turkey Teeth Last? Veneers & Crowns" },
   description: "How long do turkey teeth last? E-max veneers 10–15 years, zirconia crowns 15–20, composite 5–7. What actually decides the lifespan — and what shortens it.",
 };
 

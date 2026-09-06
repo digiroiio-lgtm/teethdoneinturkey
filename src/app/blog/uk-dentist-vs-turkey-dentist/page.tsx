@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/uk-dentist-vs-turkey-dentist" },
   title: "UK vs Turkey Dentist: Key Differences",
-  description: "An honest comparison of UK dentists vs Turkish dentists. Training, materials, technology, costs, and what the differences actually mean for your treatment outcome.",
+  description: "UK dentists vs Turkish dentists compared: training, materials, technology and cost, and what those differences mean for your result.",
 };
 
 export default function UKvsTurkeyDentistPage() {

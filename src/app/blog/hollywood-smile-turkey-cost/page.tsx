@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/hollywood-smile-turkey-cost" },
   title: "Hollywood Smile Turkey Cost 2026",
-  description: "How much does a Hollywood Smile cost in Turkey for UK patients? Full cost breakdown for zirconia crown packages, what's included, and how to get a naturally glamorous result.",
+  description: "Hollywood Smile cost in Turkey: zirconia crown packages from £2,800, what is included, and how the price compares with UK private dentistry.",
 };
 
 export default function HollywoodSmilePage() {

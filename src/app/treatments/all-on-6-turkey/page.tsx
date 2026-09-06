@@ -7,7 +7,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/all-on-6-turkey" },
-  title: "All-on-6 Dental Implants Turkey – From £5,600 All-Inclusive",
+  title: { absolute: "All-on-6 Implants Turkey: From £5,600 All-Inclusive" },
   description: "All-on-6 dental implants in Turkey from £5,600 all-inclusive (hotel + transfers). Superior stability vs All-on-4. JCI clinics. Save vs £18,000+ in the UK.",
 };
 

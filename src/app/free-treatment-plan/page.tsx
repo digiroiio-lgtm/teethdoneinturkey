@@ -6,7 +6,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/free-treatment-plan" },
-  title: "Get Your Free Dental Treatment Plan – Turkey",
+  title: { absolute: "Free Dental Treatment Plan for Turkey" },
   description: "Get a free personalised dental treatment plan for Turkey. Includes treatment options, cost breakdown, timeline, and clinic recommendation. No obligation.",
 };
 

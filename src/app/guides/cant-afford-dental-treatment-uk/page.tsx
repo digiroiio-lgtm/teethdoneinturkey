@@ -12,16 +12,16 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/cant-afford-dental-treatment-uk`;
-const TITLE = "Can't Afford Dental Treatment in the UK? Your Options for 2026";
+const TITLE = "Can't Afford Dental Treatment in the UK?";
 const H1 = "Can't Afford Dental Treatment in the UK? Here Are Your Options";
 const DESCRIPTION =
-  "Struggling to pay for a private dentist in the UK? A step by step guide to NHS charges, payment plans, dental finance, and lower cost alternatives, including treatment in Turkey.";
+  "Can't afford a private dentist? NHS band charges, payment plans, dental finance and lower cost options for UK patients, in decision order.";
 const DATE_PUBLISHED = "2026-09-03";
 const DATE_MODIFIED = "2026-09-03";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/cant-afford-dental-treatment-uk" },
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
 };
 

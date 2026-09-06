@@ -10,9 +10,8 @@ const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides" },
-  title: "Dental Treatment in Turkey Guides for UK Patients",
-  description:
-    "The Teeth Done in Turkey patient guide library: evergreen, medically reviewed guides on treatments, costs and safety for UK patients considering dental treatment in Turkey.",
+  title: { absolute: "Dental Treatment Turkey Guides for UK Patients" },
+  description: "Evergreen patient guides on dental treatment in Turkey: treatments, costs, safety, finance and clinic selection for UK patients.",
 };
 
 const guides = [

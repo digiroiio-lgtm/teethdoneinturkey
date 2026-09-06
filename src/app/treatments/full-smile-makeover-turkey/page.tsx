@@ -7,8 +7,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/full-smile-makeover-turkey" },
-  title: "Smile Makeover Turkey – Full Transformation from £3,500",
-  description: "Complete smile makeover in Turkey from £3,500. Veneers, whitening, gum contouring and more in one trip. Compare to £12,000+ in the UK. JCI clinics, 10-year guarantee.",
+  title: { absolute: "Smile Makeover Turkey: Full Transformation £3,500" },
+  description: "Full smile makeover in Turkey from £3,500: veneers, whitening and gum contouring in one trip, against £12,000+ in the UK.",
 };
 
 const faqs = [

@@ -7,7 +7,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/full-mouth-implants-uk-vs-turkey" },
-  title: "Full Mouth Implants Cost: UK vs Turkey 2026",
+  title: { absolute: "Full Mouth Implants: UK vs Turkey Cost 2026" },
   description: "Full mouth dental implants cost UK vs Turkey. All-on-4 from £9,000 (both arches) in Turkey vs £24,000–£44,000 in the UK. Complete breakdown for UK patients.",
 };
 

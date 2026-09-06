@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/aftercare-for-dental-work-in-turkey" },
   title: "Aftercare for Dental Work in Turkey",
-  description: "How to look after your dental work after returning from Turkey. Complete aftercare guide for veneers and implants, including what to expect and when to seek help.",
+  description: "Aftercare for veneers and implants once you are home from Turkey: what to expect week by week and when to seek help in the UK.",
 };
 
 export default function AftercarePage() {

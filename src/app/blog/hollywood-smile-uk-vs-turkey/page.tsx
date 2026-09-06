@@ -7,7 +7,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/hollywood-smile-uk-vs-turkey" },
-  title: "Hollywood Smile Cost: UK vs Turkey 2026",
+  title: { absolute: "Hollywood Smile Cost: UK vs Turkey 2026" },
   description: "Hollywood Smile cost UK vs Turkey compared. 20 zirconia crowns from £2,800 in Turkey vs £15,000+ in the UK. What's included, quality, and how to book.",
 };
 

@@ -6,7 +6,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/teeth-done-in-turkey-problems" },
-  title: "Teeth Done in Turkey Problems – What to Know",
+  title: { absolute: "Teeth Done in Turkey Problems: What to Know" },
   description: "An honest guide to the potential problems with getting teeth done in Turkey — and how to avoid them. Written for UK patients.",
 };
 
@@ -85,7 +85,7 @@ export default function TurkeyTeethProblemsPage() {
               If you experience a problem after returning to the UK, your first step should be to contact the clinic directly. Reputable Turkish clinics will respond promptly to post-treatment concerns. If the issue is covered by your guarantee, they will either arrange a return visit (at their expense) or work with you to resolve it remotely where possible.
             </p>
             <p className="text-gray-600 mb-4">
-              For patients who used Teeth Done in Turkey, our UK team acts as an intermediary — we communicate with the clinic, coordinate any necessary follow-up, and help ensure any guarantee claims are honoured.
+              For patients who used Teeth Done in Turkey, <Link href="/about-us" className="text-[#1e40af] font-semibold hover:underline">our UK team</Link> acts as an intermediary — we communicate with the clinic, coordinate any necessary follow-up, and help ensure any guarantee claims are honoured.
             </p>
             <p className="text-gray-600">
               In the worst-case scenario, if you cannot return to Turkey and need treatment in the UK, you may face costs to correct the work. Travel insurance does not typically cover dental complications. Some specialist dental insurers offer dental tourism cover — it is worth investigating before you travel.

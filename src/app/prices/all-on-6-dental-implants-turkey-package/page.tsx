@@ -6,8 +6,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/all-on-6-dental-implants-turkey-package" },
-  title: "All-on-6 Dental Implants Turkey Package – £5,600 All-Inclusive",
-  description: "All-on-6 dental implants Turkey package from £5,600. Includes Osstem implants, hotel, VIP transfers, temporary and final teeth. Full UK vs Turkey price breakdown.",
+  title: { absolute: "All-on-6 Turkey Package: £5,600 All-Inclusive" },
+  description: "All-on-6 Turkey package from £5,600 all-inclusive: implants, hotel, VIP transfers, temporary and final teeth, with UK price comparison.",
 };
 
 const faqs = [

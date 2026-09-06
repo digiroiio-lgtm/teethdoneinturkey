@@ -8,8 +8,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/monthly-payment" },
-  title: "Turkey Teeth Finance: Pay Monthly from £82/Month",
-  description: "Turkey teeth on finance for UK patients. Spread veneers, implants and full smile makeovers from £82/month with 0% APR representative over 12, 24 or 36 months. Soft-search pre-qualification.",
+  title: { absolute: "Turkey Teeth Finance: Pay Monthly from £82" },
+  description: "Turkey teeth on finance from £82/month. Spread veneers, implants and makeovers over 12, 24 or 36 months at 0% APR representative. Soft search.",
 };
 
 const ukVsTurkeyComparison = [

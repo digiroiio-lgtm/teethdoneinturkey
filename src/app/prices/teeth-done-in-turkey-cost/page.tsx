@@ -6,7 +6,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/teeth-done-in-turkey-cost" },
-  title: "Teeth Done in Turkey Cost – Full Price Guide 2026",
+  title: { absolute: "Teeth Done in Turkey Cost: Price Guide 2026" },
   description: "Complete guide to teeth done in Turkey cost. Packages from £2,800. Veneers, implants, Hollywood Smile and individual treatment prices. Save up to 90% vs UK.",
 };
 
