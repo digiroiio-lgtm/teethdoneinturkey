@@ -174,7 +174,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
                 { href: "/treatments/all-on-4-turkey", label: "All-on-4 Turkey", sub: "Full arch restoration" },
                 { href: "/treatments/all-on-6-turkey", label: "All-on-6 Turkey", sub: "6-implant full arch" },
                 { href: "/prices/dental-implants-turkey-cost", label: "Implant Costs", sub: "All implant prices" },
-                { href: "/prices/turkey-teeth-cost", label: "Turkey Teeth Cost", sub: "All treatment prices" },
+                { href: "/guides/turkey-teeth-cost", label: "Turkey Teeth Cost", sub: "All treatment prices" },
                 { href: "/monthly-payment", label: "Monthly Payment Plans", sub: "From £82/month" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">

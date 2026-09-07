@@ -1,5 +1,5 @@
 import { permanentRedirect } from "next/navigation";
 
 export default function TurkeyTeethPriceRedirect() {
-  permanentRedirect("/prices/turkey-teeth-cost");
+  permanentRedirect("/guides/turkey-teeth-cost");
 }

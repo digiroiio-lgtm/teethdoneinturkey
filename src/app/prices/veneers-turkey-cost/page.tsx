@@ -8,10 +8,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/veneers-turkey-cost`;
-const TITLE = "Veneers Turkey Cost 2026: Price Per Tooth";
+const TITLE = "Veneers Turkey Cost 2026: Price Per Tooth & Full Set";
 const DESCRIPTION =
-  "Veneers Turkey cost 2026: E-max from £190/tooth, zirconia crowns from £130, composite from £80. UK comparison and total trip cost.";
-const DATE_MODIFIED = "2026-09-04";
+  "Veneers Turkey cost 2026: E-max from £190/tooth, zirconium/zirconia from £130, composite from £80. Full-set prices, UK comparison and total trip cost.";
+const DATE_MODIFIED = "2026-09-07";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/veneers-turkey-cost" },
@@ -35,7 +35,41 @@ const notIncluded = [
   { item: "Optional extras", cost: "Whitening of remaining natural teeth, priced on request" },
 ];
 
+// Full-set pricing is arithmetic from the per-tooth figures in the table above
+// (E-max £190, zirconia £130), not a separate price list — keep them in sync.
+const EMAX_PER_TOOTH = 190;
+const ZIRCONIA_PER_TOOTH = 130;
+const UK_EMAX_LOW = 800;
+const UK_EMAX_HIGH = 1000;
+
+const gbp = (n: number) => `£${n.toLocaleString("en-GB")}`;
+
+const setSizes = [4, 6, 8, 10, 16, 20];
+
+const byQuantity = setSizes.map(count => ({
+  count,
+  emax: gbp(count * EMAX_PER_TOOTH),
+  zirconia: gbp(count * ZIRCONIA_PER_TOOTH),
+  uk: `${gbp(count * UK_EMAX_LOW)}–${gbp(count * UK_EMAX_HIGH)}`,
+}));
+
 const faqs = [
+  {
+    question: "How much are veneers in Turkey?",
+    answer: "Porcelain (E-max) veneers start from £190 per tooth, zirconium (zirconia) crowns from £130 per tooth, and composite veneers from £80 per tooth. What you actually pay depends far more on how many teeth you treat than on anything else: 8 E-max veneers work out at about £1,520, 16 at about £3,040 and a full set of 20 at about £3,800.",
+  },
+  {
+    question: "How much is a full set of veneers in Turkey?",
+    answer: "A full set is normally 20 teeth — the ones visible when you smile — and comes to roughly £3,800 in E-max at £190 per tooth. A 24-tooth set costs more. If you are quoted zirconia rather than E-max, the all-inclusive Hollywood Smile package is £2,800 for 20 crowns and £3,100 for 24, including hotel and transfers. The equivalent 20-tooth set at UK private prices is typically £16,000 to £20,000.",
+  },
+  {
+    question: "How much do composite veneers cost in Turkey?",
+    answer: "Composite veneers cost from £80 to £120 per tooth in Turkey, against roughly £300 to £500 per tooth privately in the UK. Composite is applied directly to the tooth in a single visit and removes little or no enamel, which makes it the least invasive and least expensive option — but it stains more readily and typically lasts around 4 to 7 years, against 10 to 15 years for E-max.",
+  },
+  {
+    question: "What is the difference between zirconium and zirconia veneers?",
+    answer: "They are the same material. Zirconium is the chemical element; zirconia is the ceramic (zirconium dioxide) that dental units are milled from, and UK patients search for both spellings. The distinction that actually matters is not the spelling but the treatment: zirconia units are crowns, which are prepared on every surface of the tooth, not veneers, which are thin shells bonded to the front only.",
+  },
   {
     question: "How much do veneers cost in Turkey?",
     answer: "On this site, porcelain (E-max) veneers start from £190 per tooth, zirconia crowns from £130 per tooth, and composite veneers from £80 per tooth. A full set of 20 E-max veneers works out at roughly £3,800. All-inclusive Hollywood Smile crown packages, which include hotel and transfers, start at £2,800 for 20 crowns.",
@@ -84,6 +118,62 @@ const jsonLd = {
         { "@type": "ListItem", position: 3, name: "Veneers Turkey Cost", item: PAGE_URL },
       ],
     },
+    // Priced offers for the three veneer materials. The global OfferCatalog in
+    // layout.tsx covers E-max and zirconia at business level; this adds the
+    // composite tier and ties all three to the page a price query lands on.
+    {
+      "@type": "OfferCatalog",
+      "@id": `${PAGE_URL}#offers`,
+      name: "Veneer and Crown Prices in Turkey",
+      url: PAGE_URL,
+      provider: { "@id": `${SITE_URL}/#business` },
+      itemListElement: [
+        {
+          "@type": "Offer",
+          name: "Porcelain / E-max Veneers",
+          priceCurrency: "GBP",
+          price: "190",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            priceCurrency: "GBP",
+            minPrice: "190",
+            maxPrice: "220",
+            unitText: "per tooth",
+          },
+          itemOffered: { "@type": "MedicalProcedure", name: "Porcelain Veneers" },
+          url: PAGE_URL,
+        },
+        {
+          "@type": "Offer",
+          name: "Zirconium / Zirconia Crowns",
+          priceCurrency: "GBP",
+          price: "130",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            priceCurrency: "GBP",
+            price: "130",
+            unitText: "per tooth",
+          },
+          itemOffered: { "@type": "MedicalProcedure", name: "Zirconia Crowns" },
+          url: PAGE_URL,
+        },
+        {
+          "@type": "Offer",
+          name: "Composite Veneers",
+          priceCurrency: "GBP",
+          price: "80",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            priceCurrency: "GBP",
+            minPrice: "80",
+            maxPrice: "120",
+            unitText: "per tooth",
+          },
+          itemOffered: { "@type": "MedicalProcedure", name: "Composite Veneers" },
+          url: PAGE_URL,
+        },
+      ],
+    },
   ],
 };
 
@@ -105,7 +195,7 @@ export default function VeneersCostPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">How Much Do Veneers Cost in Turkey?</h2>
             <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
-              Porcelain (E-max) veneers in Turkey cost from <strong>£190 per tooth</strong>, zirconia crowns from <strong>£130 per tooth</strong>, and composite veneers from <strong>£80 per tooth</strong>. The equivalent UK private price is roughly £800 to £1,000 for a porcelain veneer, so a full set of 20 works out at about £3,800 in Turkey against £16,000 or more in the UK. Flights are extra; package prices include hotel and transfers.
+              Porcelain (E-max) veneers in Turkey cost from <strong>£190 per tooth</strong>, zirconium (zirconia) crowns from <strong>£130 per tooth</strong>, and composite veneers from <strong>£80 per tooth</strong>. The equivalent UK private price is roughly £800 to £1,000 for a porcelain veneer, so a full set of 20 works out at about <strong>£3,800</strong> in Turkey against £16,000 to £20,000 in the UK. Flights are extra; package prices include hotel and transfers.
             </p>
             <div className="overflow-x-auto rounded-2xl shadow-md">
               <table className="w-full bg-white text-sm">
@@ -119,7 +209,7 @@ export default function VeneersCostPage() {
                 </thead>
                 <tbody>
                   {[
-                    { type: "Zirconia Crown", uk: "£1,000–£1,500", turkey: "£130", saving: "~90%" },
+                    { type: "Zirconium / Zirconia Crown", uk: "£1,000–£1,500", turkey: "£130", saving: "~90%" },
                     { type: "E-max Porcelain Veneer", uk: "£800–£1,000", turkey: "£190–£220", saving: "78%" },
                     { type: "Composite (direct)", uk: "£300–£500", turkey: "£80–£120", saving: "75%" },
                     { type: "Hollywood Smile 20 Crowns (package)", uk: "£20,000–£30,000", turkey: "£2,800", saving: "~87%" },
@@ -137,10 +227,76 @@ export default function VeneersCostPage() {
             </div>
           </div>
           <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Full Set Veneers Turkey Price: Cost by Number of Teeth</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Per-tooth pricing is only half the answer, because almost nobody treats one tooth. Most UK patients treat the teeth visible when they smile — commonly 8, 10, 16 or 20. The figures below are the per-tooth prices above multiplied out, so you can find your own number rather than estimating from a headline &ldquo;from&rdquo; price.
+            </p>
+            <div className="overflow-x-auto rounded-2xl shadow-md">
+              <table className="w-full bg-white text-sm">
+                <caption className="sr-only">Veneer cost in Turkey by number of teeth, compared with UK private prices</caption>
+                <thead>
+                  <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
+                    <th className="px-4 py-3 text-left">Number of Teeth</th>
+                    <th className="px-4 py-3 text-right">E-max (Turkey)</th>
+                    <th className="px-4 py-3 text-right">Zirconium (Turkey)</th>
+                    <th className="px-4 py-3 text-right">E-max (UK private)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {byQuantity.map((r, i) => (
+                    <tr key={r.count} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                      <td className="px-4 py-3 font-medium">
+                        {r.count} teeth{r.count === 20 ? " (full set)" : ""}
+                      </td>
+                      <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.emax}</td>
+                      <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.zirconia}</td>
+                      <td className="px-4 py-3 text-right text-red-500 line-through">{r.uk}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-gray-500 mt-3">
+              E-max at £190 per tooth and zirconium at £130 per tooth; UK column at £800–£1,000 per porcelain veneer. Turkey figures are treatment only and exclude flights. If you want zirconium crowns for a full set, compare these totals against the all-inclusive{" "}
+              <Link href="/prices/hollywood-smile-turkey-package" className="text-[#1e40af] font-semibold hover:underline">Hollywood Smile package</Link>{" "}
+              at £2,800 for 20 crowns or £3,100 for 24 — those prices include hotel and transfers, so for a full set the package is usually the cheaper route.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Composite Veneers Turkey Price</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Composite veneers cost <strong>£80 to £120 per tooth</strong> in Turkey, against roughly £300 to £500 per tooth privately in the UK. Composite is a tooth-coloured resin shaped directly onto the tooth by the dentist in a single visit — there is no laboratory stage, which is why it is both the cheapest option and the quickest.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The trade-off is durability and stain resistance. Composite typically lasts around 4 to 7 years before it needs repolishing or replacing, where E-max commonly lasts 10 to 15 years, and it picks up staining from coffee, tea and tobacco far more readily than porcelain does. Its advantage is that it removes little or no enamel, so it is the one option on this page that is broadly reversible.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Composite makes most sense for a small number of front teeth, for chips and minor shape corrections, or where you want to see the effect before committing to irreversible preparation. For a full-set smile makeover, most patients choose E-max or zirconium. See{" "}
+              <Link href="/blog/composite-vs-porcelain-veneers-turkey" className="text-[#1e40af] font-semibold hover:underline">composite vs porcelain veneers compared</Link>{" "}
+              for the full breakdown.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Zirconium Veneer Prices — and What &ldquo;Zirconium&rdquo; Actually Means</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Zirconium units cost <strong>from £130 per tooth</strong> in Turkey, against £1,000 to £1,500 for the UK private equivalent. &ldquo;Zirconium&rdquo; and &ldquo;zirconia&rdquo; are used interchangeably in dental marketing and mean the same thing here: zirconium is the chemical element, zirconia is the ceramic (zirconium dioxide) that the units are milled from. You will see both spellings in Turkish clinic quotes.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The distinction that matters clinically is not the spelling. It is that <strong>zirconium units are crowns, not veneers</strong>. A crown is prepared on every surface of the tooth; a veneer is a thin shell bonded to the front only. Zirconium is the cheaper number on a quote, but it is the more destructive treatment — which is the single most common misunderstanding behind the &ldquo;turkey teeth&rdquo; results people regret.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Zirconium is the right choice where a tooth genuinely needs full coverage — heavily filled, root-treated, badly worn or broken teeth, and for patients who grind. It is the wrong choice for healthy teeth that only need a cosmetic change. Compare the materials in{" "}
+              <Link href="/blog/e-max-vs-zirconia-veneers-turkey" className="text-[#1e40af] font-semibold hover:underline">E-max vs zirconia veneers</Link>.
+            </p>
+          </div>
+
+          <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Factors That Affect Veneer Prices in Turkey</h2>
             <ul className="space-y-3 text-gray-600">
               {[
-                { title: "Material", desc: "E-max is premium and most popular. Zirconia is stronger for grinders. Composite is most affordable." },
+                { title: "Material", desc: "E-max is premium and most popular. Zirconium (zirconia) is stronger for grinders. Composite is most affordable." },
                 { title: "Number of veneers", desc: "Clinics often offer package discounts for 12+ veneers." },
                 { title: "Veneers or crowns", desc: "Zirconia units are crowns, not veneers. They are cheaper per unit but remove far more tooth structure." },
                 { title: "Dentist experience", desc: "Specialist aesthetic dentists with international training command slightly higher fees." },

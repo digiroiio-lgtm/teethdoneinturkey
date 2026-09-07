@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/finance-options-uk" },
   title: { absolute: "Dental Finance UK: Pay Monthly for Turkey Treatment" },
-  description: "Finance options for UK patients getting dental treatment in Turkey. Monthly payment plans from £82/month. 0% interest available over 12, 24 and 36 months.",
+  description: "Dental finance for UK patients: monthly plans from £82, 0% APR over 12–36 months, soft-search pre-check, and honest guidance if you have bad credit.",
 };
 
 const options = [
@@ -78,6 +78,18 @@ const faqs = [
   {
     q: "I have bad credit. Can I still get approved?",
     a: "We can't guarantee approval, and no dental finance provider honestly can. The pre-qualification check is a soft search, so it won't affect your credit score, and the outcome depends on your individual circumstances and the finance provider's own criteria at the time you apply.",
+  },
+  {
+    q: "Can you get teeth on finance with bad credit?",
+    a: "Sometimes, but not always, and anyone promising otherwise is not being straight with you. Lenders assess affordability as well as credit history, so a poor score with stable income and low existing commitments can still be approved, while a thin or very recent adverse file is more likely to be declined. The honest way to find out is the soft-search pre-check, which gives you an indication without leaving a mark on your file.",
+  },
+  {
+    q: "Will being declined for dental finance hurt my credit score?",
+    a: "A soft-search pre-check will not, because it is not visible to other lenders and leaves no footprint. A declined full application does leave a hard-search footprint on your file, which is why it is worth running the soft check first rather than applying to several providers in succession — multiple hard searches in a short period are themselves a negative signal.",
+  },
+  {
+    q: "What are my options if I'm declined for dental finance?",
+    a: "A larger deposit reduces the amount borrowed and can change the outcome, as can a shorter term or a smaller initial phase of treatment. A joint or guarantor arrangement is an option with some providers. Otherwise, treating in stages and paying as you go avoids borrowing altogether — and because treatment in Turkey costs a fraction of the UK private equivalent, the amount you need to fund is often small enough not to require finance at all.",
   },
 ];
 
@@ -187,6 +199,36 @@ export default function FinanceOptionsUKPage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Getting Teeth on Finance with Bad Credit</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              This is the question we are asked most often, so here is the honest answer: <strong>bad credit does not automatically rule you out, and no provider can guarantee you approval either.</strong> Any site telling you otherwise is selling you something. What decides it is not your score alone — lenders weigh affordability alongside credit history, so stable income and low existing commitments can carry an application that a score on its own would not.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              {[
+                { title: "What lenders actually look at", desc: "Your income against your existing monthly commitments, how recent any adverse markers are, how long you've been at your address and in your job — not just the headline score." },
+                { title: "Start with the soft search", desc: "The pre-check leaves no footprint on your file and isn't visible to other lenders, so you can get an indication without risking anything. Only proceed to a full application once you know where you stand." },
+                { title: "Don't apply repeatedly", desc: "Several hard searches in a short window is itself a negative signal. One soft check first is worth more than three speculative applications." },
+                { title: "A deposit changes the maths", desc: "Putting any amount down reduces what you need to borrow, which lowers the monthly figure and can shift a marginal application into approval." },
+              ].map(item => (
+                <div key={item.title} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                  <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-700 leading-relaxed">
+              There is also a point worth making that the finance industry has no reason to make. Treatment in Turkey costs a fraction of the UK private equivalent — a full set of veneers is roughly £3,800 against £16,000 or more here — so the sum you would need to borrow is very often small enough that finance stops being the deciding factor at all. If credit is the obstacle, the cheaper treatment route may solve the problem more reliably than the lending route. The{" "}
+              <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">can&apos;t afford dental treatment guide</Link>{" "}
+              works through the options in decision order, and the{" "}
+              <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">price calculator</Link>{" "}
+              will tell you what you would actually need to fund.
+            </p>
+            <p className="text-sm text-gray-500 mt-4">
+              Finance is subject to status, affordability and credit assessment. 0% APR representative is available on qualifying plans; approval is never guaranteed.
+            </p>
           </div>
 
           <div>
