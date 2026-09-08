@@ -255,7 +255,7 @@ export default function TeethInTurkeyPillarGuide() {
 
           <h2 id="recovery" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Recovery</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Recovery varies by treatment: veneers and crowns generally involve only mild, short-lived sensitivity. Implant surgery involves a more significant initial recovery over the following days, and then a longer background healing period (osseointegration, typically around 3–6 months) before the implant is considered fully integrated and ready for its permanent restoration. Following your clinic's specific aftercare instructions is the main factor patients can control in how smoothly recovery goes.
+            Recovery varies by treatment: veneers and crowns generally involve only mild, short-lived sensitivity. Implant surgery involves a more significant initial recovery over the following days, and then a longer background healing period (osseointegration, typically around 3–6 months) before the implant is considered fully integrated and ready for its permanent restoration. Following your clinic&apos;s specific aftercare instructions is the main factor patients can control in how smoothly recovery goes.
           </p>
 
           <h2 id="costs" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Costs</h2>
@@ -269,12 +269,12 @@ export default function TeethInTurkeyPillarGuide() {
 
           <h2 id="uk-vs-turkey" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Turkey vs UK Considerations</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Beyond price, the practical trade-off is travel and continuity of care: treatment in the UK means no flights and same-week follow-up with a familiar dentist, while treatment in Turkey means one or two trips abroad and coordinating any post-treatment concerns remotely or on a return visit. Materials and clinical standards at accredited clinics in Turkey are not inherently different from the UK — the meaningful differences are cost, travel logistics, and how a clinic handles aftercare once you're home.
+            Beyond price, the practical trade-off is travel and continuity of care: treatment in the UK means no flights and same-week follow-up with a familiar dentist, while treatment in Turkey means one or two trips abroad and coordinating any post-treatment concerns remotely or on a return visit. Materials and clinical standards at accredited clinics in Turkey are not inherently different from the UK — the meaningful differences are cost, travel logistics, and how a clinic handles aftercare once you&apos;re home.
           </p>
 
           <h2 id="safety" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Safety</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Safety in dental tourism is determined by the specific clinic and dentist, not by the country as a whole. JCI-accredited or Turkish Ministry of Health-certified clinics that use recognised material brands and follow standard sterilisation and surgical protocols carry a broadly comparable risk profile to equivalent private UK treatment. As with any medical travel decision, verifying a clinic's specific accreditation and the dentist's specific qualifications — rather than relying on marketing claims alone — is the most important safety step.
+            Safety in dental tourism is determined by the specific clinic and dentist, not by the country as a whole. JCI-accredited or Turkish Ministry of Health-certified clinics that use recognised material brands and follow standard sterilisation and surgical protocols carry a broadly comparable risk profile to equivalent private UK treatment. As with any medical travel decision, verifying a clinic&apos;s specific accreditation and the dentist&apos;s specific qualifications — rather than relying on marketing claims alone — is the most important safety step.
           </p>
 
           <h2 id="risks" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Risks &amp; Complications</h2>
@@ -284,24 +284,24 @@ export default function TeethInTurkeyPillarGuide() {
 
           <h2 id="evaluating-a-clinic" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">How to Evaluate a Dental Clinic</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Before booking, verify: the clinic's accreditation (JCI and/or Turkish Ministry of Health certification), the dentist's individual qualifications, which specific material or implant brand is included in your quote, whether diagnostics (e.g. a CT scan for implants) are included before your final price is confirmed, and what the guarantee and aftercare process covers. See the dedicated{" "}
+            Before booking, verify: the clinic&apos;s accreditation (JCI and/or Turkish Ministry of Health certification), the dentist&apos;s individual qualifications, which specific material or implant brand is included in your quote, whether diagnostics (e.g. a CT scan for implants) are included before your final price is confirmed, and what the guarantee and aftercare process covers. See the dedicated{" "}
             <Link href="/turkey-teeth-clinic" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Clinic — How to Choose the Right One</Link>{" "}
             guide for a full checklist.
           </p>
 
           <h2 id="dentist-qualifications" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Dentist Qualifications</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Dentists practising in Turkey hold Turkish Dental Association qualifications broadly equivalent to UK General Dental Council (GDC) registration, and many hold additional international training or postgraduate qualifications. A dentist practising in Turkey is not automatically GDC-registered in the UK — GDC registration applies to dentists practising within the UK. Ask any clinic directly for their dentists' specific qualifications and registration details rather than relying on general claims.
+            Dentists practising in Turkey hold Turkish Dental Association qualifications broadly equivalent to UK General Dental Council (GDC) registration, and many hold additional international training or postgraduate qualifications. A dentist practising in Turkey is not automatically GDC-registered in the UK — GDC registration applies to dentists practising within the UK. Ask any clinic directly for their dentists&apos; specific qualifications and registration details rather than relying on general claims.
           </p>
 
           <h2 id="health-tourism-authorisation" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Health Tourism Authorisation</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Turkey's health tourism sector is overseen at government level by the Turkish Ministry of Health and USHAŞ (Turkey&apos;s state health-tourism company, established to coordinate and authorise international patient care). Health tourism-authorised facilities are expected to meet defined standards for treating international patients. This is a separate authorisation from hospital/clinic accreditation bodies such as JCI. Ask a clinic directly which of these authorisations and accreditations it holds, and verify independently where possible rather than relying on marketing claims alone.
+            Turkey&apos;s health tourism sector is overseen at government level by the Turkish Ministry of Health and USHAŞ (Turkey&apos;s state health-tourism company, established to coordinate and authorise international patient care). Health tourism-authorised facilities are expected to meet defined standards for treating international patients. This is a separate authorisation from hospital/clinic accreditation bodies such as JCI. Ask a clinic directly which of these authorisations and accreditations it holds, and verify independently where possible rather than relying on marketing claims alone.
           </p>
 
           <h2 id="materials-brands" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Materials &amp; Implant Brands</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The material or brand used is one of the biggest factors in both quality expectations and price. Implant brands referenced across this site's treatment and price pages include Osstem (entry-level), Medentika (Straumann Group), Straumann (premium), and Nobel Biocare. Veneer material commonly referenced is Ivoclar E-max porcelain. These are internationally recognised brands also used in UK private practice — the brand, not the country, is what determines material quality and expected longevity. See the{" "}
+            The material or brand used is one of the biggest factors in both quality expectations and price. Implant brands referenced across this site&apos;s treatment and price pages include Osstem (entry-level), Medentika (Straumann Group), Straumann (premium), and Nobel Biocare. Veneer material commonly referenced is Ivoclar E-max porcelain. These are internationally recognised brands also used in UK private practice — the brand, not the country, is what determines material quality and expected longevity. See the{" "}
             <Link href="/guides/dental-implants-turkey" className="text-[#1e40af] font-semibold hover:underline">Dental Implants Guide</Link>{" "}
             for brand-specific detail.
           </p>
@@ -313,7 +313,7 @@ export default function TeethInTurkeyPillarGuide() {
 
           <h2 id="guarantees-aftercare" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Guarantees &amp; Aftercare</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Several treatment pages on this site reference guarantees of up to 10 years on clinical work, alongside UK-based aftercare coordination for issues that arise once you're home. Guarantee terms vary by clinic and by treatment — always get the specific guarantee period and what it covers in writing before you book, rather than assuming a general figure applies to your exact treatment.
+            Several treatment pages on this site reference guarantees of up to 10 years on clinical work, alongside UK-based aftercare coordination for issues that arise once you&apos;re home. Guarantee terms vary by clinic and by treatment — always get the specific guarantee period and what it covers in writing before you book, rather than assuming a general figure applies to your exact treatment.
           </p>
 
           <h2 id="travelling-from-uk" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Travelling from the UK</h2>
@@ -327,7 +327,7 @@ export default function TeethInTurkeyPillarGuide() {
 
           <h2 id="antalya" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Antalya as a Dental Destination</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Antalya is one of Turkey's established dental tourism hubs, combining a large concentration of private dental clinics with direct UK flight connections and a well-developed tourism infrastructure (hotels, transfers, English-speaking support) that suits patients combining treatment with recovery time in a resort setting. Istanbul is the other major destination UK patients consider, generally offering a larger city environment with a wider choice of clinics; see{" "}
+            Antalya is one of Turkey&apos;s established dental tourism hubs, combining a large concentration of private dental clinics with direct UK flight connections and a well-developed tourism infrastructure (hotels, transfers, English-speaking support) that suits patients combining treatment with recovery time in a resort setting. Istanbul is the other major destination UK patients consider, generally offering a larger city environment with a wider choice of clinics; see{" "}
             <Link href="/blog/antalya-vs-istanbul-dental-clinics" className="text-[#1e40af] font-semibold hover:underline">Antalya vs Istanbul: Dental Treatment</Link>{" "}
             for a direct comparison of the two.
           </p>
@@ -341,7 +341,7 @@ export default function TeethInTurkeyPillarGuide() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 id="next-steps" className="text-2xl font-bold text-gray-900 mt-4 mb-3 scroll-mt-24">Next Steps</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
-          If you're ready to move forward: get an initial estimate with the{" "}
+          If you&apos;re ready to move forward: get an initial estimate with the{" "}
           <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">price calculator</Link>, request a{" "}
           <Link href="/free-treatment-plan" className="text-[#1e40af] font-semibold hover:underline">free personalised treatment plan</Link>, or read the two supporting guides in this library — the{" "}
           <Link href="/guides/dental-implants-turkey" className="text-[#1e40af] font-semibold hover:underline">Dental Implants Guide</Link>{" "}
