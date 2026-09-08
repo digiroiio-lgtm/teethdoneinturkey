@@ -11,7 +11,7 @@ const PAGE_URL = `${SITE_URL}/prices/veneers-turkey-cost`;
 const TITLE = "Veneers Turkey Cost 2026: Price Per Tooth";
 const DESCRIPTION =
   "Veneers Turkey cost 2026: E-max from £190/tooth, zirconia crowns from £130, composite from £80. UK comparison and total trip cost.";
-const DATE_MODIFIED = "2026-09-04";
+const DATE_MODIFIED = "2026-09-08";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/veneers-turkey-cost" },
@@ -35,6 +35,18 @@ const notIncluded = [
   { item: "Optional extras", cost: "Whitening of remaining natural teeth, priced on request" },
 ];
 
+// Totals are the base per-tooth rates above multiplied out (E-max £190,
+// zirconia £130, UK E-max £800), not separately negotiated package prices — the
+// all-inclusive Hollywood Smile packages are called out beneath the table so the
+// two are not conflated.
+const countRows = [
+  { units: "8 veneers", emax: "From £1,520", zirconia: "From £1,040", uk: "£6,400+" },
+  { units: "10 veneers", emax: "From £1,900", zirconia: "From £1,300", uk: "£8,000+" },
+  { units: "16 veneers", emax: "From £3,040", zirconia: "From £2,080", uk: "£12,800+" },
+  { units: "20 veneers (full smile line)", emax: "From £3,800", zirconia: "From £2,600", uk: "£16,000+" },
+  { units: "24 veneers (upper + lower)", emax: "From £4,560", zirconia: "From £3,120", uk: "£19,200+" },
+];
+
 const faqs = [
   {
     question: "How much do veneers cost in Turkey?",
@@ -43,6 +55,18 @@ const faqs = [
   {
     question: "How much do veneers cost in the UK by comparison?",
     answer: "UK private prices for a single porcelain veneer are typically £800 to £1,000 per tooth, and £1,000 to £1,500 for a zirconia crown. A full set of 20 veneers therefore commonly runs to £16,000 or more privately in the UK, against roughly £3,800 in Turkey for the same E-max material.",
+  },
+  {
+    question: "How much is a full set of veneers in Turkey?",
+    answer: "It depends what you count as a full set. Twenty units covers the full smile line and costs from £3,800 in E-max porcelain or from £2,600 in zirconia at the per-tooth rates on this page. Twenty-four units covers both arches, from £4,560 in E-max or £3,120 in zirconia. For crown work at those quantities the all-inclusive Hollywood Smile packages are usually cheaper than buying per tooth — £2,800 for 20 zirconia crowns and £3,100 for 24, both including hotel accommodation and VIP transfers. Flights are extra in every case.",
+  },
+  {
+    question: "How much are zirconium veneers in Turkey?",
+    answer: "From £130 per unit. \"Zirconium veneers\" — zirkonyum on Turkish clinic price lists — means zirconia, or zirconium dioxide, a white ceramic milled from a solid block. Note that a zirconia unit is almost always a crown rather than a veneer: it encircles the whole tooth instead of facing the front surface, which is why it is quoted below E-max at £190 and why it removes considerably more of your natural tooth. Confirm in writing which of the two you are being quoted before paying a deposit.",
+  },
+  {
+    question: "How long does it take to get veneers in Turkey?",
+    answer: "A single trip of roughly 5 to 7 days. Days one and two cover the consultation, X-rays, digital smile design and tooth preparation, with temporary veneers fitted before you leave the clinic. The permanent units are then milled and finished in the clinic's laboratory over about three to five days, and fitted and adjusted at the end of the week. Clinics with an in-house lab keep to this timetable most reliably; where the lab work is subcontracted, the trip can run longer.",
   },
   {
     question: "Why are veneers so much cheaper in Turkey?",
@@ -83,6 +107,18 @@ const jsonLd = {
         { "@type": "ListItem", position: 2, name: "Prices", item: `${SITE_URL}/prices/teeth-done-in-turkey-cost` },
         { "@type": "ListItem", position: 3, name: "Veneers Turkey Cost", item: PAGE_URL },
       ],
+    },
+    // The FAQs render through <FAQSection>, which is a client component, so
+    // without this node the answers never appear in the server HTML that Google's
+    // rich-result parser and the AI answer engines actually read.
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      mainEntity: faqs.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
     },
   ],
 };
@@ -135,6 +171,65 @@ export default function VeneersCostPage() {
                 </tbody>
               </table>
             </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Cost by Number of Veneers</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Per-tooth pricing is what most clinics quote, so your total depends on how many teeth are treated. Eight to ten
+              units covers the teeth visible in a normal smile; sixteen to twenty extends across the full smile line; twenty-four
+              includes the upper and lower arches. The figures below apply the base per-tooth rates above, so treat them as the
+              clinical cost before flights.
+            </p>
+            <div className="overflow-x-auto rounded-2xl shadow-md">
+              <table className="w-full bg-white text-sm">
+                <thead>
+                  <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
+                    <th className="px-4 py-3 text-left">Number of Units</th>
+                    <th className="px-4 py-3 text-right">E-max Veneers</th>
+                    <th className="px-4 py-3 text-right">Zirconia Crowns</th>
+                    <th className="px-4 py-3 text-right">UK Equivalent (E-max)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {countRows.map((r, i) => (
+                    <tr key={r.units} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                      <td className="px-4 py-3 font-medium">{r.units}</td>
+                      <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.emax}</td>
+                      <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.zirconia}</td>
+                      <td className="px-4 py-3 text-right text-red-500 line-through">{r.uk}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-gray-500 mt-3">
+              At the 20 and 24-unit level, compare these clinical-only figures against the all-inclusive Hollywood Smile packages
+              (£2,800 for 20 zirconia crowns, £3,100 for 24), which bundle hotel accommodation and VIP transfers into the price. For
+              a full set, the package route is usually the cheaper way to buy the same crown work.{" "}
+              <Link href="/prices/hollywood-smile-turkey-package" className="text-[#1e40af] font-semibold underline">See the package breakdown</Link>.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">&ldquo;Zirconium&rdquo; Veneers: What You Are Actually Being Quoted</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Turkish clinic price lists and UK patients alike often say <strong>zirconium veneers</strong>, and Turkish clinics
+              frequently write <em>zirkonyum</em>. All three names refer to the same material: zirconia — zirconium dioxide — a
+              white ceramic milled from a solid block. Zirconium on its own is a metal and is not what goes in your mouth, so the
+              popular name is a slight misnomer rather than a different product.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The distinction that does affect you is not the spelling but the restoration type. A zirconia unit is normally a{" "}
+              <strong>crown</strong>, which encircles the whole tooth, and not a veneer, which is a facing bonded to the front
+              surface only. That is why zirconia is quoted lower per unit than E-max at £130 against £190: it is a different
+              procedure, and it removes considerably more of your natural tooth. Zirconia is the harder-wearing choice if you grind
+              your teeth; E-max is the more translucent choice and preserves more tooth structure.
+            </p>
+            <p className="text-sm text-gray-500 mb-0">
+              Which one you are actually being offered is the single most important thing to confirm in writing before you pay a
+              deposit — our{" "}
+              <Link href="/guides/turkey-teeth-veneers-or-crowns" className="text-[#1e40af] font-semibold underline">veneers or crowns guide</Link>{" "}
+              sets out how much tooth each removes and what is irreversible.
+            </p>
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Factors That Affect Veneer Prices in Turkey</h2>

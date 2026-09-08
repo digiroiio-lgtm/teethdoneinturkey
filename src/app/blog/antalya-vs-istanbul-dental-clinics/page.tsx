@@ -128,6 +128,9 @@ export default function AntalyaVsIstanbulPage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Our Recommendation</h2>
           <p>For complex treatments (All-on-4, All-on-6, full mouth implants, significant smile makeovers): <strong>Istanbul</strong> — the highest concentration of specialist expertise.</p>
           <p>For veneers or single implants combined with a holiday: either city works well, with <strong>Antalya</strong> offering the more relaxed, resort experience — particularly appealing April through October.</p>
+          <p>Either way, the city matters far less than the clinic. Once you have shortlisted one, work through the checks in{" "}
+            <Link href="/blog/best-dental-clinics-turkey" className="text-[#1e40af] font-semibold underline">Best Dental Clinics in Turkey: How to Verify One</Link>{" "}
+            — the registrations to request, the six questions to ask, and the red flags that should end the conversation.</p>
 
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
             <p className="font-semibold text-gray-900 mb-2">We&apos;ll match you with the right clinic in the right city</p>

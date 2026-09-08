@@ -43,16 +43,16 @@ const routes: Route[] = [
   { path: '/prices/teeth-done-in-turkey-cost', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/prices/veneers-turkey-cost', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/prices/dental-implants-turkey-cost', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/prices/turkey-teeth-cost', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/prices/all-on-6-dental-implants-turkey-package', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/prices/hollywood-smile-turkey-package', priority: 0.9, changeFrequency: 'weekly' },
 
   // "Turkey teeth" head-term pages (highest GT interest in UK last 7d).
   // Only canonical 200-status routes belong here. /turkey-teeth-cost,
   // /turkey-teeth-price, /turkey-teeth-review, /turkey-teeth-real-results,
-  // /turkey-teeth-dangers, /veneers-turkey-cost and /dental-implants-turkey-cost
-  // are 301 redirect stubs, so they are deliberately excluded — their targets
-  // under /prices/* and /treatments/* are listed above instead.
+  // /turkey-teeth-dangers, /veneers-turkey-cost, /dental-implants-turkey-cost
+  // and /prices/turkey-teeth-cost are 301 redirect stubs, so they are
+  // deliberately excluded — their targets under /guides/*, /prices/* and
+  // /treatments/* are listed above instead.
   { path: '/turkey-teeth-clinic', priority: 0.9, changeFrequency: 'weekly' },
 
   // Finance cluster

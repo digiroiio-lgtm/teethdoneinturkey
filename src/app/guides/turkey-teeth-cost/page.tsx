@@ -18,7 +18,7 @@ const H1 = "Turkey Teeth Cost: Complete 2026 Price Guide";
 const DESCRIPTION =
   "How much do teeth cost in Turkey? Source-checked 2026 prices for implants, veneers, crowns and packages, with UK comparisons.";
 const DATE_PUBLISHED = "2026-09-03";
-const DATE_MODIFIED = "2026-09-03";
+const DATE_MODIFIED = "2026-09-08";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/turkey-teeth-cost" },
@@ -46,6 +46,14 @@ const faqs = [
   {
     question: "How much do teeth cost in Turkey?",
     answer: "Individual treatments on this site start from £130 for a zirconia crown, £190 for a porcelain (E-max) veneer, and £250 for a dental implant. Full packages start from £2,800 for a 20-crown Hollywood Smile and £5,600 for an All-on-6 full-arch implant package, both all-inclusive of hotel and transfers. Your own price depends on which treatment, how many teeth, and which materials you choose.",
+  },
+  {
+    question: "What does a full set of “turkey teeth” cost?",
+    answer: "“Turkey teeth” in everyday use means a full set of crowns or veneers across the visible teeth rather than a single treatment. The most common version is a 20-unit zirconia crown package at £2,800 all-inclusive of hotel and transfers, or £3,100 for 24 units. A full set of 20 E-max porcelain veneers is priced per tooth instead, from £190, so roughly £3,800 before travel. The equivalent UK private cost is £20,000–£30,000 for the crown package.",
+  },
+  {
+    question: "How long does treatment in Turkey take?",
+    answer: "Crowns and veneers are normally completed in a single trip of about 5 to 7 days: two days of preparation and digital design, three to five days while the permanent units are made in the clinic's laboratory, then fitting. Dental implants need two trips — around 3 days for placement, then a 3 to 6 month healing period at home, then a second trip of about 5 days for the permanent crown or bridge. Same-day (immediate-loading) implants shorten the first trip but still require the second visit for the final restoration.",
   },
   {
     question: "Is dental treatment in Turkey really cheaper than the UK?",
@@ -107,6 +115,7 @@ const costRows = [
   { treatment: "Porcelain (E-max) Veneer (per tooth)", turkey: "From £190", uk: "£800–£1,000", saving: "~78%" },
   { treatment: "Composite Veneer/Bonding (per tooth)", turkey: "From £90", uk: "£300–£500", saving: "~75%" },
   { treatment: "Dental Implant (Osstem, + crown)", turkey: "From £250", uk: "£2,000–£3,000", saving: "~88%" },
+  { treatment: "Dental Implant (Straumann, + crown)", turkey: "From £800", uk: "£3,000–£4,500", saving: "~80%" },
   { treatment: "All-on-4 (per arch, all-inclusive)", turkey: "From £4,500", uk: "£15,000+", saving: "70%+" },
   { treatment: "All-on-6 (per arch, all-inclusive)", turkey: "From £5,600", uk: "£15,000–£22,000", saving: "~70%" },
   { treatment: "Hollywood Smile — 20 crowns (package)", turkey: "£2,800", uk: "£20,000–£30,000", saving: "~87%" },
@@ -116,6 +125,7 @@ const costRows = [
   { treatment: "Dental Filling", turkey: "£70", uk: "£150–£300", saving: "~65%" },
   { treatment: "Bone Graft", turkey: "£200", uk: "£400–£800", saving: "~65%" },
   { treatment: "Dental Cleaning", turkey: "£60", uk: "£100–£200", saving: "~60%" },
+  { treatment: "Teeth Whitening (with cleaning)", turkey: "From £250", uk: "£400–£700", saving: "~50%" },
 ];
 
 export default function TurkeyTeethCostGuidePage() {

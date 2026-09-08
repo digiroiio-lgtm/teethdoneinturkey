@@ -111,6 +111,14 @@ export default function TurkeyTeethProblemsPage() {
               <h3 className="font-bold text-gray-900 mb-1">Risks of Turkey Teeth</h3>
               <p className="text-sm text-gray-600">What every UK patient should know before booking</p>
             </Link>
+            <Link href="/blog/best-dental-clinics-turkey" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-blue-300 transition-colors block">
+              <h3 className="font-bold text-gray-900 mb-1">How to Verify a Turkish Clinic</h3>
+              <p className="text-sm text-gray-600">The registrations to check and the questions to ask before you pay</p>
+            </Link>
+            <Link href="/guides/turkey-teeth-veneers-or-crowns" className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:border-blue-300 transition-colors block">
+              <h3 className="font-bold text-gray-900 mb-1">Veneers or Crowns?</h3>
+              <p className="text-sm text-gray-600">How much tooth each removes, and what cannot be undone</p>
+            </Link>
           </div>
         </div>
       </section>
