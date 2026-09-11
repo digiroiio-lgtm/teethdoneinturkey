@@ -210,6 +210,11 @@ export default function FinanceOptionsUKPage() {
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-8">How It Works</h2>
+            <p className="text-sm text-gray-500 mb-6">
+              This is the process in outline. For the full step-by-step application walkthrough and eligibility
+              checklist across every treatment type, see our{" "}
+              <Link href="/blog/dental-treatment-turkey-payment-plans" className="text-[#1e40af] font-semibold hover:underline">Turkey dental treatment payment plans guide</Link>.
+            </p>
             <div className="relative">
               <div className="hidden sm:block absolute left-6 top-6 bottom-6 w-px bg-blue-200" />
               <div className="space-y-6">
@@ -283,6 +288,9 @@ export default function FinanceOptionsUKPage() {
             <p className="text-sm text-gray-500 mt-4">
               For the full picture, including whether the NHS can help before you consider financing private treatment, see the{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">Can&apos;t Afford Dental Treatment in the UK guide</Link>.
+              {" "}If you&apos;d rather see every funding route set out side by side — payment plans, personal loans, 0% credit cards and saving up — our{" "}
+              <Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] font-semibold hover:underline">dental tourism finance explained guide</Link>{" "}
+              compares them in full.
             </p>
           </div>
 
@@ -321,7 +329,9 @@ export default function FinanceOptionsUKPage() {
               <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">full cost breakdown by treatment</Link>{" "}
               and a{" "}
               <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">price calculator</Link>{" "}
-              are available if you want to work from your own treatment plan.
+              are available if you want to work from your own treatment plan. If implants are your main cost, our{" "}
+              <Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] font-semibold hover:underline">guide to financing dental implants in Turkey</Link>{" "}
+              goes deeper on plan types and a UK-vs-Turkey monthly comparison.
             </p>
             <div className="mt-5 bg-gray-50 rounded-xl p-5 border border-gray-200">
               <h3 className="font-bold text-gray-900 mb-1">Can you finance dentures?</h3>

@@ -66,6 +66,8 @@ export default function FinanceImplantsPage() {
             <li>Monthly repayments are made from your UK bank account</li>
             <li>Full FCA-regulated process</li>
           </ul>
+          <p>For the honest position on eligibility and applying with a poor credit history, see our{" "}
+            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">full UK dental finance guide</Link>.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Finance Options Available</h2>
           <div className="overflow-x-auto rounded-2xl shadow-sm my-4">
