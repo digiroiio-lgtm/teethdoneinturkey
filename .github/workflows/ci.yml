@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify sitemap freshness manifest
+        run: npm run seo:lastmod:check
+
       - name: Lint
         run: npm run lint
 
