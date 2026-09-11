@@ -157,6 +157,9 @@ export default function MonthlyPaymentPage() {
               Two things decide what you actually pay: the treatment total and the term you choose. At 0% APR representative, a longer term simply divides the same total across more months rather than adding interest. For the difference between a payment plan, dental finance, a personal loan and NHS charges, see{" "}
               <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how dental finance works in the UK, including dental loans and bad credit</Link>, and if you are weighing up affordability more broadly, read{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">what to do if you cannot afford dental treatment in the UK</Link>.
+              {" "}Want to see this plan set against a personal loan, a 0% credit card or simply saving up? Our guide to{" "}
+              <Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] font-semibold hover:underline">funding dental treatment abroad</Link>{" "}
+              lays out every option side by side.
             </p>
           </div>
 
@@ -230,8 +233,9 @@ export default function MonthlyPaymentPage() {
                 </tbody>
               </table>
             </div>
-            <div className="mt-3">
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
               <Link href="/prices/dental-implants-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ See full implants cost breakdown</Link>
+              <Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Dedicated implants finance guide</Link>
             </div>
           </div>
 
@@ -297,6 +301,11 @@ export default function MonthlyPaymentPage() {
                 </li>
               ))}
             </ol>
+            <p className="text-sm text-gray-500 mt-4">
+              For the eligibility checklist in full and a treatment-by-treatment cost table covering veneers,
+              implants and full-arch work, see our{" "}
+              <Link href="/blog/dental-treatment-turkey-payment-plans" className="text-[#1e40af] font-semibold hover:underline">step-by-step payment plans guide</Link>.
+            </p>
           </div>
 
           <div>

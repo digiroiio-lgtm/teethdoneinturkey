@@ -41,6 +41,8 @@ export default function DentalTourismFinancePage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Option 1: Dental Tourism Finance Plans (Our Recommended Route)</h2>
           <p>Specialist dental tourism finance plans are designed specifically for patients funding treatment abroad. These are UK-based credit products arranged through FCA-regulated lenders.</p>
           <p><strong>How it works:</strong> You apply for a personal loan or credit facility in the UK, denominated in GBP. The funds are used to cover your treatment in Turkey. You repay monthly from your UK bank account.</p>
+          <p>For UK-specific detail on this route — plan lengths, monthly figures by treatment and the honest position on bad credit — see our{" "}
+            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">dental finance UK guide</Link>.</p>
           <div className="bg-green-50 rounded-2xl p-4 border border-green-200 my-4">
             <h3 className="font-bold text-green-800 mb-2">✓ Advantages</h3>
             <ul className="text-sm text-gray-700 space-y-1">

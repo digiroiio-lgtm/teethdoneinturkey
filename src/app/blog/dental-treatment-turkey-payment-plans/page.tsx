@@ -36,6 +36,9 @@ export default function PaymentPlansTurkeyPage() {
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>Getting dental treatment in Turkey doesn&apos;t have to mean paying the full cost upfront. Our UK-based payment plans let you spread the cost of your Turkey dental treatment over 12, 24, or 36 months — while having your treatment done in Turkey as planned.</p>
+          <p>If you&apos;re still deciding between a payment plan, a personal loan and NHS charges, our{" "}
+            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">UK dental finance guide</Link>{" "}
+            explains how each option works and where bad credit genuinely leaves you.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Treatment Can Be Financed?</h2>
           <p>Our payment plans cover all dental treatments available through our Turkish partner clinics:</p>
