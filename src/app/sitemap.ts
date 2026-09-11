@@ -93,7 +93,6 @@ const routes: Route[] = [
   { path: '/blog/composite-vs-porcelain-veneers-turkey', priority: 0.7, changeFrequency: 'monthly' },
 
   // Implants cluster
-  { path: '/blog/full-mouth-dental-implants-turkey-cost', priority: 0.75, changeFrequency: 'monthly' },
   { path: '/blog/same-day-dental-implants-turkey', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/blog/dental-implant-recovery-time', priority: 0.65, changeFrequency: 'monthly' },
   { path: '/blog/signs-of-dental-implant-failure', priority: 0.65, changeFrequency: 'monthly' },
@@ -118,7 +117,7 @@ const routes: Route[] = [
   // UK vs Turkey comparison
   { path: '/blog/implants-cost-uk-vs-turkey', priority: 0.75, changeFrequency: 'monthly' },
   { path: '/blog/hollywood-smile-uk-vs-turkey', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/blog/full-mouth-implants-uk-vs-turkey', priority: 0.75, changeFrequency: 'monthly' },
+  { path: '/blog/full-mouth-implants-uk-vs-turkey', priority: 0.9, changeFrequency: 'weekly' },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

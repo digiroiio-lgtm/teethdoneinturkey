@@ -210,9 +210,16 @@ export default function DentalImplantsGuidePage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             For patients missing most or all of their teeth in an arch, All-on-4 and All-on-6 use 4 or 6 strategically placed implants to support a full fixed arch of replacement teeth, rather than one implant per missing tooth. All-on-4 is priced from £4,500 per arch and All-on-6 from £5,600 per arch on this site&apos;s treatment pages, both quoted all-inclusive of hotel accommodation and VIP transfers. All-on-6 generally distributes bite force across more implants, which can benefit patients with higher bite forces or lower bone density — but the right option depends on your own diagnostics.
           </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Across both arches — what most patients mean by a full mouth — All-on-4 is £8,000–£11,000 and All-on-6 is
+            £10,000–£14,000. See{" "}
+            <Link href="/blog/full-mouth-implants-uk-vs-turkey" className="text-[#1e40af] font-semibold hover:underline">full mouth dental implants in Turkey: cost and prices</Link>{" "}
+            for the stage-by-stage breakdown, what the package covers, and a worked monthly payment example.
+          </p>
           <RelatedLinksGrid
             title="Related Treatment Pages"
             links={[
+              { title: "Full Mouth Dental Implants Turkey Cost", desc: "Both-arch prices, what's included, and a monthly payment example.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
               { title: "All-on-4 Turkey", desc: "Full arch restoration on 4 implants, from £4,500 per arch.", href: "/treatments/all-on-4-turkey" },
               { title: "All-on-6 Turkey", desc: "Full arch restoration on 6 implants, from £5,600 all-inclusive.", href: "/treatments/all-on-6-turkey" },
             ]}
@@ -294,6 +301,7 @@ export default function DentalImplantsGuidePage() {
         <RelatedLinksGrid
           title="Related Blog Articles"
           links={[
+            { title: "Full Mouth Dental Implants Turkey Cost", desc: "All-on-4 and All-on-6 prices across both arches, and what the package includes.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
             { title: "Dental Implants Cost: UK vs Turkey", desc: "Detailed cost comparison with brand-by-brand pricing.", href: "/blog/implants-cost-uk-vs-turkey" },
             { title: "Same-Day Dental Implants in Turkey", desc: "How same-day implants work and who is suitable.", href: "/blog/same-day-dental-implants-turkey" },
             { title: "Dental Implant Recovery Time", desc: "A full recovery timeline from surgery to final crown.", href: "/blog/dental-implant-recovery-time" },

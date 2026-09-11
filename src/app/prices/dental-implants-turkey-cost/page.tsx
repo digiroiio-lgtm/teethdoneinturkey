@@ -82,6 +82,14 @@ export default function ImplantsCostPage() {
             <Link href="/prices/all-on-6-dental-implants-turkey-package" className="inline-block border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">All-on-6 Package Details</Link>
           </div>
 
+          <p className="text-gray-600">
+            Replacing every tooth rather than a few? Full-arch treatment is priced per arch, and across both arches
+            comes to £8,000–£11,000 for All-on-4 or £10,000–£14,000 for All-on-6. The{" "}
+            <Link href="/blog/full-mouth-implants-uk-vs-turkey" className="text-[#1e40af] font-semibold hover:underline">full mouth dental implants Turkey cost guide</Link>{" "}
+            sets out the stage-by-stage costs, what the package includes and excludes, and a worked monthly payment
+            example.
+          </p>
+
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Are Dental Implants Cheaper in Turkey?</h2>
             <p className="text-gray-600 mb-4">The significant price difference between UK and Turkish dental implants is not a reflection of quality — it is a product of economics. Turkey has a much lower cost of living and lower business operating costs than the UK. A dentist in Turkey can perform the exact same procedure, using the exact same implant brands (Straumann, Nobel Biocare, Astra Tech), with the same materials and equipment, for a fraction of the UK price because their overheads are dramatically lower.</p>

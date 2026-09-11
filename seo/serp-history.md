@@ -7,7 +7,152 @@ rewritten again.
 
 ---
 
-## 2026-09-11
+## 2026-09-11 (second run — full-mouth implant cluster)
+
+Second run of the day. The morning run (below) reversed the cost merge and
+repositioned the finance cluster. Both of those pages were changed ~4 hours
+before this run, so under the "judge a change on real performance before
+rewriting it" rule **neither was touched again here**. This run took the cluster
+the morning run explicitly flagged as next and left untouched.
+
+### Search Console — 2026-09-04..09-10 (data now complete to 09-10)
+
+Daily impressions 21 → 50 → 121 → 204 → 348 → 160 → 141. 4 clicks, all still in
+the `(unknown)` aggregation row, so analysis remains position-led not CTR-led.
+
+Striking-distance picture by cluster (positions 4–20 first, per the hierarchy):
+
+| Cluster | Impr in pos 4–20 | Status |
+|---|---|---|
+| Finance / pay-monthly | ~70 | **Worked this morning — left to settle** |
+| Full-mouth implants | 53 @ pos 24–38 | **Today's action** |
+| Hollywood smile | ~10 @ pos 2–20 | KEEP, performing |
+| Packages | ~25, split across 5 URLs | Next priority |
+
+### The finding: a second suppressed-duplicate pair, same shape as the cost one
+
+The entire full-mouth implant family lands on **one** URL,
+`/blog/full-mouth-implants-uk-vs-turkey` — 69 impressions at average position
+24.9, first seen 09-05:
+
+| Query | Impr | Pos |
+|---|---|---|
+| full mouth dental implants turkey price | 13 | 33.7 |
+| full mouth dental implant turkey costs | 11 | 30.8 |
+| full mouth dental implant turkey costs procedures | 8 | 28.0 |
+| full mouth dental implants cost turkey | 8 | 27.4 |
+| full set of teeth implants cost turkey | 5 | 38.0 |
+| full mouth dental implants turkey cost | 3 | 29.7 |
+
+Meanwhile `/blog/full-mouth-dental-implants-turkey-cost` — a 1,005-word page
+with the same All-on-4/All-on-6/individual breakdown, the same both-arches
+table, the same "what's included", "how many trips" and monthly-payment
+sections — has recorded **zero impressions on zero queries across the entire
+lifetime of the property** (checked 08-20..09-11, not just the 7-day window).
+`/prices/dental-implants-turkey-cost` and
+`/prices/all-on-6-dental-implants-turkey-package` are also at zero lifetime.
+
+**This is the inverse of the 09-08 mistake, and the difference was checked
+explicitly before acting.** There, the redirected URL had entered the SERP the
+day before the merge and looked like a zero only because nobody had looked at
+the daily data. Here the suppressed URL has had the same six days of SERP life
+as the winner and earned nothing on any query. That is duplicate suppression,
+not a page that has yet to appear.
+
+### Decisions taken this run
+
+- **MERGE-AVOID (critical).** 301'd (308) `/blog/full-mouth-dental-implants-turkey-cost`
+  into `/blog/full-mouth-implants-uk-vs-turkey`. Removed from `sitemap.ts`, the
+  blog index and `llms.txt`; verified single-hop with no chains. The winner's
+  sitemap priority raised 0.75 → 0.9 to match the other high-ticket money pages.
+- **OPTIMISE EXISTING (high).** Repositioned the surviving URL onto the cost
+  intent it actually ranks for. **The URL was deliberately not changed** — it is
+  the ranking asset, and the target architecture's preferred
+  `/prices/full-mouth-dental-implants-turkey-cost` is exactly the kind of
+  "move demand to the URL we prefer" that caused the 09-08 regression.
+  - Title `Full Mouth Implants: UK vs Turkey Cost 2026` → `Full Mouth Dental
+    Implants Turkey Cost 2026` (43 chars). Every recorded query is a *cost*
+    query; none is a comparison query, but the title led on the comparison.
+  - New sections built on the recorded wording: a direct-answer block, "What
+    does a **full set of teeth** implants cost" (5 impr @ 38, phrase was absent
+    from the site), "Full mouth dental implant Turkey costs: the **procedure**
+    stage by stage" as a 10-row stage/cost table (8 impr @ 28 — a cost+process
+    query the page did not answer), and explicit **package** inclusions and
+    exclusions (flights, bone graft, sinus lift, extra nights).
+  - Key takeaways, TOC, 6 FAQs + FAQPage schema (page had none), sources list,
+    `dateModified`. Article, BreadcrumbList and FAQPage all verified
+    **server-rendered** against a production build.
+- **FIX (factual).** The individual-implant row read "20 implants,
+  £8,400–£12,000", which matched neither the site's £250 Osstem nor its £800
+  Straumann published unit price. Restated as £5,000–£16,000, derived from those
+  unit prices, with a clinical note that one implant per tooth is rarely the
+  right plan for a full mouth. Saving percentages recomputed like-for-like
+  (low-vs-low, high-vs-high) — three were arithmetically wrong.
+- **FIX (YMYL).** The finance section said treatment "costs from approximately
+  £250/month" with no eligibility, APR or approval wording. Replaced with a
+  labelled **Example Treatment Scenario** (£9,000 All-on-4, £1,000 deposit,
+  £8,000 financed over 6/12/18/24/36 months, total repayable shown), stated as
+  0% APR representative, explicitly not a credit offer, subject to credit check
+  and lender approval, not everyone will qualify. Also softened "the same level
+  of clinical risk as the UK — which is to say, very low" into a named list of
+  real surgical risks plus the aftercare-distance problem, which is the honest
+  version and the one the NHS guidance supports.
+- **INTERNAL LINKS.** The cluster had none flowing into the winner. Added
+  contextual links from `/guides/dental-implants-turkey` (59 impr, the POWER
+  page), `/treatments/all-on-4-turkey`, `/treatments/all-on-6-turkey` and
+  `/prices/dental-implants-turkey-cost`; the winner now links out to
+  `/prices/turkey-teeth-cost`, `/monthly-payment` and `/finance-options-uk`.
+- **DO NOTHING — finance.** `teeth on finance bad credit` is genuinely split
+  across two URLs (`/finance-options-uk` 15 @ 7.6 and
+  `/blog/dental-tourism-finance-explained` 7 @ 8.1), as is `pay monthly turkey
+  teeth` across three. Real cannibalisation on the account's best query, but
+  `/finance-options-uk` was rewritten four hours earlier. Left to settle.
+- **DO NOTHING — packages.** `turkey teeth packages` is split across five URLs
+  (positions 7.5 to 99.7) with no owning page, and the target architecture calls
+  for `/packages/turkey-teeth-packages`. Deliberately not created: adding a
+  sixth URL to a query already split five ways is the wrong first move, and a
+  second URL change in one day in a second cluster is not auditable.
+
+### Technical health check
+
+- 69 sitemap URLs (70 − the merged one), **every one verified 200** against a
+  production build.
+- Full internal-link crawl of all 69 pages, 73 distinct targets: **0 broken
+  links, 0 links pointing at a redirect, 0 orphan pages**, 0 remaining
+  references to the merged URL.
+- Redirect verified single-hop 308 → 200.
+- Title 43 chars, description 152 chars — no SERP truncation.
+- typecheck clean, lint clean (2 pre-existing warnings, unrelated), build clean.
+
+### What to check next run
+
+1. **Did the retitle move the cluster off position 24–38?** Watch
+   `full mouth dental implants turkey price` (33.7),
+   `full mouth dental implant turkey costs` (30.8) and
+   `full set of teeth implants cost turkey` (38.0). Do **not** touch this page
+   again before ~2 weeks of data. If it does not move, the next hypothesis is
+   content depth against the competing clinic pages, not another title change.
+2. Did `/blog/full-mouth-dental-implants-turkey-cost` disappear cleanly, and did
+   the winner absorb its (nil) demand without losing anything?
+3. **Packages is now the top untouched cluster.** Before creating
+   `/packages/turkey-teeth-packages`, establish which of the five current URLs
+   Google actually prefers on `turkey teeth packages` — the same head-to-head
+   check that would have prevented the 09-08 regression.
+4. **Finance cannibalisation**, once the 09-11 morning changes have settled:
+   `teeth on finance bad credit` on two URLs, `pay monthly turkey teeth` on
+   three. Decide an owner per query rather than rewriting pages again.
+5. `/prices/dental-implants-turkey-cost` (911 words) and
+   `/prices/all-on-6-dental-implants-turkey-package` are both at zero lifetime
+   impressions while `/guides/dental-implants-turkey` earns 59. Same shape as
+   the pair merged today, but **not** acted on: three URL changes in one cluster
+   in one day is not auditable. Candidate after the packages work.
+6. Still 0 clicks at query level and **0 GA4 conversions ever recorded**. The
+   GA4 key-event configuration check flagged on the morning run is still open
+   and still blocks any business-value-led prioritisation.
+
+---
+
+## 2026-09-11 (morning run — cost merge reversal, finance reposition)
 
 Branch note resolved: the consolidation flagged as the top risk on 2026-09-08 is
 done. `main` now carries the full `/guides/*` cluster and

@@ -28,7 +28,6 @@ const posts = [
   { href: "/blog/4-8-10-rule-for-veneers", title: "The 4-8-10 Rule for Veneers Explained", excerpt: "What the 4-8-10 rule means for veneer planning and how it applies to your Turkey treatment.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/composite-vs-porcelain-veneers-turkey", title: "Composite vs Porcelain Veneers Turkey", excerpt: "A clear comparison of composite and porcelain veneers in Turkey — cost, durability, and which is right for you.", date: "January 2026", tag: "Veneers" },
   // Implants cluster
-  { href: "/blog/full-mouth-dental-implants-turkey-cost", title: "Full Mouth Dental Implants Turkey Cost 2026", excerpt: "Complete cost breakdown for All-on-4, All-on-6, and full mouth implants for UK patients in Turkey.", date: "January 2026", tag: "Implants" },
   { href: "/blog/same-day-dental-implants-turkey", title: "Same Day Dental Implants Turkey", excerpt: "Everything UK patients need to know about same day (immediate loading) dental implants in Turkey.", date: "January 2026", tag: "Implants" },
   { href: "/blog/dental-implant-recovery-time", title: "Dental Implant Recovery Time: Complete Timeline", excerpt: "A complete recovery timeline from surgery day to final crown — what to expect at every stage.", date: "January 2026", tag: "Implants" },
   { href: "/blog/signs-of-dental-implant-failure", title: "Signs of Dental Implant Failure: What to Watch For", excerpt: "How to recognise implant failure symptoms, what causes them, and what to do if you notice warning signs.", date: "January 2026", tag: "Implants" },
@@ -39,7 +38,7 @@ const posts = [
   { href: "/blog/will-uk-dentists-fix-turkey-teeth", title: "Will UK Dentists Fix Turkey Teeth?", excerpt: "The honest answer: what UK dentists will and won't do for dental work that was done in Turkey.", date: "January 2026", tag: "Safety" },
   // UK vs Turkey comparison cluster
   { href: "/blog/implants-cost-uk-vs-turkey", title: "Dental Implants Cost: UK vs Turkey Compared", excerpt: "A side-by-side price comparison of dental implants in the UK and Turkey, including what each quote actually covers.", date: "January 2026", tag: "Comparison" },
-  { href: "/blog/full-mouth-implants-uk-vs-turkey", title: "Full Mouth Implants: UK vs Turkey", excerpt: "What a full arch or full mouth implant case costs in the UK compared with Turkey, and why the gap is so large.", date: "January 2026", tag: "Comparison" },
+  { href: "/blog/full-mouth-implants-uk-vs-turkey", title: "Full Mouth Dental Implants Turkey Cost", excerpt: "All-on-4, All-on-6 and full-set implant prices in Turkey, what the package covers, and how the cost compares with the UK.", date: "September 2026", tag: "Implants" },
   { href: "/blog/hollywood-smile-uk-vs-turkey", title: "Hollywood Smile Cost: UK vs Turkey", excerpt: "20 zirconia crowns from £2,800 in Turkey vs £15,000+ in the UK — what's included on each side of the comparison.", date: "January 2026", tag: "Comparison" },
   // Travel & cost cluster
   { href: "/blog/hollywood-smile-turkey-cost", title: "Hollywood Smile Turkey Cost 2026", excerpt: "Full cost breakdown for a Hollywood Smile in Turkey. From £2,800 for 20 zirconia crowns vs £15,000+ in the UK.", date: "January 2026", tag: "Treatments" },

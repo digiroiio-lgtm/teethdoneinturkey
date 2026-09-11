@@ -119,6 +119,11 @@ export default function AllOn6Page() {
               ))}
             </div>
             <Link href="/monthly-payment" className="inline-block text-[#1e40af] font-semibold hover:underline text-sm">→ View all finance options</Link>
+            <p className="text-sm text-gray-600 mt-3">
+              Having both arches treated? See the{" "}
+              <Link href="/blog/full-mouth-implants-uk-vs-turkey" className="text-[#1e40af] font-semibold hover:underline">full mouth dental implants cost breakdown</Link>{" "}
+              for both-arch pricing and a worked monthly payment example.
+            </p>
           </div>
 
           {/* Internal linking */}
@@ -130,6 +135,7 @@ export default function AllOn6Page() {
                 { title: "All-on-4 Implants", href: "/treatments/all-on-4-turkey", desc: "Four-implant full arch solution — ideal for patients with bone loss." },
                 { title: "All-on-6 Package Prices", href: "/prices/all-on-6-dental-implants-turkey-package", desc: "All-inclusive package with hotel, transfers & same-day teeth." },
                 { title: "Full Implant Cost Guide", href: "/prices/dental-implants-turkey-cost", desc: "UK vs Turkey price breakdown for all implant procedures." },
+                { title: "Full Mouth Implant Cost", href: "/blog/full-mouth-implants-uk-vs-turkey", desc: "What All-on-6 costs across both arches, and what the package covers." },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-blue-50 rounded-xl p-4 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition-colors block">
                   <h3 className="font-bold text-gray-900 text-sm mb-1">{item.title}</h3>
