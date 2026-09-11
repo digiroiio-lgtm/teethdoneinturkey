@@ -7,6 +7,205 @@ rewritten again.
 
 ---
 
+## 2026-09-11
+
+Branch note resolved: the consolidation flagged as the top risk on 2026-09-08 is
+done. `main` now carries the full `/guides/*` cluster and
+`claude/lucid-hypatia-2res8k` is level with `origin/main`, so runs are no longer
+overwriting each other.
+
+### Search Console — first week with a real prior period
+
+First run with a genuine prior period. 08-28..09-03 vs 09-04..09-10 — note the
+property's first-ever impression was 09-02, so the prior window is really only
+two days of data and the growth figure flatters accordingly. A 28-day comparison
+is still impossible.
+
+| Metric | 08-28 → 09-03 | 09-04 → 09-10 |
+|---|---|---|
+| Impressions | 66 | 1,045 |
+| Clicks | 0 | 4 |
+| CTR | 0% | 0.38% |
+| Average position | 65.5 | 43.7 |
+| URLs with impressions | 3 | 30 |
+| Queries recorded | 30 | 240+ |
+
+(Both impression totals are the aggregate figures. Summing the query-level rows
+gives 1,111 for the current week because of Google's dimension-split
+discrepancy rows — use the aggregate, not the sum.)
+
+The prior window was two clusters on two URLs — veneer pricing on
+`/prices/veneers-turkey-cost` and clinic selection on
+`/blog/best-dental-clinics-turkey`. Everything else below is new demand.
+
+Daily impressions: 21 → 50 → 121 → 204 → 348 → 160 → 141. All 4 clicks sit in
+the `(unknown)` aggregation row at position 7.4, so query-level CTR is still not
+readable. Analysis below is still position-led, not CTR-led.
+
+### The finding that mattered: last run's merge was a regression
+
+`/prices/turkey-teeth-cost` was 301'd into `/guides/turkey-teeth-cost` on 09-08
+because the prices URL "earned no impressions". That was wrong — it had simply
+not entered the SERP yet. It first appeared **2026-09-07, the day before the
+merge**, and over 09-04..09-10 earned **111 impressions at average position
+34.1** against the guide's **121 at 64.1**.
+
+Same-query, same-week head-to-heads (this controls for query mix, which average
+position does not):
+
+| Query | `/prices` | `/guides` |
+|---|---|---|
+| how much do turkey teeth cost | **33.7** | 72.6 |
+| how much for turkey teeth | **28.3** | 88.3 |
+| turkey dental prices | 89.3 | **72.0** |
+
+Two of three favour the prices URL by 40–60 positions, so the 301 was pointing
+the site's biggest commercial cluster at the weaker of the two URLs. **Direction
+reversed this run** (see decisions). Daily position volatility on this property
+is ±30 places, so the head-to-head table is the only reliable comparison —
+do not judge either URL on its average position alone.
+
+### GA4 — AI search is now the biggest qualified channel
+
+Property "TeethDoneTurkey" (552638430), 2026-08-29 → 09-10: 33 sessions,
+21 engaged, **0 conversions / key events** (still none, ever).
+
+| Channel | Sessions | Engaged |
+|---|---|---|
+| Direct | 13 | 7 |
+| **AI Assistant** | **12** | **9 (75%)** |
+| Organic Search | 5 | 4 |
+
+All 12 AI sessions are `chatgpt.com`. Where they land:
+
+| Landing page | AI sessions | GSC impressions (7d) |
+|---|---|---|
+| `/monthly-payment` | 6 | **0** |
+| `/finance-options-uk` | 4 (4 engaged) | 92 |
+| `/book-consultation` | 2 | 0 |
+
+**ChatGPT sends more traffic than Google and Bing combined, and it cites the
+finance pages almost exclusively.** `/monthly-payment` is the single
+most-cited URL on the site and is simultaneously invisible in Google. Any future
+decision to merge or prune a finance page must be checked against AI referrals
+first, not just Search Console.
+
+### Finance is the strongest cluster on both fronts — confirmed
+
+~160 impressions, and the best positions in the account. Turkey-qualified:
+`can you pay monthly for turkey teeth` 6.75, `teeth on finance bad credit` 7.77
+(22 impr), `turkey teeth packages pay monthly` 10.7, `pay monthly turkey teeth`
+10.7, `turkey teeth pay monthly` 10.3, `turkey teeth finance bad credit` 10.5.
+
+The gap is the **generic, non-Turkey UK finance intent** — ~45 impressions at
+positions 59–89, all on `/finance-options-uk`: `teeth on finance` 75,
+`loans for dental work` 76, `dental implant finance uk` 84, `denture financing`
+80.8, `veneers uk finance` 70.3, `financing for veneers` 75, `teeth financing`
+69, `dental surgery loans` 74, `pay monthly dental implants uk` 85,
+`0% dental finance` 19. The page was titled for Turkey treatment, so it matched
+none of them.
+
+Google Trends (GB, 90d) corroborates: `dental finance` scores **36** against
+`turkey teeth` at 100, and its top related queries are `dental finance uk` (100)
+and `dental finance bad credit` (14). `pay monthly teeth` only scores 3.8 — the
+demand is in the generic framing, not the pay-monthly one.
+
+### Decisions taken this run
+
+Ladder applied FIX → REFRESH → EXPAND → MERGE → CREATE. **No new URLs created** —
+every opportunity mapped to an existing page.
+
+- **FIX (critical). Reversed the 09-08 cost merge.** Moved the full guide content
+  (2,557 words, Article + BreadcrumbList schema, TOC, sources, medical review) to
+  `/prices/turkey-teeth-cost`, which is also where the site's other cost pages
+  live, and 301'd `/guides/turkey-teeth-cost` there instead. Repointed all 19
+  internal references, both head-term stubs (`/turkey-teeth-cost`,
+  `/turkey-teeth-price`), `sitemap.ts`, `llms.txt` and the `/guides` hub. Verified
+  single-hop redirects with no chains. `dateModified` deliberately **not** bumped:
+  the URL changed, the content did not.
+- **FIX (high). Repositioned `/finance-options-uk` onto the generic UK
+  dental-finance intent** it already ranks for. New title/H1/description built on
+  "dental finance uk", dental loans and bad credit instead of Turkey treatment.
+  Added a server-rendered short-answer block (payment plan vs dental loan vs NHS
+  band charges), a **finance-by-treatment table** (the missing piece behind the
+  59–89 positions: the queries are treatment-qualified and the page had only one
+  generic monthly table), an honest five-point **bad credit** section, a
+  dentures answer that gains the entity without inventing a price the site does
+  not publish, and four FAQs matching real recorded queries. Removed the old
+  duplicate bad-credit FAQ so the FAQPage schema has no near-duplicate pair.
+  Monthly figures are existing site prices ÷ 36 at 0% APR representative, so no
+  new or conflicting price was introduced.
+- **FIX (high). Differentiated `/monthly-payment` from `/finance-options-uk`.**
+  The two carried near-duplicate titles for one intent and Google had suppressed
+  this one to 0 impressions. **Not merged** — it is the top AI-cited page, so the
+  two were split by job instead: `/finance-options-uk` owns the generic
+  question, `/monthly-payment` owns the per-treatment monthly figures (which is
+  what ChatGPT cites it for), and `/blog/can-you-pay-monthly-for-teeth-in-turkey`
+  (position 10.5, 70 impr) keeps the "can you pay monthly" question intent
+  untouched because it is performing. Retitled, new H1, cross-link anchor text
+  rewritten in both directions.
+- **DO NOTHING.** `zirconium dental veneer prices turkey` moved 49 → 41.5 after
+  last run's entity fix, and the full-set unit table is in place. Left to
+  accumulate data rather than rewritten again.
+- **DO NOTHING.** The Antalya decision stays rejected. One Antalya query finally
+  appeared — `why should you choose antalya for dental implants?`, 1 impression
+  at position 48 — which is not enough to overturn it. Threshold for next run:
+  revisit only if Antalya-qualified impressions reach ~10/week.
+- **DO NOTHING.** `john may turkey teeth` still absent from GSC; the celebrity
+  breakout remains correctly ignored.
+
+### Technical health check
+
+- 70 sitemap URLs, **every one verified 200** against a production build.
+- Full internal-link crawl of all 70 pages, 74 distinct link targets:
+  **0 broken links, 0 redirect chains, 0 orphan pages.**
+- All 30 impression-earning URLs return `index, follow` with a self-referencing
+  canonical (checked via the GSC landing-page tag dimensions).
+- `/prices/turkey-teeth-cost` canonical, Article, BreadcrumbList and FAQPage
+  schema all confirmed **server-rendered**, as are every new finance section and
+  FAQ — the thing that matters for AI answer engines.
+- Titles 38–51 chars, descriptions 146–155 chars; both new descriptions were
+  trimmed from 169/175 to stop SERP truncation.
+- lint clean (2 pre-existing warnings, unrelated), typecheck clean, build clean.
+
+### What to check next run
+
+1. **Did the reversal work?** `/prices/turkey-teeth-cost` should absorb the cost
+   family and `/guides/turkey-teeth-cost` should fall out of impressions. Watch
+   the three head-to-head queries above. If the prices URL does **not** improve
+   on position 34 within ~2 weeks, the cannibalisation is not the cause and the
+   cost cluster needs a content review instead of another URL change. **Do not
+   swap these two URLs a third time.**
+2. Did `/monthly-payment` break out of 0 impressions once its title stopped
+   duplicating `/finance-options-uk`? And did AI referrals to it hold?
+3. Did the generic finance queries (`dental loans`, `teeth financing`,
+   `denture financing`, `dental implant finance uk`) move off positions 59–89?
+4. **Clicks.** 4 arrived this week, all in the `(unknown)` row. Once query-level
+   clicks exist, switch from position analysis to CTR and re-check
+   `teeth on finance bad credit` (22 impr at 7.77, still 0 clicks) — the title
+   rewrite this run was the intended fix for exactly that.
+5. **Next cluster, evidence already collected — full-mouth implants.** ~53
+   impressions at positions 24–38 (`full mouth dental implants turkey price` 13
+   @ 33.7, `full mouth dental implant turkey costs` 11 @ 30.8, `full mouth
+   dental implants cost turkey` 8 @ 27.4, `full set of teeth implants cost
+   turkey` 5 @ 38), **all landing on `/blog/full-mouth-implants-uk-vs-turkey`, a
+   1,457-word comparison post** — while `/prices/dental-implants-turkey-cost`
+   (911 words, sitemap priority 0.9) earns **zero**. Same shape as the cost-page
+   problem fixed this run. Check which URL Google actually prefers on shared
+   queries *before* touching either one.
+6. **Cost-cluster duplication still outstanding.** `/prices/teeth-done-in-turkey-cost`
+   (1,018 words, 0 impressions, doubles as the `/prices` hub target) is a third
+   page for the cost intent alongside `/prices/turkey-teeth-cost` and
+   `/guides/teeth-in-turkey`. Left alone this run deliberately — three URL
+   changes in one cluster in one run is not auditable. Candidate for next run.
+7. **0 conversions across 33 sessions, and none ever recorded.** Before any
+   further conversion-led prioritisation, verify GA4 key events are actually
+   configured — an unconfigured key event and a genuine 0% conversion rate look
+   identical in this data, and every opportunity score so far has had to ignore
+   business value for that reason.
+
+---
+
 ## 2026-09-08
 
 > **Branch note, read this first.** This file was recovered from

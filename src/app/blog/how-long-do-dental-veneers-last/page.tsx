@@ -101,7 +101,7 @@ export default function VeneersLastBlogPage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Do Turkey Teeth Need Replacing?</h2>
           <p>Yes. Every veneer and crown is a restoration with a finite life, wherever it was fitted, and at the end of that life it is replaced rather than simply removed — the underlying tooth was reshaped to receive it.</p>
           <p>This matters when you compare prices. A UK quote and a Turkey quote should both be judged over a 10–20 year horizon that includes at least one replacement cycle, not as a single one-off payment. Our{" "}
-            <Link href="/guides/turkey-teeth-cost" className="text-[#1e40af] hover:underline font-semibold">Turkey teeth cost guide</Link>{" "}
+            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] hover:underline font-semibold">Turkey teeth cost guide</Link>{" "}
             sets out the current figures on both sides, and the{" "}
             <Link href="/price-calculator" className="text-[#1e40af] hover:underline font-semibold">price calculator</Link>{" "}
             gives an estimate for your own case.</p>

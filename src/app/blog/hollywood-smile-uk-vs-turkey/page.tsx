@@ -174,7 +174,7 @@ export default function HollywoodSmileUKvsTurkeyPage() {
                 { href: "/treatments/full-smile-makeover-turkey", label: "Full Smile Makeover", sub: "Veneers + more" },
                 { href: "/treatments/dental-implants-turkey", label: "Dental Implants Turkey", sub: "Full treatment guide" },
                 { href: "/prices/veneers-turkey-cost", label: "Veneers Cost Guide", sub: "Prices & comparisons" },
-                { href: "/guides/turkey-teeth-cost", label: "Turkey Teeth Cost", sub: "All treatment prices" },
+                { href: "/prices/turkey-teeth-cost", label: "Turkey Teeth Cost", sub: "All treatment prices" },
                 { href: "/monthly-payment", label: "Monthly Payment Plans", sub: "From £82/month" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">

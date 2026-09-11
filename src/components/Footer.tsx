@@ -43,7 +43,7 @@ export default function Footer() {
               <li><Link href="/guides" className="hover:text-white hover:pl-1 transition-all">Guides Hub</Link></li>
               <li><Link href="/guides/teeth-in-turkey" className="hover:text-white hover:pl-1 transition-all">Teeth in Turkey Guide</Link></li>
               <li><Link href="/guides/dental-implants-turkey" className="hover:text-white hover:pl-1 transition-all">Dental Implants Guide</Link></li>
-              <li><Link href="/guides/turkey-teeth-cost" className="hover:text-white hover:pl-1 transition-all">Turkey Teeth Cost Guide</Link></li>
+              <li><Link href="/prices/turkey-teeth-cost" className="hover:text-white hover:pl-1 transition-all">Turkey Teeth Cost Guide</Link></li>
             </ul>
           </div>
 

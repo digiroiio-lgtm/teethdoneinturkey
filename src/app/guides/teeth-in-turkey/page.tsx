@@ -264,7 +264,7 @@ export default function TeethInTurkeyPillarGuide() {
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Every treatment on this site is consistently 65–90% cheaper than the equivalent UK private-dentistry price. For the full, itemised breakdown and how package pricing is put together, see the{" "}
-            <Link href="/guides/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost Guide</Link>.
+            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost Guide</Link>.
           </p>
 
           <h2 id="uk-vs-turkey" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Turkey vs UK Considerations</h2>
@@ -346,7 +346,7 @@ export default function TeethInTurkeyPillarGuide() {
           <Link href="/free-treatment-plan" className="text-[#1e40af] font-semibold hover:underline">free personalised treatment plan</Link>, or read the two supporting guides in this library — the{" "}
           <Link href="/guides/dental-implants-turkey" className="text-[#1e40af] font-semibold hover:underline">Dental Implants Guide</Link>{" "}
           and the{" "}
-          <Link href="/guides/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost Guide</Link>{" "}
+          <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost Guide</Link>{" "}
           — for the next level of detail on the two questions patients ask most.
         </p>
 
@@ -366,7 +366,7 @@ export default function TeethInTurkeyPillarGuide() {
           title="Related Guides"
           links={[
             { title: "Dental Implants in Turkey: Complete Guide", desc: "Brands, procedure, timelines, and implant-specific costs.", href: "/guides/dental-implants-turkey" },
-            { title: "Turkey Teeth Cost: 2026 Price Guide", desc: "Full UK vs Turkey cost comparison and finance options.", href: "/guides/turkey-teeth-cost" },
+            { title: "Turkey Teeth Cost: 2026 Price Guide", desc: "Full UK vs Turkey cost comparison and finance options.", href: "/prices/turkey-teeth-cost" },
             { title: "Why Choose Turkey for Dental Work?", desc: "The reasons beyond price — clinic standards, technology and UK-side support.", href: "/why-choose-turkey-for-dental-work" },
             { title: "Teeth Done in Turkey: Problems to Know About", desc: "The complications patients actually report, and how each one is avoided.", href: "/teeth-done-in-turkey-problems" },
           ]}

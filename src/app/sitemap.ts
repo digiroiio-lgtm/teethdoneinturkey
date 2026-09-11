@@ -27,7 +27,6 @@ const routes: Route[] = [
   { path: '/guides', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/guides/teeth-in-turkey', priority: 0.95, changeFrequency: 'monthly' },
   { path: '/guides/dental-implants-turkey', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/guides/turkey-teeth-cost', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/guides/cant-afford-dental-treatment-uk', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/guides/turkey-teeth-veneers-or-crowns', priority: 0.95, changeFrequency: 'monthly' },
 
@@ -41,6 +40,7 @@ const routes: Route[] = [
 
   // Prices cluster
   { path: '/prices/teeth-done-in-turkey-cost', priority: 0.9, changeFrequency: 'weekly' },
+  { path: '/prices/turkey-teeth-cost', priority: 0.95, changeFrequency: 'monthly' },
   { path: '/prices/veneers-turkey-cost', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/prices/dental-implants-turkey-cost', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/prices/all-on-6-dental-implants-turkey-package', priority: 0.9, changeFrequency: 'weekly' },
@@ -50,7 +50,7 @@ const routes: Route[] = [
   // Only canonical 200-status routes belong here. /turkey-teeth-cost,
   // /turkey-teeth-price, /turkey-teeth-review, /turkey-teeth-real-results,
   // /turkey-teeth-dangers, /veneers-turkey-cost, /dental-implants-turkey-cost
-  // and /prices/turkey-teeth-cost are 301 redirect stubs, so they are
+  // and /guides/turkey-teeth-cost are 301 redirect stubs, so they are
   // deliberately excluded — their targets under /guides/*, /prices/* and
   // /treatments/* are listed above instead.
   { path: '/turkey-teeth-clinic', priority: 0.9, changeFrequency: 'weekly' },

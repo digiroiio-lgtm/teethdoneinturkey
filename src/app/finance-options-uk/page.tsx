@@ -5,10 +5,20 @@ import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 
 export const revalidate = 86400;
 
+// Repositioned 2026-09-11. Search Console (2026-09-04..09-10) shows this URL
+// ranking for two different intents. It wins the generic UK dental-finance
+// intent — "teeth on finance bad credit" at position 7.6 (15 impressions),
+// "teeth on finance" 75, "loans for dental work" 76, "dental implant finance
+// uk" 84, "denture financing" 80.8, "veneers uk finance" 70.3 — but the old
+// Turkey-framed title and description matched none of those queries, which is
+// the most likely reason 22 impressions at position ~7.8 produced 0 clicks.
+// Google Trends (GB, 90d) corroborates the intent: "dental finance" scores 36
+// against "turkey teeth" at 100, and its top related query is "dental finance
+// uk" (100) followed by "dental finance bad credit" (14).
 export const metadata: Metadata = {
   alternates: { canonical: "/finance-options-uk" },
-  title: { absolute: "Dental Finance UK: Pay Monthly for Turkey Treatment" },
-  description: "Finance options for UK patients getting dental treatment in Turkey. Monthly payment plans from £82/month. 0% interest available over 12, 24 and 36 months.",
+  title: { absolute: "Dental Finance UK: Dental Loans & Pay Monthly Plans" },
+  description: "UK dental finance explained: 0% payment plans, dental loans, cost per month by treatment, and where you really stand with bad credit. Soft search.",
 };
 
 const options = [
@@ -46,7 +56,65 @@ const howItWorks = [
   { step: "5", title: "Pay Monthly from Home", desc: "Monthly payments are taken automatically. You focus on enjoying your new smile." },
 ];
 
+// Monthly figures are the treatment total divided across 36 payments at 0% APR
+// representative, using the prices published elsewhere on this site, so no new
+// or conflicting price is introduced here. £2,800 / 36 = £78, £3,500 / 36 = £98,
+// £3,800 / 36 = £106, £4,500 / 36 = £125, £5,600 / 36 = £156, £11,200 / 36 = £312.
+const treatmentFinance = [
+  {
+    treatment: "Single dental implant (+ crown)",
+    total: "From £250",
+    monthly: "Below the £500 finance minimum on its own",
+  },
+  {
+    treatment: "Hollywood Smile — 20 zirconia crowns (package)",
+    total: "£2,800",
+    monthly: "From £78/mo",
+  },
+  {
+    treatment: "Full smile makeover",
+    total: "From £3,500",
+    monthly: "From £98/mo",
+  },
+  {
+    treatment: "Full set of 20 E-max porcelain veneers",
+    total: "From £3,800",
+    monthly: "From £106/mo",
+  },
+  {
+    treatment: "All-on-4 implants — one arch (all-inclusive)",
+    total: "From £4,500",
+    monthly: "From £125/mo",
+  },
+  {
+    treatment: "All-on-6 implants — one arch (all-inclusive)",
+    total: "From £5,600",
+    monthly: "From £156/mo",
+  },
+  {
+    treatment: "All-on-6 implants — both arches",
+    total: "From £11,200 (2 × per-arch price)",
+    monthly: "From £312/mo",
+  },
+];
+
 const faqs = [
+  {
+    q: "Can I get dental finance in the UK with bad credit?",
+    a: "You can apply, and the pre-qualification check is a soft search that will not affect your credit score. No provider can honestly guarantee approval with a poor credit history, because the decision belongs to the lender and depends on your circumstances and their criteria at the time. Two things genuinely improve the odds: putting down a deposit so less is being borrowed, and financing a lower treatment total in the first place.",
+  },
+  {
+    q: "How much is dental implant finance per month in the UK?",
+    a: "It depends on the treatment total rather than on a single rate. On a 36-month 0% APR representative plan, an All-on-4 arch at £4,500 works out from £125 a month and an All-on-6 arch at £5,600 from £156 a month. A single implant from £250 falls below the £500 minimum finance amount, so it would need to be combined with other treatment or paid outright.",
+  },
+  {
+    q: "Can you finance veneers in the UK?",
+    a: "Yes. A full set of 20 E-max porcelain veneers from £3,800 comes to around £106 a month over 36 months at 0% APR representative. Veneers are cosmetic, so NHS band charges never cover them and finance or savings are the only routes. UK private veneers at £800–£1,000 per tooth would mean financing roughly £16,000–£20,000 for the same 20 teeth.",
+  },
+  {
+    q: "Is 0% dental finance real, or is there a catch?",
+    a: "It is real on qualifying plans, and the catch is eligibility rather than hidden cost: 0% APR representative means at least 51% of accepted applicants get that rate, so some applicants are offered an interest-bearing plan instead. The APR you are actually offered is shown before you commit. On a genuine 0% plan you repay exactly the treatment price and nothing more.",
+  },
   {
     q: "What is the minimum and maximum amount I can finance?",
     a: "Finance is available from £500 to £30,000. This covers everything from a small veneers treatment to a full-mouth All-on-6 reconstruction.",
@@ -75,10 +143,6 @@ const faqs = [
     q: "Is this a dental loan or a dental payment plan?",
     a: "It's a payment plan: finance arranged specifically for your dental treatment, with 0% APR representative available and fixed monthly instalments. A dental loan usually means a general personal loan used for the same purpose, which can carry interest where this plan would not.",
   },
-  {
-    q: "I have bad credit. Can I still get approved?",
-    a: "We can't guarantee approval, and no dental finance provider honestly can. The pre-qualification check is a soft search, so it won't affect your credit score, and the outcome depends on your individual circumstances and the finance provider's own criteria at the time you apply.",
-  },
 ];
 
 const faqJsonLd = {
@@ -97,8 +161,8 @@ export default function FinanceOptionsUKPage() {
       <script id="faq-schema-finance-options-uk" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Finance Options for UK Patients</h1>
-          <p className="text-xl text-blue-200">Pay monthly for your dental treatment in Turkey. 0% APR plans from £82/month over 12, 24, or 36 months.</p>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Finance in the UK: Loans, Plans and Monthly Costs</h1>
+          <p className="text-xl text-blue-200">How UK dental finance works, what each treatment costs per month, and where you stand if your credit is poor. 0% APR plans from £82/month.</p>
         </div>
       </div>
 
@@ -108,6 +172,13 @@ export default function FinanceOptionsUKPage() {
           <div>
             <p className="text-lg text-gray-700 leading-relaxed">
               You don&apos;t need to have the full cost of your treatment ready upfront. Our monthly payment plans let you spread the cost of dental work in Turkey over 12, 24, or 36 months — with 0% APR available, so you pay no more than the treatment cost itself.
+            </p>
+          </div>
+
+          <div className="bg-blue-50/60 border border-blue-100 rounded-xl p-5">
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Short answer: how does dental finance work in the UK?</h2>
+            <p className="text-gray-700 leading-relaxed">
+              UK patients normally pay for dental work in one of three ways: a <strong>dental payment plan</strong> arranged for one specific treatment in fixed instalments, often at 0% for 12–36 months; a <strong>dental loan</strong>, which is a general personal loan used for the same purpose and usually carries interest; or <strong>NHS band charges</strong>, which only apply to treatment the NHS actually provides and exclude cosmetic work such as veneers. On this site, treatment in Turkey is financed as a payment plan from £500 to £30,000 over 12, 24 or 36 months, with 0% APR representative on qualifying plans and an eligibility check that is a soft search only.
             </p>
           </div>
 
@@ -213,6 +284,86 @@ export default function FinanceOptionsUKPage() {
               For the full picture, including whether the NHS can help before you consider financing private treatment, see the{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">Can&apos;t Afford Dental Treatment in the UK guide</Link>.
             </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Finance by Treatment: Implants, Veneers, Crowns and Full Arches</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              What you pay each month depends on the treatment total, not on a single headline figure. The monthly
+              column below is the treatment price on this site divided across{" "}
+              <strong>36 monthly payments at 0% APR representative</strong> — the longest term available, which gives
+              the lowest monthly figure. A shorter 12- or 24-month term raises the monthly amount and lowers nothing
+              else, because there is no interest to save on a 0% plan.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="text-left font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Treatment</th>
+                    <th className="text-left font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Treatment total</th>
+                    <th className="text-left font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Over 36 months</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {treatmentFinance.map(row => (
+                    <tr key={row.treatment} className="odd:bg-white even:bg-gray-50/60">
+                      <td className="px-4 py-3 border-b border-gray-100 text-gray-900 font-semibold">{row.treatment}</td>
+                      <td className="px-4 py-3 border-b border-gray-100 text-gray-700">{row.total}</td>
+                      <td className="px-4 py-3 border-b border-gray-100 text-gray-700">{row.monthly}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-gray-500 mt-4">
+              Figures are indicative and follow the treatment prices published on this site; confirm your own total
+              and monthly amount on a personalised quote before applying. A{" "}
+              <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">full cost breakdown by treatment</Link>{" "}
+              and a{" "}
+              <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">price calculator</Link>{" "}
+              are available if you want to work from your own treatment plan.
+            </p>
+            <div className="mt-5 bg-gray-50 rounded-xl p-5 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-1">Can you finance dentures?</h3>
+              <p className="text-sm text-gray-600">
+                Conventional removable dentures are not part of the treatment range priced on this site, so there is no
+                denture plan to quote. What is covered is the fixed alternative people usually compare dentures
+                against: implant-supported full arches (All-on-4 and All-on-6), financed from £125 and £156 a month
+                respectively on a 36-month plan. If you are weighing removable dentures against a fixed arch, the{" "}
+                <Link href="/blog/full-mouth-implants-uk-vs-turkey" className="text-[#1e40af] font-semibold hover:underline">full-mouth implants comparison</Link>{" "}
+                sets out the difference.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Dental Finance with Bad Credit: What Is Actually True</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              &ldquo;Bad credit dental finance&rdquo; is widely advertised, and most of what is promised cannot be
+              guaranteed by anyone. Here is the honest position:
+            </p>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex gap-3">
+                <span className="text-[#1e40af] font-bold shrink-0">1.</span>
+                <span><strong>No provider can promise approval</strong> — not this site and not any broker. Approval is the lender&apos;s decision, based on your circumstances and their criteria on the day you apply. Anyone guaranteeing acceptance before running a check is not describing how lending works.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-[#1e40af] font-bold shrink-0">2.</span>
+                <span><strong>Checking costs you nothing.</strong> Pre-qualification here is a soft search. It does not appear on your credit file and does not affect your score, so a poor credit history is not a reason to avoid finding out where you stand.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-[#1e40af] font-bold shrink-0">3.</span>
+                <span><strong>A declined application is not the end of it.</strong> Putting down a deposit reduces the amount being borrowed, which materially changes the decision. Financing £2,000 of a £4,500 arch is a different proposition to financing all of it.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-[#1e40af] font-bold shrink-0">4.</span>
+                <span><strong>Multiple full applications do harm your file.</strong> Each hard search is recorded and several in quick succession reads badly to lenders. Use soft-search pre-checks to compare before committing to one full application.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-[#1e40af] font-bold shrink-0">5.</span>
+                <span><strong>A lower total is the most reliable lever.</strong> Treatment in Turkey costs 65–90% less than the UK private equivalent, so the sum you need to finance is smaller to begin with — which is often what turns a borderline application around.</span>
+              </li>
+            </ul>
           </div>
 
           <div>

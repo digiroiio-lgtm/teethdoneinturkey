@@ -295,7 +295,7 @@ export default function BestClinicsBlogPage() {
               <span className="font-semibold text-gray-900 text-sm">Teeth in Turkey Guide</span>
               <span className="text-xs text-gray-500 mt-0.5">The complete patient guide</span>
             </Link>
-            <Link href="/guides/turkey-teeth-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <Link href="/prices/turkey-teeth-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Turkey Teeth Cost</span>
               <span className="text-xs text-gray-500 mt-0.5">2026 price guide</span>
             </Link>

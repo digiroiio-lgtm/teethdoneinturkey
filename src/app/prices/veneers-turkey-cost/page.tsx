@@ -300,7 +300,7 @@ export default function VeneersCostPage() {
           <div className="flex gap-4 flex-wrap">
             <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get My Veneer Quote</Link>
             <Link href="/prices/hollywood-smile-turkey-package" className="inline-block border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Hollywood Smile Packages</Link>
-            <Link href="/guides/turkey-teeth-cost" className="inline-block border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">Full Turkey Teeth Price Guide</Link>
+            <Link href="/prices/turkey-teeth-cost" className="inline-block border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">Full Turkey Teeth Price Guide</Link>
           </div>
         </div>
       </section>

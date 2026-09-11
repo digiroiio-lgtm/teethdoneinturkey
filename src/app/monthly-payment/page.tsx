@@ -6,10 +6,25 @@ import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const revalidate = 86400;
 
+// Differentiated 2026-09-11. This URL earned 0 Search Console impressions over
+// 2026-09-04..09-10 while /finance-options-uk earned 92 — the two carried
+// near-identical titles ("Turkey Teeth Finance: Pay Monthly from £82" vs
+// "Dental Finance UK: Pay Monthly for Turkey Treatment") for one intent, and
+// Google suppressed this one.
+//
+// It is not a page to merge away, though: GA4 (2026-08-29..09-10) shows it is
+// the single most-cited landing page in AI search — 6 of the site's 12
+// chatgpt.com / ai-assistant sessions land here, more than any other URL and
+// more than Google organic sent to the whole site. So the two pages are being
+// split by job instead: /finance-options-uk answers the generic UK
+// dental-finance question (loans, plans, bad credit), and this page is the
+// per-treatment monthly-cost figures, which is what AI assistants are citing it
+// for. /blog/can-you-pay-monthly-for-teeth-in-turkey (position 10.5) keeps the
+// "can you pay monthly" question intent.
 export const metadata: Metadata = {
   alternates: { canonical: "/monthly-payment" },
-  title: { absolute: "Turkey Teeth Finance: Pay Monthly from £82" },
-  description: "Turkey teeth on finance from £82/month. Spread veneers, implants and makeovers over 12, 24 or 36 months at 0% APR representative. Soft search.",
+  title: { absolute: "Turkey Teeth Monthly Payments: Cost Per Treatment" },
+  description: "What Turkey teeth cost per month, treatment by treatment: veneers from £6, implants from £14, All-on-4 from £125, a 20-crown makeover from £78. 0% APR rep.",
 };
 
 const ukVsTurkeyComparison = [
@@ -47,8 +62,8 @@ export default function MonthlyPaymentPage() {
       {/* ── Hero ── */}
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-3">Turkey Teeth Finance: Pay Monthly for Dental Treatment in Turkey</h1>
-          <p className="text-xl text-blue-200 mb-2">Spread the cost of veneers, implants and full smile makeovers from £82 per month</p>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-3">Turkey Teeth Monthly Payments: What Each Treatment Costs Per Month</h1>
+          <p className="text-xl text-blue-200 mb-2">Veneers from £6, implants from £14, All-on-4 from £125, a 20-crown makeover from £78 a month</p>
           <p className="text-blue-300 text-sm mb-8">0% interest available · No obligation · Free treatment plan included</p>
 
           {/* Trust signals */}
@@ -124,7 +139,7 @@ export default function MonthlyPaymentPage() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Full veneers cost guide</Link>
             <Link href="/prices/dental-implants-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Full implants cost guide</Link>
-            <Link href="/guides/turkey-teeth-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ All turkey teeth prices</Link>
+            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ All turkey teeth prices</Link>
           </div>
         </div>
       </section>
@@ -140,7 +155,7 @@ export default function MonthlyPaymentPage() {
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               Two things decide what you actually pay: the treatment total and the term you choose. At 0% APR representative, a longer term simply divides the same total across more months rather than adding interest. For the difference between a payment plan, dental finance, a personal loan and NHS charges, see{" "}
-              <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">dental finance options for UK patients</Link>, and if you are weighing up affordability more broadly, read{" "}
+              <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how dental finance works in the UK, including dental loans and bad credit</Link>, and if you are weighing up affordability more broadly, read{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">what to do if you cannot afford dental treatment in the UK</Link>.
             </p>
           </div>
@@ -348,7 +363,7 @@ export default function MonthlyPaymentPage() {
               {[
                 { href: "/prices/veneers-turkey-cost", label: "Veneers Turkey Cost", sub: "E-max from £190/tooth" },
                 { href: "/prices/dental-implants-turkey-cost", label: "Implants Turkey Cost", sub: "From £420 all-in" },
-                { href: "/guides/turkey-teeth-cost", label: "All Turkey Teeth Prices", sub: "Complete price guide" },
+                { href: "/prices/turkey-teeth-cost", label: "All Turkey Teeth Prices", sub: "Complete price guide" },
                 { href: "/treatments/veneers-turkey", label: "Veneers Treatment Guide", sub: "What to expect" },
                 { href: "/treatments/dental-implants-turkey", label: "Implants Treatment Guide", sub: "Full implant process" },
                 { href: "/teeth-done-in-turkey-guide", label: "Turkey Dental Guide", sub: "Complete patient guide" },

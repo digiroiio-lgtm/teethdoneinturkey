@@ -41,7 +41,7 @@ const guides = [
       "What drives treatment price, a full UK-vs-Turkey cost comparison, package pricing, and how to get an accurate personalised quotation.",
     readingTime: "12 min",
     updated: "3 September 2026",
-    href: "/guides/turkey-teeth-cost",
+    href: "/prices/turkey-teeth-cost",
   },
   {
     category: "Treatment",

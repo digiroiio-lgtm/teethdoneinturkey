@@ -193,7 +193,7 @@ export default function DentalImplantsGuidePage() {
             </table>
           </div>
           <p className="text-xs text-gray-500 mb-4">
-            Figures shown are drawn from this site&apos;s published price pages as of {DATE_MODIFIED}. Exact pricing depends on brand, quantity, and individual clinical needs — see the <Link href="/guides/turkey-teeth-cost" className="text-[#1e40af] hover:underline">Turkey Teeth Cost Guide</Link> for the full comparison and how pricing is put together.
+            Figures shown are drawn from this site&apos;s published price pages as of {DATE_MODIFIED}. Exact pricing depends on brand, quantity, and individual clinical needs — see the <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] hover:underline">Turkey Teeth Cost Guide</Link> for the full comparison and how pricing is put together.
           </p>
 
           <h2 id="bone-graft-sinus-lift" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Bone Grafting &amp; Sinus Lifts</h2>
@@ -233,7 +233,7 @@ export default function DentalImplantsGuidePage() {
             <strong>How much do dental implants cost in Turkey?</strong> A single implant with a crown starts from £250 in Turkey using an entry-level brand such as Osstem, rising to roughly £800+ for premium brands such as Straumann — compared with £2,000–£4,500 for an equivalent single implant and crown in the UK.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Full-mouth treatments are priced per arch rather than per implant: All-on-4 from £4,500 and All-on-6 from £5,600, both all-inclusive of hotel and transfers on this site&apos;s treatment pages. For a complete breakdown of what drives the final price — including diagnostics, bone grafting, temporary vs permanent restorations, and finance options — see the full <Link href="/guides/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost Guide</Link>.
+            Full-mouth treatments are priced per arch rather than per implant: All-on-4 from £4,500 and All-on-6 from £5,600, both all-inclusive of hotel and transfers on this site&apos;s treatment pages. For a complete breakdown of what drives the final price — including diagnostics, bone grafting, temporary vs permanent restorations, and finance options — see the full <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost Guide</Link>.
           </p>
 
           <h2 id="uk-vs-turkey" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Turkey vs UK Considerations</h2>
@@ -287,7 +287,7 @@ export default function DentalImplantsGuidePage() {
           title="Related Guides"
           links={[
             { title: "Teeth in Turkey: The Complete UK Patient Guide", desc: "The primary guide covering every treatment, cost and safety topic.", href: "/guides/teeth-in-turkey" },
-            { title: "Turkey Teeth Cost: 2026 Price Guide", desc: "Full UK vs Turkey cost comparison and finance options.", href: "/guides/turkey-teeth-cost" },
+            { title: "Turkey Teeth Cost: 2026 Price Guide", desc: "Full UK vs Turkey cost comparison and finance options.", href: "/prices/turkey-teeth-cost" },
           ]}
         />
 

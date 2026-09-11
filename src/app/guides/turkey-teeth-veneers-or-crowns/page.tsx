@@ -292,7 +292,7 @@ export default function TurkeyTeethVeneersOrCrownsPage() {
             On this site, a porcelain (E-max) veneer starts from £190 per tooth and a zirconia crown starts from £130 per tooth. Crowns being the cheaper unit is worth knowing, because it means a full crown makeover is not necessarily the more expensive plan, and cost alone should never decide which treatment your teeth actually need. See the{" "}
             <Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] font-semibold hover:underline">full veneers cost guide</Link>{" "}
             or the{" "}
-            <Link href="/guides/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">complete Turkey teeth price guide</Link>{" "}
+            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">complete Turkey teeth price guide</Link>{" "}
             for the full breakdown, and{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">monthly payment options</Link>{" "}
             if you are spreading the cost.
@@ -317,7 +317,7 @@ export default function TurkeyTeethVeneersOrCrownsPage() {
           title="Related Guides"
           links={[
             { title: "Teeth in Turkey: Complete UK Patient Guide", desc: "The full process, safety, clinic evaluation and travel guide.", href: "/guides/teeth-in-turkey" },
-            { title: "Turkey Teeth Cost: 2026 Price Guide", desc: "Verified per tooth and package pricing, with UK comparisons.", href: "/guides/turkey-teeth-cost" },
+            { title: "Turkey Teeth Cost: 2026 Price Guide", desc: "Verified per tooth and package pricing, with UK comparisons.", href: "/prices/turkey-teeth-cost" },
             { title: "How Long Do Turkey Teeth Last?", desc: "Lifespan of E-max veneers, zirconia crowns and composite.", href: "/blog/how-long-do-dental-veneers-last" },
             { title: "Risks of Turkey Teeth", desc: "What can go wrong, why, and how to reduce each risk.", href: "/blog/risks-of-turkey-teeth" },
           ]}
