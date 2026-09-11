@@ -61,6 +61,15 @@ const guides = [
     updated: "3 September 2026",
     href: "/guides/cant-afford-dental-treatment-uk",
   },
+  {
+    category: "Cost & Finance",
+    title: "Teeth on Finance With Bad Credit: What Your Options Are",
+    description:
+      "Whether a poor credit history rules out dental finance, what providers actually assess, soft versus hard credit searches, what a representative APR really means, and what to do if you are declined.",
+    readingTime: "11 min",
+    updated: "11 September 2026",
+    href: "/guides/teeth-on-finance-bad-credit",
+  },
 ];
 
 const breadcrumbJsonLd = {

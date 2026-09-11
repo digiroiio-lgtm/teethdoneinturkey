@@ -236,6 +236,7 @@ export default function CantAffordDentalTreatmentUKPage() {
             { title: "Dental Finance Options UK", desc: "0% representative APR finance, eligibility and how pre-qualification works.", href: "/finance-options-uk" },
             { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, from £82/month.", href: "/monthly-payment" },
             { title: "Price Calculator", desc: "Build a personalised estimate across multiple treatments.", href: "/price-calculator" },
+            { title: "Teeth on Finance With Bad Credit", desc: "What providers assess, credit searches, and what to do if you are declined.", href: "/guides/teeth-on-finance-bad-credit" },
             { title: "Teeth in Turkey: Complete UK Patient Guide", desc: "The full process, safety and clinic evaluation guide.", href: "/guides/teeth-in-turkey" },
           ]}
         />

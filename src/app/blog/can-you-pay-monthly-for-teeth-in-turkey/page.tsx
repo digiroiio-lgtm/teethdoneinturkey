@@ -116,7 +116,7 @@ export default function PayMonthlyTeethTurkeyPage() {
             {[
               { q: "Is 0% interest available?", a: "Yes, for qualifying applicants. Your credit profile and term length determine eligibility. All options are presented clearly before you commit." },
               { q: "Does applying affect my credit score?", a: "Pre-qualification uses a soft check — no impact. Only a full application creates a footprint on your credit file." },
-              { q: "I have bad credit — can I still apply?", a: "Yes. We work with specialist lenders who consider all profiles. Pre-qualify to see what's available for your situation." },
+              { q: "I have bad credit — can I still apply?", a: "You can apply, but approval is never guaranteed. Finance is provided by third parties and depends on their own affordability and eligibility criteria, so the outcome depends on your circumstances. Pre-qualifying uses a soft search, which does not affect your credit score, so you can see what is available before committing." },
               { q: "Can I pay off early?", a: "Yes, most plans allow early repayment. Exact terms are confirmed in your credit agreement before you sign." },
             ].map(faq => (
               <div key={faq.q} className="bg-gray-50 rounded-xl p-4 border border-gray-200">
@@ -137,6 +137,7 @@ export default function PayMonthlyTeethTurkeyPage() {
             <ul className="space-y-1 text-sm">
               <li><Link href="/guides/turkey-teeth-cost" className="text-[#1e40af] hover:underline">→ Turkey Teeth Cost: Complete 2026 Price Guide</Link></li>
               <li><Link href="/finance-options-uk" className="text-[#1e40af] hover:underline">→ Finance Options UK</Link></li>
+              <li><Link href="/guides/teeth-on-finance-bad-credit" className="text-[#1e40af] hover:underline">→ Teeth on finance with bad credit</Link></li>
               <li><Link href="/monthly-payment" className="text-[#1e40af] hover:underline">→ Full monthly payment guide</Link></li>
               <li><Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] hover:underline">→ Dental tourism finance explained</Link></li>
               <li><Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] hover:underline">→ Finance dental implants Turkey</Link></li>

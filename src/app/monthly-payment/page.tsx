@@ -143,6 +143,11 @@ export default function MonthlyPaymentPage() {
               <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">dental finance options for UK patients</Link>, and if you are weighing up affordability more broadly, read{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">what to do if you cannot afford dental treatment in the UK</Link>.
             </p>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              If your credit file is less than perfect, the question is not simply yes or no. Our guide to{" "}
+              <Link href="/guides/teeth-on-finance-bad-credit" className="text-[#1e40af] font-semibold hover:underline">dental finance with a poor credit history</Link>{" "}
+              covers what a provider weighs up, the difference between a soft and a hard credit search, and what &ldquo;0% APR representative&rdquo; legally means.
+            </p>
           </div>
 
           <div>
@@ -369,7 +374,7 @@ export default function MonthlyPaymentPage() {
 
       <CTASection
         title="Start Your Free Treatment Plan Today"
-        subtitle="No obligation. No credit check to explore your options. Chat with a UK patient coordinator who will answer every question."
+        subtitle="No obligation. Getting a treatment plan costs nothing and involves no credit application. Chat with a UK patient coordinator who will answer every question."
         buttonText="Get Free Treatment Plan"
         buttonHref="/book-consultation"
         whatsapp={true}

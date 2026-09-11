@@ -100,7 +100,7 @@ export default function PaymentPlansTurkeyPage() {
             <li>Are aged 18 or over</li>
             <li>Are UK residents with a UK bank account</li>
             <li>Have a regular income (employed, self-employed, or pension)</li>
-            <li>Meet the lender&apos;s credit criteria (we work with providers for all credit profiles)</li>
+            <li>Meet the finance provider&apos;s own affordability and credit criteria (approval is not guaranteed and depends on your circumstances)</li>
           </ul>
           <p>Bad credit, CCJs, or defaults don&apos;t automatically disqualify you — specialist lenders consider all profiles. Pre-qualify to see what&apos;s available in your situation.</p>
 

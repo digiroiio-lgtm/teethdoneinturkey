@@ -213,6 +213,11 @@ export default function FinanceOptionsUKPage() {
               For the full picture, including whether the NHS can help before you consider financing private treatment, see the{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">Can&apos;t Afford Dental Treatment in the UK guide</Link>.
             </p>
+            <p className="text-sm text-gray-500 mt-2">
+              Worried that your credit history will count against you? Our guide to{" "}
+              <Link href="/guides/teeth-on-finance-bad-credit" className="text-[#1e40af] font-semibold hover:underline">getting teeth on finance with bad credit</Link>{" "}
+              explains what providers actually assess, why a representative APR is not a promise of that rate, and what your options are if you are declined.
+            </p>
           </div>
 
           <div>
