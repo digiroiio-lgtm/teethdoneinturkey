@@ -1,130 +1,100 @@
 import { MetadataRoute } from 'next';
 
+import manifest from '../../seo/route-lastmod.json';
+
 const BASE = 'https://www.teethdoneinturkey.co.uk';
 
-// Stable lastModified — use a fixed release date rather than `new Date()`,
-// which would flip on every build/revalidate and dilute GSC crawl signals.
-// Update this when there's a meaningful content refresh across the site.
-const LAST_MODIFIED = new Date('2026-09-04T00:00:00Z');
+// The URL list is no longer hand-maintained. seo/route-lastmod.json is
+// regenerated from src/app on every build (`prebuild` → scripts/update-route-lastmod.mjs),
+// so a new page — a finance/affordability guide, a treatment page, a blog post —
+// is in the sitemap the moment it exists, and redirect stubs and noindex pages
+// stay out of it automatically.
+//
+// `lastmod` comes from the same manifest and tracks each page's own content
+// fingerprint: a URL keeps its date until that page is actually edited. No
+// site-wide bump on deploy, which is what makes the signal worth anything.
 
-type Route = {
-  path: string;
+type Rule = {
   priority: number;
   changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
 };
 
-const routes: Route[] = [
-  // Top-level
-  { path: '', priority: 1.0, changeFrequency: 'daily' },
-  { path: '/about-us', priority: 0.6, changeFrequency: 'monthly' },
-  { path: '/contact', priority: 0.6, changeFrequency: 'monthly' },
-  { path: '/book-consultation', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/reviews', priority: 0.8, changeFrequency: 'weekly' },
-  { path: '/before-after', priority: 0.7, changeFrequency: 'weekly' },
-  { path: '/turkey-teeth-before-after', priority: 0.8, changeFrequency: 'weekly' },
-
-  // Guides — evergreen patient education cluster, separate from /blog
-  { path: '/guides', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/guides/teeth-in-turkey', priority: 0.95, changeFrequency: 'monthly' },
-  { path: '/guides/dental-implants-turkey', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/guides/cant-afford-dental-treatment-uk', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/guides/turkey-teeth-veneers-or-crowns', priority: 0.95, changeFrequency: 'monthly' },
-
-  // Money pages — treatments cluster
-  { path: '/treatments', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/treatments/veneers-turkey', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/treatments/dental-implants-turkey', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/treatments/all-on-4-turkey', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/treatments/all-on-6-turkey', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/treatments/full-smile-makeover-turkey', priority: 0.9, changeFrequency: 'weekly' },
-
-  // Prices cluster
-  { path: '/prices/teeth-done-in-turkey-cost', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/prices/turkey-teeth-cost', priority: 0.95, changeFrequency: 'monthly' },
-  { path: '/prices/veneers-turkey-cost', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/prices/dental-implants-turkey-cost', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/prices/all-on-6-dental-implants-turkey-package', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/prices/hollywood-smile-turkey-package', priority: 0.9, changeFrequency: 'weekly' },
-
-  // "Turkey teeth" head-term pages (highest GT interest in UK last 7d).
-  // Only canonical 200-status routes belong here. /turkey-teeth-cost,
-  // /turkey-teeth-price, /turkey-teeth-review, /turkey-teeth-real-results,
-  // /turkey-teeth-dangers, /veneers-turkey-cost, /dental-implants-turkey-cost
-  // and /guides/turkey-teeth-cost are 301 redirect stubs, so they are
-  // deliberately excluded — their targets under /guides/*, /prices/* and
-  // /treatments/* are listed above instead.
-  { path: '/turkey-teeth-clinic', priority: 0.9, changeFrequency: 'weekly' },
-
-  // Finance cluster
-  { path: '/monthly-payment', priority: 0.85, changeFrequency: 'weekly' },
-  { path: '/finance-options-uk', priority: 0.85, changeFrequency: 'weekly' },
-  { path: '/free-treatment-plan', priority: 0.85, changeFrequency: 'weekly' },
-  { path: '/price-calculator', priority: 0.85, changeFrequency: 'weekly' },
-
-  // Travel cluster
-  { path: '/travel-to-turkey', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/travel-to-turkey/dental-holiday-turkey', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/travel-to-turkey/how-long-stay-turkey-dental', priority: 0.7, changeFrequency: 'monthly' },
-
-  // Guides
-  { path: '/teeth-done-in-turkey-guide', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/why-choose-turkey-for-dental-work', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/teeth-done-in-turkey-problems', priority: 0.75, changeFrequency: 'monthly' },
-
-  // Blog index + core cluster
-  { path: '/blog', priority: 0.7, changeFrequency: 'daily' },
-  { path: '/blog/veneers-turkey-cost-uk-vs-turkey', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/blog/is-it-safe-to-get-teeth-done-in-turkey', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/blog/how-long-do-dental-veneers-last', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/best-dental-clinics-turkey', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/blog/turkey-teeth-reviews', priority: 0.8, changeFrequency: 'weekly' },
-  { path: '/blog/dental-holiday-turkey-guide', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/why-are-dental-treatments-cheaper-in-turkey', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/uk-dentist-vs-turkey-dentist', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/turkey-teeth-explained', priority: 0.8, changeFrequency: 'monthly' },
-
-  // Veneers cluster
-  { path: '/blog/e-max-vs-zirconia-veneers-turkey', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/full-set-veneers-turkey-cost', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/are-veneers-in-turkey-worth-it', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/risks-of-veneers-in-turkey', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/can-you-pay-monthly-for-veneers-turkey', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/4-8-10-rule-for-veneers', priority: 0.6, changeFrequency: 'monthly' },
-  { path: '/blog/composite-vs-porcelain-veneers-turkey', priority: 0.7, changeFrequency: 'monthly' },
-
-  // Implants cluster
-  { path: '/blog/same-day-dental-implants-turkey', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/dental-implant-recovery-time', priority: 0.65, changeFrequency: 'monthly' },
-  { path: '/blog/signs-of-dental-implant-failure', priority: 0.65, changeFrequency: 'monthly' },
-  { path: '/blog/single-tooth-implant-turkey-cost', priority: 0.7, changeFrequency: 'monthly' },
-
-  // Finance cluster (blog)
-  { path: '/blog/can-you-pay-monthly-for-teeth-in-turkey', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/dental-treatment-turkey-payment-plans', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/finance-dental-implants-turkey-uk-patients', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/dental-tourism-finance-explained', priority: 0.65, changeFrequency: 'monthly' },
-
-  // Safety cluster
-  { path: '/blog/risks-of-turkey-teeth', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/blog/aftercare-for-dental-work-in-turkey', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/will-uk-dentists-fix-turkey-teeth', priority: 0.75, changeFrequency: 'monthly' },
-
-  // Travel & cost cluster (blog)
-  { path: '/blog/hollywood-smile-turkey-cost', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/antalya-vs-istanbul-dental-clinics', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/blog/dental-holiday-packages-turkey', priority: 0.65, changeFrequency: 'monthly' },
-
-  // UK vs Turkey comparison
-  { path: '/blog/implants-cost-uk-vs-turkey', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/blog/hollywood-smile-uk-vs-turkey', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/blog/full-mouth-implants-uk-vs-turkey', priority: 0.9, changeFrequency: 'weekly' },
+// Section defaults, first match wins. Anything new inherits from its section,
+// which is what keeps the generator dynamic — a page only needs an entry below
+// if it should rank differently from its siblings.
+const SECTION_RULES: { match: (route: string) => boolean; rule: Rule }[] = [
+  { match: (r) => r === '/', rule: { priority: 1.0, changeFrequency: 'daily' } },
+  { match: (r) => r.startsWith('/treatments/'), rule: { priority: 0.9, changeFrequency: 'weekly' } },
+  { match: (r) => r.startsWith('/prices/'), rule: { priority: 0.9, changeFrequency: 'weekly' } },
+  // Guides are the evergreen intent cluster (finance, affordability, comparisons).
+  { match: (r) => r.startsWith('/guides/'), rule: { priority: 0.9, changeFrequency: 'monthly' } },
+  { match: (r) => r.startsWith('/travel-to-turkey'), rule: { priority: 0.7, changeFrequency: 'monthly' } },
+  { match: (r) => r.startsWith('/blog/'), rule: { priority: 0.7, changeFrequency: 'monthly' } },
 ];
 
+const DEFAULT_RULE: Rule = { priority: 0.7, changeFrequency: 'monthly' };
+
+// Per-URL tuning that deviates from the section default.
+const OVERRIDES: Record<string, Rule> = {
+  // Hubs and conversion surfaces
+  '/about-us': { priority: 0.6, changeFrequency: 'monthly' },
+  '/contact': { priority: 0.6, changeFrequency: 'monthly' },
+  '/book-consultation': { priority: 0.9, changeFrequency: 'weekly' },
+  '/reviews': { priority: 0.8, changeFrequency: 'weekly' },
+  '/before-after': { priority: 0.7, changeFrequency: 'weekly' },
+  '/turkey-teeth-before-after': { priority: 0.8, changeFrequency: 'weekly' },
+  '/guides': { priority: 0.9, changeFrequency: 'weekly' },
+  '/treatments': { priority: 0.9, changeFrequency: 'weekly' },
+  '/blog': { priority: 0.7, changeFrequency: 'daily' },
+
+  // Head-term money pages
+  '/guides/teeth-in-turkey': { priority: 0.95, changeFrequency: 'monthly' },
+  '/guides/turkey-teeth-veneers-or-crowns': { priority: 0.95, changeFrequency: 'monthly' },
+  '/prices/turkey-teeth-cost': { priority: 0.95, changeFrequency: 'monthly' },
+  '/turkey-teeth-clinic': { priority: 0.9, changeFrequency: 'weekly' },
+
+  // Finance / affordability cluster — commercial intent, refreshed often
+  '/monthly-payment': { priority: 0.85, changeFrequency: 'weekly' },
+  '/finance-options-uk': { priority: 0.85, changeFrequency: 'weekly' },
+  '/free-treatment-plan': { priority: 0.85, changeFrequency: 'weekly' },
+  '/price-calculator': { priority: 0.85, changeFrequency: 'weekly' },
+
+  // Standalone guides
+  '/teeth-done-in-turkey-guide': { priority: 0.8, changeFrequency: 'monthly' },
+  '/teeth-done-in-turkey-problems': { priority: 0.75, changeFrequency: 'monthly' },
+  '/why-choose-turkey-for-dental-work': { priority: 0.7, changeFrequency: 'monthly' },
+
+  // Blog posts that outperform their cluster default
+  '/blog/turkey-teeth-reviews': { priority: 0.8, changeFrequency: 'weekly' },
+  '/blog/turkey-teeth-explained': { priority: 0.8, changeFrequency: 'monthly' },
+  '/blog/full-mouth-implants-uk-vs-turkey': { priority: 0.9, changeFrequency: 'weekly' },
+  '/blog/veneers-turkey-cost-uk-vs-turkey': { priority: 0.75, changeFrequency: 'monthly' },
+  '/blog/is-it-safe-to-get-teeth-done-in-turkey': { priority: 0.75, changeFrequency: 'monthly' },
+  '/blog/best-dental-clinics-turkey': { priority: 0.75, changeFrequency: 'monthly' },
+  '/blog/risks-of-turkey-teeth': { priority: 0.75, changeFrequency: 'monthly' },
+  '/blog/will-uk-dentists-fix-turkey-teeth': { priority: 0.75, changeFrequency: 'monthly' },
+  '/blog/implants-cost-uk-vs-turkey': { priority: 0.75, changeFrequency: 'monthly' },
+  '/blog/hollywood-smile-uk-vs-turkey': { priority: 0.75, changeFrequency: 'monthly' },
+  '/blog/dental-implant-recovery-time': { priority: 0.65, changeFrequency: 'monthly' },
+  '/blog/signs-of-dental-implant-failure': { priority: 0.65, changeFrequency: 'monthly' },
+  '/blog/dental-tourism-finance-explained': { priority: 0.65, changeFrequency: 'monthly' },
+  '/blog/dental-holiday-packages-turkey': { priority: 0.65, changeFrequency: 'monthly' },
+  '/blog/4-8-10-rule-for-veneers': { priority: 0.6, changeFrequency: 'monthly' },
+};
+
+function ruleFor(route: string): Rule {
+  return OVERRIDES[route] ?? SECTION_RULES.find(({ match }) => match(route))?.rule ?? DEFAULT_RULE;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map(({ path, priority, changeFrequency }) => ({
-    url: `${BASE}${path}`,
-    lastModified: LAST_MODIFIED,
-    changeFrequency,
-    priority,
-  }));
+  return Object.entries(manifest.routes).map(([route, { lastmod }]) => {
+    const { priority, changeFrequency } = ruleFor(route);
+    return {
+      // The home route is stored as "/" but canonicalised without a trailing slash.
+      url: route === '/' ? BASE : `${BASE}${route}`,
+      lastModified: new Date(lastmod),
+      changeFrequency,
+      priority,
+    };
+  });
 }
