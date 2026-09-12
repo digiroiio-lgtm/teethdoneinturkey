@@ -111,7 +111,7 @@ export default function WhyChooseTurkeyPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">8. UK-Based Patient Support</h2>
             <p className="text-gray-600">
-              Choosing dental treatment abroad can feel daunting, which is why Teeth Done in Turkey provides a dedicated UK-based team to guide you from your first enquiry through to your return home. We handle clinic matching, appointment booking, travel advice, finance options, and post-treatment follow-up. You have a single point of contact throughout your journey.
+              Choosing dental treatment abroad can feel daunting, which is why Teeth Done in Turkey provides a dedicated UK-based team to guide you from your first enquiry through to your return home. We handle clinic matching, appointment booking, travel advice, finance options — including <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">paying monthly for a Turkey teeth package</Link> — and post-treatment follow-up. You have a single point of contact throughout your journey.
             </p>
           </div>
 

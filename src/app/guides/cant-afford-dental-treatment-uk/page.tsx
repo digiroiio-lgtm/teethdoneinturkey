@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     question: "Can I get 0% finance for dental implants or veneers?",
-    answer: "0% representative APR finance is available for treatment booked through this site, typically from £82/month over 12, 24 or 36 months, covering veneers, implants, All-on-4/All-on-6 and full smile makeovers. Eligibility depends on an affordability and credit assessment; a soft-search pre-qualification check lets you see an indicative decision without it appearing on your credit file.",
+    answer: "0% representative APR finance is available for treatment booked through this site, typically from £53/month over 12, 24 or 36 months, covering veneers, implants, All-on-4/All-on-6 and full smile makeovers. Eligibility depends on an affordability and credit assessment; a soft-search pre-qualification check lets you see an indicative decision without it appearing on your credit file.",
   },
   {
     question: "What if I have a poor credit history? Can I still get dental finance?",
@@ -132,7 +132,7 @@ export default function CantAffordDentalTreatmentUKPage() {
             items={[
               "NHS charges in England are fixed at £27.90, £76.60 or £306.80 per course of treatment (from 1 April 2026), but veneers, whitening and (in almost all cases) implants are not covered.",
               "UK private dental prices for implants and veneers are frequently several times the NHS charge, which is why payment plans and finance exist for private work.",
-              "0% representative APR finance from £82/month is one way to spread a UK-priced quote or a Turkey treatment plan.",
+              "0% representative APR finance from £53/month is one way to spread a UK-priced quote or a Turkey treatment plan.",
               "The same implant and veneer brands used in UK practices are typically 65 to 90 percent cheaper in Turkey, even after flights and accommodation.",
               "No dental finance option should ever promise guaranteed approval. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
             ]}
@@ -153,7 +153,7 @@ export default function CantAffordDentalTreatmentUKPage() {
 
           <h2 id="payment-plans" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Dental Payment Plans</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A dental payment plan lets you spread a specific treatment&apos;s cost over fixed monthly instalments instead of paying the full amount upfront. For treatment booked through this site, 0% representative APR finance is available from £82/month over 12, 24 or 36 months, with a soft-search pre-qualification step that will not affect your credit score. See{" "}
+            A dental payment plan lets you spread a specific treatment&apos;s cost over fixed monthly instalments instead of paying the full amount upfront. For treatment booked through this site, 0% representative APR finance is available from £53/month over 12, 24 or 36 months, with a soft-search pre-qualification step that will not affect your credit score. See{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">Monthly Payment</Link>{" "}
             for treatment-by-treatment monthly figures.
           </p>
@@ -234,7 +234,7 @@ export default function CantAffordDentalTreatmentUKPage() {
           title="Related Pages"
           links={[
             { title: "Dental Finance Options UK", desc: "0% representative APR finance, eligibility and how pre-qualification works.", href: "/finance-options-uk" },
-            { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, from £82/month.", href: "/monthly-payment" },
+            { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, from £53/month.", href: "/monthly-payment" },
             { title: "Price Calculator", desc: "Build a personalised estimate across multiple treatments.", href: "/price-calculator" },
             { title: "Teeth in Turkey: Complete UK Patient Guide", desc: "The full process, safety and clinic evaluation guide.", href: "/guides/teeth-in-turkey" },
           ]}

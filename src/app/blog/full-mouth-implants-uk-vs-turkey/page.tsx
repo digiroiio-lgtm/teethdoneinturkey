@@ -458,7 +458,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             { title: "All-on-6 Turkey", desc: "Full-arch restoration on 6 implants, from £5,600 per arch.", href: "/treatments/all-on-6-turkey" },
             { title: "All-on-6 Package Breakdown", desc: "What the £5,600 all-inclusive package actually covers.", href: "/prices/all-on-6-dental-implants-turkey-package" },
             { title: "Dental Implants Turkey Cost", desc: "Single-implant prices by brand, and add-on costs.", href: "/prices/dental-implants-turkey-cost" },
-            { title: "Monthly Payment Plans", desc: "Monthly figures for every treatment, from £82/month.", href: "/monthly-payment" },
+            { title: "Monthly Payment Plans", desc: "Monthly figures for every treatment, from £53/month.", href: "/monthly-payment" },
             { title: "Dental Finance UK", desc: "Payment plans, dental loans and what bad credit means.", href: "/finance-options-uk" },
           ]}
         />

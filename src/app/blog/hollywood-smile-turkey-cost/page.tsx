@@ -114,8 +114,11 @@ export default function HollywoodSmilePage() {
           <p>For a like-for-like breakdown against UK private pricing — what each quote includes, and where the difference actually comes from — see our <Link href="/blog/hollywood-smile-uk-vs-turkey" className="text-[#1e40af] hover:underline font-semibold">Hollywood Smile cost comparison: UK vs Turkey</Link>.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Pay Monthly for Your Hollywood Smile</h2>
-          <p>A Hollywood Smile in Turkey (20 zirconia crowns), financed over 36 months, costs from approximately £78/month — making a genuinely transformative treatment accessible at a fraction of UK costs.</p>
-          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
+          <p>A Hollywood Smile in Turkey (20 zirconia crowns) at £2,800, financed over 36 months at 0% APR representative, works out at approximately £78/month, or £117/month over 24 months. Finance is subject to a credit check and the lender&apos;s approval; approval is not guaranteed and not everyone will qualify.</p>
+          <ul className="space-y-1 text-sm my-3">
+            <li><Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] hover:underline font-semibold">→ How paying monthly for a Turkey teeth package works</Link></li>
+            <li><Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link></li>
+          </ul>
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
             <p className="font-bold text-xl mb-2">Get your Hollywood Smile quote</p>

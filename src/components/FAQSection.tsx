@@ -18,7 +18,7 @@ const defaultFaqs: FAQItem[] = [
   },
   {
     question: 'Can I pay monthly for dental treatment?',
-    answer: 'Yes, we offer monthly payment plans starting from £82/month. Plans are available over 12, 24, or 36 months. You can pre-qualify online in under 60 seconds with no impact on your credit score.',
+    answer: 'Yes. Monthly payment plans run over 12, 24 or 36 months at 0% APR representative, starting from around £53/month for 10 E-max veneers and £78/month for a 20-crown Hollywood Smile package over 36 months. An eligibility check uses a soft search, so it does not affect your credit score. Finance is subject to a credit check and to the lender\'s approval — approval is not guaranteed and not everyone will qualify.',
   },
   {
     question: 'How long do I need to stay in Turkey?',

@@ -105,7 +105,7 @@ export default function TeethDoneInTurkeyGuidePage() {
                 { icon: "🦷", title: "Same Brand Materials", desc: "Ivoclar E-max veneers, Straumann implants, Nobel Biocare — same as top UK practices." },
                 { icon: "🌍", title: "Expert Dentists", desc: "Many Turkish dentists trained in Europe or the USA with specialist aesthetic certifications." },
                 { icon: "🗓️", title: "No Waiting Lists", desc: "Appointments within days. Compare to months or years on UK NHS waiting lists." },
-                { icon: "💳", title: "Monthly Payment", desc: "Spread costs from £82/month over 12, 24, or 36 months. 0% options available." },
+                { icon: "💳", title: "Monthly Payment", desc: "Spread costs from £53/month over 12, 24 or 36 months at 0% APR representative." },
               ].map(item => (
                 <div key={item.title} className="flex gap-3 bg-gray-50 rounded-xl p-4 border border-gray-200">
                   <span className="text-2xl flex-shrink-0">{item.icon}</span>
@@ -270,7 +270,7 @@ export default function TeethDoneInTurkeyGuidePage() {
                 {[
                   { term: "12 months", monthly: "£282/mo", example: "Veneers £3,800" },
                   { term: "24 months", monthly: "£158/mo", example: "Implants package" },
-                  { term: "36 months", monthly: "£82/mo", example: "Smile makeover" },
+                  { term: "36 months", monthly: "£106/mo", example: "Smile makeover (20 E-max veneers, £3,800)" },
                 ].map(item => (
                   <div key={item.term} className="bg-white rounded-xl p-3">
                     <p className="text-xs text-gray-500">{item.term}</p>
@@ -315,7 +315,7 @@ export default function TeethDoneInTurkeyGuidePage() {
                 { href: "/treatments/all-on-4-turkey", label: "All-on-4 Implants", desc: "Full arch from £4,500" },
                 { href: "/treatments/all-on-6-turkey", label: "All-on-6 Implants", desc: "Full arch from £5,600" },
                 { href: "/treatments/full-smile-makeover-turkey", label: "Smile Makeover", desc: "Complete transformation" },
-                { href: "/monthly-payment", label: "Monthly Payment", desc: "From £82/month" },
+                { href: "/monthly-payment", label: "Monthly Payment", desc: "From £53/month" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-[#1e40af] hover:shadow-sm transition-all group">
                   <p className="font-bold text-gray-900 group-hover:text-[#1e40af] text-sm">{item.label}</p>

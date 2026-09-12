@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const posts = [
   // Finance cluster (growth hack - highlighted)
-  { href: "/blog/can-you-pay-monthly-for-teeth-in-turkey", title: "Can You Pay Monthly for Teeth in Turkey?", excerpt: "Yes — spread the cost of dental treatment in Turkey from £82/month with UK-based finance plans.", date: "January 2026", tag: "Finance" },
+  { href: "/blog/can-you-pay-monthly-for-teeth-in-turkey", title: "Can You Pay Monthly for Teeth in Turkey?", excerpt: "Yes — packages and treatments from £78/month at 0% APR representative, with deposits and eligibility explained.", date: "January 2026", tag: "Finance" },
   { href: "/blog/dental-treatment-turkey-payment-plans", title: "Dental Treatment Turkey Payment Plans", excerpt: "How payment plans work for Turkey dental treatment. Everything UK patients need to know about spreading costs.", date: "January 2026", tag: "Finance" },
   { href: "/blog/finance-dental-implants-turkey-uk-patients", title: "Finance Dental Implants Turkey – UK Patient Guide", excerpt: "How to finance dental implants in Turkey. Monthly options from £54/month for single implants.", date: "January 2026", tag: "Finance" },
   { href: "/blog/dental-tourism-finance-explained", title: "Dental Tourism Finance Explained", excerpt: "A complete guide to funding dental treatment abroad — monthly plans, loans, 0% credit, and which to choose.", date: "January 2026", tag: "Finance" },

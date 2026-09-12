@@ -26,7 +26,7 @@ const options = [
     name: "36-Month Plan",
     badge: "Most Popular",
     rate: "0% APR representative",
-    monthly: "From £82/mo",
+    monthly: "From £53/mo",
     desc: "Spread the full cost over 3 years with nothing extra to pay. Our most popular option for larger treatments.",
     best: "Full smile makeovers, All-on-4, All-on-6",
   },
@@ -162,7 +162,7 @@ export default function FinanceOptionsUKPage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Finance in the UK: Loans, Plans and Monthly Costs</h1>
-          <p className="text-xl text-blue-200">How UK dental finance works, what each treatment costs per month, and where you stand if your credit is poor. 0% APR plans from £82/month.</p>
+          <p className="text-xl text-blue-200">How UK dental finance works, what each treatment costs per month, and where you stand if your credit is poor. 0% APR representative plans from £53/month.</p>
         </div>
       </div>
 

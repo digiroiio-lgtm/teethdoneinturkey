@@ -95,6 +95,7 @@ export default function TurkeyTeethExplainedPage() {
               <li><Link href="/blog/is-it-safe-to-get-teeth-done-in-turkey" className="text-[#1e40af] hover:underline">→ Is it safe to get teeth done in Turkey?</Link></li>
               <li><Link href="/blog/risks-of-veneers-in-turkey" className="text-[#1e40af] hover:underline">→ Risks of veneers in Turkey</Link></li>
               <li><Link href="/blog/uk-dentist-vs-turkey-dentist" className="text-[#1e40af] hover:underline">→ UK dentist vs Turkey dentist comparison</Link></li>
+              <li><Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] hover:underline">→ Can you pay monthly for a Turkey teeth package?</Link></li>
             </ul>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-200">

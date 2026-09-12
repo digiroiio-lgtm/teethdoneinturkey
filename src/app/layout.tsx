@@ -22,7 +22,7 @@ const SITE_NAME = "Teeth Done in Turkey";
 const DEFAULT_TITLE =
   "Turkey Teeth: Veneers & Implants | Teeth Done in Turkey";
 const DEFAULT_DESC =
-  "Turkey teeth for UK patients: veneers from £190/tooth, implants from £250. JCI-accredited clinics, 0% finance from £82/mo. Save up to 70% vs UK.";
+  "Turkey teeth for UK patients: veneers from £190/tooth, implants from £250. JCI-accredited clinics, 0% APR rep. finance from £53/mo. Save up to 70% vs UK.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

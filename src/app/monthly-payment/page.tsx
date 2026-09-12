@@ -265,7 +265,7 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Why UK Patients Choose Dental Finance for Turkey Treatments</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Over 2,500 UK patients have used our finance options to access dental treatment in Turkey. The most common feedback is that the monthly payment makes the decision straightforward: instead of saving for years or going without, patients can book treatment this month and start paying as little as £82/month.
+              Over 2,500 UK patients have used our finance options to access dental treatment in Turkey. The most common feedback is that the monthly payment makes the decision straightforward: instead of saving for years or going without, patients can book treatment this month and spread it from as little as £53/month over 36 months at 0% APR representative, subject to a credit check and the lender&apos;s approval.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[

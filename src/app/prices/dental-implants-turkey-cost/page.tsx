@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "Are Turkish dental implants guaranteed?", a: "Yes. Our partner clinics provide written guarantees of 5–10 years on all implant work. This covers the implant itself and the crown." },
-  { q: "Can I get implants on finance?", a: "Yes. We offer monthly payment plans from £82/month, allowing UK patients to spread the cost of their treatment over 12, 24, or 36 months." },
+  { q: "Can I get implants on finance?", a: "Yes. Implant treatment can be spread over 12, 24 or 36 months at 0% APR representative. On this site's published prices, All-on-4 on one arch at £4,500 works out at roughly £125/month over 36 months and All-on-6 at £5,600 at £156/month; a single implant is a much smaller sum again. Finance is subject to a credit check and to the lender's approval — approval is not guaranteed and not everyone will qualify." },
   { q: "What happens if something goes wrong after I return home?", a: "Our UK team provides ongoing support, and our partner clinics are available via WhatsApp and video call for follow-up. Any issues covered under guarantee will be addressed at no additional cost." },
 ];
 

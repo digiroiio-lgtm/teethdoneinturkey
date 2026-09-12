@@ -7,6 +7,225 @@ rewritten again.
 
 ---
 
+## 2026-09-12 (pay-monthly cluster — the packages answer, and a false £82 claim)
+
+Yesterday's two runs touched `/prices/turkey-teeth-cost`, `/guides/turkey-teeth-cost`,
+`/finance-options-uk`, `/monthly-payment` and
+`/blog/full-mouth-implants-uk-vs-turkey`. All five were therefore **off limits for
+repositioning today** under the settle rule — roughly 30 hours of data is not a
+verdict. Today's page had not had its content changed since 2026-09-03 (only a link
+repoint on 09-11), so it could be worked without breaking that rule.
+
+### Search Console — 2026-09-05..09-11
+
+Daily impressions 50 → 121 → 204 → 348 → 160 → 219 → 58. 4 clicks. Query-level CTR
+still unreadable: all 4 clicks sit in the `(unknown)` aggregation row at position 0,
+so this run is still position-led, not CTR-led. **This is the eighth consecutive run
+with no readable click data and no GA4 conversions ever recorded** — see "still open"
+below.
+
+Pages by impressions, with average position — the ranking picture, not the volume
+picture, is what matters here:
+
+| URL | Impr | Avg pos |
+|---|---|---|
+| /prices/turkey-teeth-cost | 153 | 36.4 |
+| /guides/turkey-teeth-cost (now a 308) | 145 | 66.8 |
+| /blog/turkey-teeth-explained | 101 | 36.1 |
+| /finance-options-uk | 100 | 50.1 |
+| **/blog/can-you-pay-monthly-for-teeth-in-turkey** | **87** | **10.3** |
+| /blog/full-mouth-implants-uk-vs-turkey | 80 | 25.5 |
+
+**The 09-11 cost-merge reversal is working.** `/prices/turkey-teeth-cost` now holds
+position 1 on "how much does it cost to get my teeth done in turkey", "how much does
+it cost to have teeth done in turkey" and "turkey teeth average cost", position 3 on
+"dental implants turkey cost", and took the only query-attributed click of the week.
+The guide URL it was merged back out of sits at 66.8. Reversing that merge was right.
+Do not revisit it.
+
+### The packages head-to-head the 09-11 run asked for — answered, and it says don't build
+
+Last run's instruction was: *before creating `/packages/turkey-teeth-packages`,
+establish which of the five current URLs Google actually prefers on `turkey teeth
+packages`.* Day-level data answers it, and the answer is not the one the roadmap
+expects.
+
+`turkey teeth packages` (the head term), by day:
+
+| Date | URLs served | Positions |
+|---|---|---|
+| 09-06 | 3 (/blog/turkey-teeth-explained, /guides/turkey-teeth-cost, /why-choose-turkey-for-dental-work) | 11, 80.5, 7.5 |
+| 09-07 | 2 (/free-treatment-plan, /guides/turkey-teeth-cost) | 100, 87 |
+| 09-08 | 3 (/free-treatment-plan, /guides/turkey-teeth-cost, /prices/turkey-teeth-cost) | 99.5, 84, 73 |
+| 09-09 → 09-11 | **none — the site stopped being served on this query entirely** | — |
+
+Google tried five URLs in three days, none of which is a packages page, and then
+dropped the site off the query. That is the signature of an intent **no page owns**,
+not of a page waiting to be built: the two URLs that ranked well (7.5 and 11) did so
+with no package content at all, which is why they did not hold.
+
+Meanwhile the packages query that *persists* is the hybrid:
+
+| Query | 09-08 | 09-09 | 09-10 | URL |
+|---|---|---|---|---|
+| turkey teeth packages **pay monthly** | 3 @ 10.7 | 1 @ 11.0 | 3 @ 11.3 | /prices/turkey-teeth-cost |
+| turkey teeth packages **pay monthly** | 1 @ 9.0 | — | 1 @ 11.0 | /blog/can-you-pay-monthly-for-teeth-in-turkey |
+
+Three consecutive days, stable at 9–11, converging on two URLs that both already
+exist. Related and same shape: `turkey dental packages 2026 what uk patients get`
+(9.0), `what uk patients get from turkey dental packages` (11.0), `turkey teeth cost
+pay monthly` (9.5), `full mouth implants cost package deals in turkey` (13.0).
+
+**Decision: NEW PAGE rejected, MERGE-AVOID taken.** The packages demand this domain
+actually earns is packages × pay-monthly, and it already has owners. Adding a sixth
+URL to a query Google has just stopped serving, in order to chase the generic head
+term, is the 09-08 "move demand to the URL we prefer" mistake in a new costume. The
+packages priority was instead **folded into today's action** rather than deferred.
+
+### Today's action — OPTIMISE EXISTING, /blog/can-you-pay-monthly-for-teeth-in-turkey
+
+Chosen because it is the best position/volume combination on the property and the
+decision hierarchy's first two items at once (positions 4–20; finance). Its whole
+query family is pinned to the bottom of page 1:
+
+| Query | Impr | Pos |
+|---|---|---|
+| pay monthly turkey teeth | 8 | 11.3 |
+| pay monthly teeth turkey | 7 | 11.1 |
+| turkey teeth pay monthly | 7 | 10.4 |
+| turkey teeth packages pay monthly | 2 | 10.0 |
+| can you get your teeth done in turkey on finance | 5 | 10.4 |
+| can you pay monthly for turkey teeth | 4 | 6.8 |
+| turkey teeth monthly payments | 2 | 11.0 |
+| can you get turkey teeth on a payment plan | 1 | 11.0 |
+| veneers turkey pay monthly | 1 | 11.0 |
+
+~42 impressions at average 10.3 on one 700-word page. Moving 11 → 8 is where the
+first real clicks on this property come from.
+
+- **Title.** `Monthly Payment for Teeth in Turkey` → `Pay Monthly for Turkey Teeth:
+  UK Finance 2026` (44 chars, absolute so the layout suffix cannot truncate it).
+  "Monthly payment" appears in **none** of the recorded queries; every one uses "pay
+  monthly" + "turkey teeth". Description rebuilt at 152 chars.
+- **H1 deliberately unchanged.** "Can You Pay Monthly for Teeth in Turkey?" is the
+  exact match for the page's best-positioned query (6.8). Protected, not reset.
+- **New section answering the packages intent** — "Can You Pay Monthly for a Turkey
+  Teeth Package?", with an explicit included/not-included split (hotel, VIP
+  transfers, smile design vs **flights, extra nights, bone graft, sinus lift, extra
+  units**) and the point that what sits outside the package sits outside the
+  financed amount. This is the content the 10–11 placements were ranking without.
+- **Monthly table rebuilt.** Two rows carried prices that match nothing published on
+  this site — a "£650 single implant" (site publishes £250 Osstem to £930 Straumann)
+  and a "£5,000 smile makeover" (site publishes from £3,500). Both removed rather
+  than reconciled to an invented figure. Added the three real package products
+  (£2,800/20 crowns, £3,100/24 crowns, £5,600 All-on-6). All seven rows now agree
+  row-for-row with `/monthly-payment`.
+- **YMYL rewrite (the substantive part).** The page previously carried "Apply in 60
+  seconds", "Instant decision", a "Pre-Qualify Now" CTA pointing at a *consultation*
+  form, and a bad-credit FAQ reading "we work with specialist lenders who consider
+  all profiles" — which reads as near-universal acceptance. Replaced with: 0% APR
+  representative stated as a representative rate (with the 51% rule explained),
+  credit-check-and-lender-approval wording, "approval is not guaranteed and not
+  everyone will qualify", soft vs hard search, deposits, total repayable, and a
+  labelled **Example Treatment Scenario** (£2,800 package, £500 deposit, £2,300
+  financed over 6/12/18/24/36 months). CTA now points at `/free-treatment-plan` and
+  asks for a quote, which is what it actually does.
+- **Cannibalisation guard.** Bad-credit content deliberately kept thin here and
+  handed to `/finance-options-uk`, which owns `teeth on finance bad credit` at 7.6.
+  This page is not allowed to become a third contender on that query.
+- Added KeyTakeaways, TOC, 10 FAQs + **FAQPage schema (the page had none)**,
+  SourcesList, `dateModified`. Article + BreadcrumbList + FAQPage verified
+  server-rendered against a production build.
+
+### The £82 claim: a false figure on 24 surfaces, traced to its root
+
+Chasing the page's own figures surfaced a site-wide problem. `MonthlyPaymentTable`
+— which renders on the **homepage, `/finance-options-uk` and `/monthly-payment`** —
+contained:
+
+    { treatment: 'Veneers Package (10 veneers)', total: '£2,800',
+      monthly36: '£82/month', monthly24: '£122/month' }
+
+Every number in that row is wrong. Ten E-max veneers are £1,900 at the site's own
+£190/tooth; £2,800 is the 20-crown Hollywood Smile package price, not a 10-veneer
+price; and neither £82 nor £122 is £2,800 (or £1,900) divided by 36 or 24. The row
+also duplicated All-on-4 under a second name ("Implants Package (single arch)", same
+£4,500). That row is the origin of the "from £82/month" claim, which had propagated
+to **24 places across 18 files**, including the homepage and llms.txt.
+
+Fixed at the root and at every propagation site, with **context-appropriate** values
+rather than a blind find-and-replace: £53/month (10 E-max veneers, the genuine
+site-wide floor) for generic claims, £78 for the 20-crown package, £106 for a 20-
+veneer makeover, £125 for All-on-4, £156 for All-on-6. Also added the standard APR /
+eligibility / approval disclaimer beneath the shared table, and relabelled its
+"Pre-Qualify in 60 Seconds" button — it links to an information page, not a lender.
+
+This was a factual correction, not a repositioning, which is why it was allowed to
+touch pages that are otherwise settling. No ranking copy, title, H1 or URL on any
+of those pages was changed.
+
+### Internal linking
+
+| Source | Target | Anchor |
+|---|---|---|
+| /blog/hollywood-smile-turkey-cost | /blog/can-you-pay-monthly-for-teeth-in-turkey | how paying monthly for a Turkey teeth package works |
+| /prices/veneers-turkey-cost | " | how paying monthly for Turkey teeth works |
+| /why-choose-turkey-for-dental-work | " | paying monthly for a Turkey teeth package |
+| /blog/turkey-teeth-explained | " | can you pay monthly for a Turkey teeth package? |
+| MonthlyPaymentTable (homepage, /finance-options-uk, /monthly-payment) | " | how paying monthly for Turkey teeth works |
+| new page → | /prices/turkey-teeth-cost#full-mouth-packages, /blog/hollywood-smile-turkey-cost, /finance-options-uk, /monthly-payment, /free-treatment-plan | descriptive |
+
+Inbound links to the target went from 3 to 7 plus the shared table. The two blog
+sources were picked because they are the URLs Google served on `turkey teeth
+packages` at 11.0 and 7.5 — the packages demand is routed to the page that now
+answers it, instead of a sixth new URL competing for it.
+
+### Technical health check
+
+69 sitemap URLs, **every one verified 200** against a production build. Full crawl
+of all 69 pages, 73 distinct targets: **0 broken links, 0 links pointing at a
+redirect, 0 orphan pages**. Title 44 chars, description 152 — no truncation.
+`£82` no longer appears anywhere in the rendered site. typecheck clean, lint clean
+(same 2 pre-existing warnings), build clean.
+
+### What to check next run
+
+1. **Did the retitle move the pay-monthly family off 10–11?** Watch `pay monthly
+   turkey teeth` (11.3), `pay monthly teeth turkey` (11.1), `turkey teeth pay
+   monthly` (10.4) and `turkey teeth packages pay monthly` (10.0). **Do not touch
+   this page again before ~2 weeks.** If it does not move, the next hypothesis is
+   competing-page depth, not another title change.
+2. **Packages: re-run the day-level head-to-head before building anything.** If
+   `turkey teeth packages` stays absent from the SERP while the pay-monthly hybrid
+   keeps earning, the answer stays "no new page". Only build
+   `/packages/turkey-teeth-packages` if the head term returns *and* settles on one
+   URL that cannot serve the intent.
+3. **`/monthly-payment` has zero impressions this week** while
+   `/blog/can-you-pay-monthly-for-teeth-in-turkey` earns 87 at position 10.3. Same
+   function, same queries, one suppressed — the same shape as the two pairs already
+   merged. **Not acted on today** (it would be a second change in the cluster on the
+   same day, and it carries the shared table). Strongest merge candidate next run;
+   check its lifetime impressions first, as the 09-08 mistake teaches.
+4. **Finance cannibalisation, now that 09-11 has had time to settle.** `teeth on
+   finance bad credit` still splits `/finance-options-uk` (15 @ 7.6) and
+   `/blog/dental-tourism-finance-explained` (7 @ 8.1); `pay monthly turkey teeth`
+   splits three ways. Decide an owner per query rather than rewriting pages again.
+5. `/why-choose-turkey-for-dental-work` is a quiet performer nobody has looked at:
+   17 impressions at **average position 14.1**, including `cost of turkey teeth` at
+   **2.0** and `teeth turkey cost` at 3.0. Worth a proper read next run.
+6. **Still open, and now eight runs old: 0 GA4 conversions ever recorded and no
+   query-level click attribution.** Every prioritisation here remains position-led
+   because there is no business-value signal to prioritise on. This is the single
+   biggest blocker to the whole exercise and it is not an SEO fix.
+7. Unverified claim left in place, flagged not changed: `/monthly-payment` states
+   "Over 2,500 UK patients have used our finance options". Unsupportable from
+   anything in the repo, but the owner may have a basis for it — it needs a human
+   decision, not a silent deletion.
+8. `next lint` is deprecated and removed in Next 16; `package.json` still uses it.
+   Not an SEO task, but it will break CI on the next major upgrade.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and
