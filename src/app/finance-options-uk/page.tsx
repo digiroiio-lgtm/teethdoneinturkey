@@ -206,6 +206,12 @@ export default function FinanceOptionsUKPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Monthly Payment Examples</h2>
             <MonthlyPaymentTable />
+            <p className="text-sm text-gray-500 mt-4">
+              If the treatment you are pricing is in Turkey, our guide to{" "}
+              <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">paying monthly for Turkey teeth</Link>{" "}
+              works the same figures through a full example — deposit, balance, term and total repayable — and covers
+              how package prices are financed.
+            </p>
           </div>
 
           <div>

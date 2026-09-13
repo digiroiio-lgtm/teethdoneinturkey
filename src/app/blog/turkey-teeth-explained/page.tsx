@@ -75,6 +75,9 @@ export default function TurkeyTeethExplainedPage() {
             <li>Confirm which veneer material is being used (E-max or zirconia for best results)</li>
             <li>Don&apos;t select based on price alone — a saving of £50/tooth is not worth compromising quality</li>
           </ol>
+          <p>That last point is where budget usually bites, because the cheapest quote is the easiest one to justify when the whole amount is due upfront. It is worth knowing that a better-quality plan does not have to be paid in one go: UK patients can{" "}
+            <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">spread the cost over 12 to 36 months</Link>{" "}
+            with finance arranged in the UK before travelling, which makes choosing on quality rather than on the lowest headline price a more realistic decision.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">The Reality in 2026</h2>
           <p>Turkey&apos;s dental tourism industry has matured significantly. The clinics that have survived and grown are those that deliver consistent, high-quality results — because in an era of social media and Google reviews, poor outcomes destroy reputations quickly. The industry leaders are investing in the best technology, training, and materials to compete on quality, not just price.</p>
