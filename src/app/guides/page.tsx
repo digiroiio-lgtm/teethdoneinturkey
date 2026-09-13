@@ -124,6 +124,42 @@ const guides = [
     updated: "13 September 2026",
     href: "/guides/antalya-teeth-prices",
   },
+  {
+    category: "Destination",
+    title: "Turkey Teeth Antalya: The Complete UK Patient Guide",
+    description:
+      "What it is actually like to go to Antalya for dental treatment — why UK patients choose it, the patient journey day by day, clinic selection, hotels, travel logistics and recovery.",
+    readingTime: "15 min",
+    updated: "13 September 2026",
+    href: "/guides/turkey-teeth-antalya",
+  },
+  {
+    category: "Treatment",
+    title: "Best Veneers in Turkey: E-max vs Zirconia vs Composite Compared",
+    description:
+      "Which veneer type gives the most natural result, requires least tooth preparation and offers the best value — with a full comparison table and how to choose the right dentist.",
+    readingTime: "12 min",
+    updated: "13 September 2026",
+    href: "/guides/best-veneers-turkey",
+  },
+  {
+    category: "Cost & Finance",
+    title: "Veneers Turkey Packages: What Is Included and What Does It Really Cost?",
+    description:
+      "Treatment-only vs veneer package vs total trip cost — exactly what Turkey veneer packages include, what they leave out, and what to confirm before booking.",
+    readingTime: "9 min",
+    updated: "13 September 2026",
+    href: "/guides/veneers-turkey-packages",
+  },
+  {
+    category: "Treatment",
+    title: "Turkish Veneers Safety: Risks, Red Flags and How to Stay Safe",
+    description:
+      "Are Turkish veneers safe? This guide covers why problems happen, the risks of excessive tooth preparation, lab quality, dentist experience, and how to protect yourself.",
+    readingTime: "11 min",
+    updated: "13 September 2026",
+    href: "/guides/turkish-veneers-safety",
+  },
 ];
 
 const breadcrumbJsonLd = {

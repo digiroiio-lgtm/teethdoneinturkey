@@ -53,6 +53,13 @@ const OVERRIDES: Record<string, Rule> = {
   '/prices/turkey-teeth-cost': { priority: 0.95, changeFrequency: 'monthly' },
   '/turkey-teeth-clinic': { priority: 0.9, changeFrequency: 'weekly' },
 
+  // Batch 2 destination and veneer cluster — elevated priority for head-term quality
+  '/guides/turkey-teeth-antalya': { priority: 0.95, changeFrequency: 'monthly' },
+  '/guides/best-veneers-turkey': { priority: 0.92, changeFrequency: 'monthly' },
+  '/guides/turkish-veneers-safety': { priority: 0.9, changeFrequency: 'monthly' },
+  '/guides/veneers-turkey-packages': { priority: 0.9, changeFrequency: 'monthly' },
+  '/prices/veneers-antalya-cost': { priority: 0.92, changeFrequency: 'monthly' },
+
   // Finance / affordability cluster — commercial intent, refreshed often
   '/monthly-payment': { priority: 0.85, changeFrequency: 'weekly' },
   '/finance-options-uk': { priority: 0.85, changeFrequency: 'weekly' },
