@@ -290,7 +290,10 @@ export default function FinanceOptionsUKPage() {
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">Can&apos;t Afford Dental Treatment in the UK guide</Link>.
               {" "}If you&apos;d rather see every funding route set out side by side — payment plans, personal loans, 0% credit cards and saving up — our{" "}
               <Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] font-semibold hover:underline">dental tourism finance explained guide</Link>{" "}
-              compares them in full.
+              compares them in full. If your treatment is specifically in Turkey, the mechanics differ slightly because
+              the clinic cannot lend to you — see{" "}
+              <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">whether you can pay monthly for Turkey teeth</Link>{" "}
+              for how the UK agreement and the Turkish treatment fit together.
             </p>
           </div>
 

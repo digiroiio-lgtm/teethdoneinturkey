@@ -140,6 +140,12 @@ export default function TurkeyTeethPackagesPage() {
             For a full breakdown of everything you actually spend from door to door, see{" "}
             <Link href="/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey" className="text-[#1e40af] font-semibold hover:underline">How Much Does It Cost to Get Your Teeth Done in Turkey?</Link>
           </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Whichever of those three figures you are working from, it is also the figure you would be financing. For
+            what each package works out at per month over 12, 24 and 36 months, and what a lender will and will not
+            take into account, see{" "}
+            <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">paying monthly for a Turkey teeth package</Link>.
+          </p>
 
           <h2 id="whats-included" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What Is Usually Included in a Turkey Dental Package?</h2>
           <p className="text-gray-700 leading-relaxed mb-4">

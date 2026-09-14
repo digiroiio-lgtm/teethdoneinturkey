@@ -159,7 +159,9 @@ export default function MonthlyPaymentPage() {
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">what to do if you cannot afford dental treatment in the UK</Link>.
               {" "}Want to see this plan set against a personal loan, a 0% credit card or simply saving up? Our guide to{" "}
               <Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] font-semibold hover:underline">funding dental treatment abroad</Link>{" "}
-              lays out every option side by side.
+              lays out every option side by side. If you are still at the stage of asking whether this is possible at
+              all rather than what it costs, start with{" "}
+              <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">can you pay monthly for Turkey teeth</Link>.
             </p>
           </div>
 

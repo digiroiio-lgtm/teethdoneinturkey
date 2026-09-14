@@ -99,21 +99,21 @@ const guides = [
   },
   {
     category: "Cost & Finance",
-    title: "How Much Are Turkey Teeth Per Month? UK Dental Finance & Payment Examples",
+    title: "Turkey Teeth Monthly Payments: Cost Per Treatment",
     description:
-      "Monthly payment examples for Turkey dental treatment from £3,000 to £8,000 — across 12, 18, 24 and 36-month plans with 0% representative APR finance.",
-    readingTime: "8 min",
-    updated: "13 September 2026",
-    href: "/guides/turkey-teeth-monthly-payments",
+      "What Turkey teeth cost per month, treatment by treatment — veneers, implants, All-on-4 and a 20-crown makeover, across 12, 24 and 36-month terms at 0% representative APR.",
+    readingTime: "9 min",
+    updated: "14 September 2026",
+    href: "/monthly-payment",
   },
   {
     category: "Treatment",
-    title: "Full Mouth Dental Implants Turkey Cost: All-on-4, All-on-6 & Full Arch Prices 2026",
+    title: "Full Mouth Dental Implants Turkey Cost 2026",
     description:
-      "Full arch and full mouth implant costs in Turkey — All-on-4, All-on-6, titanium bar options, the two-visit process, and total package cost for UK patients.",
+      "Full mouth implant costs in Turkey — All-on-4, All-on-6 and individual implants, the procedure stage by stage, what the package covers, and how many trips it takes.",
     readingTime: "12 min",
-    updated: "13 September 2026",
-    href: "/guides/full-mouth-dental-implants-turkey-cost",
+    updated: "11 September 2026",
+    href: "/blog/full-mouth-implants-uk-vs-turkey",
   },
   {
     category: "Destination",

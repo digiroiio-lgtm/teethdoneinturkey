@@ -227,7 +227,7 @@ export default function HowMuchDoesItCostPage() {
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             For treatment-by-treatment monthly figures, see{" "}
-            <Link href="/guides/turkey-teeth-monthly-payments" className="text-[#1e40af] font-semibold hover:underline">How Much Are Turkey Teeth Per Month?</Link>{" "}
+            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">How Much Are Turkey Teeth Per Month?</Link>{" "}
             or use the{" "}
             <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">Price Calculator</Link>{" "}
             to build your own estimate.
@@ -252,7 +252,7 @@ export default function HowMuchDoesItCostPage() {
           links={[
             { title: "Turkey Teeth Cost: Complete 2026 Price Guide", desc: "Treatment-only prices: veneers, crowns, implants and full mouth.", href: "/prices/turkey-teeth-cost" },
             { title: "Turkey Teeth Packages", desc: "What is and isn't included in a Turkey dental package.", href: "/guides/turkey-teeth-packages" },
-            { title: "How Much Are Turkey Teeth Per Month?", desc: "Monthly payment examples for common treatment totals.", href: "/guides/turkey-teeth-monthly-payments" },
+            { title: "How Much Are Turkey Teeth Per Month?", desc: "Monthly payment examples for common treatment totals.", href: "/monthly-payment" },
             { title: "Price Calculator", desc: "Build a personalised estimate across multiple treatments.", href: "/price-calculator" },
           ]}
         />

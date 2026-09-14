@@ -254,7 +254,7 @@ export default function AntalyaTeethPricesPage() {
             { title: "Turkey Teeth Cost: Complete 2026 Price Guide", desc: "Full treatment price list for all dental work in Turkey.", href: "/prices/turkey-teeth-cost" },
             { title: "How Much Does It Cost to Get Your Teeth Done in Turkey?", desc: "Total trip cost guide including flights, hotel and transfers.", href: "/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey" },
             { title: "Turkey Teeth Packages", desc: "What is and isn't included in a Turkey dental package.", href: "/guides/turkey-teeth-packages" },
-            { title: "Full Mouth Dental Implants Turkey Cost", desc: "All-on-4, All-on-6 and full arch implant prices.", href: "/guides/full-mouth-dental-implants-turkey-cost" },
+            { title: "Full Mouth Dental Implants Turkey Cost", desc: "All-on-4, All-on-6 and full arch implant prices.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
           ]}
         />
       </div>

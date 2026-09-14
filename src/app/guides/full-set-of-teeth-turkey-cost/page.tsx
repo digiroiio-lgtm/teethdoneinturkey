@@ -189,7 +189,7 @@ export default function FullSetOfTeethTurkeyCostPage() {
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             For a detailed guide to implant types, surgical process, healing timelines and what to expect, see the{" "}
-            <Link href="/guides/full-mouth-dental-implants-turkey-cost" className="text-[#1e40af] font-semibold hover:underline">Full Mouth Dental Implants Turkey Cost guide</Link>.
+            <Link href="/blog/full-mouth-implants-uk-vs-turkey" className="text-[#1e40af] font-semibold hover:underline">Full Mouth Dental Implants Turkey Cost guide</Link>.
           </p>
 
           <h2 id="comparison-table" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Option Comparison Table</h2>
@@ -252,9 +252,9 @@ export default function FullSetOfTeethTurkeyCostPage() {
           title="Related Pages"
           links={[
             { title: "Turkey Teeth Cost: Complete 2026 Price Guide", desc: "Per-treatment pricing: veneers, crowns, implants and full mouth.", href: "/prices/turkey-teeth-cost" },
-            { title: "Full Mouth Dental Implants Turkey Cost", desc: "All-on-4, All-on-6 and full arch prices in detail.", href: "/guides/full-mouth-dental-implants-turkey-cost" },
+            { title: "Full Mouth Dental Implants Turkey Cost", desc: "All-on-4, All-on-6 and full arch prices in detail.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
             { title: "Turkey Teeth: Veneers or Crowns?", desc: "The difference between the two and what you're actually being quoted.", href: "/guides/turkey-teeth-veneers-or-crowns" },
-            { title: "How Much Are Turkey Teeth Per Month?", desc: "Monthly payment examples for full set treatment costs.", href: "/guides/turkey-teeth-monthly-payments" },
+            { title: "How Much Are Turkey Teeth Per Month?", desc: "Monthly payment examples for full set treatment costs.", href: "/monthly-payment" },
           ]}
         />
       </div>

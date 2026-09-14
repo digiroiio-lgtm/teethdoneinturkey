@@ -202,7 +202,7 @@ export default function TurkeyTeethCostInPoundsPage() {
           <h2 id="monthly-option" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Monthly Payment Option</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             If your ideal treatment sits above your available cash budget, 0% representative APR finance is available for treatment booked through this site. A £2,500 total financed over 36 months costs from approximately £70/month; a £5,000 total from approximately £139/month. See{" "}
-            <Link href="/guides/turkey-teeth-monthly-payments" className="text-[#1e40af] font-semibold hover:underline">How Much Are Turkey Teeth Per Month?</Link>{" "}
+            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">How Much Are Turkey Teeth Per Month?</Link>{" "}
             for a full payment table, or use the{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">Monthly Payment calculator</Link>.
           </p>
@@ -224,7 +224,7 @@ export default function TurkeyTeethCostInPoundsPage() {
           title="Related Pages"
           links={[
             { title: "Turkey Teeth Cost: Complete 2026 Price Guide", desc: "Full treatment-by-treatment price list in GBP.", href: "/prices/turkey-teeth-cost" },
-            { title: "How Much Are Turkey Teeth Per Month?", desc: "Monthly payment examples for treatment totals from £2,500.", href: "/guides/turkey-teeth-monthly-payments" },
+            { title: "How Much Are Turkey Teeth Per Month?", desc: "Monthly payment examples for treatment totals from £2,500.", href: "/monthly-payment" },
             { title: "Price Calculator", desc: "Build your own cost estimate across multiple treatments.", href: "/price-calculator" },
             { title: "Turkey Teeth Packages", desc: "What is and isn't included in a Turkey dental package.", href: "/guides/turkey-teeth-packages" },
           ]}
