@@ -114,6 +114,7 @@ export default function DentalImplantsTurkeyPage() {
                 { title: "All-on-4 Dental Implants", href: "/treatments/all-on-4-turkey", desc: "Full arch on 4 implants — from £4,500, same-day temporary teeth." },
                 { title: "All-on-6 Package Prices", href: "/prices/all-on-6-dental-implants-turkey-package", desc: "All-inclusive 6-implant arch package with hotel and transfers." },
                 { title: "Implant Cost Guide", href: "/prices/dental-implants-turkey-cost", desc: "UK vs Turkey price breakdown for all implant systems." },
+                { title: "Patient Story: Claire, Birmingham", href: "/patient-stories/dental-implants-turkey-uk-patient", desc: "Claire had 3 Straumann implants in Turkey — her UK dentist was impressed." },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-blue-50 rounded-xl p-4 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition-colors block">
                   <h3 className="font-bold text-gray-900 text-sm mb-1">{item.title}</h3>

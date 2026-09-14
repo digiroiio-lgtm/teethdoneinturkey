@@ -134,6 +134,7 @@ export default function AllOn4Page() {
                 { title: "Implant Package Prices", href: "/prices/all-on-6-dental-implants-turkey-package", desc: "All-inclusive packages with hotel, transfers & temps." },
                 { title: "Full Implant Cost Guide", href: "/prices/dental-implants-turkey-cost", desc: "Detailed UK vs Turkey price comparison for all implant types." },
                 { title: "Full Mouth Implant Cost", href: "/blog/full-mouth-implants-uk-vs-turkey", desc: "What All-on-4 costs across both arches, and what the package covers." },
+                { title: "Patient Story: James, London", href: "/patient-stories/all-on-4-turkey-uk-patient", desc: "James saved approx. £10,500 on All-on-4. Read his full story." },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-blue-50 rounded-xl p-4 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition-colors block">
                   <h3 className="font-bold text-gray-900 text-sm mb-1">{item.title}</h3>
