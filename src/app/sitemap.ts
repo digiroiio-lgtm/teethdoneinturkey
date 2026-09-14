@@ -60,6 +60,13 @@ const OVERRIDES: Record<string, Rule> = {
   '/guides/veneers-turkey-packages': { priority: 0.9, changeFrequency: 'monthly' },
   '/prices/veneers-antalya-cost': { priority: 0.92, changeFrequency: 'monthly' },
 
+  // Patient stories cluster — E-E-A-T evidence layer
+  '/patient-stories': { priority: 0.9, changeFrequency: 'monthly' },
+  '/patient-stories/all-on-6-turkey-uk-patient': { priority: 0.88, changeFrequency: 'monthly' },
+  '/patient-stories/all-on-4-turkey-uk-patient': { priority: 0.85, changeFrequency: 'monthly' },
+  '/patient-stories/dental-implants-turkey-uk-patient': { priority: 0.85, changeFrequency: 'monthly' },
+  '/patient-stories/veneers-turkey-uk-patient': { priority: 0.85, changeFrequency: 'monthly' },
+
   // Finance / affordability cluster — commercial intent, refreshed often
   '/monthly-payment': { priority: 0.85, changeFrequency: 'weekly' },
   '/finance-options-uk': { priority: 0.85, changeFrequency: 'weekly' },
