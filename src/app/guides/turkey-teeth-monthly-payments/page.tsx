@@ -186,6 +186,13 @@ export default function TurkeyTeethMonthlyPaymentsPage() {
             For per-treatment monthly figures (e.g., what does a single implant cost per month), see the{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">Monthly Payment page</Link>. This guide focuses on converting a known treatment total into monthly payment options.
           </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            If you have not got as far as a treatment total yet, and the question is simply whether paying monthly is
+            possible at all, start with{" "}
+            <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">can you pay monthly for Turkey teeth</Link>{" "}
+            — it covers how the UK credit agreement works, what package prices include, eligibility and the bad-credit
+            case. This page assumes you already know your number and want the arithmetic.
+          </p>
 
           <h2 id="payment-table-3000" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">£3,000 Treatment — Monthly Payments</h2>
           <p className="text-gray-700 leading-relaxed mb-2 text-sm text-gray-500 italic">
@@ -236,6 +243,7 @@ export default function TurkeyTeethMonthlyPaymentsPage() {
         <RelatedLinksGrid
           title="Related Pages"
           links={[
+            { title: "Can You Pay Monthly for Turkey Teeth?", desc: "How UK finance works, package inclusions and eligibility.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
             { title: "Monthly Payment", desc: "Per-treatment monthly figures: veneers, implants, All-on-4.", href: "/monthly-payment" },
             { title: "Dental Finance Options UK", desc: "How 0% finance works, eligibility and how to apply.", href: "/finance-options-uk" },
             { title: "Turkey Teeth Cost in Pounds", desc: "What your GBP budget can get you in Turkey.", href: "/guides/turkey-teeth-cost-in-pounds" },

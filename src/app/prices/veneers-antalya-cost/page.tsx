@@ -123,7 +123,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        { "@type": "ListItem", position: 2, name: "Prices", item: `${SITE_URL}/prices` },
+        { "@type": "ListItem", position: 2, name: "Prices", item: `${SITE_URL}/prices/teeth-done-in-turkey-cost` },
         { "@type": "ListItem", position: 3, name: "Veneers Antalya Cost", item: PAGE_URL },
       ],
     },
@@ -138,7 +138,7 @@ export default function VeneersAntalyaCostPage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto">
           <div className="mb-4">
-            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Prices", href: "/prices" }, { label: "Veneers Antalya Cost" }]} />
+            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Prices", href: "/prices/teeth-done-in-turkey-cost" }, { label: "Veneers Antalya Cost" }]} />
           </div>
           <span className="inline-block bg-white/15 border border-white/25 text-white text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">Antalya Prices</span>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">{H1}</h1>

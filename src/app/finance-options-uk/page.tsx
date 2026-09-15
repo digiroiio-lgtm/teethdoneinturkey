@@ -331,7 +331,10 @@ export default function FinanceOptionsUKPage() {
               <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">price calculator</Link>{" "}
               are available if you want to work from your own treatment plan. If implants are your main cost, our{" "}
               <Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] font-semibold hover:underline">guide to financing dental implants in Turkey</Link>{" "}
-              goes deeper on plan types and a UK-vs-Turkey monthly comparison.
+              goes deeper on plan types and a UK-vs-Turkey monthly comparison. For the Turkey-specific version of this
+              question — how the UK credit agreement sits alongside a Turkish clinic, and what a fixed-price package
+              does and does not include — see{" "}
+              <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">can you pay monthly for Turkey teeth</Link>.
             </p>
             <div className="mt-5 bg-gray-50 rounded-xl p-5 border border-gray-200">
               <h3 className="font-bold text-gray-900 mb-1">Can you finance dentures?</h3>

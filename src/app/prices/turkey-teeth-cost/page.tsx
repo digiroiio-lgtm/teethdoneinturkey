@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     question: "Can I pay monthly for teeth in Turkey?",
-    answer: "Yes. Monthly payment plans are available from £82/month with 0% interest over 12, 24 or 36 months, according to this site's monthly payment page. Exact monthly figures depend on the treatment total and the term you choose.",
+    answer: "Yes. Payment plans are quoted over 12, 24 or 36 months at 0% representative APR, which means at least 51% of successful applicants receive that rate rather than all of them. On the £2,800 20-crown package that works out at approximately £78 a month over 36 months or £117 over 24. Your own figure depends on the treatment total, any deposit and the term, and approval is subject to a credit and affordability assessment.",
   },
   {
     question: "Why do implant and add-on procedure prices vary between pages on this site?",
@@ -293,7 +293,7 @@ export default function TurkeyTeethCostPricePage() {
         <RelatedLinksGrid
           title="Related Blog Articles"
           links={[
-            { title: "Can You Pay Monthly for Teeth in Turkey?", desc: "Monthly payment plans and 0% interest options explained.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
+            { title: "Can You Pay Monthly for Turkey Teeth?", desc: "What each package costs per month, plan terms, eligibility and exclusions.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
             { title: "Full Mouth Implants: UK vs Turkey", desc: "Full-mouth implant cost comparison in detail.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
             { title: "Why Is Dental Care Cheaper in Turkey?", desc: "The real reasons behind the price difference.", href: "/blog/why-are-dental-treatments-cheaper-in-turkey" },
             { title: "Hollywood Smile Turkey Cost", desc: "Zirconia crown package pricing in detail.", href: "/blog/hollywood-smile-turkey-cost" },

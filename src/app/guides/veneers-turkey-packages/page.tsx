@@ -209,7 +209,7 @@ export default function VeneersTurkeyPackagesPage() {
             <li><strong>Travel insurance:</strong> Essential. Ensure it covers dental complications and pre-existing treatment. Some UK travel insurers exclude dental treatment — check the policy wording before buying.</li>
             <li><strong>Teeth whitening of natural teeth:</strong> If any of your natural teeth remain visible, whitening those to match your new veneers is typically charged separately (ask for a quote).</li>
             <li><strong>Additional treatment:</strong> If your dental assessment reveals issues that need addressing before veneers can be placed (fillings, gum treatment, root canal work), these are quoted and charged separately.</li>
-            <li><strong>Hotel nights beyond the package:</strong> If your treatment needs more than the included nights, additional nights are charged at the hotel's own rate.</li>
+            <li><strong>Hotel nights beyond the package:</strong> If your treatment needs more than the included nights, additional nights are charged at the hotel&rsquo;s own rate.</li>
           </ul>
 
           <h2 id="by-tooth-count" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Package Costs by Tooth Count (E-max)</h2>
