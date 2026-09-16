@@ -236,6 +236,7 @@ export default function TurkeyTeethMonthlyPaymentsPage() {
         <RelatedLinksGrid
           title="Related Pages"
           links={[
+            { title: "Pay Monthly for Turkey Teeth Packages", desc: "Package-level monthly costs with deposit, APR and total repayable.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
             { title: "Monthly Payment", desc: "Per-treatment monthly figures: veneers, implants, All-on-4.", href: "/monthly-payment" },
             { title: "Dental Finance Options UK", desc: "How 0% finance works, eligibility and how to apply.", href: "/finance-options-uk" },
             { title: "Turkey Teeth Cost in Pounds", desc: "What your GBP budget can get you in Turkey.", href: "/guides/turkey-teeth-cost-in-pounds" },

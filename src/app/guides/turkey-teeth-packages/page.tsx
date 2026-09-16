@@ -210,6 +210,13 @@ export default function TurkeyTeethPackagesPage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             The gap between package price and total cost is not a trick — it is simply how package pricing works. As long as you account for it in your budgeting, the total cost of Turkey dental treatment remains significantly lower than comparable UK private treatment.
           </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            If you intend to spread the cost, the figure you finance is the package price — so it is worth settling the
+            inclusions before you agree a finance amount. Our guide to{" "}
+            <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">paying monthly for Turkey teeth packages</Link>{" "}
+            sets out what each package on this site costs per month over 12, 24 and 36 months, with deposit, APR and
+            total repayable shown.
+          </p>
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">FAQs</h2>
         </div>
@@ -230,6 +237,7 @@ export default function TurkeyTeethPackagesPage() {
             { title: "How Much Does It Cost to Get Your Teeth Done in Turkey?", desc: "Total trip cost guide: treatment, flights, hotel and transfers.", href: "/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey" },
             { title: "Veneers Turkey Packages: What Is Included?", desc: "Veneer-specific package breakdown — treatment-only vs package vs total trip, by tooth count.", href: "/guides/veneers-turkey-packages" },
             { title: "Turkey Teeth Cost: Complete 2026 Price Guide", desc: "Treatment-only prices: veneers, crowns, implants and full mouth.", href: "/prices/turkey-teeth-cost" },
+            { title: "Pay Monthly for Turkey Teeth Packages", desc: "Cost per month for every package over 12, 24 and 36 months, with deposit, APR and total repayable.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
             { title: "Antalya Teeth Prices", desc: "Location-specific cost guide for UK patients travelling to Antalya.", href: "/guides/antalya-teeth-prices" },
             { title: "Free Treatment Plan", desc: "Get a written, itemised quote with all inclusions confirmed.", href: "/free-treatment-plan" },
           ]}

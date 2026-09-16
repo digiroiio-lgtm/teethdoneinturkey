@@ -293,7 +293,7 @@ export default function TurkeyTeethCostPricePage() {
         <RelatedLinksGrid
           title="Related Blog Articles"
           links={[
-            { title: "Can You Pay Monthly for Teeth in Turkey?", desc: "Monthly payment plans and 0% interest options explained.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
+            { title: "Pay Monthly for Turkey Teeth Packages", desc: "What each package costs per month over 12, 24 and 36 months — deposit, APR and total repayable.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
             { title: "Full Mouth Implants: UK vs Turkey", desc: "Full-mouth implant cost comparison in detail.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
             { title: "Why Is Dental Care Cheaper in Turkey?", desc: "The real reasons behind the price difference.", href: "/blog/why-are-dental-treatments-cheaper-in-turkey" },
             { title: "Hollywood Smile Turkey Cost", desc: "Zirconia crown package pricing in detail.", href: "/blog/hollywood-smile-turkey-cost" },
