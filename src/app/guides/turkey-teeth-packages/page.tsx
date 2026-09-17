@@ -210,6 +210,13 @@ export default function TurkeyTeethPackagesPage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             The gap between package price and total cost is not a trick — it is simply how package pricing works. As long as you account for it in your budgeting, the total cost of Turkey dental treatment remains significantly lower than comparable UK private treatment.
           </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            If the package total is the obstacle rather than the treatment itself, it can be spread over monthly
+            payments. See{" "}
+            <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">how paying monthly for a Turkey teeth package works</Link>{" "}
+            for the monthly cost of each package by term, and for which parts of the trip the financed figure does
+            not cover.
+          </p>
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">FAQs</h2>
         </div>

@@ -254,7 +254,10 @@ export default function TurkeyTeethCostPricePage() {
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">what each treatment costs per month</Link>{" "}
             or{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how UK dental finance works, including dental loans and bad credit</Link>{" "}
-            for eligibility and how to pre-qualify.
+            for eligibility and how to pre-qualify. To spread the cost of a bundled package rather than a single
+            treatment, see{" "}
+            <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">paying monthly for Turkey teeth packages</Link>,
+            which prices each package by term and lists what the financed total excludes.
           </p>
 
           <h2 id="accurate-quote" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Getting an Accurate, Personalised Quotation</h2>

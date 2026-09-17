@@ -7,6 +7,213 @@ rewritten again.
 
 ---
 
+## 2026-09-17 — pay-monthly packages: closing the gap on the account's biggest query
+
+### Log gap: two page batches shipped unlogged
+
+The last entry here is 2026-09-11. Since then **16 pages were added** (12 on
+09-13 across two commits, 4 on 09-17) with **no log entry**, so this run had to
+reconstruct intent from commit messages. Judging those pages on performance was
+therefore guesswork rather than a before/after comparison. Anything that ships
+needs recording here or the feedback loop the whole routine depends on is broken.
+
+Pages added since the last entry, with their 09-13..09-17 result:
+
+| New page | Impr | Pos |
+|---|---|---|
+| `/guides/turkey-teeth-packages` | 12 | 78.8 |
+| `/guides/veneers-turkey-packages` | 11 | 65.4 |
+| `/guides/full-set-of-teeth-turkey-cost` | 5 | 38.6 |
+| **`/guides/turkey-teeth-monthly-payments`** | **3** | **8.0** |
+| `/guides/turkey-teeth-antalya` | 2 | 12.0 |
+| `/guides/best-veneers-turkey` | 2 | 85.5 |
+| `/guides/antalya-teeth-prices` | 0 | — |
+| `/guides/turkey-teeth-cost-in-pounds` | 0 | — |
+| `/guides/full-mouth-dental-implants-turkey-cost` | 0 | — |
+| `/prices/veneers-antalya-cost` | 0 | — |
+| 4 affordability guides (added 09-17) | 0 | — |
+
+Two things stand out. `/guides/turkey-teeth-monthly-payments` entered at
+**position 8** — better than any other page on the property — and
+`/guides/full-mouth-dental-implants-turkey-cost` **re-creates the intent that the
+09-11 run had just consolidated away** (see risks below).
+
+### Search Console
+
+Data is complete to 09-16; 09-17 has not landed yet. Comparing equal 7-day
+windows:
+
+| Metric | 09-03 → 09-09 | 09-10 → 09-16 |
+|---|---|---|
+| Impressions | 943 | 1,139 |
+| Clicks | 4 | 5 |
+| Avg position | ~47 | ~46 |
+
+Clicks are still at query level in the `(unknown)` aggregation row (146 impr, 3
+clicks this window), so analysis stays position-led, not CTR-led.
+
+### The finding: the biggest real query in the account, and the page ranking for it had no package content
+
+The pay-monthly family on `/blog/can-you-pay-monthly-for-teeth-in-turkey` is the
+strongest cluster on the property and it **grew ~2.7x week-over-week** while
+holding the page-1 boundary:
+
+| Query | Prior impr @ pos | This week impr @ pos |
+|---|---|---|
+| turkey teeth packages pay monthly | 5 @ 10.4 | **22 @ 11.4** |
+| pay monthly turkey teeth | 9 @ 10.3 | 16 @ 11.1 |
+| turkey teeth pay monthly | 3 @ 10.3 | 12 @ 10.3 |
+| can you pay monthly for turkey teeth | 3 @ 6.3 | 5 @ 8.4 (1 click) |
+| can you get turkey teeth on finance | — | 4 @ 11.0 |
+| can you get your teeth done in turkey on finance | 2 @ 10.5 | 3 @ 10.3 |
+| turkey teeth monthly payments | — | 3 @ 10.7 |
+| turkey teeth cost pay monthly | 1 @ 10.0 | 2 @ 10.0 |
+
+`turkey teeth packages pay monthly` at 22 impressions is **the largest
+non-`(unknown)` query on the property**, and 26 impressions counting the two
+other URLs it is split across. The cluster totals ~70 impressions, all pinned
+between position 8.4 and 11.4 — the page-1/page-2 boundary, where the marginal
+CTR value of three places is larger than anywhere else on the site.
+
+**And the page ranking for it contained the word "package" zero times.** Google
+was ranking it for a package+finance query on the finance half alone. That is
+the gap, and it is a content gap rather than a title or architecture problem.
+
+The 09-11 run deliberately left this page alone ("at position 10.5 it is
+performing") and only changed one link line in it, so its content had not been
+touched since 09-03 — two weeks. Working it now is in-policy, not a rewrite of a
+fresh change.
+
+### Decisions taken this run
+
+- **OPTIMISE EXISTING (9.5/10), MONEY page —
+  `/blog/can-you-pay-monthly-for-teeth-in-turkey`.** URL, H1 and every existing
+  ranking section left intact; all content changes additive.
+  - New `Can You Pay Monthly for Turkey Teeth Packages?` section with a
+    direct-answer block and a six-row package table (total + 12/24/36-month
+    columns). **Every figure is an existing site price** — Hollywood Smile
+    £2,800/£3,100, 20 E-max veneers £3,800 at the published £190/tooth, All-on-4
+    £4,500, All-on-6 £5,600, full mouth All-on-4 £9,000 — divided across the term
+    at 0% APR representative. The 36-month column reproduces the figures already
+    published on `/monthly-payment` (£78, £106, £125, £156, £250), so no new or
+    conflicting price enters the site.
+  - New `What the Monthly Payment Covers — and What It Doesn't` table, mirroring
+    the inclusions on `/guides/turkey-teeth-packages` so the two cannot drift.
+    The substantive answer here is that finance covers the package total and
+    **not** flights (£80–£180), CBCT (£60–£120) or an excluded second visit
+    (£250–£500) — the half of this query nothing on the site addressed.
+  - New labelled **Example Treatment Scenario** (£2,800 package, £500 deposit,
+    £2,300 financed, 6/12/18/24/36 months with total repayable shown).
+  - Title `Monthly Payment for Teeth in Turkey` → `Pay Monthly Turkey Teeth:
+    Packages from £78/Month` (49 chars). The old title carried neither "turkey
+    teeth" nor "package" — neither of the two phrase families it actually ranks
+    for. Description rewritten to 148 chars.
+- **YMYL fixes.** "We work with specialist lenders who consider all profiles"
+  implied near-universal acceptance and is gone; the bad-credit answer now states
+  plainly that approval is less likely, may carry a higher APR or larger deposit,
+  and that a decline is a realistic outcome. "Instant decision" removed. The 0%
+  answer no longer promises 0% to "qualifying applicants" as though it were
+  automatic. Every payment table now carries APR, total repayable, deposit
+  treatment, credit-assessment and "not everyone will qualify" wording.
+- **FAQPage schema added** (the page had none) — 9 FAQs written on the recorded
+  query wording, all rendered visibly on the page so the markup matches content.
+  Verified server-rendered and valid JSON alongside Article and BreadcrumbList.
+- **DO NOT MERGE — `/guides/turkey-teeth-monthly-payments`.** It looked like a
+  cannibal (1 impr on `turkey teeth monthly payments` against the blog's 3) but
+  it is at **position 8 on 3 impressions**, the best position on the property,
+  and it is 4 days old. Merging it would have repeated the 09-08 mistake of
+  killing a URL before it had SERP life. Differentiated by job instead and
+  cross-linked both ways: the guide owns "how much per month" by treatment total,
+  the blog owns "can you pay monthly" and the package framing.
+- **DO NOTHING — full-mouth implants.** The 09-11 retitle has **not** moved the
+  cluster: `full mouth dental implants turkey price` 13 @ 33.7 → 10 @ 40.1,
+  `full mouth dental implant turkey costs` 11 @ 30.8 → 2 @ 31.5. The 09-11 entry
+  set a ~2-week hold and named content depth as the next hypothesis; 6 days in,
+  that hold stands.
+- **DO NOTHING — packages as a cluster.** Bare `turkey teeth packages` went
+  **backwards**: 14 impr @ 58.8 → ~13 @ 81–91, still split across four URLs with
+  no owner. `/packages/turkey-teeth-packages` remains uncreated, correctly — the
+  striking-distance money is in the *finance-qualified* package query (pos 11),
+  not the bare head term (pos 85).
+
+### Internal linking
+
+| Source | Target | Anchor |
+|---|---|---|
+| `/finance-options-uk` | `/blog/can-you-pay-monthly-for-teeth-in-turkey` | how paying monthly for Turkey teeth packages works |
+| `/prices/turkey-teeth-cost` | same | paying monthly for Turkey teeth packages |
+| `/guides/turkey-teeth-packages` | same | how paying monthly for a Turkey teeth package works |
+| `/guides/turkey-teeth-monthly-payments` | same | paying monthly for Turkey teeth packages |
+| `/blog/can-you-pay-monthly-for-teeth-in-turkey` | `/guides/turkey-teeth-monthly-payments` | how much Turkey teeth cost per month |
+
+`/finance-options-uk` had **no link at all** to the site's best-ranking finance
+asset while competing against it on the same queries at worse positions (pos 20
+vs 11.4 on `turkey teeth packages pay monthly`). `/guides/turkey-teeth-packages`
+had no route into the finance silo at all. Both now flow POWER → MONEY.
+
+### Losses to watch
+
+- **`teeth on finance bad credit` has gone.** 22 impressions at position 7.8 in
+  the prior window — the account's best query — and **zero** this window.
+  `turkey teeth on finance` (5 @ 58.2) also vanished, and `teeth on finance`
+  sits at 76.9. This coincides with the 09-11 reposition of
+  `/finance-options-uk`, which moved that page onto generic UK dental-finance
+  intent. It may be volatility at this data scale, but it is the single largest
+  visibility loss on the property and it needs a verdict next run. Note the
+  target architecture's `/guides/teeth-on-finance-bad-credit/` does not exist.
+- `turkey teeth packages` position degraded 58.8 → ~85 (see above).
+
+### Technical health
+
+- 85 sitemap URLs, **all verified 200** against a production build.
+- Full crawl of all 85 pages / 89 link targets: **0 broken links, 0 links
+  pointing at a redirect, 0 orphans.**
+- Fixed a **CI-blocking lint error** (`react/no-unescaped-entities` in
+  `/guides/veneers-turkey-packages`) shipped unnoticed in the 09-13 batch — it
+  would have failed this run's own push. Lint now clean but for 2 long-standing
+  warnings.
+- Fixed a breadcrumb on `/prices/veneers-antalya-cost` pointing at `/prices`,
+  which 308s; the other price pages already link the resolved target.
+- typecheck clean, build clean, Article + BreadcrumbList + FAQPage all verified
+  in the server HTML.
+
+### Open risks and blockers
+
+1. **The GSC data feed expires tomorrow.** Supermetrics reports the trial ending
+   2026-09-18 on every call. This routine is entirely Search Console-led; when it
+   lapses there is no evidence base and the run cannot execute its own Step 1.
+2. **`/guides/full-mouth-dental-implants-turkey-cost` re-creates a merged
+   intent.** On 09-11 `/blog/full-mouth-dental-implants-turkey-cost` was 301'd
+   into `/blog/full-mouth-implants-uk-vs-turkey` as a suppressed duplicate; a
+   near-identical URL was created under `/guides/` two days later. At 0
+   impressions it is too early to judge, but if it starts splitting the
+   full-mouth cluster it should be merged into the ranking URL, not left.
+3. **`AGENTS.md` is unactionable.** It instructs reading
+   `node_modules/next/dist/docs/` before writing code; that directory does not
+   exist in a clean install, and `next` is a standard 15.5.15 release with no
+   breaking changes from a fork. Followed the codebase's own App Router idiom
+   instead. The file should be corrected or dropped.
+4. Still **0 GA4 conversions ever recorded** and no query-level clicks, so no
+   business-value-led prioritisation is possible. Flagged since 09-11, still open.
+
+### What to check next run
+
+1. **Did the package content break position 11?** Watch
+   `turkey teeth packages pay monthly` (22 @ 11.4),
+   `pay monthly turkey teeth` (16 @ 11.1) and `turkey teeth pay monthly`
+   (12 @ 10.3). **Do not touch this page again before ~2 weeks.** If it does not
+   move, the next hypothesis is competing-page depth, not another title change.
+2. **Verdict on `teeth on finance bad credit`** — recovered, or a real loss from
+   the 09-11 reposition?
+3. `/guides/turkey-teeth-monthly-payments` at position 8: does it hold, and does
+   the differentiation from the blog page keep both out of each other's way?
+4. Whether `/guides/full-mouth-dental-implants-turkey-cost` starts splitting the
+   full-mouth cluster (risk 2 above).
+5. The four affordability guides added 09-17 and the four zero-impression pages
+   from the 09-13 batch — do they enter the SERP at all, or are they thin?
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

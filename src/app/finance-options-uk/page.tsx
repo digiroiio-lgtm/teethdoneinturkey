@@ -214,6 +214,10 @@ export default function FinanceOptionsUKPage() {
               This is the process in outline. For the full step-by-step application walkthrough and eligibility
               checklist across every treatment type, see our{" "}
               <Link href="/blog/dental-treatment-turkey-payment-plans" className="text-[#1e40af] font-semibold hover:underline">Turkey dental treatment payment plans guide</Link>.
+              If you are financing a bundled package rather than a single treatment, see{" "}
+              <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">how paying monthly for Turkey teeth packages works</Link>,
+              which sets out the package totals, what the financed figure does and does not cover, and the monthly
+              cost of each package.
             </p>
             <div className="relative">
               <div className="hidden sm:block absolute left-6 top-6 bottom-6 w-px bg-blue-200" />

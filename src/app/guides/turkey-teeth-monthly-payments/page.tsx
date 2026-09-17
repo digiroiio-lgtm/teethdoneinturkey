@@ -218,6 +218,9 @@ export default function TurkeyTeethMonthlyPaymentsPage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             For full details of available finance options, eligibility criteria and how to apply, see{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Dental Finance Options UK</Link>.
+            If you are paying for an all-inclusive package rather than a treatment total, see{" "}
+            <Link href="/blog/can-you-pay-monthly-for-teeth-in-turkey" className="text-[#1e40af] font-semibold hover:underline">paying monthly for Turkey teeth packages</Link>,
+            which prices each package by term and sets out what the financed figure excludes.
           </p>
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">FAQs</h2>
