@@ -12,10 +12,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/full-set-of-teeth-turkey-cost`;
-const TITLE = "Full Set of Teeth in Turkey Cost: Prices, Options & UK Patient Guide 2026";
+const TITLE = "Full Set of Teeth in Turkey: Cost & Options 2026";
 const H1 = "Full Set of Teeth in Turkey Cost: What Does 'Full Set' Mean and What Does It Cost?";
 const DESCRIPTION =
-  "What UK patients mean by a full set of Turkey teeth — and what each option costs: crowns, veneers, All-on-4, All-on-6 and full mouth implants explained and compared.";
+  "What a full set of Turkey teeth means, and what each option costs: crowns, veneers, All-on-4, All-on-6 and full mouth implants explained and compared.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 

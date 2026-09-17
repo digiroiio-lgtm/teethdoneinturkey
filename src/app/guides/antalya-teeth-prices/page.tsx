@@ -13,7 +13,7 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/antalya-teeth-prices`;
-const TITLE = "Antalya Teeth Prices: Complete 2026 Dental Cost Guide for UK Patients";
+const TITLE = "Antalya Teeth Prices 2026: UK Patient Cost Guide";
 const H1 = "Antalya Teeth Prices: 2026 Dental Cost Guide for UK Patients";
 const DESCRIPTION =
   "Dental treatment prices in Antalya for UK patients in 2026: veneers, crowns, implants and full mouth costs, with travel information and what to expect.";

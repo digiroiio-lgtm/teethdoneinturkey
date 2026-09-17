@@ -13,10 +13,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkish-veneers-safety`;
-const TITLE = "Are Turkish Veneers Safe? Risks, Tooth Shaving & How to Choose Safely";
+const TITLE = "Are Turkish Veneers Safe? Risks & Tooth Shaving";
 const H1 = "Are Turkish Veneers Safe? Risks, Tooth Preparation & How to Choose Safely";
 const DESCRIPTION =
-  "A clinical safety guide for UK patients: what makes veneer treatment unsafe, what risks to look for, how to choose a safe clinic, and what to do if something goes wrong.";
+  "A safety guide for UK patients: what makes veneer treatment unsafe, the risks to look for, how to choose a safe clinic and what to do if it goes wrong.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 

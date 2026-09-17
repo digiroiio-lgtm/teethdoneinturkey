@@ -13,10 +13,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/full-mouth-dental-implants-turkey-cost`;
-const TITLE = "Full Mouth Dental Implants Turkey Cost: All-on-4, All-on-6 & Full Arch Prices 2026";
-const H1 = "Full Mouth Dental Implants Turkey Cost: All-on-4, All-on-6 & Full Arch Prices";
+const TITLE = "Full-Arch Implants Turkey: Options & Two-Visit Process";
+const H1 = "Full-Arch Implants in Turkey: Options and the Two-Visit Process";
 const DESCRIPTION =
-  "Full mouth and full arch implant costs in Turkey 2026: All-on-4, All-on-6, titanium bar options, two-visit process and total package costs for UK patients.";
+  "How full-arch implants work in Turkey: All-on-4 vs All-on-6, titanium bar vs zirconia bridge, the two-visit process and what a full package really costs.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 

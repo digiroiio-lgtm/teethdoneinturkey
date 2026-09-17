@@ -12,10 +12,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/veneers-turkey-packages`;
-const TITLE = "Veneers Turkey Packages: What Is Included and What Does It Really Cost?";
+const TITLE = "Veneers Turkey Packages: What’s Included & Cost";
 const H1 = "Veneers Turkey Packages: What Is Included and What Does It Cost?";
 const DESCRIPTION =
-  "Veneer package prices in Turkey — what is included vs what you still pay, treatment-only vs package vs total trip cost tables for 8, 10, 16 and 20 teeth, and questions to ask before booking.";
+  "Veneer package prices in Turkey: what is included, what you still pay, and treatment-only vs package vs total trip cost for 8, 10, 16 and 20 teeth.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 
@@ -209,7 +209,7 @@ export default function VeneersTurkeyPackagesPage() {
             <li><strong>Travel insurance:</strong> Essential. Ensure it covers dental complications and pre-existing treatment. Some UK travel insurers exclude dental treatment — check the policy wording before buying.</li>
             <li><strong>Teeth whitening of natural teeth:</strong> If any of your natural teeth remain visible, whitening those to match your new veneers is typically charged separately (ask for a quote).</li>
             <li><strong>Additional treatment:</strong> If your dental assessment reveals issues that need addressing before veneers can be placed (fillings, gum treatment, root canal work), these are quoted and charged separately.</li>
-            <li><strong>Hotel nights beyond the package:</strong> If your treatment needs more than the included nights, additional nights are charged at the hotel's own rate.</li>
+            <li><strong>Hotel nights beyond the package:</strong> If your treatment needs more than the included nights, additional nights are charged at the hotel&apos;s own rate.</li>
           </ul>
 
           <h2 id="by-tooth-count" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Package Costs by Tooth Count (E-max)</h2>

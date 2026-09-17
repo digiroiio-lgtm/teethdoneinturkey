@@ -7,6 +7,247 @@ rewritten again.
 
 ---
 
+## 2026-09-17
+
+First run since the 12-page batch landed on 09-13 (commits `8a38b87`, `14afab1`),
+which was **not** recorded here. Those pages are live and indexable; what they
+did and did not earn is the first thing this entry settles.
+
+### Search Console — 09-10..09-16 vs 09-03..09-09
+
+| Metric | 09-03 → 09-09 | 09-10 → 09-16 |
+|---|---|---|
+| Impressions | 943 | 1,110 |
+| Clicks | 4 | 5 |
+| URLs with impressions | ~30 | 50 |
+
+Daily: 219 → 148 → 143 → 78 → 192 → 208 → 122. 3 of the 5 clicks are still in
+the `(unknown)` aggregation row, so analysis stays position-led.
+
+### Deployment check — the 09-11 redirect IS live (no action needed)
+
+`/guides/turkey-teeth-cost` is the site's **top URL by impressions** (137 @ 76.5)
+despite having been 301'd on 09-11, which looked at first like the redirect never
+shipped. It did: a live fetch of that path through the GSC landing-page tag
+dimensions returns canonical `https://www.teethdoneinturkey.co.uk/prices/turkey-teeth-cost`,
+title "Turkey Teeth Cost 2026: UK Price Guide", `index, follow`. Google is simply
+still reporting the pre-redirect URL. **Do not re-investigate this next week** —
+expect the 137 to decay into `/prices/turkey-teeth-cost` as recrawl catches up.
+
+### Did the 09-11 cost reversal work? Yes — verdict: keep
+
+Same-query head-to-heads, which control for query mix:
+
+| Query | `/guides` (redirected) | `/prices` (target) |
+|---|---|---|
+| how much to get teeth done in turkey | 57.5 | **13.5** |
+| how much do turkey teeth cost in pounds | 89 | **26** |
+| how much for turkey teeth | 78.25 | **29.75** |
+| how much do turkey teeth cost | 85 | **35.5** (1 click) |
+| how much does turkey teeth cost | 83 | **56** |
+| turkey teeth veneers price | 87 | **39.5** |
+
+The target URL wins every meaningful head-to-head and took 2 of the week's 5
+clicks. `/prices/turkey-teeth-cost` also now holds position 1 on "how much does it
+cost to get my teeth done in turkey", 7 on "how much for a full set of turkey
+teeth" and 9 on "how much is turkey teeth" / "turkey teeth cost uk". **The
+direction is settled. Do not swap these two URLs again.**
+
+### The finding: the pay-monthly cluster is the whole story this week
+
+`/blog/can-you-pay-monthly-for-teeth-in-turkey` went from ~22 impressions to
+**131 at average position 11.1**, and ~70 of those sit at positions 8–11.4:
+
+| Query | Impr | Pos |
+|---|---|---|
+| turkey teeth packages pay monthly | 22 | 11.36 |
+| pay monthly turkey teeth | 16 | 11.06 |
+| turkey teeth pay monthly | 11 | 10.18 |
+| can you pay monthly for turkey teeth | 5 | **8.40** (1 click) |
+| turkey teeth monthly payments | 3 | 10.67 |
+| can you get your teeth done in turkey on finance | 3 | 10.33 |
+| can you get turkey teeth on finance | 3 | 11.0 |
+| turkey teeth cost pay monthly | 2 | 10.0 |
+
+Nothing else on the property is within 20 places of this. GA4 (09-03..09-16)
+agrees from the other direction: **all 19 AI-assistant sessions land on finance
+pages** — `/monthly-payment` 10, `/finance-options-uk` 8, `/` 1 — against 13
+organic sessions to the whole site. Finance is simultaneously the best Google
+cluster and the only AI-cited one.
+
+### What the ranking pages do that ours did not
+
+SERP for "can you pay monthly for turkey teeth" and "turkey teeth pay monthly"
+is **broker-led, not clinic-led**: Kandoo (twice), Medrefund, LoSmiles, UK
+Smiles, Dentatur, VK Smile Studio, Land of Smile. The shared architecture is
+regulatory and mechanical, not promotional — loan amount ranges, term ranges,
+deposit convention, when repayments start, direct debit, FCA-regulated lender
+framing, eligibility, self-employed applicants, early repayment. Our page at
+position 10–11 was ~750 words of marketing copy with a payment table and four
+FAQs, and covered none of it. **That gap, not the position, is what was fixed.**
+
+### Decisions taken this run
+
+Ladder applied FIX → REFRESH → EXPAND → MERGE → CREATE. **No new URLs created.**
+
+- **FIX + EXPAND (98/100). Rebuilt `/blog/can-you-pay-monthly-for-teeth-in-turkey`**
+  — 4 H2 sections and 4 FAQs became 10 H2 sections and 9 FAQs, ~2,550 rendered
+  words measured against the production build. New: a direct short answer,
+  key takeaways, TOC, a
+  three-route funding comparison table (pay the clinic / UK payment plan /
+  personal loan or 0% purchase card), a **Section 75** note explaining that the
+  protection generally depends on a card paying the supplier directly and that
+  borrowing routed through your own account usually breaks that link (no
+  competitor page covers this and it is genuinely UK-specific), a
+  borrow/term/rate block, eligibility criteria, an honest bad-credit-and-declines
+  section, what finance does **not** cover, 9 FAQs + **FAQPage schema (the page
+  had none)**, and a sources list. Title → `Can You Pay Monthly for Turkey
+  Teeth? UK Guide` (45 chars, set `absolute` so the site suffix cannot truncate
+  it); the old title said "Teeth in Turkey" while every ranking query says
+  "turkey teeth".
+- **FIX (YMYL, critical).** The page claimed *"we work with specialist lenders
+  who consider all profiles"* — an unsupported lender-relationship claim reading
+  as a near-guarantee of bad-credit approval, the same class of defect fixed on
+  `/finance-options-uk` on 09-11. Removed and replaced with the honest version
+  already established there. Its "Pre-Qualify Now — Free / instant decision" CTA
+  pointed at `/book-consultation`, a **treatment** consultation form, not a
+  finance application; replaced with a truthful "get your treatment total first"
+  CTA to `/free-treatment-plan`. Added "not a credit offer, not a quotation,
+  not everyone will qualify" and defined 0% APR representative (≥51% of accepted
+  applicants).
+- **FIX (factual).** The single-implant row said **£650**, which matches no
+  published price on this site (`/prices/turkey-teeth-cost` and
+  `/prices/dental-implants-turkey-cost` both say from £250). Row removed rather
+  than restated: at £250 a single implant is **below the £500 minimum finance
+  amount**, so it cannot be financed alone, and the page now says so. Every
+  remaining total in the table is a price published elsewhere on the site,
+  divided by term at 0% and rounded up — the existing site convention.
+- **EXPAND (76/100). `/blog/turkey-teeth-explained`** — 97 impressions @ 35.2,
+  the site's #2 page, ranking for three query families it never actually
+  answered: `do turkey teeth look fake?` (17 impr @ 32.35, its single biggest
+  query), `turkey teeth colour chart` (2 @ 35.5), `teeth colour chart turkey`
+  (1 @ 34). The page discussed the look qualitatively and contained **no shade
+  terminology at all**, while the competitor ranking for it
+  (yoursmileturkey.com) is built entirely around shade and translucency. Added a
+  direct "Do Turkey Teeth Look Fake?" section with a fake-vs-natural table, a
+  shade-chart explainer (VITA classical A1–D4 plus the BL1–BL4 bleach range,
+  what suits whom, and the point that crowns and veneers do not respond to later
+  whitening), 6 FAQs + FAQPage schema (the page had none), and sources.
+- **FIX (technical, 13 pages). SERP-truncating titles reintroduced by the 09-13
+  batch.** Nine titles ran 65–83 characters (worst: 83 on
+  `/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey`) and eight
+  descriptions ran 163–190. All now ≤53 and ≤158 respectively. This is the exact
+  defect class the 09-08 run fixed; it came straight back with the batch.
+- **FIX (de-duplication, not a merge).** `/guides/full-mouth-dental-implants-turkey-cost`
+  (created 09-13) carried the title *"Full Mouth Dental Implants Turkey Cost:
+  All-on-4, All-on-6 & Full Arch Prices 2026"* — a near-duplicate of
+  `/blog/full-mouth-implants-uk-vs-turkey`, which the 09-11 run deliberately
+  consolidated that cluster onto and retitled *"Full Mouth Dental Implants Turkey
+  Cost 2026"*. The batch re-created the duplicate that had just been merged away.
+  **Not redirected** — it has zero impressions on zero queries and is four days
+  old, so there is no head-to-head to act on, and the 09-08 regression came from
+  exactly that kind of premature move. Instead it was repositioned onto its real
+  differentiators (titanium bar vs zirconia bridge, the two-visit process,
+  total package cost across two trips): title/H1/description now
+  "Full-Arch Implants in Turkey: Options and the Two-Visit Process". Same
+  differentiate-don't-merge pattern used for `/monthly-payment` on 09-11.
+- **FIX (CI).** A `react/no-unescaped-entities` error in
+  `/guides/veneers-turkey-packages` (line 212) shipped with the 09-13 batch.
+  `eslint.ignoreDuringBuilds` hides it from the build but it is the same class
+  that blocked CI on `main` in `46a1f2e`. Fixed.
+- **FIX (link equity).** `/prices/veneers-antalya-cost` breadcrumbed to `/prices`,
+  which 308s to `/prices/teeth-done-in-turkey-cost`. It was the only internal
+  link on the site pointing at a redirect. Repointed to the convention the other
+  `/prices/*` pages use.
+- **DO NOTHING — `/finance-options-uk`.** Rewritten 09-11; the generic UK finance
+  queries have **not** moved (`teeth on finance` 76.9, `dental implant finance
+  uk` 87.4, `denture financing` 82.25, `teeth financing` 70, `dental loans`
+  79.3). Six days is too early to judge, and rewriting it again would destroy the
+  read. See the open question below.
+- **DO NOTHING — `/monthly-payment`.** Still **0 Search Console impressions** a
+  week after the 09-11 retitle, yet it is the **most AI-cited page on the site**
+  (10 of 19 AI sessions). Left alone: it is earning its keep on a channel Search
+  Console cannot see.
+- **DO NOTHING — the pay-monthly cannibalisation.** The cluster is now split
+  across six URLs, and `/guides/turkey-teeth-monthly-payments` (created 09-13)
+  entered it at position 10 on "turkey teeth monthly payments" with 1 impression
+  against the blog page's 3 @ 10.67. Too close and too new to call. The blog page
+  was made the explicit owner by content depth, and it now links out to the guide
+  and to `/monthly-payment` with differentiated anchor text instead. **Establish
+  the head-to-head next week before any URL change.**
+- **DO NOTHING — packages.** Still split (`turkey teeth packages` across
+  `/guides/turkey-teeth-packages` 58, `/blog/dental-holiday-packages-turkey` 81.5,
+  `/guides/turkey-teeth-cost` 90.7). Unchanged from the 09-11 assessment; the
+  09-13 batch added a URL to it rather than resolving it.
+
+### Regression to watch (not acted on)
+
+**`teeth on finance bad credit` has vanished.** It was the account's best query
+on 09-03..09-09 — 22 impressions at positions 7.6 (`/finance-options-uk`) and
+8.14 (`/blog/dental-tourism-finance-explained`). This week: **zero impressions,
+both URLs.** `/finance-options-uk` was retitled away from the bad-credit framing
+on 09-11, four days before the window opened, so the timing is suspicious. It is
+one week of tiny numbers on a property with ±30-place daily volatility, so it was
+**not** acted on. **Threshold for next run: if it is still at zero, restore
+"bad credit" to the `/finance-options-uk` title and treat the 09-11 retitle as a
+regression.**
+
+### Unresolved price contradiction (flagged, deliberately not fixed)
+
+`/monthly-payment` states a single dental implant costs **£420–£600
+all-inclusive**; `/prices/turkey-teeth-cost` and
+`/prices/dental-implants-turkey-cost` both state **from £250** (Osstem + crown),
+and `/finance-options-uk` uses the £250 figure. Two pages against one. This run
+avoided the contradiction on its own page rather than resolving it, because
+whether £420–£600 is a genuinely different all-inclusive product or simply a
+stale figure cannot be determined from the repository — it needs the clinic's
+actual price list. **This is a question for the site owner, not a guess for the
+next run to make.** `/monthly-payment` being the top AI-cited page raises the
+stakes: whichever figure is wrong is the one answer engines are repeating.
+
+### Technical health check
+
+- **81 sitemap URLs, every one verified 200** against a production build.
+- Full internal-link crawl of all 81 pages, 86 distinct targets: **0 broken
+  links, 0 links pointing at a redirect, 0 orphan pages.**
+- Both rebuilt pages verified **server-rendered**: Article, BreadcrumbList and
+  FAQPage JSON-LD all present in the server HTML, along with the Section 75 and
+  BL1/VITA answer text — which is what answer engines actually read.
+- Self-referencing canonicals and `index, follow` confirmed on both.
+- Titles now 45–53 chars, descriptions 125–158 — no SERP truncation anywhere.
+- typecheck clean, lint clean (2 pre-existing warnings, unrelated), build clean
+  (99 static pages).
+
+### What to check next run
+
+1. **Did the pay-monthly rebuild break the top 10?** Watch
+   `turkey teeth packages pay monthly` (22 @ 11.36),
+   `pay monthly turkey teeth` (16 @ 11.06) and `turkey teeth pay monthly`
+   (11 @ 10.18). This is the site's one genuine striking-distance cluster; give
+   it ~2 weeks before touching it again. If it does not move, the next
+   hypothesis is backlinks/authority against broker domains, not more content.
+2. **`teeth on finance bad credit`** — act on the threshold above.
+3. **`/finance-options-uk` generic queries** (59–89 since 09-11). By next run
+   that change is two weeks old and readable. If still unmoved, the problem is
+   not the title and the page needs a different hypothesis.
+4. **`do turkey teeth look fake?`** (17 @ 32.35) and the two colour-chart
+   queries — the clearest test of whether answering a question directly moves a
+   page, since nothing else about `/blog/turkey-teeth-explained` changed.
+5. **The 09-13 batch, now with two weeks of data.** Of the 12 pages, only
+   `/guides/turkey-teeth-packages` (12 @ 78.75) and `/guides/veneers-turkey-packages`
+   (10 @ 63.6) earned anything meaningful; `/guides/antalya-teeth-prices`,
+   `/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey`,
+   `/guides/turkey-teeth-cost-in-pounds` and
+   `/guides/full-mouth-dental-implants-turkey-cost` are all at **zero lifetime**.
+   With shortened titles they now get a fair test. If they are still at zero next
+   run, the batch should be consolidated rather than extended.
+6. **Still 0 GA4 key events, ever, across 60+ sessions.** The configuration check
+   flagged on 09-11 is still open and still blocks any business-value-led
+   prioritisation. An unconfigured key event and a genuine 0% conversion rate are
+   indistinguishable in this data.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

@@ -12,10 +12,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/veneers-antalya-cost`;
-const TITLE = "Veneers Antalya Cost 2026: E-max, Zirconia & Package Prices for UK Patients";
+const TITLE = "Veneers Antalya Cost 2026: E-max & Zirconia Prices";
 const H1 = "Veneers Antalya Cost 2026: What UK Patients Actually Pay";
 const DESCRIPTION =
-  "Veneer prices in Antalya 2026 — E-max from £190/tooth, zirconia from £130, composite from £80. Package vs treatment-only vs total trip cost tables for 8, 10, 16 and 20 teeth.";
+  "Veneer prices in Antalya 2026: E-max from £190/tooth, zirconia from £130, composite from £80, plus package vs treatment-only vs total trip cost tables.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 
@@ -138,7 +138,7 @@ export default function VeneersAntalyaCostPage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto">
           <div className="mb-4">
-            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Prices", href: "/prices" }, { label: "Veneers Antalya Cost" }]} />
+            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Prices", href: "/prices/teeth-done-in-turkey-cost" }, { label: "Veneers Antalya Cost" }]} />
           </div>
           <span className="inline-block bg-white/15 border border-white/25 text-white text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">Antalya Prices</span>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">{H1}</h1>

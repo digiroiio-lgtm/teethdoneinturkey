@@ -12,7 +12,7 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey`;
-const TITLE = "How Much Does It Cost to Get Your Teeth Done in Turkey? Complete UK Cost Guide 2026";
+const TITLE = "Teeth Done in Turkey: Total Cost Including Travel";
 const H1 = "How Much Does It Cost to Get Your Teeth Done in Turkey?";
 const DESCRIPTION =
   "Total UK patient cost guide: treatment, flights, hotel, transfers, scans and second-visit costs — everything you actually spend from door to door.";
