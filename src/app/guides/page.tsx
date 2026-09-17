@@ -160,6 +160,42 @@ const guides = [
     updated: "13 September 2026",
     href: "/guides/turkish-veneers-safety",
   },
+  {
+    category: "UK Access & Affordability",
+    title: "Can't Find an NHS Dentist? Your Step-by-Step Options",
+    description:
+      "No NHS dentist accepting patients near you? NHS 111 dental access, emergency services, Community Dental Services, dental schools and realistic alternatives for UK patients in 2026.",
+    readingTime: "8 min",
+    updated: "17 September 2026",
+    href: "/guides/no-nhs-dentist-what-to-do",
+  },
+  {
+    category: "UK Access & Affordability",
+    title: "Can't Afford a Root Canal in the UK? What to Do",
+    description:
+      "Root canal on the NHS costs £76.60. Private treatment costs £500–£1,500 plus a crown. NHS access, Band 2 costs, extraction comparison, payment plans and Turkey cost comparison.",
+    readingTime: "9 min",
+    updated: "17 September 2026",
+    href: "/guides/cant-afford-root-canal-uk",
+  },
+  {
+    category: "UK Access & Affordability",
+    title: "Tooth Abscess and Can't Afford a Dentist? Act Now",
+    description:
+      "A tooth abscess is a dental emergency. NHS 111 can refer you to emergency treatment at no upfront cost. Red flag warning signs requiring A&E, antibiotics guidance and follow-up costs.",
+    readingTime: "8 min",
+    updated: "17 September 2026",
+    href: "/guides/tooth-abscess-cant-afford-dentist",
+  },
+  {
+    category: "UK Access & Affordability",
+    title: "Severe Toothache and Can't Afford a Dentist? What to Do",
+    description:
+      "NHS 111 can refer you to an emergency dentist at no upfront cost. Causes of severe toothache explained, temporary pain relief, and what treatments cost on NHS, UK private and in Turkey.",
+    readingTime: "8 min",
+    updated: "17 September 2026",
+    href: "/guides/severe-toothache-cant-afford-dentist",
+  },
 ];
 
 const breadcrumbJsonLd = {

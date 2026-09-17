@@ -17,7 +17,7 @@ const H1 = "Can't Afford Dental Treatment in the UK? Here Are Your Options";
 const DESCRIPTION =
   "Can't afford a private dentist? NHS band charges, payment plans, dental finance and lower cost options for UK patients, in decision order.";
 const DATE_PUBLISHED = "2026-09-03";
-const DATE_MODIFIED = "2026-09-03";
+const DATE_MODIFIED = "2026-09-17";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/cant-afford-dental-treatment-uk" },
@@ -35,6 +35,7 @@ const toc = [
   { id: "uk-vs-turkey", label: "Treatment Abroad as an Option" },
   { id: "monthly-cost", label: "What Treatment Actually Costs Per Month" },
   { id: "next-steps", label: "Working Out What You Can Afford" },
+  { id: "specific-problem", label: "Help With a Specific Problem" },
   { id: "faqs", label: "FAQs" },
 ];
 
@@ -47,6 +48,21 @@ const ukVsTurkeyRows = [
 ];
 
 const faqs = [
+  {
+    question: "What should I do if I can't find an NHS dentist?",
+    answer:
+      "Call NHS 111 (dial 111) — they can provide urgent dental advice 24/7 and refer you to an NHS emergency dental service at no upfront cost, even if you are not registered with a practice. For non-emergency treatment, use the NHS.uk Find a Dentist tool to search for practices accepting new adult patients in your postcode, or contact your local Community Dental Service. University dental schools also treat patients at reduced cost under supervised qualified dentists. See the full guide: Can't Find an NHS Dentist.",
+  },
+  {
+    question: "Is a tooth abscess dangerous if I can't afford treatment?",
+    answer:
+      "Yes. A dental abscess is a bacterial infection that does not resolve on its own. Without treatment, it can spread into surrounding bone and soft tissue. If you have facial swelling, a high fever (above 38°C), difficulty swallowing or breathing alongside dental pain, call 999 or go to A&E immediately — these are signs of a spreading infection that can become life-threatening. For everyone else with a suspected abscess and no dental access, NHS 111 (dial 111) can refer you to NHS emergency dental treatment at no upfront cost. Read the Tooth Abscess Can't Afford a Dentist guide.",
+  },
+  {
+    question: "Can I delay root canal treatment to save up?",
+    answer:
+      "Delaying root canal on an infected tooth increases the risk of the infection progressing to an abscess, bone loss, and the tooth becoming unrestorable — meaning extraction anyway, at greater overall cost. If you need time to save, request a free treatment plan to see what monthly finance would look like (typically from £10/month over 36 months for root canal plus crown in Turkey), and ask your dentist to seal the tooth temporarily to slow progression while you arrange finance. Read the Can't Afford a Root Canal UK guide for full options.",
+  },
   {
     question: "I can't afford a private dentist in the UK. What are my options?",
     answer: "Start by checking whether the treatment you need is covered by the NHS, since NHS charges are fixed and far lower than private fees. If it isn't (cosmetic work such as veneers usually isn't), the next options are a dental payment plan or finance arrangement to spread the private cost, choosing a less expensive material or a phased treatment plan, or looking at treatment abroad, which can cost 65 to 90 percent less than the same UK private treatment for the same materials and brands.",
@@ -215,6 +231,37 @@ export default function CantAffordDentalTreatmentUKPage() {
             to see an itemised cost and monthly breakdown before deciding anything.
           </p>
 
+          <h2 id="specific-problem" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">Help With a Specific Problem</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            If you have a specific dental problem alongside affordability concerns, these guides go deeper on each situation:
+          </p>
+          <ul className="space-y-3 mb-6">
+            <li>
+              <Link href="/guides/no-nhs-dentist-what-to-do" className="text-[#1e40af] font-semibold hover:underline">
+                If you can&apos;t find an NHS dentist accepting patients
+              </Link>{" "}
+              — NHS 111, Community Dental Services, dental schools and emergency access explained step by step.
+            </li>
+            <li>
+              <Link href="/guides/tooth-abscess-cant-afford-dentist" className="text-[#1e40af] font-semibold hover:underline">
+                If you have a tooth abscess
+              </Link>{" "}
+              — a dental abscess is a bacterial infection that requires urgent care. NHS 111 can refer you to emergency treatment at no upfront cost. Red flag signs requiring A&amp;E are covered in this guide.
+            </li>
+            <li>
+              <Link href="/guides/severe-toothache-cant-afford-dentist" className="text-[#1e40af] font-semibold hover:underline">
+                If you have severe toothache
+              </Link>{" "}
+              — what the most common causes mean, what temporary measures help, and how to access NHS emergency dental care.
+            </li>
+            <li>
+              <Link href="/guides/cant-afford-root-canal-uk" className="text-[#1e40af] font-semibold hover:underline">
+                If you can&apos;t afford a root canal
+              </Link>{" "}
+              — NHS Band 2 costs, private price ranges, root canal vs extraction, and how much root canal + crown costs in Turkey versus the UK.
+            </li>
+          </ul>
+
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">FAQs</h2>
         </div>
       </article>
@@ -233,10 +280,12 @@ export default function CantAffordDentalTreatmentUKPage() {
         <RelatedLinksGrid
           title="Related Pages"
           links={[
+            { title: "Can't Find an NHS Dentist?", desc: "NHS 111, emergency services and alternatives when you can't get registered.", href: "/guides/no-nhs-dentist-what-to-do" },
+            { title: "Tooth Abscess Can't Afford a Dentist?", desc: "Emergency action, NHS 111 referral, A&E red flags and follow-up costs.", href: "/guides/tooth-abscess-cant-afford-dentist" },
+            { title: "Severe Toothache Can't Afford a Dentist?", desc: "Causes, NHS 111 options and temporary pain relief explained.", href: "/guides/severe-toothache-cant-afford-dentist" },
+            { title: "Can't Afford a Root Canal UK?", desc: "NHS Band 2 costs, extraction comparison and Turkey cost comparison.", href: "/guides/cant-afford-root-canal-uk" },
             { title: "Dental Finance Options UK", desc: "0% representative APR finance, eligibility and how pre-qualification works.", href: "/finance-options-uk" },
             { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, from £82/month.", href: "/monthly-payment" },
-            { title: "Price Calculator", desc: "Build a personalised estimate across multiple treatments.", href: "/price-calculator" },
-            { title: "Teeth in Turkey: Complete UK Patient Guide", desc: "The full process, safety and clinic evaluation guide.", href: "/guides/teeth-in-turkey" },
           ]}
         />
       </div>
