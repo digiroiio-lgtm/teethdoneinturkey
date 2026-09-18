@@ -13,10 +13,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/turkey-teeth-cost`;
-const TITLE = "Turkey Teeth Cost 2026: UK Price Guide";
-const H1 = "Turkey Teeth Cost: Complete 2026 Price Guide";
+const TITLE = "How Much Do Turkey Teeth Cost? 2026 UK Price Guide";
+const H1 = "How Much Do Turkey Teeth Cost? Complete 2026 Price Guide for UK Patients";
 const DESCRIPTION =
-  "How much do teeth cost in Turkey? Source-checked 2026 prices for implants, veneers, crowns and packages, with UK comparisons.";
+  "Turkey teeth cost from £130 per tooth. Full 2026 prices in pounds for veneers, crowns, implants and full-mouth packages — with UK cost comparison and finance options.";
 const DATE_PUBLISHED = "2026-09-03";
 // Content last revised 2026-09-08. The 2026-09-11 change moved this page from
 // /guides/turkey-teeth-cost to this URL without altering the substance, so the
@@ -39,6 +39,7 @@ const toc = [
   { id: "diagnostics", label: "Diagnostics" },
   { id: "travel-accommodation", label: "Travel & Accommodation" },
   { id: "uk-vs-turkey", label: "UK vs Turkey Comparison" },
+  { id: "why-cheaper", label: "Why Cheaper in Turkey?" },
   { id: "hidden-costs", label: "Potential Hidden Costs" },
   { id: "finance", label: "Finance & Monthly Payment" },
   { id: "accurate-quote", label: "Getting an Accurate Quote" },
@@ -102,8 +103,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        { "@type": "ListItem", position: 2, name: "Prices", item: `${SITE_URL}/prices/teeth-done-in-turkey-cost` },
-        { "@type": "ListItem", position: 3, name: "Turkey Teeth Cost", item: PAGE_URL },
+        { "@type": "ListItem", position: 2, name: "Turkey Teeth Cost", item: PAGE_URL },
       ],
     },
   ],
@@ -139,7 +139,7 @@ export default function TurkeyTeethCostPricePage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto">
           <div className="mb-4">
-            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Prices", href: "/prices/teeth-done-in-turkey-cost" }, { label: "Turkey Teeth Cost" }]} />
+            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Turkey Teeth Cost" }]} />
           </div>
           <span className="inline-block bg-white/15 border border-white/25 text-white text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">Price Guide</span>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">{H1}</h1>
@@ -240,6 +240,12 @@ export default function TurkeyTeethCostPricePage() {
             Across every treatment compared on this site, Turkey pricing is consistently 65–90% lower than equivalent UK private dental prices. The gap reflects lower clinic overheads, staff costs and general cost of living in Turkey — not lower-quality materials, since the same international implant and veneer brands used in UK practices (Straumann, Nobel Biocare, Ivoclar E-max) are used by partner clinics in Turkey.
           </p>
 
+          <h2 id="why-cheaper" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Why Is Dental Treatment Cheaper in Turkey?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
+            Three structural factors drive the price difference: lower clinic overheads and property costs, significantly lower staff costs due to Turkey&apos;s cost of living, and a GBP/TRY exchange rate that has shifted substantially in favour of UK patients over the past decade. These savings are structural, not a sign of lower quality — accredited Turkish clinics use the same implant brands (Straumann, Nobel Biocare) and porcelain systems (Ivoclar E-max) as UK practices. For a deeper analysis, see{" "}
+            <Link href="/blog/why-are-dental-treatments-cheaper-in-turkey" className="text-[#1e40af] font-semibold hover:underline">Why Are Dental Treatments Cheaper in Turkey?</Link>
+          </p>
+
           <h2 id="hidden-costs" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Potential Hidden Costs</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             The most common way a final bill differs from an initial headline price is scope: the advertised &ldquo;from&rdquo; price usually reflects the base treatment or entry-level material, while premium brands, additional teeth, bone grafting, sinus lifts, or optional whitening are priced on top. Flights are never included in a package price. Always request an itemised quote confirming exactly which brand, how many teeth, and which extras are and are not included.
@@ -286,7 +292,7 @@ export default function TurkeyTeethCostPricePage() {
           links={[
             { title: "Teeth in Turkey: The Complete UK Patient Guide", desc: "The primary guide covering treatment, process, safety and cost.", href: "/guides/teeth-in-turkey" },
             { title: "Dental Implants in Turkey: Complete Guide", desc: "Brands, procedure, timelines, and implant-specific costs.", href: "/guides/dental-implants-turkey" },
-            { title: "Dental Finance UK", desc: "Payment plans, dental loans, 0% APR and bad credit, explained.", href: "/finance-options-uk" },
+            { title: "Turkey Teeth Finance", desc: "Pay monthly for Turkey teeth. 0% APR payment plans and bad credit options explained.", href: "/finance-options-uk" },
           ]}
         />
 
