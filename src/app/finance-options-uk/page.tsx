@@ -5,20 +5,20 @@ import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 
 export const revalidate = 86400;
 
-// Repositioned 2026-09-11. Search Console (2026-09-04..09-10) shows this URL
-// ranking for two different intents. It wins the generic UK dental-finance
-// intent — "teeth on finance bad credit" at position 7.6 (15 impressions),
-// "teeth on finance" 75, "loans for dental work" 76, "dental implant finance
-// uk" 84, "denture financing" 80.8, "veneers uk finance" 70.3 — but the old
-// Turkey-framed title and description matched none of those queries, which is
-// the most likely reason 22 impressions at position ~7.8 produced 0 clicks.
-// Google Trends (GB, 90d) corroborates the intent: "dental finance" scores 36
-// against "turkey teeth" at 100, and its top related query is "dental finance
-// uk" (100) followed by "dental finance bad credit" (14).
+// Repivoted to Turkey-framed 2026-09-18. The GSC Turkey-finance cluster
+// (turkey teeth pay monthly, turkey teeth finance, pay monthly turkey teeth,
+// veneers turkey payment plan, turkey teeth payment plan, turkey teeth on
+// finance, can you pay monthly for turkey teeth, can you get teeth done in
+// turkey on finance) totals 119+ impressions against near-zero CTR. The
+// 2026-09-11 generic-UK repositioning improved generic UK dental-finance
+// rankings but sacrificed the higher-volume Turkey-specific cluster entirely.
+// The page body already covers Turkey treatment finance — the title mismatch
+// was the only reason Turkey queries produced 0 clicks. Regulatory body
+// wording preserved throughout.
 export const metadata: Metadata = {
   alternates: { canonical: "/finance-options-uk" },
-  title: { absolute: "Dental Finance UK: Dental Loans & Pay Monthly Plans" },
-  description: "UK dental finance explained: 0% payment plans, dental loans, cost per month by treatment, and where you really stand with bad credit. Soft search.",
+  title: { absolute: "Turkey Teeth Finance: Pay Monthly & Payment Plans for UK Patients" },
+  description: "Pay monthly for Turkey teeth from £6/month. Finance available for veneers, implants and full-mouth treatment. Bad credit considered. 0% APR representative.",
 };
 
 const options = [
@@ -161,8 +161,8 @@ export default function FinanceOptionsUKPage() {
       <script id="faq-schema-finance-options-uk" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Finance in the UK: Loans, Plans and Monthly Costs</h1>
-          <p className="text-xl text-blue-200">How UK dental finance works, what each treatment costs per month, and where you stand if your credit is poor. 0% APR plans from £82/month.</p>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Can You Pay Monthly for Turkey Teeth? Finance &amp; Payment Plans Explained</h1>
+          <p className="text-xl text-blue-200">Yes — spread the cost of dental treatment in Turkey over 12, 24 or 36 months. 0% APR representative plans from £82/month, bad credit considered.</p>
         </div>
       </div>
 
