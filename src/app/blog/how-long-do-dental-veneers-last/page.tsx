@@ -9,8 +9,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/how-long-do-dental-veneers-last" },
-  title: { absolute: "How Long Do Turkey Teeth Last? Veneers & Crowns" },
-  description: "How long do turkey teeth last? E-max veneers 10–15 years, zirconia crowns 15–20, composite 5–7. What actually decides the lifespan — and what shortens it.",
+  title: { absolute: "How Long Do Turkey Teeth Last? Veneers, Crowns & Implants Explained" },
+  description: "E-max veneers last 10–15 years, zirconia crowns 15–20, implants 20+ years. What affects the lifespan of Turkey teeth — material, prep quality, aftercare and habits.",
 };
 
 const faqs = [
@@ -42,8 +42,8 @@ export default function VeneersLastBlogPage() {
       <ArticleJsonLd
         id="article-schema-how-long-do-dental-veneers-last"
         path="/blog/how-long-do-dental-veneers-last"
-        headline="How Long Do Turkey Teeth Last? Veneers & Crowns"
-        description="How long do turkey teeth last? E-max veneers 10–15 years, zirconia crowns 15–20, composite 5–7. What actually decides the lifespan — and what shortens it."
+        headline="How Long Do Turkey Teeth Last? Veneers, Crowns & Implants Explained"
+        description="E-max veneers last 10–15 years, zirconia crowns 15–20, implants 20+ years. What affects the lifespan of Turkey teeth — material, prep quality, aftercare and habits."
         datePublished="2024-11-01"
         dateModified="2026-09-04"
         breadcrumbs={[
@@ -55,7 +55,7 @@ export default function VeneersLastBlogPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Veneers</span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">How Long Do Turkey Teeth Last? Veneers and Crowns Compared</h1>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">How Long Do Turkey Teeth Last? Veneers, Crowns &amp; Implants</h1>
           <p className="text-gray-500 text-sm">Published November 2024 · Updated September 2026 · 5 min read</p>
           <MedicalReviewBadge />
         </div>
@@ -117,6 +117,31 @@ export default function VeneersLastBlogPage() {
             <li>Visit a UK dentist for annual check-ups</li>
             <li>Avoid excessive consumption of staining foods and drinks</li>
           </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How Long Do Dental Implants Last in Turkey?</h2>
+          <p>Dental implants are a different category entirely — they are not a surface restoration but a titanium post integrated into the jawbone. When placed correctly into healthy bone with a recognised brand (Straumann, Nobel Biocare, Osstem), implants can last <strong>20+ years</strong>, often for life. The limiting factor is the crown on top — typically a zirconia crown with its own 15–20 year lifespan — which may need replacing while the implant post underneath remains intact.</p>
+          <p className="mt-3">The same longevity factors apply as for veneers: bone health, oral hygiene, avoiding excessive bite forces on the implant, and attending regular dental check-ups after returning to the UK. Implants placed in Turkey using the same premium brands as the UK carry the same manufacturer data behind them.</p>
+
+          <div className="overflow-x-auto rounded-xl shadow-sm mt-4 mb-6">
+            <table className="w-full text-sm bg-white">
+              <thead><tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white"><th className="px-4 py-3 text-left">Treatment</th><th className="px-4 py-3 text-center">Expected Lifespan</th><th className="px-4 py-3 text-left">Notes</th></tr></thead>
+              <tbody>
+                {[
+                  { type: "E-max Porcelain Veneers", life: "10–15 years", notes: "Same materials as UK. Lifespan set by preparation and bonding quality." },
+                  { type: "Zirconia Crowns", life: "15–20 years", notes: "Most durable cosmetic option. Used in most Hollywood Smile packages." },
+                  { type: "Composite Veneers", life: "5–7 years", notes: "Less durable; may need earlier replacement." },
+                  { type: "Dental Implant (post)", life: "20+ years / lifetime", notes: "Post outlasts the crown on top. Brand matters more than country." },
+                  { type: "Implant Crown (zirconia)", life: "15–20 years", notes: "The replaceable component sitting on the implant post." },
+                ].map((r, i) => (
+                  <tr key={r.type} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    <td className="px-4 py-3 font-medium">{r.type}</td>
+                    <td className="px-4 py-3 text-center font-bold text-[#1e40af]">{r.life}</td>
+                    <td className="px-4 py-3 text-gray-600">{r.notes}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           <FAQSection title="How Long Do Turkey Teeth Last? Common Questions" faqs={faqs} />
 

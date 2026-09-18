@@ -66,6 +66,14 @@ const faqs = [
     question: "What is the difference between All-on-4 and All-on-6?",
     answer: "All-on-4 replaces a full arch of teeth on 4 implants, while All-on-6 uses 6 implants for the same arch. All-on-6 generally offers greater load distribution and stability, which can suit patients with higher bite forces or reduced bone density, but it is not automatically the better option for every patient — your consultation and diagnostics (including a CT scan) will determine which is appropriate.",
   },
+  {
+    question: "What are screwless dental implants?",
+    answer: "Screwless (or cement-retained) implants use dental cement rather than a screw to attach the crown to the implant abutment. They can offer a more natural appearance as there is no visible screw access hole on the crown surface. Screw-retained implants are more common because the crown can be removed and replaced without disturbing the implant; cement-retained crowns are harder to remove if adjustment is needed. Ask your clinic which retention method they use and why, as the choice depends on the position of the implant and the clinician's preference.",
+  },
+  {
+    question: "Can dental implants fail in Turkey?",
+    answer: "Yes, implant failure can occur anywhere in the world, including Turkey. The main causes are the same globally: insufficient bone density or volume, uncontrolled systemic conditions such as unmanaged diabetes, smoking, peri-implantitis (infection around the implant), and — in a minority of cases — implant brand quality or surgical technique. Choosing a clinic with a CBCT scanner for pre-surgical planning, a recognised implant brand (Straumann, Nobel Biocare, Osstem), and a qualified implantologist significantly reduces the risk. Signs of failure include persistent pain, implant mobility, or swelling in the weeks or months after placement — report these to your clinic and UK dentist promptly.",
+  },
 ];
 
 const jsonLd = {

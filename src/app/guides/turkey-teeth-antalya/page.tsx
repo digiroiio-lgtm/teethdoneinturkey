@@ -64,6 +64,10 @@ const faqs = [
     answer: "UK patients working through this site have a named UK-based treatment coordinator who handles post-treatment queries, liaises with the Antalya clinic on their behalf, and can refer to a UK dental partner for emergency checks if needed. Ask any provider you consider to confirm exactly what UK aftercare they offer before you book.",
   },
   {
+    question: "Why choose Antalya for dental implants?",
+    answer: "Antalya has a growing number of clinics with specialist implantologists who work with international patients daily. The main reasons UK patients choose Antalya for implants specifically are: the cost saving (Osstem implants from £250 vs £2,000+ in the UK; Straumann from £800 vs £3,000+), the availability of in-house CBCT scanners and digital workflows at established clinics, and the resort environment that makes a 5–7 day first visit more comfortable. The clinical process — consultation, CT scan, implant placement, temporary restoration — is the same as in the UK. What changes is the cost and the experience around it. Confirm that your chosen clinic has an accredited implantologist on staff, not just a general dentist performing implant procedures.",
+  },
+  {
     question: "Can I finance treatment in Antalya?",
     answer: "Yes. 0% representative APR finance is available for treatment booked through this site. Monthly payments start from approximately £70/month on a 36-month plan for a £2,500 treatment. The finance covers the treatment cost; flights and accommodation are typically paid separately. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
   },
@@ -124,8 +128,8 @@ export default function TurkeyTeethAntalyaPage() {
           />
 
           <p className="text-gray-700 leading-relaxed mb-6">
-            Antalya is where the majority of UK dental patients go when they choose Turkey. This guide answers the practical questions — what treatment you can have, how many days it takes, what a trip actually looks like, how to choose a clinic you can trust, and what happens when you get home. For Antalya treatment prices, see{" "}
-            <Link href="/guides/antalya-teeth-prices" className="text-[#1e40af] font-semibold hover:underline">Antalya Dental Prices 2026</Link>.
+            Antalya is where the majority of UK dental patients go when they choose Turkey. This guide answers the practical questions — what treatment you can have, how many days it takes, what a trip actually looks like, how to choose a clinic you can trust, and what happens when you get home. For treatment prices, see the{" "}
+            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth cost guide</Link>.
           </p>
 
           <GuideTOC items={toc} />
@@ -146,8 +150,8 @@ export default function TurkeyTeethAntalyaPage() {
             Antalya has been the primary destination for UK dental patients in Turkey for over fifteen years, and the infrastructure reflects it. Clinics here are structured for international patients — English-speaking coordinators, established hotel partnerships, airport pickup services, and treatment scheduling designed around a 5–7 day stay. Istanbul has more clinics overall but Antalya has more clinics with direct experience of UK patient needs, communication preferences and aftercare expectations.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The pricing advantage is substantial: the same E-max porcelain veneers and Straumann or Nobel Biocare implants used in UK private practices cost 65–80% less in Antalya, not because the materials are different but because Turkish clinic overheads and cost of living are significantly lower. For Antalya treatment prices specifically, see the{" "}
-            <Link href="/guides/antalya-teeth-prices" className="text-[#1e40af] font-semibold hover:underline">Antalya dental prices guide</Link>.
+            The pricing advantage is substantial: the same E-max porcelain veneers and Straumann or Nobel Biocare implants used in UK private practices cost 65–80% less in Antalya, not because the materials are different but because Turkish clinic overheads and cost of living are significantly lower. For full treatment prices, see the{" "}
+            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth cost guide</Link>.
           </p>
 
           <h2 id="treatment-options" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Treatment Options in Antalya</h2>
@@ -290,7 +294,7 @@ export default function TurkeyTeethAntalyaPage() {
         <RelatedLinksGrid
           title="Related Pages"
           links={[
-            { title: "Antalya Dental Prices 2026", desc: "Full Antalya treatment price table: veneers, implants, full mouth.", href: "/guides/antalya-teeth-prices" },
+            { title: "Turkey Teeth Cost Guide 2026", desc: "Full treatment price table: veneers, implants, full mouth, UK comparison.", href: "/prices/turkey-teeth-cost" },
             { title: "Veneers in Antalya Cost", desc: "E-max, zirconia and full set veneer prices in Antalya.", href: "/prices/veneers-antalya-cost" },
             { title: "Turkey Teeth Packages", desc: "What Turkey dental packages include and what to check.", href: "/guides/turkey-teeth-packages" },
             { title: "Are Turkish Veneers Safe?", desc: "Risks, tooth shaving and how to choose a safe clinic.", href: "/guides/turkish-veneers-safety" },
