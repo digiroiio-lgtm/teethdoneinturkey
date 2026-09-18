@@ -16,9 +16,9 @@ const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-antalya`;
 const TITLE = "Turkey Teeth in Antalya: Complete UK Patient Guide 2026";
 const H1 = "Turkey Teeth in Antalya: Complete UK Patient Guide 2026";
 const DESCRIPTION =
-  "What it is actually like to go to Antalya from the UK for dental treatment — treatment options, clinic choice, the patient journey, travel, safety and UK aftercare.";
+  "What going to Antalya from the UK for dental treatment is really like: treatment options, choosing a clinic, the journey, travel, safety and aftercare.";
 const DATE_PUBLISHED = "2026-09-13";
-const DATE_MODIFIED = "2026-09-13";
+const DATE_MODIFIED = "2026-09-18";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/turkey-teeth-antalya" },

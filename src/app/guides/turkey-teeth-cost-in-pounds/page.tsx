@@ -12,12 +12,12 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-cost-in-pounds`;
-const TITLE = "Turkey Teeth Cost in Pounds: 2026 GBP Price Guide for UK Patients";
-const H1 = "Turkey Teeth Cost in Pounds: What Can You Get for Your Budget?";
+const TITLE = "What Can You Get for £2,500–£7,500 in Turkey?";
+const H1 = "What Can You Get for Your Budget? Turkey Teeth in Pounds";
 const DESCRIPTION =
   "GBP budget guide for UK patients: what Turkey dental treatment you can realistically get for £2,500, £3,500, £5,000 and £7,500 in 2026.";
 const DATE_PUBLISHED = "2026-09-13";
-const DATE_MODIFIED = "2026-09-13";
+const DATE_MODIFIED = "2026-09-18";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/turkey-teeth-cost-in-pounds" },

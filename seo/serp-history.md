@@ -7,6 +7,168 @@ rewritten again.
 
 ---
 
+## 2026-09-18 (GSC feed lost — structural audit + SERP snippet repair)
+
+**The Search Console feed is down. No GSC data informed this run.** Every
+`data_query` against the Supermetrics `GW` (Google Search Console) source for
+`sc-domain:teethdoneinturkey.co.uk` returned:
+
+```
+[TRIAL_EXPIRED] Your free trial on team Team digiroiio has expired on
+2026-09-17 (ID: 1943513).
+```
+
+Last 24h, 7-day and 28-day pulls all failed; the account's other four
+properties are equally affected. There is no cached export anywhere in the
+repo, so **the most recent real GSC evidence available to any run is still the
+2026-09-11 dataset recorded below.** Restore via a Supermetrics subscription or
+a direct GSC connection before the next run.
+
+### What this means for the daily routine
+
+STEPS 1–3, 5–6, 11, 17 and 18 are all evidence-led and could not run. Under the
+final operating principle ("Search Console is the feedback loop") the correct
+response to a dead feed is **not** to substitute intuition for evidence, so
+this run deliberately took **no positioning, merge or new-page decision**. Only
+work that is verifiable from the codebase itself was executed.
+
+### Gap in the log: 16 pages shipped across 09-13 and 09-17, unrecorded
+
+Three commits landed after the last logged run and **none of them added an
+entry here**, so no before-position, target-query or rationale exists for any
+of the pages they created:
+
+| Commit | Date | Pages added |
+|---|---|---|
+| `8a38b87` | 09-13 | 7 new guides |
+| `14afab1` | 09-13 | 5 pages (Antalya hub + veneer cluster) |
+| `77a1bce` | 09-17 | 4 affordability guides |
+
+**12 of the 16 pages were created on a single day (09-13).** STEP 16 sets the
+ceiling at 1 major new page *or* 2 existing-page upgrades per day. This run was
+12× over that limit, and the cannibalisation below is the direct consequence.
+
+### Cannibalisation map (structural evidence only — no GSC to arbitrate)
+
+Live route count is now **85**. Duplicate-intent clusters as they stand:
+
+**Cost / "how much are turkey teeth" — 5 live URLs competing**
+
+| URL | Added | Note |
+|---|---|---|
+| `/prices/turkey-teeth-cost` | earlier | **Designated canonical**, sitemap priority 0.95 |
+| `/prices/teeth-done-in-turkey-cost` | earlier | |
+| `/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey` | 09-13 | |
+| `/guides/turkey-teeth-cost-in-pounds` | 09-13 | |
+| `/guides/full-set-of-teeth-turkey-cost` | 09-13 | |
+
+`/guides/turkey-teeth-cost-in-pounds` targets *"how much are turkey teeth in
+pounds"* — the **exact query the spec's CRITICAL RULE names** as one that must
+strengthen the cost canonical rather than own a page.
+
+**Full-mouth implants — the 09-11 merge was undone.** On 09-11 this log
+recorded `/blog/full-mouth-dental-implants-turkey-cost` being 301'd into
+`/blog/full-mouth-implants-uk-vs-turkey`, the URL GSC proved Google actually
+ranks (69 impressions @ pos 24.9). On 09-13 a new page was created at
+`/guides/full-mouth-dental-implants-turkey-cost` carrying the same cost intent
+— re-creating the duplicate that had just been consolidated away.
+
+**Antalya — 4 URLs from one batch:** `/guides/antalya-teeth-prices` and
+`/guides/turkey-teeth-antalya` are near-identical in intent, plus
+`/prices/veneers-antalya-cost` and `/blog/antalya-vs-istanbul-dental-clinics`.
+
+**Packages — near-duplicate titles:** `/guides/turkey-teeth-packages` and
+`/guides/veneers-turkey-packages` shipped with the *same* title pattern,
+"… Packages: What Is Included and What Does It Really Cost?".
+
+**Monthly payment / finance — 6 URLs:** `/monthly-payment`,
+`/guides/turkey-teeth-monthly-payments`,
+`/blog/can-you-pay-monthly-for-teeth-in-turkey`,
+`/blog/dental-treatment-turkey-payment-plans`, `/finance-options-uk`,
+`/blog/dental-tourism-finance-explained`.
+
+### Explicitly NOT done this run: no merges, no redirects
+
+The 09-08 entry records a ranking regression caused by merging cost URLs
+without checking which one Google was actually ranking, and the 09-11 morning
+run had to reverse it. Resolving the clusters above requires exactly the
+per-URL impression data that is currently unavailable. **Merging blind today
+would repeat the documented 09-08 mistake.** Deferred until the feed is back.
+
+### TODAY'S PRIMARY ACTION
+
+**Action:** OPTIMISE EXISTING · **Page type:** MONEY / POWER (mixed cluster)
+**Priority:** 8.5/10 · **URLs:** 14
+
+SERP snippet repair (STEP 11) across every page from the unlogged batches whose
+title or meta description would be truncated in the SERP. Safe without GSC:
+it changes no URL, no canonical and no redirect, and is fully reversible.
+
+**Titles cut to ≤60 chars (13 pages).** Worst offenders were 82 and 83 chars —
+both would have been cut mid-phrase by Google.
+
+Three titles were also **differentiated away from a canonical they were
+competing with**, using each page's own genuine angle. This reduces
+cannibalisation without touching a single URL, and it protects the proven
+winner rather than the unproven newcomer (STEP 4):
+
+| URL | Was | Now |
+|---|---|---|
+| `/guides/full-mouth-dental-implants-turkey-cost` | Full Mouth Dental Implants Turkey Cost: All-on-4, All-on-6 & Full Arch Prices 2026 (82) | All-on-4 vs All-on-6 vs Full Arch: Turkey Costs (47) |
+| `/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey` | How Much Does It Cost to Get Your Teeth Done in Turkey? Complete UK Cost Guide 2026 (83) | Teeth Done in Turkey: Total Cost Including Travel (48) |
+| `/guides/turkey-teeth-cost-in-pounds` | Turkey Teeth Cost in Pounds: 2026 GBP Price Guide for UK Patients (65) | What Can You Get for £2,500–£7,500 in Turkey? (44) |
+
+The first pulls the 09-13 newcomer off a head-on match with the GSC-proven
+winner `/blog/full-mouth-implants-uk-vs-turkey`. The second moves onto total
+door-to-door spend (its actual content — flights, hotel, transfers, second
+visit), away from `/prices/turkey-teeth-cost`. The third moves onto the budget
+tiers the page actually covers, away from the cost canonical. Two matching H1s
+were updated to stay consistent with the new titles.
+
+**Meta descriptions cut to ≤160 chars (9 pages).** Worst was 190.
+
+**CI fix.** `/guides/veneers-turkey-packages` line 212 carried an unescaped
+apostrophe (`react/no-unescaped-entities`) that shipped in the 09-13 batch and
+is a **blocking lint error**, not a warning. Fixed to `&rsquo;`.
+
+### Verification
+
+- `npm run lint` — 0 errors (2 pre-existing unused-var warnings remain).
+- `npm run build` — compiled, 103 static pages generated.
+- New titles, H1s and self-referencing canonicals confirmed **server-rendered**
+  against the production build, not client-injected.
+- `seo/route-lastmod.json` regenerated: exactly the 14 touched pages moved to
+  2026-09-18. No site-wide lastmod bump.
+- Full internal-link crawl: **0 orphans** across all 85 routes.
+- All 10 redirect stubs verified single-hop, no chains.
+
+### NEXT 3 PRIORITIES
+
+1. **Restore the GSC feed.** Nothing evidence-led can run until it is back.
+   This blocks the entire routine, not just one day of it.
+2. **Resolve the cost cluster** the moment data returns: pull per-URL
+   impressions for the 5 competing URLs, keep whichever Google actually ranks,
+   merge the rest into it. Same method as 09-11, same caution as 09-08.
+3. **Resolve full-mouth implants and Antalya**, in that order — implants are
+   the higher-ticket intent, and the 09-11 consolidation there has already been
+   partially undone once.
+
+### SEO HEALTH SUMMARY
+
+- **Finance:** stable; 6-URL spread unresolved, needs data.
+- **Cost:** *degraded* — 5-way split against the canonical, worst cluster.
+- **Packages:** 2 near-duplicate titles, now differentiated; URLs unresolved.
+- **Treatments:** 09-11 implant consolidation partially undone.
+- **Trust:** unchanged, no action needed.
+- **Technical:** good — 0 orphans, 0 broken links, 0 lint errors, clean build.
+
+**OVERALL DAILY SCORE: 5/10** — the build work completed is sound and CI is
+unblocked, but the run's primary purpose could not be served with the feed
+down, and the site carries a cannibalisation problem that only GSC data can
+safely resolve.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

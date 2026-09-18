@@ -12,12 +12,12 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-packages`;
-const TITLE = "Turkey Teeth Packages: What Is Included and What Does It Really Cost?";
+const TITLE = "Turkey Teeth Packages: What's Included & Real Cost";
 const H1 = "Turkey Teeth Packages: What Is Actually Included and What Does It Cost?";
 const DESCRIPTION =
-  "Package price is not the same as total cost. This guide explains exactly what Turkey dental packages include, what they leave out, and what to check before you book.";
+  "Package price is not total cost. Exactly what Turkey dental packages include, what they leave out, and what to check before you book.";
 const DATE_PUBLISHED = "2026-09-13";
-const DATE_MODIFIED = "2026-09-13";
+const DATE_MODIFIED = "2026-09-18";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/turkey-teeth-packages" },

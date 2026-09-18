@@ -12,12 +12,12 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/veneers-antalya-cost`;
-const TITLE = "Veneers Antalya Cost 2026: E-max, Zirconia & Package Prices for UK Patients";
+const TITLE = "Veneers Antalya Cost 2026: E-max & Zirconia Prices";
 const H1 = "Veneers Antalya Cost 2026: What UK Patients Actually Pay";
 const DESCRIPTION =
-  "Veneer prices in Antalya 2026 — E-max from £190/tooth, zirconia from £130, composite from £80. Package vs treatment-only vs total trip cost tables for 8, 10, 16 and 20 teeth.";
+  "Veneer prices in Antalya 2026: E-max from £190/tooth, zirconia from £130, composite from £80. Package vs treatment-only vs total trip cost tables.";
 const DATE_PUBLISHED = "2026-09-13";
-const DATE_MODIFIED = "2026-09-13";
+const DATE_MODIFIED = "2026-09-18";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/veneers-antalya-cost" },
