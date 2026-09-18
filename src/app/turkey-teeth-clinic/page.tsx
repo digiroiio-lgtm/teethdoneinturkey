@@ -6,8 +6,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/turkey-teeth-clinic" },
-  title: { absolute: "Turkey Teeth Clinic: How to Choose Safely" },
-  description: "How to choose the best turkey teeth clinic for UK patients. What accreditations to look for, questions to ask, and red flags to avoid. Expert guide 2026.",
+  title: { absolute: "How to Choose a Dental Clinic in Turkey: UK Patient Checklist" },
+  description: "Not all Turkish dental clinics are equal. The full checklist: accreditation, named dentists, materials, guarantees, aftercare and how to spot red flags.",
 };
 
 const checklistItems = [
@@ -103,7 +103,7 @@ export default function TurkeyTeethClinicPage() {
       <script id="faq-schema-turkey-teeth-clinic" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Turkey Teeth Clinic – How to Choose the Right One</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">How to Choose a Dental Clinic in Turkey: What UK Patients Should Check</h1>
           <p className="text-xl text-blue-200">The complete guide for UK patients selecting a dental clinic in Turkey</p>
         </div>
       </div>
