@@ -5,7 +5,6 @@ import GuideTOC from "@/components/GuideTOC";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
@@ -18,7 +17,7 @@ const H1 = "Dental Implants in Turkey: Complete Guide for UK Patients";
 const DESCRIPTION =
   "Dental implants in Turkey for UK patients: brands, procedure, healing times, All-on-4 and All-on-6, costs from £250, risks and clinic choice.";
 const DATE_PUBLISHED = "2026-09-03";
-const DATE_MODIFIED = "2026-09-03";
+const DATE_MODIFIED = "2026-09-18";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/dental-implants-turkey" },
@@ -92,11 +91,6 @@ const jsonLd = {
       image: `${SITE_URL}/opengraph-image`,
       author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
       publisher: { "@id": `${SITE_URL}/#organization` },
-      reviewedBy: {
-        "@type": "Person",
-        name: "Dr. Ayşe Kaya",
-        jobTitle: "BDS, MSc Aesthetic Dentistry",
-      },
       about: { "@type": "MedicalProcedure", name: "Dental Implant" },
     },
     {
@@ -137,7 +131,14 @@ export default function DentalImplantsGuidePage() {
 
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MedicalReviewBadge reviewedDate="3 September 2026" />
+
+          {/* Quick Answer — AI/GEO direct extraction */}
+          <div id="quick-answer" className="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-6">
+            <h2 className="text-base font-bold text-gray-900 mb-2">Quick Answer</h2>
+            <p className="text-gray-700 leading-relaxed text-sm">
+              Dental implants in Turkey cost from £250 (single Osstem implant + crown) versus £2,000–£3,000 in the UK. JCI-accredited clinics use recognised international brands including Straumann, Nobel Biocare, and Osstem — the same brands placed in the UK. Most plans require two trips roughly 3–6 months apart to allow osseointegration. Safety depends on clinic accreditation, implant brand choice, and the dentist's implantology qualifications — not the country.
+            </p>
+          </div>
 
           <p className="text-lg text-gray-700 leading-relaxed mb-2">
             Dental implants in Turkey are one of the most common reasons UK patients travel abroad for dental care. This guide explains, step by step, what implant treatment actually involves, which brands and materials Turkish clinics typically use, realistic timelines, and how to evaluate whether a clinic is a safe, appropriate choice.

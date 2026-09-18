@@ -1,9 +1,57 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import KeyTakeaways from "@/components/KeyTakeaways";
+import FAQSection from "@/components/FAQSection";
+import SourcesList from "@/components/SourcesList";
 
 export const revalidate = 86400;
+
+const faqs = [
+  {
+    question: "Is it safe to get teeth done in Turkey?",
+    answer: "Yes — provided you choose an accredited clinic. Turkey's top dental clinics hold JCI (Joint Commission International) accreditation, the same international standard used globally. Clinical risks are broadly comparable to equivalent UK private dentistry when you verify credentials, confirm implant brands, and have a written treatment plan and guarantee.",
+  },
+  {
+    question: "What accreditation should I look for in a Turkish dental clinic?",
+    answer: "Look for JCI (Joint Commission International) accreditation or Turkish Ministry of Health (Sağlık Bakanlığı) registration. JCI is the most widely recognised international healthcare standard; Ministry of Health registration is a legal requirement for all Turkish clinics. Ask the clinic to provide their accreditation certificate, not just a badge on their website.",
+  },
+  {
+    question: "Are Turkish dentists qualified?",
+    answer: "Turkish dentists hold a five-year university degree in dentistry, regulated by the Turkish Ministry of Health. Many dentists at clinics serving international patients have completed additional postgraduate training in Germany, Italy, the USA, or the UK, and hold international specialist certifications. Always ask for the named dentist's qualifications before booking.",
+  },
+  {
+    question: "What are the risks of dental treatment in Turkey?",
+    answer: "The risks — infection, sensitivity, implant complications, unsatisfactory aesthetics — are the same as with dental treatment anywhere. The added complexity is distance: if something goes wrong after you return home, you are further from your treating dentist. Choose a clinic with a written guarantee, English-speaking aftercare support, and a clear process for UK patients.",
+  },
+  {
+    question: "How do I verify a Turkish dental clinic is legitimate?",
+    answer: "Check for JCI accreditation or Turkish Ministry of Health registration directly (not just from the clinic's own website). Look for verified reviews on Google or Trustpilot. Ask for the treating dentist's qualifications, the brand of materials to be used, and a written treatment plan with guarantee terms before paying any deposit.",
+  },
+];
+
+const sources = [
+  {
+    label: "JCI — Accreditation standards for international healthcare organisations",
+    href: "https://www.jointcommissioninternational.org/",
+  },
+  {
+    label: "NHS — Having treatment abroad (NHS Choices)",
+    href: "https://www.nhs.uk/using-the-nhs/healthcare-abroad/going-abroad-for-medical-treatment/",
+  },
+  {
+    label: "GDC — Dental treatment overseas guidance (General Dental Council)",
+    href: "https://www.gdc-uk.org/",
+  },
+  {
+    label: "Turkish Ministry of Health — International health services (Sağlık Bakanlığı)",
+    href: "https://www.saglik.gov.tr/EN/",
+  },
+  {
+    label: "USHAŞ — Turkish state health tourism agency",
+    href: "https://ushas.com.tr/en",
+  },
+];
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/is-it-safe-to-get-teeth-done-in-turkey" },
@@ -20,7 +68,7 @@ export default function SafetyBlogPage() {
         headline="Is Getting Teeth Done in Turkey Safe?"
         description="The honest answer to whether it's safe to get dental treatment in Turkey. Accreditation, risk factors, how to choose safely, and what patients say."
         datePublished="2024-11-01"
-        dateModified="2026-09-04"
+        dateModified="2026-09-18"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -32,8 +80,28 @@ export default function SafetyBlogPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Safety</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Is It Safe to Get Teeth Done in Turkey? Honest 2026 Guide</h1>
           <p className="text-gray-500 text-sm">Published November 2024 · Updated September 2026 · 6 min read</p>
-          <MedicalReviewBadge />
+          {/* CLINICAL REVIEW REQUIRED: Add reviewer name, title, and date when an actual dental professional has reviewed this page */}
         </div>
+
+        {/* Quick Answer — AI/GEO direct extraction */}
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-8">
+          <h2 className="text-base font-bold text-gray-900 mb-2">Quick Answer</h2>
+          <p className="text-gray-700 leading-relaxed text-sm">
+            Yes, it is safe to get teeth done in Turkey when you choose a JCI-accredited or Turkish Ministry of Health-registered clinic, verify the treating dentist&apos;s qualifications, confirm the brand of materials used, and obtain a written treatment plan and guarantee before travelling. Clinical risks are broadly comparable to equivalent UK private dentistry. The main added complexity is distance — aftercare depends on a clinic with strong UK patient support.
+          </p>
+        </div>
+
+        <KeyTakeaways
+          items={[
+            "Turkey's top dental clinics hold JCI accreditation — the same international healthcare standard recognised globally.",
+            "Turkish dentists hold a five-year regulated university degree; many have additional postgraduate training in Germany, Italy, or the USA.",
+            "Clinical risks (infection, sensitivity, implant failure) are the same as with dental treatment anywhere in the world.",
+            "The key variable is clinic quality, not country — verify JCI or Ministry of Health registration before booking.",
+            "Choose clinics using internationally recognised brands (Straumann, Nobel Biocare, Ivoclar E-max) for continuity of UK aftercare.",
+            "Always get a written guarantee: minimum 5 years for veneers and 10 years for implants.",
+          ]}
+        />
+
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>The short answer is: <strong>yes, it is safe</strong> — provided you choose the right clinic. Turkey receives over half a million international dental patients every year, and the vast majority have excellent outcomes. But as with any medical procedure, anywhere in the world, your choice of provider is everything.</p>
 
@@ -94,6 +162,10 @@ export default function SafetyBlogPage() {
             </Link>
             </div>
           </div>
+
+          <FAQSection faqs={faqs} title="Safety Questions Answered" />
+
+          <SourcesList sources={sources} />
         </div>
       </div>
     </article>

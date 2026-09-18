@@ -7,7 +7,6 @@ import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const revalidate = 86400;
 
@@ -132,7 +131,6 @@ export default function SevereToothacheCantAffordDentistPage() {
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <MedicalReviewBadge reviewedDate="September 2026" />
 
           <p className="text-xs text-gray-500 italic mb-6">
             This page provides general information only and is not a substitute for dental or medical advice. If you have facial swelling, a fever, or difficulty swallowing alongside tooth pain, seek emergency care or call 999.

@@ -1,14 +1,17 @@
 import React from "react";
 
 interface MedicalReviewBadgeProps {
-  reviewerName?: string;
-  reviewerTitle?: string;
+  reviewerName: string;
+  reviewerTitle: string;
   reviewedDate?: string;
 }
 
+// Only render when an actual named reviewer has verified the content.
+// Do NOT add default prop values — the caller must supply a real reviewer.
+// Pages without a confirmed reviewer should omit this component entirely.
 export default function MedicalReviewBadge({
-  reviewerName = "Dr. Ayşe Kaya",
-  reviewerTitle = "BDS, MSc Aesthetic Dentistry — Istanbul, Turkey",
+  reviewerName,
+  reviewerTitle,
   reviewedDate,
 }: MedicalReviewBadgeProps) {
   return (

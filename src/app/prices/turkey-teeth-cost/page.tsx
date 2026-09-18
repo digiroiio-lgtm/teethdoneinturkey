@@ -5,7 +5,6 @@ import GuideTOC from "@/components/GuideTOC";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
@@ -21,7 +20,7 @@ const DATE_PUBLISHED = "2026-09-03";
 // Content last revised 2026-09-08. The 2026-09-11 change moved this page from
 // /guides/turkey-teeth-cost to this URL without altering the substance, so the
 // modified date is deliberately not bumped.
-const DATE_MODIFIED = "2026-09-08";
+const DATE_MODIFIED = "2026-09-18";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/turkey-teeth-cost" },
@@ -92,12 +91,7 @@ const jsonLd = {
       dateModified: DATE_MODIFIED,
       image: `${SITE_URL}/opengraph-image`,
       author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
-      publisher: { "@id": `${SITE_URL}/#organization` },
-      reviewedBy: {
-        "@type": "Person",
-        name: "Dr. Ayşe Kaya",
-        jobTitle: "BDS, MSc Aesthetic Dentistry",
-      },
+      publisher: { "@id": `${SITE_URL}/#organization` }
     },
     {
       "@type": "BreadcrumbList",
@@ -151,7 +145,6 @@ export default function TurkeyTeethCostPricePage() {
 
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MedicalReviewBadge reviewedDate="3 September 2026" />
 
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: How Much Do Teeth Cost in Turkey?</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">

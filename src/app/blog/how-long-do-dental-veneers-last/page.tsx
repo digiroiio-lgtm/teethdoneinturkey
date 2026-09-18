@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import FAQSection from "@/components/FAQSection";
@@ -57,7 +56,6 @@ export default function VeneersLastBlogPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Veneers</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">How Long Do Turkey Teeth Last? Veneers, Crowns &amp; Implants</h1>
           <p className="text-gray-500 text-sm">Published November 2024 · Updated September 2026 · 5 min read</p>
-          <MedicalReviewBadge />
         </div>
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p><strong>Turkey teeth last 5–20 years depending on what was fitted:</strong> around 10–15 years for E-max porcelain veneers, 15–20 years for zirconia crowns, and 5–7 years for composite veneers. Those are the same figures the same materials give when fitted in the UK. The country does not shorten the lifespan — the material, the preparation and bonding, and your aftercare decide it.</p>

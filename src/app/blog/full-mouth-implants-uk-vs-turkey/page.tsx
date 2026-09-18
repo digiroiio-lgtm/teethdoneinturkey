@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import GuideTOC from "@/components/GuideTOC";
@@ -102,7 +101,6 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Full Mouth Dental Implants Turkey: Cost and Prices in 2026</h1>
             <p className="text-gray-500 text-sm">Published April 2026 · Updated 11 September 2026 · 10 min read</p>
-            <MedicalReviewBadge />
           </div>
 
           <div className="space-y-6 text-gray-700 leading-relaxed">

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 import FAQSection from "@/components/FAQSection";
 
@@ -167,7 +166,6 @@ export default function BestClinicsBlogPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Clinics</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Best Dental Clinics in Turkey: How to Verify One</h1>
           <p className="text-gray-500 text-sm">Published October 2024 · Updated September 2026 · 9 min read</p>
-          <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">

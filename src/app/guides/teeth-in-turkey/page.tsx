@@ -5,7 +5,6 @@ import GuideTOC from "@/components/GuideTOC";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
@@ -18,7 +17,7 @@ const H1 = "Teeth in Turkey: The Complete UK Patient Guide";
 const DESCRIPTION =
   "The complete guide to teeth in Turkey for UK patients: treatments, process, costs, safety, clinic evaluation, recovery and travel.";
 const DATE_PUBLISHED = "2026-09-03";
-const DATE_MODIFIED = "2026-09-03";
+const DATE_MODIFIED = "2026-09-18";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/teeth-in-turkey" },
@@ -108,12 +107,7 @@ const jsonLd = {
       dateModified: DATE_MODIFIED,
       image: `${SITE_URL}/opengraph-image`,
       author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
-      publisher: { "@id": `${SITE_URL}/#organization` },
-      reviewedBy: {
-        "@type": "Person",
-        name: "Dr. Ayşe Kaya",
-        jobTitle: "BDS, MSc Aesthetic Dentistry",
-      },
+      publisher: { "@id": `${SITE_URL}/#organization` }
     },
     {
       "@type": "BreadcrumbList",
@@ -146,7 +140,6 @@ export default function TeethInTurkeyPillarGuide() {
 
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MedicalReviewBadge reviewedDate="3 September 2026" />
 
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: What Are Turkey Teeth?</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">

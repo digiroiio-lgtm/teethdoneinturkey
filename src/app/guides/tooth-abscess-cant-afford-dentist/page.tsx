@@ -7,7 +7,6 @@ import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const revalidate = 86400;
 
@@ -164,7 +163,6 @@ export default function ToothAbscessCantAffordDentistPage() {
             </div>
           </div>
 
-          <MedicalReviewBadge reviewedDate="September 2026" />
 
           <p className="text-xs text-gray-500 italic mb-6">
             This page provides general information only and is not a substitute for dental or medical advice. If you are in pain or have symptoms of spreading infection, contact NHS 111 or seek emergency care.

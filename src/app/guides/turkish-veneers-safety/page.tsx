@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import GuideTOC from "@/components/GuideTOC";
 import KeyTakeaways from "@/components/KeyTakeaways";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import FAQSection from "@/components/FAQSection";
@@ -127,11 +126,6 @@ export default function TurkishVeneersSafetyPage() {
 
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MedicalReviewBadge
-            reviewerName="Dr. Ayşe Kaya"
-            reviewerTitle="BDS, MSc Implantology"
-            reviewedDate="September 2026"
-          />
 
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">

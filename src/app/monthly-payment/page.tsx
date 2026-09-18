@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 import CTASection from "@/components/CTASection";
-import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const revalidate = 86400;
 
@@ -350,7 +349,6 @@ export default function MonthlyPaymentPage() {
             </div>
           </div>
 
-          <MedicalReviewBadge />
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Finance FAQs</h2>
