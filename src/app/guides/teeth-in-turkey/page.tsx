@@ -87,6 +87,10 @@ const faqs = [
     question: "What happens if something goes wrong after I get home?",
     answer: "Reputable clinics offer a stated guarantee period on their clinical work and provide a way to raise issues remotely or arrange a return visit. Confirm exactly what a clinic's guarantee and aftercare process covers, in writing, before you book.",
   },
+  {
+    question: "Which Turkish clinics offer UK-based consultations?",
+    answer: "Many Istanbul and Antalya clinics that work regularly with UK patients offer free remote consultations via video call before you travel. You submit X-rays and photos and discuss your treatment plan with the dentist or a treatment coordinator — no commitment required. Clinics that work through this site provide a free remote consultation and written treatment plan with itemised GBP pricing as standard. This is the best way to assess a clinic's communication and professionalism before booking flights.",
+  },
 ];
 
 const jsonLd = {
