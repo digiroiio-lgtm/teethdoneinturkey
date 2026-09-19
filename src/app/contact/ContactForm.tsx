@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-type Status = 'idle' | 'submitting' | 'success' | 'error';
+const FORM_ENDPOINT = 'https://submit-form.com/9xGP4VkVm';
+const SUCCESS_PARAM = 'submitted';
 
 const COUNTRIES = [
   'United Kingdom',
@@ -118,86 +118,44 @@ const COUNTRIES = [
   'Other',
 ];
 
-const ZAPIER_ENDPOINT = 'https://submit-form.com/9xGP4VkVm';
-
 export default function ContactForm() {
-  const [status, setStatus] = useState<Status>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
-  const [formValues, setFormValues] = useState({
-    name: '',
-    phone: '',
-    whatsapp: '',
-    email: '',
-    country: '',
-    message: '',
-    website: '', // honeypot
-  });
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [validationError, setValidationError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [email, setEmail] = useState('');
+  const [country, setCountry] = useState('');
+  const [message, setMessage] = useState('');
+  const [honeypot, setHoneypot] = useState('');
 
-  const handleChange = (field: keyof typeof formValues) => (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    setFormValues(prev => ({ ...prev, [field]: e.target.value }));
-  };
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get(SUCCESS_PARAM) === '1') {
+      setIsSuccess(true);
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }, []);
 
-  const validate = (): string | null => {
-    if (!formValues.name.trim()) return 'Please enter your name.';
-    if (!formValues.phone.trim()) return 'Please enter your phone number.';
-    if (!formValues.whatsapp.trim()) return 'Please enter your WhatsApp number.';
-    if (!formValues.email.trim() || !EMAIL_REGEX.test(formValues.email.trim()))
-      return 'Please enter a valid email address.';
-    if (!formValues.country.trim()) return 'Please select your country.';
-    return null;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (status === 'submitting') return;
-
-    // Honeypot: silently succeed for bots
-    if (formValues.website.trim().length > 0) {
-      setStatus('success');
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Honeypot: silently block bots without letting the form POST
+    if (honeypot.trim()) {
+      e.preventDefault();
       return;
     }
-
-    const validationError = validate();
-    if (validationError) {
-      setStatus('error');
-      setErrorMessage(validationError);
-      return;
-    }
-
-    setStatus('submitting');
-    setErrorMessage('');
-
-    try {
-      const payload = new URLSearchParams({
-        name: formValues.name.trim(),
-        phone: formValues.phone.trim(),
-        whatsapp: formValues.whatsapp.trim(),
-        email: formValues.email.trim(),
-        country: formValues.country.trim(),
-        message: formValues.message.trim(),
-      });
-
-      const response = await fetch(ZAPIER_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: payload.toString(),
-      });
-
-      if (!response.ok) {
-        throw new Error('Request failed');
-      }
-
-      setStatus('success');
-      setFormValues({ name: '', phone: '', whatsapp: '', email: '', country: '', message: '', website: '' });
-    } catch {
-      setStatus('error');
-      setErrorMessage('Something went wrong. Please try again or contact us via WhatsApp.');
-    }
+    if (!name.trim()) { e.preventDefault(); setValidationError('Please enter your name.'); return; }
+    if (!phone.trim()) { e.preventDefault(); setValidationError('Please enter your phone number.'); return; }
+    if (!whatsapp.trim()) { e.preventDefault(); setValidationError('Please enter your WhatsApp number.'); return; }
+    if (!email.trim() || !EMAIL_REGEX.test(email.trim())) { e.preventDefault(); setValidationError('Please enter a valid email address.'); return; }
+    if (!country.trim()) { e.preventDefault(); setValidationError('Please select your country.'); return; }
+    // Validation passed — clear any prior error and let the native POST proceed
+    setValidationError('');
+    setIsSubmitting(true);
   };
 
-  if (status === 'success') {
+  if (isSuccess) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
         <div className="text-4xl mb-3">✅</div>
@@ -213,117 +171,126 @@ export default function ContactForm() {
     'w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]';
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-      {/* Row 1: Name | Phone */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <form action={FORM_ENDPOINT} method="POST" onSubmit={handleSubmit} noValidate>
+      <input type="hidden" name="_redirect" value="https://www.teethdoneinturkey.co.uk/contact?submitted=1" />
+      <div className="space-y-4">
+        {/* Row 1: Name | Phone */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
+            <input
+              type="text"
+              name="name"
+              required
+              value={name}
+              onChange={e => setName(e.target.value)}
+              className={inputClass}
+              placeholder="Your full name"
+              autoComplete="name"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Your Phone *</label>
+            <input
+              type="tel"
+              name="phone"
+              required
+              value={phone}
+              onChange={e => setPhone(e.target.value)}
+              className={inputClass}
+              placeholder="+44 7700 900000"
+              autoComplete="tel"
+            />
+          </div>
+        </div>
+
+        {/* Row 2: WhatsApp | Email */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Your WhatsApp Number *</label>
+            <input
+              type="tel"
+              name="whatsapp"
+              required
+              value={whatsapp}
+              onChange={e => setWhatsapp(e.target.value)}
+              className={inputClass}
+              placeholder="+44 7700 900000"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Your Email *</label>
+            <input
+              type="email"
+              name="email"
+              required
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              className={inputClass}
+              placeholder="your@email.com"
+              autoComplete="email"
+            />
+          </div>
+        </div>
+
+        {/* Row 3: Country — full width */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Your Country *</label>
+          <select
+            name="country"
+            required
+            value={country}
+            onChange={e => setCountry(e.target.value)}
+            className={inputClass}
+          >
+            <option value="">Select your country…</option>
+            {COUNTRIES.map(c => (
+              <option key={c} value={c}>{c}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Row 4: Message — full width, optional */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea
+            name="message"
+            rows={4}
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+            className={inputClass}
+            placeholder="Tell us about your dental goals or any questions you have…"
+          />
+        </div>
+
+        {/* Honeypot — hidden from real users */}
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="website">Website</label>
           <input
             type="text"
-            required
-            value={formValues.name}
-            onChange={handleChange('name')}
-            className={inputClass}
-            placeholder="Your full name"
-            autoComplete="name"
+            id="website"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={e => setHoneypot(e.target.value)}
           />
         </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Your Phone *</label>
-          <input
-            type="tel"
-            required
-            value={formValues.phone}
-            onChange={handleChange('phone')}
-            className={inputClass}
-            placeholder="+44 7700 900000"
-            autoComplete="tel"
-          />
-        </div>
-      </div>
 
-      {/* Row 2: WhatsApp | Email */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Your WhatsApp Number *</label>
-          <input
-            type="tel"
-            required
-            value={formValues.whatsapp}
-            onChange={handleChange('whatsapp')}
-            className={inputClass}
-            placeholder="+44 7700 900000"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Your Email *</label>
-          <input
-            type="email"
-            required
-            value={formValues.email}
-            onChange={handleChange('email')}
-            className={inputClass}
-            placeholder="your@email.com"
-            autoComplete="email"
-          />
-        </div>
-      </div>
+        {validationError && (
+          <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2.5">
+            {validationError}
+          </p>
+        )}
 
-      {/* Row 3: Country — full width */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Your Country *</label>
-        <select
-          required
-          value={formValues.country}
-          onChange={handleChange('country')}
-          className={inputClass}
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-[#1e40af] text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          <option value="">Select your country…</option>
-          {COUNTRIES.map(c => (
-            <option key={c} value={c}>{c}</option>
-          ))}
-        </select>
+          {isSubmitting ? 'Sending…' : 'Send Message'}
+        </button>
       </div>
-
-      {/* Row 4: Message — full width, optional */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-        <textarea
-          rows={4}
-          value={formValues.message}
-          onChange={handleChange('message')}
-          className={inputClass}
-          placeholder="Tell us about your dental goals or any questions you have…"
-        />
-      </div>
-
-      {/* Honeypot — hidden from real users */}
-      <div className="hidden" aria-hidden="true">
-        <label htmlFor="website">Website</label>
-        <input
-          type="text"
-          id="website"
-          name="website"
-          tabIndex={-1}
-          autoComplete="off"
-          value={formValues.website}
-          onChange={handleChange('website')}
-        />
-      </div>
-
-      {status === 'error' && (
-        <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2.5">
-          {errorMessage}
-        </p>
-      )}
-
-      <button
-        type="submit"
-        disabled={status === 'submitting'}
-        className="w-full bg-[#1e40af] text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
-      >
-        {status === 'submitting' ? 'Sending…' : 'Send Message'}
-      </button>
     </form>
   );
 }
