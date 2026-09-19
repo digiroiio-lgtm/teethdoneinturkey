@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-19T12:27:12.316Z",
-  "registrySize": 37,
+  "generatedAt": "2026-09-19T12:37:09.574Z",
+  "registrySize": 29,
   "pagesScanned": 96,
   "results": [
     {
@@ -81,56 +81,7 @@
           "anchorText": "Teeth in Turkey: Complete UK Patient Guide"
         }
       ],
-      "missingRequired": [
-        {
-          "from": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/can-you-pay-monthly-for-veneers-turkey",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/dental-tourism-finance-explained",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/finance-dental-implants-turkey-uk-patients",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/full-mouth-implants-uk-vs-turkey",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/single-tooth-implant-turkey-cost",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/same-day-dental-implants-turkey",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/veneers-turkey-cost-uk-vs-turkey",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/full-set-veneers-turkey-cost",
-          "anchorText": "complete guide to teeth in Turkey"
-        },
-        {
-          "from": "/blog/are-veneers-in-turkey-worth-it",
-          "anchorText": "complete guide to teeth in Turkey"
-        }
-      ]
+      "missingRequired": []
     },
     {
       "page": "/prices/turkey-teeth-cost",

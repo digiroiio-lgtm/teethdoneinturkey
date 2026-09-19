@@ -294,43 +294,6 @@ export const LINK_REGISTRY: LinkEntry[] = [
     priority: 'required',
   },
 
-  // ── Finance cluster blog posts → master hub ──
-  {
-    from: '/blog/can-you-pay-monthly-for-teeth-in-turkey',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
-    from: '/blog/can-you-pay-monthly-for-veneers-turkey',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
-    from: '/blog/dental-tourism-finance-explained',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
-    from: '/blog/dental-treatment-turkey-payment-plans',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
-    from: '/blog/finance-dental-implants-turkey-uk-patients',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-
   // ── Finance cluster blog posts → finance hub ──
   {
     from: '/blog/dental-treatment-turkey-payment-plans',
@@ -341,6 +304,27 @@ export const LINK_REGISTRY: LinkEntry[] = [
   },
   {
     from: '/blog/dental-tourism-finance-explained',
+    to: '/finance-options-uk',
+    anchorText: 'Turkey teeth finance options',
+    placement: 'related-links',
+    priority: 'required',
+  },
+  {
+    from: '/blog/can-you-pay-monthly-for-teeth-in-turkey',
+    to: '/finance-options-uk',
+    anchorText: 'Turkey teeth finance options',
+    placement: 'related-links',
+    priority: 'required',
+  },
+  {
+    from: '/blog/finance-dental-implants-turkey-uk-patients',
+    to: '/finance-options-uk',
+    anchorText: 'Turkey teeth finance options',
+    placement: 'related-links',
+    priority: 'required',
+  },
+  {
+    from: '/blog/can-you-pay-monthly-for-veneers-turkey',
     to: '/finance-options-uk',
     anchorText: 'Turkey teeth finance options',
     placement: 'related-links',
@@ -379,36 +363,6 @@ export const LINK_REGISTRY: LinkEntry[] = [
     priority: 'required',
   },
 
-  // ── Implants blog posts → master hub ──
-  {
-    from: '/blog/implants-cost-uk-vs-turkey',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
-    from: '/blog/full-mouth-implants-uk-vs-turkey',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
-    from: '/blog/single-tooth-implant-turkey-cost',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
-    from: '/blog/same-day-dental-implants-turkey',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-
   // ── Implants blog posts → implants cluster hub ──
   {
     from: '/blog/implants-cost-uk-vs-turkey',
@@ -431,27 +385,11 @@ export const LINK_REGISTRY: LinkEntry[] = [
     placement: 'related-links',
     priority: 'required',
   },
-
-  // ── Veneers blog posts → master hub ──
   {
-    from: '/blog/veneers-turkey-cost-uk-vs-turkey',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
-    from: '/blog/full-set-veneers-turkey-cost',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
-    from: '/blog/are-veneers-in-turkey-worth-it',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
+    from: '/blog/same-day-dental-implants-turkey',
+    to: '/guides/dental-implants-turkey',
+    anchorText: 'dental implants Turkey guide',
+    placement: 'related-links',
     priority: 'required',
   },
 
