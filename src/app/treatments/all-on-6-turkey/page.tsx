@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
@@ -19,12 +20,28 @@ const faqs = [
   { question: "Can I pay monthly for All-on-6?", answer: "Yes. Finance plans are available over 12, 24, or 36 months. An All-on-6 arch at £5,600 is available from around £156/month over 36 months. Pre-qualify with no credit impact." },
 ];
 
+const SITE_URL = "https://www.teethdoneinturkey.co.uk";
+const PAGE_URL = `${SITE_URL}/treatments/all-on-6-turkey`;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "Treatments", item: `${SITE_URL}/treatments` },
+    { "@type": "ListItem", position: 3, name: "All-on-6 Turkey", item: PAGE_URL },
+  ],
+};
+
 export default function AllOn6Page() {
   return (
     <>
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
+          <div className="mb-3">
+            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Treatments", href: "/treatments" }, { label: "All-on-6" }]} />
+          </div>
           <div className="inline-block bg-blue-500/40 text-blue-100 text-sm px-4 py-1.5 rounded-full mb-4">Treatments</div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">All-on-6 Dental Implants Turkey</h1>
           <p className="text-xl text-blue-200 mb-2">Enhanced full arch restoration with 6 implants from £5,600 all-inclusive</p>

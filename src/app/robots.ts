@@ -26,6 +26,5 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Bytespider', allow: '/' },
     ],
     sitemap: `${BASE}/sitemap.xml`,
-    host: BASE,
   };
 }
