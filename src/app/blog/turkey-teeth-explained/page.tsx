@@ -84,7 +84,7 @@ export default function TurkeyTeethExplainedPage() {
             <p className="font-semibold text-gray-900 mb-2">See real patient results</p>
             <p className="text-gray-600 text-sm mb-4">View our before-and-after gallery and read UK patient reviews before making any decisions.</p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/before-after" className="inline-block bg-[#1e40af] text-white px-5 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-colors text-sm">Before &amp; After Gallery</Link>
+              <Link href="/turkey-teeth-before-after" className="inline-block bg-[#1e40af] text-white px-5 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-colors text-sm">Before &amp; After Gallery</Link>
               <Link href="/reviews" className="inline-block border border-[#1e40af] text-[#1e40af] px-5 py-2.5 rounded-xl font-bold hover:bg-blue-50 transition-colors text-sm">Patient Reviews</Link>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function TurkeyTeethExplainedPage() {
               <span className="font-semibold text-gray-900 text-sm">All-on-4 Turkey</span>
               <span className="text-xs text-gray-500 mt-0.5">Full arch restoration</span>
             </Link>
-            <Link href="/prices/teeth-done-in-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <Link href="/prices/turkey-teeth-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">All Treatment Costs</span>
               <span className="text-xs text-gray-500 mt-0.5">Full price guide</span>
             </Link>

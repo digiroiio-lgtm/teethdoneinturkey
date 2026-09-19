@@ -33,7 +33,7 @@ export default function FloatingCTA() {
           💬 WhatsApp
         </a>
         <Link
-          href="/prices/teeth-done-in-turkey-cost"
+          href="/prices/turkey-teeth-cost"
           className="flex-1 bg-[#1e40af] active:bg-blue-700 text-white py-3 text-center text-sm font-semibold transition-colors"
         >
           💰 Get Quote

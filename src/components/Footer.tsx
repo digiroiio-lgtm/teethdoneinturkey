@@ -52,7 +52,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-3 tracking-wide">Prices & Info</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/teeth-done-in-turkey-guide" className="hover:text-white hover:pl-1 transition-all">Complete UK Patient Guide</Link></li>
-              <li><Link href="/prices/teeth-done-in-turkey-cost" className="hover:text-white hover:pl-1 transition-all">Turkey Dental Costs</Link></li>
+              <li><Link href="/prices/turkey-teeth-cost" className="hover:text-white hover:pl-1 transition-all">Turkey Dental Costs</Link></li>
               <li><Link href="/prices/veneers-turkey-cost" className="hover:text-white hover:pl-1 transition-all">Veneers Cost</Link></li>
               <li><Link href="/prices/dental-implants-turkey-cost" className="hover:text-white hover:pl-1 transition-all">Implants Cost</Link></li>
               <li><Link href="/price-calculator" className="hover:text-white hover:pl-1 transition-all">Price Calculator</Link></li>
@@ -70,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/about-us" className="hover:text-white hover:pl-1 transition-all">About Us</Link></li>
               <li><Link href="/reviews" className="hover:text-white hover:pl-1 transition-all">Patient Reviews</Link></li>
-              <li><Link href="/before-after" className="hover:text-white hover:pl-1 transition-all">Before & After</Link></li>
+              <li><Link href="/turkey-teeth-before-after" className="hover:text-white hover:pl-1 transition-all">Before & After</Link></li>
               <li><Link href="/blog" className="hover:text-white hover:pl-1 transition-all">Blog</Link></li>
               <li><Link href="/contact" className="hover:text-white hover:pl-1 transition-all">Contact</Link></li>
               <li><Link href="/book-consultation" className="hover:text-white hover:pl-1 transition-all">Book Consultation</Link></li>

@@ -157,7 +157,7 @@ export default function Rule4810VeneersPage() {
               <span className="font-semibold text-gray-900 text-sm">Veneers Cost Guide</span>
               <span className="text-xs text-gray-500 mt-0.5">Prices & comparisons</span>
             </Link>
-            <Link href="/prices/teeth-done-in-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <Link href="/prices/turkey-teeth-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">All Treatment Costs</span>
               <span className="text-xs text-gray-500 mt-0.5">Full price guide</span>
             </Link>

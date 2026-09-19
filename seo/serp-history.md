@@ -7,6 +7,148 @@ rewritten again.
 
 ---
 
+## 2026-09-19 (internal-link integrity — GSC unavailable)
+
+### BLOCKER: no Search Console data this run
+
+Every `data_query` against `sc-domain:teethdoneinturkey.co.uk` returned
+`[TRIAL_EXPIRED]` — the Supermetrics free trial on team "Team digiroiio"
+(ID 1943513) expired **2026-09-17**. The Google connection itself still reports
+`AUTHENTICATED`, so this is a licence lapse, not a broken OAuth grant; data
+should return as soon as the plan is renewed. No alternative GSC credential
+exists in the repo or the environment.
+
+**Consequence:** the daily routine's Steps 1–3, 5, 6, 11 and 17 (read GSC →
+identify breakout queries → classify → score) could not run. Nothing below is
+based on fresh query data, and **no page was retargeted, merged, redirected or
+retitled on the basis of stale positions.** That restraint is deliberate: the
+2026-09-08 regression in this log was caused by acting on a "0 impressions"
+reading that was simply out of date, and with 8 days of unreadable data the same
+failure mode is live again.
+
+### Continuity gap: three runs landed without a log entry
+
+This log jumps 09-11 → 09-19, but `git log` shows three runs in between, none of
+which recorded a decision entry:
+
+| Date | Commit | What it did |
+|---|---|---|
+| 09-13 | `8a38b87`, `14afab1` | 12 new pages (7 guides, then Antalya hub + veneer cluster) |
+| 09-17 | `77a1bce` | 4 new "can't afford / no NHS dentist" affordability guides + hub |
+| 09-18 | `32f2351` | Full audit on 354 GSC queries: 9 new 301s, 6 title/meta rewrites, 1 new page |
+
+Reconstructed from the commit messages so the next run is not analysing 09-19 in
+isolation. Two things in that sequence need judging once data returns:
+
+1. **`/finance-options-uk` was reversed.** 09-11 repositioned it onto the
+   *generic UK* dental-finance intent (`teeth on finance`, `dental implant
+   finance uk`, `denture financing` — ~45 impressions at positions 59–89) and
+   retitled it "Dental Finance UK". 09-18 reversed that to a Turkey-framed
+   "Turkey Teeth Finance: Pay Monthly & Payment Plans for UK Patients", citing a
+   ~119-impression cluster with near-zero CTR from title mismatch. Both readings
+   are defensible; what is not defensible is that the page's title changed twice
+   in seven days with no record, so **neither change has ever been measured.**
+   Leave it alone until there is a clean read.
+2. **Nine 301s landed in one day** (09-18), the largest redirect batch in the
+   property's history, onto a domain whose oldest impression is 09-02.
+
+### The finding: the 09-18 redirect batch was never wired into the link graph
+
+The redirects themselves are correct and all answer single-hop 308. What was
+missed is the other half of a consolidation — the internal links, hub cards,
+breadcrumbs and schema still pointed at the *old* URLs. A full crawl of the
+rendered HTML of all 77 pages found:
+
+| Defect | Scale |
+|---|---|
+| `/prices/teeth-done-in-turkey-cost` linked after being 301'd | **on all 77 pages** |
+| — because it was the global `Header` "Prices" nav item | + `Footer`, `FloatingCTA`, `HeroSection`, `PriceTable` |
+| `/prices` → `/prices/teeth-done-in-turkey-cost` → `/prices/turkey-teeth-cost` | **2-hop redirect chain** |
+| `/guides` hub advertising 3 merged-away guides as live cards | 3 cards |
+| `/blog` index card pointing at the merged dental-holiday guide | 1 card |
+| `BreadcrumbList` JSON-LD `item` pointing at a 301 | `/prices/veneers-turkey-cost` |
+| Visible breadcrumb and its JSON-LD disagreeing on the same page | same page |
+
+The severity is the nav item: **every page on the site reached the cost money
+page through a 301**, and the `/prices` section hub took two hops to get there.
+That is the COST tier of the FINANCE → COST → PACKAGES → TREATMENT → TRUST
+architecture being fed entirely through redirects, one day after the change that
+caused it. It needs no Search Console evidence to justify fixing, which is why it
+was chosen as today's action over anything query-led.
+
+### Decisions taken this run
+
+- **FIX (critical). Repointed every internal link at its final target.** 45 files:
+  the five global components (`Header`, `Footer`, `FloatingCTA`, `HeroSection`,
+  `PriceTable`) plus 40 pages. Six redirecting URLs were being linked —
+  `/prices/teeth-done-in-turkey-cost` (36 refs), `/guides/turkey-teeth-monthly-payments`,
+  `/before-after`, `/blog/turkey-teeth-reviews`, `/guides/antalya-teeth-prices`,
+  `/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey`. Each
+  redirect stub keeps its own path in its own metadata and was not rewritten.
+- **FIX (critical). Killed the `/prices` redirect chain.** The section hub now
+  308s straight to `/prices/turkey-teeth-cost`. All 19 redirects re-verified
+  single-hop to a 200.
+- **FIX. Cleaned the `/guides` hub.** Removed four stale cards: three advertising
+  URLs merged away on 09-18, plus one already duplicating the
+  `/prices/turkey-teeth-cost` card. Cards were **removed, not repointed** — every
+  merge target already had its own card, so repointing would have created
+  duplicate cards for one destination. Hub is now 14 unique guide cards, no
+  duplicate destinations.
+- **FIX. Breadcrumb schema.** `/prices/veneers-turkey-cost` had a
+  `BreadcrumbList` `item` pointing at a 301 **and** disagreeing with its own
+  visible trail. Both now resolve to `/prices/turkey-teeth-cost` under the label
+  "Turkey Teeth Cost"; `/prices/veneers-antalya-cost` standardised to match
+  (it pointed at the `/prices` stub).
+- **INTERNAL LINKS (architecture).** `/prices/turkey-teeth-cost` had been left
+  linking to itself as "the full price guide" — it *is* the full price guide.
+  Replaced with the two links the hierarchy actually wants out of a COST page:
+  → `/guides/turkey-teeth-packages` for package detail and
+  → `/finance-options-uk` for monthly payment breakdowns. COST → PACKAGES and
+  COST → FINANCE, from the site's main cost money page.
+- **DO NOTHING — packages.** Still split across five URLs with no owning page
+  (09-11 finding). Choosing an owner needs live position data on the five, which
+  is exactly what is unavailable. Unchanged.
+- **DO NOTHING — `/finance-options-uk`.** Title changed twice in seven days
+  already. Not touched a third time.
+- **NO new pages, no new redirects, no retitling.** Correct for a run with no
+  query evidence.
+
+### Technical health check
+
+- 77 sitemap URLs, **every one verified 200** against a production build.
+- Full crawl of the **rendered HTML** of all 77 pages: **0 links to a redirecting
+  URL, 0 dead links, 0 redirect chains, 0 orphan pages.** (The earlier
+  source-level scan missed several — links built from data arrays and `href:`
+  object properties rather than literal `href="..."`. Crawl the rendered output,
+  not the source.)
+- Sitemap manifest: 77 routes, exactly the 77 live routes; no redirect stub
+  listed. `public/llms.txt` checked — no redirecting URL advertised.
+- `tsc --noEmit` clean, `next build` clean (104 routes generated).
+
+### What to check next run
+
+1. **Renew the Supermetrics licence, or connect GSC another way.** Until then
+   this routine cannot do its primary job, and every run is flying blind on a
+   property that is only ~3 weeks old.
+2. **Judge the 09-18 batch.** Nine 301s and six title rewrites landed on 09-18;
+   09-19 fixed their link graph. First clean read after that should check: did
+   the merged URLs drop out of impressions, did `/prices/turkey-teeth-cost`
+   absorb the cost family, and did the 09-18 CTR-led retitles earn clicks.
+3. **`/finance-options-uk` needs a verdict, not a third rewrite.** Compare the
+   Turkey-framed title (09-18→) against the generic-UK framing (09-11→09-18) on
+   the two query families named in this log.
+4. **Packages is still the biggest unowned commercial cluster.** Five URLs, no
+   owner. First run with data should pick the owner from live positions and
+   differentiate the other four — without adding a sixth URL.
+5. **Three `/prices/*` pages have no breadcrumb at all** —
+   `hollywood-smile-turkey-package`, `all-on-6-dental-implants-turkey-package`,
+   `dental-implants-turkey-cost`. No `Breadcrumb` component and no
+   `BreadcrumbList` schema. Small, safe, data-independent fix for a blocked run.
+6. **Log every run here.** Three runs in a row skipped this file and that is how
+   a money page's title got rewritten twice in a week unmeasured.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

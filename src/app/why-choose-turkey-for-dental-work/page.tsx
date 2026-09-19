@@ -144,7 +144,7 @@ export default function WhyChooseTurkeyPage() {
             </div>
             <div className="mt-4 flex gap-4 flex-wrap">
               <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition-colors">Get a Free Quote</Link>
-              <Link href="/prices/teeth-done-in-turkey-cost" className="inline-block border border-[#1e40af] text-[#1e40af] px-5 py-2 rounded-lg font-bold text-sm hover:bg-blue-50 transition-colors">Full Price Guide</Link>
+              <Link href="/prices/turkey-teeth-cost" className="inline-block border border-[#1e40af] text-[#1e40af] px-5 py-2 rounded-lg font-bold text-sm hover:bg-blue-50 transition-colors">Full Price Guide</Link>
             </div>
           </div>
         </div>

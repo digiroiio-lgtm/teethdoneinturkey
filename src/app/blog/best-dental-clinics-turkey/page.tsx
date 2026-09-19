@@ -307,7 +307,7 @@ export default function BestClinicsBlogPage() {
               <span className="font-semibold text-gray-900 text-sm">Dental Implants Turkey</span>
               <span className="text-xs text-gray-500 mt-0.5">Full treatment guide</span>
             </Link>
-            <Link href="/blog/turkey-teeth-reviews" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <Link href="/reviews" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Turkey Teeth Reviews</span>
               <span className="text-xs text-gray-500 mt-0.5">Real UK patient experiences</span>
             </Link>
