@@ -176,6 +176,10 @@ export default function PaymentPlansTurkeyPage() {
               <span className="font-semibold text-gray-900 text-sm">Implant Costs</span>
               <span className="text-xs text-gray-500 mt-0.5">All implant prices</span>
             </Link>
+            <Link href="/guides/teeth-in-turkey" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Complete UK Patient Guide</span>
+              <span className="text-xs text-gray-500 mt-0.5">Treatments, costs, safety & travel</span>
+            </Link>
             </div>
           </div>
         </div>

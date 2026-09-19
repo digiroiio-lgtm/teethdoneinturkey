@@ -375,7 +375,7 @@ export default function MonthlyPaymentPage() {
                 { href: "/prices/turkey-teeth-cost", label: "All Turkey Teeth Prices", sub: "Complete price guide" },
                 { href: "/treatments/veneers-turkey", label: "Veneers Treatment Guide", sub: "What to expect" },
                 { href: "/treatments/dental-implants-turkey", label: "Implants Treatment Guide", sub: "Full implant process" },
-                { href: "/teeth-done-in-turkey-guide", label: "Turkey Dental Guide", sub: "Complete patient guide" },
+                { href: "/guides/teeth-in-turkey", label: "Complete UK Patient Guide", sub: "Treatments, costs, safety & travel" },
                 { href: "/finance-options-uk", label: "Dental Finance Options", sub: "Payment plan vs loan vs NHS" },
                 { href: "/guides/cant-afford-dental-treatment-uk", label: "Can't Afford Treatment?", sub: "NHS, finance and lower-cost options" },
                 { href: "/guides/turkey-teeth-veneers-or-crowns", label: "Veneers or Crowns?", sub: "How much tooth is actually removed" },

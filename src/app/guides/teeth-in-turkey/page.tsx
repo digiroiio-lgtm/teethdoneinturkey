@@ -370,6 +370,7 @@ export default function TeethInTurkeyPillarGuide() {
           title="Related Guides"
           links={[
             { title: "Dental Implants in Turkey: Complete Guide", desc: "Brands, procedure, timelines, and implant-specific costs.", href: "/guides/dental-implants-turkey" },
+            { title: "Best Veneers in Turkey: UK Patient Guide", desc: "How to choose the right veneers, clinic and material.", href: "/guides/best-veneers-turkey" },
             { title: "Turkey Teeth Cost: 2026 Price Guide", desc: "Full UK vs Turkey cost comparison and finance options.", href: "/prices/turkey-teeth-cost" },
             { title: "Why Choose Turkey for Dental Work?", desc: "The reasons beyond price — clinic standards, technology and UK-side support.", href: "/why-choose-turkey-for-dental-work" },
             { title: "Teeth Done in Turkey: Problems to Know About", desc: "The complications patients actually report, and how each one is avoided.", href: "/teeth-done-in-turkey-problems" },
@@ -385,7 +386,9 @@ export default function TeethInTurkeyPillarGuide() {
             { title: "About Teeth Done in Turkey", desc: "Who we are and how our UK patient support works.", href: "/about-us" },
             { title: "Dental Implants Turkey", desc: "Implants from £250, JCI-accredited clinics.", href: "/treatments/dental-implants-turkey" },
             { title: "All-on-4 Turkey", desc: "Full arch restoration on 4 implants from £4,500.", href: "/treatments/all-on-4-turkey" },
+            { title: "All-on-6 Turkey", desc: "Maximum-stability full arch on 6 implants from £5,600.", href: "/treatments/all-on-6-turkey" },
             { title: "Full Smile Makeover", desc: "Combined veneers, whitening and contouring from £3,500.", href: "/treatments/full-smile-makeover-turkey" },
+            { title: "Monthly Payment Options", desc: "See what your treatment costs per month at 12, 24 or 36 months.", href: "/monthly-payment" },
           ]}
         />
 

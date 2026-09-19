@@ -460,6 +460,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             { title: "Dental Implants Turkey Cost", desc: "Single-implant prices by brand, and add-on costs.", href: "/prices/dental-implants-turkey-cost" },
             { title: "Monthly Payment Plans", desc: "Monthly figures for every treatment, from £82/month.", href: "/monthly-payment" },
             { title: "Dental Finance UK", desc: "Payment plans, dental loans and what bad credit means.", href: "/finance-options-uk" },
+            { title: "Complete UK Patient Guide", desc: "Everything about getting teeth done in Turkey — costs, safety, travel.", href: "/guides/teeth-in-turkey" },
           ]}
         />
       </div>
