@@ -250,7 +250,7 @@ export default function GuidesHubPage() {
               Guides are reviewed against the site&apos;s own verified pricing and treatment data and are kept up to date as that information changes. For treatment-specific pages with live pricing, see{" "}
               <Link href="/treatments" className="text-[#1e40af] font-semibold hover:underline">Treatments</Link>{" "}
               and{" "}
-              <Link href="/prices/teeth-done-in-turkey-cost" className="text-[#1e40af] font-semibold hover:underline">Prices</Link>.
+              <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Prices</Link>.
               For patient stories and specific questions, see the{" "}
               <Link href="/blog" className="text-[#1e40af] font-semibold hover:underline">Blog</Link>.
             </p>

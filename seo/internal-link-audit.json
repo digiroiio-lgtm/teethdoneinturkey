@@ -1,35 +1,15 @@
 {
-  "generatedAt": "2026-09-19T11:54:26.198Z",
+  "generatedAt": "2026-09-19T12:21:47.337Z",
   "registrySize": 37,
   "pagesScanned": 96,
   "results": [
     {
       "page": "/guides/teeth-in-turkey",
-      "incomingTotal": 30,
+      "incomingTotal": 18,
       "incomingFromHighAuth": 4,
       "sources": [
         {
-          "from": "/blog/are-veneers-in-turkey-worth-it",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/best-dental-clinics-turkey",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/can-you-pay-monthly-for-veneers-turkey",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/dental-tourism-finance-explained",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": ""
         },
         {
@@ -37,39 +17,11 @@
           "anchorText": ""
         },
         {
-          "from": "/blog/finance-dental-implants-turkey-uk-patients",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/full-mouth-implants-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/full-set-veneers-turkey-cost",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/is-it-safe-to-get-teeth-done-in-turkey",
           "anchorText": ""
         },
         {
-          "from": "/blog/same-day-dental-implants-turkey",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/single-tooth-implant-turkey-cost",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/turkey-teeth-explained",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/veneers-turkey-cost-uk-vs-turkey",
           "anchorText": ""
         },
         {
@@ -129,13 +81,74 @@
           "anchorText": "Teeth in Turkey: Complete UK Patient Guide"
         }
       ],
-      "missingRequired": []
+      "missingRequired": [
+        {
+          "from": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/can-you-pay-monthly-for-veneers-turkey",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/dental-tourism-finance-explained",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/dental-treatment-turkey-payment-plans",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/finance-dental-implants-turkey-uk-patients",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/implants-cost-uk-vs-turkey",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/full-mouth-implants-uk-vs-turkey",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/single-tooth-implant-turkey-cost",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/same-day-dental-implants-turkey",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/veneers-turkey-cost-uk-vs-turkey",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/full-set-veneers-turkey-cost",
+          "anchorText": "complete guide to teeth in Turkey"
+        },
+        {
+          "from": "/blog/are-veneers-in-turkey-worth-it",
+          "anchorText": "complete guide to teeth in Turkey"
+        }
+      ]
     },
     {
       "page": "/prices/turkey-teeth-cost",
-      "incomingTotal": 29,
-      "incomingFromHighAuth": 11,
+      "incomingTotal": 59,
+      "incomingFromHighAuth": 12,
       "sources": [
+        {
+          "from": "/blog/4-8-10-rule-for-veneers",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/aftercare-for-dental-work-in-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/are-veneers-in-turkey-worth-it",
+          "anchorText": ""
+        },
         {
           "from": "/blog/best-dental-clinics-turkey",
           "anchorText": ""
@@ -145,11 +158,43 @@
           "anchorText": ""
         },
         {
+          "from": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/composite-vs-porcelain-veneers-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/dental-holiday-packages-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/dental-implant-recovery-time",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/dental-tourism-finance-explained",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/e-max-vs-zirconia-veneers-turkey",
+          "anchorText": ""
+        },
+        {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
           "anchorText": ""
         },
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/full-set-veneers-turkey-cost",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/hollywood-smile-turkey-cost",
           "anchorText": ""
         },
         {
@@ -161,15 +206,63 @@
           "anchorText": "Turkey teeth cost guide"
         },
         {
+          "from": "/blog/how-long-do-dental-veneers-last",
+          "anchorText": ""
+        },
+        {
           "from": "/blog/implants-cost-uk-vs-turkey",
           "anchorText": ""
         },
         {
           "from": "/blog/implants-cost-uk-vs-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/is-it-safe-to-get-teeth-done-in-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/risks-of-turkey-teeth",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/risks-of-veneers-in-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/same-day-dental-implants-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/signs-of-dental-implant-failure",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/single-tooth-implant-turkey-cost",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/turkey-teeth-explained",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/uk-dentist-vs-turkey-dentist",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/veneers-turkey-cost-uk-vs-turkey",
           "anchorText": ""
         },
         {
           "from": "/blog/why-are-dental-treatments-cheaper-in-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/why-are-dental-treatments-cheaper-in-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/will-uk-dentists-fix-turkey-teeth",
           "anchorText": ""
         },
         {
@@ -178,6 +271,10 @@
         },
         {
           "from": "/finance-options-uk",
+          "anchorText": ""
+        },
+        {
+          "from": "/free-treatment-plan",
           "anchorText": ""
         },
         {
@@ -199,6 +296,10 @@
         {
           "from": "/guides",
           "anchorText": ""
+        },
+        {
+          "from": "/guides",
+          "anchorText": "Prices"
         },
         {
           "from": "/guides/teeth-in-turkey",
@@ -245,19 +346,39 @@
           "anchorText": ""
         },
         {
+          "from": "/prices/turkey-teeth-cost",
+          "anchorText": "the full price guide"
+        },
+        {
+          "from": "/prices/veneers-turkey-cost",
+          "anchorText": ""
+        },
+        {
           "from": "/prices/veneers-turkey-cost",
           "anchorText": "Full Turkey Teeth Price Guide"
         },
         {
+          "from": "/teeth-done-in-turkey-guide",
+          "anchorText": "See Price Guide"
+        },
+        {
+          "from": "/teeth-done-in-turkey-guide",
+          "anchorText": ""
+        },
+        {
           "from": "/turkey-teeth-clinic",
           "anchorText": "View Price Guide"
+        },
+        {
+          "from": "/why-choose-turkey-for-dental-work",
+          "anchorText": "Full Price Guide"
         }
       ],
       "missingRequired": []
     },
     {
       "page": "/finance-options-uk",
-      "incomingTotal": 18,
+      "incomingTotal": 24,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -265,16 +386,40 @@
           "anchorText": ""
         },
         {
+          "from": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/can-you-pay-monthly-for-veneers-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/blog/can-you-pay-monthly-for-veneers-turkey",
+          "anchorText": ""
+        },
+        {
           "from": "/blog/dental-tourism-finance-explained",
           "anchorText": "dental finance UK guide"
+        },
+        {
+          "from": "/blog/dental-tourism-finance-explained",
+          "anchorText": ""
         },
         {
           "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": "UK dental finance guide"
         },
         {
+          "from": "/blog/dental-treatment-turkey-payment-plans",
+          "anchorText": ""
+        },
+        {
           "from": "/blog/finance-dental-implants-turkey-uk-patients",
           "anchorText": "full UK dental finance guide"
+        },
+        {
+          "from": "/blog/finance-dental-implants-turkey-uk-patients",
+          "anchorText": ""
         },
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",

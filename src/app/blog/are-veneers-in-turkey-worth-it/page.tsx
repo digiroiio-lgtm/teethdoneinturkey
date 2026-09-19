@@ -108,17 +108,13 @@ export default function AreVeneersWorthItPage() {
               <span className="font-semibold text-gray-900 text-sm">Veneers Cost Guide</span>
               <span className="text-xs text-gray-500 mt-0.5">Prices & comparisons</span>
             </Link>
-            <Link href="/prices/teeth-done-in-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
-              <span className="font-semibold text-gray-900 text-sm">All Treatment Costs</span>
-              <span className="text-xs text-gray-500 mt-0.5">Full price guide</span>
+            <Link href="/prices/turkey-teeth-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Turkey Teeth Cost Guide</span>
+              <span className="text-xs text-gray-500 mt-0.5">All treatment prices &amp; comparisons</span>
             </Link>
             <Link href="/guides/best-veneers-turkey" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Best Veneers Turkey Guide</span>
               <span className="text-xs text-gray-500 mt-0.5">How to choose the right veneers</span>
-            </Link>
-            <Link href="/guides/teeth-in-turkey" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
-              <span className="font-semibold text-gray-900 text-sm">Complete UK Patient Guide</span>
-              <span className="text-xs text-gray-500 mt-0.5">Treatments, costs, safety & travel</span>
             </Link>
             </div>
           </div>

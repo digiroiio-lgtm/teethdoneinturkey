@@ -93,7 +93,6 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/blog/hollywood-smile-turkey-cost',
       '/blog/hollywood-smile-uk-vs-turkey',
       '/blog/single-tooth-implant-turkey-cost',
-      '/blog/full-mouth-dental-implants-turkey-cost',
     ],
     commercial: ['/price-calculator', '/free-treatment-plan', '/book-consultation'],
   },
@@ -130,7 +129,6 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/blog/dental-implant-recovery-time',
       '/blog/signs-of-dental-implant-failure',
       '/blog/full-mouth-implants-uk-vs-turkey',
-      '/blog/full-mouth-dental-implants-turkey-cost',
     ],
     commercial: ['/book-consultation', '/free-treatment-plan'],
   },
@@ -170,7 +168,7 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/blog/risks-of-turkey-teeth',
       '/blog/risks-of-veneers-in-turkey',
       '/blog/will-uk-dentists-fix-turkey-teeth',
-      '/blog/turkey-teeth-reviews',
+      '/reviews',
       '/blog/best-dental-clinics-turkey',
       '/teeth-done-in-turkey-problems',
     ],
@@ -188,7 +186,7 @@ export const CLUSTERS: ClusterDefinition[] = [
     support: [
       '/blog/dental-holiday-packages-turkey',
       '/blog/antalya-vs-istanbul-dental-clinics',
-      '/blog/dental-holiday-turkey-guide',
+      '/travel-to-turkey/dental-holiday-turkey',
       '/guides/turkey-teeth-packages',
       '/guides/veneers-turkey-packages',
     ],
@@ -496,7 +494,7 @@ const PAGE_META: Record<string, { title: string; desc: string }> = {
   },
   '/finance-options-uk': {
     title: 'Turkey Teeth Finance & Payment Plans',
-    desc: '0% APR options. Pay monthly from £6/month. Bad credit considered.',
+    desc: 'Monthly payment options and finance plans for UK patients.',
   },
   '/monthly-payment': {
     title: 'Monthly Payment Calculator',
@@ -504,23 +502,23 @@ const PAGE_META: Record<string, { title: string; desc: string }> = {
   },
   '/treatments/veneers-turkey': {
     title: 'Dental Veneers Turkey',
-    desc: 'E-max porcelain veneers from £190/tooth. Full sets from £3,800.',
+    desc: 'E-max and zirconia veneers. Full guide with current pricing.',
   },
   '/treatments/dental-implants-turkey': {
     title: 'Dental Implants Turkey',
-    desc: 'Straumann & Nobel Biocare implants from £250. Full guide.',
+    desc: 'Premium implant brands. Full guide with current pricing.',
   },
   '/treatments/all-on-4-turkey': {
     title: 'All-on-4 Dental Implants Turkey',
-    desc: 'Full arch replacement from £4,500. Completed in one trip.',
+    desc: 'Full arch replacement on 4 implants. Completed in one trip.',
   },
   '/treatments/all-on-6-turkey': {
     title: 'All-on-6 Dental Implants Turkey',
-    desc: 'Maximum stability full arch from £5,600.',
+    desc: 'Maximum stability full arch restoration on 6 implants.',
   },
   '/treatments/full-smile-makeover-turkey': {
     title: 'Full Smile Makeover Turkey',
-    desc: 'Combined veneers, crowns and whitening from £3,500.',
+    desc: 'Combined veneers, crowns and whitening — full guide.',
   },
   '/guides/dental-implants-turkey': {
     title: 'Dental Implants Turkey: Complete Guide',
@@ -556,11 +554,11 @@ const PAGE_META: Record<string, { title: string; desc: string }> = {
   },
   '/prices/hollywood-smile-turkey-package': {
     title: 'Hollywood Smile Turkey Package',
-    desc: '20 zirconia crowns all-inclusive from £2,800.',
+    desc: '20 zirconia crowns, hotel and transfers in one package.',
   },
   '/prices/all-on-6-dental-implants-turkey-package': {
     title: 'All-on-6 Turkey Package',
-    desc: 'Full arch all-inclusive package from £5,600.',
+    desc: 'Full arch restoration with implants, hotel and transfers.',
   },
   '/prices/veneers-antalya-cost': {
     title: 'Veneers Antalya Cost',

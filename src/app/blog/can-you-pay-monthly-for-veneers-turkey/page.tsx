@@ -109,6 +109,7 @@ export default function MonthlyVeneersPage() {
           <div className="mt-6 p-5 bg-gray-50 rounded-2xl border border-gray-200">
             <p className="font-semibold text-gray-900 mb-2">Related pages:</p>
             <ul className="space-y-1 text-sm">
+              <li><Link href="/finance-options-uk" className="text-[#1e40af] hover:underline">→ All dental finance options for UK patients</Link></li>
               <li><Link href="/monthly-payment" className="text-[#1e40af] hover:underline">→ Full monthly payment guide</Link></li>
               <li><Link href="/treatments/veneers-turkey" className="text-[#1e40af] hover:underline">→ Veneers Turkey treatment page</Link></li>
               <li><Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] hover:underline">→ Veneers Turkey cost guide</Link></li>
@@ -137,9 +138,9 @@ export default function MonthlyVeneersPage() {
               <span className="font-semibold text-gray-900 text-sm">Veneers Cost Guide</span>
               <span className="text-xs text-gray-500 mt-0.5">Prices & comparisons</span>
             </Link>
-            <Link href="/guides/teeth-in-turkey" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
-              <span className="font-semibold text-gray-900 text-sm">Complete UK Patient Guide</span>
-              <span className="text-xs text-gray-500 mt-0.5">Treatments, costs, safety & travel</span>
+            <Link href="/finance-options-uk" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Finance & Payment Options</span>
+              <span className="text-xs text-gray-500 mt-0.5">0% APR, pay monthly, bad credit</span>
             </Link>
             </div>
           </div>
