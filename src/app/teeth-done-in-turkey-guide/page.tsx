@@ -50,7 +50,7 @@ export default function TeethDoneInTurkeyGuidePage() {
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">
               Book Free Consultation
             </Link>
-            <Link href="/prices/teeth-done-in-turkey-cost" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">
+            <Link href="/prices/turkey-teeth-cost" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">
               See Price Guide
             </Link>
           </div>
@@ -153,7 +153,7 @@ export default function TeethDoneInTurkeyGuidePage() {
                 </tbody>
               </table>
             </div>
-            <Link href="/prices/teeth-done-in-turkey-cost" className="text-[#1e40af] font-semibold hover:underline">→ View full price guide</Link>
+            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">→ View full price guide</Link>
           </section>
 
           <section id="treatments">

@@ -396,6 +396,23 @@ export default function FinanceOptionsUKPage() {
         </div>
       </section>
 
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <h2 className="text-lg font-bold text-gray-900 mb-4">Related Guides</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            { href: "/guides/teeth-in-turkey", title: "Complete UK Patient Guide to Teeth in Turkey", desc: "Treatments, costs, safety, travel and finance — everything in one place." },
+            { href: "/prices/turkey-teeth-cost", title: "Turkey Teeth Cost Guide 2026", desc: "Full price breakdown: veneers, implants, crowns and packages." },
+            { href: "/monthly-payment", title: "Monthly Payment Calculator", desc: "See exactly what your treatment costs per month." },
+            { href: "/free-treatment-plan", title: "Get a Free Treatment Plan", desc: "Personalised cost estimate within 24 hours." },
+          ].map(l => (
+            <Link key={l.href} href={l.href} className="block bg-gray-50 hover:bg-blue-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 transition-colors">
+              <p className="font-semibold text-gray-900 mb-1">{l.title}</p>
+              <p className="text-sm text-gray-600">{l.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
+
       <CTASection
         title="Ready to Check Your Finance Options?"
         subtitle="Pre-qualify in 60 seconds with no credit impact. Our team will walk you through the best plan for your treatment."

@@ -134,6 +134,22 @@ export default function ImplantsCostPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-gray-200">
+        <h2 className="text-lg font-bold text-gray-900 mb-4">Related Guides</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            { href: "/guides/dental-implants-turkey", title: "Dental Implants Turkey: Complete Guide", desc: "Brands, procedure, timelines and everything else you need to know." },
+            { href: "/guides/teeth-in-turkey", title: "Complete UK Patient Guide to Teeth in Turkey", desc: "Treatments, costs, safety and travel — the full picture." },
+            { href: "/treatments/all-on-4-turkey", title: "All-on-4 Dental Implants Turkey", desc: "Full arch replacement from £4,500 — completed in one trip." },
+            { href: "/treatments/all-on-6-turkey", title: "All-on-6 Dental Implants Turkey", desc: "Maximum stability full arch from £5,600." },
+          ].map(l => (
+            <Link key={l.href} href={l.href} className="block bg-gray-50 hover:bg-blue-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 transition-colors">
+              <p className="font-semibold text-gray-900 mb-1">{l.title}</p>
+              <p className="text-sm text-gray-600">{l.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
       <CTASection title="Get a Free Implant Consultation" subtitle="Our implant specialists will review your case and provide a detailed quote within 24 hours." buttonText="Book Free Consultation" buttonHref="/book-consultation" whatsapp={true} />
     </>
   );

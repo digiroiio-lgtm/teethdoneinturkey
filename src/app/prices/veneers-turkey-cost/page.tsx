@@ -104,7 +104,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        { "@type": "ListItem", position: 2, name: "Prices", item: `${SITE_URL}/prices/teeth-done-in-turkey-cost` },
+        { "@type": "ListItem", position: 2, name: "Prices", item: `${SITE_URL}/prices/turkey-teeth-cost` },
         { "@type": "ListItem", position: 3, name: "Veneers Turkey Cost", item: PAGE_URL },
       ],
     },
@@ -130,7 +130,7 @@ export default function VeneersCostPage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-4">
-            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Prices", href: "/prices/teeth-done-in-turkey-cost" }, { label: "Veneers Cost" }]} />
+            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Prices", href: "/prices/turkey-teeth-cost" }, { label: "Veneers Cost" }]} />
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">How Much Do Veneers Cost in Turkey? 2026 UK Price Guide</h1>
           <p className="text-xl text-blue-200">Everything you need to know about veneer prices in Turkey</p>
@@ -307,6 +307,22 @@ export default function VeneersCostPage() {
 
       <FAQSection faqs={faqs} title="Veneers Turkey Cost: FAQs" />
 
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-gray-200">
+        <h2 className="text-lg font-bold text-gray-900 mb-4">Related Guides</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            { href: "/guides/best-veneers-turkey", title: "Best Veneers in Turkey: UK Patient Guide", desc: "How to choose the right veneers, clinic and material." },
+            { href: "/guides/teeth-in-turkey", title: "Complete UK Patient Guide to Teeth in Turkey", desc: "Treatments, costs, safety and travel — the full picture." },
+            { href: "/treatments/veneers-turkey", title: "Dental Veneers Turkey", desc: "E-max porcelain veneers from £190/tooth. Full guide." },
+            { href: "/guides/turkey-teeth-veneers-or-crowns", title: "Veneers or Crowns in Turkey?", desc: "Which treatment is right for you — explained clearly." },
+          ].map(l => (
+            <Link key={l.href} href={l.href} className="block bg-gray-50 hover:bg-blue-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 transition-colors">
+              <p className="font-semibold text-gray-900 mb-1">{l.title}</p>
+              <p className="text-sm text-gray-600">{l.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
       <CTASection title="Find Out Exactly What Your Veneers Will Cost" subtitle="Send us your photos and we'll prepare a personalised veneer quote within 24 hours — free, no obligation." buttonText="Get Free Quote" buttonHref="/book-consultation" whatsapp={true} />
     </>
   );

@@ -35,7 +35,7 @@ export default function ArticleJsonLd({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Article",
+        "@type": "BlogPosting",
         "@id": `${url}#article`,
         headline,
         description,
