@@ -33,7 +33,7 @@ export default function HeroSection() {
             Free Consultation →
           </Link>
           <Link
-            href="/prices/teeth-done-in-turkey-cost"
+            href="/prices/turkey-teeth-cost"
             className="border-2 border-white/70 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 hover:border-white transition-all w-full sm:w-auto text-center"
           >
             Get Price Quote

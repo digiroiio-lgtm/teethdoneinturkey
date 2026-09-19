@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
@@ -19,11 +20,28 @@ const faqs = [
   { question: "Can I pay monthly for dental implants in Turkey?", answer: "Yes. Finance is available over 12, 24, or 36 months. A single implant at £250 is available from approximately £7/month over 36 months. Pre-qualify with no impact on your credit score." },
 ];
 
+const SITE_URL = "https://www.teethdoneinturkey.co.uk";
+const PAGE_URL = `${SITE_URL}/treatments/dental-implants-turkey`;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "Treatments", item: `${SITE_URL}/treatments` },
+    { "@type": "ListItem", position: 3, name: "Dental Implants Turkey", item: PAGE_URL },
+  ],
+};
+
 export default function DentalImplantsTurkeyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
+          <div className="mb-3">
+            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Treatments", href: "/treatments" }, { label: "Dental Implants" }]} />
+          </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey – From £250</h1>
           <p className="text-xl text-blue-200 mb-6">Permanent tooth replacement using premium Straumann & Nobel Biocare implants</p>
           <div className="flex flex-wrap gap-4">

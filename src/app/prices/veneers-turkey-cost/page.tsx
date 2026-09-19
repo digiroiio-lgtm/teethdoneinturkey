@@ -104,7 +104,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        { "@type": "ListItem", position: 2, name: "Prices", item: `${SITE_URL}/prices/teeth-done-in-turkey-cost` },
+        { "@type": "ListItem", position: 2, name: "Prices", item: `${SITE_URL}/prices/turkey-teeth-cost` },
         { "@type": "ListItem", position: 3, name: "Veneers Turkey Cost", item: PAGE_URL },
       ],
     },
@@ -130,7 +130,7 @@ export default function VeneersCostPage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-4">
-            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Prices", href: "/prices/teeth-done-in-turkey-cost" }, { label: "Veneers Cost" }]} />
+            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Prices", href: "/prices/turkey-teeth-cost" }, { label: "Veneers Cost" }]} />
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">How Much Do Veneers Cost in Turkey? 2026 UK Price Guide</h1>
           <p className="text-xl text-blue-200">Everything you need to know about veneer prices in Turkey</p>

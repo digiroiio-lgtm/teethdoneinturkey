@@ -49,7 +49,7 @@ export default function PriceTable() {
           </table>
         </div>
         <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/prices/teeth-done-in-turkey-cost"
+          <Link href="/prices/turkey-teeth-cost"
             className="bg-[#1e40af] text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 hover:-translate-y-0.5 transition-all shadow-md">
             See Full Price Guide
           </Link>

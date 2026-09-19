@@ -50,7 +50,7 @@ const treatments = [
   { name: "All-on-4", from: "£4,500/arch", icon: "🏆", href: "/treatments/all-on-4-turkey" },
   { name: "All-on-6", from: "£5,600 (full package)", icon: "⭐", href: "/treatments/all-on-6-turkey" },
   { name: "Full Smile Makeover", from: "£2,800", icon: "😁", href: "/treatments/full-smile-makeover-turkey" },
-  { name: "Crowns & General", from: "£130/crown", icon: "🔬", href: "/prices/teeth-done-in-turkey-cost" },
+  { name: "Crowns & General", from: "£130/crown", icon: "🔬", href: "/prices/turkey-teeth-cost" },
 ];
 
 const faqs = [
