@@ -170,17 +170,19 @@ export default function ContactForm() {
     setErrorMessage('');
 
     try {
+      const payload = new URLSearchParams({
+        name: formValues.name.trim(),
+        phone: formValues.phone.trim(),
+        whatsapp: formValues.whatsapp.trim(),
+        email: formValues.email.trim(),
+        country: formValues.country.trim(),
+        message: formValues.message.trim(),
+      });
+
       const response = await fetch(ZAPIER_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          name: formValues.name.trim(),
-          phone: formValues.phone.trim(),
-          whatsapp: formValues.whatsapp.trim(),
-          email: formValues.email.trim(),
-          country: formValues.country.trim(),
-          message: formValues.message.trim(),
-        }),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: payload.toString(),
       });
 
       if (!response.ok) {
