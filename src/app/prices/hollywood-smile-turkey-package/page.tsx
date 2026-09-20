@@ -212,6 +212,7 @@ export default function HollywoodSmilePackagePage() {
             <Link href="/book-consultation" className="bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get My Free Quote</Link>
             <Link href="/prices/all-on-6-dental-implants-turkey-package" className="border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">All-on-6 Package</Link>
             <Link href="/treatments/veneers-turkey" className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">Veneers vs Crowns Guide</Link>
+            <Link href="/guides/turkey-teeth-packages" className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">Compare All Turkey Teeth Packages</Link>
           </div>
         </div>
       </section>

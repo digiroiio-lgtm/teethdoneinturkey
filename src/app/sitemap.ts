@@ -41,7 +41,6 @@ const OVERRIDES: Record<string, Rule> = {
   '/contact': { priority: 0.6, changeFrequency: 'monthly' },
   '/book-consultation': { priority: 0.9, changeFrequency: 'weekly' },
   '/reviews': { priority: 0.8, changeFrequency: 'weekly' },
-  '/before-after': { priority: 0.7, changeFrequency: 'weekly' },
   '/turkey-teeth-before-after': { priority: 0.8, changeFrequency: 'weekly' },
   '/guides': { priority: 0.9, changeFrequency: 'weekly' },
   '/treatments': { priority: 0.9, changeFrequency: 'weekly' },
@@ -72,7 +71,6 @@ const OVERRIDES: Record<string, Rule> = {
   '/why-choose-turkey-for-dental-work': { priority: 0.7, changeFrequency: 'monthly' },
 
   // Blog posts that outperform their cluster default
-  '/blog/turkey-teeth-reviews': { priority: 0.8, changeFrequency: 'weekly' },
   '/blog/turkey-teeth-explained': { priority: 0.8, changeFrequency: 'monthly' },
   '/blog/full-mouth-implants-uk-vs-turkey': { priority: 0.9, changeFrequency: 'weekly' },
   '/blog/veneers-turkey-cost-uk-vs-turkey': { priority: 0.75, changeFrequency: 'monthly' },

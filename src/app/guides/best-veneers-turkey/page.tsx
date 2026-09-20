@@ -331,6 +331,7 @@ export default function BestVeneersTurkeyPage() {
             { title: "Are Turkish Veneers Safe?", desc: "Risks, patient selection, lab quality and aftercare.", href: "/guides/turkish-veneers-safety" },
             { title: "Veneers Turkey Packages", desc: "What a veneer package includes and full trip cost.", href: "/guides/veneers-turkey-packages" },
             { title: "Turkey Teeth: Veneers or Crowns?", desc: "The clinical difference and how much tooth is removed.", href: "/guides/turkey-teeth-veneers-or-crowns" },
+            { title: "Do Turkey Teeth Look Fake?", desc: "Shade, translucency and tooth shape — what makes the result look natural.", href: "/blog/do-turkey-teeth-look-fake" },
           ]}
         />
       </div>

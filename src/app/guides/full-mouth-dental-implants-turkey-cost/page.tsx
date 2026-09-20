@@ -229,7 +229,7 @@ export default function FullMouthDentalImplantsTurkeyCostPage() {
           </ul>
           <p className="text-gray-700 leading-relaxed mb-4">
             This compares to £24,000–£36,000 for the same treatment at a UK private implant centre. Finance is available to spread the total — see{" "}
-            <Link href="/guides/turkey-teeth-monthly-payments" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Monthly Payments</Link>{" "}
+            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth monthly payments</Link>{" "}
             for payment examples.
           </p>
 
@@ -254,7 +254,7 @@ export default function FullMouthDentalImplantsTurkeyCostPage() {
             { title: "Dental Implants in Turkey: Complete Guide", desc: "Implant brands, surgical process, healing and aftercare.", href: "/guides/dental-implants-turkey" },
             { title: "Dental Implants Turkey Cost", desc: "Single implant pricing and All-on-4/6 prices.", href: "/prices/dental-implants-turkey-cost" },
             { title: "All-on-6 Turkey Package", desc: "All-on-6 per arch package details and inclusions.", href: "/prices/all-on-6-dental-implants-turkey-package" },
-            { title: "Turkey Teeth Monthly Payments", desc: "Monthly payment examples for full mouth implant costs.", href: "/guides/turkey-teeth-monthly-payments" },
+            { title: "Turkey Teeth Monthly Payments", desc: "Monthly payment examples for full mouth implant costs.", href: "/monthly-payment" },
           ]}
         />
       </div>

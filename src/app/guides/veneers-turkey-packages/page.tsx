@@ -146,7 +146,7 @@ export default function VeneersTurkeyPackagesPage() {
 
           <p className="text-gray-700 leading-relaxed mb-4 mt-6">
             This guide covers packages specifically for veneer treatment. For generic Turkey dental packages across all treatment types (implants, crowns, full-mouth), see the parent guide:{" "}
-            <Link href="/guides/turkey-teeth-packages" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Packages: What Is Included and What Does It Really Cost?</Link>
+            <Link href="/guides/turkey-teeth-packages" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth package prices and what is included</Link>
           </p>
 
           <h2 id="veneer-package-vs-treatment" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Veneer Package Price vs Treatment Price</h2>
@@ -209,7 +209,7 @@ export default function VeneersTurkeyPackagesPage() {
             <li><strong>Travel insurance:</strong> Essential. Ensure it covers dental complications and pre-existing treatment. Some UK travel insurers exclude dental treatment — check the policy wording before buying.</li>
             <li><strong>Teeth whitening of natural teeth:</strong> If any of your natural teeth remain visible, whitening those to match your new veneers is typically charged separately (ask for a quote).</li>
             <li><strong>Additional treatment:</strong> If your dental assessment reveals issues that need addressing before veneers can be placed (fillings, gum treatment, root canal work), these are quoted and charged separately.</li>
-            <li><strong>Hotel nights beyond the package:</strong> If your treatment needs more than the included nights, additional nights are charged at the hotel's own rate.</li>
+            <li><strong>Hotel nights beyond the package:</strong> If your treatment needs more than the included nights, additional nights are charged at the hotel&apos;s own rate.</li>
           </ul>
 
           <h2 id="by-tooth-count" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Package Costs by Tooth Count (E-max)</h2>
@@ -286,7 +286,7 @@ export default function VeneersTurkeyPackagesPage() {
         <RelatedLinksGrid
           title="Related Pages"
           links={[
-            { title: "Turkey Teeth Packages: The Complete Guide", desc: "Generic Turkey dental packages across all treatments — implants, crowns, full mouth.", href: "/guides/turkey-teeth-packages" },
+            { title: "Turkey Teeth Packages: 2026 Prices", desc: "Every package price compared — crowns, veneers, All-on-4, All-on-6 — and what each includes.", href: "/guides/turkey-teeth-packages" },
             { title: "Veneers Antalya Cost: 2026 Price Guide", desc: "Antalya-specific veneer prices — by tooth count, package vs trip cost.", href: "/prices/veneers-antalya-cost" },
             { title: "Best Veneers in Turkey: Type Comparison Guide", desc: "E-max vs zirconia vs composite — which veneer type gives the best result.", href: "/guides/best-veneers-turkey" },
             { title: "Turkish Veneers Safety Guide", desc: "Risks, red flags and what to ask before getting veneers in Turkey.", href: "/guides/turkish-veneers-safety" },

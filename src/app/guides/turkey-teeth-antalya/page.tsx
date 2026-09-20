@@ -248,7 +248,7 @@ export default function TurkeyTeethAntalyaPage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             For a detailed breakdown of package inclusions for veneers specifically, see the{" "}
             <Link href="/guides/veneers-turkey-packages" className="text-[#1e40af] font-semibold hover:underline">Veneers Turkey Packages guide</Link>. For generic package content across all treatments, see{" "}
-            <Link href="/guides/turkey-teeth-packages" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Packages: What Is Included</Link>.
+            <Link href="/guides/turkey-teeth-packages" className="text-[#1e40af] font-semibold hover:underline">what Turkey teeth packages cost and include</Link>.
           </p>
 
           <h2 id="recovery" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Recovery in Antalya</h2>
@@ -270,7 +270,7 @@ export default function TurkeyTeethAntalyaPage() {
           <h2 id="payment" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Paying for Treatment in Antalya</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             Treatment is quoted in GBP for UK patients and can be paid by card or bank transfer. A deposit is usually required to secure your dates. For patients who prefer to spread the cost, 0% representative APR finance is available for treatment booked through this site — monthly payments start from approximately £70/month on a 36-month plan. See{" "}
-            <Link href="/guides/turkey-teeth-monthly-payments" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Monthly Payments</Link>{" "}
+            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth monthly payments</Link>{" "}
             for illustrative payment examples, or{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Dental Finance Options UK</Link>{" "}
             for eligibility details.
@@ -296,7 +296,7 @@ export default function TurkeyTeethAntalyaPage() {
           links={[
             { title: "Turkey Teeth Cost Guide 2026", desc: "Full treatment price table: veneers, implants, full mouth, UK comparison.", href: "/prices/turkey-teeth-cost" },
             { title: "Veneers in Antalya Cost", desc: "E-max, zirconia and full set veneer prices in Antalya.", href: "/prices/veneers-antalya-cost" },
-            { title: "Turkey Teeth Packages", desc: "What Turkey dental packages include and what to check.", href: "/guides/turkey-teeth-packages" },
+            { title: "Turkey Teeth Packages: 2026 Prices", desc: "Package prices compared, what each includes and what you still pay for.", href: "/guides/turkey-teeth-packages" },
             { title: "Are Turkish Veneers Safe?", desc: "Risks, tooth shaving and how to choose a safe clinic.", href: "/guides/turkish-veneers-safety" },
           ]}
         />

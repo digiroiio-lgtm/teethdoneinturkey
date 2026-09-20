@@ -65,6 +65,7 @@ const MONEY_PAGES = [
   '/price-calculator',
   '/guides/dental-implants-turkey',
   '/guides/best-veneers-turkey',
+  '/guides/turkey-teeth-packages',
 ];
 
 // ---------------------------------------------------------------------------

@@ -175,6 +175,7 @@ export default function AllOn6PackagePage() {
             <Link href="/book-consultation" className="bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Book Free Consultation</Link>
             <Link href="/treatments/all-on-6-turkey" className="border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">All-on-6 Treatment Guide</Link>
             <Link href="/prices/hollywood-smile-turkey-package" className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">Hollywood Smile Packages</Link>
+            <Link href="/guides/turkey-teeth-packages" className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">Compare All Turkey Teeth Packages</Link>
           </div>
         </div>
       </section>

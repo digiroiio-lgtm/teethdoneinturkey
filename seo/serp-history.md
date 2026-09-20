@@ -7,6 +7,164 @@ rewritten again.
 
 ---
 
+## 2026-09-20 (packages cluster owner + redirect-link cleanup)
+
+> **Read this first: there was no Search Console data available for this run.**
+> The Supermetrics connection this routine pulls GSC through (team
+> "Team digiroiio", trial ID 1943513) **expired on 2026-09-17**. Every
+> query-level call returns `TRIAL_EXPIRED`. No 24-hour, 7-day or 28-day pull was
+> possible, so no striking-distance table, no breakout check, no
+> week-over-week comparison and no CTR read exists for today. The user was
+> notified. **Everything below is therefore evidence-led only as far as the
+> 09-11 data goes** — the last run with real query data — plus first-party
+> checks against the site itself.
+
+### What that rules out, and what it does not
+
+The 09-11 run left a clear next action: packages. It also left a
+**precondition** on it — establish which of the five package URLs Google
+actually prefers on `turkey teeth packages` (7.5 to 99.7, no owner) *before*
+creating `/packages/turkey-teeth-packages` or merging anything. That
+head-to-head needs GSC, so:
+
+- **No URL was created, merged, redirected or moved this run.** The 09-08
+  regression came from moving demand to a preferred URL without checking which
+  URL Google actually ranked. With no data at all, that risk is higher, not
+  lower. `/packages/turkey-teeth-packages` remains **not created** — deviating
+  from the target architecture deliberately, because `/guides/turkey-teeth-packages`
+  already exists, already has the exact-match path for the query and already
+  earns impressions (7 @ 29.9 on 09-08).
+- **What is safe without data** is content and internal-link work that gives
+  the cluster an owner without moving any demand between URLs. That is what
+  this run did.
+
+### Today's primary action — OPTIMISE EXISTING
+
+`/guides/turkey-teeth-packages` — POWER page, now the packages cluster owner.
+Priority 8.5/10 (cluster flagged top-untouched on 09-11; commercial intent;
+architecture objective #4; zero cannibalisation risk since no URL moved).
+
+The page ranked for a *packages* query while containing **no package price at
+all** — it was a "what's included / red flags" support guide sitting in the
+hub position. The site publishes real package prices on five other pages; none
+of them were reachable from the one page that owns the generic query.
+
+- **Retitled for the intent and the SERP pattern.** `Turkey Teeth Packages:
+  What Is Included and What Does It Really Cost?` (67 chars, truncating) →
+  `Turkey Teeth Packages 2026: Prices & What Is Included` (53). Explicit
+  current year is near-universal in this cluster's top 10 (09-04 SERP scan).
+  Description trimmed 163 → 154 chars. New H1 leads with prices.
+- **New: server-rendered Quick Answer block** with the £ ranges, for the
+  featured snippet and for AI answer engines.
+- **New: package price table** — seven rows (Hollywood Smile 20/24 crowns,
+  10 and 20 E-max veneer packages, smile makeover, All-on-4, All-on-6), each
+  with what the price covers, the package price, the treatment-only
+  equivalent and the typical stay, each linking to the spoke page that owns it.
+  **Every figure is one already published on this site** (£2,800 / £3,100 /
+  £2,300–£2,500 / £4,200–£4,500 / £3,500 / £4,500 / £5,600); nothing new was
+  invented. The 24-crown row is honestly shown as £3,100 package against
+  ≈£3,120 at the per-crown rate — the bundle undercutting the sum of its parts
+  is real and the page's existing FAQ already explains why.
+- **New: "What is in each package?"** — the four package families, each linking
+  down to its spoke.
+- **New: payment scenario (Step 7).** Labelled **Example Treatment Scenario**:
+  £4,500 package, £1,000 deposit, £3,500 financed over 6/12/18/24/36 months
+  with the monthly figure and total repayable shown. Stated as 0% APR
+  representative, explicitly not a credit offer, subject to status, credit
+  check and lender approval, not everyone will qualify, and a different APR
+  changes both numbers. Same YMYL wording standard as the 09-11 finance fix.
+- **Ranking sections deliberately preserved** — package-vs-treatment,
+  inclusions table, what-to-check, red flags and total-cost all kept as they
+  were. Enhanced, not reset.
+- Two dead links on the page (to `/guides/how-much-does-it-cost-…` and
+  `/guides/antalya-teeth-prices`, both 308 stubs since 09-18) replaced with
+  live targets. `dateModified` 2026-09-13 → 2026-09-20.
+
+### Cannibalisation check
+
+| Pair | Risk | Decision |
+|---|---|---|
+| `/guides/turkey-teeth-packages` vs `/prices/turkey-teeth-cost` | Cost page has a "Full-Mouth & Package Pricing" section | **Differentiated by job, not merged.** Cost page keeps per-treatment/per-tooth prices and UK-vs-Turkey savings; packages page owns package composition, package-vs-treatment-vs-total-trip and package payment scenarios. The package table deliberately has no UK/saving columns. |
+| `/guides/turkey-teeth-packages` vs `/guides/veneers-turkey-packages` | Both package pages | Hub/spoke: generic hub vs veneer-specific spoke. Cross-links rewritten in both directions with the new framing. |
+| 5-way split on `turkey teeth packages` | Real, unresolved | **Still unresolved — needs GSC.** No URL touched. |
+
+### Technical / internal-link fixes (all first-party verified)
+
+- **13 internal links pointed at 308 redirect stubs**, including from both hub
+  index pages, despite the 09-19 audit reporting zero. The `/guides` index
+  listed five cards for pages that no longer exist. Fixed: four dead cards
+  removed (their live equivalents were already listed), the monthly-payments
+  card repointed to `/finance-options-uk` (the guides hub previously had **no**
+  finance link at all), two blog-index cards repointed, and the remaining
+  contextual/breadcrumb links fixed on five other pages. **0 links to
+  redirects now.**
+- **Duplicate `FAQPage` schema on three URLs.** `<FAQSection>` already emits a
+  server-rendered `FAQPage`; three pages emitted a second one with the same
+  questions. The comment on `/prices/veneers-turkey-cost` justifying it
+  ("client component, so without this node the answers never appear in the
+  server HTML") is wrong — client components still server-render, verified
+  against a production build. Deduped on `/prices/veneers-turkey-cost`,
+  `/blog/best-dental-clinics-turkey` and the packages page; each now emits
+  exactly one.
+- **Orphan page found:** `/blog/do-turkey-teeth-look-fake` (created 09-18 for a
+  28-impression query) had **zero** incoming internal links and was missing
+  from the blog index. Listed on the blog index and linked from
+  `/guides/best-veneers-turkey`.
+- **`seo/route-lastmod.json` was stale on HEAD** — the five treatment pages
+  changed on 09-19 (breadcrumbs) without the manifest being regenerated, so
+  `npm run seo:lastmod:check` was failing and the sitemap was serving stale
+  `lastmod` for them. Regenerated; check passes.
+- Two dead `OVERRIDES` entries removed from `sitemap.ts` (`/before-after`,
+  `/blog/turkey-teeth-reviews` — both stubs, excluded from the manifest anyway).
+- `llms.txt`: packages hub added to Prices & Cost Guides with its price list.
+- Packages registered as a **first-class cluster** in `src/lib/internal-links.ts`
+  (hub `/guides/turkey-teeth-packages`, 4 spokes, 3 support, 11 new registry
+  entries) and added to `MONEY_PAGES` in both the registry and the audit
+  script. It had been filed as *support* under the travel cluster.
+
+### Health check (production build, all verified first-party)
+
+- **77 sitemap URLs, every one 200.** Full crawl of all 77, 86 distinct link
+  targets: **0 broken links, 0 links pointing at a redirect, 0 orphan pages.**
+- Packages page: canonical self-referencing, `index, follow`, Article +
+  BreadcrumbList + one FAQPage, all **server-rendered**; 14 H2s (11 content
+  sections plus TOC, key-takeaways and FAQ headings); title 53 chars,
+  description 154.
+- Incoming links to the packages hub 5 → 9; audit reports all required links
+  present for all 16 money pages.
+- typecheck clean, build clean, `seo:lastmod:check` clean. lint: 2 pre-existing
+  warnings; one pre-existing `react/no-unescaped-entities` **error** on
+  `/guides/veneers-turkey-packages` was fixed in passing.
+
+### What to check next run
+
+1. **Restore GSC access first.** Nothing query-led is possible until the
+   Supermetrics subscription is renewed or direct Search Console API access is
+   provided. If it is still down, say so again rather than quietly proceeding —
+   a second blind run in the same cluster is how the 09-08 regression happened.
+2. **The 09-11 open questions are all still open and now nine days old**: did
+   the cost reversal work (`/prices/turkey-teeth-cost` vs
+   `/guides/turkey-teeth-cost` head-to-heads); did `/monthly-payment` break out
+   of 0 impressions; did the generic finance queries move off 59–89; are there
+   query-level clicks yet.
+3. **Packages head-to-head, still the precondition** for any URL decision in
+   this cluster. Five URLs, no owner. Do not create
+   `/packages/turkey-teeth-packages` without it.
+4. **`/finance-options-uk` was retitled twice in seven days** — repositioned to
+   generic UK dental finance on 09-11, then back to Turkey-framed on 09-18.
+   That page now needs a settling period and a single decision, not a third
+   title. Its description also claims "Pay monthly for Turkey teeth from
+   £6/month" — that figure is not derivable from any price on this site and
+   should be checked or removed on YMYL grounds.
+5. `/prices/dental-implants-turkey-cost` and
+   `/prices/all-on-6-dental-implants-turkey-package` were at zero lifetime
+   impressions as of 09-11 while `/guides/dental-implants-turkey` earned 59.
+   Still unexamined; needs the same head-to-head before any merge.
+6. Judge today's packages work on real performance before touching the page
+   again — no rewrite before roughly 2026-10-04.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

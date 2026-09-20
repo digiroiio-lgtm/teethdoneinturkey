@@ -108,18 +108,9 @@ const jsonLd = {
         { "@type": "ListItem", position: 3, name: "Veneers Turkey Cost", item: PAGE_URL },
       ],
     },
-    // The FAQs render through <FAQSection>, which is a client component, so
-    // without this node the answers never appear in the server HTML that Google's
-    // rich-result parser and the AI answer engines actually read.
-    {
-      "@type": "FAQPage",
-      "@id": `${PAGE_URL}#faq`,
-      mainEntity: faqs.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: { "@type": "Answer", text: item.answer },
-      })),
-    },
+    // No FAQPage node here: <FAQSection> is a client component but still
+    // server-renders its own FAQPage JSON-LD into the HTML, so a node here
+    // produced a second, duplicate FAQPage on the same URL.
   ],
 };
 

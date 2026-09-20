@@ -130,17 +130,6 @@ const faqs = [
   },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `${PAGE_URL}#faq`,
-  mainEntity: faqs.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: { "@type": "Answer", text: item.answer },
-  })),
-};
-
 export default function BestClinicsBlogPage() {
   return (
     <article className="py-16 bg-white">
@@ -156,11 +145,6 @@ export default function BestClinicsBlogPage() {
           { name: "Blog", path: "/blog" },
           { name: "Best Dental Clinics in Turkey", path: "/blog/best-dental-clinics-turkey" },
         ]}
-      />
-      <script
-        id="faq-schema-best-dental-clinics-turkey"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
@@ -307,7 +291,7 @@ export default function BestClinicsBlogPage() {
               <span className="font-semibold text-gray-900 text-sm">Dental Implants Turkey</span>
               <span className="text-xs text-gray-500 mt-0.5">Full treatment guide</span>
             </Link>
-            <Link href="/blog/turkey-teeth-reviews" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <Link href="/reviews" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Turkey Teeth Reviews</span>
               <span className="text-xs text-gray-500 mt-0.5">Real UK patient experiences</span>
             </Link>

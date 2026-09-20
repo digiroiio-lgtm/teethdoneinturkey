@@ -63,24 +63,6 @@ const guides = [
   },
   {
     category: "Cost & Finance",
-    title: "How Much Does It Cost to Get Your Teeth Done in Turkey?",
-    description:
-      "Total patient trip cost — treatment, flights, hotel, transfers, scans and second-visit costs for implant patients. What you actually spend from door to door.",
-    readingTime: "10 min",
-    updated: "13 September 2026",
-    href: "/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey",
-  },
-  {
-    category: "Cost & Finance",
-    title: "Full Set of Teeth in Turkey Cost: Prices, Options & UK Patient Guide 2026",
-    description:
-      "What 'full set' means for UK patients — and what each option costs: crowns, veneers, All-on-4, All-on-6 and full mouth implants compared.",
-    readingTime: "11 min",
-    updated: "13 September 2026",
-    href: "/guides/full-set-of-teeth-turkey-cost",
-  },
-  {
-    category: "Cost & Finance",
     title: "Turkey Teeth Packages: What Is Included and What Does It Really Cost?",
     description:
       "Package price vs treatment price vs total trip cost — exactly what Turkey dental packages include, what they leave out, and what to check before booking.",
@@ -90,21 +72,12 @@ const guides = [
   },
   {
     category: "Cost & Finance",
-    title: "Turkey Teeth Cost in Pounds: 2026 GBP Price Guide for UK Patients",
+    title: "Turkey Teeth Finance: Pay Monthly & Payment Plans for UK Patients",
     description:
-      "A GBP budgeting guide — what dental treatment you can realistically get in Turkey for £2,500, £3,500, £5,000 and £7,500 in 2026.",
-    readingTime: "7 min",
-    updated: "13 September 2026",
-    href: "/guides/turkey-teeth-cost-in-pounds",
-  },
-  {
-    category: "Cost & Finance",
-    title: "How Much Are Turkey Teeth Per Month? UK Dental Finance & Payment Examples",
-    description:
-      "Monthly payment examples for Turkey dental treatment from £3,000 to £8,000 — across 12, 18, 24 and 36-month plans with 0% representative APR finance.",
+      "Monthly payment examples for Turkey dental treatment across 12, 24 and 36-month plans at 0% APR representative — plus eligibility, deposits and bad-credit options.",
     readingTime: "8 min",
-    updated: "13 September 2026",
-    href: "/guides/turkey-teeth-monthly-payments",
+    updated: "18 September 2026",
+    href: "/finance-options-uk",
   },
   {
     category: "Treatment",
@@ -114,15 +87,6 @@ const guides = [
     readingTime: "12 min",
     updated: "13 September 2026",
     href: "/guides/full-mouth-dental-implants-turkey-cost",
-  },
-  {
-    category: "Destination",
-    title: "Antalya Teeth Prices: Complete 2026 Dental Cost Guide for UK Patients",
-    description:
-      "Treatment prices at Antalya clinics — veneers, crowns, implants and full mouth — with UK price comparisons, travel information and total trip cost.",
-    readingTime: "9 min",
-    updated: "13 September 2026",
-    href: "/guides/antalya-teeth-prices",
   },
   {
     category: "Destination",

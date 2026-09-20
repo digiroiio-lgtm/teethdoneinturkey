@@ -17,6 +17,7 @@ export type ClusterId =
   | 'finance'
   | 'implants'
   | 'veneers'
+  | 'packages'
   | 'safety'
   | 'travel';
 
@@ -155,6 +156,23 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/blog/can-you-pay-monthly-for-veneers-turkey',
     ],
     commercial: ['/book-consultation', '/free-treatment-plan'],
+  },
+  {
+    id: 'packages',
+    name: 'Turkey Teeth Packages',
+    hub: '/guides/turkey-teeth-packages',
+    spokes: [
+      '/prices/hollywood-smile-turkey-package',
+      '/prices/all-on-6-dental-implants-turkey-package',
+      '/guides/veneers-turkey-packages',
+      '/treatments/full-smile-makeover-turkey',
+    ],
+    support: [
+      '/blog/dental-holiday-packages-turkey',
+      '/blog/hollywood-smile-turkey-cost',
+      '/guides/full-mouth-dental-implants-turkey-cost',
+    ],
+    commercial: ['/free-treatment-plan', '/book-consultation', '/price-calculator'],
   },
   {
     id: 'safety',
@@ -415,6 +433,87 @@ export const LINK_REGISTRY: LinkEntry[] = [
     placement: 'related-links',
     priority: 'required',
   },
+
+  // ── Package pages → packages cluster hub ──
+  {
+    from: '/prices/hollywood-smile-turkey-package',
+    to: '/guides/turkey-teeth-packages',
+    anchorText: 'Compare All Turkey Teeth Packages',
+    placement: 'related-links',
+    priority: 'required',
+  },
+  {
+    from: '/prices/all-on-6-dental-implants-turkey-package',
+    to: '/guides/turkey-teeth-packages',
+    anchorText: 'Compare All Turkey Teeth Packages',
+    placement: 'related-links',
+    priority: 'required',
+  },
+  {
+    from: '/guides/veneers-turkey-packages',
+    to: '/guides/turkey-teeth-packages',
+    anchorText: 'Turkey teeth package prices and what is included',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/blog/dental-holiday-packages-turkey',
+    to: '/guides/turkey-teeth-packages',
+    anchorText: 'Turkey Teeth Package Prices',
+    placement: 'related-links',
+    priority: 'required',
+  },
+  {
+    from: '/prices/turkey-teeth-cost',
+    to: '/guides/turkey-teeth-packages',
+    anchorText: 'Turkey teeth package prices',
+    placement: 'contextual',
+    priority: 'required',
+  },
+
+  // ── Packages hub → spokes and commercial ──
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/prices/hollywood-smile-turkey-package',
+    anchorText: 'Hollywood Smile Turkey package page',
+    placement: 'related-links',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/prices/all-on-6-dental-implants-turkey-package',
+    anchorText: 'All-on-6 package breakdown',
+    placement: 'related-links',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/guides/veneers-turkey-packages',
+    anchorText: 'what veneer packages include',
+    placement: 'related-links',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/prices/turkey-teeth-cost',
+    anchorText: 'Turkey teeth cost guide',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/finance-options-uk',
+    anchorText: 'Turkey teeth finance and payment plans',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/guides/teeth-in-turkey',
+    anchorText: 'Complete UK Patient Guide to Teeth in Turkey',
+    placement: 'related-links',
+    priority: 'required',
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -498,6 +597,14 @@ const PAGE_META: Record<string, { title: string; desc: string }> = {
     title: 'All-on-6 Turkey Package',
     desc: 'Full arch restoration with implants, hotel and transfers.',
   },
+  '/guides/turkey-teeth-packages': {
+    title: 'Turkey Teeth Packages: 2026 Prices',
+    desc: 'Every package price compared — crowns, veneers, All-on-4, All-on-6 — and what each includes.',
+  },
+  '/guides/veneers-turkey-packages': {
+    title: 'Veneers Turkey Packages',
+    desc: 'Veneer package prices by tooth count, and what the bundle actually covers.',
+  },
   '/prices/veneers-antalya-cost': {
     title: 'Veneers Antalya Cost',
     desc: 'Antalya clinic prices vs Istanbul — what to know.',
@@ -579,4 +686,5 @@ export const MONEY_PAGES = [
   '/price-calculator',
   '/guides/dental-implants-turkey',
   '/guides/best-veneers-turkey',
+  '/guides/turkey-teeth-packages',
 ] as const;

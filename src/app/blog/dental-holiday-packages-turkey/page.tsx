@@ -135,6 +135,10 @@ export default function DentalHolidayPackagesPage() {
               <span className="font-semibold text-gray-900 text-sm">Veneers Cost Guide</span>
               <span className="text-xs text-gray-500 mt-0.5">Prices & comparisons</span>
             </Link>
+            <Link href="/guides/turkey-teeth-packages" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="font-semibold text-gray-900 text-sm">Turkey Teeth Package Prices</span>
+              <span className="text-xs text-gray-500 mt-0.5">What every package costs &amp; includes</span>
+            </Link>
             </div>
           </div>
         </div>
