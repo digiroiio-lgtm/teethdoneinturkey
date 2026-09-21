@@ -48,21 +48,12 @@ const personSchema = {
 };
 
 const reviewedPages = [
-  { title: "Teeth in Turkey: Complete UK Patient Guide", href: "/guides/teeth-in-turkey" },
-  { title: "Dental Implants Turkey Guide", href: "/guides/dental-implants-turkey" },
-  { title: "Are Turkish Veneers Safe?", href: "/guides/turkish-veneers-safety" },
-  { title: "Best Veneers in Turkey", href: "/guides/best-veneers-turkey" },
-  { title: "Full-Mouth Dental Implants Turkey Cost", href: "/guides/full-mouth-dental-implants-turkey-cost" },
-  { title: "Turkey Teeth Antalya Guide", href: "/guides/turkey-teeth-antalya" },
-  { title: "Tooth Abscess Can't Afford a Dentist?", href: "/guides/tooth-abscess-cant-afford-dentist" },
-  { title: "Severe Toothache Can't Afford a Dentist?", href: "/guides/severe-toothache-cant-afford-dentist" },
   { title: "Is It Safe to Get Teeth Done in Turkey?", href: "/blog/is-it-safe-to-get-teeth-done-in-turkey" },
   { title: "Risks of Turkey Teeth", href: "/blog/risks-of-turkey-teeth" },
   { title: "Risks of Veneers in Turkey", href: "/blog/risks-of-veneers-in-turkey" },
   { title: "Aftercare for Dental Work in Turkey", href: "/blog/aftercare-for-dental-work-in-turkey" },
   { title: "Signs of Dental Implant Failure", href: "/blog/signs-of-dental-implant-failure" },
   { title: "Dental Implant Recovery Time", href: "/blog/dental-implant-recovery-time" },
-  { title: "Turkey Teeth Cost Overview", href: "/prices/turkey-teeth-cost" },
 ];
 
 export default function MustafaAkcaProfilePage() {
@@ -164,7 +155,7 @@ export default function MustafaAkcaProfilePage() {
           {/* Reviewed pages */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Medically Reviewed Content</h2>
-            <p className="text-gray-600 text-sm mb-4">The following pages have been reviewed by Dt. Mustafa Akça for clinical accuracy:</p>
+            <p className="text-gray-600 text-sm mb-4">The following pages are recorded as medically reviewed by Dt. Mustafa Akça. Review attribution is added only where a review date is recorded on the page:</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {reviewedPages.map(page => (
                 <Link key={page.href} href={page.href}
