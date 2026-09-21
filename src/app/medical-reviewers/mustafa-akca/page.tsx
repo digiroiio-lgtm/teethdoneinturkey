@@ -41,8 +41,7 @@ const personSchema = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        { "@type": "ListItem", position: 2, name: "Medical Reviewers", item: `${SITE_URL}/medical-reviewers` },
-        { "@type": "ListItem", position: 3, name: "Dt. Mustafa Akça", item: PAGE_URL },
+        { "@type": "ListItem", position: 2, name: "Dt. Mustafa Akça — Medical Reviewer", item: PAGE_URL },
       ],
     },
   ],
