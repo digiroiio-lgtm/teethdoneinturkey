@@ -35,6 +35,9 @@ export default function MedicalReviewBadge({
             </p>
             {reviewerTitle && <p className="text-gray-500 text-xs">{reviewerTitle}</p>}
             <p className="text-gray-400 text-xs mt-0.5">Last reviewed: {reviewedDate}</p>
+            <p className="text-gray-400 text-xs mt-0.5">
+              <Link href="/editorial-policy" className="hover:underline">Review methodology</Link>
+            </p>
           </>
         ) : (
           <>

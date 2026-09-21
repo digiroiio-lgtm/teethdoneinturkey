@@ -60,10 +60,14 @@ export default function EditorialPolicyPage() {
             </p>
 
             <div className="bg-blue-50 border border-blue-100 rounded-lg p-6 mb-6">
-              <p className="text-sm font-semibold text-blue-900 mb-1">Reviewer attribution standard</p>
-              <p className="text-gray-700">
-                Reviewer names, qualifications and review dates are published only when they can be
-                substantiated. Placeholder reviewer identities are not used.
+              <p className="text-sm font-semibold text-blue-900 mb-1">Verified Medical Reviewer</p>
+              <p className="text-gray-700 mb-2">
+                <strong><Link href="/medical-reviewers/mustafa-akca" className="text-blue-700 hover:underline">Dt. Mustafa Akça</Link></strong><br />
+                Dentist &amp; Medical Reviewer — Akdeniz Dental Clinic, Antalya
+              </p>
+              <p className="text-gray-600 text-sm">
+                Reviewer attribution and review dates are shown only on pages for which the review has actually been completed and recorded.
+                <Link href="/medical-reviewers/mustafa-akca" className="text-blue-700 hover:underline ml-1">View verified reviewer profile →</Link>
               </p>
             </div>
 

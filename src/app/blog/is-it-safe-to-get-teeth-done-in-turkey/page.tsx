@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import { REVIEWER_PERSON, REVIEWER_HREF, REVIEWER_NAME, REVIEWER_TITLE } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -21,6 +22,7 @@ export default function SafetyBlogPage() {
         description="The honest answer to whether it's safe to get dental treatment in Turkey. Accreditation, risk factors, how to choose safely, and what patients say."
         datePublished="2024-11-01"
         dateModified="2026-09-04"
+        reviewer={REVIEWER_PERSON}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -32,7 +34,7 @@ export default function SafetyBlogPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Safety</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Is It Safe to Get Teeth Done in Turkey? Honest 2026 Guide</h1>
           <p className="text-gray-500 text-sm">Published November 2024 · Updated September 2026 · 6 min read</p>
-          <MedicalReviewBadge />
+          <MedicalReviewBadge reviewerName={REVIEWER_NAME} reviewerTitle={REVIEWER_TITLE} reviewerHref={REVIEWER_HREF} reviewedDate="September 2026" />
         </div>
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>The short answer is: <strong>yes, it is safe</strong> — provided you choose the right clinic. Turkey receives over half a million international dental patients every year, and the vast majority have excellent outcomes. But as with any medical procedure, anywhere in the world, your choice of provider is everything.</p>
