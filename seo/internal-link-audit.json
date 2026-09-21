@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-19T13:03:09.514Z",
-  "registrySize": 29,
+  "generatedAt": "2026-09-21T08:25:44.076Z",
+  "registrySize": 35,
   "pagesScanned": 96,
   "results": [
     {
@@ -86,7 +86,7 @@
     {
       "page": "/prices/turkey-teeth-cost",
       "incomingTotal": 59,
-      "incomingFromHighAuth": 12,
+      "incomingFromHighAuth": 11,
       "sources": [
         {
           "from": "/blog/4-8-10-rule-for-veneers",
@@ -278,6 +278,10 @@
         },
         {
           "from": "/guides/turkey-teeth-packages",
+          "anchorText": "Turkey teeth cost: the complete 2026 price guide"
+        },
+        {
+          "from": "/guides/turkey-teeth-packages",
           "anchorText": ""
         },
         {
@@ -295,10 +299,6 @@
         {
           "from": "/monthly-payment",
           "anchorText": ""
-        },
-        {
-          "from": "/prices/turkey-teeth-cost",
-          "anchorText": "the full price guide"
         },
         {
           "from": "/prices/veneers-turkey-cost",
@@ -329,7 +329,7 @@
     },
     {
       "page": "/finance-options-uk",
-      "incomingTotal": 24,
+      "incomingTotal": 26,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -413,6 +413,14 @@
           "anchorText": "Dental Finance Options UK"
         },
         {
+          "from": "/guides/turkey-teeth-packages",
+          "anchorText": "UK dental finance options"
+        },
+        {
+          "from": "/guides/turkey-teeth-packages",
+          "anchorText": ""
+        },
+        {
           "from": "/monthly-payment",
           "anchorText": "how dental finance works in the UK, including dental loans and bad credit"
         },
@@ -433,7 +441,7 @@
     },
     {
       "page": "/monthly-payment",
-      "incomingTotal": 33,
+      "incomingTotal": 35,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -522,6 +530,14 @@
         },
         {
           "from": "/guides/teeth-in-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/guides/turkey-teeth-packages",
+          "anchorText": "what Turkey teeth cost per month"
+        },
+        {
+          "from": "/guides/turkey-teeth-packages",
           "anchorText": ""
         },
         {

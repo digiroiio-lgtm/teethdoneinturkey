@@ -12,12 +12,12 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-packages`;
-const TITLE = "Turkey Teeth Packages: What Is Included and What Does It Really Cost?";
+const TITLE = "Turkey Teeth Packages: What's Included & 2026 Prices";
 const H1 = "Turkey Teeth Packages: What Is Actually Included and What Does It Cost?";
 const DESCRIPTION =
-  "Package price is not the same as total cost. This guide explains exactly what Turkey dental packages include, what they leave out, and what to check before you book.";
+  "Turkey teeth packages from £2,800 all-inclusive. What is included, what is not, 2026 package prices in pounds and monthly payment examples for UK patients.";
 const DATE_PUBLISHED = "2026-09-13";
-const DATE_MODIFIED = "2026-09-13";
+const DATE_MODIFIED = "2026-09-21";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/turkey-teeth-packages" },
@@ -27,12 +27,30 @@ export const metadata: Metadata = {
 
 const toc = [
   { id: "package-vs-treatment", label: "Package Price vs Treatment Price" },
+  { id: "package-prices", label: "How Much Do Turkey Teeth Packages Cost?" },
+  { id: "pay-monthly", label: "Can You Pay Monthly for a Package?" },
   { id: "whats-included", label: "What Is Usually Included?" },
   { id: "inclusions-table", label: "Package Inclusions Table" },
   { id: "what-to-check", label: "What to Check Before Booking" },
   { id: "red-flags", label: "Red Flags to Watch For" },
   { id: "total-cost", label: "Package Price vs Real Total Cost" },
   { id: "faqs", label: "FAQs" },
+];
+
+const packagePriceRows = [
+  { pkg: "Hollywood Smile — 20 zirconia crowns", price: "£2,800", inc: "Hotel + transfers included", uk: "£20,000–£30,000", monthly: "From £78/mo" },
+  { pkg: "Hollywood Smile — 24 zirconia crowns", price: "£3,100", inc: "Hotel + transfers + cleaning", uk: "£24,000–£36,000", monthly: "From £86/mo" },
+  { pkg: "Full Smile Makeover", price: "From £3,500", inc: "Hotel + transfers included", uk: "£12,000+", monthly: "From £97/mo" },
+  { pkg: "Full set of 20 E-max porcelain veneers", price: "From £3,800", inc: "Priced per tooth from £190", uk: "£16,000–£20,000", monthly: "From £106/mo" },
+  { pkg: "All-on-4 — per arch", price: "From £4,500", inc: "Hotel + transfers included", uk: "£15,000+", monthly: "From £125/mo" },
+  { pkg: "All-on-6 — per arch", price: "From £5,600", inc: "Hotel + transfers + temporary teeth", uk: "£15,000–£22,000", monthly: "From £156/mo" },
+];
+
+const scenarioTerms = [
+  { term: "6 months", monthly: "£383.33", repayable: "£2,300" },
+  { term: "12 months", monthly: "£191.67", repayable: "£2,300" },
+  { term: "18 months", monthly: "£127.78", repayable: "£2,300" },
+  { term: "24 months", monthly: "£95.83", repayable: "£2,300" },
 ];
 
 const inclusionsRows = [
@@ -50,6 +68,14 @@ const inclusionsRows = [
 ];
 
 const faqs = [
+  {
+    question: "How much do Turkey teeth packages cost?",
+    answer: "On this site, all-inclusive Turkey teeth packages start at £2,800 for a 20-crown zirconia Hollywood Smile and £3,100 for 24 crowns, both including hotel and airport transfers. Full-arch implant packages start at £4,500 per arch for All-on-4 and £5,600 per arch for All-on-6. A full set of 20 E-max porcelain veneers is priced per tooth from £190, so roughly £3,800. Flights are not included in any of these figures.",
+  },
+  {
+    question: "Can you pay monthly for a Turkey teeth package?",
+    answer: "Yes — packages can be split into a deposit plus monthly payments, with 0% APR representative available on qualifying plans over 12, 24 or 36 months. As an illustration, a £2,800 package with a £500 deposit leaves £2,300 to finance, which is £191.67 a month over 12 months or £95.83 a month over 24 months at 0% APR representative. These are example calculations, not a credit offer: all finance is subject to a credit check and to the provider’s approval, and not everyone will qualify.",
+  },
   {
     question: "What does a Turkey dental package include?",
     answer: "Most Turkey dental packages include the treatment itself, hotel accommodation for the treatment stay, and airport and clinic transfers. Flights are almost never included. CBCT scans for implant planning are sometimes charged separately. The second visit for implant patients (crown fitting after the healing period) may or may not be included — always confirm in writing before booking.",
@@ -124,6 +150,8 @@ export default function TurkeyTeethPackagesPage() {
 
           <KeyTakeaways
             items={[
+              "All-inclusive Turkey teeth packages on this site start from £2,800 (20 zirconia crowns, hotel and transfers included); full-arch implant packages start from £4,500 per arch.",
+              "Packages can be paid monthly — from around £78/month over 36 months on a £2,800 package — subject to a credit check and lender approval.",
               "Package price almost never includes flights — book these separately.",
               "Hotel and airport transfers are often included, but confirm the number of nights and both directions of the airport transfer.",
               "CBCT scans for implant patients are sometimes charged separately (£60–£120) even when not flagged in the package price.",
@@ -139,6 +167,89 @@ export default function TurkeyTeethPackagesPage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             For a full breakdown of everything you actually spend from door to door, see{" "}
             <Link href="/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey" className="text-[#1e40af] font-semibold hover:underline">How Much Does It Cost to Get Your Teeth Done in Turkey?</Link>
+          </p>
+
+          <h2 id="package-prices" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">How Much Do Turkey Teeth Packages Cost?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            All-inclusive Turkey teeth packages on this site start at <strong>£2,800</strong> for a 20-crown zirconia Hollywood Smile with hotel and airport transfers included, and <strong>£3,100</strong> for the 24-crown version. Full-arch implant packages are priced per arch: <strong>All-on-4 from £4,500</strong> and <strong>All-on-6 from £5,600</strong>, both all-inclusive. A full set of 20 E-max porcelain veneers is priced per tooth from £190 rather than as a bundle, so roughly £3,800. <strong>Flights are not included in any of these figures.</strong>
+          </p>
+          <div className="overflow-x-auto rounded-2xl shadow-xl shadow-blue-900/5 ring-1 ring-gray-100 my-6">
+            <table className="w-full bg-white text-sm">
+              <thead>
+                <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
+                  <th className="px-4 py-3 text-left font-semibold">Package</th>
+                  <th className="px-4 py-3 text-left font-semibold">Turkey Price</th>
+                  <th className="px-4 py-3 text-left font-semibold">Package Includes</th>
+                  <th className="px-4 py-3 text-left font-semibold">UK Private</th>
+                  <th className="px-4 py-3 text-left font-semibold">Monthly (36 mo)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {packagePriceRows.map((r, i) => (
+                  <tr key={r.pkg} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    <td className="px-4 py-3 font-medium text-gray-800">{r.pkg}</td>
+                    <td className="px-4 py-3 font-bold text-[#1e40af] whitespace-nowrap">{r.price}</td>
+                    <td className="px-4 py-3 text-gray-600">{r.inc}</td>
+                    <td className="px-4 py-3 text-gray-600 whitespace-nowrap">{r.uk}</td>
+                    <td className="px-4 py-3 font-semibold text-green-700 whitespace-nowrap">{r.monthly}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-500 mb-4">
+            Turkey prices are this site&apos;s published 2026 package prices. Monthly figures are the package total divided across 36 months at 0% APR representative, shown for comparison only — they are not a quotation and are subject to eligibility and lender approval. For the full treatment-by-treatment price list, see{" "}
+            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth cost: the complete 2026 price guide</Link>.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Two package price pages give the full inclusion list for the most-requested options:{" "}
+            <Link href="/prices/hollywood-smile-turkey-package" className="text-[#1e40af] font-semibold hover:underline">the Hollywood Smile zirconia crown package</Link>{" "}
+            and{" "}
+            <Link href="/prices/all-on-6-dental-implants-turkey-package" className="text-[#1e40af] font-semibold hover:underline">the All-on-6 full-arch implant package</Link>.
+          </p>
+
+          <h2 id="pay-monthly" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Can You Pay Monthly for a Turkey Teeth Package?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Yes. A package is normally split into a deposit paid at booking and a balance spread over monthly instalments, with 0% APR representative available on qualifying plans over 12, 24 or 36 months. What you pay each month is decided by two things only: the package total and the term you choose. At 0% APR a longer term divides the same total across more months rather than adding interest to it.
+          </p>
+
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 my-6">
+            <p className="text-xs font-bold uppercase tracking-wide text-amber-800 mb-3">Example Treatment Scenario — illustrative, not a quotation</p>
+            <ul className="text-gray-800 text-sm space-y-1 mb-4">
+              <li><strong>Package:</strong> Hollywood Smile, 20 zirconia crowns, hotel and transfers included</li>
+              <li><strong>Package price:</strong> £2,800</li>
+              <li><strong>Deposit at booking:</strong> £500</li>
+              <li><strong>Balance to finance:</strong> £2,300</li>
+            </ul>
+            <div className="overflow-x-auto rounded-xl ring-1 ring-amber-200 bg-white">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-amber-100 text-amber-900">
+                    <th className="px-4 py-2 text-left font-semibold">Term</th>
+                    <th className="px-4 py-2 text-left font-semibold">Example monthly payment</th>
+                    <th className="px-4 py-2 text-left font-semibold">Total repayable</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {scenarioTerms.map((t, i) => (
+                    <tr key={t.term} className={i % 2 === 0 ? "bg-white" : "bg-amber-50/50"}>
+                      <td className="px-4 py-2 font-medium text-gray-800">{t.term}</td>
+                      <td className="px-4 py-2 font-bold text-[#1e40af]">{t.monthly}</td>
+                      <td className="px-4 py-2 text-gray-700">{t.repayable}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-gray-600 mt-3">
+              Figures are an example calculation on a £2,300 balance at <strong>0% APR representative</strong>, where total repayable equals the amount financed. This is <strong>not a credit offer and not a quotation</strong>. Finance is arranged through a third-party provider, is subject to a credit check and to that provider&apos;s own lending criteria and approval, and <strong>not everyone will qualify</strong>. Your own deposit, term, APR and total repayable are confirmed by the provider before you commit to anything.
+            </p>
+          </div>
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            For the monthly figure attached to each individual treatment rather than to a package, see{" "}
+            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">what Turkey teeth cost per month</Link>. For how dental payment plans, dental loans and bad-credit applications actually work in the UK, see{" "}
+            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">UK dental finance options</Link>.
           </p>
 
           <h2 id="whats-included" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What Is Usually Included in a Turkey Dental Package?</h2>
@@ -230,6 +341,10 @@ export default function TurkeyTeethPackagesPage() {
             { title: "How Much Does It Cost to Get Your Teeth Done in Turkey?", desc: "Total trip cost guide: treatment, flights, hotel and transfers.", href: "/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey" },
             { title: "Veneers Turkey Packages: What Is Included?", desc: "Veneer-specific package breakdown — treatment-only vs package vs total trip, by tooth count.", href: "/guides/veneers-turkey-packages" },
             { title: "Turkey Teeth Cost: Complete 2026 Price Guide", desc: "Treatment-only prices: veneers, crowns, implants and full mouth.", href: "/prices/turkey-teeth-cost" },
+            { title: "Hollywood Smile Turkey Package", desc: "20 or 24 zirconia crowns from £2,800 — full inclusion list and what is chargeable.", href: "/prices/hollywood-smile-turkey-package" },
+            { title: "All-on-6 Turkey Package", desc: "Full-arch implant package from £5,600 — implants, temporary and final teeth, hotel, transfers.", href: "/prices/all-on-6-dental-implants-turkey-package" },
+            { title: "Turkey Teeth Monthly Payments", desc: "What each treatment and package costs per month, and over which terms.", href: "/monthly-payment" },
+            { title: "UK Dental Finance Options", desc: "Payment plans, dental loans and what happens if you have bad credit.", href: "/finance-options-uk" },
             { title: "Antalya Teeth Prices", desc: "Location-specific cost guide for UK patients travelling to Antalya.", href: "/guides/antalya-teeth-prices" },
             { title: "Free Treatment Plan", desc: "Get a written, itemised quote with all inclusions confirmed.", href: "/free-treatment-plan" },
           ]}

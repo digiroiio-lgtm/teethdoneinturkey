@@ -79,6 +79,7 @@ export const CLUSTERS: ClusterDefinition[] = [
     name: 'Turkey Teeth Cost & Prices',
     hub: '/prices/turkey-teeth-cost',
     spokes: [
+      '/guides/turkey-teeth-packages',
       '/prices/veneers-turkey-cost',
       '/prices/dental-implants-turkey-cost',
       '/prices/hollywood-smile-turkey-package',
@@ -187,7 +188,6 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/blog/dental-holiday-packages-turkey',
       '/blog/antalya-vs-istanbul-dental-clinics',
       '/travel-to-turkey/dental-holiday-turkey',
-      '/guides/turkey-teeth-packages',
       '/guides/veneers-turkey-packages',
     ],
     commercial: ['/book-consultation', '/free-treatment-plan'],
@@ -415,6 +415,54 @@ export const LINK_REGISTRY: LinkEntry[] = [
     placement: 'related-links',
     priority: 'required',
   },
+
+  // -- Packages owner: /guides/turkey-teeth-packages --
+  // One intent = one canonical URL. The packages query family is split across
+  // several URLs with no owning page; this registers the guide as the owner and
+  // flows cost-hub authority into it, then out to the package price pages and
+  // the finance cluster.
+  {
+    from: '/prices/turkey-teeth-cost',
+    to: '/guides/turkey-teeth-packages',
+    anchorText: 'what Turkey teeth packages include and cost',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/prices/turkey-teeth-cost',
+    anchorText: 'Turkey teeth cost: the complete 2026 price guide',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/monthly-payment',
+    anchorText: 'what Turkey teeth cost per month',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/finance-options-uk',
+    anchorText: 'UK dental finance options',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/prices/hollywood-smile-turkey-package',
+    anchorText: 'the Hollywood Smile zirconia crown package',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/turkey-teeth-packages',
+    to: '/prices/all-on-6-dental-implants-turkey-package',
+    anchorText: 'the All-on-6 full-arch implant package',
+    placement: 'contextual',
+    priority: 'required',
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -489,6 +537,10 @@ const PAGE_META: Record<string, { title: string; desc: string }> = {
   '/prices/dental-implants-turkey-cost': {
     title: 'Dental Implants Turkey Cost 2026',
     desc: 'Single implant, All-on-4 and All-on-6 price breakdowns.',
+  },
+  '/guides/turkey-teeth-packages': {
+    title: 'Turkey Teeth Packages: What Is Included & 2026 Prices',
+    desc: 'All-inclusive package prices from £2,800, what is and is not covered, and monthly payment examples.',
   },
   '/prices/hollywood-smile-turkey-package': {
     title: 'Hollywood Smile Turkey Package',

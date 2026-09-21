@@ -214,8 +214,8 @@ export default function TurkeyTeethCostPricePage() {
           </div>
           <p className="text-xs text-gray-500 mb-4">
             Figures shown are the ones consistently used across this site&apos;s own price pages as of {DATE_MODIFIED}. See{" "}
-            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] hover:underline">the full price guide</Link>{" "}
-            for package-specific detail and payment breakdowns.
+            <Link href="/guides/turkey-teeth-packages" className="text-[#1e40af] font-semibold hover:underline">what Turkey teeth packages include and cost</Link>{" "}
+            for package-specific detail and monthly payment breakdowns.
           </p>
 
           <h2 id="additional-procedures" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Additional Procedures</h2>

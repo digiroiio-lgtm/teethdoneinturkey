@@ -7,6 +7,188 @@ rewritten again.
 
 ---
 
+## 2026-09-21 — packages cluster given an owner (run executed WITHOUT Search Console data)
+
+### BLOCKER: no Search Console data was available for this run
+
+The Supermetrics connection is the only route this session has to Search
+Console, and **its team trial expired on 2026-09-17** (team "Team digiroiio",
+ID 1943513). Every `data_query` call returns `TRIAL_EXPIRED`. No other GSC or
+GA4 connector is authenticated on this account (Gmail, Drive and Calendar are
+not connected; Tavily needs reconnecting).
+
+**Consequence: Steps 1, 2, 5, 6, 11 and 17 of the daily routine could not be
+executed as specified.** There are no fresh queries, no positions, no
+impressions, no CTR and no period-over-period comparison in this entry. The
+last usable GSC snapshot is still 2026-09-04..09-10, recorded in the 09-11
+entries below. Nothing in this run should be read as evidence that any
+position moved.
+
+This run therefore deliberately took **no action that depends on knowing a
+current position**: no new URL, no redirect, no merge, and no retitle of any
+page that might be the current winner on a contested query. Everything below
+is either a defect fixable by inspection or an architecture decision that is
+neutral-to-positive whichever URL Google currently prefers.
+
+### Undocumented changes since the last entry (10-day gap in this log)
+
+Two runs edited the site without writing here, which broke the week-over-week
+memory rule:
+
+- **2026-09-13** — `Add 7 new SEO guide pages...` (#9) and `Add batch 2 SEO
+  pages: Antalya destination hub + veneer cluster (5 pages)`. Twelve new URLs,
+  no log entry, no recorded target query for any of them. Among them
+  `/guides/turkey-teeth-packages` and `/guides/veneers-turkey-packages` —
+  i.e. the 09-11 decision *not* to add a sixth and seventh URL to a packages
+  query already split five ways was overridden two days later, with no
+  recorded reasoning.
+- **2026-09-19** — `seo: authority & GEO technical audit fixes` plus the
+  hub→spoke internal-link architecture (`src/lib/internal-links.ts`,
+  `scripts/audit-internal-links.mjs`). Real improvements, but again unlogged.
+
+**Before-position data for anything changed in those runs does not exist**, so
+none of it can be judged on performance yet even once GSC access returns.
+
+### The finding: the packages intent had no owner and no commercial authority
+
+Established by inspection of the repo, not by GSC:
+
+- The packages query family is now spread over **six** URLs:
+  `/guides/turkey-teeth-packages`, `/guides/veneers-turkey-packages`,
+  `/blog/dental-holiday-packages-turkey`,
+  `/prices/hollywood-smile-turkey-package`,
+  `/prices/all-on-6-dental-implants-turkey-package`, and
+  `/travel-to-turkey/dental-holiday-turkey`.
+- `src/lib/internal-links.ts` had **no packages cluster at all**. The
+  head-intent page, `/guides/turkey-teeth-packages`, was filed as *support*
+  under the **travel** cluster, whose hub is `/guides/turkey-teeth-antalya` —
+  a geo page. So the site's packages page was being fed by its travel content
+  and by nothing commercial.
+- Inbound links to `/guides/turkey-teeth-packages` came only from the guides
+  index, its own sibling packages guide, and the Antalya hub. **Zero inbound
+  links from the cost hub, the finance hub, or any money page.**
+- The page itself was a SUPPORT page wearing a MONEY page's title. It promised
+  "What Does It Really Cost?" and contained **no package price table and no
+  price figures** beyond one hypothetical £4,500, and **no finance content of
+  any kind** — despite `turkey teeth packages pay monthly` sitting at position
+  **10.7** in the last recorded data (09-11 entry), i.e. inside the 4–20
+  striking-distance band, with no page on the site answering it.
+
+That last point is the sharpest evidence available: a documented
+striking-distance query at the intersection of priority #1 (FINANCE) and the
+cluster the 09-11 run named as the top untouched opportunity (PACKAGES), and
+neither the packages page nor the finance pages addressed it.
+
+### Decisions taken this run
+
+- **OPTIMISE EXISTING (primary action) — `/guides/turkey-teeth-packages`,
+  repositioned from SUPPORT to MONEY. URL unchanged.**
+  - Added a **package price table** with the site's own published 2026 prices:
+    20 zirconia crowns £2,800, 24 crowns £3,100, Full Smile Makeover from
+    £3,500, 20 E-max veneers from £3,800, All-on-4 from £4,500/arch, All-on-6
+    from £5,600/arch — each with the UK private comparison and the 36-month
+    monthly figure. **No new or conflicting price was introduced**: every
+    figure is taken from `/prices/turkey-teeth-cost` and `/monthly-payment`,
+    and the monthly column reproduces `/monthly-payment`'s existing arithmetic
+    (total ÷ 36 at 0% APR representative).
+  - Added an extractable direct-answer paragraph above the table for GEO.
+  - New H2 **"Can You Pay Monthly for a Turkey Teeth Package?"**, using the
+    recorded query wording, with a labelled **Example Treatment Scenario**:
+    £2,800 package, £500 deposit, £2,300 financed over 6 / 12 / 18 / 24 months
+    (£383.33 / £191.67 / £127.78 / £95.83), total repayable shown for each.
+  - **YMYL wording** on that block: 0% APR representative, explicitly *not a
+    credit offer and not a quotation*, arranged through a third-party provider,
+    subject to credit check and lender approval, **not everyone will qualify**,
+    final terms confirmed by the provider. No guaranteed-approval language.
+  - Two FAQs added at the top of the set, worded as the queries are worded
+    ("How much do Turkey teeth packages cost?", "Can you pay monthly for a
+    Turkey teeth package?"). FAQPage schema verified server-rendered.
+  - Title 68 → **52 chars** ("Turkey Teeth Packages: What's Included & 2026
+    Prices"). The old title truncated in SERPs *and* promised a price the page
+    did not contain; it now delivers it. Description rewritten to 155 chars.
+    `dateModified` bumped to 2026-09-21 — the substance genuinely changed.
+  - **Caveat for the next run:** this page is 8 days old and has no recorded
+    before-position. The retitle is therefore unmeasurable against a baseline.
+    Do not retitle it again; let it accumulate data.
+- **FIX (technical) — self-referencing link on the cost hub.** A full scan of
+  all 96 pages found exactly one page linking to itself in its body content:
+  `/prices/turkey-teeth-cost` linked to `/prices/turkey-teeth-cost` with the
+  anchor "the full price guide". This was introduced by the 09-19 global
+  find-and-replace (C1), which rewrote an outbound link to
+  `/prices/teeth-done-in-turkey-cost` into a self-link. Repointed at
+  `/guides/turkey-teeth-packages` with the anchor "what Turkey teeth packages
+  include and cost" — which fixes the defect and supplies the missing
+  cost-hub → packages authority flow in one edit. (The 4 remaining self-links
+  in the rendered HTML are Header/Footer/FloatingCTA/PriceTable site-wide
+  navigation, which is normal.)
+- **ARCHITECTURE — packages given a commercial home.** In
+  `src/lib/internal-links.ts`, `/guides/turkey-teeth-packages` moved from
+  *travel → support* to *cost → spoke*, and six required LINK_REGISTRY entries
+  added: cost hub → packages, and packages → cost hub, `/monthly-payment`,
+  `/finance-options-uk`, `/prices/hollywood-smile-turkey-package`,
+  `/prices/all-on-6-dental-implants-turkey-package`. All six links now exist in
+  the page source and in the rendered HTML. `PAGE_META` entry added.
+- **GEO — added to `public/llms.txt`**, which it was missing from. Relevant
+  because ChatGPT was the biggest qualified channel in the last GA4 read and
+  cites the finance/price pages almost exclusively.
+- **FIX (lint).** One `react/no-unescaped-entities` error in
+  `/guides/veneers-turkey-packages` (same cluster, one character) fixed.
+- **MERGE-AVOID — no consolidation attempted.** Six URLs share the packages
+  intent and one of them was at position 7.5 in the last recorded data, but
+  *which* one is unknown without GSC. Retitling or redirecting blind is exactly
+  the 09-08 mistake. **No title, URL or canonical on the other five was
+  touched.** This run only assigned an owner and pointed authority at it — a
+  change that does not cost anything if Google currently prefers a different
+  URL.
+- **DO NOTHING — finance cannibalisation.** `teeth on finance bad credit`
+  across two URLs and `pay monthly turkey teeth` across three remain open from
+  09-11. Assigning an owner needs current head-to-head data. Blocked.
+- **DO NOTHING — `/prices/teeth-done-in-turkey-cost`,
+  `/prices/dental-implants-turkey-cost`,
+  `/prices/all-on-6-dental-implants-turkey-package`.** All flagged as
+  zero-impression duplicates on 09-11. Every possible action (merge, redirect,
+  prune) needs current data. Blocked.
+
+### Technical health check
+
+- **77 sitemap URLs, every one crawled and verified 200** against a production
+  build. Packages guide present in the sitemap.
+- Internal-link audit re-run across 96 pages: **no missing required links, no
+  broken links, no orphans.** All 6 new registry entries parse and resolve.
+- Body self-links across the whole site: **1 found, 1 fixed, 0 remaining.**
+- Packages page: canonical self-referencing, `index, follow`, title 52 chars,
+  description 155 chars, Article + BreadcrumbList + FAQPage schema all verified
+  **server-rendered** in the production HTML.
+- typecheck clean; lint clean except the 2 documented pre-existing warnings;
+  build clean (104 static pages); `route-lastmod.json` regenerated and current.
+- Note: `node_modules/next/dist/docs/` does not exist in next@15.5.15, so the
+  AGENTS.md instruction to read it before coding had nothing to read. The
+  change is content-only JSX inside existing App Router pages.
+
+### What to check next run
+
+1. **Restore Search Console access first — nothing else in the daily routine
+   works without it.** Either renew the Supermetrics subscription for team
+   "Team digiroiio" (expired 2026-09-17) or connect Search Console directly.
+   Until then, every run is limited to inspection-only work like this one.
+2. **Do not touch `/guides/turkey-teeth-packages` again** until there is at
+   least ~2 weeks of post-change data. It was retitled and substantially
+   expanded today with no baseline.
+3. **The packages head-to-head is still the open question.** Once GSC returns,
+   establish which of the six URLs Google actually serves for
+   `turkey teeth packages` before merging or retitling anything. Only then
+   decide whether the other five need differentiating or consolidating.
+4. **Audit the twelve pages added on 09-13.** None has a recorded target query
+   or a documented reason to exist. Check which earn impressions and which are
+   suppressed duplicates — this is the same shape as the problems fixed on
+   09-11, at four times the scale.
+5. Finance cannibalisation (item 4 from 09-11) and the zero-impression price
+   pages (item 5) remain open and remain blocked on data.
+6. **GA4 key-event configuration is still unverified** and still blocks any
+   business-value-led prioritisation. Open since 09-11.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and
