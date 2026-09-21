@@ -33,10 +33,25 @@ const breadcrumbSchema = {
   ],
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Full Smile Makeover Turkey – From £3,500",
+  description: "Full smile makeover in Turkey from £3,500 — veneers, whitening and gum contouring in one trip. UK price comparison and how to book.",
+  url: PAGE_URL,
+  datePublished: "2026-01-01",
+  dateModified: "2026-09-19",
+  inLanguage: "en-GB",
+  author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  about: { "@type": "MedicalProcedure", name: "Smile Makeover" },
+};
+
 export default function SmileMakeoverPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-3">

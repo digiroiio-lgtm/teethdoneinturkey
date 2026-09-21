@@ -130,17 +130,6 @@ const faqs = [
   },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `${PAGE_URL}#faq`,
-  mainEntity: faqs.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: { "@type": "Answer", text: item.answer },
-  })),
-};
-
 export default function BestClinicsBlogPage() {
   return (
     <article className="py-16 bg-white">
@@ -156,11 +145,6 @@ export default function BestClinicsBlogPage() {
           { name: "Blog", path: "/blog" },
           { name: "Best Dental Clinics in Turkey", path: "/blog/best-dental-clinics-turkey" },
         ]}
-      />
-      <script
-        id="faq-schema-best-dental-clinics-turkey"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">

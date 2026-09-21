@@ -45,20 +45,9 @@ const financeFaqs = [
   { q: "What if I need to cancel after finance is approved?", a: "Finance can be cancelled during the statutory 14-day cooling-off period at no cost. If you cancel after this period, the finance agreement terms will apply — full details provided at the time of application." },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": financeFaqs.map(item => ({
-    "@type": "Question",
-    "name": item.q,
-    "acceptedAnswer": { "@type": "Answer", "text": item.a },
-  })),
-};
-
 export default function MonthlyPaymentPage() {
   return (
     <>
-      <script id="faq-schema-turkey-teeth-finance" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {/* ── Hero ── */}
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">

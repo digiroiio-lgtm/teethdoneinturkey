@@ -33,10 +33,25 @@ const breadcrumbSchema = {
   ],
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "All-on-4 Dental Implants Turkey – From £4,500 per Arch",
+  description: "All-on-4 dental implants in Turkey from £4,500 per arch. Full arch restoration in 5–7 days. UK price comparison, procedure and how to book.",
+  url: PAGE_URL,
+  datePublished: "2026-01-01",
+  dateModified: "2026-09-19",
+  inLanguage: "en-GB",
+  author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  about: { "@type": "MedicalProcedure", name: "All-on-4 Dental Implants" },
+};
+
 export default function AllOn4Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-3">
