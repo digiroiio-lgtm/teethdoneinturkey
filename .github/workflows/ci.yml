@@ -26,6 +26,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Regenerate sitemap freshness manifest for audit
+        run: |
+          npm run seo:lastmod
+          echo '---ROUTE_LASTMOD_BEGIN---'
+          cat seo/route-lastmod.json
+          echo '---ROUTE_LASTMOD_END---'
+
       - name: Verify sitemap freshness manifest
         run: npm run seo:lastmod:check
 

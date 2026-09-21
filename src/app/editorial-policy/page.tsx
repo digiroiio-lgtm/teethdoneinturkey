@@ -52,16 +52,18 @@ export default function EditorialPolicyPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Medical Review Methodology</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Pages covering health conditions, emergency dental situations, and clinical procedures —
-              designated as YMYL (Your Money or Your Life) content — are reviewed by a qualified dental
-              professional before publication and whenever source guidance changes.
+              Pages covering health conditions, emergency dental situations, and clinical procedures are
+              treated as high-scrutiny YMYL content. A page is described as medically reviewed only when a
+              named qualified dental professional has actually completed the review and a review date is
+              recorded. Until that evidence is present, the page carries an editorial/clinical information
+              notice rather than a medical-review claim.
             </p>
 
             <div className="bg-blue-50 border border-blue-100 rounded-lg p-6 mb-6">
-              <p className="text-sm font-semibold text-blue-900 mb-1">Medical Reviewer</p>
+              <p className="text-sm font-semibold text-blue-900 mb-1">Reviewer attribution standard</p>
               <p className="text-gray-700">
-                <strong>Dr. Ayşe Kaya</strong><br />
-                BDS, MSc Aesthetic Dentistry — Istanbul, Turkey
+                Reviewer names, qualifications and review dates are published only when they can be
+                substantiated. Placeholder reviewer identities are not used.
               </p>
             </div>
 
@@ -88,9 +90,9 @@ export default function EditorialPolicyPage() {
             </ul>
 
             <p className="text-gray-600 leading-relaxed mt-4">
-              Pages carrying a "Medically reviewed" badge have passed all criteria above.
-              The review date is recorded internally and pages are re-reviewed when NHS guidance
-              or clinical recommendations change.
+              Pages carrying a &quot;Medically reviewed&quot; badge must identify the reviewer and review date.
+              Other YMYL pages may still cite authoritative sources, but are not represented as medically
+              reviewed until the review workflow has been completed.
             </p>
           </div>
 
@@ -149,7 +151,8 @@ export default function EditorialPolicyPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">YMYL Pages on This Site</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              The following pages carry YMYL health content and have been medically reviewed:
+              The following pages carry YMYL health content and are prioritised for the medical-review workflow.
+              Their individual page attribution is the source of truth for whether a named review has been completed:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-gray-600">
               <li>
