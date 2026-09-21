@@ -122,10 +122,7 @@ export default function TurkeyTeethAntalyaPage() {
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <MedicalReviewBadge
-            reviewerName="Dr. Ayşe Kaya"
-            reviewerTitle="BDS, MSc Implantology"
-            reviewedDate="September 2026"
-          />
+            />
 
           <p className="text-gray-700 leading-relaxed mb-6">
             Antalya is where the majority of UK dental patients go when they choose Turkey. This guide answers the practical questions — what treatment you can have, how many days it takes, what a trip actually looks like, how to choose a clinic you can trust, and what happens when you get home. For treatment prices, see the{" "}
