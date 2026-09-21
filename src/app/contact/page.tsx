@@ -13,20 +13,9 @@ const faqs = [
   { q: "Is the consultation really free?", a: "Yes — there is absolutely no charge for the initial consultation. We provide a personalised treatment plan and cost estimate free of charge." },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(item => ({
-    "@type": "Question",
-    "name": item.q,
-    "acceptedAnswer": { "@type": "Answer", "text": item.a },
-  })),
-};
-
 export default function ContactPage() {
   return (
     <>
-      <script id="faq-schema-contact" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Contact Us</h1>

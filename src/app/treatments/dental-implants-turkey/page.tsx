@@ -33,17 +33,33 @@ const breadcrumbSchema = {
   ],
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Dental Implants Turkey – From £250",
+  description: "Straumann and Nobel Biocare dental implants in Turkey from £250. UK price comparison, brands, procedure steps and how to book.",
+  url: PAGE_URL,
+  datePublished: "2026-01-01",
+  dateModified: "2026-09-19",
+  inLanguage: "en-GB",
+  author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  about: { "@type": "MedicalProcedure", name: "Dental Implant" },
+};
+
 export default function DentalImplantsTurkeyPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-3">
             <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Treatments", href: "/treatments" }, { label: "Dental Implants" }]} />
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey – From £250</h1>
-          <p className="text-xl text-blue-200 mb-6">Permanent tooth replacement using premium Straumann & Nobel Biocare implants</p>
+          <p className="text-xl text-blue-200 mb-2">Permanent tooth replacement using premium Straumann & Nobel Biocare implants</p>
+          <p className="mb-6 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
             <Link href="/prices/dental-implants-turkey-cost" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Price Guide</Link>

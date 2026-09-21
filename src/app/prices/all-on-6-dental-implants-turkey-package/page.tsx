@@ -18,20 +18,9 @@ const faqs = [
   { q: "Is the hotel in Antalya or Istanbul?", a: "Our partner clinics are based in Antalya. Hotel and transfer arrangements are co-ordinated for you as part of the package." },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(item => ({
-    "@type": "Question",
-    "name": item.q,
-    "acceptedAnswer": { "@type": "Answer", "text": item.a },
-  })),
-};
-
 export default function AllOn6PackagePage() {
   return (
     <>
-      <script id="faq-schema-all-on-6-package" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block bg-yellow-400 text-[#1e40af] text-xs font-extrabold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">Most Popular</div>
@@ -39,6 +28,7 @@ export default function AllOn6PackagePage() {
           <p className="text-xl text-blue-200">Complete full-arch restoration with hotel, transfers &amp; everything included</p>
           <div className="mt-6 text-4xl font-extrabold text-yellow-400">£5,600</div>
           <p className="text-blue-300 text-sm mt-1">All-inclusive package price per arch</p>
+          <p className="mt-3 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
         </div>
       </div>
 

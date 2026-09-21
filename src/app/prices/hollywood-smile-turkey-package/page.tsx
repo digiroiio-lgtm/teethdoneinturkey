@@ -48,20 +48,9 @@ const faqs = [
   { q: "Is there a guarantee?", a: "Yes. All crown work is covered by a written guarantee from your treating dentist. Contact our UK team if you have any concerns after your return." },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(item => ({
-    "@type": "Question",
-    "name": item.q,
-    "acceptedAnswer": { "@type": "Answer", "text": item.a },
-  })),
-};
-
 export default function HollywoodSmilePackagePage() {
   return (
     <>
-      <script id="faq-schema-hollywood-smile-package" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Hollywood Smile Turkey Packages</h1>
@@ -76,6 +65,7 @@ export default function HollywoodSmilePackagePage() {
               <p className="text-3xl font-extrabold text-yellow-400">£2,800</p>
             </div>
           </div>
+          <p className="mt-3 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
         </div>
       </div>
 

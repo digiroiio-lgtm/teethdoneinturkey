@@ -15,11 +15,9 @@ interface ArticleJsonLdProps {
   datePublished: string;
   dateModified?: string;
   breadcrumbs: BreadcrumbItem[];
+  reviewer?: { name: string; jobTitle: string };
 }
 
-// Article + BreadcrumbList for a single content page. Deliberately omits any
-// `reviewedBy`/`author` Person — attribute authorship to the Organization only,
-// since no verifiable individual reviewer identity exists for this content.
 export default function ArticleJsonLd({
   id,
   path,
@@ -28,6 +26,7 @@ export default function ArticleJsonLd({
   datePublished,
   dateModified,
   breadcrumbs,
+  reviewer,
 }: ArticleJsonLdProps) {
   const url = `${SITE_URL}${path}`;
 
@@ -47,6 +46,7 @@ export default function ArticleJsonLd({
         image: `${SITE_URL}/opengraph-image`,
         author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
         publisher: { "@id": `${SITE_URL}/#organization` },
+        ...(reviewer ? { reviewedBy: { "@type": "Person", name: reviewer.name, jobTitle: reviewer.jobTitle } } : {}),
       },
       {
         "@type": "BreadcrumbList",

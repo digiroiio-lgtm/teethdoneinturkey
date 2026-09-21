@@ -108,18 +108,6 @@ const jsonLd = {
         { "@type": "ListItem", position: 3, name: "Veneers Turkey Cost", item: PAGE_URL },
       ],
     },
-    // The FAQs render through <FAQSection>, which is a client component, so
-    // without this node the answers never appear in the server HTML that Google's
-    // rich-result parser and the AI answer engines actually read.
-    {
-      "@type": "FAQPage",
-      "@id": `${PAGE_URL}#faq`,
-      mainEntity: faqs.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: { "@type": "Answer", text: item.answer },
-      })),
-    },
   ],
 };
 
@@ -134,6 +122,7 @@ export default function VeneersCostPage() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">How Much Do Veneers Cost in Turkey? 2026 UK Price Guide</h1>
           <p className="text-xl text-blue-200">Everything you need to know about veneer prices in Turkey</p>
+          <p className="mt-3 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
         </div>
       </div>
       <section className="py-16 bg-white">

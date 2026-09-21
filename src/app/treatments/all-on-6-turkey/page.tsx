@@ -33,10 +33,25 @@ const breadcrumbSchema = {
   ],
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "All-on-6 Dental Implants Turkey – From £5,600 All-Inclusive",
+  description: "All-on-6 dental implants in Turkey from £5,600 all-inclusive. Superior stability over All-on-4. UK price comparison, procedure and how to book.",
+  url: PAGE_URL,
+  datePublished: "2026-01-01",
+  dateModified: "2026-09-19",
+  inLanguage: "en-GB",
+  author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  about: { "@type": "MedicalProcedure", name: "All-on-6 Dental Implants" },
+};
+
 export default function AllOn6Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-3">
@@ -45,7 +60,8 @@ export default function AllOn6Page() {
           <div className="inline-block bg-blue-500/40 text-blue-100 text-sm px-4 py-1.5 rounded-full mb-4">Treatments</div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">All-on-6 Dental Implants Turkey</h1>
           <p className="text-xl text-blue-200 mb-2">Enhanced full arch restoration with 6 implants from £5,600 all-inclusive</p>
-          <p className="text-blue-300 mb-6">Compare to £18,000+ in the UK — save over 69%</p>
+          <p className="text-blue-300 mb-2">Compare to £18,000+ in the UK — save over 69%</p>
+          <p className="mb-6 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
             <Link href="/prices/all-on-6-dental-implants-turkey-package" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Package Prices</Link>

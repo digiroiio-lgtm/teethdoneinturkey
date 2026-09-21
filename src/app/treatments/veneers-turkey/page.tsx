@@ -33,10 +33,25 @@ const breadcrumbSchema = {
   ],
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Veneers Turkey – From £190 Per Tooth",
+  description: "Porcelain and E-max veneers in Turkey from £190 per tooth. UK price comparison, brands, procedure and how to book.",
+  url: PAGE_URL,
+  datePublished: "2026-01-01",
+  dateModified: "2026-09-19",
+  inLanguage: "en-GB",
+  author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  about: { "@type": "MedicalProcedure", name: "Dental Veneer" },
+};
+
 export default function VeneersTurkeyPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-3">
@@ -44,7 +59,8 @@ export default function VeneersTurkeyPage() {
           </div>
           <div className="inline-block bg-blue-500/40 text-blue-100 text-sm px-4 py-1.5 rounded-full mb-4">Treatments</div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Veneers Turkey – From £190 Per Tooth</h1>
-          <p className="text-xl text-blue-200 mb-6">Transform your smile with premium porcelain veneers at a fraction of UK prices</p>
+          <p className="text-xl text-blue-200 mb-2">Transform your smile with premium porcelain veneers at a fraction of UK prices</p>
+          <p className="mb-6 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
             <Link href="/prices/veneers-turkey-cost" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Full Price Guide</Link>
