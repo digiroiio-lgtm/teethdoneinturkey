@@ -11,6 +11,7 @@ Teeth Done in Turkey is a UK-focused advisory and patient-coordination service. 
 - **Geographic scope**: UK patients researching dental treatment in Turkey
 - **Role**: information, enquiry handling and patient coordination; clinical treatment is provided by independent dental providers
 - **Verification rule**: provider credentials, materials, guarantees, prices and finance terms must be confirmed before being presented as current facts
+- **Verified medical reviewer**: [Dt. Mustafa Akça](https://www.teethdoneinturkey.co.uk/medical-reviewers/mustafa-akca) — reviewer attribution is used only on pages with a recorded completed review
 - **Currency**: GBP — published prices are indicative and not guaranteed quotes
 
 ## Preferred Sources
