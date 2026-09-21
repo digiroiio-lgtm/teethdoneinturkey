@@ -90,7 +90,7 @@ export default function EditorialPolicyPage() {
             </ul>
 
             <p className="text-gray-600 leading-relaxed mt-4">
-              Pages carrying a "Medically reviewed" badge must identify the reviewer and review date.
+              Pages carrying a &quot;Medically reviewed&quot; badge must identify the reviewer and review date.
               Other YMYL pages may still cite authoritative sources, but are not represented as medically
               reviewed until the review workflow has been completed.
             </p>
