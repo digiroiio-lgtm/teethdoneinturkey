@@ -97,7 +97,6 @@ const jsonLd = {
       image: `${SITE_URL}/opengraph-image`,
       author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
       publisher: { "@id": `${SITE_URL}/#organization` },
-      reviewedBy: { "@type": "Person", name: "Dr. Ayşe Kaya", jobTitle: "BDS, MSc Aesthetic Dentistry" },
     },
     {
       "@type": "BreadcrumbList",
