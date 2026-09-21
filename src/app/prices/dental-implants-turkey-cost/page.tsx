@@ -34,6 +34,7 @@ export default function ImplantsCostPage() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey Cost – 2026 Guide</h1>
           <p className="text-xl text-blue-200">Complete price breakdown for all implant treatments in Turkey</p>
+          <p className="mt-3 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
         </div>
       </div>
       <section className="py-16 bg-white">

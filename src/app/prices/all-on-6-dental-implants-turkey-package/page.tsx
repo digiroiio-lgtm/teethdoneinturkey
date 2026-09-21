@@ -39,6 +39,7 @@ export default function AllOn6PackagePage() {
           <p className="text-xl text-blue-200">Complete full-arch restoration with hotel, transfers &amp; everything included</p>
           <div className="mt-6 text-4xl font-extrabold text-yellow-400">£5,600</div>
           <p className="text-blue-300 text-sm mt-1">All-inclusive package price per arch</p>
+          <p className="mt-3 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
         </div>
       </div>
 

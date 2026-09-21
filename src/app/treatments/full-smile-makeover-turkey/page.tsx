@@ -45,7 +45,8 @@ export default function SmileMakeoverPage() {
           <div className="inline-block bg-blue-500/40 text-blue-100 text-sm px-4 py-1.5 rounded-full mb-4">Treatments</div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Full Smile Makeover Turkey</h1>
           <p className="text-xl text-blue-200 mb-2">Complete smile transformation from £3,500</p>
-          <p className="text-blue-300 mb-6">Compare to £12,000+ in the UK — save over 70%</p>
+          <p className="text-blue-300 mb-2">Compare to £12,000+ in the UK — save over 70%</p>
+          <p className="mb-6 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
             <Link href="/prices/hollywood-smile-turkey-package" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Package Prices</Link>

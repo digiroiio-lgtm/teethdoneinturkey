@@ -146,6 +146,7 @@ export default function TurkeyTeethCostPricePage() {
           <p className="text-xl text-blue-200 max-w-2xl">
             What determines price, a full UK-vs-Turkey comparison, package pricing, and how to get an accurate personalised quote.
           </p>
+          <p className="mt-3 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
         </div>
       </div>
 

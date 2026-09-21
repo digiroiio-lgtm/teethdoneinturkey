@@ -76,6 +76,7 @@ export default function HollywoodSmilePackagePage() {
               <p className="text-3xl font-extrabold text-yellow-400">£2,800</p>
             </div>
           </div>
+          <p className="mt-3 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
         </div>
       </div>
 

@@ -44,7 +44,8 @@ export default function VeneersTurkeyPage() {
           </div>
           <div className="inline-block bg-blue-500/40 text-blue-100 text-sm px-4 py-1.5 rounded-full mb-4">Treatments</div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Veneers Turkey – From £190 Per Tooth</h1>
-          <p className="text-xl text-blue-200 mb-6">Transform your smile with premium porcelain veneers at a fraction of UK prices</p>
+          <p className="text-xl text-blue-200 mb-2">Transform your smile with premium porcelain veneers at a fraction of UK prices</p>
+          <p className="mb-6 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
             <Link href="/prices/veneers-turkey-cost" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Full Price Guide</Link>

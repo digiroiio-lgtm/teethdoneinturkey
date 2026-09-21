@@ -134,6 +134,7 @@ export default function VeneersCostPage() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">How Much Do Veneers Cost in Turkey? 2026 UK Price Guide</h1>
           <p className="text-xl text-blue-200">Everything you need to know about veneer prices in Turkey</p>
+          <p className="mt-3 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
         </div>
       </div>
       <section className="py-16 bg-white">
