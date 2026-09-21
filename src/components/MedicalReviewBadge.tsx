@@ -1,14 +1,18 @@
 import React from "react";
+import Link from "next/link";
+import { REVIEWER_NAME, REVIEWER_TITLE, REVIEWER_HREF } from "@/lib/reviewer";
 
 interface MedicalReviewBadgeProps {
   reviewerName?: string;
   reviewerTitle?: string;
+  reviewerHref?: string;
   reviewedDate?: string;
 }
 
 export default function MedicalReviewBadge({
-  reviewerName = "Dr. Ayşe Kaya",
-  reviewerTitle = "BDS, MSc Aesthetic Dentistry — Istanbul, Turkey",
+  reviewerName = REVIEWER_NAME,
+  reviewerTitle = REVIEWER_TITLE,
+  reviewerHref = REVIEWER_HREF,
   reviewedDate,
 }: MedicalReviewBadgeProps) {
   return (
@@ -19,12 +23,19 @@ export default function MedicalReviewBadge({
       <div>
         <p className="font-semibold text-gray-900">
           Medically reviewed by{" "}
-          <span className="text-[#1e40af]">{reviewerName}</span>
+          <Link href={reviewerHref} className="text-[#1e40af] hover:underline">
+            {reviewerName}
+          </Link>
         </p>
         <p className="text-gray-500 text-xs">{reviewerTitle}</p>
         {reviewedDate && (
           <p className="text-gray-400 text-xs mt-0.5">Last reviewed: {reviewedDate}</p>
         )}
+        <p className="text-gray-400 text-xs mt-0.5">
+          <Link href="/editorial-policy" className="hover:underline">
+            Review methodology
+          </Link>
+        </p>
       </div>
     </div>
   );

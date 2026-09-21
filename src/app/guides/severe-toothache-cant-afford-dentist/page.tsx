@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { REVIEWER_PERSON } from "@/lib/reviewer";
 import GuideTOC from "@/components/GuideTOC";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import SourcesList from "@/components/SourcesList";
@@ -91,7 +92,8 @@ const jsonLd = {
       image: `${SITE_URL}/opengraph-image`,
       author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
       publisher: { "@id": `${SITE_URL}/#organization` },
-      reviewedBy: { "@type": "Person", name: "Dr. Ayşe Kaya", jobTitle: "BDS, MSc Aesthetic Dentistry" },
+      reviewedBy: REVIEWER_PERSON,
+      lastReviewed: "2026-09-17",
     },
     {
       "@type": "BreadcrumbList",

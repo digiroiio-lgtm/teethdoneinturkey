@@ -15,7 +15,14 @@ interface ArticleJsonLdProps {
   datePublished: string;
   dateModified?: string;
   breadcrumbs: BreadcrumbItem[];
-  reviewer?: { name: string; jobTitle: string };
+  reviewer?: {
+    "@type"?: string;
+    "@id"?: string;
+    name: string;
+    jobTitle: string;
+    url?: string;
+    sameAs?: string[];
+  };
 }
 
 export default function ArticleJsonLd({
@@ -46,7 +53,7 @@ export default function ArticleJsonLd({
         image: `${SITE_URL}/opengraph-image`,
         author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
         publisher: { "@id": `${SITE_URL}/#organization` },
-        ...(reviewer ? { reviewedBy: { "@type": "Person", name: reviewer.name, jobTitle: reviewer.jobTitle } } : {}),
+        ...(reviewer ? { reviewedBy: { "@type": "Person", ...reviewer } } : {}),
       },
       {
         "@type": "BreadcrumbList",

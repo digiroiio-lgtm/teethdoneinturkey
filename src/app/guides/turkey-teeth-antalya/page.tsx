@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { REVIEWER_PERSON } from "@/lib/reviewer";
 import GuideTOC from "@/components/GuideTOC";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
@@ -89,6 +90,7 @@ const jsonLd = {
       image: `${SITE_URL}/opengraph-image`,
       author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
       publisher: { "@id": `${SITE_URL}/#organization` },
+      reviewedBy: REVIEWER_PERSON,
     },
     {
       "@type": "BreadcrumbList",
@@ -122,8 +124,6 @@ export default function TurkeyTeethAntalyaPage() {
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <MedicalReviewBadge
-            reviewerName="Dr. Ayşe Kaya"
-            reviewerTitle="BDS, MSc Implantology"
             reviewedDate="September 2026"
           />
 

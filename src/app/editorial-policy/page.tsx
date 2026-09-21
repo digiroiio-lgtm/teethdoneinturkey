@@ -59,10 +59,26 @@ export default function EditorialPolicyPage() {
 
             <div className="bg-blue-50 border border-blue-100 rounded-lg p-6 mb-6">
               <p className="text-sm font-semibold text-blue-900 mb-1">Medical Reviewer</p>
-              <p className="text-gray-700">
-                <strong>Dr. Ayşe Kaya</strong><br />
-                BDS, MSc Aesthetic Dentistry — Istanbul, Turkey
+              <p className="text-gray-700 mb-2">
+                <strong>
+                  <Link href="/medical-reviewers/mustafa-akca" className="text-blue-700 hover:underline">
+                    Dt. Mustafa Akça
+                  </Link>
+                </strong><br />
+                Dentist &amp; Medical Reviewer — Akdeniz Dental Clinic, Antalya
               </p>
+              <p className="text-gray-600 text-sm mb-2">
+                Graduate of Istanbul Medipol University Faculty of Dentistry (2018). Clinical focus:
+                aesthetic dentistry, zirconium restorations, full-mouth rehabilitation, and smile makeovers.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1 mb-3">
+                <li>• <a href="https://akdenizdental.com/mustafa-akca" className="text-blue-700 hover:underline" target="_blank" rel="noopener noreferrer">akdenizdental.com/mustafa-akca</a></li>
+                <li>• <a href="https://akdenizdental.com/our-team" className="text-blue-700 hover:underline" target="_blank" rel="noopener noreferrer">akdenizdental.com/our-team</a></li>
+                <li>• <a href="https://www.antalyadishekimleri.com/dis-hekimi/mustafa-akca/" className="text-blue-700 hover:underline" target="_blank" rel="noopener noreferrer">antalyadishekimleri.com — Dt. Mustafa Akça</a></li>
+              </ul>
+              <Link href="/medical-reviewers/mustafa-akca" className="text-sm text-blue-700 hover:underline font-medium">
+                View full reviewer profile →
+              </Link>
             </div>
 
             <p className="text-gray-600 leading-relaxed mb-3">
