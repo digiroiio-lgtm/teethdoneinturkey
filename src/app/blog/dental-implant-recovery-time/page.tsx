@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import { REVIEWER_PERSON, REVIEWER_HREF, REVIEWER_NAME, REVIEWER_TITLE } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -20,6 +21,7 @@ export default function ImplantRecoveryPage() {
         headline="Implant Recovery Time in Turkey"
         description="How long does dental implant recovery take? A complete timeline for UK patients having implants in Turkey — from surgery day through to final crown fitting."
         datePublished="2026-01-01"
+        reviewer={REVIEWER_PERSON}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -31,7 +33,7 @@ export default function ImplantRecoveryPage() {
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Dental Implant Recovery Time: A Complete Timeline for UK Patients</h1>
           <p className="text-gray-500 text-sm">Published January 2026 · 7 min read</p>
-          <MedicalReviewBadge />
+          <MedicalReviewBadge reviewerName={REVIEWER_NAME} reviewerTitle={REVIEWER_TITLE} reviewerHref={REVIEWER_HREF} reviewedDate="September 2026" />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
