@@ -109,20 +109,27 @@ const jsonLd = {
 // Figures in this table are the BDA's own published survey findings, kept as
 // reported percentages rather than converted into a headline "average cost",
 // which the survey does not support.
+// Respondents could identify more than one treatment and more than one presenting
+// problem, so these shares are not mutually exclusive and do not sum to 100%. The
+// wording says "identified" rather than "named as most likely" for that reason:
+// 87% and 85% cannot both be a single per-respondent superlative.
 const bdaFindings = [
   { finding: "Had examined a patient treated abroad", share: "94%" },
   { finding: "Had treated complications following treatment abroad", share: "86%" },
-  { finding: "Named crowns as most likely to need follow-up work", share: "87%" },
-  { finding: "Named implants as most likely to need follow-up work", share: "85%" },
-  { finding: "Reported failing or failed treatment as a presenting problem", share: "86%" },
-  { finding: "Reported pain as a presenting problem", share: "76%" },
-  { finding: "Reported poorly executed treatment as a presenting problem", share: "72%" },
+  { finding: "Identified crowns as needing follow-up work", share: "87%" },
+  { finding: "Identified implants as needing follow-up work", share: "85%" },
+  { finding: "Identified failing or failed treatment as a presenting problem", share: "86%" },
+  { finding: "Identified pain as a presenting problem", share: "76%" },
+  { finding: "Identified poorly executed treatment as a presenting problem", share: "72%" },
 ];
 
+// These are cumulative thresholds, not disjoint bands: the 51% who reported costs
+// over £1,000 are a subset of the 65% who reported at least £500. Labelling them
+// as separate "ranges" would misstate the survey.
 const remedialCost = [
-  { band: "At least £500", share: "65% of dentists reported cases in this range" },
-  { band: "More than £1,000", share: "51% of dentists reported cases in this range" },
-  { band: "More than £5,000", share: "1 in 5 dentists reported cases in this range" },
+  { band: "Cost the patient at least £500", share: "65% of dentists" },
+  { band: "Cost the patient more than £1,000", share: "51% of dentists" },
+  { band: "Cost the patient more than £5,000", share: "1 in 5 dentists" },
 ];
 
 const warningSigns = [
@@ -153,7 +160,7 @@ const immediateSteps = [
   {
     step: "Deal with pain, swelling or infection first",
     detail:
-      "Facial swelling, fever, difficulty swallowing or spreading infection is urgent and should be seen the same day — contact your dentist, NHS 111, or an urgent dental care service. Regulatory and guarantee questions can wait; a spreading dental infection cannot.",
+      "Swelling spreading across the face or neck, difficulty breathing or swallowing, or swelling around the eye needs A&E or 999 now, not a dental appointment — it can compromise the airway. Pain, a loose crown or localised swelling without those red flags should still be seen the same day by your dentist, NHS 111 or an urgent dental care service. Regulatory and guarantee questions can wait; a spreading dental infection cannot.",
   },
   {
     step: "Get an independent UK assessment and X-rays",
@@ -272,12 +279,17 @@ export default function TurkeyTeethProblemsPage() {
             ))}
           </div>
           <div className="bg-red-50 border border-red-200 rounded-xl p-5 mb-4">
-            <h3 className="font-bold text-red-900 mb-2">Seek same-day care if you have any of these</h3>
+            <h3 className="font-bold text-red-900 mb-2">Red flags: when to call 999 or go to A&amp;E</h3>
+            <p className="text-sm text-red-800 mb-3">
+              Go to A&amp;E or call 999 if you have swelling spreading across the face or into the neck, difficulty
+              breathing or swallowing, difficulty opening your mouth, swelling around the eye, or a high fever with a
+              rapidly worsening swelling. These are signs of a spreading infection (cellulitis or Ludwig&apos;s angina)
+              that can compromise the airway. A&amp;E can give intravenous antibiotics and drain the infection surgically
+              — a dentist cannot safely manage this, and it must not wait for a dental appointment.
+            </p>
             <p className="text-sm text-red-800">
-              Facial or neck swelling, fever, difficulty swallowing or opening your mouth, or pain that is rapidly
-              worsening. These can indicate spreading infection and are treated as dental emergencies in the UK.
-              Contact your dentist, NHS 111 or an urgent dental care service rather than waiting for the Turkish clinic
-              to reply.
+              For pain, a lost or loose crown, or localised swelling without those red flags, contact your dentist,
+              NHS 111 or an urgent dental care service the same day rather than waiting for the Turkish clinic to reply.
             </p>
           </div>
 
@@ -313,12 +325,15 @@ export default function TurkeyTeethProblemsPage() {
             </table>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Read that carefully, because it is routinely misquoted. It does <strong>not</strong> mean 86% of dental
-            tourism patients have complications. It means 86% of the dentists surveyed had, at some point, treated at
-            least one such patient — a measure of how widely spread these cases are across UK practices, not of how
-            likely your own treatment is to fail. It is still a meaningful signal: crowns and implants, the two
-            treatments most commonly sold in Turkey packages, are precisely the two the survey identified as most
-            likely to need follow-up work.
+            Read the second row carefully, because it is routinely misquoted. It does <strong>not</strong> mean 86% of
+            dental tourism patients have complications. It means 86% of the <em>dentists surveyed</em> had, at some
+            point, treated at least one such patient — a measure of how widely spread these cases are across UK
+            practices, not of how likely your own treatment is to fail. (A separate 86%, further down the table, is the
+            share of dentists who identified failed or failing treatment among the problems they saw. The two figures
+            coincide; they are not the same measure.) Every row counts dentists, not patients, and respondents could
+            identify more than one treatment and more than one problem, so the shares overlap and do not sum to 100%.
+            It is still a meaningful signal: crowns and implants, the two treatments most commonly sold in Turkey
+            packages, are the two most often identified as needing follow-up work.
           </p>
 
           <h2 id="common-problems" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">
@@ -389,7 +404,7 @@ export default function TurkeyTeethProblemsPage() {
               <thead className="bg-gray-50">
                 <tr>
                   <th className="text-left px-4 py-3 font-bold text-gray-900 border-b border-gray-200">
-                    Reported cost of remedial work
+                    Remedial work that…
                   </th>
                   <th className="text-left px-4 py-3 font-bold text-gray-900 border-b border-gray-200">
                     Reported by
@@ -407,8 +422,10 @@ export default function TurkeyTeethProblemsPage() {
             </table>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Those are dentists&apos; reports of what their patients paid, not a price list, and they are now several
-            years old. Use them to understand the scale of the risk rather than to budget. Two practical points the
+            These are cumulative thresholds rather than separate price bands — the 51% who reported work costing more
+            than £1,000 are part of the 65% who reported at least £500, not a group alongside them. They are also
+            dentists&apos; reports of what their patients paid, not a price list, and they are now several years old.
+            Use them to understand the scale of the risk rather than to budget. Two practical points the
             figures do not show: NHS treatment is generally limited to restoring oral health rather than redoing
             cosmetic work, so replacing a full set of crowns privately is usually a private cost; and travel insurance
             does not ordinarily cover dental complications arising from elective treatment you travelled for.
@@ -520,13 +537,14 @@ export default function TurkeyTeethProblemsPage() {
             </p>
           </div>
 
-          <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">
-            FAQs
-          </h2>
         </div>
       </article>
 
-      <FAQSection faqs={faqs} title="Turkey Teeth Gone Wrong: FAQs" />
+      {/* The TOC's #faqs anchor targets this wrapper rather than a stub <h2>, because
+          FAQSection renders its own heading — a stub above it would duplicate it. */}
+      <div id="faqs" className="scroll-mt-24">
+        <FAQSection faqs={faqs} title="Turkey Teeth Gone Wrong: FAQs" />
+      </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
         <SourcesList
