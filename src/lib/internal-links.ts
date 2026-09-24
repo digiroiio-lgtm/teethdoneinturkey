@@ -474,6 +474,10 @@ const PAGE_META: Record<string, { title: string; desc: string }> = {
     title: 'Are Turkish Veneers Safe?',
     desc: 'The honest safety guide: what to check before you book.',
   },
+  '/teeth-done-in-turkey-problems': {
+    title: 'Turkey Teeth Gone Wrong: What to Do Next',
+    desc: 'Warning signs, your options, and what remedial work costs in the UK.',
+  },
   '/guides/turkey-teeth-antalya': {
     title: 'Turkey Teeth in Antalya',
     desc: 'Best Antalya dental clinics, costs and what to expect.',

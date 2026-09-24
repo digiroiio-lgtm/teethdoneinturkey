@@ -368,7 +368,7 @@ export default function TeethInTurkeyPillarGuide() {
             { title: "Best Veneers in Turkey: UK Patient Guide", desc: "How to choose the right veneers, clinic and material.", href: "/guides/best-veneers-turkey" },
             { title: "Turkey Teeth Cost: 2026 Price Guide", desc: "Full UK vs Turkey cost comparison and finance options.", href: "/prices/turkey-teeth-cost" },
             { title: "Why Choose Turkey for Dental Work?", desc: "The reasons beyond price — clinic standards, technology and UK-side support.", href: "/why-choose-turkey-for-dental-work" },
-            { title: "Teeth Done in Turkey: Problems to Know About", desc: "The complications patients actually report, and how each one is avoided.", href: "/teeth-done-in-turkey-problems" },
+            { title: "Turkey Teeth Gone Wrong: What to Do Next", desc: "Warning signs, your options, and what remedial work costs in the UK.", href: "/teeth-done-in-turkey-problems" },
           ]}
         />
 

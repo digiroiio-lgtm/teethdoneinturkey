@@ -7,6 +7,215 @@ rewritten again.
 
 ---
 
+## 2026-09-24 (measurement blackout — one EXPAND, everything contested deferred)
+
+**Read the first two sections before doing anything next run.** This run could
+not measure anything, and it found that four runs shipped between 09-13 and
+09-21 without recording a single line here. The memory file is the only thing
+standing between this site and a fourth rewrite of the same cluster, and it had
+a nine-day hole in it.
+
+### BLOCKER 1: Search Console and GA4 are both dark
+
+Every Supermetrics query fails with `TRIAL_EXPIRED`:
+
+> Your free trial on team Team digiroiio has expired on 2026-09-17 (ID: 1943513).
+
+This is team-wide, not per-source — Google Search Console (`GW`) and GA4
+(`552638430`) both refuse. **There has been no Search Console or GA4 data since
+2026-09-17.** Consequences for this run, and for the next one until it is fixed:
+
+- Cannot judge whether the 09-11 full-mouth retitle moved positions 24–38.
+- Cannot run the head-to-head query check that the 09-08 regression taught us to
+  run before any merge, redirect or URL swap.
+- Cannot resolve the finance cannibalisation, the packages owner, or the
+  zero-impression `/prices/*` pages — all four open items from 09-11 need it.
+- Cannot score "SERP evidence" or "commercial value" from our own data.
+
+**The site owner must renew or replace the Supermetrics subscription, or connect
+Search Console and GA4 directly, before the next run can do evidence-led work.**
+
+### BLOCKER 2: competitor pages cannot be fetched
+
+`WebFetch` on competitor domains (kandoo.co.uk, uksmiles.co.uk) returns
+`EGRESS_BLOCKED` from the environment's network egress proxy. WebSearch still
+works, so SERP composition, titles and snippets are readable, but the
+"reverse-engineer the page architecture" step is limited to what search results
+expose. WebSearch is also US-localised, so treat SERP *composition* as
+indicative for a UK-targeted site, not authoritative.
+
+### THE FINDING: four undocumented runs, and a reverted decision nobody logged
+
+`git log` since the last entry shows four runs that wrote code and wrote nothing
+here:
+
+| Date | What shipped |
+|---|---|
+| 09-13 | **12 new pages** (7 guides + Antalya hub + 5-page veneer cluster) |
+| 09-17 | 4 new affordability guides + hub optimisation |
+| 09-18 | Title/meta CTR fixes, consolidation redirects, "content gaps" + another new page |
+| 09-19 | Hub→spoke link architecture, LINK_REGISTRY realignment, shared LeadForm, contact-form fixes |
+| 09-21 | Crawl/canonical/schema audit, llms.txt GEO, editorial policy, medical reviewer entity |
+
+Two things follow.
+
+**1. The weekly cap was exceeded by roughly 5×.** The brief allows "up to 3
+meaningful new or substantially improved pages" per cycle. Around **16 new pages
+landed in five days**. The site went from ~70 to 98 page files. Nothing in this
+file justifies any of them, so no future run can tell which were evidence-led.
+
+**2. The 09-11 finance repositioning was reverted on 09-18, and the revert
+re-created the exact duplication 09-11 had fixed.** Commit `57ffb24`:
+
+| | 09-11 (morning run) | 09-18 (`57ffb24`) |
+|---|---|---|
+| Title | `Dental Finance UK: Dental Loans & Pay Monthly Plans` | `Turkey Teeth Finance: Pay Monthly & Payment Plans for UK Patients` |
+| H1 | `Dental Finance in the UK: Loans, Plans and Monthly Costs` | `Can You Pay Monthly for Turkey Teeth? Finance & Payment Plans Explained` |
+
+The 09-11 run moved `/finance-options-uk` onto the **generic, non-Turkey UK
+finance intent** — ~45 impressions at positions 59–89 (`teeth on finance` 75,
+`dental implant finance uk` 84, `teeth financing` 69) that its Turkey-framed
+title matched none of. The 09-18 run moved it back, reasoning that 119 Turkey
+finance impressions were producing 0 clicks.
+
+Both hypotheses are defensible. The problem is what the revert collided with:
+`/blog/can-you-pay-monthly-for-teeth-in-turkey` carries the H1 **"Can You Pay
+Monthly for Teeth in Turkey?"**, sat at position 10.5 on 70 impressions, and was
+explicitly left untouched on 09-11 *because it was performing*. `/finance-options-uk`
+now leads with the same question. Three pages currently target pay-monthly-Turkey:
+
+| URL | H1 | 09-11 assigned job |
+|---|---|---|
+| `/finance-options-uk` | Can You Pay Monthly for Turkey Teeth? | generic UK dental finance |
+| `/blog/can-you-pay-monthly-for-teeth-in-turkey` | Can You Pay Monthly for Teeth in Turkey? | the question intent (performing — do not touch) |
+| `/monthly-payment` | Turkey Teeth Monthly Payments | per-treatment monthly figures (top ChatGPT-cited page) |
+
+And the generic UK finance intent now has **no owner at all**.
+
+**Deliberately not fixed this run.** Flipping the title back would be the fourth
+change to this page in three weeks and the second reversal, decided with *less*
+evidence than either previous run had. The 09-11 rule stands: judge a change on
+real performance before rewriting it. There is no performance data. **This is the
+first thing to resolve once Search Console is restored, and it needs a decided
+owner per query, not another retitle.**
+
+### SERP check (WebSearch, US-localised — composition only)
+
+- **Finance.** New entrants that are not clinics: `kandoo.co.uk` ranks twice
+  (a Turkey dental-finance guide *and* a clinic-specific finance landing page)
+  and `medrefund.co.uk` ranks on "pay monthly, no upfront costs". Google is
+  rewarding **UK-regulated lender/broker framing** — FCA wording, loan bands
+  (£1,000–£50,000), terms (6 months–7 years), funding timescales, Direct Debit
+  start dates — over clinic marketing. Our `/finance-options-uk` already carries
+  most of this. Worth revisiting once the ownership question above is settled.
+- **Packages.** Every top result is a dedicated `/turkey-teeth-packages/` URL
+  with a year in the title and an explicit inclusions list (hotel, VIP transfer,
+  flight support). Confirms the 09-11 read. **Still not acted on** — creating
+  `/packages/turkey-teeth-packages` requires knowing which of our five current
+  URLs Google prefers, which needs Search Console. Adding a sixth URL blind is
+  exactly the 09-08 mistake.
+- **"Turkey teeth gone wrong".** Nine of nine results are dedicated pages on the
+  exact phrase, split between *causes/warning signs* and *rescue/what to do now*.
+  **The phrase appeared nowhere on this site.** This became the run's one action.
+
+### Decision taken: EXPAND `/teeth-done-in-turkey-problems` (scored 85)
+
+Chosen because it is the only opportunity that required **no contested
+judgement**: the owner URL was already settled (`/turkey-teeth-dangers` has
+redirected here since before this file began), the target phrase was absent
+site-wide so there was nothing to cannibalise, and the page is a *support* page
+under the `safety` cluster hub in LINK_REGISTRY, so expanding it does not
+compete with the hub.
+
+Score: SERP evidence 22/25 · commercial 13/20 · UK relevance 15/15 ·
+feasibility 11/15 · content gap 10/10 · AI/GEO 9/10 · internal linking 5/5 = **85**.
+
+Repositioned from a thin 800-word "problems" page onto the **aftermath** intent —
+"my Turkey teeth have gone wrong, what now" — and deliberately *not* onto
+prevention, which `/guides/turkish-veneers-safety` (2,980 words, the safety hub)
+already owns well. The two are now cleanly split: hub owns "how to avoid it",
+this page owns "it already happened".
+
+- **URL unchanged.** No redirect, no merge, no move. Given the history in this
+  file that was non-negotiable.
+- Title → `Turkey Teeth Gone Wrong: Warning Signs & What to Do Next` (56 chars),
+  H1 → `Turkey Teeth Gone Wrong: Warning Signs, Your Options, and What It Costs
+  to Put Right`, description 150 chars. The page now contains the actual query
+  phrase, which it never did.
+- ~800 → **3,409 rendered words.** New: direct-answer block, TOC, key takeaways,
+  a definition section distinguishing cosmetic disappointment from clinical
+  failure (and crowns-sold-as-veneers), early vs late warning signs as a
+  two-column table, a red emergency-symptoms callout, six expanded problem
+  categories, a five-step "what to do right now" checklist, "can it be fixed",
+  a rights-and-recourse section, and 6 FAQs.
+- **The differentiator is UK evidence competitors do not carry.** A 2022 British
+  Dental Association survey of 1,000 dentists, as two tables: presenting problems
+  (94% had examined a patient treated abroad, 86% had treated complications,
+  crowns 87% / implants 85% most likely to need follow-up) and reported remedial
+  cost (65% ≥ £500, 51% > £1,000, 1 in 5 > £5,000). **The page explicitly warns
+  that 86% is a measure of how widely spread these cases are across UK practices,
+  not a failure rate** — that stat is routinely misquoted, and getting it right is
+  the trust signal.
+- **YMYL discipline.** No price, success rate, guarantee or outcome was invented.
+  Every figure is BDA-published and attributed inline. One ambiguous BDA stat
+  ("over 40% (346 dentists)" — internally inconsistent in the reporting) was
+  **dropped rather than guessed at**. GDC jurisdiction stated accurately: it
+  regulates UK practitioners, cannot investigate a dentist practising in Turkey.
+  A visible "where we stand" disclosure notes we arrange treatment in Turkey.
+- Sources: BDA (×2), GDC patient guidance, British Dental Journal 2025.
+- **No MedicalReviewBadge was added.** The new clinical content has not been
+  reviewed by Dt. Mustafa Akça, and dating a review that did not happen on a
+  YMYL page is not acceptable. **Action for the owner: have him review this page,
+  then add the badge with the real date.**
+- Added the page to `PAGE_META` in `internal-links.ts` (it was missing, so no
+  page could reference it through the registry), refreshed its `llms.txt` entry,
+  and updated the inbound descriptor on `/guides/teeth-in-turkey`.
+
+### Technical health check
+
+- Build clean, typecheck clean, lint clean (3 pre-existing warnings, none in
+  changed files — note this was 2 on 09-11; the third arrived with the
+  undocumented runs).
+- Schema verified **server-rendered**: exactly 1 Article, 1 BreadcrumbList,
+  1 FAQPage (6 Questions). FAQPage is emitted by `<FAQSection>` only — the page
+  jsonLd deliberately omits it, because two FAQPage nodes on one URL is invalid.
+  A comment in the file records why, so it is not "fixed" back in.
+- Canonical self-referencing, `index, follow`, in sitemap, lastmod regenerated.
+- 79 sitemap URLs. **Fixed as a side effect: `/editorial-policy` and
+  `/medical-reviewers/mustafa-akca` were created on 09-21 but never regenerated
+  into `route-lastmod.json`, so they had been missing from the sitemap for three
+  days.** The prebuild step now includes them.
+- No redirect stub appears in the sitemap. Internal-link audit across 98 pages:
+  0 broken links, 0 orphans. All 5 internal links on the expanded page resolve to
+  live routes (none points at a redirect).
+
+### What to check next run
+
+1. **Restore measurement first.** Until Supermetrics (or a direct GSC/GA4
+   connection) is working, no merge, redirect, retitle or new URL should be
+   shipped in a contested cluster. This run deliberately shipped one uncontested
+   EXPAND and nothing else; repeat that posture rather than guessing.
+2. **The finance ownership question, with data.** Decide an owner *per query*
+   across `/finance-options-uk`, `/monthly-payment` and
+   `/blog/can-you-pay-monthly-for-teeth-in-turkey`, and find a home for the
+   generic UK finance intent that is currently unowned. **Do not simply revert
+   09-18.** Two reversals have already happened here.
+3. **Did the 09-11 full-mouth retitle work?** Still unanswered — this was due to
+   be judged this run and could not be. `full mouth dental implants turkey price`
+   (33.7), `full mouth dental implant turkey costs` (30.8), `full set of teeth
+   implants cost turkey` (38.0). If unmoved, the next hypothesis is content depth,
+   not another title change.
+4. **Packages owner**, then decide whether `/packages/turkey-teeth-packages` is
+   justified. Head-to-head check first, as on 09-11.
+5. **Audit the 16 pages added 09-13 → 09-18.** None is justified in this file.
+   Once impressions data returns, find the zero-impression duplicates among them
+   — that is where the next cannibalisation problem will be.
+6. Get the expanded problems page medically reviewed and add the badge.
+7. Still no GA4 key-event verification; still 0 conversions ever recorded, and
+   now unmeasurable. Unchanged from 09-11.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and
