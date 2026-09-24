@@ -160,6 +160,11 @@ export default function EditorialPolicyPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2 text-gray-600">
               <li>
+                <Link href="/teeth-done-in-turkey-problems" className="text-blue-700 underline">
+                  Turkey Teeth Gone Wrong — Warning Signs &amp; What to Do Next
+                </Link>
+              </li>
+              <li>
                 <Link href="/guides/tooth-abscess-cant-afford-dentist" className="text-blue-700 underline">
                   Tooth Abscess — Can&apos;t Afford a Dentist?
                 </Link>

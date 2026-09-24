@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T13:03:09.514Z",
+  "generatedAt": "2026-09-24T20:38:45.409Z",
   "registrySize": 29,
-  "pagesScanned": 96,
+  "pagesScanned": 98,
   "results": [
     {
       "page": "/guides/teeth-in-turkey",
@@ -1393,7 +1393,7 @@
     },
     {
       "page": "/book-consultation",
-      "incomingTotal": 56,
+      "incomingTotal": 57,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -1521,6 +1521,10 @@
           "anchorText": "Book Free Consultation"
         },
         {
+          "from": "/editorial-policy",
+          "anchorText": "book a free consultation"
+        },
+        {
           "from": "/finance-options-uk",
           "anchorText": "Check My Eligibility"
         },
@@ -1625,12 +1629,16 @@
     },
     {
       "page": "/free-treatment-plan",
-      "incomingTotal": 9,
+      "incomingTotal": 10,
       "incomingFromHighAuth": 5,
       "sources": [
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
           "anchorText": "Free Treatment Plan"
+        },
+        {
+          "from": "/editorial-policy",
+          "anchorText": "free treatment plan request"
         },
         {
           "from": "/finance-options-uk",
