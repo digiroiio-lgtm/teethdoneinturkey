@@ -1,5 +1,6 @@
 import type { FollowUp } from "@/components/geo/FollowUpQuestions";
 import { getPrice, gbp } from "@/lib/prices";
+import { TRIP_BUDGET } from "@/lib/travel";
 
 // Veneer cluster: one dominant intent per URL, mirroring src/lib/implant-cluster.ts.
 export const VENEER_INTENT_OWNERS = {
@@ -12,20 +13,9 @@ export const VENEER_INTENT_OWNERS = {
   service: "/treatments/veneers-turkey",
 } as const;
 
-// Illustrative budget for one 6-night veneer trip (flights, mid-range hotel,
-// transfers, food, insurance), from the itemised breakdown on the full-set page.
-// An editorial estimate to show the arithmetic, not a price anyone charges.
-export const VENEER_TRIP_BUDGET = {
-  min: 510,
-  max: 1060,
-  items: [
-    { item: "Return flights (UK to Istanbul/Antalya)", cost: "£80–£200" },
-    { item: "Accommodation (6 nights, mid-range hotel)", cost: "£240–£480" },
-    { item: "Airport transfers (clinic-arranged)", cost: "Often free or £20–£40" },
-    { item: "Food & incidentals", cost: "£150–£300" },
-    { item: "Travel insurance", cost: "£40–£80" },
-  ],
-};
+// Veneer treatment is self-arranged travel (hotel is only bundled in
+// packages), so the veneer pages use the full trip budget.
+export const VENEER_TRIP_BUDGET = TRIP_BUDGET;
 
 const emax = getPrice("emax-veneer");
 const zirconia = getPrice("zirconia-crown");

@@ -3,8 +3,17 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import PageFreshness from "@/components/geo/PageFreshness";
+import QuickAnswer from "@/components/geo/QuickAnswer";
+import { HOLLYWOOD_INTENT_OWNERS, hollywoodFollowUps } from "@/lib/hollywood-cluster";
+import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice, savingRange, ukRange } from "@/lib/prices";
 
 export const revalidate = 86400;
+
+const makeover = getPrice("smile-makeover");
+const h20 = getPrice("hollywood-20");
+const monthly = (months: number) => `£${Math.round(makeover.turkeyFromGBP / months)}/mo`;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/full-smile-makeover-turkey" },
@@ -16,8 +25,8 @@ const faqs = [
   { question: "What's included in a smile makeover?", answer: "A smile makeover is entirely bespoke. Most packages include porcelain veneers (typically 16–20 teeth), teeth whitening, gum contouring, and any crown work needed to complete the look. Your dentist designs the plan after a digital smile design consultation and photo assessment." },
   { question: "How long does a smile makeover take in Turkey?", answer: "A typical full smile makeover takes 6–8 days: Day 1 is your consultation and digital smile preview, Days 2–3 for tooth preparation and temporaries, Days 4–5 for the lab to craft your veneers, and Days 6–7 for fitting and final adjustments before you fly home with your new smile." },
   { question: "Can I see my new smile before treatment starts?", answer: "Yes. Digital Smile Design (DSD) software creates a high-resolution 3D preview of your proposed smile before any preparation begins. You can request adjustments until you are 100% happy." },
-  { question: "How long do smile makeover results last?", answer: "E-max porcelain veneers — the most common component — typically last 10–15 years with proper care. All partner clinics include a 10-year structural guarantee. Teeth whitening results typically last 2–3 years before a top-up is needed." },
-  { question: "Can I pay monthly for a smile makeover?", answer: "Yes. Finance is available over 12, 24, or 36 months. A £3,500 smile makeover is available from approximately £97/month over 36 months. Pre-qualify with no impact on your credit score." },
+  { question: "How long do smile makeover results last?", answer: "E-max porcelain veneers — the most common component — typically last 10–15 years with proper care. Partner clinics give written guarantees whose length and cover vary — confirm the terms before booking. Teeth whitening results typically last 2–3 years before a top-up is needed." },
+  { question: "Can I pay monthly for a smile makeover?", answer: "Yes. Finance is available over 12, 24, or 36 months. A £3,500 smile makeover works out at about £97 a month over 36 months at 0%, subject to eligibility. Pre-qualification uses a soft search that does not affect your credit score." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -40,7 +49,7 @@ const articleSchema = {
   description: "Full smile makeover in Turkey from £3,500 — veneers, whitening and gum contouring in one trip. UK price comparison and how to book.",
   url: PAGE_URL,
   datePublished: "2026-01-01",
-  dateModified: "2026-09-19",
+  dateModified: "2026-09-25",
   inLanguage: "en-GB",
   author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
   publisher: { "@id": `${SITE_URL}/#organization` },
@@ -61,7 +70,9 @@ export default function SmileMakeoverPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Full Smile Makeover Turkey</h1>
           <p className="text-xl text-blue-200 mb-2">Complete smile transformation from £3,500</p>
           <p className="text-blue-300 mb-2">Compare to £12,000+ in the UK — save over 70%</p>
-          <p className="mb-6 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
+          <div className="mb-6">
+            <PageFreshness published="1 January 2026" reviewed="25 September 2026" pricingChecked={PRICES_LAST_VERIFIED_LABEL} className="text-blue-200" />
+          </div>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
             <Link href="/prices/hollywood-smile-turkey-package" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Package Prices</Link>
@@ -71,18 +82,29 @@ export default function SmileMakeoverPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <QuickAnswer question="What is a smile makeover, and how is it different from a Hollywood Smile?">
+            <p>
+              A smile makeover is a treatment plan built around your own teeth — usually porcelain veneers on the
+              visible teeth, with whitening, gum contouring or bonding where needed — starting from{" "}
+              {gbp(makeover.turkeyFromGBP)} in Turkey against {ukRange(makeover)} in the UK. A Hollywood Smile package
+              on this site is a set of 20 or 24 zirconia crowns (from {gbp(h20.turkeyFromGBP)}). Veneers cover only the
+              front of each tooth, so a veneer-based makeover removes much less natural tooth than crowns; crowns suit
+              teeth that are already damaged, worn or heavily filled.
+            </p>
+          </QuickAnswer>
+
           {/* Price comparison */}
           <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Smile Makeover Cost: UK vs Turkey</h2>
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center p-4 bg-red-50 rounded-xl">
                 <p className="text-sm text-gray-500">UK Price</p>
-                <p className="text-3xl font-extrabold text-red-500 line-through">£12,000+</p>
+                <p className="text-3xl font-extrabold text-gray-700">{ukRange(makeover)}</p>
               </div>
               <div className="text-center p-4 bg-green-50 rounded-xl">
                 <p className="text-sm text-gray-500">Turkey Price</p>
-                <p className="text-3xl font-extrabold text-green-600">£3,500</p>
-                <p className="text-xs text-green-600 font-semibold">Save 71%+</p>
+                <p className="text-3xl font-extrabold text-green-600">From {gbp(makeover.turkeyFromGBP)}</p>
+                <p className="text-xs text-green-600 font-semibold">{savingRange(makeover)} lower, before travel</p>
               </div>
             </div>
           </div>
@@ -118,7 +140,7 @@ export default function SmileMakeoverPage() {
               {[
                 { day: "Day 1", title: "Consultation & Digital Smile Design", desc: "Photos, shade selection, and a 3D preview of your proposed smile." },
                 { day: "Days 2–3", title: "Tooth Preparation & Temporaries", desc: "Light preparation of teeth and fitting of temporary veneers while your permanent ones are crafted in the in-house lab." },
-                { day: "Days 4–5", title: "Lab Crafting", desc: "Your personalised E-max or zirconia veneers are fabricated to specification." },
+                { day: "Days 4–5", title: "Lab Crafting", desc: "Your E-max veneers — and any crowns in the plan — are made to the approved design." },
                 { day: "Days 6–7", title: "Final Fitting", desc: "Permanent veneers bonded and bite checked. Fine adjustments made to ensure a perfect fit." },
                 { day: "Day 8", title: "Departure", desc: "Full aftercare instructions and clinic contact details for any questions after you return home." },
               ].map((item) => (
@@ -136,12 +158,12 @@ export default function SmileMakeoverPage() {
           {/* Finance */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Spread the Cost – Monthly Finance</h2>
-            <p className="text-gray-600 mb-4">Finance your smile makeover over 12, 24, or 36 months with no upfront fees.</p>
+            <p className="text-gray-600 mb-4">Finance your smile makeover over 12, 24 or 36 months, subject to eligibility. Figures are for {gbp(makeover.turkeyFromGBP)} at 0%.</p>
             <div className="grid grid-cols-3 gap-3 mb-4">
               {[
-                { label: "12 months", price: "£292/mo" },
-                { label: "24 months", price: "£146/mo" },
-                { label: "36 months", price: "£97/mo" },
+                { label: "12 months", price: monthly(12) },
+                { label: "24 months", price: monthly(24) },
+                { label: "36 months", price: monthly(36) },
               ].map(p => (
                 <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
                   <p className="text-xs text-gray-500 mb-1">{p.label}</p>
@@ -151,6 +173,8 @@ export default function SmileMakeoverPage() {
             </div>
             <Link href="/monthly-payment" className="inline-block text-[#1e40af] font-semibold hover:underline text-sm">→ View all finance options</Link>
           </div>
+
+          <FollowUpQuestions items={hollywoodFollowUps(HOLLYWOOD_INTENT_OWNERS.makeover)} />
 
           {/* Internal links */}
           <div>

@@ -39,9 +39,9 @@ const posts = [
   // UK vs Turkey comparison cluster
   { href: "/blog/implants-cost-uk-vs-turkey", title: "Dental Implants Cost: UK vs Turkey Compared", excerpt: "A side-by-side price comparison of dental implants in the UK and Turkey, including what each quote actually covers.", date: "January 2026", tag: "Comparison" },
   { href: "/blog/full-mouth-implants-uk-vs-turkey", title: "Full Mouth Dental Implants Turkey Cost", excerpt: "All-on-4, All-on-6 and full-set implant prices in Turkey, what the package covers, and how the cost compares with the UK.", date: "September 2026", tag: "Implants" },
-  { href: "/blog/hollywood-smile-uk-vs-turkey", title: "Hollywood Smile Cost: UK vs Turkey", excerpt: "20 zirconia crowns from £2,800 in Turkey vs £15,000+ in the UK — what's included on each side of the comparison.", date: "January 2026", tag: "Comparison" },
+  { href: "/blog/hollywood-smile-uk-vs-turkey", title: "Hollywood Smile Cost: UK vs Turkey", excerpt: "20 zirconia crowns from £2,800 in Turkey (incl. hotel) vs £20,000–£30,000 privately in the UK — all-in totals with flights, and when crowns are not the right choice.", date: "January 2026", tag: "Comparison" },
   // Travel & cost cluster
-  { href: "/blog/hollywood-smile-turkey-cost", title: "Hollywood Smile Turkey Cost 2026", excerpt: "Full cost breakdown for a Hollywood Smile in Turkey. From £2,800 for 20 zirconia crowns vs £15,000+ in the UK.", date: "January 2026", tag: "Treatments" },
+  { href: "/blog/hollywood-smile-turkey-cost", title: "Hollywood Smile Turkey Cost 2026", excerpt: "What a Hollywood Smile is — 20 or 24 zirconia crowns from £2,800 incl. hotel — how much tooth is removed, and how to get a natural result.", date: "January 2026", tag: "Treatments" },
   { href: "/blog/antalya-vs-istanbul-dental-clinics", title: "Antalya vs Istanbul for Dental Treatment", excerpt: "Which Turkish city is better for your dental treatment? An honest comparison for UK patients.", date: "January 2026", tag: "Travel" },
   { href: "/blog/dental-holiday-packages-turkey", title: "Dental Holiday Packages Turkey", excerpt: "How dental holiday packages work — what's included, how much they cost, and how to book.", date: "January 2026", tag: "Travel" },
   // Existing posts

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T16:32:22.371Z",
+  "generatedAt": "2026-09-25T22:18:55.754Z",
   "registrySize": 29,
   "pagesScanned": 100,
   "results": [
@@ -417,7 +417,7 @@
     },
     {
       "page": "/monthly-payment",
-      "incomingTotal": 31,
+      "incomingTotal": 30,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -466,10 +466,6 @@
         },
         {
           "from": "/blog/hollywood-smile-turkey-cost",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/hollywood-smile-uk-vs-turkey",
           "anchorText": ""
         },
         {
@@ -633,7 +629,7 @@
     },
     {
       "page": "/prices/veneers-turkey-cost",
-      "incomingTotal": 38,
+      "incomingTotal": 36,
       "incomingFromHighAuth": 3,
       "sources": [
         {
@@ -686,14 +682,6 @@
         },
         {
           "from": "/blog/full-set-veneers-turkey-cost",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/hollywood-smile-turkey-cost",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/hollywood-smile-uk-vs-turkey",
           "anchorText": ""
         },
         {
@@ -793,7 +781,7 @@
     },
     {
       "page": "/treatments/dental-implants-turkey",
-      "incomingTotal": 40,
+      "incomingTotal": 38,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -854,14 +842,6 @@
         },
         {
           "from": "/blog/finance-dental-implants-turkey-uk-patients",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/hollywood-smile-turkey-cost",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/hollywood-smile-uk-vs-turkey",
           "anchorText": ""
         },
         {
@@ -961,7 +941,7 @@
     },
     {
       "page": "/treatments/veneers-turkey",
-      "incomingTotal": 43,
+      "incomingTotal": 42,
       "incomingFromHighAuth": 2,
       "sources": [
         {
@@ -1107,10 +1087,6 @@
         {
           "from": "/price-calculator",
           "anchorText": ""
-        },
-        {
-          "from": "/prices/hollywood-smile-turkey-package",
-          "anchorText": "Veneers vs Crowns Guide"
         },
         {
           "from": "/prices/veneers-turkey-cost",
