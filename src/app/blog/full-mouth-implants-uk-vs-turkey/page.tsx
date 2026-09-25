@@ -90,7 +90,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
           headline="Full Mouth Dental Implants Turkey Cost 2026"
           description="Full mouth dental implants in Turkey cost £8,000–£11,000 for All-on-4 (both arches) vs £24,000–£36,000 in the UK. 2026 prices, what's included, finance."
           datePublished="2026-04-01"
-          dateModified="2026-09-11"
+          dateModified="2026-09-25"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Blog", path: "/blog" },
@@ -143,7 +143,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
                     { t: "All-on-6 (single arch)", uk: "£15,000–£22,000", tr: "From £5,600", s: "63–75%" },
                     { t: "All-on-4 (both arches)", uk: "£24,000–£36,000", tr: "£8,000–£11,000", s: "67–69%" },
                     { t: "All-on-6 (both arches)", uk: "£30,000–£44,000", tr: "£10,000–£14,000", s: "67–68%" },
-                    { t: "Individual implants (20, full mouth)", uk: "£40,000–£60,000", tr: "£5,000–£16,000", s: "73–88%" },
+                    { t: "Individual implants (20, full mouth)", uk: "£40,000–£60,000", tr: "£5,000–£18,600", s: "69–88%" },
                   ].map((r, i) => (
                     <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="px-4 py-3 font-medium">{r.t}</td>
@@ -159,7 +159,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             </div>
             <p className="text-sm text-gray-500">
               The individual-implant row is calculated from this site&apos;s own per-unit prices: 20 implants with crowns at
-              £250 each on an entry-level Osstem system, up to £800 each on Straumann. It is shown for completeness —
+              £250 each on an entry-level Osstem system, up to £930 each on Straumann. It is shown for completeness —
               see below for why it is rarely the right treatment plan. All figures are indicative until a clinician has
               reviewed your scan.
             </p>
@@ -198,7 +198,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
                   best: "Best for: patients with good bone volume wanting maximum durability",
                 },
                 {
-                  name: "Individual implants — £250–£800 each",
+                  name: "Individual implants — £250–£930 each",
                   desc: "Each missing tooth gets its own implant and crown. Across a full mouth this is several times the price of a full-arch bridge, takes longer, and requires enough bone at every site. It is rarely recommended for a full mouth, and is normally reserved for replacing a small number of teeth.",
                   best: "Best for: replacing one or a few teeth, not a whole jaw",
                 },

@@ -8,6 +8,7 @@ import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import { PRICES, getPrice, gbp, savingBounds, savingRange, turkeyPrice, ukRange } from "@/lib/prices";
 
 export const revalidate = 86400;
 
@@ -18,10 +19,10 @@ const H1 = "How Much Do Turkey Teeth Cost? Complete 2026 Price Guide for UK Pati
 const DESCRIPTION =
   "Turkey teeth cost from £130 per tooth. Full 2026 prices in pounds for veneers, crowns, implants and full-mouth packages — with UK cost comparison and finance options.";
 const DATE_PUBLISHED = "2026-09-03";
-// Content last revised 2026-09-08. The 2026-09-11 change moved this page from
-// /guides/turkey-teeth-cost to this URL without altering the substance, so the
-// modified date is deliberately not bumped.
-const DATE_MODIFIED = "2026-09-08";
+// 2026-09-25: figures now come from src/lib/prices.ts, which resolved the
+// Straumann conflict (£800 here vs £930 on the implant price page) in favour of
+// £930 and removed the "prices vary between pages" caveat.
+const DATE_MODIFIED = "2026-09-25";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/turkey-teeth-cost" },
@@ -71,10 +72,6 @@ const faqs = [
     question: "Can I pay monthly for teeth in Turkey?",
     answer: "Yes. Monthly payment plans are available from £82/month with 0% interest over 12, 24 or 36 months, according to this site's monthly payment page. Exact monthly figures depend on the treatment total and the term you choose.",
   },
-  {
-    question: "Why do implant and add-on procedure prices vary between pages on this site?",
-    answer: "Some individual treatment and add-on prices (for example, specific implant brand tiers and teeth-whitening pricing) are shown slightly differently across different price pages on this site, generally reflecting different clinic packages, bundling (e.g. whitening with or without a cleaning), or the specific brand referenced. Treat any single figure as indicative and always confirm exact, itemised pricing with a personalised quote before booking.",
-  },
 ];
 
 const jsonLd = {
@@ -104,25 +101,16 @@ const jsonLd = {
   ],
 };
 
-// Figures shown here are the ones corroborated consistently across ≥2 of this
-// site's own price pages (homepage, PriceTable, /treatments/*, /prices/*) as of
-// DATE_MODIFIED. Where pages disagree, that is called out in the "hidden costs"
-// / conflicting-figures note below rather than silently picking a number.
+// Every row except whitening comes from src/lib/prices.ts. Whitening is still
+// priced differently depending on whether a clean is bundled, so it stays a
+// separate, caveated row until a single figure is confirmed.
 const costRows = [
-  { treatment: "Zirconia Crown (per tooth)", turkey: "£130", uk: "£1,000–£1,500", saving: "~90%" },
-  { treatment: "Porcelain (E-max) Veneer (per tooth)", turkey: "From £190", uk: "£800–£1,000", saving: "~78%" },
-  { treatment: "Composite Veneer/Bonding (per tooth)", turkey: "From £90", uk: "£300–£500", saving: "~75%" },
-  { treatment: "Dental Implant (Osstem, + crown)", turkey: "From £250", uk: "£2,000–£3,000", saving: "~88%" },
-  { treatment: "Dental Implant (Straumann, + crown)", turkey: "From £800", uk: "£3,000–£4,500", saving: "~80%" },
-  { treatment: "All-on-4 (per arch, all-inclusive)", turkey: "From £4,500", uk: "£15,000+", saving: "70%+" },
-  { treatment: "All-on-6 (per arch, all-inclusive)", turkey: "From £5,600", uk: "£15,000–£22,000", saving: "~70%" },
-  { treatment: "Hollywood Smile — 20 crowns (package)", turkey: "£2,800", uk: "£20,000–£30,000", saving: "~87%" },
-  { treatment: "Hollywood Smile — 24 crowns (package)", turkey: "£3,100", uk: "£24,000–£36,000", saving: "~87%" },
-  { treatment: "Full Smile Makeover", turkey: "From £3,500", uk: "£12,000+", saving: "70%+" },
-  { treatment: "Root Canal Treatment", turkey: "£200", uk: "£600–£900", saving: "~75%" },
-  { treatment: "Dental Filling", turkey: "£70", uk: "£150–£300", saving: "~65%" },
-  { treatment: "Bone Graft", turkey: "£200", uk: "£400–£800", saving: "~65%" },
-  { treatment: "Dental Cleaning", turkey: "£60", uk: "£100–£200", saving: "~60%" },
+  ...PRICES.map((r) => ({
+    treatment: `${r.treatment} (${r.unit})`,
+    turkey: turkeyPrice(r),
+    uk: ukRange(r),
+    saving: savingRange(r),
+  })),
   { treatment: "Teeth Whitening (with cleaning)", turkey: "From £250", uk: "£400–£700", saving: "~50%" },
 ];
 
@@ -151,7 +139,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: How Much Do Teeth Cost in Turkey?</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
-            Individual treatments in Turkey typically start from £130 for a zirconia crown, £190 for a porcelain veneer, and £250 for a dental implant. All-inclusive packages (hotel and transfers included) start from around £2,800. UK private-dentistry prices for the same treatments are typically 65–90% higher. Exact cost depends on the treatment, materials, and number of teeth involved.
+            Individual treatments in Turkey typically start from £130 for a zirconia crown, £190 for a porcelain veneer, and £250 for a dental implant. All-inclusive packages (hotel and transfers included) start from around £2,800. Turkey prices for most of these treatments are 65–90% lower than UK private-dentistry prices. Exact cost depends on the treatment, materials, and number of teeth involved.
           </p>
 
           <GuideTOC items={toc} />
@@ -173,7 +161,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="implant-costs" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Implant Costs</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A single dental implant with crown starts from £250 using an entry-level brand (Osstem), rising for premium brands. Full-arch implant treatment is priced per arch: All-on-4 from £4,500 and All-on-6 from £5,600, both all-inclusive of hotel and transfers. See the full{" "}
+            A single dental implant with crown starts from {gbp(getPrice("implant-osstem").turkeyFromGBP)} using an entry-level brand (Osstem), {gbp(getPrice("implant-medentika").turkeyFromGBP)} with Medentika and {gbp(getPrice("implant-straumann").turkeyFromGBP)} with Straumann. Full-arch implant treatment is priced per arch: All-on-4 from £4,500 and All-on-6 from £5,600, both all-inclusive of hotel and transfers. See the full{" "}
             <Link href="/guides/dental-implants-turkey" className="text-[#1e40af] font-semibold hover:underline">Dental Implants in Turkey Guide</Link>{" "}
             for a brand-by-brand breakdown and the clinical process.
           </p>
@@ -201,7 +189,7 @@ export default function TurkeyTeethCostPricePage() {
                     <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.turkey}</td>
                     <td className="px-4 py-3 text-right text-red-500">{r.uk}</td>
                     <td className="px-4 py-3 text-right">
-                      <span className="bg-green-100 text-green-700 px-2.5 py-0.5 rounded-full text-xs font-bold">Save {r.saving}</span>
+                      <span className="bg-green-100 text-green-700 px-2.5 py-0.5 rounded-full text-xs font-bold">{r.saving} lower</span>
                     </td>
                   </tr>
                 ))}
@@ -209,9 +197,10 @@ export default function TurkeyTeethCostPricePage() {
             </table>
           </div>
           <p className="text-xs text-gray-500 mb-4">
-            Figures shown are the ones consistently used across this site&apos;s own price pages as of {DATE_MODIFIED}. See{" "}
-            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] hover:underline">the full price guide</Link>{" "}
-            for package-specific detail and payment breakdowns.
+            Partner-clinic list prices from the{" "}
+            <Link href="/turkey-dental-price-index" className="text-[#1e40af] hover:underline">Turkey Dental Price Index</Link>,
+            checked June 2026. The difference compares treatment fees only and excludes travel — see the{" "}
+            <Link href="/methodology" className="text-[#1e40af] hover:underline">methodology</Link>.
           </p>
 
           <h2 id="additional-procedures" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Additional Procedures</h2>
@@ -233,7 +222,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="uk-vs-turkey" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">UK vs Turkey Comparison</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Across every treatment compared on this site, Turkey pricing is consistently 65–90% lower than equivalent UK private dental prices. The gap reflects lower clinic overheads, staff costs and general cost of living in Turkey — not lower-quality materials, since the same international implant and veneer brands used in UK practices (Straumann, Nobel Biocare, Ivoclar E-max) are used by partner clinics in Turkey.
+            Across the treatments in the price index, Turkey fees are {savingBounds().min}–{savingBounds().max}% lower than typical UK private prices, and 65–90% lower for most implant, crown and veneer treatments. The gap reflects lower clinic overheads, staff costs and general cost of living in Turkey — not lower-quality materials, since the same international implant and veneer brands used in UK practices (Straumann, Nobel Biocare, Ivoclar E-max) are used by partner clinics in Turkey.
           </p>
 
           <h2 id="why-cheaper" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Why Is Dental Treatment Cheaper in Turkey?</h2>
@@ -247,7 +236,7 @@ export default function TurkeyTeethCostPricePage() {
             The most common way a final bill differs from an initial headline price is scope: the advertised &ldquo;from&rdquo; price usually reflects the base treatment or entry-level material, while premium brands, additional teeth, bone grafting, sinus lifts, or optional whitening are priced on top. Flights are never included in a package price. Always request an itemised quote confirming exactly which brand, how many teeth, and which extras are and are not included.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            <strong>A note on this guide&apos;s figures:</strong> a small number of specific line items — certain implant-brand tiers (e.g. Medentika, Straumann) and whitening pricing — are shown slightly differently across different price pages on this site, most likely reflecting different clinic packages or bundling. Rather than pick one figure and present it as definitive, this guide uses only the figures that are consistent across multiple pages, and recommends confirming any brand- or add-on-specific price directly via a personalised quote.
+            <strong>A note on this guide&apos;s figures:</strong> every price on this site now comes from one central dataset, so the same treatment shows the same price on every page. The one exception is teeth whitening, which is priced differently depending on whether a clean is included — confirm that figure directly in your quote.
           </p>
 
           <h2 id="finance" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Finance &amp; Monthly Payment</h2>

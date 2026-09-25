@@ -56,6 +56,7 @@ export default function Footer() {
               <li><Link href="/prices/veneers-turkey-cost" className="hover:text-white hover:pl-1 transition-all">Veneers Cost</Link></li>
               <li><Link href="/prices/dental-implants-turkey-cost" className="hover:text-white hover:pl-1 transition-all">Implants Cost</Link></li>
               <li><Link href="/price-calculator" className="hover:text-white hover:pl-1 transition-all">Price Calculator</Link></li>
+              <li><Link href="/turkey-dental-price-index" className="hover:text-white hover:pl-1 transition-all">Price Index 2026</Link></li>
               <li><Link href="/monthly-payment" className="hover:text-white hover:pl-1 transition-all">Monthly Payment</Link></li>
               <li><Link href="/finance-options-uk" className="hover:text-white hover:pl-1 transition-all">Finance Options</Link></li>
               <li><Link href="/turkey-teeth-clinic" className="hover:text-white hover:pl-1 transition-all">Choosing a Clinic</Link></li>
@@ -72,6 +73,7 @@ export default function Footer() {
               <li><Link href="/reviews" className="hover:text-white hover:pl-1 transition-all">Patient Reviews</Link></li>
               <li><Link href="/turkey-teeth-before-after" className="hover:text-white hover:pl-1 transition-all">Before & After</Link></li>
               <li><Link href="/blog" className="hover:text-white hover:pl-1 transition-all">Blog</Link></li>
+              <li><Link href="/methodology" className="hover:text-white hover:pl-1 transition-all">Methodology</Link></li>
               <li><Link href="/contact" className="hover:text-white hover:pl-1 transition-all">Contact</Link></li>
               <li><Link href="/book-consultation" className="hover:text-white hover:pl-1 transition-all">Book Consultation</Link></li>
             </ul>

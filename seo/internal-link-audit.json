@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T13:03:09.514Z",
+  "generatedAt": "2026-09-25T16:18:36.481Z",
   "registrySize": 29,
-  "pagesScanned": 96,
+  "pagesScanned": 100,
   "results": [
     {
       "page": "/guides/teeth-in-turkey",
@@ -85,8 +85,8 @@
     },
     {
       "page": "/prices/turkey-teeth-cost",
-      "incomingTotal": 59,
-      "incomingFromHighAuth": 12,
+      "incomingTotal": 55,
+      "incomingFromHighAuth": 10,
       "sources": [
         {
           "from": "/blog/4-8-10-rule-for-veneers",
@@ -161,14 +161,6 @@
           "anchorText": ""
         },
         {
-          "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/is-it-safe-to-get-teeth-done-in-turkey",
           "anchorText": ""
         },
@@ -186,10 +178,6 @@
         },
         {
           "from": "/blog/signs-of-dental-implant-failure",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/single-tooth-implant-turkey-cost",
           "anchorText": ""
         },
         {
@@ -227,10 +215,6 @@
         {
           "from": "/free-treatment-plan",
           "anchorText": ""
-        },
-        {
-          "from": "/guides/dental-implants-turkey",
-          "anchorText": "Turkey Teeth Cost Guide"
         },
         {
           "from": "/guides/dental-implants-turkey",
@@ -297,10 +281,6 @@
           "anchorText": ""
         },
         {
-          "from": "/prices/turkey-teeth-cost",
-          "anchorText": "the full price guide"
-        },
-        {
           "from": "/prices/veneers-turkey-cost",
           "anchorText": ""
         },
@@ -317,6 +297,10 @@
           "anchorText": ""
         },
         {
+          "from": "/turkey-dental-price-index",
+          "anchorText": "Turkey teeth cost: all treatments"
+        },
+        {
           "from": "/turkey-teeth-clinic",
           "anchorText": "View Price Guide"
         },
@@ -329,7 +313,7 @@
     },
     {
       "page": "/finance-options-uk",
-      "incomingTotal": 24,
+      "incomingTotal": 25,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -379,6 +363,10 @@
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
           "anchorText": ""
+        },
+        {
+          "from": "/blog/implants-cost-uk-vs-turkey",
+          "anchorText": "Monthly Payment Options"
         },
         {
           "from": "/guides/cant-afford-dental-treatment-uk",
@@ -433,7 +421,7 @@
     },
     {
       "page": "/monthly-payment",
-      "incomingTotal": 33,
+      "incomingTotal": 31,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -490,14 +478,6 @@
         },
         {
           "from": "/blog/hollywood-smile-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/implants-cost-uk-vs-turkey",
           "anchorText": ""
         },
         {
@@ -573,7 +553,7 @@
     },
     {
       "page": "/prices/dental-implants-turkey-cost",
-      "incomingTotal": 20,
+      "incomingTotal": 19,
       "incomingFromHighAuth": 0,
       "sources": [
         {
@@ -597,19 +577,11 @@
           "anchorText": ""
         },
         {
-          "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/same-day-dental-implants-turkey",
           "anchorText": ""
         },
         {
           "from": "/blog/signs-of-dental-implant-failure",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/single-tooth-implant-turkey-cost",
           "anchorText": ""
         },
         {
@@ -655,13 +627,17 @@
         {
           "from": "/treatments/dental-implants-turkey",
           "anchorText": ""
+        },
+        {
+          "from": "/turkey-dental-price-index",
+          "anchorText": "Dental implants in Turkey: cost"
         }
       ],
       "missingRequired": []
     },
     {
       "page": "/prices/veneers-turkey-cost",
-      "incomingTotal": 38,
+      "incomingTotal": 39,
       "incomingFromHighAuth": 3,
       "sources": [
         {
@@ -815,13 +791,17 @@
         {
           "from": "/treatments/veneers-turkey",
           "anchorText": ""
+        },
+        {
+          "from": "/turkey-dental-price-index",
+          "anchorText": "Veneers in Turkey: cost"
         }
       ],
       "missingRequired": []
     },
     {
       "page": "/treatments/dental-implants-turkey",
-      "incomingTotal": 45,
+      "incomingTotal": 42,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -901,14 +881,6 @@
           "anchorText": ""
         },
         {
-          "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": "Implants Treatment Guide"
-        },
-        {
-          "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/is-it-safe-to-get-teeth-done-in-turkey",
           "anchorText": ""
         },
@@ -934,11 +906,7 @@
         },
         {
           "from": "/blog/single-tooth-implant-turkey-cost",
-          "anchorText": "Implants Turkey Guide"
-        },
-        {
-          "from": "/blog/single-tooth-implant-turkey-cost",
-          "anchorText": ""
+          "anchorText": "Dental Implants Turkey"
         },
         {
           "from": "/blog/turkey-teeth-explained",
@@ -1009,7 +977,7 @@
     },
     {
       "page": "/treatments/veneers-turkey",
-      "incomingTotal": 44,
+      "incomingTotal": 43,
       "incomingFromHighAuth": 2,
       "sources": [
         {
@@ -1109,10 +1077,6 @@
           "anchorText": ""
         },
         {
-          "from": "/blog/single-tooth-implant-turkey-cost",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/turkey-teeth-explained",
           "anchorText": ""
         },
@@ -1193,7 +1157,7 @@
     },
     {
       "page": "/treatments/all-on-4-turkey",
-      "incomingTotal": 29,
+      "incomingTotal": 27,
       "incomingFromHighAuth": 2,
       "sources": [
         {
@@ -1225,10 +1189,6 @@
           "anchorText": ""
         },
         {
-          "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/is-it-safe-to-get-teeth-done-in-turkey",
           "anchorText": ""
         },
@@ -1246,10 +1206,6 @@
         },
         {
           "from": "/blog/signs-of-dental-implant-failure",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/single-tooth-implant-turkey-cost",
           "anchorText": ""
         },
         {
@@ -1317,7 +1273,7 @@
     },
     {
       "page": "/treatments/all-on-6-turkey",
-      "incomingTotal": 17,
+      "incomingTotal": 16,
       "incomingFromHighAuth": 2,
       "sources": [
         {
@@ -1330,10 +1286,6 @@
         },
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/implants-cost-uk-vs-turkey",
           "anchorText": ""
         },
         {
@@ -1393,7 +1345,7 @@
     },
     {
       "page": "/book-consultation",
-      "incomingTotal": 56,
+      "incomingTotal": 57,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -1521,6 +1473,10 @@
           "anchorText": "Book Free Consultation"
         },
         {
+          "from": "/editorial-policy",
+          "anchorText": "book a free consultation"
+        },
+        {
           "from": "/finance-options-uk",
           "anchorText": "Check My Eligibility"
         },
@@ -1625,12 +1581,16 @@
     },
     {
       "page": "/free-treatment-plan",
-      "incomingTotal": 9,
+      "incomingTotal": 10,
       "incomingFromHighAuth": 5,
       "sources": [
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
           "anchorText": "Free Treatment Plan"
+        },
+        {
+          "from": "/editorial-policy",
+          "anchorText": "free treatment plan request"
         },
         {
           "from": "/finance-options-uk",
@@ -1669,7 +1629,7 @@
     },
     {
       "page": "/price-calculator",
-      "incomingTotal": 9,
+      "incomingTotal": 10,
       "incomingFromHighAuth": 5,
       "sources": [
         {
@@ -1707,6 +1667,10 @@
         {
           "from": "/prices/veneers-turkey-cost",
           "anchorText": "price calculator"
+        },
+        {
+          "from": "/turkey-dental-price-index",
+          "anchorText": "Price calculator"
         }
       ],
       "missingRequired": []
@@ -1730,7 +1694,7 @@
         },
         {
           "from": "/blog/implants-cost-uk-vs-turkey",
-          "anchorText": ""
+          "anchorText": "dental implants Turkey guide"
         },
         {
           "from": "/blog/same-day-dental-implants-turkey",
@@ -1738,7 +1702,7 @@
         },
         {
           "from": "/blog/single-tooth-implant-turkey-cost",
-          "anchorText": ""
+          "anchorText": "dental implants Turkey guide"
         },
         {
           "from": "/guides/full-mouth-dental-implants-turkey-cost",

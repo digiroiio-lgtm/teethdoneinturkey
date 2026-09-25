@@ -113,6 +113,8 @@ const organizationSchema = {
   description:
     "UK patient guide and coordination service for people researching dental treatment in Turkey.",
   areaServed: { "@type": "Country", name: "United Kingdom" },
+  publishingPrinciples: `${SITE_URL}/editorial-policy`,
+  actionableFeedbackPolicy: `${SITE_URL}/methodology#corrections`,
   email: "hello@teethdoneinturkey.co.uk",
   contactPoint: [
     {

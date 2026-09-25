@@ -8,6 +8,13 @@ import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import AtAGlance from "@/components/geo/AtAGlance";
+import FactEvidenceDecision from "@/components/geo/FactEvidenceDecision";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import PageFreshness from "@/components/geo/PageFreshness";
+import QuickAnswer from "@/components/geo/QuickAnswer";
+import { IMPLANT_INTENT_OWNERS, implantFollowUps } from "@/lib/implant-cluster";
+import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice, turkeyPrice, ukRange } from "@/lib/prices";
 
 export const revalidate = 86400;
 
@@ -18,7 +25,7 @@ const H1 = "Dental Implants in Turkey: Complete Guide for UK Patients";
 const DESCRIPTION =
   "Dental implants in Turkey for UK patients: brands, procedure, healing times, All-on-4 and All-on-6, costs from £250, risks and clinic choice.";
 const DATE_PUBLISHED = "2026-09-03";
-const DATE_MODIFIED = "2026-09-03";
+const DATE_MODIFIED = "2026-09-25";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/dental-implants-turkey" },
@@ -105,12 +112,14 @@ const jsonLd = {
   ],
 };
 
-const implantPriceRows = [
-  { item: "Single Osstem implant + crown", turkey: "From £250", uk: "£2,000–£3,000" },
-  { item: "Single premium implant + crown (e.g. Straumann)", turkey: "From ~£800", uk: "£3,000–£4,500" },
-  { item: "All-on-4 (per arch, all-inclusive)", turkey: "From £4,500", uk: "£15,000+" },
-  { item: "All-on-6 (per arch, all-inclusive)", turkey: "From £5,600", uk: "£15,000–£22,000" },
-];
+const osstem = getPrice("implant-osstem");
+const straumann = getPrice("implant-straumann");
+
+// Summary only — the cost intent is owned by the implant price page.
+const implantPriceRows = ["implant-osstem", "implant-medentika", "implant-straumann", "all-on-4", "all-on-6"].map((id) => {
+  const r = getPrice(id);
+  return { item: r.treatment, turkey: turkeyPrice(r), uk: ukRange(r) };
+});
 
 export default function DentalImplantsGuidePage() {
   return (
@@ -132,11 +141,31 @@ export default function DentalImplantsGuidePage() {
 
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MedicalReviewBadge reviewedDate="3 September 2026" />
+          <PageFreshness published="3 September 2026" reviewed="25 September 2026" pricingChecked={PRICES_LAST_VERIFIED_LABEL} />
+          <div className="mt-4">
+            <MedicalReviewBadge reviewedDate="3 September 2026" />
+          </div>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-2">
-            Dental implants in Turkey are one of the most common reasons UK patients travel abroad for dental care. This guide explains, step by step, what implant treatment actually involves, which brands and materials Turkish clinics typically use, realistic timelines, and how to evaluate whether a clinic is a safe, appropriate choice.
-          </p>
+          <QuickAnswer question="How does dental implant treatment in Turkey work?">
+            <p>
+              Dental implant treatment in Turkey usually takes two trips. On the first trip (typically 3–5 days) the
+              clinic takes a CBCT scan, confirms the plan and places the implant, and fits a temporary tooth or arch. The
+              implant then fuses with the jawbone at home over 3–6 months. On the second trip (a few days) the permanent
+              crown, bridge or full arch is fitted. A single implant with crown costs from {gbp(osstem.turkeyFromGBP)}{" "}
+              (Osstem) to {gbp(straumann.turkeyFromGBP)} (Straumann) at partner clinics.
+            </p>
+          </QuickAnswer>
+
+          <AtAGlance
+            facts={[
+              { label: "Trips to Turkey", value: "Usually 2" },
+              { label: "First trip", value: "3–5 days" },
+              { label: "Healing before final teeth", value: "3–6 months" },
+              { label: "Scan before surgery", value: "CBCT, on arrival" },
+              { label: "Anaesthetic", value: "Local, sedation optional" },
+              { label: "Pricing checked", value: PRICES_LAST_VERIFIED_LABEL },
+            ]}
+          />
 
           <GuideTOC items={toc} />
 
@@ -196,7 +225,7 @@ export default function DentalImplantsGuidePage() {
             </table>
           </div>
           <p className="text-xs text-gray-500 mb-4">
-            Figures shown are drawn from this site&apos;s published price pages as of {DATE_MODIFIED}. Exact pricing depends on brand, quantity, and individual clinical needs — see the <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] hover:underline">Turkey Teeth Cost Guide</Link> for the full comparison and how pricing is put together.
+            Partner-clinic list prices, checked {PRICES_LAST_VERIFIED_LABEL} (<Link href="/methodology" className="text-[#1e40af] hover:underline">methodology</Link>). Exact pricing depends on brand, quantity and individual clinical needs — see <Link href={IMPLANT_INTENT_OWNERS.cost} className="text-[#1e40af] hover:underline">dental implant costs in Turkey</Link> for what is included, what is not, and the full cost of two trips.
           </p>
 
           <h2 id="bone-graft-sinus-lift" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Bone Grafting &amp; Sinus Lifts</h2>
@@ -240,7 +269,7 @@ export default function DentalImplantsGuidePage() {
 
           <h2 id="costs" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Cost of Implants in Turkey</h2>
           <p className="text-gray-700 leading-relaxed mb-2">
-            <strong>How much do dental implants cost in Turkey?</strong> A single implant with a crown starts from £250 in Turkey using an entry-level brand such as Osstem, rising to roughly £800+ for premium brands such as Straumann — compared with £2,000–£4,500 for an equivalent single implant and crown in the UK.
+            <strong>How much do dental implants cost in Turkey?</strong> A single implant with a crown starts from {gbp(osstem.turkeyFromGBP)} in Turkey using an entry-level brand such as Osstem, and from {gbp(straumann.turkeyFromGBP)} with Straumann — compared with {gbp(osstem.ukRangeGBP.min)}–{gbp(straumann.ukRangeGBP.max ?? 0)} for an equivalent single implant and crown in the UK. The full price breakdown is on the <Link href={IMPLANT_INTENT_OWNERS.cost} className="text-[#1e40af] font-semibold hover:underline">dental implant cost page</Link>.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Full-mouth treatments are priced per arch rather than per implant: All-on-4 from £4,500 and All-on-6 from £5,600, both all-inclusive of hotel and transfers on this site&apos;s treatment pages. For a complete breakdown of what drives the final price — including diagnostics, bone grafting, temporary vs permanent restorations, and finance options — see the full <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost Guide</Link>.
@@ -255,6 +284,13 @@ export default function DentalImplantsGuidePage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             As with any implant surgery performed anywhere, potential risks include infection, implant failure to integrate with the bone, nerve or sinus complications depending on implant position, and the general risks of dental surgery and travel. Choosing an accredited clinic, disclosing your full medical history, and following post-operative instructions carefully are the main ways patients reduce these risks, wherever the treatment takes place.
           </p>
+          <FactEvidenceDecision
+            title="Is implant surgery riskier in Turkey than in the UK?"
+            fact="The clinical risks of implant surgery — infection, failure to integrate, nerve or sinus complications — are the same wherever it is done."
+            evidence="Implant failure is driven mainly by bone quality, smoking, uncontrolled conditions such as diabetes, gum infection around the implant, and surgical planning; NHS guidance on going abroad for dental treatment advises checking what aftercare is available before you go."
+            interpretation="Treatment abroad does not change the surgery; it changes how easily problems are seen and fixed afterwards, because the treating clinic is a flight away."
+            decision="Weigh whether you could return to the clinic, or would pay a UK dentist, if something needed attention — and choose a clinic that states its aftercare and guarantee terms in writing."
+          />
 
           <h2 id="longevity" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Implant Longevity &amp; Aftercare</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -274,6 +310,8 @@ export default function DentalImplantsGuidePage() {
             For a wider framework on evaluating a clinic beyond implants specifically, see{" "}
             <Link href="/turkey-teeth-clinic" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Clinic — How to Choose the Right One</Link>.
           </p>
+
+          <FollowUpQuestions items={implantFollowUps(IMPLANT_INTENT_OWNERS.procedure)} />
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">FAQs</h2>
         </div>
