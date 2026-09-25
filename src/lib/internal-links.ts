@@ -100,7 +100,7 @@ export const CLUSTERS: ClusterDefinition[] = [
     id: 'finance',
     name: 'Turkey Teeth Finance & Payment Plans',
     hub: '/finance-options-uk',
-    spokes: ['/monthly-payment'],
+    spokes: ['/monthly-payment', '/guides/teeth-on-finance-bad-credit'],
     support: [
       '/blog/dental-treatment-turkey-payment-plans',
       '/blog/dental-tourism-finance-explained',
@@ -331,6 +331,69 @@ export const LINK_REGISTRY: LinkEntry[] = [
     priority: 'required',
   },
 
+  // ── Bad-credit spoke ──
+  // `teeth on finance bad credit` was split between the hub and
+  // /blog/dental-tourism-finance-explained, both ranking ~8 on it. These links
+  // establish /guides/teeth-on-finance-bad-credit as the single owner of the
+  // bad-credit / eligibility / declined intent and point the rest of the
+  // cluster at it, rather than each page half-answering the query itself.
+  {
+    from: '/finance-options-uk',
+    to: '/guides/teeth-on-finance-bad-credit',
+    anchorText: 'teeth on finance with bad credit',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/blog/dental-tourism-finance-explained',
+    to: '/guides/teeth-on-finance-bad-credit',
+    anchorText: 'dental finance with bad credit',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/monthly-payment',
+    to: '/guides/teeth-on-finance-bad-credit',
+    anchorText: 'teeth on finance with bad credit',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/cant-afford-dental-treatment-uk',
+    to: '/guides/teeth-on-finance-bad-credit',
+    anchorText: 'dental finance with a poor credit history',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/teeth-on-finance-bad-credit',
+    to: '/finance-options-uk',
+    anchorText: 'Turkey teeth finance options page',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/teeth-on-finance-bad-credit',
+    to: '/guides/teeth-in-turkey',
+    anchorText: 'complete UK patient guide to teeth in Turkey',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/teeth-on-finance-bad-credit',
+    to: '/prices/turkey-teeth-cost',
+    anchorText: 'Turkey teeth cost guide',
+    placement: 'contextual',
+    priority: 'required',
+  },
+  {
+    from: '/guides/teeth-on-finance-bad-credit',
+    to: '/monthly-payment',
+    anchorText: 'monthly payment page',
+    placement: 'contextual',
+    priority: 'required',
+  },
+
   // ── Cost pages → master hub ──
   {
     from: '/prices/dental-implants-turkey-cost',
@@ -437,6 +500,10 @@ const PAGE_META: Record<string, { title: string; desc: string }> = {
   '/monthly-payment': {
     title: 'Monthly Payment Calculator',
     desc: 'See exactly what your treatment costs per month at 12, 24 or 36 months.',
+  },
+  '/guides/teeth-on-finance-bad-credit': {
+    title: 'Teeth on Finance with Bad Credit',
+    desc: 'What lenders check, what a deposit changes, and what to do if you are declined.',
   },
   '/treatments/veneers-turkey': {
     title: 'Dental Veneers Turkey',

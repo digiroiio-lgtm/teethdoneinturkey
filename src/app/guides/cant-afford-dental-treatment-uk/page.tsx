@@ -17,7 +17,7 @@ const H1 = "Can't Afford Dental Treatment in the UK? Here Are Your Options";
 const DESCRIPTION =
   "Can't afford a private dentist? NHS band charges, payment plans, dental finance and lower cost options for UK patients, in decision order.";
 const DATE_PUBLISHED = "2026-09-03";
-const DATE_MODIFIED = "2026-09-17";
+const DATE_MODIFIED = "2026-09-25";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/cant-afford-dental-treatment-uk" },
@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     question: "What if I have a poor credit history? Can I still get dental finance?",
-    answer: "We cannot guarantee approval for any applicant, and no dental finance provider can honestly promise approval regardless of credit history. What we can tell you is that the pre-qualification step is a soft search, so checking your eligibility will not affect your credit score, and the outcome depends on your individual circumstances and the finance provider's own criteria at the time you apply.",
+    answer: "We cannot guarantee approval for any applicant, and no dental finance provider can honestly promise approval regardless of credit history. What we can tell you is that the pre-qualification step is a soft search, so checking your eligibility will not affect your credit score, and the outcome depends on your individual circumstances and the finance provider's own criteria at the time you apply. Our guide to teeth on finance with bad credit covers what lenders actually assess, how long each credit marker stays on your file, what a deposit changes in pounds, and what to do if you are declined.",
   },
   {
     question: "Is getting dental treatment abroad actually cheaper, or just cheaper looking?",
@@ -177,7 +177,8 @@ export default function CantAffordDentalTreatmentUKPage() {
           <h2 id="finance-vs-loan" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Finance, Loans and Other Terms</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             &ldquo;Payment plan,&rdquo; &ldquo;dental finance&rdquo; and &ldquo;dental loan&rdquo; get used interchangeably online, but they are not identical. A payment plan and dental finance both usually mean borrowing arranged specifically for one dental treatment, often at 0% for a fixed term. A personal loan taken out to cover dental costs is a separate product, generally not dental specific, and can carry interest where a purpose-built 0% dental finance plan would not. A dental membership or maintenance plan (paying a clinic a fixed monthly fee for routine check-ups) is different again, and is not the same as financing a one-off treatment. For a full glossary and eligibility details, see{" "}
-            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Dental Finance Options UK</Link>.
+            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Dental Finance Options UK</Link>. If your credit file is the obstacle rather than the monthly figure, see the separate guide to{" "}
+            <Link href="/guides/teeth-on-finance-bad-credit" className="text-[#1e40af] font-semibold hover:underline">dental finance with a poor credit history</Link>.
           </p>
 
           <h2 id="alternative-options" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Ways to Reduce the Bill Itself</h2>
@@ -285,6 +286,7 @@ export default function CantAffordDentalTreatmentUKPage() {
             { title: "Severe Toothache Can't Afford a Dentist?", desc: "Causes, NHS 111 options and temporary pain relief explained.", href: "/guides/severe-toothache-cant-afford-dentist" },
             { title: "Can't Afford a Root Canal UK?", desc: "NHS Band 2 costs, extraction comparison and Turkey cost comparison.", href: "/guides/cant-afford-root-canal-uk" },
             { title: "Dental Finance Options UK", desc: "0% representative APR finance, eligibility and how pre-qualification works.", href: "/finance-options-uk" },
+            { title: "Teeth on Finance with Bad Credit", desc: "What lenders check, what a deposit changes, and what to do if you are declined.", href: "/guides/teeth-on-finance-bad-credit" },
             { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, from £82/month.", href: "/monthly-payment" },
           ]}
         />

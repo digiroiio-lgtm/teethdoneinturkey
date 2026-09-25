@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
@@ -95,6 +95,12 @@ export const metadata: Metadata = {
     apple: { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
   manifest: "/site.webmanifest",
+};
+
+// themeColor moved out of `metadata` 2026-09-25. Next 15 deprecated it there and
+// warned on every one of the 107 prerendered routes; the Viewport export is the
+// supported home for it and emits the same <meta name="theme-color"> tag.
+export const viewport: Viewport = {
   themeColor: "#1e40af",
 };
 

@@ -363,6 +363,15 @@ export default function FinanceOptionsUKPage() {
                 <span><strong>A lower total is the most reliable lever.</strong> Treatment in Turkey costs 65–90% less than the UK private equivalent, so the sum you need to finance is smaller to begin with — which is often what turns a borderline application around.</span>
               </li>
             </ul>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              For the detail behind all five points — what counts as adverse credit and how long each
+              marker stays on file, what lenders actually assess, what a deposit changes in pounds, and
+              the order to work through if you are declined — see the full guide to{" "}
+              <Link href="/guides/teeth-on-finance-bad-credit" className="text-[#1e40af] font-semibold hover:underline">
+                teeth on finance with bad credit
+              </Link>
+              .
+            </p>
           </div>
 
           <div>

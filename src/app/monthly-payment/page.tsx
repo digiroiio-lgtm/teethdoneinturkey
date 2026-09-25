@@ -144,7 +144,9 @@ export default function MonthlyPaymentPage() {
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               Two things decide what you actually pay: the treatment total and the term you choose. At 0% APR representative, a longer term simply divides the same total across more months rather than adding interest. For the difference between a payment plan, dental finance, a personal loan and NHS charges, see{" "}
-              <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how dental finance works in the UK, including dental loans and bad credit</Link>, and if you are weighing up affordability more broadly, read{" "}
+              <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how dental finance works in the UK, including dental loans</Link>. If your credit history is the obstacle, the dedicated guide to{" "}
+              <Link href="/guides/teeth-on-finance-bad-credit" className="text-[#1e40af] font-semibold hover:underline">teeth on finance with bad credit</Link>{" "}
+              covers what lenders check, what a deposit changes and what to do if you are declined. If you are weighing up affordability more broadly, read{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">what to do if you cannot afford dental treatment in the UK</Link>.
               {" "}Want to see this plan set against a personal loan, a 0% credit card or simply saving up? Our guide to{" "}
               <Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] font-semibold hover:underline">funding dental treatment abroad</Link>{" "}
@@ -306,13 +308,19 @@ export default function MonthlyPaymentPage() {
               {[
                 "UK resident, aged 18 or over",
                 "No minimum income requirement for pre-qualification",
-                "Bad credit or CCJ? Specialist options available — we work with providers who consider all profiles",
+                "Bad credit or a CCJ does not automatically rule you out of applying, but no provider can guarantee approval",
                 "Employed, self-employed, or benefits: most situations considered",
                 "0% interest available for qualifying applicants on 12- and 24-month terms",
               ].map((item, i) => (
                 <li key={i} className="flex gap-2 items-start"><span className="text-green-500 mt-0.5">✓</span><span>{item}</span></li>
               ))}
             </ul>
+            <p className="text-gray-600 leading-relaxed mt-4">
+              If adverse credit is your main concern, the guide to{" "}
+              <Link href="/guides/teeth-on-finance-bad-credit" className="text-[#1e40af] font-semibold hover:underline">teeth on finance with bad credit</Link>{" "}
+              sets out what lenders actually assess, how long each credit marker stays on your file, what
+              a deposit changes in pounds, and the order to work through if an application is declined.
+            </p>
           </div>
 
           {/* Trust layer */}

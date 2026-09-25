@@ -7,6 +7,186 @@ rewritten again.
 
 ---
 
+## 2026-09-25
+
+### WARNING — Search Console data was unavailable this run
+
+The Supermetrics connection is the only GSC access this environment has, and the
+**team's free trial expired on 2026-09-17** (team "Team digiroiio", ID 1943513).
+Every `data_query` now returns `TRIAL_EXPIRED`. There is no service-account
+credential, no stored export and no other GSC route in the repo, so **no fresh
+query, impression, CTR or position data could be read today** — the 24-hour,
+7-day and 28-day pulls the routine depends on all failed.
+
+**This blocks the core feedback loop and needs an account action** (renew or
+replace the Supermetrics subscription, or add a direct Search Console
+service-account credential). Until it is fixed, every run is working from
+2026-09-11 evidence that ages by a day each time, and no change made since
+2026-09-11 can be judged on performance.
+
+Today's work was therefore chosen to be **evidence-robust**: an intent gap that
+was already documented and does not depend on knowing this week's positions,
+plus technical fixes verifiable from the codebase alone. Anything requiring a
+head-to-head "which URL does Google prefer" comparison was deliberately
+deferred — see *Deferred* below.
+
+### The log has a two-week gap
+
+`serp-history.md` was last written on 2026-09-11, but there were runs on
+**09-13, 09-17, 09-18, 09-19 and 09-21** (evidenced by commits and by
+`DATE_MODIFIED` / comment stamps in page source). They are not recorded here.
+Consequences found today:
+
+- The site went from ~70 routes to **99** (80 live + 19 redirect stubs).
+- `/prices/turkey-teeth-cost` is now the cost owner and `/guides/turkey-teeth-cost`
+  is a stub pointing at it — the opposite direction to the 09-08 merge that was
+  reversed on 09-11.
+- `/prices/veneers-antalya-cost` was created, which the 09-04 run had explicitly
+  rejected as cannibalising `/prices/veneers-turkey-cost` pending Antalya-qualified
+  GSC evidence. Whether that evidence arrived is unknown and now unknowable.
+- The 09-18 comment in `/finance-options-uk` records the most recent GSC figures
+  available anywhere: the Turkey-finance cluster at **119+ impressions against
+  near-zero CTR**. That is the freshest data this run had.
+
+**Write the log every run.** Without it, decisions get re-litigated blind.
+
+### Today's primary action
+
+**NEW PAGE — `/guides/teeth-on-finance-bad-credit`. MONEY. Priority 9.2/10.**
+
+`teeth on finance bad credit` is the strongest commercial query on the property
+(position **8.45**, best in the account on 2026-09-11) and had **no owning URL**.
+It was split between `/finance-options-uk` (15 impr @ 7.6), where bad credit was
+one H2 of fourteen, and `/blog/dental-tourism-finance-explained` (7 impr @ 8.1),
+where it was one clause. The 09-11 log's own instruction was: *"Finance
+cannibalisation... decide an owner per query rather than rewriting pages again."*
+That is what this does.
+
+The gap got worse on 09-18, not better: the repivot retitled the hub to
+**"Turkey Teeth Finance: Pay Monthly & Payment Plans"**, a Turkey-qualified
+title. `teeth on finance bad credit` carries no Turkey qualifier, so the hub's
+title moved away from the query while the body still half-answered it.
+
+**Why a new URL was justified here when the packages page was not.** The 09-11
+run refused to create `/packages/turkey-teeth-packages` because that would have
+added a sixth URL to a query split five ways with no clear owner. This is the
+opposite shape: two URLs, both ranking ~8, and a documented cause (the hub
+retargeted itself away). This fills a hole rather than widening a split. It is
+also in the target architecture, which lists `/guides/teeth-on-finance-bad-credit`
+as a core finance hub URL.
+
+**Deliberately additive.** No existing page was rewritten. `/finance-options-uk`
+and `/monthly-payment` keep their content and their jobs; only the bad-credit
+*anchors* were repointed at the new owner, plus one linked paragraph each.
+
+### What the new page contains
+
+Direct-answer block, key takeaways, TOC, and GEO-extractable factual blocks
+throughout — a credit-marker table with retention periods (defaults/CCJs/IVAs/
+bankruptcy 6 years; CCJ paid within one month removed entirely), a soft-vs-hard
+search table, a UK-vs-Turkey *amount to finance* table, a deposit-lever table
+(GBP 4,500 arch at 0/500/1,000/1,500/2,250 deposit), two labelled **Example
+Treatment Scenarios**, a declined-application checklist, non-credit
+alternatives, a what-to-avoid list, eligibility criteria, 6 FAQs and sources.
+
+**YMYL discipline.** No guaranteed approval anywhere. Approval stated as the
+lender's decision throughout. "Representative APR" defined properly (the rate at
+least 51% of accepted applicants receive). Scenarios labelled illustrative, not
+credit offers, subject to status and lender approval, not everyone will qualify.
+Arithmetic is exact: every scenario divides evenly, so total repayable equals
+amount financed at 0% APR. **No claim about this site's own regulatory status**
+was added — the site nowhere claims FCA authorisation and that was left alone;
+readers are pointed at the FCA register to check any provider themselves.
+
+### Two YMYL corrections found while linking
+
+- `/monthly-payment` eligibility list said *"Bad credit or CCJ? Specialist options
+  available — we work with providers who consider all profiles."* Unsupportable
+  and inconsistent with the same page's own FAQ ("we can't guarantee approval for
+  any applicant"). Restated as not automatically ruling you out, with no
+  guarantee.
+- `/blog/dental-tourism-finance-explained` comparison table gave Dental Finance
+  Plan a bare **tick under "Bad Credit"**, reading as "bad credit accepted".
+  Changed to **"Considered"**.
+
+### Technical fixes
+
+- **14 internal links pointed at 301 redirect stubs** (0 on 09-11 — a regression
+  from the mid-month work). Five were in the `/guides` index, which was
+  advertising five URLs that redirect. Four of those five had their destination
+  already listed in the same index, so the duplicate cards were removed; the
+  fifth (`/guides/turkey-teeth-monthly-payments` to `/finance-options-uk`) was
+  repointed and its card copy corrected to describe the actual destination. The
+  other nine were repointed to final destinations. **Now 0.**
+- **1 orphan** — `/blog/do-turkey-teeth-look-fake` (1,783 words) was in the
+  sitemap but linked from nowhere. Added to the blog index. **Now 0.**
+- **`themeColor` in the root `metadata` export** is deprecated in Next 15 and was
+  emitting a build warning on **all 107 prerendered routes**. Moved to the
+  supported `viewport` export; verified the `<meta name="theme-color">` tag is
+  still emitted. **119 warnings to 0.**
+
+### Verification
+
+typecheck clean; lint clean (3 pre-existing unused-var warnings, none in touched
+files); build clean with **zero warnings**. Production server checked: new page
+**200**, `<title>` 48 chars, description 168 chars, canonical correct, and
+**Article + BreadcrumbList + FAQPage all server-rendered** with all 6 Q&A pairs
+in the server HTML. Full crawl of all 80 live pages: **0 broken links, 0 links
+to redirects, 0 orphans**, new page has 5 inbound links. All **80 sitemap URLs
+verified 200**.
+
+Note: `AGENTS.md` says to read `node_modules/next/dist/docs/` before writing
+code. **That directory does not exist** in this Next install (15.5.15, a normal
+published build). The codebase's own conventions were followed instead, and the
+one live deprecation found was fixed.
+
+### Deferred — blocked on GSC data, not on effort
+
+1. **`/guides/turkey-teeth-packages` vs `/guides/veneers-turkey-packages`** carry
+   near-identical titles ("... Packages: What Is Included and What Does It Really
+   Cost?") for what is close to one intent. This is the exact shape of the two
+   duplicate pairs already merged (09-08 cost, 09-11 implants). **Not merged**,
+   because merging the wrong direction is precisely what caused the 09-08
+   regression, and deciding direction needs a head-to-head impressions
+   comparison that cannot be run while GSC is down. **First job once data
+   returns.**
+2. **`/prices/veneers-antalya-cost` vs `/prices/veneers-turkey-cost`** — same
+   question, same blocker.
+3. **`MonthlyPaymentTable` arithmetic.** Four of five rows divide exactly
+   (3,800 to 106/36; 4,500 to 125/36; 5,600 to 156/36). The fifth, *"Veneers
+   Package (10 veneers), GBP 2,800 to GBP 82/month over 36"*, implies GBP 2,952
+   repayable on a table headed 0% interest, and GBP 2,800 does not match 10
+   veneers at the site's GBP 190/tooth either. **Not changed** — the component
+   renders on two settling ranking pages and the right fix depends on what that
+   package actually is (a question for the owner: is it 10 veneers, or the
+   20-crown GBP 2,800 package?).
+
+### Next 3 priorities
+
+1. **Restore GSC access.** Nothing else in this routine works properly without it.
+2. Packages head-to-head, then merge the loser (deferred item 1).
+3. Judge the 09-18 finance repivot and this page together once ~2 weeks of data
+   exist: did `teeth on finance bad credit` consolidate onto the new owner, and
+   did the Turkey-finance cluster's near-zero CTR improve?
+
+### SEO health summary
+
+- **Finance** — strongest cluster; now has a proper hub-to-spoke structure
+  (`/finance-options-uk` hub, `/monthly-payment` + the new bad-credit guide as
+  spokes, 5 blog supports) and an owner for its best query.
+- **Cost** — consolidated on `/prices/turkey-teeth-cost`; several stubs feed it.
+- **Packages** — unresolved duplicate pair, blocked on data.
+- **Treatments** — untouched since 09-11, still settling.
+- **Trust** — untouched.
+- **Technical** — link graph clean for the first time since 09-11; build
+  warning-free.
+
+**Overall daily score: 6.5/10** — the build and technical work are sound, but a
+run that cannot read Search Console is not doing the job this routine exists to
+do, and that caps it.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

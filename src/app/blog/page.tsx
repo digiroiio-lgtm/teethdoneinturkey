@@ -35,6 +35,7 @@ const posts = [
   // Safety cluster
   { href: "/blog/risks-of-turkey-teeth", title: "Risks of Turkey Teeth: What UK Patients Should Know", excerpt: "An honest guide to the real risks of getting dental work in Turkey — and how to avoid every one of them.", date: "January 2026", tag: "Safety" },
   { href: "/blog/aftercare-for-dental-work-in-turkey", title: "Aftercare for Dental Work in Turkey", excerpt: "Complete aftercare guide for UK patients returning home after veneers or implants in Turkey.", date: "January 2026", tag: "Aftercare" },
+  { href: "/blog/do-turkey-teeth-look-fake", title: "Do Turkey Teeth Look Fake?", excerpt: "Why some Turkey teeth look obviously false — shade, shape, size and gum line — and what to specify so yours do not.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/will-uk-dentists-fix-turkey-teeth", title: "Will UK Dentists Fix Turkey Teeth?", excerpt: "The honest answer: what UK dentists will and won't do for dental work that was done in Turkey.", date: "January 2026", tag: "Safety" },
   // UK vs Turkey comparison cluster
   { href: "/blog/implants-cost-uk-vs-turkey", title: "Dental Implants Cost: UK vs Turkey Compared", excerpt: "A side-by-side price comparison of dental implants in the UK and Turkey, including what each quote actually covers.", date: "January 2026", tag: "Comparison" },
@@ -49,8 +50,8 @@ const posts = [
   { href: "/blog/is-it-safe-to-get-teeth-done-in-turkey", title: "Is It Safe to Get Teeth Done in Turkey? 2026 Guide", excerpt: "The honest answer to the most common question about Turkish dental tourism. Accreditation, safety records, and how to choose wisely.", date: "Updated September 2026", tag: "Safety" },
   { href: "/blog/how-long-do-dental-veneers-last", title: "How Long Do Turkey Teeth Last? Veneers and Crowns Compared", excerpt: "E-max 10–15 years, zirconia crowns 15–20, composite 5–7 — and why most \"turkey teeth\" are crowns rather than veneers.", date: "Updated September 2026", tag: "Veneers" },
   { href: "/blog/best-dental-clinics-turkey", title: "Best Dental Clinics in Turkey: How to Verify One", excerpt: "Nobody can honestly rank Turkish clinics — but you can verify one in twenty minutes. The registrations to check, the questions to ask, the red flags.", date: "Updated September 2026", tag: "Clinics" },
-  { href: "/blog/turkey-teeth-reviews", title: "Turkey Teeth Reviews: Real Patient Experiences 2026", excerpt: "We compiled real patient experiences from UK patients who've had dental work done in Turkey — the good, the great, and the rare bad.", date: "Updated September 2026", tag: "Reviews" },
-  { href: "/blog/dental-holiday-turkey-guide", title: "The Complete Dental Holiday Turkey Guide for UK Patients", excerpt: "A comprehensive guide to planning your dental trip to Turkey — flights, hotels, what to expect, and how to make the most of your time.", date: "September 2024", tag: "Travel" },
+  { href: "/reviews", title: "Turkey Teeth Reviews: Real Patient Experiences 2026", excerpt: "We compiled real patient experiences from UK patients who've had dental work done in Turkey — the good, the great, and the rare bad.", date: "Updated September 2026", tag: "Reviews" },
+  { href: "/travel-to-turkey/dental-holiday-turkey", title: "The Complete Dental Holiday Turkey Guide for UK Patients", excerpt: "A comprehensive guide to planning your dental trip to Turkey — flights, hotels, what to expect, and how to make the most of your time.", date: "September 2024", tag: "Travel" },
 ];
 
 const tagColors: Record<string, string> = {
