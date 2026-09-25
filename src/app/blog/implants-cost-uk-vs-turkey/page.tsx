@@ -24,7 +24,7 @@ const straumann = getPrice("implant-straumann");
 const allOn4 = getPrice("all-on-4");
 const allOn6 = getPrice("all-on-6");
 
-const DESCRIPTION = `Dental implants UK vs Turkey: a single implant with crown is ${gbp(osstem.ukRangeGBP.min)}–${gbp(straumann.ukRangeGBP.max ?? 0)} privately in the UK and ${gbp(osstem.turkeyFromGBP)}–${gbp(straumann.turkeyFromGBP)} in Turkey. Fees, travel, aftercare and who each option suits.`;
+const DESCRIPTION = `Dental implants UK vs Turkey: ${gbp(osstem.ukRangeGBP.min)}–${gbp(straumann.ukRangeGBP.max ?? 0)} per implant in the UK, ${gbp(osstem.turkeyFromGBP)}–${gbp(straumann.turkeyFromGBP)} in Turkey. Worked totals, trade-offs and who each suits.`;
 
 export const metadata: Metadata = {
   alternates: { canonical: PATH },

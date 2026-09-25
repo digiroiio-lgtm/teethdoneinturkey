@@ -21,8 +21,7 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/turkey-dental-price-index`;
-const DESCRIPTION =
-  "Turkey Dental Price Index 2026: indicative Turkey prices for implants, All-on-4/6, crowns, veneers and packages against typical UK private prices, with methodology and downloadable CSV/JSON data.";
+const DESCRIPTION = "Turkey Dental Price Index 2026: indicative Turkey prices for implants, crowns, veneers and packages vs typical UK private prices, with CSV/JSON downloads.";
 const DATE_PUBLISHED = "2026-09-25";
 
 export const metadata: Metadata = {

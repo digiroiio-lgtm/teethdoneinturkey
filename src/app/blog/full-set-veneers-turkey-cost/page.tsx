@@ -22,7 +22,7 @@ const composite = getPrice("composite-veneer");
 const zirconia = getPrice("zirconia-crown");
 const hollywood20 = getPrice("hollywood-20");
 
-const DESCRIPTION = `A full set of 20 E-max veneers in Turkey costs from ${gbp(emax.turkeyFromGBP * 20)} before travel, or about ${gbp(emax.turkeyFromGBP * 20 + VENEER_TRIP_BUDGET.min)}–${gbp(emax.turkeyFromGBP * 20 + VENEER_TRIP_BUDGET.max)} all-in. Costs for 8, 10, 16 and 20 teeth by material, with UK comparison.`;
+const DESCRIPTION = `20 E-max veneers in Turkey: from ${gbp(emax.turkeyFromGBP * 20)}, or ${gbp(emax.turkeyFromGBP * 20 + VENEER_TRIP_BUDGET.min)}–${gbp(emax.turkeyFromGBP * 20 + VENEER_TRIP_BUDGET.max)} with travel. Costs for 8–20 teeth by material vs the UK.`;
 
 export const metadata: Metadata = {
   alternates: { canonical: PATH },

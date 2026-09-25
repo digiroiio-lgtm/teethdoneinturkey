@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     question: "Why choose Antalya for dental implants?",
-    answer: "Antalya has a growing number of clinics with specialist implantologists who work with international patients daily. The main reasons UK patients choose Antalya for implants specifically are: the cost saving (Osstem implants from £250 vs £2,000+ in the UK; Straumann from £800 vs £3,000+), the availability of in-house CBCT scanners and digital workflows at established clinics, and the resort environment that makes a 5–7 day first visit more comfortable. The clinical process — consultation, CT scan, implant placement, temporary restoration — is the same as in the UK. What changes is the cost and the experience around it. Confirm that your chosen clinic has an accredited implantologist on staff, not just a general dentist performing implant procedures.",
+    answer: "Antalya has a growing number of clinics with specialist implantologists who work with international patients daily. The main reasons UK patients choose Antalya for implants specifically are: the cost saving (Osstem implants from £250 vs £2,000+ in the UK; Straumann from £930 vs £3,000+), the availability of in-house CBCT scanners and digital workflows at established clinics, and the resort environment that makes a 5–7 day first visit more comfortable. The clinical process — consultation, CT scan, implant placement, temporary restoration — is the same as in the UK. What changes is the cost and the experience around it. Confirm that your chosen clinic has an accredited implantologist on staff, not just a general dentist performing implant procedures.",
   },
   {
     question: "Can I finance treatment in Antalya?",

@@ -14,7 +14,7 @@ export const revalidate = 86400;
 
 const osstem = getPrice("implant-osstem");
 const straumann = getPrice("implant-straumann");
-const DESCRIPTION = `Dental implants in Turkey from ${gbp(osstem.turkeyFromGBP)} (Osstem) to ${gbp(straumann.turkeyFromGBP)} (Straumann) with crown, arranged by a UK coordination service. How it works, who it suits, and how to get an itemised quote.`;
+const DESCRIPTION = `Dental implants in Turkey from ${gbp(osstem.turkeyFromGBP)} with crown, arranged by a UK coordination service. How it works, who it suits, and getting an itemised quote.`;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/dental-implants-turkey" },

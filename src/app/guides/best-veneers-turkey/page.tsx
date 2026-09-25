@@ -22,8 +22,7 @@ const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/best-veneers-turkey`;
 const TITLE = "Best Veneers in Turkey: Types, Clinics, Costs & How to Choose 2026";
 const H1 = "Best Veneers in Turkey: Types, Clinics, Costs & How to Choose";
-const DESCRIPTION =
-  "E-max vs zirconia vs composite veneers in Turkey — which looks most natural, requires least tooth prep, and lasts longest — plus how to choose a good veneer clinic.";
+const DESCRIPTION = "E-max vs zirconia vs composite veneers in Turkey: which looks most natural, removes least tooth and lasts longest, and how to choose a veneer clinic.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-25";
 

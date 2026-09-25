@@ -30,7 +30,7 @@ const TRIP_1_TRAVEL = 250;
 const TRIP_2_TRAVEL = 200;
 const TRAVEL_TOTAL = TRIP_1_TRAVEL + TRIP_2_TRAVEL;
 
-const DESCRIPTION = `A single tooth implant in Turkey costs from ${gbp(osstem.turkeyFromGBP)} (Osstem) to ${gbp(straumann.turkeyFromGBP)} (Straumann) with crown, before travel for two trips. Worked all-in totals, what is included and when a UK implant makes more sense.`;
+const DESCRIPTION = `One tooth implant in Turkey: ${gbp(osstem.turkeyFromGBP)}–${gbp(straumann.turkeyFromGBP)} with crown, plus two trips. All-in totals, what is included, and when a UK implant is better.`;
 
 export const metadata: Metadata = {
   alternates: { canonical: PATH },

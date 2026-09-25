@@ -10,7 +10,8 @@
     "prebuild": "node scripts/update-route-lastmod.mjs",
     "seo:lastmod": "node scripts/update-route-lastmod.mjs",
     "seo:lastmod:check": "node scripts/update-route-lastmod.mjs --check",
-    "seo:indexnow": "node scripts/indexnow-ping.mjs"
+    "seo:indexnow": "node scripts/indexnow-ping.mjs",
+    "seo:audit-geo": "node scripts/audit-geo.mjs"
   },
   "dependencies": {
     "next": "^15.5.15",

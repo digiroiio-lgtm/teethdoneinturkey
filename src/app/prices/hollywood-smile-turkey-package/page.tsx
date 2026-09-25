@@ -29,7 +29,7 @@ const h24 = getPrice("hollywood-24");
 const crown = getPrice("zirconia-crown");
 const makeover = getPrice("smile-makeover");
 
-const DESCRIPTION = `Hollywood Smile Turkey: 20 zirconia crowns ${gbp(h20.turkeyFromGBP)} or 24 crowns ${gbp(h24.turkeyFromGBP)}, including ${HOLLYWOOD_PACKAGE_NIGHTS} nights' hotel and VIP transfers. What each package includes, UK comparison, and who crowns may not suit.`;
+const DESCRIPTION = `Hollywood Smile Turkey: 20 zirconia crowns ${gbp(h20.turkeyFromGBP)} or 24 for ${gbp(h24.turkeyFromGBP)}, incl. ${HOLLYWOOD_PACKAGE_NIGHTS} nights' hotel and transfers. What's included and who crowns may not suit.`;
 
 export const metadata: Metadata = {
   alternates: { canonical: PATH },

@@ -23,7 +23,7 @@ const emax = getPrice("emax-veneer");
 const composite = getPrice("composite-veneer");
 const zirconia = getPrice("zirconia-crown");
 
-const DESCRIPTION = `Veneers UK vs Turkey: an E-max veneer is ${ukRange(emax)} per tooth privately in the UK and from ${gbp(emax.turkeyFromGBP)} in Turkey. Worked totals for 1, 8 and 20 veneers including travel, and when a UK veneer makes more sense.`;
+const DESCRIPTION = `Veneers UK vs Turkey: E-max ${ukRange(emax)} per tooth in the UK, from ${gbp(emax.turkeyFromGBP)} in Turkey. Totals for 1, 8 and 20 veneers with travel.`;
 
 export const metadata: Metadata = {
   alternates: { canonical: PATH },

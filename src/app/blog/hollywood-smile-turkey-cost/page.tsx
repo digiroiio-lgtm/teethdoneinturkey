@@ -23,7 +23,7 @@ const h24 = getPrice("hollywood-24");
 const crown = getPrice("zirconia-crown");
 const makeover = getPrice("smile-makeover");
 
-const DESCRIPTION = `A Hollywood Smile in Turkey is a set of 20 or 24 zirconia crowns, from ${gbp(h20.turkeyFromGBP)} including hotel and transfers. What the treatment involves, how much tooth is removed, how to get a natural result, and who it suits.`;
+const DESCRIPTION = `A Hollywood Smile in Turkey is 20 or 24 zirconia crowns, from ${gbp(h20.turkeyFromGBP)} incl. hotel. What's involved, how much tooth is removed, and who it suits.`;
 
 export const metadata: Metadata = {
   alternates: { canonical: PATH },

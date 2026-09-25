@@ -15,7 +15,7 @@ export const revalidate = 86400;
 const emax = getPrice("emax-veneer");
 const zirconia = getPrice("zirconia-crown");
 const composite = getPrice("composite-veneer");
-const DESCRIPTION = `Porcelain (E-max) veneers in Turkey from ${gbp(emax.turkeyFromGBP)} per tooth, arranged by a UK coordination service. One 5–7 day trip, how it works, who it suits, and how to get an itemised quote.`;
+const DESCRIPTION = `E-max veneers in Turkey from ${gbp(emax.turkeyFromGBP)} per tooth, arranged by a UK coordination service. One 5–7 day trip, who it suits, and getting an itemised quote.`;
 const monthly = (total: number, months: number) => `£${Math.round(total / months)}/mo`;
 
 export const metadata: Metadata = {

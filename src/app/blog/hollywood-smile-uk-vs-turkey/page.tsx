@@ -24,7 +24,7 @@ const h20 = getPrice("hollywood-20");
 const h24 = getPrice("hollywood-24");
 const crown = getPrice("zirconia-crown");
 
-const DESCRIPTION = `Hollywood Smile cost UK vs Turkey: 20 zirconia crowns are ${ukRange(h20)} privately in the UK and ${gbp(h20.turkeyFromGBP)} in Turkey including hotel. All-in totals with flights, trade-offs, and when crowns are not the right choice.`;
+const DESCRIPTION = `Hollywood Smile UK vs Turkey: 20 zirconia crowns ${ukRange(h20)} in the UK, ${gbp(h20.turkeyFromGBP)} in Turkey incl. hotel. All-in totals and when crowns aren't right.`;
 
 export const metadata: Metadata = {
   alternates: { canonical: PATH },

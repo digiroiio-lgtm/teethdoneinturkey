@@ -25,7 +25,7 @@ const zirconia = getPrice("zirconia-crown");
 const composite = getPrice("composite-veneer");
 const hollywood20 = getPrice("hollywood-20");
 const hollywood24 = getPrice("hollywood-24");
-const DESCRIPTION = `Veneers in Turkey 2026: E-max from ${gbp(emax.turkeyFromGBP)}/tooth, composite from ${gbp(composite.turkeyFromGBP)}, zirconia crowns from ${gbp(zirconia.turkeyFromGBP)}. UK comparison, full-set totals, what is included, and who veneers abroad may not suit.`;
+const DESCRIPTION = `Veneers in Turkey 2026: E-max from ${gbp(emax.turkeyFromGBP)}/tooth, composite from ${gbp(composite.turkeyFromGBP)}, zirconia crowns ${gbp(zirconia.turkeyFromGBP)}. UK comparison, full-set totals, what's included.`;
 const DATE_PUBLISHED = "2026-05-29";
 const DATE_MODIFIED = "2026-09-25";
 

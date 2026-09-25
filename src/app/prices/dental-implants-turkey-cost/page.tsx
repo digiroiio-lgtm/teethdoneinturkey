@@ -34,7 +34,7 @@ const allOn6 = getPrice("all-on-6");
 // UK range for a single implant + crown, entry-level to premium brand.
 const UK_SINGLE_RANGE = `${gbp(osstem.ukRangeGBP.min)}–${gbp(straumann.ukRangeGBP.max ?? straumann.ukRangeGBP.min)}`;
 
-const DESCRIPTION = `Dental implants in Turkey cost from ${gbp(osstem.turkeyFromGBP)} (Osstem) to ${gbp(straumann.turkeyFromGBP)} (Straumann) per implant with crown; All-on-4 from ${gbp(allOn4.turkeyFromGBP)} per arch. Prices vs UK, what's included, and the costs a quote leaves out.`;
+const DESCRIPTION = `Dental implants in Turkey: ${gbp(osstem.turkeyFromGBP)} (Osstem) to ${gbp(straumann.turkeyFromGBP)} (Straumann) per implant with crown; All-on-4 from ${gbp(allOn4.turkeyFromGBP)} per arch. UK comparison and what's excluded.`;
 
 export const metadata: Metadata = {
   alternates: { canonical: PATH },

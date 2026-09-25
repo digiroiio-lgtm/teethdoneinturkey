@@ -12,8 +12,7 @@ const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/methodology`;
 const TITLE = "Price & Data Methodology | Teeth Done in Turkey";
 const H1 = "How Our Prices and Data Are Collected, Checked and Calculated";
-const DESCRIPTION =
-  "Where Teeth Done in Turkey's published prices come from, what they include and exclude, how UK comparisons and percentage differences are calculated, and how often figures are checked.";
+const DESCRIPTION = "Where Teeth Done in Turkey's prices come from, what they include, how UK comparisons and percentage differences are calculated, and how often they are checked.";
 const DATE_PUBLISHED = "2026-09-25";
 
 export const metadata: Metadata = {
