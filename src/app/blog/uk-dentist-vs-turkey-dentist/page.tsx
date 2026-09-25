@@ -70,7 +70,7 @@ export default function UKvsTurkeyDentistPage() {
               </thead>
               <tbody>
                 {[
-                  { t: "Single E-max Veneer", uk: "£800–£1,000", turkey: "£190–£220" },
+                  { t: "Single E-max Veneer", uk: "£800–£1,000", turkey: "From £190" },
                   { t: "Single Implant (incl. crown)", uk: "£2,000–£2,800", turkey: "£250–£650" },
                   { t: "All-on-4 Full Arch", uk: "£12,000–£18,000", turkey: "£4,500–£5,500" },
                   { t: "Composite Bonding", uk: "£200–£500/tooth", turkey: "£80–£150/tooth" },

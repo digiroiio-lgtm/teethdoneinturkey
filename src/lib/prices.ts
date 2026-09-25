@@ -144,7 +144,9 @@ export const PRICES: PriceRecord[] = [
     category: "crowns-veneers",
     treatment: "Composite veneer / bonding",
     unit: "per tooth",
-    turkeyFromGBP: 90,
+    // £80 matches /prices/veneers-turkey-cost and the price calculator; the
+    // £90 figure on three other pages was aligned to it.
+    turkeyFromGBP: 80,
     isFromPrice: true,
     ukRangeGBP: { min: 300, max: 500 },
     includes: [],

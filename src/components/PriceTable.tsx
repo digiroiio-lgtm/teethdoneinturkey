@@ -7,7 +7,7 @@ const prices = [
   { treatment: 'All-on-6 Implants', uk: '£18,000+', turkey: '£5,600', saving: '69%' },
   { treatment: 'Full Smile Makeover', uk: '£12,000+', turkey: '£3,500', saving: '71%' },
   { treatment: 'Teeth Whitening', uk: '£600', turkey: '£120', saving: '80%' },
-  { treatment: 'Composite Bonding', uk: '£400/tooth', turkey: '£90/tooth', saving: '78%' },
+  { treatment: 'Composite Bonding', uk: '£400/tooth', turkey: '£80/tooth', saving: '80%' },
   { treatment: 'Zirconia Crown', uk: '£1,200', turkey: '£130', saving: '89%' },
 ];
 

@@ -47,7 +47,7 @@ export default function CompositeVsPorcelainPage() {
             <li>Less durable than porcelain — typically lasting 5–7 years before replacement</li>
             <li>Can stain over time with coffee, tea, and red wine</li>
             <li>Less natural translucency than E-max porcelain</li>
-            <li>Significantly cheaper — from £80–£120/tooth in Turkey</li>
+            <li>Significantly cheaper — from £80/tooth in Turkey</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Are Porcelain Veneers?</h2>

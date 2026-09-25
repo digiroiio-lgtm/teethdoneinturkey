@@ -168,7 +168,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="crown-veneer-costs" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Crown &amp; Veneer Costs</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Zirconia crowns (used in Hollywood Smile packages) start from £130 per tooth. Porcelain (E-max) veneers — a different product, bonded to the front of the tooth rather than covering it fully — start from £190 per tooth. Composite veneers/bonding are the most affordable option, from £90 per tooth, applied in a single visit but generally less durable than porcelain or zirconia.
+            Zirconia crowns (used in Hollywood Smile packages) start from £130 per tooth. Porcelain (E-max) veneers — a different product, bonded to the front of the tooth rather than covering it fully — start from £190 per tooth. Composite veneers/bonding are the most affordable option, from {gbp(getPrice("composite-veneer").turkeyFromGBP)} per tooth, applied in a single visit but generally less durable than porcelain or zirconia.
           </p>
 
           <h2 id="full-mouth-packages" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Full-Mouth &amp; Package Pricing</h2>

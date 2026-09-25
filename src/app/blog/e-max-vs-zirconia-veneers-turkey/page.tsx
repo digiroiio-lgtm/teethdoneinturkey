@@ -2,8 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import DecisionTree from "@/components/geo/DecisionTree";
+import EvidenceBlock from "@/components/geo/EvidenceBlock";
+import FactEvidenceDecision from "@/components/geo/FactEvidenceDecision";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import PageFreshness from "@/components/geo/PageFreshness";
+import QuickAnswer from "@/components/geo/QuickAnswer";
+import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice, ukRange } from "@/lib/prices";
+import { VENEER_INTENT_OWNERS, veneerFollowUps } from "@/lib/veneer-cluster";
 
 export const revalidate = 86400;
+
+const emax = getPrice("emax-veneer");
+const zirconia = getPrice("zirconia-crown");
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/e-max-vs-zirconia-veneers-turkey" },
@@ -20,6 +31,7 @@ export default function EmaxVsZirconiPage() {
         headline="E-max vs Zirconia Veneers in Turkey"
         description="Comparing E-max and zirconia veneers in Turkey for UK patients. Durability, aesthetics, cost, and which option is right for you. Full 2026 comparison guide."
         datePublished="2026-01-01"
+        dateModified="2026-09-25"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -30,11 +42,23 @@ export default function EmaxVsZirconiPage() {
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Veneers</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">E-max vs Zirconia Veneers in Turkey: Which Is Better?</h1>
-          <p className="text-gray-500 text-sm">Published January 2026 · 6 min read</p>
-          <MedicalReviewBadge />
+          <PageFreshness published="January 2026" reviewed="25 September 2026" pricingChecked={PRICES_LAST_VERIFIED_LABEL} />
+          <div className="mt-4">
+            <MedicalReviewBadge />
+          </div>
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
+          <QuickAnswer question="E-max or zirconia: which is better for veneers in Turkey?">
+            <p>
+              E-max is the better choice for most cosmetic front-tooth veneers: it is more translucent, looks closer to
+              natural enamel and needs less tooth removed. Zirconia is much stronger and suits people who grind their
+              teeth or have heavily worn, filled or damaged teeth — but at partner clinics a zirconia unit is almost always
+              a crown, which removes considerably more tooth. In Turkey, E-max veneers cost from {gbp(emax.turkeyFromGBP)}{" "}
+              per tooth and zirconia crowns {gbp(zirconia.turkeyFromGBP)} per tooth.
+            </p>
+          </QuickAnswer>
+
           <p>When planning veneers in Turkey, the most important material decision you&apos;ll make is between <strong>E-max (lithium disilicate ceramic)</strong> and <strong>zirconia</strong>. Both are used widely by top Turkish dental clinics, both deliver excellent long-term results — but they have genuinely different characteristics that matter for different patients.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Is E-max?</h2>
@@ -74,8 +98,10 @@ export default function EmaxVsZirconiPage() {
                   { f: "Natural appearance", emax: "⭐⭐⭐⭐⭐", zir: "⭐⭐⭐⭐" },
                   { f: "Strength & durability", emax: "⭐⭐⭐⭐", zir: "⭐⭐⭐⭐⭐" },
                   { f: "Good for bruxism (grinding)", emax: "Moderate", zir: "Excellent" },
-                  { f: "Tooth preparation needed", emax: "Minimal (0.3–0.5mm)", zir: "Slightly more" },
-                  { f: "Price in Turkey", emax: "From £190/tooth", zir: "From £220/tooth" },
+                  { f: "Tooth preparation needed", emax: "Minimal (0.3–0.5mm)", zir: "More — as a crown, all surfaces are reduced" },
+                  { f: "Usually quoted as", emax: "Veneer (front surface)", zir: "Crown (whole tooth)" },
+                  { f: "Price in Turkey", emax: `From ${gbp(emax.turkeyFromGBP)}/tooth`, zir: `${gbp(zirconia.turkeyFromGBP)}/tooth (crown)` },
+                  { f: "UK private price", emax: `${ukRange(emax)}/tooth`, zir: `${ukRange(zirconia)}/tooth (crown)` },
                   { f: "Typical lifespan", emax: "10–15+ years", zir: "15+ years" },
                   { f: "Best suited for", emax: "Front teeth, natural look", zir: "Grinders, maximum durability" },
                 ].map((r, i) => (
@@ -107,8 +133,35 @@ export default function EmaxVsZirconiPage() {
           <p>For most UK patients seeking a natural-looking smile transformation, <strong>E-max is the most popular and recommended choice</strong>. Your Turkish dentist will make a specific recommendation based on your bite, tooth condition, and aesthetic goals during your consultation.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Cost Comparison in Turkey</h2>
-          <p>In Turkey, E-max veneers start from £190 per tooth and zirconia from £220 per tooth. For a full set of 20, the total difference is approximately £600 — modest relative to the overall saving vs UK prices.</p>
-          <p>Both are a fraction of UK prices, where E-max veneers typically cost £800–£1,000 per tooth and zirconia £900–£1,200.</p>
+          <p>In Turkey, E-max veneers start from {gbp(emax.turkeyFromGBP)} per tooth and zirconia crowns cost {gbp(zirconia.turkeyFromGBP)} per tooth, so zirconia looks cheaper — but the two are usually different treatments. A zirconia crown covers the whole tooth; an E-max veneer covers only the front. For 20 teeth, zirconia crowns come to {gbp(zirconia.turkeyFromGBP * 20)} and E-max veneers to {gbp(emax.turkeyFromGBP * 20)}, before travel.</p>
+          <p>In the UK, an E-max veneer is typically {ukRange(emax)} per tooth and a zirconia crown {ukRange(zirconia)}. Full prices are on the <Link href={VENEER_INTENT_OWNERS.cost} className="text-[#1e40af] font-semibold hover:underline">veneer cost page</Link>.</p>
+
+          <FactEvidenceDecision
+            title="Does choosing zirconia mean losing more tooth?"
+            fact="At partner clinics, a zirconia unit is almost always a full-coverage crown, while an E-max veneer is bonded to the front surface only."
+            evidence="Crowns are prepared on every surface of the tooth; porcelain veneers typically remove about 0.3–0.7mm from the front surface, as set out in the veneers-or-crowns guide."
+            interpretation="A lower per-unit price for zirconia usually reflects a different treatment, not a cheaper version of the same one — and the extra tooth removed cannot be restored."
+            decision="Ask the clinic to confirm, tooth by tooth and in writing, whether you are getting a veneer or a crown, and why."
+          />
+
+          <DecisionTree
+            title="Which material fits your case?"
+            steps={[
+              { condition: "your teeth are healthy and you want a natural look on the front teeth", action: "E-max veneers are usually the first choice." },
+              { condition: "you grind your teeth or have heavily filled, worn or broken teeth", action: "zirconia crowns may be clinically better; ask the dentist to explain why for each tooth." },
+              { condition: "a quote lists 'zirconium veneers'", action: "confirm whether they are veneers or crowns before comparing prices." },
+              { condition: "you are unsure", action: "a clinical assessment with photos and X-rays decides this — not the price list." },
+            ]}
+          />
+
+          <EvidenceBlock
+            items={[
+              { claim: `E-max from ${gbp(emax.turkeyFromGBP)}, zirconia crown ${gbp(zirconia.turkeyFromGBP)}`, basis: "Partner clinic list prices — Turkey Dental Price Index", href: "/turkey-dental-price-index", checked: PRICES_LAST_VERIFIED_LABEL },
+              { claim: `UK E-max ${ukRange(emax)}, zirconia crown ${ukRange(zirconia)}`, basis: "Typical UK private ranges", href: "/methodology#sources", checked: PRICES_LAST_VERIFIED_LABEL },
+            ]}
+          />
+
+          <FollowUpQuestions items={veneerFollowUps(VENEER_INTENT_OWNERS.emaxVsZirconia)} />
 
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
             <p className="font-semibold text-gray-900 mb-2">Not sure which is right for you?</p>

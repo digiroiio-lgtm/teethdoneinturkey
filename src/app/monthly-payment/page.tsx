@@ -28,9 +28,9 @@ export const metadata: Metadata = {
 };
 
 const ukVsTurkeyComparison = [
-  { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "£190–£250", monthly: "From £6/mo" },
-  { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "£3,800–£5,000", monthly: "From £106/mo" },
-  { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£420–£600", monthly: "From £14/mo" },
+  { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "From £190", monthly: "From £6/mo" },
+  { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "From £3,800", monthly: "From £106/mo" },
+  { treatment: "Single Dental Implant", uk: "£2,000–£4,500", turkey: "£250–£930", monthly: "From £7/mo" },
   { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,500–£5,500", monthly: "From £125/mo" },
   { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "From £5,600", monthly: "From £156/mo" },
   { treatment: "Hollywood Smile (20 zirconia crowns, inc. hotel)", uk: "£18,000–£22,000", turkey: "£2,800", monthly: "From £78/mo" },
@@ -166,13 +166,13 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Veneers Turkey Monthly Payment Plans</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Porcelain veneers in Turkey cost <strong>£190–£250 per tooth</strong> using Ivoclar E-max — the same brand used in the UK&apos;s leading cosmetic dental practices. A full set of 20 veneers (£3,800–£5,000) can be financed from:
+              Porcelain veneers in Turkey cost <strong>from £190 per tooth</strong> using Ivoclar E-max — the same brand used in the UK&apos;s leading cosmetic dental practices. A full set of 20 veneers (from £3,800) can be financed from:
             </p>
             <div className="grid grid-cols-3 gap-4 mb-4">
               {[
-                { term: "12 months", amount: "£267/mo", label: "Fastest payoff" },
-                { term: "24 months", amount: "£140/mo", label: "Balanced" },
-                { term: "36 months", amount: "£95/mo", label: "Lowest monthly" },
+                { term: "12 months", amount: "£317/mo", label: "Fastest payoff" },
+                { term: "24 months", amount: "£158/mo", label: "Balanced" },
+                { term: "36 months", amount: "£106/mo", label: "Lowest monthly" },
               ].map(item => (
                 <div key={item.term} className="bg-white rounded-xl p-4 border border-gray-200 text-center shadow-sm">
                   <p className="text-xs text-gray-500 mb-1">{item.term}</p>
@@ -192,7 +192,7 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Dental Implants Turkey Finance Options</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              A single dental implant in Turkey costs <strong>£420–£600 all-inclusive</strong> — including consultation, CBCT scan, implant placement, and final zirconia crown. Spread over 36 months, that&apos;s from just £14/month. For larger implant treatments:
+              A single dental implant with crown in Turkey costs <strong>from £250 (Osstem) to £930 (Straumann)</strong> — including consultation, CBCT scan, implant placement and the final crown. Spread over 36 months at 0%, that&apos;s from about £7/month. For larger implant treatments:
             </p>
             <div className="overflow-x-auto rounded-xl">
               <table className="w-full text-sm bg-white border border-gray-200 rounded-xl overflow-hidden">
@@ -205,8 +205,8 @@ export default function MonthlyPaymentPage() {
                 </thead>
                 <tbody>
                   {[
-                    { t: "Single Implant", p: "£500", m: "From £14/mo" },
-                    { t: "4 Implants", p: "£2,000", m: "From £56/mo" },
+                    { t: "Single Implant (Osstem)", p: "£250", m: "From £7/mo" },
+                    { t: "4 Implants (Osstem)", p: "£1,000", m: "From £28/mo" },
                     { t: "All-on-4 (single arch)", p: "£4,500", m: "From £125/mo" },
                     { t: "All-on-4 (both arches)", p: "£9,000", m: "From £250/mo" },
                     { t: "All-on-6 (both arches)", p: "£11,000", m: "From £306/mo" },

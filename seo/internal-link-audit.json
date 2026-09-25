@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T16:18:36.481Z",
+  "generatedAt": "2026-09-25T16:32:22.371Z",
   "registrySize": 29,
   "pagesScanned": 100,
   "results": [
@@ -85,7 +85,7 @@
     },
     {
       "page": "/prices/turkey-teeth-cost",
-      "incomingTotal": 55,
+      "incomingTotal": 54,
       "incomingFromHighAuth": 10,
       "sources": [
         {
@@ -186,10 +186,6 @@
         },
         {
           "from": "/blog/uk-dentist-vs-turkey-dentist",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/veneers-turkey-cost-uk-vs-turkey",
           "anchorText": ""
         },
         {
@@ -466,7 +462,7 @@
         },
         {
           "from": "/blog/full-set-veneers-turkey-cost",
-          "anchorText": ""
+          "anchorText": "monthly payment options"
         },
         {
           "from": "/blog/hollywood-smile-turkey-cost",
@@ -637,7 +633,7 @@
     },
     {
       "page": "/prices/veneers-turkey-cost",
-      "incomingTotal": 39,
+      "incomingTotal": 38,
       "incomingFromHighAuth": 3,
       "sources": [
         {
@@ -725,10 +721,6 @@
           "anchorText": ""
         },
         {
-          "from": "/blog/veneers-turkey-cost-uk-vs-turkey",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/why-are-dental-treatments-cheaper-in-turkey",
           "anchorText": ""
         },
@@ -801,7 +793,7 @@
     },
     {
       "page": "/treatments/dental-implants-turkey",
-      "incomingTotal": 42,
+      "incomingTotal": 40,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -865,10 +857,6 @@
           "anchorText": ""
         },
         {
-          "from": "/blog/full-set-veneers-turkey-cost",
-          "anchorText": ""
-        },
-        {
           "from": "/blog/hollywood-smile-turkey-cost",
           "anchorText": ""
         },
@@ -914,10 +902,6 @@
         },
         {
           "from": "/blog/uk-dentist-vs-turkey-dentist",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/veneers-turkey-cost-uk-vs-turkey",
           "anchorText": ""
         },
         {
@@ -1086,7 +1070,7 @@
         },
         {
           "from": "/blog/veneers-turkey-cost-uk-vs-turkey",
-          "anchorText": ""
+          "anchorText": "Veneers Turkey"
         },
         {
           "from": "/blog/why-are-dental-treatments-cheaper-in-turkey",
@@ -1770,7 +1754,7 @@
         },
         {
           "from": "/blog/veneers-turkey-cost-uk-vs-turkey",
-          "anchorText": ""
+          "anchorText": "best veneers in Turkey guide"
         },
         {
           "from": "/guides",
