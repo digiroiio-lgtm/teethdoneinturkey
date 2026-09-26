@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T13:03:09.514Z",
+  "generatedAt": "2026-09-26T08:24:46.020Z",
   "registrySize": 29,
-  "pagesScanned": 96,
+  "pagesScanned": 98,
   "results": [
     {
       "page": "/guides/teeth-in-turkey",
@@ -85,8 +85,8 @@
     },
     {
       "page": "/prices/turkey-teeth-cost",
-      "incomingTotal": 59,
-      "incomingFromHighAuth": 12,
+      "incomingTotal": 60,
+      "incomingFromHighAuth": 13,
       "sources": [
         {
           "from": "/blog/4-8-10-rule-for-veneers",
@@ -222,6 +222,10 @@
         },
         {
           "from": "/finance-options-uk",
+          "anchorText": "Turkey teeth cost guide"
+        },
+        {
+          "from": "/finance-options-uk",
           "anchorText": ""
         },
         {
@@ -329,7 +333,7 @@
     },
     {
       "page": "/finance-options-uk",
-      "incomingTotal": 24,
+      "incomingTotal": 26,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -339,6 +343,10 @@
         {
           "from": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
           "anchorText": ""
+        },
+        {
+          "from": "/blog/can-you-pay-monthly-for-veneers-turkey",
+          "anchorText": "guide to dental finance with bad credit"
         },
         {
           "from": "/blog/can-you-pay-monthly-for-veneers-turkey",
@@ -359,6 +367,10 @@
         {
           "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": "UK dental finance guide"
+        },
+        {
+          "from": "/blog/dental-treatment-turkey-payment-plans",
+          "anchorText": "dental finance with bad credit: what is actually true"
         },
         {
           "from": "/blog/dental-treatment-turkey-payment-plans",
@@ -433,8 +445,8 @@
     },
     {
       "page": "/monthly-payment",
-      "incomingTotal": 33,
-      "incomingFromHighAuth": 4,
+      "incomingTotal": 34,
+      "incomingFromHighAuth": 5,
       "sources": [
         {
           "from": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
@@ -499,6 +511,10 @@
         {
           "from": "/blog/implants-cost-uk-vs-turkey",
           "anchorText": ""
+        },
+        {
+          "from": "/finance-options-uk",
+          "anchorText": "monthly payment table for every treatment"
         },
         {
           "from": "/finance-options-uk",
@@ -1393,7 +1409,7 @@
     },
     {
       "page": "/book-consultation",
-      "incomingTotal": 56,
+      "incomingTotal": 57,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -1521,6 +1537,10 @@
           "anchorText": "Book Free Consultation"
         },
         {
+          "from": "/editorial-policy",
+          "anchorText": "book a free consultation"
+        },
+        {
           "from": "/finance-options-uk",
           "anchorText": "Check My Eligibility"
         },
@@ -1625,12 +1645,16 @@
     },
     {
       "page": "/free-treatment-plan",
-      "incomingTotal": 9,
+      "incomingTotal": 10,
       "incomingFromHighAuth": 5,
       "sources": [
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
           "anchorText": "Free Treatment Plan"
+        },
+        {
+          "from": "/editorial-policy",
+          "anchorText": "free treatment plan request"
         },
         {
           "from": "/finance-options-uk",

@@ -7,6 +7,183 @@ rewritten again.
 
 ---
 
+## 2026-09-26 — FINANCE cluster: bad-credit intent consolidation
+
+### ⚠️ Search Console data was NOT available this run
+
+**The Supermetrics GSC connection expired on 2026-09-17.** Every query returns
+`[TRIAL_EXPIRED]` for team "Team digiroiio" (ID 1943513). There are no Google
+API credentials in the repo as a fallback (`.env.example` holds only Resend and
+a form recipient). **No live GSC data has been readable since 2026-09-17, and
+this blocks the core input of the daily run until it is fixed** — either renew
+the Supermetrics subscription or add direct Search Console API access.
+
+This run therefore worked from the recorded first-party GSC evidence already in
+this file (last complete data: **2026-09-10**) plus the figures captured in
+commit messages. No new positions or impressions could be observed, so **nothing
+below should be read as a measured result** — the before-positions are the
+2026-09-10 ones and are now 16 days stale.
+
+### Log gap 2026-09-12 → 2026-09-25
+
+Three sets of changes were committed in that window and **never recorded here**:
+
+| Date | Commit | What it did |
+|---|---|---|
+| 09-18 | `32f2351` | SEO audit P0/P1/P2 against **354 GSC queries**: title/meta CTR fixes, 9 consolidation redirects, new `/blog/do-turkey-teeth-look-fake` |
+| 09-19 | `9152ce4`…`4793821` | hub→spoke internal link architecture, `LINK_REGISTRY`, authority-leakage fixes |
+| 09-21 | `fe2f1ed`, `6ddc264`, `fa1e540` | crawl/canonical/schema audit, `llms.txt` GEO, editorial policy, Mustafa Akça medical-reviewer entity |
+
+The 354-query dataset that drove the 09-18 audit exists only in that commit
+message. **Future runs: record the GSC numbers here, not only in commit bodies.**
+
+### Today's opportunity selection
+
+Per STEP 18, first on positions 4–20, then FINANCE. The best documented
+striking-distance position in the account remains the bad-credit finance family
+(recorded 2026-09-10):
+
+| Query | URL | Impr | Pos |
+|---|---|---|---|
+| teeth on finance bad credit | `/finance-options-uk` | 15 | **7.6** |
+| teeth on finance bad credit | `/blog/dental-tourism-finance-explained` | 7 | **8.1** |
+| Turkey-finance cluster (8 queries) | `/finance-options-uk` | 119+ | near-zero CTR |
+
+The 09-11 run deferred this ("left to settle" — the page had been rewritten four
+hours earlier). It has now had 15 days, and 8 days since the 09-18 retitle, so
+under the judge-before-rewriting rule it is actionable.
+
+### What was actually wrong
+
+`/finance-options-uk` is the designated owner of the bad-credit intent, but:
+
+1. **No structured data at all** — zero JSON-LD on the FINANCE cluster's money
+   page, despite 14 FAQs rendered as plain server markup. No Article, no
+   BreadcrumbList, no FAQPage. The single largest GEO gap found.
+2. **Bad-credit coverage was one list and one FAQ.** It was honest but thin, and
+   answered none of the real sub-intents (what counts as bad credit, CCJ vs
+   default, what to do after a decline).
+3. **Meta description promised "from £6/month"** — a £200 single veneer over 36
+   months. The same page states a **£500 minimum finance amount**, so the
+   advertised entry point is one the page itself says cannot be financed.
+4. **Intent split 11 ways.** Eleven pages mention bad credit; five carried
+   substantive competing blocks and **four made the claim "all profiles
+   considered" / "we work with providers who consider all profiles"** — which is
+   functionally "everyone qualifies", explicitly banned by STEP 13, and it
+   contradicted the owner page's own honest section.
+
+### Decisions taken
+
+- **OPTIMISE EXISTING — `/finance-options-uk` (MONEY/POWER, priority 9.4/10).**
+  URL, H1 and the five existing honest bad-credit points **deliberately left
+  intact** — that is the ranking content. Everything was additive:
+  - Server-rendered **Article + BreadcrumbList + FAQPage** graph (14 Q&A pairs),
+    verified present in the built HTML, not injected client-side.
+  - Visible breadcrumbs added to the hero.
+  - New **"What counts as bad credit?"** definition + an 8-row table mapping each
+    credit marker (thin file, recent missed payments, satisfied vs unsatisfied
+    default, active CCJ, IVA/DMP, discharged bankruptcy, clustered hard searches)
+    to what it generally means for a decision. Worded as how lenders weigh
+    factors, never as a predicted outcome.
+  - New **"How a deposit changes the decision"** — a labelled *Example Treatment
+    Scenario* on the published £4,500 All-on-4 arch showing £0/£500/£1,000/£2,000
+    deposits → financed amount → 36-month monthly (£125/£111/£97/£69) → total
+    repayable, with a full disclosure block (illustration not a quotation, not a
+    credit offer, subject to status and lender approval, £500–£30,000, 0% APR
+    representative = at least 51% of accepted applicants).
+  - New **"If you are declined"** 5-step ordered list (ask the reason, check all
+    three agencies for errors, do not reapply immediately, reduce the amount
+    borrowed, phase the treatment).
+  - Three new FAQs on the exact sub-intents: what counts as bad credit, CCJ or
+    default, what to do after a decline.
+  - `id="bad-credit"` anchor added for citable deep-linking.
+  - **FIX (factual):** meta description "from £6/month" → "from £82/month",
+    the lowest 36-month figure this page and the homepage both actually quote.
+    157 chars, no truncation.
+- **MERGE-AVOID / YMYL FIX — 5 diluting pages.** No new URL created; the four
+  unsupportable "all profiles considered" claims replaced with accurate wording
+  and pointed at the owner. **Zero remain site-wide** (verified by grep).
+  - `/blog/can-you-pay-monthly-for-teeth-in-turkey` (protected winner — FAQ
+    answer corrected in place, position and page otherwise untouched)
+  - `/blog/dental-treatment-turkey-payment-plans` (two claims in one block)
+  - `/blog/finance-dental-implants-turkey-uk-patients` ("Bad Credit / All
+    profiles considered" table row → "Impaired Credit / case by case, subject to
+    lender approval")
+  - `/monthly-payment` (eligibility bullet)
+  - `/blog/can-you-pay-monthly-for-veneers-turkey` — its H2 **"What If I Have
+    Bad Credit?"** competed head-on with the owner's H2. Re-qualified to
+    "Financing Veneers With an Imperfect Credit History" and made to defer.
+- **DO NOTHING — packages.** `turkey teeth packages` is still split across five
+  URLs with no owner, and the target architecture calls for
+  `/packages/turkey-teeth-packages`. Deferred again: creating a sixth URL on a
+  five-way split is the wrong move, and it should not be done blind with no GSC
+  data to confirm which of the five Google currently prefers.
+- **DO NOTHING — `/finance-options-uk` 36-month card says "From £82/mo"** while
+  the treatment table two sections below shows £78/mo for the £2,800 Hollywood
+  Smile package. £82 is not derivable from any published treatment total; £78 is
+  (£2,800 ÷ 36). Left alone because £82 is the figure used site-wide including
+  the homepage, and changing it here alone would create a new inconsistency.
+  **Next run: reconcile £78 vs £82 across the site in one pass.**
+
+### Technical verification
+
+- `tsc --noEmit` clean. `next lint` clean (3 pre-existing warnings, none in the
+  touched files). Production build clean, 79 routes.
+- Schema confirmed in `.next/server/app/finance-options-uk.html`: 1 × Article,
+  1 × BreadcrumbList, 1 × FAQPage, 14 × Question, 14 × Answer — all server-side.
+- FAQ answer text verified present in the server HTML, not only in the JSON-LD.
+- Internal link audit: 98 pages scanned, 29 registry entries, **0 broken links,
+  0 orphans, 0 missing required links.**
+- The IndexNow ping failed — `api.indexnow.org` is not in this environment's
+  egress allowlist, so the new content was **not** submitted for immediate
+  recrawl.
+
+### ⚠️ Found: `route-lastmod.json` has drifted, and `prebuild` will mis-stamp it
+
+`scripts/update-route-lastmod.mjs` runs automatically as `prebuild`. On this
+run it wanted to bump **35 of 79 routes** to today — but only **6** were
+actually edited today. The other 29 are pages whose content hashes changed in
+the **2026-09-19 and 2026-09-21** commits without `seo:lastmod` being re-run, so
+the manifest went stale: `/`, `/prices/turkey-teeth-cost`,
+`/prices/veneers-turkey-cost`, `/guides/teeth-in-turkey`, every
+`MedicalReviewBadge` page, `/medical-reviewers/mustafa-akca`, and so on.
+
+`route-lastmod.json` was therefore **reset and re-stamped by hand for the 6
+edited routes only**. Stamping the other 29 with today's date would publish an
+artificial freshness signal on pages nobody touched today — the same thing the
+2026-09-08 entry refused to do for a publication date.
+
+**This is a trap for the next run:** anyone who runs `npm run build` and commits
+the result will silently backdate-bump those 29 routes to their build date. The
+correct fix is to set each drifted route's `lastmod` to the date of the commit
+that actually changed it (`git log -1 --format=%cI` per route source), then
+commit the manifest so `prebuild` is a no-op again. Do that as a standalone
+change, not folded into a content run.
+
+### What to check next run
+
+1. **Fix the GSC data feed first — nothing else in this routine works without
+   it.** Renew Supermetrics or add Search Console API credentials.
+2. Did `teeth on finance bad credit` move off **7.6**, and did
+   `/blog/dental-tourism-finance-explained` (8.1) stop competing now that the
+   four diluting pages defer to the owner? This is the cleanest single test
+   available and the account's best commercial query.
+3. Did `/finance-options-uk` earn any **clicks**? The 119-impression Turkey
+   finance cluster had near-zero CTR; the description no longer advertises an
+   unfinanceable £6/month.
+4. Does FAQPage produce rich results, and do AI answer engines start quoting the
+   credit-marker table or the deposit scenario? That is what the GEO work was for.
+5. **Packages is the next build** once there is data to pick the owner from the
+   five competing URLs.
+6. Reconcile the £78 vs £82 monthly figure site-wide.
+7. **Repair the `route-lastmod.json` drift** (29 routes) as its own commit, per
+   the warning above, before it gets bumped to a wrong date by a build.
+8. The 09-18 audit worked from 354 queries — far more than the 16 recorded here
+   on 09-04. Re-pull that breadth once access is restored and write it into this
+   file.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

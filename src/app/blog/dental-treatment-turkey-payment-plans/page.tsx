@@ -103,9 +103,10 @@ export default function PaymentPlansTurkeyPage() {
             <li>Are aged 18 or over</li>
             <li>Are UK residents with a UK bank account</li>
             <li>Have a regular income (employed, self-employed, or pension)</li>
-            <li>Meet the lender&apos;s credit criteria (we work with providers for all credit profiles)</li>
+            <li>Meet the lender&apos;s credit criteria</li>
           </ul>
-          <p>Bad credit, CCJs, or defaults don&apos;t automatically disqualify you — specialist lenders consider all profiles. Pre-qualify to see what&apos;s available in your situation.</p>
+          <p>Bad credit, CCJs and defaults do not automatically disqualify you, but neither are they waved through: approval is the lender&apos;s decision and no provider can guarantee it. An active CCJ is the hardest marker to get past; an older satisfied default carries much less weight. The pre-qualification check is a soft search, so finding out where you stand costs you nothing. For the full breakdown of which credit markers matter, how a deposit changes the decision and what to do if you are declined, see{" "}
+            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">dental finance with bad credit: what is actually true</Link>.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How to Apply</h2>
           <ol className="space-y-3 my-4 list-decimal list-inside">

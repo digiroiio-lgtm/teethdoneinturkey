@@ -116,7 +116,7 @@ export default function PayMonthlyTeethTurkeyPage() {
             {[
               { q: "Is 0% interest available?", a: "Yes, for qualifying applicants. Your credit profile and term length determine eligibility. All options are presented clearly before you commit." },
               { q: "Does applying affect my credit score?", a: "Pre-qualification uses a soft check — no impact. Only a full application creates a footprint on your credit file." },
-              { q: "I have bad credit — can I still apply?", a: "Yes. We work with specialist lenders who consider all profiles. Pre-qualify to see what's available for your situation." },
+              { q: "I have bad credit — can I still apply?", a: "Yes, you can apply, and the pre-qualification check is a soft search that leaves no footprint. Nobody can promise approval with a poor credit history — the decision is the lender's and depends on your circumstances and their criteria on the day. A deposit reduces the amount borrowed, which is the lever that most often changes a borderline decision. Our finance page sets out which credit markers weigh most heavily and what to do if you are declined." },
               { q: "Can I pay off early?", a: "Yes, most plans allow early repayment. Exact terms are confirmed in your credit agreement before you sign." },
             ].map(faq => (
               <div key={faq.q} className="bg-gray-50 rounded-xl p-4 border border-gray-200">

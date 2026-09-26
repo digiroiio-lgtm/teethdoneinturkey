@@ -306,7 +306,7 @@ export default function MonthlyPaymentPage() {
               {[
                 "UK resident, aged 18 or over",
                 "No minimum income requirement for pre-qualification",
-                "Bad credit or CCJ? Specialist options available — we work with providers who consider all profiles",
+                "Bad credit or a CCJ does not rule you out, but no approval can be guaranteed — the soft-search check tells you where you stand",
                 "Employed, self-employed, or benefits: most situations considered",
                 "0% interest available for qualifying applicants on 12- and 24-month terms",
               ].map((item, i) => (

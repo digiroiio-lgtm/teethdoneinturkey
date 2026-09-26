@@ -94,8 +94,10 @@ export default function MonthlyVeneersPage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Is 0% Finance Available?</h2>
           <p>Yes — 0% interest finance is available for qualifying applicants. Eligibility depends on your credit profile and the term chosen. Our team will present all available options clearly before you commit, with no hidden fees.</p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What If I Have Bad Credit?</h2>
-          <p>We work with specialist lenders who consider all credit profiles, including those with imperfect credit history. Pre-qualifying takes 60 seconds and uses a soft check — so you can see what&apos;s available without any impact on your credit file.</p>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Financing Veneers With an Imperfect Credit History</h2>
+          <p>Pre-qualifying takes about 60 seconds and uses a soft check, so you can see where you stand without any impact on your credit file. What nobody can tell you in advance is whether you will be approved — that is the lender&apos;s decision, based on your circumstances and their criteria at the time. Veneers have one advantage here: a full set of 20 at £3,800 is a smaller sum to finance than most implant work, and the amount borrowed is one of the main inputs to the decision. A deposit reduces it further.</p>
+          <p>For which credit markers carry the most weight, how a deposit changes the outcome and the steps that genuinely help after a decline, see our{" "}
+            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">guide to dental finance with bad credit</Link>.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why This Changes Everything</h2>
           <p>Even with finance, veneers in Turkey are dramatically cheaper than the UK. A full set of 20 veneers in Turkey financed over 36 months costs approximately £106/month. The equivalent UK treatment, even if financed, would be £500+/month for the same term. The gap is enormous.</p>

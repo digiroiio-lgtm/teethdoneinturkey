@@ -85,7 +85,7 @@ export default function FinanceImplantsPage() {
                   { type: "0% Interest", term: "12 months", int: "0%", note: "For qualifying applicants" },
                   { type: "Low Rate", term: "24 months", int: "Low APR", note: "Competitive rates for good credit" },
                   { type: "Flexible", term: "36 months", int: "Low APR", note: "Lowest monthly payments" },
-                  { type: "Bad Credit", term: "12–36 months", int: "Specialist rates", note: "All profiles considered" },
+                  { type: "Impaired Credit", term: "12–36 months", int: "Higher APR where offered", note: "Case by case — subject to lender approval" },
                 ].map((r, i) => (
                   <tr key={r.type} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3 font-medium">{r.type}</td>

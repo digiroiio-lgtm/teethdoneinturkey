@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 import CTASection from "@/components/CTASection";
 import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 
@@ -15,10 +16,22 @@ export const revalidate = 86400;
 // The page body already covers Turkey treatment finance — the title mismatch
 // was the only reason Turkey queries produced 0 clicks. Regulatory body
 // wording preserved throughout.
+const SITE_URL = "https://www.teethdoneinturkey.co.uk";
+const PAGE_URL = `${SITE_URL}/finance-options-uk`;
+const TITLE = "Turkey Teeth Finance: Pay Monthly & Payment Plans for UK Patients";
+// The previous description led with "from £6/month", which is a single £200
+// veneer divided over 36 months — a figure this page's own minimum-finance
+// rule (£500) says cannot be financed on its own. Replaced with £82, the
+// lowest 36-month figure the page and the homepage both actually quote.
+const DESCRIPTION =
+  "Pay monthly for Turkey teeth from £82/month at 0% APR representative. Finance £500–£30,000 for veneers, implants and full-mouth treatment. Soft-search check.";
+const DATE_PUBLISHED = "2026-08-28";
+const DATE_MODIFIED = "2026-09-26";
+
 export const metadata: Metadata = {
   alternates: { canonical: "/finance-options-uk" },
-  title: { absolute: "Turkey Teeth Finance: Pay Monthly & Payment Plans for UK Patients" },
-  description: "Pay monthly for Turkey teeth from £6/month. Finance available for veneers, implants and full-mouth treatment. Bad credit considered. 0% APR representative.",
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
 };
 
 const options = [
@@ -104,6 +117,18 @@ const faqs = [
     a: "You can apply, and the pre-qualification check is a soft search that will not affect your credit score. No provider can honestly guarantee approval with a poor credit history, because the decision belongs to the lender and depends on your circumstances and their criteria at the time. Two things genuinely improve the odds: putting down a deposit so less is being borrowed, and financing a lower treatment total in the first place.",
   },
   {
+    q: "What counts as bad credit for dental finance?",
+    a: "There is no single threshold, because each lender sets its own criteria. In practice the things that weigh against an application are missed payments in the last 12 months, unsatisfied defaults, an active County Court Judgment, an ongoing IVA or debt management plan, and several hard credit searches in quick succession. A thin credit file — little borrowing history rather than bad history — is a separate problem and often easier to work around. What matters to the decision is the combination of your file, your income and how much you are asking to borrow, not a score on its own.",
+  },
+  {
+    q: "Can I get Turkey teeth on finance with a CCJ or a default?",
+    a: "It is possible and it is not automatic. A satisfied default from several years ago carries less weight than an unsatisfied one from last year, and an active CCJ is the single hardest marker to get past. No honest answer can be more specific than that, because the decision is the lender's and depends on your full circumstances on the day. The soft-search pre-check tells you where you stand without leaving a footprint, and reducing the amount borrowed with a deposit is the lever that most often changes a borderline outcome.",
+  },
+  {
+    q: "What should I do if my dental finance application is declined?",
+    a: "Do not immediately apply elsewhere — each full application leaves a hard search on your file and several in a row read badly. Instead: ask the lender for the reason, which you are entitled to; check your file with Experian, Equifax or TransUnion for errors and correct them; reduce the amount you need to borrow with a larger deposit or a smaller treatment plan; consider phasing treatment so a smaller sum is financed first; and only then pre-check with another provider using a soft search. Financing £2,500 of a £4,500 arch is a different proposition to financing all of it.",
+  },
+  {
     q: "How much is dental implant finance per month in the UK?",
     a: "It depends on the treatment total rather than on a single rate. On a 36-month 0% APR representative plan, an All-on-4 arch at £4,500 works out from £125 a month and an All-on-6 arch at £5,600 from £156 a month. A single implant from £250 falls below the £500 minimum finance amount, so it would need to be combined with other treatment or paid outright.",
   },
@@ -145,11 +170,56 @@ const faqs = [
   },
 ];
 
+// This page had no structured data at all despite carrying 14 FAQs and being the
+// FINANCE cluster's money page. The FAQs render as plain server markup here (not
+// through FAQSection, which is a client component), so the FAQPage graph below
+// matches text that is genuinely present in the server HTML.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `${PAGE_URL}#article`,
+      headline: TITLE,
+      description: DESCRIPTION,
+      url: PAGE_URL,
+      mainEntityOfPage: PAGE_URL,
+      inLanguage: "en-GB",
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      image: `${SITE_URL}/opengraph-image`,
+      author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "Turkey Teeth Finance", item: PAGE_URL },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      mainEntity: faqs.map(f => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
+};
+
 export default function FinanceOptionsUKPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
+          <div className="mb-4">
+            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Turkey Teeth Finance" }]} />
+          </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Can You Pay Monthly for Turkey Teeth? Finance &amp; Payment Plans Explained</h1>
           <p className="text-xl text-blue-200">Yes — spread the cost of dental treatment in Turkey over 12, 24 or 36 months. 0% APR representative plans from £82/month, bad credit considered.</p>
         </div>
@@ -336,7 +406,7 @@ export default function FinanceOptionsUKPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Dental Finance with Bad Credit: What Is Actually True</h2>
+            <h2 id="bad-credit" className="text-2xl font-bold text-gray-900 mb-4">Dental Finance with Bad Credit: What Is Actually True</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               &ldquo;Bad credit dental finance&rdquo; is widely advertised, and most of what is promised cannot be
               guaranteed by anyone. Here is the honest position:
@@ -363,6 +433,108 @@ export default function FinanceOptionsUKPage() {
                 <span><strong>A lower total is the most reliable lever.</strong> Treatment in Turkey costs 65–90% less than the UK private equivalent, so the sum you need to finance is smaller to begin with — which is often what turns a borderline application around.</span>
               </li>
             </ul>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-10 mb-3">What counts as bad credit?</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              There is no single score that makes an application &ldquo;bad credit&rdquo;. Lenders read your credit
+              file alongside your income and the amount you are asking to borrow, and each lender sets its own
+              criteria. The table below lists the markers that carry the most weight and what each one generally
+              means for a dental finance application. It describes how lenders weigh these factors; it is not a
+              prediction of your own decision.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                <thead className="bg-gray-100 text-gray-700">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-semibold">Credit marker</th>
+                    <th className="px-4 py-3 text-left font-semibold">What it generally means for a dental finance application</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Thin or no credit file", "Not a negative history — simply little for a lender to assess. A deposit and evidence of regular income usually carry more weight here than the file itself."],
+                    ["Missed payments in the last 12 months", "Recent and clearly visible. These weigh more heavily than older markers, and more heavily again on larger sums."],
+                    ["Satisfied default, two or more years old", "Stays on your file for six years, but its weight falls away over time. Often workable, particularly on a smaller financed amount."],
+                    ["Unsatisfied default", "Harder. The outstanding balance is usually the lender’s concern rather than the default itself."],
+                    ["Active County Court Judgment (CCJ)", "The hardest single marker to get past. Many mainstream lenders decline automatically while a CCJ is active."],
+                    ["IVA or debt management plan in progress", "Usually a decline with mainstream lenders, and taking on further credit during a formal arrangement may breach its terms. Speak to your insolvency practitioner or plan provider before applying."],
+                    ["Discharged bankruptcy", "Options narrow but do not close. Time elapsed since discharge generally matters more than the bankruptcy itself."],
+                    ["Several hard searches in quick succession", "Counts against you. Multiple recent full applications suggest difficulty obtaining credit, which is why soft-search pre-checks exist."],
+                  ].map(([marker, meaning]) => (
+                    <tr key={marker} className="border-t border-gray-200 align-top">
+                      <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap sm:whitespace-normal">{marker}</td>
+                      <td className="px-4 py-3 text-gray-700">{meaning}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-10 mb-3">How a deposit changes the decision</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              A deposit is the one lever entirely within your control. It reduces the sum being borrowed, which is
+              one of the main inputs to the lender&apos;s decision, and it lowers the monthly payment at the same
+              time. The figures below use the All-on-4 single-arch price published elsewhere on this site and show
+              nothing more than the treatment total less the deposit, divided across 36 payments.
+            </p>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-4">
+              <p className="text-xs font-extrabold uppercase tracking-wide text-amber-800 mb-3">Example Treatment Scenario — illustrative, not a credit offer</p>
+              <p className="text-sm text-gray-700 mb-4">
+                Treatment: All-on-4 implants, one arch, all-inclusive — <strong>£4,500</strong>. Term: 36 months at
+                0% APR representative.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm bg-white border border-amber-200 rounded-lg overflow-hidden">
+                  <thead className="bg-amber-100/70 text-gray-800">
+                    <tr>
+                      <th className="px-4 py-2.5 text-left font-semibold">Deposit</th>
+                      <th className="px-4 py-2.5 text-left font-semibold">Amount financed</th>
+                      <th className="px-4 py-2.5 text-left font-semibold">Monthly over 36 months</th>
+                      <th className="px-4 py-2.5 text-left font-semibold">Total repayable</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["£0", "£4,500", "£125", "£4,500"],
+                      ["£500", "£4,000", "£111", "£4,000"],
+                      ["£1,000", "£3,500", "£97", "£3,500"],
+                      ["£2,000", "£2,500", "£69", "£2,500"],
+                    ].map(row => (
+                      <tr key={row[0]} className="border-t border-amber-100">
+                        <td className="px-4 py-2.5 font-medium text-gray-900">{row[0]}</td>
+                        <td className="px-4 py-2.5 text-gray-700">{row[1]}</td>
+                        <td className="px-4 py-2.5 text-gray-700">{row[2]}/mo</td>
+                        <td className="px-4 py-2.5 text-gray-700">{row[3]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-600 mt-3 leading-relaxed">
+                An illustration only, not a quotation and not a credit offer. Monthly figures are the financed amount
+                divided by 36 and are rounded. Finance is subject to status, affordability and lender approval, is
+                available from £500 to £30,000, and not all applicants will be accepted or offered the
+                representative 0% rate. 0% APR representative means at least 51% of accepted applicants receive that
+                rate; the APR you are offered is shown before you commit. Your own treatment total depends on a
+                clinical assessment.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-10 mb-3">If you are declined: what actually changes the outcome</h3>
+            <ol className="space-y-3 text-gray-700 list-decimal pl-5">
+              <li><strong>Ask for the reason.</strong> Lenders will tell you the main factor behind a decline. Without it you are guessing at which of the markers above applied to you.</li>
+              <li><strong>Check your file for errors.</strong> Experian, Equifax and TransUnion each hold a separate file and they do not always agree. Incorrect defaults and addresses are common and can be disputed.</li>
+              <li><strong>Do not reapply immediately.</strong> Each full application records a hard search. Several in quick succession is itself a reason to decline. Wait, and use soft-search pre-checks to compare.</li>
+              <li><strong>Reduce the amount borrowed.</strong> A larger deposit, or a treatment plan with fewer units, changes the proposition rather than just the monthly figure.</li>
+              <li><strong>Phase the treatment.</strong> Financing one arch now and the second later means two smaller decisions instead of one large one. Whether that is clinically sensible is a question for your treatment plan, not your credit file.</li>
+            </ol>
+            <p className="text-gray-700 leading-relaxed mt-5">
+              If the monthly figure is what you are weighing rather than eligibility, the{" "}
+              <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">monthly payment table for every treatment</Link>{" "}
+              sets out what each plan costs per month, and the{" "}
+              <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth cost guide</Link>{" "}
+              shows the treatment totals those figures are derived from.
+            </p>
           </div>
 
           <div>
