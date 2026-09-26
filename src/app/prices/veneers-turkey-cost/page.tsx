@@ -3,15 +3,31 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import AtAGlance from "@/components/geo/AtAGlance";
+import ComparisonTable from "@/components/geo/ComparisonTable";
+import DecisionTree from "@/components/geo/DecisionTree";
+import EvidenceBlock from "@/components/geo/EvidenceBlock";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import NotForYou from "@/components/geo/NotForYou";
+import PageFreshness from "@/components/geo/PageFreshness";
+import PriceRows from "@/components/geo/PriceRows";
+import QuickAnswer from "@/components/geo/QuickAnswer";
+import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice, ukRange } from "@/lib/prices";
+import { VENEER_INTENT_OWNERS, VENEER_TRIP_BUDGET, veneerFollowUps } from "@/lib/veneer-cluster";
 
 export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/veneers-turkey-cost`;
 const TITLE = "Veneers Turkey Cost 2026: Price Per Tooth in Pounds for UK Patients";
-const DESCRIPTION =
-  "Veneers Turkey 2026: E-max from £190/tooth, zirconia crowns from £130. Prices in pounds, UK comparison, what affects the cost, and monthly payment options.";
-const DATE_MODIFIED = "2026-09-08";
+const emax = getPrice("emax-veneer");
+const zirconia = getPrice("zirconia-crown");
+const composite = getPrice("composite-veneer");
+const hollywood20 = getPrice("hollywood-20");
+const hollywood24 = getPrice("hollywood-24");
+const DESCRIPTION = `Veneers in Turkey 2026: E-max from ${gbp(emax.turkeyFromGBP)}/tooth, composite from ${gbp(composite.turkeyFromGBP)}, zirconia crowns ${gbp(zirconia.turkeyFromGBP)}. UK comparison, full-set totals, what's included.`;
+const DATE_PUBLISHED = "2026-05-29";
+const DATE_MODIFIED = "2026-09-25";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/veneers-turkey-cost" },
@@ -29,23 +45,27 @@ const included = [
 ];
 
 const notIncluded = [
-  { item: "Return flights from the UK", cost: "Typically £100–£250" },
+  { item: "Return flights from the UK", cost: "Typically £80–£200" },
   { item: "Hotel, if not on a package", cost: "Package prices include hotel; standalone veneer treatment does not" },
   { item: "Any treatment needed first", cost: "Fillings, root canal work or gum treatment are priced separately" },
   { item: "Optional extras", cost: "Whitening of remaining natural teeth, priced on request" },
 ];
 
-// Totals are the base per-tooth rates above multiplied out (E-max £190,
-// zirconia £130, UK E-max £800), not separately negotiated package prices — the
-// all-inclusive Hollywood Smile packages are called out beneath the table so the
-// two are not conflated.
+// Totals are the per-tooth rates from src/lib/prices.ts multiplied out, not
+// separately negotiated package prices — the all-inclusive Hollywood Smile
+// packages are called out beneath the table so the two are not conflated.
 const countRows = [
-  { units: "8 veneers", emax: "From £1,520", zirconia: "From £1,040", uk: "£6,400+" },
-  { units: "10 veneers", emax: "From £1,900", zirconia: "From £1,300", uk: "£8,000+" },
-  { units: "16 veneers", emax: "From £3,040", zirconia: "From £2,080", uk: "£12,800+" },
-  { units: "20 veneers (full smile line)", emax: "From £3,800", zirconia: "From £2,600", uk: "£16,000+" },
-  { units: "24 veneers (upper + lower)", emax: "From £4,560", zirconia: "From £3,120", uk: "£19,200+" },
-];
+  { n: 8, label: "8 veneers" },
+  { n: 10, label: "10 veneers" },
+  { n: 16, label: "16 veneers" },
+  { n: 20, label: "20 veneers (full smile line)" },
+  { n: 24, label: "24 veneers (upper + lower)" },
+].map(({ n, label }) => ({
+  units: label,
+  emax: `From ${gbp(emax.turkeyFromGBP * n)}`,
+  zirconia: `From ${gbp(zirconia.turkeyFromGBP * n)}`,
+  uk: `${gbp(emax.ukRangeGBP.min * n)}+`,
+}));
 
 const faqs = [
   {
@@ -82,7 +102,7 @@ const faqs = [
   },
   {
     question: "Can I pay for veneers in Turkey monthly?",
-    answer: "Yes. Monthly payment plans are available from £82/month with 0% APR representative over 12, 24 or 36 months, subject to an affordability and credit assessment. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
+    answer: "Yes. Monthly payment plans are available at 0% APR representative over 12 or 24 months — 20 E-max veneers are about £159 a month over 24 months — or over 36 months with interest, subject to an affordability and credit assessment. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
   },
 ];
 
@@ -96,8 +116,11 @@ const jsonLd = {
       name: TITLE,
       description: DESCRIPTION,
       isPartOf: { "@id": `${SITE_URL}/#website` },
-      about: { "@id": `${SITE_URL}/#business` },
+      about: { "@type": "MedicalProcedure", name: "Dental veneers" },
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      isBasedOn: `${SITE_URL}/turkey-dental-price-index`,
       inLanguage: "en-GB",
+      datePublished: DATE_PUBLISHED,
       dateModified: DATE_MODIFIED,
     },
     {
@@ -122,44 +145,45 @@ export default function VeneersCostPage() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">How Much Do Veneers Cost in Turkey? 2026 UK Price Guide</h1>
           <p className="text-xl text-blue-200">Everything you need to know about veneer prices in Turkey</p>
-          <p className="mt-3 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
+          <div className="mt-3">
+            <PageFreshness published="29 May 2026" reviewed="25 September 2026" pricingChecked={PRICES_LAST_VERIFIED_LABEL} className="text-blue-200" />
+          </div>
         </div>
       </div>
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">How Much Do Veneers Cost in Turkey?</h2>
-            <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
-              Porcelain (E-max) veneers in Turkey cost from <strong>£190 per tooth</strong>, zirconia crowns from <strong>£130 per tooth</strong>, and composite veneers from <strong>£80 per tooth</strong>. The equivalent UK private price is roughly £800 to £1,000 for a porcelain veneer, so a full set of 20 works out at about £3,800 in Turkey against £16,000 or more in the UK. Flights are extra; package prices include hotel and transfers.
+            <QuickAnswer question="How much do veneers cost in Turkey?">
+              <p>
+                Porcelain (E-max) veneers in Turkey cost from {gbp(emax.turkeyFromGBP)} per tooth and composite veneers
+                from {gbp(composite.turkeyFromGBP)} per tooth. Zirconia units — often sold as &ldquo;zirconium
+                veneers&rdquo; but almost always crowns — cost from {gbp(zirconia.turkeyFromGBP)}. A UK private E-max
+                veneer is typically {ukRange(emax)}, so a full set of 20 is from {gbp(emax.turkeyFromGBP * 20)} in Turkey
+                against {gbp(emax.ukRangeGBP.min * 20)} or more in the UK. Veneers need one trip of 5–7 days; flights are
+                never included, and hotel is included only in package prices.
+              </p>
+            </QuickAnswer>
+
+            <AtAGlance
+              facts={[
+                { label: "Pricing checked", value: PRICES_LAST_VERIFIED_LABEL },
+                { label: "E-max veneer", value: `From ${gbp(emax.turkeyFromGBP)}/tooth` },
+                { label: "Composite veneer", value: `From ${gbp(composite.turkeyFromGBP)}/tooth` },
+                { label: "Zirconia crown", value: `${gbp(zirconia.turkeyFromGBP)}/tooth` },
+                { label: "Trips to Turkey", value: "1 (5–7 days)" },
+                { label: "Flights included", value: "No" },
+                { label: "Hotel included", value: "Packages only" },
+                { label: "Tooth removed (E-max)", value: "About 0.3–0.7mm" },
+              ]}
+            />
+
+            <h2 id="prices" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Veneer prices in Turkey vs the UK</h2>
+            <PriceRows records={[emax, composite, zirconia, hollywood20, hollywood24]} caption="Veneer and crown prices: Turkey vs UK private" />
+            <p className="text-xs text-gray-500">
+              Indicative partner-clinic list prices, checked {PRICES_LAST_VERIFIED_LABEL}. The difference column compares
+              treatment fees only and excludes travel. Full dataset:{" "}
+              <Link href="/turkey-dental-price-index" className="text-[#1e40af] hover:underline">Turkey Dental Price Index 2026</Link>.
             </p>
-            <div className="overflow-x-auto rounded-2xl shadow-md">
-              <table className="w-full bg-white text-sm">
-                <thead>
-                  <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
-                    <th className="px-4 py-3 text-left">Veneer Type</th>
-                    <th className="px-4 py-3 text-right">UK Price</th>
-                    <th className="px-4 py-3 text-right">Turkey Price</th>
-                    <th className="px-4 py-3 text-right">Saving</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { type: "Zirconia Crown", uk: "£1,000–£1,500", turkey: "£130", saving: "~90%" },
-                    { type: "E-max Porcelain Veneer", uk: "£800–£1,000", turkey: "£190–£220", saving: "78%" },
-                    { type: "Composite (direct)", uk: "£300–£500", turkey: "£80–£120", saving: "75%" },
-                    { type: "Hollywood Smile 20 Crowns (package)", uk: "£20,000–£30,000", turkey: "£2,800", saving: "~87%" },
-                    { type: "Hollywood Smile 24 Crowns (package)", uk: "£24,000–£36,000", turkey: "£3,100", saving: "~87%" },
-                  ].map((r, i) => (
-                    <tr key={r.type} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                      <td className="px-4 py-3 font-medium">{r.type}</td>
-                      <td className="px-4 py-3 text-right text-red-500 line-through">{r.uk}</td>
-                      <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.turkey}</td>
-                      <td className="px-4 py-3 text-right"><span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-bold">Save {r.saving}</span></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Cost by Number of Veneers</h2>
@@ -193,7 +217,7 @@ export default function VeneersCostPage() {
             </div>
             <p className="text-sm text-gray-500 mt-3">
               At the 20 and 24-unit level, compare these clinical-only figures against the all-inclusive Hollywood Smile packages
-              (£2,800 for 20 zirconia crowns, £3,100 for 24), which bundle hotel accommodation and VIP transfers into the price. For
+              ({gbp(hollywood20.turkeyFromGBP)} for 20 zirconia crowns, {gbp(hollywood24.turkeyFromGBP)} for 24), which bundle hotel accommodation and VIP transfers into the price. For
               a full set, the package route is usually the cheaper way to buy the same crown work.{" "}
               <Link href="/prices/hollywood-smile-turkey-package" className="text-[#1e40af] font-semibold underline">See the package breakdown</Link>.
             </p>
@@ -209,7 +233,7 @@ export default function VeneersCostPage() {
             <p className="text-gray-700 leading-relaxed mb-4">
               The distinction that does affect you is not the spelling but the restoration type. A zirconia unit is normally a{" "}
               <strong>crown</strong>, which encircles the whole tooth, and not a veneer, which is a facing bonded to the front
-              surface only. That is why zirconia is quoted lower per unit than E-max at £130 against £190: it is a different
+              surface only. That is why zirconia is quoted lower per unit than E-max at {gbp(zirconia.turkeyFromGBP)} against {gbp(emax.turkeyFromGBP)}: it is a different
               procedure, and it removes considerably more of your natural tooth. Zirconia is the harder-wearing choice if you grind
               your teeth; E-max is the more translucent choice and preserves more tooth structure.
             </p>
@@ -274,17 +298,68 @@ export default function VeneersCostPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Total Trip Cost and Paying Monthly</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Veneer treatment is normally completed in a single trip of 5 to 7 days, so the realistic total is the treatment price plus return flights and, where hotel is not bundled, accommodation. Even adding £500 to £700 for a week, a full E-max set remains a fraction of the UK private equivalent. See{" "}
+              Veneer treatment is normally completed in a single trip of 5 to 7 days, so the realistic total is the{" "}
+              <Link href="/methodology#total-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Treatment Total Cost</Link>:
+              the treatment price, plus travel — an illustrative {gbp(VENEER_TRIP_BUDGET.min)}–{gbp(VENEER_TRIP_BUDGET.max)} for
+              a 6-night trip including flights and hotel — plus a follow-up allowance in case a veneer needs attention
+              after you are home. Because there is only one trip, travel is a small share of the total for a full set
+              and a large share for one or two veneers. See{" "}
               <Link href="/travel-to-turkey/how-long-stay-turkey-dental" className="text-[#1e40af] font-semibold hover:underline">how long you need to stay</Link>{" "}
               for the day by day breakdown.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Spreading the cost is available from £82/month with 0% APR representative over 12, 24 or 36 months, subject to eligibility. See{" "}
+              Spreading the cost is available at 0% APR representative over 12 or 24 months (20 E-max veneers: about £159 a month over 24 months), or over 36 months with interest, subject to eligibility. See{" "}
               <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">monthly payment options</Link>{" "}
               or estimate your own combination with the{" "}
               <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">price calculator</Link>.
             </p>
           </div>
+
+          <ComparisonTable
+            id="turkey-vs-uk"
+            title="Veneers in Turkey vs the UK: trade-offs beyond price"
+            options={["Turkey", "UK private"]}
+            rows={[
+              { factor: "E-max veneer fee", values: [`From ${gbp(emax.turkeyFromGBP)} per tooth`, `${ukRange(emax)} per tooth`] },
+              { factor: "Time", values: ["One trip of 5–7 days", "Several appointments over weeks, near home"] },
+              { factor: "Time to review temporaries", values: ["A few days in Turkey", "Usually longer, between appointments"] },
+              { factor: "A chipped or debonded veneer", values: ["Return trip, or pay a UK dentist", "Same practice, nearby"] },
+              { factor: "Regulator", values: ["Turkish Ministry of Health", "General Dental Council (GDC)"] },
+              { factor: "Best suited to", values: ["Healthy teeth and gums, a planned full set", "One or two veneers, or teeth needing other work first"] },
+            ]}
+            caption="Turkey fees from the partner-clinic price list; UK ranges are typical private prices. See methodology."
+          />
+
+          <NotForYou
+            title="Who veneers in Turkey may not suit"
+            items={[
+              "People with untreated gum disease or decay — these need treating first, and veneers placed on an unhealthy base fail sooner.",
+              "Heavy tooth grinders who will not wear a night guard, because grinding is a common cause of chipped and debonded veneers.",
+              "Anyone who has not decided how many teeth they want treated: preparing a tooth for porcelain is irreversible, so the number should be settled before travelling.",
+              "Patients wanting one or two veneers, where a trip's travel cost can take most of the saving.",
+            ]}
+          />
+
+          <DecisionTree
+            title="Is Turkey the right choice for your veneers?"
+            steps={[
+              { condition: "you want 8 or more veneers on healthy teeth", action: "the fee difference usually covers the trip many times over; compare material, lab and dentist, not just price." },
+              { condition: "you are being quoted zirconia units", action: "ask whether they are veneers or crowns — crowns remove far more tooth. Read the veneers-or-crowns guide first." },
+              { condition: "you want one or two veneers", action: "add the trip cost to the Turkey fee and compare with a UK quote; the saving may be small." },
+              { condition: "you have gum problems, decay or a bite problem", action: "have a dental assessment in the UK first; those need treating before any veneer work." },
+            ]}
+          />
+
+          <EvidenceBlock
+            items={[
+              { claim: `E-max from ${gbp(emax.turkeyFromGBP)}, composite from ${gbp(composite.turkeyFromGBP)}, zirconia crown ${gbp(zirconia.turkeyFromGBP)}`, basis: "Partner clinic list prices — Turkey Dental Price Index", href: "/turkey-dental-price-index", checked: PRICES_LAST_VERIFIED_LABEL },
+              { claim: `UK E-max veneer ${ukRange(emax)}`, basis: "Typical UK private ranges", href: "/methodology#sources", checked: PRICES_LAST_VERIFIED_LABEL },
+              { claim: "Full-set totals", basis: "Calculated: per-tooth price × number of teeth", href: "/methodology#calculation", checked: PRICES_LAST_VERIFIED_LABEL },
+              { claim: `Trip budget ${gbp(VENEER_TRIP_BUDGET.min)}–${gbp(VENEER_TRIP_BUDGET.max)}`, basis: "Illustrative editorial estimate, not a quote", checked: "September 2026" },
+            ]}
+          />
+
+          <FollowUpQuestions items={veneerFollowUps(VENEER_INTENT_OWNERS.cost)} />
 
           <div className="flex gap-4 flex-wrap">
             <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get My Veneer Quote</Link>

@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 const posts = [
   // Finance cluster (growth hack - highlighted)
-  { href: "/blog/can-you-pay-monthly-for-teeth-in-turkey", title: "Can You Pay Monthly for Teeth in Turkey?", excerpt: "Yes — spread the cost of dental treatment in Turkey from £82/month with UK-based finance plans.", date: "January 2026", tag: "Finance" },
+  { href: "/blog/can-you-pay-monthly-for-teeth-in-turkey", title: "Can You Pay Monthly for Teeth in Turkey?", excerpt: "Yes — spread the cost of dental treatment in Turkey over 12 or 24 months at 0% APR with UK-based finance plans.", date: "January 2026", tag: "Finance" },
   { href: "/blog/dental-treatment-turkey-payment-plans", title: "Dental Treatment Turkey Payment Plans", excerpt: "How payment plans work for Turkey dental treatment. Everything UK patients need to know about spreading costs.", date: "January 2026", tag: "Finance" },
-  { href: "/blog/finance-dental-implants-turkey-uk-patients", title: "Finance Dental Implants Turkey – UK Patient Guide", excerpt: "How to finance dental implants in Turkey. Monthly options from £54/month for single implants.", date: "January 2026", tag: "Finance" },
+  { href: "/blog/finance-dental-implants-turkey-uk-patients", title: "Finance Dental Implants Turkey – UK Patient Guide", excerpt: "How to finance dental implants in Turkey: an All-on-4 arch is about £188 a month over 24 months at 0% APR.", date: "January 2026", tag: "Finance" },
   { href: "/blog/dental-tourism-finance-explained", title: "Dental Tourism Finance Explained", excerpt: "A complete guide to funding dental treatment abroad — monthly plans, loans, 0% credit, and which to choose.", date: "January 2026", tag: "Finance" },
   // Core cluster
   { href: "/blog/why-are-dental-treatments-cheaper-in-turkey", title: "Why Are Dental Treatments Cheaper in Turkey?", excerpt: "The real reason dental work costs 70–80% less in Turkey. It's not lower quality — it's lower overheads.", date: "January 2026", tag: "Guide" },
@@ -24,7 +24,7 @@ const posts = [
   { href: "/blog/full-set-veneers-turkey-cost", title: "Full Set of Veneers in Turkey: Cost Breakdown 2026", excerpt: "Exactly how much a full set of veneers costs in Turkey — 8, 10, 16, or 20 veneers, all-in including travel.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/are-veneers-in-turkey-worth-it", title: "Are Veneers in Turkey Worth It?", excerpt: "An honest assessment of the quality, savings, risks, and overall value of Turkey veneers for UK patients.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/risks-of-veneers-in-turkey", title: "Risks of Veneers in Turkey: What UK Patients Should Know", excerpt: "The honest truth about what can go wrong with veneers in Turkey and how to minimise every risk.", date: "January 2026", tag: "Safety" },
-  { href: "/blog/can-you-pay-monthly-for-veneers-turkey", title: "Can You Pay Monthly for Veneers in Turkey?", excerpt: "Yes — a full set of 20 veneers in Turkey financed over 36 months from £106/month.", date: "January 2026", tag: "Finance" },
+  { href: "/blog/can-you-pay-monthly-for-veneers-turkey", title: "Can You Pay Monthly for Veneers in Turkey?", excerpt: "Yes — a full set of 20 E-max veneers in Turkey is about £159 a month over 24 months at 0% APR.", date: "January 2026", tag: "Finance" },
   { href: "/blog/4-8-10-rule-for-veneers", title: "The 4-8-10 Rule for Veneers Explained", excerpt: "What the 4-8-10 rule means for veneer planning and how it applies to your Turkey treatment.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/composite-vs-porcelain-veneers-turkey", title: "Composite vs Porcelain Veneers Turkey", excerpt: "A clear comparison of composite and porcelain veneers in Turkey — cost, durability, and which is right for you.", date: "January 2026", tag: "Veneers" },
   // Implants cluster
@@ -39,9 +39,9 @@ const posts = [
   // UK vs Turkey comparison cluster
   { href: "/blog/implants-cost-uk-vs-turkey", title: "Dental Implants Cost: UK vs Turkey Compared", excerpt: "A side-by-side price comparison of dental implants in the UK and Turkey, including what each quote actually covers.", date: "January 2026", tag: "Comparison" },
   { href: "/blog/full-mouth-implants-uk-vs-turkey", title: "Full Mouth Dental Implants Turkey Cost", excerpt: "All-on-4, All-on-6 and full-set implant prices in Turkey, what the package covers, and how the cost compares with the UK.", date: "September 2026", tag: "Implants" },
-  { href: "/blog/hollywood-smile-uk-vs-turkey", title: "Hollywood Smile Cost: UK vs Turkey", excerpt: "20 zirconia crowns from £2,800 in Turkey vs £15,000+ in the UK — what's included on each side of the comparison.", date: "January 2026", tag: "Comparison" },
+  { href: "/blog/hollywood-smile-uk-vs-turkey", title: "Hollywood Smile Cost: UK vs Turkey", excerpt: "20 zirconia crowns from £2,800 in Turkey (incl. hotel) vs £20,000–£30,000 privately in the UK — all-in totals with flights, and when crowns are not the right choice.", date: "January 2026", tag: "Comparison" },
   // Travel & cost cluster
-  { href: "/blog/hollywood-smile-turkey-cost", title: "Hollywood Smile Turkey Cost 2026", excerpt: "Full cost breakdown for a Hollywood Smile in Turkey. From £2,800 for 20 zirconia crowns vs £15,000+ in the UK.", date: "January 2026", tag: "Treatments" },
+  { href: "/blog/hollywood-smile-turkey-cost", title: "Hollywood Smile Turkey Cost 2026", excerpt: "What a Hollywood Smile is — 20 or 24 zirconia crowns from £2,800 incl. hotel — how much tooth is removed, and how to get a natural result.", date: "January 2026", tag: "Treatments" },
   { href: "/blog/antalya-vs-istanbul-dental-clinics", title: "Antalya vs Istanbul for Dental Treatment", excerpt: "Which Turkish city is better for your dental treatment? An honest comparison for UK patients.", date: "January 2026", tag: "Travel" },
   { href: "/blog/dental-holiday-packages-turkey", title: "Dental Holiday Packages Turkey", excerpt: "How dental holiday packages work — what's included, how much they cost, and how to book.", date: "January 2026", tag: "Travel" },
   // Existing posts

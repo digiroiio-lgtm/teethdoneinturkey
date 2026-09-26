@@ -115,7 +115,10 @@ export default function EditorialPolicyPage() {
                   private practice rate cards; individual UK practice prices vary</li>
             </ul>
             <p className="text-gray-600 leading-relaxed mt-4">
-              Each price guide page carries the date it was last verified. For a current personalised
+              Each price guide page carries the date it was last verified. Sources, inclusions, the
+              comparison calculation and the Turkey Treatment Total Cost framework are documented on the{" "}
+              <Link href="/methodology" className="text-blue-700 underline">price and data methodology</Link>{" "}
+              page. For a current personalised
               quote, use the{" "}
               <Link href="/free-treatment-plan" className="text-blue-700 underline">
                 free treatment plan request

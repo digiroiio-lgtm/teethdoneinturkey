@@ -40,11 +40,11 @@ const toc = [
 ];
 
 const ukVsTurkeyRows = [
-  { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "£190–£250", monthly: "From £6/mo" },
-  { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "£3,800–£5,000", monthly: "From £106/mo" },
-  { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£420–£600", monthly: "From £14/mo" },
-  { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,500–£5,500", monthly: "From £125/mo" },
-  { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "From £5,600", monthly: "From £156/mo" },
+  { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "From £190", monthly: "Below £500 minimum" },
+  { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "From £3,800", monthly: "£159/mo" },
+  { treatment: "Single Dental Implant", uk: "£2,000–£4,500", turkey: "£250–£930", monthly: "Below £500 minimum (Osstem)" },
+  { treatment: "All-on-4 (per arch)", uk: "£15,000+", turkey: "From £4,500", monthly: "£188/mo" },
+  { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "From £5,600", monthly: "£234/mo" },
 ];
 
 const faqs = [
@@ -61,7 +61,7 @@ const faqs = [
   {
     question: "Can I delay root canal treatment to save up?",
     answer:
-      "Delaying root canal on an infected tooth increases the risk of the infection progressing to an abscess, bone loss, and the tooth becoming unrestorable — meaning extraction anyway, at greater overall cost. If you need time to save, request a free treatment plan to see what monthly finance would look like (typically from £10/month over 36 months for root canal plus crown in Turkey), and ask your dentist to seal the tooth temporarily to slow progression while you arrange finance. Read the Can't Afford a Root Canal UK guide for full options.",
+      "Delaying root canal on an infected tooth increases the risk of the infection progressing to an abscess, bone loss, and the tooth becoming unrestorable — meaning extraction anyway, at greater overall cost. If you need time to save, request a free treatment plan to see what monthly finance would look like (finance starts at £500, at 0% over 12 or 24 months for root canal plus crown in Turkey), and ask your dentist to seal the tooth temporarily to slow progression while you arrange finance. Read the Can't Afford a Root Canal UK guide for full options.",
   },
   {
     question: "I can't afford a private dentist in the UK. What are my options?",
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     question: "Can I get 0% finance for dental implants or veneers?",
-    answer: "0% representative APR finance is available for treatment booked through this site, typically from £82/month over 12, 24 or 36 months, covering veneers, implants, All-on-4/All-on-6 and full smile makeovers. Eligibility depends on an affordability and credit assessment; a soft-search pre-qualification check lets you see an indicative decision without it appearing on your credit file.",
+    answer: "0% representative APR finance is available for treatment booked through this site, at 0% over 12 or 24 months (36-month plans carry interest), covering veneers, implants, All-on-4/All-on-6 and full smile makeovers. Eligibility depends on an affordability and credit assessment; a soft-search pre-qualification check lets you see an indicative decision without it appearing on your credit file.",
   },
   {
     question: "What if I have a poor credit history? Can I still get dental finance?",
@@ -148,7 +148,7 @@ export default function CantAffordDentalTreatmentUKPage() {
             items={[
               "NHS charges in England are fixed at £27.90, £76.60 or £306.80 per course of treatment (from 1 April 2026), but veneers, whitening and (in almost all cases) implants are not covered.",
               "UK private dental prices for implants and veneers are frequently several times the NHS charge, which is why payment plans and finance exist for private work.",
-              "0% representative APR finance from £82/month is one way to spread a UK-priced quote or a Turkey treatment plan.",
+              "0% representative APR finance over 12 or 24 months is one way to spread a UK-priced quote or a Turkey treatment plan.",
               "The same implant and veneer brands used in UK practices are typically 65 to 90 percent cheaper in Turkey, even after flights and accommodation.",
               "No dental finance option should ever promise guaranteed approval. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
             ]}
@@ -169,7 +169,7 @@ export default function CantAffordDentalTreatmentUKPage() {
 
           <h2 id="payment-plans" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Dental Payment Plans</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A dental payment plan lets you spread a specific treatment&apos;s cost over fixed monthly instalments instead of paying the full amount upfront. For treatment booked through this site, 0% representative APR finance is available from £82/month over 12, 24 or 36 months, with a soft-search pre-qualification step that will not affect your credit score. See{" "}
+            A dental payment plan lets you spread a specific treatment&apos;s cost over fixed monthly instalments instead of paying the full amount upfront. For treatment booked through this site, 0% representative APR finance is available over 12 or 24 months (36-month plans carry interest), with a soft-search pre-qualification step that will not affect your credit score. See{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">Monthly Payment</Link>{" "}
             for treatment-by-treatment monthly figures.
           </p>
@@ -219,7 +219,7 @@ export default function CantAffordDentalTreatmentUKPage() {
 
           <h2 id="monthly-cost" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What Treatment Actually Costs Per Month</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Whichever route you take, the practical question is usually the monthly figure. On this site, financed Turkey treatment starts from £6/month for a single veneer and £14/month for a single implant, rising to £150/month for a full All-on-6 arch, all on a 36-month 0% plan. Use the{" "}
+            Whichever route you take, the practical question is usually the monthly figure. On this site, at 0% over 24 months, 20 E-max veneers come to £159/month, one All-on-4 arch to £188/month and one All-on-6 arch to £234/month. Finance starts at £500, so a single veneer or implant is usually financed with other treatment. Use the{" "}
             <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">Price Calculator</Link>{" "}
             to build a monthly estimate for your own treatment combination.
           </p>
@@ -285,7 +285,7 @@ export default function CantAffordDentalTreatmentUKPage() {
             { title: "Severe Toothache Can't Afford a Dentist?", desc: "Causes, NHS 111 options and temporary pain relief explained.", href: "/guides/severe-toothache-cant-afford-dentist" },
             { title: "Can't Afford a Root Canal UK?", desc: "NHS Band 2 costs, extraction comparison and Turkey cost comparison.", href: "/guides/cant-afford-root-canal-uk" },
             { title: "Dental Finance Options UK", desc: "0% representative APR finance, eligibility and how pre-qualification works.", href: "/finance-options-uk" },
-            { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, from £82/month.", href: "/monthly-payment" },
+            { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, at 0% over 12 or 24 months.", href: "/monthly-payment" },
           ]}
         />
       </div>

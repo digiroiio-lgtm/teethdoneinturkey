@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import { FINANCE_INTENT_OWNERS, financeFollowUps } from "@/lib/finance-cluster";
 
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
   title: "Monthly Payment for Teeth in Turkey",
-  description: "Yes — you can pay monthly for teeth done in Turkey. Everything UK patients need to know about dental finance, monthly payment plans, and 0% interest options.",
+  description: "Yes — you can pay monthly for teeth done in Turkey. Plans over 12, 24 or 36 months; 0% APR on 12 and 24 months, e.g. 20 veneers at £159/month.",
 };
 
 export default function PayMonthlyTeethTurkeyPage() {
@@ -18,7 +20,7 @@ export default function PayMonthlyTeethTurkeyPage() {
         id="article-schema-can-you-pay-monthly-for-teeth-in-turkey"
         path="/blog/can-you-pay-monthly-for-teeth-in-turkey"
         headline="Monthly Payment for Teeth in Turkey"
-        description="Yes — you can pay monthly for teeth done in Turkey. Everything UK patients need to know about dental finance, monthly payment plans, and 0% interest options."
+        description="Yes — you can pay monthly for teeth done in Turkey. Plans over 12, 24 or 36 months; 0% APR on 12 and 24 months, e.g. 20 veneers at £159/month."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -37,16 +39,16 @@ export default function PayMonthlyTeethTurkeyPage() {
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <div className="bg-green-50 border border-green-200 rounded-2xl p-4">
             <p className="font-bold text-green-800 text-lg">✓ Yes — monthly payment plans are available for teeth done in Turkey</p>
-            <p className="text-green-700 text-sm mt-1">UK-based finance. Apply in 60 seconds. 0% options available.</p>
+            <p className="text-green-700 text-sm mt-1">UK-based finance. 0% APR representative on 12- and 24-month plans; 36 months carries interest.</p>
           </div>
 
-          <p>One of the most common barriers to getting dental treatment — even at significantly lower Turkish prices — is finding the upfront cost. Monthly payment plans solve this by letting you pay over 12, 24, or 36 months while your treatment is completed in Turkey.</p>
+          <p>One of the most common barriers to getting dental treatment — even at significantly lower Turkish prices — is finding the upfront cost. Monthly payment plans solve this by letting you pay over 12, 24 or 36 months while your treatment is completed in Turkey. 0% APR representative applies to the 12- and 24-month plans; the 36-month plan carries interest.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How Monthly Payment for Turkey Dental Treatment Works</h2>
           <ol className="space-y-4 my-4">
             {[
               { title: "Pre-qualify online (60 seconds)", desc: "Complete a quick pre-qualification form. This uses a soft credit check — no impact on your credit score. You see what plans are available instantly." },
-              { title: "Choose your plan", desc: "Select from 12, 24, or 36 month plans. 0% interest options are available for qualifying applicants. All costs are presented clearly — no hidden fees." },
+              { title: "Choose your plan", desc: "Select a 12-, 24- or 36-month plan. 12 and 24 months are 0% APR representative for qualifying applicants; 36 months carries interest. The APR and total repayable are shown before you commit." },
               { title: "Book your treatment", desc: "With finance approved, book your treatment dates in Turkey. Our team handles clinic booking, travel advice, and pre-trip support." },
               { title: "Travel to Turkey", desc: "Have your dental treatment done in Turkey as planned. Your UK finance is separate — you pay the clinic in Turkey and repay the finance from the UK." },
               { title: "Monthly repayments from home", desc: "Repayments start on your agreed date via direct debit from your UK bank account. Simple and straightforward." },
@@ -70,24 +72,24 @@ export default function PayMonthlyTeethTurkeyPage() {
                   <th className="px-4 py-3 text-right">Cost</th>
                   <th className="px-4 py-3 text-right">12 mo.</th>
                   <th className="px-4 py-3 text-right">24 mo.</th>
-                  <th className="px-4 py-3 text-right">36 mo.</th>
+                  <th className="px-4 py-3 text-right">36 mo. (interest)</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  { t: "10 Veneers", cost: "£1,900", m12: "£158", m24: "£79", m36: "£53" },
-                  { t: "20 Veneers", cost: "£3,800", m12: "£317", m24: "£158", m36: "£106" },
-                  { t: "Single Implant", cost: "£650", m12: "£54", m24: "£27", m36: "£18" },
-                  { t: "All-on-4 (one arch)", cost: "£4,500", m12: "£375", m24: "£188", m36: "£125" },
-                  { t: "Full Mouth All-on-4", cost: "£9,000", m12: "£750", m24: "£375", m36: "£250" },
-                  { t: "Smile Makeover", cost: "£5,000", m12: "£417", m24: "£208", m36: "£139" },
+                  { t: "10 Veneers (E-max)", cost: "£1,900", m12: "£159", m24: "£80", m36: null },
+                  { t: "20 Veneers (E-max)", cost: "£3,800", m12: "£317", m24: "£159", m36: null },
+                  { t: "Hollywood Smile (20 crowns, incl. hotel)", cost: "£2,800", m12: "£234", m24: "£117", m36: null },
+                  { t: "All-on-4 (one arch)", cost: "£4,500", m12: "£375", m24: "£188", m36: null },
+                  { t: "Full Mouth All-on-4", cost: "£9,000", m12: "£750", m24: "£375", m36: null },
+                  { t: "Smile Makeover", cost: "From £3,500", m12: "£292", m24: "£146", m36: null },
                 ].map((r, i) => (
                   <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3 font-medium">{r.t}</td>
                     <td className="px-4 py-3 text-right">{r.cost}</td>
                     <td className="px-4 py-3 text-right text-[#1e40af] font-bold">£{r.m12}/mo</td>
                     <td className="px-4 py-3 text-right text-[#1e40af] font-bold">£{r.m24}/mo</td>
-                    <td className="px-4 py-3 text-right text-[#1e40af] font-bold">£{r.m36}/mo</td>
+                    <td className="px-4 py-3 text-right text-gray-500 text-xs">{r.m36 ?? "APR at application"}</td>
                   </tr>
                 ))}
               </tbody>
@@ -96,17 +98,17 @@ export default function PayMonthlyTeethTurkeyPage() {
           <p className="text-xs text-gray-400">* Representative figures. Exact rates depend on credit assessment and lender terms.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Even With Finance, Turkey Is Dramatically Cheaper Than the UK</h2>
-          <p>Consider 20 veneers financed over 36 months:</p>
+          <p>Consider 20 veneers financed over 24 months:</p>
           <div className="grid grid-cols-2 gap-4 my-4">
             <div className="bg-red-50 rounded-2xl p-4 text-center border border-red-200">
-              <p className="text-xs text-gray-500 mb-1">UK (financed 36 months)</p>
-              <p className="text-2xl font-extrabold text-red-500">£500+/mo</p>
-              <p className="text-xs text-gray-400">Based on £18,000 over 36 months</p>
+              <p className="text-xs text-gray-500 mb-1">UK (spread over 24 months)</p>
+              <p className="text-2xl font-extrabold text-red-500">£667+/mo</p>
+              <p className="text-xs text-gray-400">Based on £16,000 over 24 months, before any interest</p>
             </div>
             <div className="bg-green-50 rounded-2xl p-4 text-center border border-green-200">
-              <p className="text-xs text-gray-500 mb-1">Turkey (financed 36 months)</p>
-              <p className="text-2xl font-extrabold text-green-600">£106/mo</p>
-              <p className="text-xs text-gray-400">Based on £3,800 over 36 months</p>
+              <p className="text-xs text-gray-500 mb-1">Turkey (24 months at 0%)</p>
+              <p className="text-2xl font-extrabold text-green-600">£159/mo</p>
+              <p className="text-xs text-gray-400">Based on £3,800 over 24 months</p>
             </div>
           </div>
           <p>The monthly savings are as significant as the headline savings.</p>
@@ -114,7 +116,7 @@ export default function PayMonthlyTeethTurkeyPage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">FAQs About Monthly Payment</h2>
           <div className="space-y-3 my-4">
             {[
-              { q: "Is 0% interest available?", a: "Yes, for qualifying applicants. Your credit profile and term length determine eligibility. All options are presented clearly before you commit." },
+              { q: "Is 0% interest available?", a: "Yes, on 12- and 24-month plans for qualifying applicants. 36-month plans carry interest. The APR and total repayable are shown before you commit." },
               { q: "Does applying affect my credit score?", a: "Pre-qualification uses a soft check — no impact. Only a full application creates a footprint on your credit file." },
               { q: "I have bad credit — can I still apply?", a: "Yes. We work with specialist lenders who consider all profiles. Pre-qualify to see what's available for your situation." },
               { q: "Can I pay off early?", a: "Yes, most plans allow early repayment. Exact terms are confirmed in your credit agreement before you sign." },
@@ -142,6 +144,7 @@ export default function PayMonthlyTeethTurkeyPage() {
               <li><Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] hover:underline">→ Finance dental implants Turkey</Link></li>
             </ul>
           </div>
+          <FollowUpQuestions items={financeFollowUps(FINANCE_INTENT_OWNERS.canYouPayMonthly)} />
           <div className="mt-12 pt-8 border-t border-gray-200">
             <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -159,7 +162,7 @@ export default function PayMonthlyTeethTurkeyPage() {
             </Link>
             <Link href="/monthly-payment" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Monthly Payment Plans</span>
-              <span className="text-xs text-gray-500 mt-0.5">From £82/month</span>
+              <span className="text-xs text-gray-500 mt-0.5">0% APR over 12 or 24 months</span>
             </Link>
             <Link href="/prices/turkey-teeth-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Turkey Teeth Cost Guide</span>

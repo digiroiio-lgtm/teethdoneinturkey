@@ -1,0 +1,4957 @@
+{
+  "generatedAt": "2026-09-26T07:42:50.595Z",
+  "weights": {
+    "overall": {
+      "structure": 0.35,
+      "geo": 0.4,
+      "visibility": 0.25
+    },
+    "structure": {
+      "singleH1": 10,
+      "headingOrder": 5,
+      "titleLength": 8,
+      "metaDescription": 8,
+      "canonical": 10,
+      "jsonLdParses": 10,
+      "pageTypeSchema": 8,
+      "breadcrumb": 6,
+      "faqMatchesPage": 10,
+      "structuredContent": 8,
+      "schemaDates": 7,
+      "wordCount": 10
+    },
+    "geo": {
+      "directAnswer": 20,
+      "keyFacts": 10,
+      "evidence": 12,
+      "freshness": 12,
+      "methodologyLink": 6,
+      "decisionSupport": 10,
+      "followUps": 10,
+      "priceConsistency": 12,
+      "noAbsoluteClaims": 8
+    },
+    "visibility": {
+      "inboundLinks": 30,
+      "llmsTxt": 10,
+      "sitemapFresh": 10,
+      "gscImpressions": 20,
+      "gscPosition": 15,
+      "aiReferrals": 15
+    }
+  },
+  "site": {
+    "pages": 81,
+    "overall": 71,
+    "structure": 92,
+    "geo": 52,
+    "visibility": 74,
+    "withGscData": 9,
+    "withAiReferralData": 3
+  },
+  "groups": [
+    {
+      "group": "implants",
+      "pages": 5,
+      "overall": 94,
+      "structure": 100,
+      "geo": 93,
+      "visibility": 88
+    },
+    {
+      "group": "veneers",
+      "pages": 7,
+      "overall": 92,
+      "structure": 99,
+      "geo": 89,
+      "visibility": 87
+    },
+    {
+      "group": "hollywood",
+      "pages": 4,
+      "overall": 92,
+      "structure": 100,
+      "geo": 92,
+      "visibility": 81
+    },
+    {
+      "group": "foundation",
+      "pages": 2,
+      "overall": 89,
+      "structure": 100,
+      "geo": 73,
+      "visibility": 100
+    },
+    {
+      "group": "finance",
+      "pages": 7,
+      "overall": 82,
+      "structure": 100,
+      "geo": 62,
+      "visibility": 88
+    },
+    {
+      "group": "/guides (other)",
+      "pages": 12,
+      "overall": 69,
+      "structure": 94,
+      "geo": 50,
+      "visibility": 67
+    },
+    {
+      "group": "/prices (other)",
+      "pages": 3,
+      "overall": 68,
+      "structure": 89,
+      "geo": 45,
+      "visibility": 75
+    },
+    {
+      "group": "/treatments (other)",
+      "pages": 3,
+      "overall": 67,
+      "structure": 88,
+      "geo": 33,
+      "visibility": 92
+    },
+    {
+      "group": "/blog (other)",
+      "pages": 21,
+      "overall": 66,
+      "structure": 97,
+      "geo": 42,
+      "visibility": 62
+    },
+    {
+      "group": "standalone pages",
+      "pages": 11,
+      "overall": 55,
+      "structure": 76,
+      "geo": 27,
+      "visibility": 70
+    },
+    {
+      "group": "conversion pages",
+      "pages": 3,
+      "overall": 55,
+      "structure": 76,
+      "geo": 22,
+      "visibility": 79
+    },
+    {
+      "group": "/travel-to-turkey (other)",
+      "pages": 3,
+      "overall": 52,
+      "structure": 69,
+      "geo": 24,
+      "visibility": 74
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "group": "standalone pages",
+      "overall": 58,
+      "structure": {
+        "score": 93,
+        "partial": false,
+        "failing": [
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 17,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          },
+          {
+            "check": "noAbsoluteClaims",
+            "lost": 8,
+            "fix": "Make absolute claims conditional (fixed guarantee lengths, \"save 90%\", \"all clinics JCI\").",
+            "detail": "10-year guarantee; Save 90%"
+          }
+        ]
+      },
+      "visibility": {
+        "score": 76,
+        "partial": true,
+        "failing": [
+          {
+            "check": "gscImpressions",
+            "lost": 7,
+            "fix": "Low Search Console impressions.",
+            "detail": "18 impr (2026-09-08)"
+          },
+          {
+            "check": "gscPosition",
+            "lost": 14,
+            "fix": "Low average Search Console position.",
+            "detail": "pos 57.9 (2026-09-08)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/about-us",
+      "group": "standalone pages",
+      "overall": 59,
+      "structure": {
+        "score": 79,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 47,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 52,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 24,
+            "fix": "Few pages link here from their main content.",
+            "detail": "2 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog",
+      "group": "/blog (other)",
+      "overall": 54,
+      "structure": {
+        "score": 71,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 43,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 46,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 27,
+            "fix": "Few pages link here from their main content.",
+            "detail": "1 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/4-8-10-rule-for-veneers",
+      "group": "/blog (other)",
+      "overall": 66,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 49,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 46,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 27,
+            "fix": "Few pages link here from their main content.",
+            "detail": "1 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/aftercare-for-dental-work-in-turkey",
+      "group": "/blog (other)",
+      "overall": 64,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 58,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 21,
+            "fix": "Few pages link here from their main content.",
+            "detail": "3 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/antalya-vs-istanbul-dental-clinics",
+      "group": "/blog (other)",
+      "overall": 64,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 58,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 21,
+            "fix": "Few pages link here from their main content.",
+            "detail": "3 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/are-veneers-in-turkey-worth-it",
+      "group": "/blog (other)",
+      "overall": 61,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 46,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 27,
+            "fix": "Few pages link here from their main content.",
+            "detail": "1 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/best-dental-clinics-turkey",
+      "group": "/blog (other)",
+      "overall": 66,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 64,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 15,
+            "fix": "Few pages link here from their main content.",
+            "detail": "5 pages"
+          },
+          {
+            "check": "gscImpressions",
+            "lost": 2,
+            "fix": "Low Search Console impressions.",
+            "detail": "56 impr (2026-09-08)"
+          },
+          {
+            "check": "gscPosition",
+            "lost": 14,
+            "fix": "Low average Search Console position.",
+            "detail": "pos 62.4 (2026-09-08)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
+      "group": "finance",
+      "overall": 74,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 42,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 88,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 6,
+            "fix": "Few pages link here from their main content.",
+            "detail": "8 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/can-you-pay-monthly-for-veneers-turkey",
+      "group": "finance",
+      "overall": 77,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 42,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/blog/composite-vs-porcelain-veneers-turkey",
+      "group": "/blog (other)",
+      "overall": 66,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 49,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 46,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 27,
+            "fix": "Few pages link here from their main content.",
+            "detail": "1 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/dental-holiday-packages-turkey",
+      "group": "/blog (other)",
+      "overall": 66,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 49,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 46,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 27,
+            "fix": "Few pages link here from their main content.",
+            "detail": "1 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/dental-implant-recovery-time",
+      "group": "/blog (other)",
+      "overall": 64,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 58,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 21,
+            "fix": "Few pages link here from their main content.",
+            "detail": "3 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/dental-tourism-finance-explained",
+      "group": "finance",
+      "overall": 72,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 42,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 82,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 9,
+            "fix": "Few pages link here from their main content.",
+            "detail": "7 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/dental-treatment-turkey-payment-plans",
+      "group": "finance",
+      "overall": 77,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 54,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 82,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 9,
+            "fix": "Few pages link here from their main content.",
+            "detail": "7 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/do-turkey-teeth-look-fake",
+      "group": "/blog (other)",
+      "overall": 68,
+      "structure": {
+        "score": 92,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "67 chars"
+          },
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "173 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 49,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 64,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 18,
+            "fix": "Few pages link here from their main content.",
+            "detail": "4 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/e-max-vs-zirconia-veneers-turkey",
+      "group": "veneers",
+      "overall": 94,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 76,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 12,
+            "fix": "Few pages link here from their main content.",
+            "detail": "6 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/finance-dental-implants-turkey-uk-patients",
+      "group": "finance",
+      "overall": 77,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 54,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 82,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 9,
+            "fix": "Few pages link here from their main content.",
+            "detail": "7 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/full-mouth-implants-uk-vs-turkey",
+      "group": "/blog (other)",
+      "overall": 75,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 56,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 70,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 9,
+            "fix": "Few pages link here from their main content.",
+            "detail": "7 pages"
+          },
+          {
+            "check": "gscImpressions",
+            "lost": 9,
+            "fix": "Low Search Console impressions.",
+            "detail": "12 impr (2026-09-08)"
+          },
+          {
+            "check": "gscPosition",
+            "lost": 8,
+            "fix": "Low average Search Console position.",
+            "detail": "pos 16.1 (2026-09-08)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/full-set-veneers-turkey-cost",
+      "group": "veneers",
+      "overall": 94,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 76,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 12,
+            "fix": "Few pages link here from their main content.",
+            "detail": "6 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/hollywood-smile-turkey-cost",
+      "group": "hollywood",
+      "overall": 90,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 58,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 15,
+            "fix": "Few pages link here from their main content.",
+            "detail": "5 pages"
+          },
+          {
+            "check": "gscImpressions",
+            "lost": 10,
+            "fix": "Low Search Console impressions.",
+            "detail": "10 impr (2026-09-08)"
+          },
+          {
+            "check": "gscPosition",
+            "lost": 11,
+            "fix": "Low average Search Console position.",
+            "detail": "pos 26.1 (2026-09-08)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/hollywood-smile-uk-vs-turkey",
+      "group": "hollywood",
+      "overall": 91,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 64,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 18,
+            "fix": "Few pages link here from their main content.",
+            "detail": "4 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/how-long-do-dental-veneers-last",
+      "group": "/blog (other)",
+      "overall": 77,
+      "structure": {
+        "score": 92,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "67 chars"
+          },
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "164 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 49,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/blog/implants-cost-uk-vs-turkey",
+      "group": "implants",
+      "overall": 93,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 70,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 15,
+            "fix": "Few pages link here from their main content.",
+            "detail": "5 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/is-it-safe-to-get-teeth-done-in-turkey",
+      "group": "/blog (other)",
+      "overall": 72,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 88,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 6,
+            "fix": "Few pages link here from their main content.",
+            "detail": "8 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/risks-of-turkey-teeth",
+      "group": "/blog (other)",
+      "overall": 72,
+      "structure": {
+        "score": 92,
+        "partial": false,
+        "failing": [
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          }
+        ]
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/blog/risks-of-veneers-in-turkey",
+      "group": "/blog (other)",
+      "overall": 62,
+      "structure": {
+        "score": 92,
+        "partial": false,
+        "failing": [
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          }
+        ]
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 58,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 21,
+            "fix": "Few pages link here from their main content.",
+            "detail": "3 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/same-day-dental-implants-turkey",
+      "group": "/blog (other)",
+      "overall": 68,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 49,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 52,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 24,
+            "fix": "Few pages link here from their main content.",
+            "detail": "2 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/signs-of-dental-implant-failure",
+      "group": "/blog (other)",
+      "overall": 70,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 82,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 9,
+            "fix": "Few pages link here from their main content.",
+            "detail": "7 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/single-tooth-implant-turkey-cost",
+      "group": "implants",
+      "overall": 93,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 70,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 15,
+            "fix": "Few pages link here from their main content.",
+            "detail": "5 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/turkey-teeth-explained",
+      "group": "/blog (other)",
+      "overall": 66,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 49,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 47,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 24,
+            "fix": "Few pages link here from their main content.",
+            "detail": "2 pages"
+          },
+          {
+            "check": "gscImpressions",
+            "lost": 10,
+            "fix": "Low Search Console impressions.",
+            "detail": "9 impr (2026-09-08)"
+          },
+          {
+            "check": "gscPosition",
+            "lost": 11,
+            "fix": "Low average Search Console position.",
+            "detail": "pos 22.8 (2026-09-08)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/uk-dentist-vs-turkey-dentist",
+      "group": "/blog (other)",
+      "overall": 63,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 52,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 24,
+            "fix": "Few pages link here from their main content.",
+            "detail": "2 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/veneers-turkey-cost-uk-vs-turkey",
+      "group": "veneers",
+      "overall": 94,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 76,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 12,
+            "fix": "Few pages link here from their main content.",
+            "detail": "6 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/why-are-dental-treatments-cheaper-in-turkey",
+      "group": "/blog (other)",
+      "overall": 67,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 70,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 6,
+            "fix": "Few pages link here from their main content.",
+            "detail": "8 pages"
+          },
+          {
+            "check": "gscImpressions",
+            "lost": 9,
+            "fix": "Low Search Console impressions.",
+            "detail": "13 impr (2026-09-08)"
+          },
+          {
+            "check": "gscPosition",
+            "lost": 11,
+            "fix": "Low average Search Console position.",
+            "detail": "pos 23 (2026-09-08)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/blog/will-uk-dentists-fix-turkey-teeth",
+      "group": "/blog (other)",
+      "overall": 58,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 29,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          },
+          {
+            "check": "noAbsoluteClaims",
+            "lost": 8,
+            "fix": "Make absolute claims conditional (fixed guarantee lengths, \"save 90%\", \"all clinics JCI\").",
+            "detail": "10-year guarantee"
+          }
+        ]
+      },
+      "visibility": {
+        "score": 46,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 27,
+            "fix": "Few pages link here from their main content.",
+            "detail": "1 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/book-consultation",
+      "group": "conversion pages",
+      "overall": 57,
+      "structure": {
+        "score": 79,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 20,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 10,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 86,
+        "partial": true,
+        "failing": [
+          {
+            "check": "aiReferrals",
+            "lost": 9,
+            "fix": "Few recorded AI-assistant referral sessions.",
+            "detail": "2 AI sessions (2026-09-11)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/contact",
+      "group": "conversion pages",
+      "overall": 46,
+      "structure": {
+        "score": 70,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          },
+          {
+            "check": "wordCount",
+            "lost": 1,
+            "fix": "Main content is under 400 words.",
+            "detail": "374 words"
+          }
+        ]
+      },
+      "geo": {
+        "score": 20,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 10,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 52,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 24,
+            "fix": "Few pages link here from their main content.",
+            "detail": "2 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/editorial-policy",
+      "group": "standalone pages",
+      "overall": 65,
+      "structure": {
+        "score": 71,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "79 chars"
+          },
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "189 chars"
+          },
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 37,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/finance-options-uk",
+      "group": "finance",
+      "overall": 95,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 81,
+        "partial": false,
+        "failing": [
+          {
+            "check": "gscImpressions",
+            "lost": 8,
+            "fix": "Low Search Console impressions.",
+            "detail": "14 impr (2026-09-08)"
+          },
+          {
+            "check": "gscPosition",
+            "lost": 8,
+            "fix": "Low average Search Console position.",
+            "detail": "pos 13 (2026-09-08)"
+          },
+          {
+            "check": "aiReferrals",
+            "lost": 3,
+            "fix": "Few recorded AI-assistant referral sessions.",
+            "detail": "4 AI sessions (2026-09-11)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/free-treatment-plan",
+      "group": "conversion pages",
+      "overall": 63,
+      "structure": {
+        "score": 79,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 25,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/guides",
+      "group": "/guides (other)",
+      "overall": 68,
+      "structure": {
+        "score": 88,
+        "partial": false,
+        "failing": [
+          {
+            "check": "headingOrder",
+            "lost": 5,
+            "fix": "Do not skip heading levels (e.g. h2 → h4)."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 31,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/guides/best-veneers-turkey",
+      "group": "veneers",
+      "overall": 97,
+      "structure": {
+        "score": 96,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "66 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 95,
+        "partial": false,
+        "failing": [
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/guides/cant-afford-dental-treatment-uk",
+      "group": "/guides (other)",
+      "overall": 79,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 58,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 82,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 9,
+            "fix": "Few pages link here from their main content.",
+            "detail": "7 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/guides/cant-afford-root-canal-uk",
+      "group": "/guides (other)",
+      "overall": 73,
+      "structure": {
+        "score": 96,
+        "partial": false,
+        "failing": [
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "161 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 52,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 76,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 12,
+            "fix": "Few pages link here from their main content.",
+            "detail": "6 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/guides/dental-implants-turkey",
+      "group": "implants",
+      "overall": 94,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 85,
+        "partial": false,
+        "failing": [
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/guides/full-mouth-dental-implants-turkey-cost",
+      "group": "/guides (other)",
+      "overall": 63,
+      "structure": {
+        "score": 96,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "82 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 58,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 26,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 27,
+            "fix": "Few pages link here from their main content.",
+            "detail": "1 pages"
+          },
+          {
+            "check": "llmsTxt",
+            "lost": 10,
+            "fix": "Not listed in public/llms.txt."
+          }
+        ]
+      }
+    },
+    {
+      "route": "/guides/no-nhs-dentist-what-to-do",
+      "group": "/guides (other)",
+      "overall": 75,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 52,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 76,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 12,
+            "fix": "Few pages link here from their main content.",
+            "detail": "6 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/guides/severe-toothache-cant-afford-dentist",
+      "group": "/guides (other)",
+      "overall": 74,
+      "structure": {
+        "score": 85,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 68,
+        "partial": false,
+        "failing": [
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 70,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 15,
+            "fix": "Few pages link here from their main content.",
+            "detail": "5 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/guides/teeth-in-turkey",
+      "group": "/guides (other)",
+      "overall": 86,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 64,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/guides/tooth-abscess-cant-afford-dentist",
+      "group": "/guides (other)",
+      "overall": 70,
+      "structure": {
+        "score": 85,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 58,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 70,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 15,
+            "fix": "Few pages link here from their main content.",
+            "detail": "5 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/guides/turkey-teeth-antalya",
+      "group": "/guides (other)",
+      "overall": 57,
+      "structure": {
+        "score": 96,
+        "partial": false,
+        "failing": [
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "164 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 38,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 32,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 24,
+            "fix": "Few pages link here from their main content.",
+            "detail": "2 pages"
+          },
+          {
+            "check": "llmsTxt",
+            "lost": 10,
+            "fix": "Not listed in public/llms.txt."
+          }
+        ]
+      }
+    },
+    {
+      "route": "/guides/turkey-teeth-packages",
+      "group": "/guides (other)",
+      "overall": 55,
+      "structure": {
+        "score": 92,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "69 chars"
+          },
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "165 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 32,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 38,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 21,
+            "fix": "Few pages link here from their main content.",
+            "detail": "3 pages"
+          },
+          {
+            "check": "llmsTxt",
+            "lost": 10,
+            "fix": "Not listed in public/llms.txt."
+          }
+        ]
+      }
+    },
+    {
+      "route": "/guides/turkey-teeth-veneers-or-crowns",
+      "group": "veneers",
+      "overall": 81,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 52,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/guides/turkish-veneers-safety",
+      "group": "/guides (other)",
+      "overall": 75,
+      "structure": {
+        "score": 92,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "69 chars"
+          },
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "169 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 58,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 80,
+        "partial": true,
+        "failing": [
+          {
+            "check": "llmsTxt",
+            "lost": 10,
+            "fix": "Not listed in public/llms.txt."
+          }
+        ]
+      }
+    },
+    {
+      "route": "/guides/veneers-turkey-packages",
+      "group": "/guides (other)",
+      "overall": 58,
+      "structure": {
+        "score": 92,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "71 chars"
+          },
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "190 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 32,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 50,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 15,
+            "fix": "Few pages link here from their main content.",
+            "detail": "5 pages"
+          },
+          {
+            "check": "llmsTxt",
+            "lost": 10,
+            "fix": "Not listed in public/llms.txt."
+          }
+        ]
+      }
+    },
+    {
+      "route": "/medical-reviewers/mustafa-akca",
+      "group": "standalone pages",
+      "overall": 61,
+      "structure": {
+        "score": 77,
+        "partial": false,
+        "failing": [
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "173 chars"
+          },
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          },
+          {
+            "check": "wordCount",
+            "lost": 4,
+            "fix": "Main content is under 400 words.",
+            "detail": "244 words"
+          }
+        ]
+      },
+      "geo": {
+        "score": 31,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 88,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 6,
+            "fix": "Few pages link here from their main content.",
+            "detail": "8 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/methodology",
+      "group": "foundation",
+      "overall": 89,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 73,
+        "partial": false,
+        "failing": [
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/monthly-payment",
+      "group": "finance",
+      "overall": 100,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/price-calculator",
+      "group": "standalone pages",
+      "overall": 56,
+      "structure": {
+        "score": 68,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          },
+          {
+            "check": "wordCount",
+            "lost": 3,
+            "fix": "Main content is under 400 words.",
+            "detail": "291 words"
+          }
+        ]
+      },
+      "geo": {
+        "score": 25,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 88,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 6,
+            "fix": "Few pages link here from their main content.",
+            "detail": "8 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/prices/all-on-6-dental-implants-turkey-package",
+      "group": "/prices (other)",
+      "overall": 65,
+      "structure": {
+        "score": 79,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 38,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 10,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 88,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 6,
+            "fix": "Few pages link here from their main content.",
+            "detail": "8 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/prices/dental-implants-turkey-cost",
+      "group": "implants",
+      "overall": 100,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/prices/hollywood-smile-turkey-package",
+      "group": "hollywood",
+      "overall": 100,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/prices/turkey-teeth-cost",
+      "group": "/prices (other)",
+      "overall": 84,
+      "structure": {
+        "score": 96,
+        "partial": false,
+        "failing": [
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "166 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 64,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/prices/veneers-antalya-cost",
+      "group": "/prices (other)",
+      "overall": 55,
+      "structure": {
+        "score": 92,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "75 chars"
+          },
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "174 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 32,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 5,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 38,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 21,
+            "fix": "Few pages link here from their main content.",
+            "detail": "3 pages"
+          },
+          {
+            "check": "llmsTxt",
+            "lost": 10,
+            "fix": "Not listed in public/llms.txt."
+          }
+        ]
+      }
+    },
+    {
+      "route": "/prices/veneers-turkey-cost",
+      "group": "veneers",
+      "overall": 94,
+      "structure": {
+        "score": 96,
+        "partial": false,
+        "failing": [
+          {
+            "check": "titleLength",
+            "lost": 4,
+            "fix": "Keep <title> between 30 and 65 characters.",
+            "detail": "67 chars"
+          }
+        ]
+      },
+      "geo": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "visibility": {
+        "score": 83,
+        "partial": true,
+        "failing": [
+          {
+            "check": "gscImpressions",
+            "lost": 1,
+            "fix": "Low Search Console impressions.",
+            "detail": "72 impr (2026-09-08)"
+          },
+          {
+            "check": "gscPosition",
+            "lost": 14,
+            "fix": "Low average Search Console position.",
+            "detail": "pos 72.1 (2026-09-08)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/reviews",
+      "group": "standalone pages",
+      "overall": 50,
+      "structure": {
+        "score": 67,
+        "partial": false,
+        "failing": [
+          {
+            "check": "metaDescription",
+            "lost": 4,
+            "fix": "Write a 70–160 character meta description.",
+            "detail": "161 chars"
+          },
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 20,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 10,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 76,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 12,
+            "fix": "Few pages link here from their main content.",
+            "detail": "6 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/teeth-done-in-turkey-guide",
+      "group": "standalone pages",
+      "overall": 55,
+      "structure": {
+        "score": 82,
+        "partial": false,
+        "failing": [
+          {
+            "check": "headingOrder",
+            "lost": 5,
+            "fix": "Do not skip heading levels (e.g. h2 → h4)."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 29,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          },
+          {
+            "check": "noAbsoluteClaims",
+            "lost": 8,
+            "fix": "Make absolute claims conditional (fixed guarantee lengths, \"save 90%\", \"all clinics JCI\").",
+            "detail": "10-Year Guarantee; Save 90%"
+          }
+        ]
+      },
+      "visibility": {
+        "score": 58,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 21,
+            "fix": "Few pages link here from their main content.",
+            "detail": "3 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/teeth-done-in-turkey-problems",
+      "group": "standalone pages",
+      "overall": 51,
+      "structure": {
+        "score": 71,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 25,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 64,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 18,
+            "fix": "Few pages link here from their main content.",
+            "detail": "4 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/travel-to-turkey",
+      "group": "/travel-to-turkey (other)",
+      "overall": 43,
+      "structure": {
+        "score": 62,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          },
+          {
+            "check": "wordCount",
+            "lost": 9,
+            "fix": "Main content is under 400 words.",
+            "detail": "52 words"
+          }
+        ]
+      },
+      "geo": {
+        "score": 20,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 10,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 52,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 24,
+            "fix": "Few pages link here from their main content.",
+            "detail": "2 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/travel-to-turkey/dental-holiday-turkey",
+      "group": "/travel-to-turkey (other)",
+      "overall": 58,
+      "structure": {
+        "score": 79,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 32,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 10,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 70,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 15,
+            "fix": "Few pages link here from their main content.",
+            "detail": "5 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/travel-to-turkey/how-long-stay-turkey-dental",
+      "group": "/travel-to-turkey (other)",
+      "overall": 56,
+      "structure": {
+        "score": 67,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          },
+          {
+            "check": "wordCount",
+            "lost": 4,
+            "fix": "Main content is under 400 words.",
+            "detail": "244 words"
+          }
+        ]
+      },
+      "geo": {
+        "score": 20,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 10,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/treatments",
+      "group": "/treatments (other)",
+      "overall": 52,
+      "structure": {
+        "score": 65,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "structuredContent",
+            "lost": 8,
+            "fix": "Add a table, list or definition list to the main content."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          },
+          {
+            "check": "wordCount",
+            "lost": 6,
+            "fix": "Main content is under 400 words.",
+            "detail": "146 words"
+          }
+        ]
+      },
+      "geo": {
+        "score": 25,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 76,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 12,
+            "fix": "Few pages link here from their main content.",
+            "detail": "6 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/treatments/all-on-4-turkey",
+      "group": "/treatments (other)",
+      "overall": 77,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 43,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 8,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/treatments/all-on-6-turkey",
+      "group": "/treatments (other)",
+      "overall": 72,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 31,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 6,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/treatments/dental-implants-turkey",
+      "group": "implants",
+      "overall": 91,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 78,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/treatments/full-smile-makeover-turkey",
+      "group": "hollywood",
+      "overall": 87,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 68,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/treatments/veneers-turkey",
+      "group": "veneers",
+      "overall": 91,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 78,
+        "partial": false,
+        "failing": [
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/turkey-dental-price-index",
+      "group": "foundation",
+      "overall": 89,
+      "structure": {
+        "score": 100,
+        "partial": false,
+        "failing": []
+      },
+      "geo": {
+        "score": 73,
+        "partial": false,
+        "failing": [
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 100,
+        "partial": true,
+        "failing": []
+      }
+    },
+    {
+      "route": "/turkey-teeth-before-after",
+      "group": "standalone pages",
+      "overall": 49,
+      "structure": {
+        "score": 74,
+        "partial": false,
+        "failing": [
+          {
+            "check": "headingOrder",
+            "lost": 5,
+            "fix": "Do not skip heading levels (e.g. h2 → h4)."
+          },
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 25,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 52,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 24,
+            "fix": "Few pages link here from their main content.",
+            "detail": "2 pages"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/turkey-teeth-clinic",
+      "group": "standalone pages",
+      "overall": 52,
+      "structure": {
+        "score": 79,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 25,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 5,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 59,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 18,
+            "fix": "Few pages link here from their main content.",
+            "detail": "4 pages"
+          },
+          {
+            "check": "gscImpressions",
+            "lost": 9,
+            "fix": "Low Search Console impressions.",
+            "detail": "11 impr (2026-09-08)"
+          },
+          {
+            "check": "gscPosition",
+            "lost": 8,
+            "fix": "Low average Search Console position.",
+            "detail": "pos 19.1 (2026-09-08)"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/why-choose-turkey-for-dental-work",
+      "group": "standalone pages",
+      "overall": 49,
+      "structure": {
+        "score": 79,
+        "partial": false,
+        "failing": [
+          {
+            "check": "pageTypeSchema",
+            "lost": 8,
+            "fix": "Add Article, BlogPosting, WebPage or Dataset schema."
+          },
+          {
+            "check": "breadcrumb",
+            "lost": 6,
+            "fix": "Add BreadcrumbList schema."
+          },
+          {
+            "check": "schemaDates",
+            "lost": 7,
+            "fix": "Add datePublished / dateModified to the page schema."
+          }
+        ]
+      },
+      "geo": {
+        "score": 20,
+        "partial": false,
+        "failing": [
+          {
+            "check": "directAnswer",
+            "lost": 20,
+            "fix": "Answer the page question in ≤100 words near the top (QuickAnswer)."
+          },
+          {
+            "check": "keyFacts",
+            "lost": 10,
+            "fix": "Add a key-facts box (AtAGlance <dl>)."
+          },
+          {
+            "check": "evidence",
+            "lost": 12,
+            "fix": "Add a \"How we know this\" evidence block or a sourced references list."
+          },
+          {
+            "check": "freshness",
+            "lost": 12,
+            "fix": "Show Published / Last reviewed dates that match schema dateModified (PageFreshness)."
+          },
+          {
+            "check": "methodologyLink",
+            "lost": 6,
+            "fix": "Link to /methodology or /editorial-policy from the main content."
+          },
+          {
+            "check": "decisionSupport",
+            "lost": 10,
+            "fix": "Add \"who this may not suit\" or a decision guide."
+          },
+          {
+            "check": "followUps",
+            "lost": 10,
+            "fix": "Add a follow-up question graph linking the pages that own each next question."
+          }
+        ]
+      },
+      "visibility": {
+        "score": 52,
+        "partial": true,
+        "failing": [
+          {
+            "check": "inboundLinks",
+            "lost": 24,
+            "fix": "Few pages link here from their main content.",
+            "detail": "2 pages"
+          }
+        ]
+      }
+    }
+  ]
+}

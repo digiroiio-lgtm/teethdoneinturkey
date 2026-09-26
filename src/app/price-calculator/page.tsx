@@ -35,10 +35,10 @@ export default function PriceCalculatorPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { title: "Veneers Turkey", href: "/treatments/veneers-turkey", desc: "E-max and zirconia veneers from £190/tooth" },
-              { title: "Dental Implants Turkey", href: "/treatments/dental-implants-turkey", desc: "Single implants from £250 with Osstem, or Straumann from £800" },
+              { title: "Dental Implants Turkey", href: "/treatments/dental-implants-turkey", desc: "Single implants from £250 with Osstem, or Straumann from £930" },
               { title: "All-on-6 Package", href: "/prices/all-on-6-dental-implants-turkey-package", desc: "Full arch on 6 implants from £5,600 all-inclusive" },
               { title: "Hollywood Smile", href: "/prices/hollywood-smile-turkey-package", desc: "20 or 24 zirconia crowns from £2,800" },
-              { title: "Monthly Payment", href: "/monthly-payment", desc: "Spread the cost from £82/month over 36 months" },
+              { title: "Monthly Payment", href: "/monthly-payment", desc: "Spread the cost at 0% APR over 12 or 24 months" },
               { title: "Free Treatment Plan", href: "/free-treatment-plan", desc: "Get a personalised plan and exact quote in 24h" },
             ].map(item => (
               <Link key={item.href} href={item.href} className="bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors block">

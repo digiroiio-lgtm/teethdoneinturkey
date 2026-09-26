@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import { FINANCE_INTENT_OWNERS, financeFollowUps } from "@/lib/finance-cluster";
 
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/finance-dental-implants-turkey-uk-patients" },
   title: "Finance Implants Turkey – UK Guide",
-  description: "How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from £54/month.",
+  description: "How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and implants from £11/month over 24 months at 0% APR.",
 };
 
 export default function FinanceImplantsPage() {
@@ -18,7 +20,7 @@ export default function FinanceImplantsPage() {
         id="article-schema-finance-dental-implants-turkey-uk-patients"
         path="/blog/finance-dental-implants-turkey-uk-patients"
         headline="Finance Implants Turkey – UK Guide"
-        description="How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from £54/month."
+        description="How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and implants from £11/month over 24 months at 0% APR."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -38,14 +40,14 @@ export default function FinanceImplantsPage() {
           <p>Dental implants are life-changing — but even at significantly reduced Turkish prices, a full mouth restoration represents a substantial investment. UK-based dental finance makes it possible to have your implants done in Turkey and spread the cost over time from home.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Finance Turkey Implants?</h2>
-          <p>Even after the dramatic savings from having implants in Turkey (typically 70–80% less than UK prices), some treatments — particularly All-on-4 or All-on-6 full arch restorations — involve costs of £4,500–£11,000. Finance makes this accessible with payments starting from £83/month.</p>
+          <p>Even after the dramatic savings from having implants in Turkey (typically 70–80% less than UK prices), some treatments — particularly All-on-4 or All-on-6 full arch restorations — involve costs of £4,500–£11,200. Finance spreads this at 0% APR representative over 12 or 24 months — an All-on-4 arch is about £188 a month over 24 months.</p>
           <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200 my-4">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-sm">
               {[
-                { label: "Single implant", cost: "£650", monthly: "From £18/mo" },
-                { label: "3 implants", cost: "£1,950", monthly: "From £54/mo" },
-                { label: "All-on-4 (1 arch)", cost: "£4,500", monthly: "From £125/mo" },
-                { label: "Full mouth All-on-4", cost: "£9,000", monthly: "From £250/mo" },
+                { label: "Single implant (Osstem)", cost: "£250", monthly: "Below £500 minimum" },
+                { label: "3 implants (Osstem)", cost: "£750", monthly: "From £32/mo" },
+                { label: "All-on-4 (1 arch)", cost: "£4,500", monthly: "From £188/mo" },
+                { label: "Full mouth All-on-4", cost: "£9,000", monthly: "From £375/mo" },
               ].map(item => (
                 <div key={item.label} className="bg-white rounded-xl p-3">
                   <p className="text-gray-500 text-xs">{item.label}</p>
@@ -54,7 +56,7 @@ export default function FinanceImplantsPage() {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-gray-400 text-center mt-3">*Over 36 months. Representative figures subject to credit assessment.</p>
+            <p className="text-xs text-gray-400 text-center mt-3">*Over 24 months at 0% APR representative, subject to status. 36-month plans carry interest.</p>
           </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How Finance Works for Turkey Implants</h2>
@@ -83,8 +85,8 @@ export default function FinanceImplantsPage() {
               <tbody>
                 {[
                   { type: "0% Interest", term: "12 months", int: "0%", note: "For qualifying applicants" },
-                  { type: "Low Rate", term: "24 months", int: "Low APR", note: "Competitive rates for good credit" },
-                  { type: "Flexible", term: "36 months", int: "Low APR", note: "Lowest monthly payments" },
+                  { type: "0% Interest", term: "24 months", int: "0%", note: "For qualifying applicants" },
+                  { type: "Flexible", term: "36 months", int: "Interest applies", note: "Lowest monthly payment; you repay more" },
                   { type: "Bad Credit", term: "12–36 months", int: "Specialist rates", note: "All profiles considered" },
                 ].map((r, i) => (
                   <tr key={r.type} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
@@ -105,15 +107,15 @@ export default function FinanceImplantsPage() {
               <thead>
                 <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                   <th className="px-4 py-3 text-left">Scenario</th>
-                  <th className="px-4 py-3 text-right">Monthly Payment (36 mo.)</th>
+                  <th className="px-4 py-3 text-right">Monthly over 24 months</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  { s: "All-on-4 UK private (£15,000 financed)", m: "£417/month" },
-                  { s: "All-on-4 Turkey (£4,500 financed)", m: "£125/month" },
-                  { s: "Full mouth UK private (£30,000 financed)", m: "£833/month" },
-                  { s: "Full mouth Turkey All-on-4 (£9,000 financed)", m: "£250/month" },
+                  { s: "All-on-4 UK private (£15,000, before interest)", m: "£625/month" },
+                  { s: "All-on-4 Turkey (£4,500 at 0%)", m: "£188/month" },
+                  { s: "Full mouth UK private (£30,000, before interest)", m: "£1,250/month" },
+                  { s: "Full mouth Turkey All-on-4 (£9,000 at 0%)", m: "£375/month" },
                 ].map((r, i) => (
                   <tr key={r.s} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3">{r.s}</td>
@@ -139,6 +141,7 @@ export default function FinanceImplantsPage() {
             <p className="text-blue-200 mb-4">Free consultation + finance pre-qualification. No impact on your credit score. No obligation.</p>
             <Link href="/book-consultation" className="inline-block bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Get Started Free</Link>
           </div>
+          <FollowUpQuestions items={financeFollowUps(FINANCE_INTENT_OWNERS.implantFinance)} />
           <div className="mt-12 pt-8 border-t border-gray-200">
             <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -160,7 +163,7 @@ export default function FinanceImplantsPage() {
             </Link>
             <Link href="/monthly-payment" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Monthly Payment Plans</span>
-              <span className="text-xs text-gray-500 mt-0.5">From £82/month</span>
+              <span className="text-xs text-gray-500 mt-0.5">0% APR over 12 or 24 months</span>
             </Link>
             <Link href="/finance-options-uk" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Finance & Payment Options</span>

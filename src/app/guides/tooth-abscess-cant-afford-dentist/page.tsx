@@ -344,7 +344,7 @@ export default function ToothAbscessCantAffordDentistPage() {
           </div>
 
           <p className="text-sm text-gray-500 mb-6">
-            NHS charges from April 2026 (England). NHS emergency via NHS 111 is free to access; treatment charges apply unless exempt. Turkey prices are for treatment at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). 0% representative APR finance from around £10/month over 36 months is available for follow-up treatment, subject to eligibility.
+            NHS charges from April 2026 (England). NHS emergency via NHS 111 is free to access; treatment charges apply unless exempt. Turkey prices are for treatment at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). For follow-up treatment totalling £500 or more, 0% representative APR finance is available over 12 or 24 months, subject to eligibility; 36-month plans carry interest.
           </p>
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">

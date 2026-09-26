@@ -101,7 +101,7 @@ const guides = [
     category: "Cost & Finance",
     title: "How Much Are Turkey Teeth Per Month? UK Dental Finance & Payment Examples",
     description:
-      "Monthly payment examples for Turkey dental treatment from £3,000 to £8,000 — across 12, 18, 24 and 36-month plans with 0% representative APR finance.",
+      "Monthly payment examples for Turkey dental treatment from £3,000 to £8,000 — at 0% representative APR over 12 or 24 months, with 36-month plans carrying interest.",
     readingTime: "8 min",
     updated: "13 September 2026",
     href: "/guides/turkey-teeth-monthly-payments",

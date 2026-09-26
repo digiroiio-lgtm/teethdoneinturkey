@@ -71,7 +71,7 @@ const faqs = [
   {
     question: "Can I pay monthly for full mouth implants in Turkey?",
     answer:
-      "Payment plans are available over 12, 24 or 36 months. As an illustration, a £9,000 All-on-4 case with a £1,000 deposit leaves £8,000 to finance — about £222 a month over 36 months at a 0% APR representative rate. Finance is not guaranteed: it is subject to a credit check and to the lender's approval, and your rate and available term depend on that assessment.",
+      "Payment plans are available over 12, 24 or 36 months. As an illustration, a £9,000 All-on-4 case with a £1,000 deposit leaves £8,000 to finance — about £334 a month over 24 months at a 0% APR representative rate (0% applies to 12- and 24-month plans; 36-month plans carry interest). Finance is not guaranteed: it is subject to a credit check and to the lender's approval, and your rate and available term depend on that assessment.",
   },
   {
     question: "How long does full mouth implant treatment take in Turkey?",
@@ -90,7 +90,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
           headline="Full Mouth Dental Implants Turkey Cost 2026"
           description="Full mouth dental implants in Turkey cost £8,000–£11,000 for All-on-4 (both arches) vs £24,000–£36,000 in the UK. 2026 prices, what's included, finance."
           datePublished="2026-04-01"
-          dateModified="2026-09-11"
+          dateModified="2026-09-25"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Blog", path: "/blog" },
@@ -143,7 +143,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
                     { t: "All-on-6 (single arch)", uk: "£15,000–£22,000", tr: "From £5,600", s: "63–75%" },
                     { t: "All-on-4 (both arches)", uk: "£24,000–£36,000", tr: "£8,000–£11,000", s: "67–69%" },
                     { t: "All-on-6 (both arches)", uk: "£30,000–£44,000", tr: "£10,000–£14,000", s: "67–68%" },
-                    { t: "Individual implants (20, full mouth)", uk: "£40,000–£60,000", tr: "£5,000–£16,000", s: "73–88%" },
+                    { t: "Individual implants (20, full mouth)", uk: "£40,000–£60,000", tr: "£5,000–£18,600", s: "69–88%" },
                   ].map((r, i) => (
                     <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="px-4 py-3 font-medium">{r.t}</td>
@@ -159,7 +159,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             </div>
             <p className="text-sm text-gray-500">
               The individual-implant row is calculated from this site&apos;s own per-unit prices: 20 implants with crowns at
-              £250 each on an entry-level Osstem system, up to £800 each on Straumann. It is shown for completeness —
+              £250 each on an entry-level Osstem system, up to £930 each on Straumann. It is shown for completeness —
               see below for why it is rarely the right treatment plan. All figures are indicative until a clinician has
               reviewed your scan.
             </p>
@@ -198,7 +198,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
                   best: "Best for: patients with good bone volume wanting maximum durability",
                 },
                 {
-                  name: "Individual implants — £250–£800 each",
+                  name: "Individual implants — £250–£930 each",
                   desc: "Each missing tooth gets its own implant and crown. Across a full mouth this is several times the price of a full-arch bridge, takes longer, and requires enough bone at every site. It is rarely recommended for a full mouth, and is normally reserved for replacing a small number of teeth.",
                   best: "Best for: replacing one or a few teeth, not a whole jaw",
                 },
@@ -364,11 +364,9 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
                   </thead>
                   <tbody>
                     {[
-                      { term: "6 months", m: "£1,333", t: "£9,000" },
-                      { term: "12 months", m: "£667", t: "£9,000" },
-                      { term: "18 months", m: "£444", t: "£9,000" },
-                      { term: "24 months", m: "£333", t: "£9,000" },
-                      { term: "36 months", m: "£222", t: "£9,000" },
+                      { term: "12 months at 0%", m: "£667", t: "£9,000" },
+                      { term: "24 months at 0%", m: "£334", t: "£9,000" },
+                      { term: "36 months (interest applies)", m: "APR at application", t: "More than £9,000" },
                     ].map((r, i) => (
                       <tr key={r.term} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                         <td className="px-4 py-2.5 font-medium">{r.term}</td>
@@ -380,8 +378,8 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
                 </table>
               </div>
               <p className="text-xs text-gray-600 mt-3 leading-relaxed">
-                Monthly figures are the £8,000 balance divided by the term at a <strong>0% APR representative</strong>{" "}
-                rate, rounded to the nearest pound, and include the £1,000 deposit in the total repayable. They are an
+                The 12- and 24-month figures are the £8,000 balance divided by the term at a{" "}
+                <strong>0% APR representative</strong> rate, rounded up to the pound; 36-month plans carry interest, and include the £1,000 deposit in the total repayable. They are an
                 example calculation, not a credit offer. Finance is <strong>subject to a credit check and to the
                 lender&apos;s approval</strong> — approval is not guaranteed and not everyone will qualify. The rate,
                 term and deposit you are offered depend on the lender&apos;s assessment of your circumstances, and at any
@@ -389,8 +387,8 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
               </p>
             </div>
             <p>
-              For a single arch with no deposit, All-on-4 at £4,500 works out at approximately £125 a month over 36
-              months, and All-on-6 at £5,600 at approximately £156 a month, on the same 0% APR representative basis.
+              For a single arch with no deposit, All-on-4 at £4,500 works out at approximately £188 a month over 24
+              months, and All-on-6 at £5,600 at approximately £234 a month, on the same 0% APR representative basis.
             </p>
             <p>
               <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">See monthly payment figures for every treatment →</Link>
@@ -458,7 +456,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             { title: "All-on-6 Turkey", desc: "Full-arch restoration on 6 implants, from £5,600 per arch.", href: "/treatments/all-on-6-turkey" },
             { title: "All-on-6 Package Breakdown", desc: "What the £5,600 all-inclusive package actually covers.", href: "/prices/all-on-6-dental-implants-turkey-package" },
             { title: "Dental Implants Turkey Cost", desc: "Single-implant prices by brand, and add-on costs.", href: "/prices/dental-implants-turkey-cost" },
-            { title: "Monthly Payment Plans", desc: "Monthly figures for every treatment, from £82/month.", href: "/monthly-payment" },
+            { title: "Monthly Payment Plans", desc: "Monthly figures for every treatment, at 0% over 12 or 24 months.", href: "/monthly-payment" },
             { title: "Dental Finance UK", desc: "Payment plans, dental loans and what bad credit means.", href: "/finance-options-uk" },
           ]}
         />

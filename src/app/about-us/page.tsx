@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import AtAGlance from "@/components/geo/AtAGlance";
+import { REVIEWER_HREF, REVIEWER_NAME } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -22,6 +24,30 @@ export default function AboutPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div>
+            <p className="text-gray-700 leading-relaxed">
+              Teeth Done in Turkey is a UK patient-coordination service for people considering dental treatment in
+              Turkey. It is not a dental clinic: clinical treatment is carried out by independent partner clinics in
+              Turkey, and every published price is an indicative list price rather than a quote.
+            </p>
+            <AtAGlance
+              title="Teeth Done in Turkey in brief"
+              facts={[
+                { label: "What we are", value: "UK patient-coordination service" },
+                { label: "What we are not", value: "A dental clinic or GDC-registered practice" },
+                { label: "Who we serve", value: "UK patients" },
+                { label: "Who treats patients", value: "Independent partner clinics in Turkey" },
+                { label: "Medical reviewer", value: REVIEWER_NAME },
+                { label: "Contact", value: "hello@teethdoneinturkey.co.uk" },
+              ]}
+            />
+            <p className="text-sm text-gray-600">
+              How content is reviewed: <Link href="/editorial-policy" className="text-[#1e40af] hover:underline">editorial policy</Link> ·
+              How prices are collected: <Link href="/methodology" className="text-[#1e40af] hover:underline">methodology</Link> ·
+              Reviewer profile: <Link href={REVIEWER_HREF} className="text-[#1e40af] hover:underline">{REVIEWER_NAME}</Link>
+            </p>
+          </div>
+
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Who We Are</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
@@ -60,7 +86,7 @@ export default function AboutPage() {
               We partner exclusively with dental clinics that have achieved JCI accreditation or equivalent international certification. Our partner clinics are located in Istanbul (European side) and Antalya, offering modern facilities, CBCT scanning, digital smile design, and same-day temporaries.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              All partner dentists hold qualifications equivalent to UK GDC registration, and many have completed advanced training in Germany, the United States, or Italy. We personally inspect every clinic annually to ensure standards are maintained.
+              Partner dentists are qualified and licensed in Turkey under the Turkish Ministry of Health; they are not registered with the UK General Dental Council, which only registers dentists practising in the UK. Ask for the treating dentist&apos;s qualifications in writing. We personally inspect every clinic annually to ensure standards are maintained.
             </p>
           </div>
 

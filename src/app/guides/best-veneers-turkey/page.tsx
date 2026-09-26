@@ -8,6 +8,13 @@ import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import AtAGlance from "@/components/geo/AtAGlance";
+import DecisionTree from "@/components/geo/DecisionTree";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import PageFreshness from "@/components/geo/PageFreshness";
+import QuickAnswer from "@/components/geo/QuickAnswer";
+import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice } from "@/lib/prices";
+import { VENEER_INTENT_OWNERS, veneerFollowUps } from "@/lib/veneer-cluster";
 
 export const revalidate = 86400;
 
@@ -15,10 +22,9 @@ const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/best-veneers-turkey`;
 const TITLE = "Best Veneers in Turkey: Types, Clinics, Costs & How to Choose 2026";
 const H1 = "Best Veneers in Turkey: Types, Clinics, Costs & How to Choose";
-const DESCRIPTION =
-  "E-max vs zirconia vs composite veneers in Turkey — which looks most natural, requires least tooth prep, and lasts longest — plus how to choose a good veneer clinic.";
+const DESCRIPTION = "E-max vs zirconia vs composite veneers in Turkey: which looks most natural, removes least tooth and lasts longest, and how to choose a veneer clinic.";
 const DATE_PUBLISHED = "2026-09-13";
-const DATE_MODIFIED = "2026-09-13";
+const DATE_MODIFIED = "2026-09-25";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/best-veneers-turkey" },
@@ -41,21 +47,25 @@ const toc = [
   { id: "faqs", label: "FAQs" },
 ];
 
+const emax = getPrice("emax-veneer");
+const zirconia = getPrice("zirconia-crown");
+const composite = getPrice("composite-veneer");
+
 const comparisonRows = [
   {
     type: "E-max Porcelain",
     appearance: "★★★★★ Most natural, high translucency",
     prep: "Minimal (0.3–0.5mm)",
     durability: "15+ years with good care",
-    cost: "£190–£250/tooth",
+    cost: `From ${gbp(emax.turkeyFromGBP)}/tooth`,
     bestFor: "Cosmetic makeovers on healthy teeth",
   },
   {
     type: "Zirconia",
     appearance: "★★★★ Very white, slightly less translucent",
-    prep: "Moderate (0.5–1.0mm)",
+    prep: "1.5–2.0mm on all surfaces (as a crown)",
     durability: "15–20+ years",
-    cost: "£190–£250/tooth",
+    cost: `${gbp(zirconia.turkeyFromGBP)}/tooth (as a crown)`,
     bestFor: "Crowns, back teeth, bruxism",
   },
   {
@@ -63,7 +73,7 @@ const comparisonRows = [
     appearance: "★★★ Good but less lifelike",
     prep: "Minimal or none",
     durability: "5–8 years",
-    cost: "£80–£120/tooth",
+    cost: `From ${gbp(composite.turkeyFromGBP)}/tooth`,
     bestFor: "Budget option, younger patients",
   },
   {
@@ -147,13 +157,31 @@ export default function BestVeneersTurkeyPage() {
 
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MedicalReviewBadge
-            />
+          <PageFreshness published="13 September 2026" reviewed="25 September 2026" pricingChecked={PRICES_LAST_VERIFIED_LABEL} />
+          <div className="mt-4">
+            <MedicalReviewBadge />
+          </div>
 
-          <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer</h2>
-          <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
-            <strong>E-max porcelain</strong> (by Ivoclar) is the best material for cosmetic front-tooth veneers in Turkey — it offers the highest translucency, the most natural appearance, requires the least tooth preparation of any permanent veneer, and lasts 15+ years. Zirconia is stronger but less translucent — better for crowns and back teeth than for cosmetic veneers. Composite veneers are less expensive and reversible, but wear faster. The veneer type matters less than the dentist and lab making it.
-          </p>
+          <QuickAnswer question="What are the best veneers to get in Turkey?">
+            <p>
+              <strong>E-max porcelain</strong> (by Ivoclar) is the best material for cosmetic front-tooth veneers in
+              Turkey for most people: it is the most translucent, looks closest to natural enamel, needs the least tooth
+              preparation of any permanent veneer and commonly lasts 15 years or more. Zirconia is stronger but less
+              translucent, and is usually fitted as a crown. Composite veneers cost less and remove little or no tooth,
+              but wear sooner. The dentist and lab making the veneers matter more than the material.
+            </p>
+          </QuickAnswer>
+
+          <AtAGlance
+            facts={[
+              { label: "Best for most cosmetic cases", value: "E-max porcelain" },
+              { label: "Best for grinders / damaged teeth", value: "Zirconia (crown)" },
+              { label: "Least tooth removed", value: "Composite or E-max" },
+              { label: "E-max price in Turkey", value: `From ${gbp(emax.turkeyFromGBP)}/tooth` },
+              { label: "Composite price in Turkey", value: `From ${gbp(composite.turkeyFromGBP)}/tooth` },
+              { label: "Pricing checked", value: PRICES_LAST_VERIFIED_LABEL },
+            ]}
+          />
 
           <GuideTOC items={toc} />
 
@@ -163,7 +191,7 @@ export default function BestVeneersTurkeyPage() {
               "Zirconia is stronger but more opaque — preferred for crowns and high-load situations, not front cosmetic veneers.",
               "Composite veneers (direct or lab-made) are reversible and less expensive, but lifespan is 5–12 years.",
               "The quality of the dentist and lab matters more than the material choice for final appearance.",
-              "In Turkey, E-max and zirconia are priced similarly at £190–£250 per tooth — ask specifically which material your quote covers.",
+              `In Turkey, E-max veneers cost from ${gbp(emax.turkeyFromGBP)} per tooth and zirconia crowns ${gbp(zirconia.turkeyFromGBP)} — a lower zirconia price usually means a crown, not a veneer, so ask which your quote covers.`,
               "Always ask to see a portfolio of before-and-after photos from the specific dentist who will treat you, not a generic clinic portfolio.",
             ]}
           />
@@ -219,7 +247,9 @@ export default function BestVeneersTurkeyPage() {
             <li><strong>Zirconia crowns (often called &ldquo;zirconium veneers&rdquo;):</strong> full-coverage caps requiring 1.5–2mm reduction on all tooth surfaces. Much stronger than E-max. Better for heavily restored, damaged or misaligned teeth. Less translucent.</li>
           </ul>
           <p className="text-gray-700 leading-relaxed mb-4">
-            For a full explanation of how to tell which you are actually being quoted, see{" "}
+            A side-by-side comparison of the two materials, with prices, is in{" "}
+            <Link href={VENEER_INTENT_OWNERS.emaxVsZirconia} className="text-[#1e40af] font-semibold hover:underline">E-max vs zirconia veneers in Turkey</Link>.
+            For how to tell which you are actually being quoted, see{" "}
             <Link href="/guides/turkey-teeth-veneers-or-crowns" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth: Veneers or Crowns?</Link>
           </p>
 
@@ -240,7 +270,7 @@ export default function BestVeneersTurkeyPage() {
 
           <h2 id="how-much-cost" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">How Much Do the Best Veneers in Turkey Cost?</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            E-max porcelain veneers in Turkey cost £190–£250 per tooth at reputable clinics. A full set of 20 costs £3,800–£5,000. Zirconia crowns are similarly priced. Composite veneers are less expensive at £80–£160 per tooth. Note that clinics offering E-max veneers significantly below £190 per tooth should be questioned — at that price point, material and lab quality become a concern.
+            At partner clinics, E-max porcelain veneers cost from {gbp(emax.turkeyFromGBP)} per tooth, so a full set of 20 is from {gbp(emax.turkeyFromGBP * 20)} before travel. Zirconia crowns cost {gbp(zirconia.turkeyFromGBP)} per tooth, and composite veneers from {gbp(composite.turkeyFromGBP)} (direct) — lab-made composite costs more. A quote for E-max well below {gbp(emax.turkeyFromGBP)} per tooth is worth questioning: ask for the ceramic brand and the lab in writing.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             For a full per-tooth and per-set price breakdown, see{" "}
@@ -304,6 +334,18 @@ export default function BestVeneersTurkeyPage() {
             <li>Before-and-after photos that look stock or inconsistent with the clinic&apos;s stated patient volume.</li>
             <li>No clear aftercare plan or UK contact once you return home.</li>
           </ul>
+
+          <DecisionTree
+            title="Which veneers suit you?"
+            steps={[
+              { condition: "your front teeth are healthy and you want a natural-looking change of shape or colour", action: "E-max porcelain veneers." },
+              { condition: "you want a small, reversible change or are on a tight budget", action: "composite veneers or bonding — expect to replace them sooner." },
+              { condition: "your teeth are heavily filled, broken or worn, or you grind", action: "zirconia crowns may be needed; ask the dentist to justify each crown." },
+              { condition: "you have gum disease, decay or a bite problem", action: "treat that first — no veneer type lasts well on an unhealthy base." },
+            ]}
+          />
+
+          <FollowUpQuestions items={veneerFollowUps(VENEER_INTENT_OWNERS.bestType)} />
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">FAQs</h2>
         </div>

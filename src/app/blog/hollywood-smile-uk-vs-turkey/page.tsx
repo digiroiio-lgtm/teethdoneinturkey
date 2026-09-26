@@ -2,164 +2,209 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import AtAGlance from "@/components/geo/AtAGlance";
+import ComparisonTable from "@/components/geo/ComparisonTable";
+import DecisionTree from "@/components/geo/DecisionTree";
+import EvidenceBlock from "@/components/geo/EvidenceBlock";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import NotForYou from "@/components/geo/NotForYou";
+import PageFreshness from "@/components/geo/PageFreshness";
+import PriceRows from "@/components/geo/PriceRows";
+import QuickAnswer from "@/components/geo/QuickAnswer";
+import { HOLLYWOOD_INTENT_OWNERS, HOLLYWOOD_PACKAGE_NIGHTS, hollywoodFollowUps } from "@/lib/hollywood-cluster";
+import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice, ukRange } from "@/lib/prices";
+import { PACKAGE_TRIP_EXTRAS } from "@/lib/travel";
 
 export const revalidate = 86400;
 
+const PATH = HOLLYWOOD_INTENT_OWNERS.ukComparison;
+const TITLE = "Hollywood Smile Cost: UK vs Turkey 2026";
+
+const h20 = getPrice("hollywood-20");
+const h24 = getPrice("hollywood-24");
+const crown = getPrice("zirconia-crown");
+
+const DESCRIPTION = `Hollywood Smile UK vs Turkey: 20 zirconia crowns ${ukRange(h20)} in the UK, ${gbp(h20.turkeyFromGBP)} in Turkey incl. hotel. All-in totals and when crowns aren't right.`;
+
 export const metadata: Metadata = {
-  alternates: { canonical: "/blog/hollywood-smile-uk-vs-turkey" },
-  title: { absolute: "Hollywood Smile Cost: UK vs Turkey 2026" },
-  description: "Hollywood Smile cost UK vs Turkey compared. 20 zirconia crowns from £2,800 in Turkey vs £15,000+ in the UK. What's included, quality, and how to book.",
+  alternates: { canonical: PATH },
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
 };
+
+// Package prices already include hotel and transfers, so only flights, food
+// and insurance are added for the all-in figure.
+const allIn = [h20, h24].map((r) => ({
+  label: r.treatment.replace("Hollywood Smile — ", ""),
+  uk: ukRange(r),
+  fee: gbp(r.turkeyFromGBP),
+  total: `${gbp(r.turkeyFromGBP + PACKAGE_TRIP_EXTRAS.min)}–${gbp(r.turkeyFromGBP + PACKAGE_TRIP_EXTRAS.max)}`,
+}));
+
+const minDifference = h20.ukRangeGBP.min - h20.turkeyFromGBP - PACKAGE_TRIP_EXTRAS.max;
 
 export default function HollywoodSmileUKvsTurkeyPage() {
   return (
     <article className="py-16 bg-white">
       <ArticleJsonLd
         id="article-schema-hollywood-smile-uk-vs-turkey"
-        path="/blog/hollywood-smile-uk-vs-turkey"
-        headline="Hollywood Smile Cost: UK vs Turkey 2026"
-        description="Hollywood Smile cost UK vs Turkey compared. 20 zirconia crowns from £2,800 in Turkey vs £15,000+ in the UK. What's included, quality, and how to book."
+        path={PATH}
+        headline={TITLE}
+        description={DESCRIPTION}
         datePublished="2026-04-01"
+        dateModified="2026-09-25"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
-          { name: "Hollywood Smile Cost: UK vs Turkey 2026", path: "/blog/hollywood-smile-uk-vs-turkey" },
+          { name: TITLE, path: PATH },
         ]}
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Veneers</span>
+          <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Crowns</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Hollywood Smile Cost: UK vs Turkey – 2026 Comparison</h1>
-          <p className="text-gray-500 text-sm">Published April 2026 · 6 min read</p>
-          <MedicalReviewBadge />
+          <PageFreshness published="1 April 2026" reviewed="25 September 2026" pricingChecked={PRICES_LAST_VERIFIED_LABEL} />
+          <div className="mt-4">
+            <MedicalReviewBadge />
+          </div>
         </div>
 
-        <div className="space-y-6 text-gray-700 leading-relaxed">
-          <p>
-            The Hollywood Smile — a perfectly uniform, brilliantly white full set of zirconia crowns — is one of the most sought-after cosmetic dental treatments. In the UK, it&apos;s priced beyond the reach of most patients. In Turkey, the same result is available for a fraction of the cost. This guide breaks down exactly what you get, what you pay, and what to watch out for.
+        <div className="text-gray-700 leading-relaxed">
+          <QuickAnswer question="Is a Hollywood Smile cheaper in Turkey than in the UK?">
+            <p>
+              Yes. Twenty zirconia crowns typically cost {ukRange(h20)} at a UK private practice. In Turkey the
+              20-crown package is {gbp(h20.turkeyFromGBP)}, including {HOLLYWOOD_PACKAGE_NIGHTS} nights&apos; hotel and
+              transfers; adding flights, food and insurance brings it to about{" "}
+              {gbp(h20.turkeyFromGBP + PACKAGE_TRIP_EXTRAS.min)}–{gbp(h20.turkeyFromGBP + PACKAGE_TRIP_EXTRAS.max)}, a
+              difference of at least {gbp(minDifference)}. Price is not the main decision, though: a Hollywood Smile is
+              20 or more crowns, which permanently reduces every tooth — worth doing only where the teeth need it.
+            </p>
+          </QuickAnswer>
+
+          <AtAGlance
+            facts={[
+              { label: "Pricing checked", value: PRICES_LAST_VERIFIED_LABEL },
+              { label: "UK, 20 zirconia crowns", value: ukRange(h20) },
+              { label: "Turkey, 20-crown package", value: `${gbp(h20.turkeyFromGBP)} incl. hotel` },
+              { label: "Turkey all-in (20 crowns)", value: `${gbp(h20.turkeyFromGBP + PACKAGE_TRIP_EXTRAS.min)}–${gbp(h20.turkeyFromGBP + PACKAGE_TRIP_EXTRAS.max)}` },
+              { label: "Treatment type", value: "Crowns (not veneers)" },
+              { label: "Trips", value: "1 (about 5 days)" },
+            ]}
+          />
+
+          <h2 id="prices" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Hollywood Smile price: UK vs Turkey</h2>
+          <PriceRows records={[h20, h24, crown]} caption="Hollywood Smile and zirconia crown prices: UK private vs Turkey" />
+          <p className="text-xs text-gray-500 mb-6">
+            Turkey: partner-clinic package and per-crown prices. UK: typical private ranges for the same number of
+            crowns ({ukRange(crown)} each), without hotel. Checked {PRICES_LAST_VERIFIED_LABEL} —{" "}
+            <Link href="/methodology" className="text-[#1e40af] hover:underline">methodology</Link>. What each package
+            includes is on the{" "}
+            <Link href={HOLLYWOOD_INTENT_OWNERS.cost} className="text-[#1e40af] hover:underline">Hollywood Smile package page</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Hollywood Smile Price: UK vs Turkey</h2>
-          <div className="grid grid-cols-2 gap-4 my-4">
-            <div className="bg-red-50 rounded-2xl p-5 text-center border border-red-200">
-              <p className="text-sm text-gray-500 mb-1">UK Private (20 crowns)</p>
-              <p className="text-3xl font-extrabold text-red-500">£15,000+</p>
-              <p className="text-xs text-gray-500">Zirconia crowns at £900–£1,200 each</p>
-            </div>
-            <div className="bg-green-50 rounded-2xl p-5 text-center border border-green-200">
-              <p className="text-sm text-gray-500 mb-1">Turkey (20 zirconia crowns)</p>
-              <p className="text-3xl font-extrabold text-green-600">£2,800</p>
-              <p className="text-xs text-green-600 font-semibold">Save up to £12,000+</p>
-            </div>
-          </div>
-
-          <p>
-            Even adding £500–£700 for a week&apos;s flights and hotel in Turkey, the total cost remains around <strong>£3,300–£3,500</strong> — still saving over £11,000 compared to UK prices.
+          <h2 id="all-in" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">All-in cost, including travel</h2>
+          <p className="mb-3">
+            Because the packages already include hotel and transfers, the only travel costs to add are flights, food
+            and insurance — an illustrative {gbp(PACKAGE_TRIP_EXTRAS.min)}–{gbp(PACKAGE_TRIP_EXTRAS.max)}.
           </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Hollywood Smile Package Comparison</h2>
-          <div className="overflow-x-auto rounded-2xl shadow-sm">
-            <table className="w-full bg-white text-sm">
+          <div className="overflow-x-auto rounded-xl ring-1 ring-gray-200 mb-4">
+            <table className="w-full text-sm bg-white">
               <thead>
-                <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
-                  <th className="px-4 py-3 text-left">Package</th>
-                  <th className="px-4 py-3 text-right">UK Price</th>
-                  <th className="px-4 py-3 text-right">Turkey Price</th>
-                  <th className="px-4 py-3 text-right">Saving</th>
+                <tr className="bg-gray-50 text-gray-700">
+                  <th scope="col" className="px-4 py-2 text-left font-semibold">Package</th>
+                  <th scope="col" className="px-4 py-2 text-right font-semibold">UK private</th>
+                  <th scope="col" className="px-4 py-2 text-right font-semibold">Turkey package</th>
+                  <th scope="col" className="px-4 py-2 text-right font-semibold">Turkey all-in</th>
                 </tr>
               </thead>
               <tbody>
-                {[
-                  { pkg: "20 Zirconia Crowns (Hollywood Smile)", uk: "£18,000–£24,000", tr: "£2,800", s: "~85%" },
-                  { pkg: "24 Zirconia Crowns + hotel + transfers", uk: "£21,600–£28,800", tr: "£3,100", s: "~86%" },
-                  { pkg: "Hollywood + Gum Contouring", uk: "£19,000–£25,000", tr: "£3,300–£3,500", s: "~83%" },
-                  { pkg: "Individual Zirconia Crown", uk: "£900–£1,200", tr: "£130", s: "~90%" },
-                ].map((r, i) => (
-                  <tr key={r.pkg} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="px-4 py-3 font-medium">{r.pkg}</td>
-                    <td className="px-4 py-3 text-right text-red-500 line-through">{r.uk}</td>
-                    <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.tr}</td>
-                    <td className="px-4 py-3 text-right">
-                      <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-bold">Save {r.s}</span>
-                    </td>
+                {allIn.map((r) => (
+                  <tr key={r.label} className="border-t border-gray-100">
+                    <th scope="row" className="px-4 py-2 text-left font-medium text-gray-900">{r.label}</th>
+                    <td className="px-4 py-2 text-right">{r.uk}</td>
+                    <td className="px-4 py-2 text-right">{r.fee}</td>
+                    <td className="px-4 py-2 text-right text-[#1e40af] font-semibold">{r.total}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Is the Quality the Same?</h2>
-          <p>
-            The materials used at reputable Turkish clinics are identical to those used in the UK&apos;s leading cosmetic dental practices. A Hollywood Smile in Turkey typically uses:
-          </p>
-          <ul className="list-disc list-inside space-y-2 my-3">
-            <li><strong>Zirconia</strong> — the industry-leading material for Hollywood Smile packages in Turkey. Highly durable, natural-looking, and resistant to chipping. Available in full-arch packages with hotel and transfers included.</li>
-            <li><strong>Digital Smile Design (DSD)</strong> — software that maps the patient&apos;s facial proportions and previews the smile result before any treatment begins.</li>
-            <li><strong>In-house CAD/CAM laboratory</strong> — allowing precision milling of veneers to consistent tolerances.</li>
-            <li><strong>3Shape or similar digital impressions</strong> — eliminating the need for messy traditional impression materials.</li>
-          </ul>
-          <p>
-            The same tools and materials are available in the UK — but the overheads of running a London or Manchester cosmetic dental practice are many times higher than operating in Istanbul or Antalya.
+          <p className="mb-4">
+            The fourth part of the{" "}
+            <Link href="/methodology#total-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Treatment Total Cost</Link>{" "}
+            is a Follow-up Risk Allowance. With 20 or more crowns, it is likely that at least one will need attention
+            over the years — re-cementing, a chip, or gum problems at a crown edge — and each time that means a return
+            trip or a UK dentist&apos;s fee.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Does a Hollywood Smile Include in Turkey?</h2>
-          <ul className="space-y-2">
-            {[
-              "Full consultation and Digital Smile Design session",
-              "Shade selection — from natural off-white to dramatic bright white",
-              "Tooth preparation (minimal enamel reduction)",
-              "Temporary veneers while permanent ones are crafted",
-              "Permanent zirconia crown fabrication (in-house lab, 3–5 days)",
-              "Final fitting, bonding, and bite adjustment",
-              "5–10 year written guarantee",
-              "Post-treatment aftercare instructions and WhatsApp follow-up",
-            ].map((item, i) => (
-              <li key={i} className="flex gap-2 items-start list-none"><span className="text-green-500 mt-0.5">✓</span><span>{item}</span></li>
-            ))}
-          </ul>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Does the UK Charge So Much More?</h2>
-          <p>
-            The price difference is not explained by quality, materials, or clinical skill. It is explained by costs:
-          </p>
-          <ul className="list-disc list-inside space-y-2 my-3">
-            <li>Dental associate salaries in UK cosmetic practices: £50,000–£150,000+/year</li>
-            <li>Prime-location clinic rent in London: £5,000–£30,000/month</li>
-            <li>UK laboratory costs: £200–£400 per veneer</li>
-            <li>Dental insurance and indemnity costs in the UK</li>
-          </ul>
-          <p>
-            In Turkey, each of these cost items is a fraction of the UK equivalent. The dentist still earns an excellent income relative to local living costs — the patient simply benefits from those economics.
+          <h2 id="why-cheaper" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Why is it so much cheaper in Turkey?</h2>
+          <p className="mb-4">
+            The difference comes mainly from lower clinic overheads, staff costs and cost of living in Turkey, not from
+            a different material: zirconia crowns and digital smile design are used in both countries. Clinics with an
+            in-house lab also cut the time and cost of making 20 crowns. The breakdown is in{" "}
+            <Link href="/blog/why-are-dental-treatments-cheaper-in-turkey" className="text-[#1e40af] font-semibold hover:underline">why dental treatment is cheaper in Turkey</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Can You Get a Natural-Looking Hollywood Smile in Turkey?</h2>
-          <p>
-            Absolutely. The term &ldquo;Hollywood Smile&rdquo; encompasses a wide range of aesthetics — from the very white, very uniform result popularised in celebrity culture to a subtler, more natural enhancement. Modern zirconia crowns are available in dozens of shades, from bright white to natural-looking tones. Digital Smile Design technology lets you preview any shade and shape before committing.
-          </p>
-          <p>
-            Our partner clinics specialise in natural-looking results. They advise patients on the shade and shape that will look most harmonious with their skin tone, face shape, and age — not simply the whitest option available.
-          </p>
+          <ComparisonTable
+            id="trade-offs"
+            title="UK vs Turkey Hollywood Smile: trade-offs beyond price"
+            options={["UK private", "Turkey package"]}
+            rows={[
+              { factor: "20 zirconia crowns", values: [ukRange(h20), `${gbp(h20.turkeyFromGBP)} incl. hotel and transfers`] },
+              { factor: "Time", values: ["Several appointments over weeks", "One trip of about 5 days"] },
+              { factor: "Time to judge temporaries", values: ["Weeks, at home", "A day or two"] },
+              { factor: "Loose or chipped crown later", values: ["Same practice, nearby", "Return trip, or pay a UK dentist"] },
+              { factor: "Regulator and complaints", values: ["General Dental Council; Dental Complaints Service", "Turkish Ministry of Health; through the clinic"] },
+              { factor: "Reversible", values: ["No", "No"] },
+            ]}
+          />
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How Long Does the Hollywood Smile Take in Turkey?</h2>
-          <p>
-            A full Hollywood Smile (20 veneers) is typically completed in <strong>5 days</strong>:
-          </p>
-          <ol className="list-decimal list-inside space-y-2 my-3">
-            <li><strong>Day 1:</strong> Consultation, photos, Digital Smile Design, shade selection</li>
-            <li><strong>Day 2:</strong> Tooth preparation, temporary veneers fitted</li>
-            <li><strong>Days 3–4:</strong> In-house lab fabricates permanent zirconia crowns</li>
-            <li><strong>Day 5:</strong> Permanent veneer fitting, bonding, final adjustments</li>
+          <h2 id="what-happens" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What happens during the 5 days</h2>
+          <ol className="list-decimal pl-6 space-y-2 mb-4">
+            <li><strong>Day 1:</strong> consultation, X-rays, photos, digital smile design and shade selection.</li>
+            <li><strong>Day 2:</strong> teeth are prepared for crowns — reduced on every surface — scanned, and temporary crowns fitted.</li>
+            <li><strong>Days 3–4:</strong> the lab makes the permanent zirconia crowns.</li>
+            <li><strong>Day 5:</strong> the crowns are fitted and cemented, and the bite is adjusted.</li>
           </ol>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Pay Monthly for Your Hollywood Smile</h2>
-          <p>
-            A Hollywood Smile (20 zirconia crowns) financed over 36 months costs approximately <strong>£78/month</strong> — less than many people spend on subscription services, and far less than UK finance for equivalent treatment.
+          <p className="mb-4">
+            The package price covers consultation, the crowns, temporaries, fitting, hotel and transfers. Guarantee
+            terms are set by the treating clinic and vary — get the length and what it covers in writing. A natural
+            result depends mostly on the shade and shape you choose; see{" "}
+            <Link href="/blog/do-turkey-teeth-look-fake" className="text-[#1e40af] font-semibold hover:underline">do Turkey teeth look fake?</Link>
           </p>
-          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ See all monthly payment options</Link>
+
+          <NotForYou
+            title="When a Hollywood Smile may not be the right choice"
+            items={[
+              "Your teeth are healthy and you mainly want them whiter or more even — veneers, whitening or bonding remove far less tooth.",
+              "You have untreated gum disease or decay, which needs treating before any crowns.",
+              "You could not return to Turkey, or afford a UK dentist, if a crown needed attention later.",
+            ]}
+          />
+
+          <DecisionTree
+            title="UK, Turkey — or not crowns at all?"
+            steps={[
+              { condition: "most visible teeth are damaged, worn or heavily filled and you want them all done", action: "the Turkey package usually costs a fraction of the UK price even with flights; compare guarantee terms." },
+              { condition: "your teeth are healthy", action: "ask a UK dentist and the Turkey clinic whether veneers or whitening would work instead — in either country." },
+              { condition: "you need only a few crowns", action: `compare a UK quote with Turkey at ${gbp(crown.turkeyFromGBP)} per crown plus the whole trip; the saving shrinks with fewer teeth.` },
+              { condition: "you have not had an examination", action: "no plan is final until X-rays show the state of each tooth and the gums." },
+            ]}
+          />
+
+          <EvidenceBlock
+            items={[
+              { claim: `Turkey ${gbp(h20.turkeyFromGBP)} / ${gbp(h24.turkeyFromGBP)} packages`, basis: "Partner clinic package prices — Turkey Dental Price Index", href: "/turkey-dental-price-index", checked: PRICES_LAST_VERIFIED_LABEL },
+              { claim: `UK ${ukRange(h20)} for 20 crowns`, basis: `Typical UK private range of ${ukRange(crown)} per zirconia crown × 20`, href: "/methodology#sources", checked: PRICES_LAST_VERIFIED_LABEL },
+              { claim: `Extra trip costs ${gbp(PACKAGE_TRIP_EXTRAS.min)}–${gbp(PACKAGE_TRIP_EXTRAS.max)}`, basis: "Illustrative editorial estimate (flights, food, insurance), not a quote", checked: "September 2026" },
+            ]}
+          />
+
+          <FollowUpQuestions items={hollywoodFollowUps(PATH)} />
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
             <p className="font-bold text-xl mb-2">Get your Hollywood Smile quote</p>
-            <p className="text-blue-200 mb-4">Send us your photos — we&apos;ll prepare a personalised treatment plan with a Digital Smile Design preview and all-inclusive cost estimate within 24 hours.</p>
+            <p className="text-blue-200 mb-4">Send us your photos — we&apos;ll tell you which teeth need crowns, which could have veneers, and the itemised cost within 24 hours.</p>
             <div className="flex flex-wrap gap-3">
               <Link href="/book-consultation" className="inline-block bg-white text-[#1e40af] px-5 py-2.5 rounded-xl font-bold hover:bg-blue-50 transition-colors text-sm">Get Free Quote</Link>
               <Link href="/treatments/full-smile-makeover-turkey" className="inline-block border-2 border-white text-white px-5 py-2.5 rounded-xl font-bold hover:bg-white/10 transition-colors text-sm">Smile Makeover Guide</Link>
@@ -167,16 +212,16 @@ export default function HollywoodSmileUKvsTurkeyPage() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-200">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
+            <h2 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
+                { href: "/prices/hollywood-smile-turkey-package", label: "Hollywood Smile Packages", sub: "What each package includes" },
+                { href: "/guides/turkey-teeth-veneers-or-crowns", label: "Veneers or Crowns?", sub: "How much tooth each removes" },
                 { href: "/treatments/veneers-turkey", label: "Veneers Turkey", sub: "Treatment guide & pricing" },
                 { href: "/treatments/full-smile-makeover-turkey", label: "Full Smile Makeover", sub: "Veneers + more" },
-                { href: "/treatments/dental-implants-turkey", label: "Dental Implants Turkey", sub: "Full treatment guide" },
-                { href: "/prices/veneers-turkey-cost", label: "Veneers Cost Guide", sub: "Prices & comparisons" },
                 { href: "/prices/turkey-teeth-cost", label: "Turkey Teeth Cost", sub: "All treatment prices" },
-                { href: "/monthly-payment", label: "Monthly Payment Plans", sub: "From £82/month" },
-              ].map(item => (
+                { href: "/monthly-payment", label: "Monthly Payment Plans", sub: "0% APR over 12 or 24 months" },
+              ].map((item) => (
                 <Link key={item.href} href={item.href} className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
                   <span className="font-semibold text-gray-900 text-sm">{item.label}</span>
                   <span className="text-xs text-gray-500 mt-0.5">{item.sub}</span>

@@ -17,7 +17,7 @@ const faqs = [
   { question: "How many days do I need in Turkey for All-on-4?", answer: "Your first trip takes 5–7 days: Day 1 for scans and consultation, Day 2 for surgery with same-day temporary teeth, Days 3–5 for recovery and adjustments. You return after 3–6 months for your permanent zirconia arch (3–4 days)." },
   { question: "Is All-on-4 surgery painful?", answer: "The procedure is carried out under local anaesthetic or IV sedation. Most patients report minimal discomfort during surgery. Post-operative soreness is managed with standard prescription pain relief and typically subsides within 3–5 days." },
   { question: "What's the difference between All-on-4 and All-on-6?", answer: "All-on-4 uses four implants to support a full arch. All-on-6 uses six implants, giving better load distribution and superior stability — particularly recommended for the upper arch. We can advise which is best after reviewing your CBCT scan." },
-  { question: "Can I pay monthly for All-on-4?", answer: "Yes. Our finance plans allow you to spread the cost over 12, 24, or 36 months. A single All-on-4 arch from £4,500 is available from approximately £125/month over 36 months. Pre-qualify online with no impact on your credit score." },
+  { question: "Can I pay monthly for All-on-4?", answer: "Yes. Our finance plans allow you to spread the cost over 12, 24, or 36 months. 0% APR representative applies to 12- and 24-month plans: a single All-on-4 arch from £4,500 is about £188/month over 24 months. 36-month plans carry interest. Pre-qualify online with no impact on your credit score." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -136,12 +136,12 @@ export default function AllOn4Page() {
           {/* Finance section */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Spread the Cost – Monthly Finance</h2>
-            <p className="text-gray-600 mb-4">You don&apos;t need to pay upfront. Spread the cost of your All-on-4 over 12, 24, or 36 months.</p>
+            <p className="text-gray-600 mb-4">You don&apos;t need to pay upfront. Spread the cost of your All-on-4 over 12 or 24 months at 0% APR representative, or 36 months with interest.</p>
             <div className="grid grid-cols-3 gap-3 mb-4">
               {[
                 { label: "12 months", price: "£375/mo" },
                 { label: "24 months", price: "£188/mo" },
-                { label: "36 months", price: "£125/mo" },
+                { label: "36 months", price: "Interest applies" },
               ].map(p => (
                 <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
                   <p className="text-xs text-gray-500 mb-1">{p.label}</p>
