@@ -11,6 +11,7 @@ import NotForYou from "@/components/geo/NotForYou";
 import PageFreshness from "@/components/geo/PageFreshness";
 import QuickAnswer from "@/components/geo/QuickAnswer";
 import { HOLLYWOOD_INTENT_OWNERS, HOLLYWOOD_PACKAGE_NIGHTS, hollywoodFollowUps } from "@/lib/hollywood-cluster";
+import { monthlyAtZero } from "@/lib/finance";
 import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice, ukRange } from "@/lib/prices";
 
 export const revalidate = 86400;
@@ -138,8 +139,9 @@ export default function HollywoodSmilePage() {
 
           <h2 id="pay-monthly" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Paying monthly</h2>
           <p className="mb-2">
-            A {gbp(h20.turkeyFromGBP)} Hollywood Smile package financed over 36 months at 0% works out at about{" "}
-            {`£${Math.round(h20.turkeyFromGBP / 36)}`} a month, subject to eligibility.
+            A {gbp(h20.turkeyFromGBP)} Hollywood Smile package financed over 24 months at 0% APR representative works out
+            at about {`£${monthlyAtZero(h20.turkeyFromGBP)}`} a month, subject to status. 36-month plans lower the payment
+            but carry interest.
           </p>
           <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
 

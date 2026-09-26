@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import { FINANCE_INTENT_OWNERS, financeFollowUps } from "@/lib/finance-cluster";
 
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/can-you-pay-monthly-for-veneers-turkey" },
   title: "Pay Monthly for Veneers Turkey",
-  description: "Yes — you can pay monthly for veneers in Turkey. A complete guide to dental finance options for UK patients, from £82/month with 0% interest options available.",
+  description: "Yes — you can pay monthly for veneers in Turkey. 20 E-max veneers at £159/month over 24 months at 0% APR; 36-month plans carry interest.",
 };
 
 export default function MonthlyVeneersPage() {
@@ -18,7 +20,7 @@ export default function MonthlyVeneersPage() {
         id="article-schema-can-you-pay-monthly-for-veneers-turkey"
         path="/blog/can-you-pay-monthly-for-veneers-turkey"
         headline="Pay Monthly for Veneers Turkey"
-        description="Yes — you can pay monthly for veneers in Turkey. A complete guide to dental finance options for UK patients, from £82/month with 0% interest options available."
+        description="Yes — you can pay monthly for veneers in Turkey. 20 E-max veneers at £159/month over 24 months at 0% APR; 36-month plans carry interest."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -35,7 +37,7 @@ export default function MonthlyVeneersPage() {
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
-          <p>Yes — you can absolutely pay monthly for veneers in Turkey. We offer UK-based dental finance plans that let you spread the cost of your treatment over 12, 24, or 36 months, making your dream smile more accessible than ever.</p>
+          <p>Yes — you can absolutely pay monthly for veneers in Turkey. We offer UK-based dental finance plans that let you spread the cost of your treatment over 12, 24 or 36 months. 0% APR representative applies to 12- and 24-month plans; 36-month plans carry interest.</p>
 
           <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200 my-6">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Monthly Payment Examples for Turkey Veneers</h2>
@@ -45,17 +47,17 @@ export default function MonthlyVeneersPage() {
                   <tr className="text-gray-500 text-xs uppercase">
                     <th className="text-left py-2">Treatment</th>
                     <th className="text-right py-2">Cost</th>
-                    <th className="text-right py-2">12 months</th>
-                    <th className="text-right py-2">24 months</th>
+                    <th className="text-right py-2">12 months (0%)</th>
+                    <th className="text-right py-2">24 months (0%)</th>
                     <th className="text-right py-2">36 months</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   {[
-                    { t: "10 veneers (E-max)", cost: "£1,900", m12: "£158/mo", m24: "£79/mo", m36: "£53/mo" },
-                    { t: "16 veneers (E-max)", cost: "£3,040", m12: "£253/mo", m24: "£127/mo", m36: "£84/mo" },
-                    { t: "20 veneers (E-max)", cost: "£3,800", m12: "£317/mo", m24: "£158/mo", m36: "£106/mo" },
-                    { t: "20 veneers (Zirconia)", cost: "£4,400", m12: "£367/mo", m24: "£183/mo", m36: "£122/mo" },
+                    { t: "10 veneers (E-max)", cost: "£1,900", m12: "£159/mo", m24: "£80/mo", m36: "Interest applies" },
+                    { t: "16 veneers (E-max)", cost: "£3,040", m12: "£254/mo", m24: "£127/mo", m36: "Interest applies" },
+                    { t: "20 veneers (E-max)", cost: "£3,800", m12: "£317/mo", m24: "£159/mo", m36: "Interest applies" },
+                    { t: "20 zirconia crowns (Hollywood package, incl. hotel)", cost: "£2,800", m12: "£234/mo", m24: "£117/mo", m36: "Interest applies" },
                   ].map(r => (
                     <tr key={r.t}>
                       <td className="py-2 font-medium">{r.t}</td>
@@ -92,13 +94,13 @@ export default function MonthlyVeneersPage() {
           </ol>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Is 0% Finance Available?</h2>
-          <p>Yes — 0% interest finance is available for qualifying applicants. Eligibility depends on your credit profile and the term chosen. Our team will present all available options clearly before you commit, with no hidden fees.</p>
+          <p>Yes — 0% APR representative is available for qualifying applicants on 12- and 24-month plans. 36-month plans carry interest. Eligibility depends on your credit profile. Our team will present all available options clearly before you commit, with no hidden fees.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What If I Have Bad Credit?</h2>
           <p>We work with specialist lenders who consider all credit profiles, including those with imperfect credit history. Pre-qualifying takes 60 seconds and uses a soft check — so you can see what&apos;s available without any impact on your credit file.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why This Changes Everything</h2>
-          <p>Even with finance, veneers in Turkey are dramatically cheaper than the UK. A full set of 20 veneers in Turkey financed over 36 months costs approximately £106/month. The equivalent UK treatment, even if financed, would be £500+/month for the same term. The gap is enormous.</p>
+          <p>Even with finance, veneers in Turkey are dramatically cheaper than the UK. A full set of 20 E-max veneers in Turkey costs about £159/month over 24 months at 0%. The same 20 veneers privately in the UK (£16,000 or more) would be £667 or more a month over the same term, before any interest.</p>
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
             <p className="font-bold text-lg mb-2">Pre-qualify for veneer finance today</p>
@@ -115,6 +117,7 @@ export default function MonthlyVeneersPage() {
               <li><Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] hover:underline">→ Veneers Turkey cost guide</Link></li>
             </ul>
           </div>
+          <FollowUpQuestions items={financeFollowUps(FINANCE_INTENT_OWNERS.veneerFinance)} />
           <div className="mt-12 pt-8 border-t border-gray-200">
             <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -132,7 +135,7 @@ export default function MonthlyVeneersPage() {
             </Link>
             <Link href="/monthly-payment" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Monthly Payment Plans</span>
-              <span className="text-xs text-gray-500 mt-0.5">From £82/month</span>
+              <span className="text-xs text-gray-500 mt-0.5">0% APR over 12 or 24 months</span>
             </Link>
             <Link href="/prices/veneers-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Veneers Cost Guide</span>

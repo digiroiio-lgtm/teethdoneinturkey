@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import { FINANCE_INTENT_OWNERS, financeFollowUps } from "@/lib/finance-cluster";
 
 export const revalidate = 86400;
 
@@ -129,6 +131,7 @@ export default function DentalTourismFinancePage() {
               <Link href="/monthly-payment" className="inline-block border-2 border-white text-white px-5 py-2.5 rounded-xl font-bold hover:bg-white/10 transition-colors text-sm">Monthly Payment Guide</Link>
             </div>
           </div>
+          <FollowUpQuestions items={financeFollowUps(FINANCE_INTENT_OWNERS.fundingOptions)} />
           <div className="mt-12 pt-8 border-t border-gray-200">
             <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -146,7 +149,7 @@ export default function DentalTourismFinancePage() {
             </Link>
             <Link href="/monthly-payment" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Monthly Payment Plans</span>
-              <span className="text-xs text-gray-500 mt-0.5">From £82/month</span>
+              <span className="text-xs text-gray-500 mt-0.5">0% APR over 12 or 24 months</span>
             </Link>
             <Link href="/prices/turkey-teeth-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Turkey Teeth Cost Guide</span>

@@ -139,6 +139,7 @@ for (const [name, file] of [
   ['implants', 'implant-cluster.ts'],
   ['veneers', 'veneer-cluster.ts'],
   ['hollywood', 'hollywood-cluster.ts'],
+  ['finance', 'finance-cluster.ts'],
 ]) {
   const src = readFileSync(join(ROOT, 'src', 'lib', file), 'utf8');
   const block = src.match(/_INTENT_OWNERS\s*=\s*\{([\s\S]*?)\}\s*as const/);
@@ -295,12 +296,14 @@ function priceConflicts(text) {
     const record = priceById[rule.id];
     if (!record) continue;
     for (const m of text.matchAll(rule.re)) {
-      const after = text.slice(m.index + m[0].length, m.index + m[0].length + 30);
+      const after = text.slice(m.index + m[0].length, m.index + m[0].length + 50);
       const quoted = after.match(/^[^£\d]{0,20}£([\d,]+)(.{0,12})/);
       const price = quoted?.[1];
       // "£680 more than Osstem" is a difference, and "compared with £2,000" is
       // the UK side of a comparison — neither is a Turkey price.
       if (!price || /^\s*(more|less|extra|cheaper|dearer)\b/.test(quoted[2])) continue;
+      // "£159 a month" / "£159/mo" is a finance instalment, not a treatment price.
+      if (/^\s*(\/\s*mo|a mo|per mo|\/month|monthly)/i.test(quoted[2])) continue;
       if (/\b(UK|compared|vs|versus|against)\b/i.test(after.slice(0, after.indexOf('£')))) continue;
       const n = Number(price.replace(/,/g, ''));
       if (n < record.uk_private_min_gbp && !canonicalTurkeyPrices.has(n)) {
@@ -316,6 +319,8 @@ const ABSOLUTE_CLAIMS = [
   /\bsave (up to )?[89]\d%/i,
   /\ball (our )?(partner )?clinics (are|hold) JCI/i,
   /\bno upfront fees\b/i,
+  // 0% APR applies to 12- and 24-month plans only (src/lib/finance.ts).
+  /\b36[- ]months?\b[^.]{0,40}\bat 0%|\b0%[^.]{0,80}\bover 36 months\b(?! with interest)|\b36-month 0%/i,
 ];
 
 const MONTHS = 'January|February|March|April|May|June|July|August|September|October|November|December';

@@ -9,6 +9,7 @@ import PageFreshness from "@/components/geo/PageFreshness";
 import QuickAnswer from "@/components/geo/QuickAnswer";
 import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice, savingRange, ukRange } from "@/lib/prices";
 import { VENEER_INTENT_OWNERS, veneerFollowUps } from "@/lib/veneer-cluster";
+import { monthlyLabel } from "@/lib/finance";
 
 export const revalidate = 86400;
 
@@ -16,7 +17,6 @@ const emax = getPrice("emax-veneer");
 const zirconia = getPrice("zirconia-crown");
 const composite = getPrice("composite-veneer");
 const DESCRIPTION = `E-max veneers in Turkey from ${gbp(emax.turkeyFromGBP)} per tooth, arranged by a UK coordination service. One 5–7 day trip, who it suits, and getting an itemised quote.`;
-const monthly = (total: number, months: number) => `£${Math.round(total / months)}/mo`;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/veneers-turkey" },
@@ -29,7 +29,7 @@ const faqs = [
   { question: "How many days do I need in Turkey for veneers?", answer: "You'll typically need 5–7 days for a veneer procedure — 2 days for preparation and temporaries, then 2–3 days later for fitting the final veneers." },
   { question: "Are Turkish veneers the same quality as UK veneers?", answer: "The materials can be the same: partner clinics use Ivoclar E-max, which UK practices also use. Quality depends mainly on the individual dentist's preparation, the lab and the bonding, in either country. Ask for the ceramic brand, the lab and the treating dentist in writing, and look at that dentist's own before-and-after cases." },
   { question: "Will my veneers look natural?", answer: "Well-made E-max veneers can look very close to natural teeth. A digital smile design preview and temporary veneers let you check the shape, length and shade before the permanent set is bonded — ask for changes at that stage, because they are much harder to make afterwards." },
-  { question: "Can I pay monthly for veneers in Turkey?", answer: "Yes. Finance is available over 12, 24, or 36 months. A full set of 20 veneers at £3,800 works out at around £106 a month over 36 months at 0%, subject to eligibility. Pre-qualification uses a soft search that does not affect your credit score." },
+  { question: "Can I pay monthly for veneers in Turkey?", answer: "Yes. 0% APR representative applies to 12- and 24-month plans, and 36-month plans carry interest. A full set of 20 veneers at £3,800 works out at about £159 a month over 24 months at 0%, subject to eligibility. Pre-qualification uses a soft search that does not affect your credit score." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -171,13 +171,13 @@ export default function VeneersTurkeyPage() {
           {/* Finance section */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Spread the Cost – Monthly Finance</h2>
-            <p className="text-gray-600 mb-4">Finance your veneers over 12, 24 or 36 months, subject to eligibility. Figures are for E-max at {gbp(emax.turkeyFromGBP)} per tooth at 0%.</p>
+            <p className="text-gray-600 mb-4">Finance your veneers at 0% APR representative over 12 or 24 months, or over 36 months with interest, subject to status. Figures are for E-max at {gbp(emax.turkeyFromGBP)} per tooth.</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {[
-                { label: "16 Veneers", price: monthly(emax.turkeyFromGBP * 16, 36), term: "36 months" },
-                { label: "20 Veneers", price: monthly(emax.turkeyFromGBP * 20, 36), term: "36 months" },
-                { label: "20 Veneers", price: monthly(emax.turkeyFromGBP * 20, 24), term: "24 months" },
-                { label: "20 Veneers", price: monthly(emax.turkeyFromGBP * 20, 12), term: "12 months" },
+                { label: "10 Veneers", price: monthlyLabel(emax.turkeyFromGBP * 10, 24), term: "24 months at 0%" },
+                { label: "20 Veneers", price: monthlyLabel(emax.turkeyFromGBP * 20, 24), term: "24 months at 0%" },
+                { label: "20 Veneers", price: monthlyLabel(emax.turkeyFromGBP * 20, 12), term: "12 months at 0%" },
+                { label: "Any", price: "Interest applies", term: "36 months" },
               ].map((p, i) => (
                 <div key={i} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
                   <p className="text-xs text-gray-500 mb-0.5">{p.label}</p>

@@ -77,7 +77,7 @@ export default function BookConsultationPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { icon: "🏆", title: "JCI-Accredited Clinics", desc: "All partner clinics hold international healthcare accreditation equivalent to top UK standards." },
-              { icon: "💳", title: "Finance Available", desc: "Spread costs from £82/month with 0% options. Soft credit check, no impact on your score." },
+              { icon: "💳", title: "Finance Available", desc: "0% APR over 12 or 24 months, subject to status. Soft credit check, no impact on your score." },
               { icon: "🇬🇧", title: "UK Support Throughout", desc: "A UK-based patient coordinator supports you before, during, and after your treatment." },
             ].map(item => (
               <div key={item.title} className="bg-gray-50 rounded-xl p-5 border border-gray-200 text-center">

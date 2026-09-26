@@ -102,7 +102,7 @@ const faqs = [
   },
   {
     question: "Can I pay for veneers in Turkey monthly?",
-    answer: "Yes. Monthly payment plans are available from £82/month with 0% APR representative over 12, 24 or 36 months, subject to an affordability and credit assessment. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
+    answer: "Yes. Monthly payment plans are available at 0% APR representative over 12 or 24 months — 20 E-max veneers are about £159 a month over 24 months — or over 36 months with interest, subject to an affordability and credit assessment. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
   },
 ];
 
@@ -308,7 +308,7 @@ export default function VeneersCostPage() {
               for the day by day breakdown.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Spreading the cost is available from £82/month with 0% APR representative over 12, 24 or 36 months, subject to eligibility. See{" "}
+              Spreading the cost is available at 0% APR representative over 12 or 24 months (20 E-max veneers: about £159 a month over 24 months), or over 36 months with interest, subject to eligibility. See{" "}
               <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">monthly payment options</Link>{" "}
               or estimate your own combination with the{" "}
               <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">price calculator</Link>.

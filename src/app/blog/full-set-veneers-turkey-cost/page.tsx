@@ -181,8 +181,8 @@ export default function FullSetVeneersCostPage() {
           </ul>
           <p className="mb-4">
             Guarantee terms are set by the treating clinic and vary by clinic and material — get the length and what it
-            covers in writing. Monthly payment plans are available from £82 a month over 12, 24 or 36 months, subject to
-            eligibility; see{" "}
+            covers in writing. Twenty E-max veneers can be spread at 0% APR representative over 12 or 24 months (about £159 a month over 24
+            months), or over 36 months with interest, subject to status; see{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">monthly payment options</Link>.
           </p>
 

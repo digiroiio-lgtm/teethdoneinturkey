@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
+import { FINANCE_INTENT_OWNERS, financeFollowUps } from "@/lib/finance-cluster";
 
 export const revalidate = 86400;
 
@@ -35,7 +37,7 @@ export default function PaymentPlansTurkeyPage() {
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
-          <p>Getting dental treatment in Turkey doesn&apos;t have to mean paying the full cost upfront. Our UK-based payment plans let you spread the cost of your Turkey dental treatment over 12, 24, or 36 months — while having your treatment done in Turkey as planned.</p>
+          <p>Getting dental treatment in Turkey doesn&apos;t have to mean paying the full cost upfront. Our UK-based payment plans let you spread the cost of your Turkey dental treatment over 12, 24 or 36 months (0% APR representative on 12 and 24 months; 36 months carries interest) — while having your treatment done in Turkey as planned.</p>
           <p>If you&apos;re still deciding between a payment plan, a personal loan and NHS charges, our{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">UK dental finance guide</Link>{" "}
             explains how each option works and where bad credit genuinely leaves you.</p>
@@ -70,16 +72,16 @@ export default function PaymentPlansTurkeyPage() {
               },
               {
                 plan: "24-Month Plan",
-                interest: "Low APR",
-                benefit: "Balanced payments — manageable monthly without long commitment",
-                example: "£3,800 treatment = ~£158/month",
+                interest: "0% available for qualifying applicants",
+                benefit: "The lowest monthly payment at 0% — same total as paying upfront",
+                example: "£3,800 treatment = ~£159/month",
                 icon: "⚖️",
               },
               {
                 plan: "36-Month Plan",
-                interest: "Low APR",
-                benefit: "Lowest monthly payment — maximum affordability",
-                example: "£3,800 treatment = ~£106/month",
+                interest: "Interest applies — APR confirmed at application",
+                benefit: "Lowest monthly payment, but you repay more than the treatment price",
+                example: "Ask for the APR and total repayable before agreeing",
                 icon: "💫",
               },
             ].map(item => (
@@ -125,16 +127,16 @@ export default function PaymentPlansTurkeyPage() {
                 <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                   <th className="px-4 py-3 text-left">Treatment</th>
                   <th className="px-4 py-3 text-right">Cost</th>
-                  <th className="px-4 py-3 text-right">36 months</th>
+                  <th className="px-4 py-3 text-right">24 months at 0%</th>
                   <th className="px-4 py-3 text-right">UK equivalent</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  { t: "20 Veneers", cost: "£3,800", mo: "£106/mo", uk: "£18,000+" },
-                  { t: "All-on-4 (1 arch)", cost: "£4,500", mo: "£125/mo", uk: "£12,000+" },
-                  { t: "Full Mouth All-on-4", cost: "£9,000", mo: "£250/mo", uk: "£24,000+" },
-                  { t: "Smile Makeover", cost: "£5,000", mo: "£139/mo", uk: "£12,000+" },
+                  { t: "20 Veneers", cost: "£3,800", mo: "£159/mo", uk: "£16,000+" },
+                  { t: "All-on-4 (1 arch)", cost: "£4,500", mo: "£188/mo", uk: "£15,000+" },
+                  { t: "Full Mouth All-on-4", cost: "£9,000", mo: "£375/mo", uk: "£24,000+" },
+                  { t: "Smile Makeover", cost: "From £3,500", mo: "£146/mo", uk: "£12,000+" },
                 ].map((r, i) => (
                   <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3 font-medium">{r.t}</td>
@@ -146,13 +148,14 @@ export default function PaymentPlansTurkeyPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-400 mt-2">* Monthly figures are representative at 0% APR over 36 months. Actual rate dependent on credit assessment.</p>
+          <p className="text-xs text-gray-400 mt-2">* Monthly figures are at 0% APR representative over 24 months, subject to status. 36-month plans carry interest.</p>
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
             <p className="font-bold text-xl mb-2">Check your payment plan options now</p>
             <p className="text-blue-200 mb-4">60-second pre-qualification. No impact on your credit score. Instant decision.</p>
             <Link href="/book-consultation" className="inline-block bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Pre-Qualify Free</Link>
           </div>
+          <FollowUpQuestions items={financeFollowUps(FINANCE_INTENT_OWNERS.steps)} />
           <div className="mt-12 pt-8 border-t border-gray-200">
             <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -170,7 +173,7 @@ export default function PaymentPlansTurkeyPage() {
             </Link>
             <Link href="/monthly-payment" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Monthly Payment Plans</span>
-              <span className="text-xs text-gray-500 mt-0.5">From £82/month</span>
+              <span className="text-xs text-gray-500 mt-0.5">0% APR over 12 or 24 months</span>
             </Link>
             <Link href="/prices/dental-implants-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Implant Costs</span>

@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "Can I get implants on finance?",
-    a: "Yes. Monthly payment plans are available from £82 a month over 12, 24 or 36 months, subject to eligibility. The monthly figure depends on the total treatment price and the term.",
+    a: "Yes, subject to status. 0% APR representative applies to 12- and 24-month plans — one All-on-4 arch is about £188 a month over 24 months — and 36-month plans carry interest. Finance starts at £500, so a single implant is usually financed with other treatment.",
   },
   {
     q: "Is a bone graft included in the implant price?",

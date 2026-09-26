@@ -7,13 +7,14 @@ import FollowUpQuestions from "@/components/geo/FollowUpQuestions";
 import PageFreshness from "@/components/geo/PageFreshness";
 import QuickAnswer from "@/components/geo/QuickAnswer";
 import { HOLLYWOOD_INTENT_OWNERS, hollywoodFollowUps } from "@/lib/hollywood-cluster";
+import { monthlyLabel } from "@/lib/finance";
 import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice, savingRange, ukRange } from "@/lib/prices";
 
 export const revalidate = 86400;
 
 const makeover = getPrice("smile-makeover");
 const h20 = getPrice("hollywood-20");
-const monthly = (months: number) => `£${Math.round(makeover.turkeyFromGBP / months)}/mo`;
+const monthly = (months: 12 | 24) => monthlyLabel(makeover.turkeyFromGBP, months);
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/full-smile-makeover-turkey" },
@@ -26,7 +27,7 @@ const faqs = [
   { question: "How long does a smile makeover take in Turkey?", answer: "A typical full smile makeover takes 6–8 days: Day 1 is your consultation and digital smile preview, Days 2–3 for tooth preparation and temporaries, Days 4–5 for the lab to craft your veneers, and Days 6–7 for fitting and final adjustments before you fly home with your new smile." },
   { question: "Can I see my new smile before treatment starts?", answer: "Yes. Digital Smile Design (DSD) software creates a high-resolution 3D preview of your proposed smile before any preparation begins. You can request adjustments until you are 100% happy." },
   { question: "How long do smile makeover results last?", answer: "E-max porcelain veneers — the most common component — typically last 10–15 years with proper care. Partner clinics give written guarantees whose length and cover vary — confirm the terms before booking. Teeth whitening results typically last 2–3 years before a top-up is needed." },
-  { question: "Can I pay monthly for a smile makeover?", answer: "Yes. Finance is available over 12, 24, or 36 months. A £3,500 smile makeover works out at about £97 a month over 36 months at 0%, subject to eligibility. Pre-qualification uses a soft search that does not affect your credit score." },
+  { question: "Can I pay monthly for a smile makeover?", answer: "Yes. Finance is available over 12, 24, or 36 months. 0% APR representative applies to 12- and 24-month plans, and 36-month plans carry interest. A £3,500 smile makeover works out at about £146 a month over 24 months at 0%, subject to eligibility. Pre-qualification uses a soft search that does not affect your credit score." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -158,12 +159,12 @@ export default function SmileMakeoverPage() {
           {/* Finance */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Spread the Cost – Monthly Finance</h2>
-            <p className="text-gray-600 mb-4">Finance your smile makeover over 12, 24 or 36 months, subject to eligibility. Figures are for {gbp(makeover.turkeyFromGBP)} at 0%.</p>
+            <p className="text-gray-600 mb-4">Finance your smile makeover at 0% APR representative over 12 or 24 months, or over 36 months with interest, subject to status. Figures are for {gbp(makeover.turkeyFromGBP)}.</p>
             <div className="grid grid-cols-3 gap-3 mb-4">
               {[
                 { label: "12 months", price: monthly(12) },
                 { label: "24 months", price: monthly(24) },
-                { label: "36 months", price: monthly(36) },
+                { label: "36 months", price: "Interest applies" },
               ].map(p => (
                 <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
                   <p className="text-xs text-gray-500 mb-1">{p.label}</p>

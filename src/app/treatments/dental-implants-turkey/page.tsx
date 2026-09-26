@@ -8,6 +8,7 @@ import NotForYou from "@/components/geo/NotForYou";
 import PageFreshness from "@/components/geo/PageFreshness";
 import QuickAnswer from "@/components/geo/QuickAnswer";
 import { IMPLANT_INTENT_OWNERS, implantFollowUps } from "@/lib/implant-cluster";
+import { MIN_FINANCE_GBP, monthlyLabel } from "@/lib/finance";
 import { PRICES_LAST_VERIFIED_LABEL, gbp, getPrice, savingRange, ukRange } from "@/lib/prices";
 
 export const revalidate = 86400;
@@ -27,7 +28,7 @@ const faqs = [
   { question: "How many trips do I need to Turkey for implants?", answer: "Usually two trips. The first (3–5 days) is for implant placement. After 3–6 months of osseointegration, you return for the crown fitting (3–4 days). Some cases with good bone density can be done as a single trip." },
   { question: "What brands of implants are used?", answer: "Published prices cover three systems: Osstem (from £250 with crown), Medentika (from £430) and Straumann (from £930). Other brands are available at some clinics on request. Your quote should name the brand and implant model in writing." },
   { question: "How long do dental implants last?", answer: "With good oral hygiene and regular check-ups, an implant is intended as a long-term replacement, and the crown on top may need replacing after many years of wear. No clinic can promise a fixed lifespan. Partner clinics give written guarantees whose length and cover vary by clinic and brand — confirm the terms before booking." },
-  { question: "Can I pay monthly for dental implants in Turkey?", answer: "Yes, subject to eligibility. Finance is available over 12, 24 or 36 months; a single £250 implant works out at about £7 a month over 36 months at 0%. Pre-qualification uses a soft search, which does not affect your credit score." },
+  { question: "Can I pay monthly for dental implants in Turkey?", answer: "Yes, subject to status. 0% APR representative applies to 12- and 24-month plans, and 36-month plans carry interest. Finance starts at £500, so a single £250 implant is usually financed with other treatment; three implants (£750) are about £32 a month over 24 months at 0%. Pre-qualification uses a soft search, which does not affect your credit score." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -149,12 +150,12 @@ export default function DentalImplantsTurkeyPage() {
           {/* Finance */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Spread the Cost – Monthly Finance</h2>
-            <p className="text-gray-600 mb-4">Finance your implants over 12, 24 or 36 months, subject to eligibility. Figures below are for a single {gbp(osstem.turkeyFromGBP)} implant at 0%.</p>
+            <p className="text-gray-600 mb-4">Finance your implants at 0% APR representative over 12 or 24 months, or over 36 months with interest, subject to status. Finance starts at £{MIN_FINANCE_GBP}, so a single implant is usually combined with other treatment.</p>
             <div className="grid grid-cols-3 gap-3 mb-4">
               {[
-                { label: "Single implant / 12mo", price: `£${Math.ceil(osstem.turkeyFromGBP / 12)}/mo` },
-                { label: "Single implant / 24mo", price: `£${Math.ceil(osstem.turkeyFromGBP / 24)}/mo` },
-                { label: "Single implant / 36mo", price: `£${Math.ceil(osstem.turkeyFromGBP / 36)}/mo` },
+                { label: "3 implants (Osstem) / 24mo", price: monthlyLabel(osstem.turkeyFromGBP * 3, 24) },
+                { label: "All-on-4 arch / 24mo", price: monthlyLabel(getPrice("all-on-4").turkeyFromGBP, 24) },
+                { label: "Any plan / 36mo", price: "Interest applies" },
               ].map(p => (
                 <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
                   <p className="text-xs text-gray-500 mb-1">{p.label}</p>

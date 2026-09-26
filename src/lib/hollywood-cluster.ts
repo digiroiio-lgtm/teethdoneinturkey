@@ -1,6 +1,7 @@
 import type { FollowUp } from "@/components/geo/FollowUpQuestions";
 import { getPrice, gbp, ukRange } from "@/lib/prices";
 import { PACKAGE_TRIP_EXTRAS } from "@/lib/travel";
+import { monthlyAtZero } from "@/lib/finance";
 
 // Hollywood Smile cluster: one dominant intent per URL, mirroring
 // src/lib/veneer-cluster.ts. URLs and titles are unchanged because
@@ -64,7 +65,7 @@ const HOLLYWOOD_FOLLOW_UPS: FollowUp[] = [
   {
     question: "Can I pay monthly?",
     href: "/monthly-payment",
-    answer: `Yes, subject to eligibility: a ${gbp(h20.turkeyFromGBP)} package works out at about £${Math.round(h20.turkeyFromGBP / 36)} a month over 36 months at 0%.`,
+    answer: `Yes, subject to status: a ${gbp(h20.turkeyFromGBP)} package is about £${monthlyAtZero(h20.turkeyFromGBP)} a month over 24 months at 0% APR; 36-month plans carry interest.`,
   },
 ];
 

@@ -17,7 +17,7 @@ const faqs = [
   { question: "How long does All-on-6 take in Turkey?", answer: "Your first trip is 6–8 days: Day 1 for scans, Day 2 for surgery with same-day temporaries, Days 3–6 for recovery and adjustments. After 3–6 months of osseointegration, you return for your permanent zirconia arch (3–4 days)." },
   { question: "What is included in the All-on-6 package price?", answer: "Our all-inclusive All-on-6 package (from £5,600 per arch) includes the 6 Osstem implants, temporary fixed arch, hotel accommodation, VIP airport transfers, and all clinical appointments. The permanent zirconia arch on your second visit is an additional fee." },
   { question: "Is All-on-6 possible with bone loss?", answer: "In many cases, yes — but if significant bone loss is present, a bone graft or sinus lift may be needed before implant placement. Our CBCT scan will confirm whether any preparatory work is required." },
-  { question: "Can I pay monthly for All-on-6?", answer: "Yes. Finance plans are available over 12, 24, or 36 months. An All-on-6 arch at £5,600 is available from around £156/month over 36 months. Pre-qualify with no credit impact." },
+  { question: "Can I pay monthly for All-on-6?", answer: "Yes. Finance plans are available over 12, 24, or 36 months. 0% APR representative applies to 12- and 24-month plans: an All-on-6 arch at £5,600 is about £234/month over 24 months. 36-month plans carry interest. Pre-qualify with no credit impact." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -138,12 +138,12 @@ export default function AllOn6Page() {
           {/* Finance section */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Spread the Cost – Monthly Finance</h2>
-            <p className="text-gray-600 mb-4">Finance your All-on-6 over 12, 24, or 36 months with no upfront fees.</p>
+            <p className="text-gray-600 mb-4">Finance your All-on-6 over 12 or 24 months at 0% APR representative, or 36 months with interest, subject to status.</p>
             <div className="grid grid-cols-3 gap-3 mb-4">
               {[
                 { label: "12 months", price: "£467/mo" },
-                { label: "24 months", price: "£233/mo" },
-                { label: "36 months", price: "£156/mo" },
+                { label: "24 months", price: "£234/mo" },
+                { label: "36 months", price: "Interest applies" },
               ].map(p => (
                 <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
                   <p className="text-xs text-gray-500 mb-1">{p.label}</p>

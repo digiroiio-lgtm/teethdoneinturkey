@@ -7,30 +7,31 @@ interface FAQItem {
   answer: string;
 }
 
+// Figures match src/lib/prices.ts and the finance terms in src/lib/finance.ts.
 const defaultFaqs: FAQItem[] = [
   {
     question: 'Is it safe to get teeth done in Turkey?',
-    answer: 'Yes, Turkey has world-class JCI-accredited dental clinics with highly trained dentists, many of whom have trained or practised in Europe. The clinics use the same brand-name materials as UK practices (Straumann implants, Ivoclar veneers) and follow strict sterilisation protocols. Hundreds of thousands of international patients visit Turkey for dental work each year with excellent outcomes.',
+    answer: 'Dental treatment carries the same clinical risks in Turkey as in the UK; what differs is how easily problems are followed up once you are home. The main safeguards are a clinic licensed by the Turkish Ministry of Health, a named dentist whose qualifications you can check, recognised materials (such as Straumann implants or Ivoclar E-max veneers), a written treatment plan and written guarantee terms. The NHS advises checking what aftercare is available before you travel.',
   },
   {
     question: 'How much do veneers cost in Turkey?',
-    answer: 'Veneers in Turkey cost from £190 per tooth, compared to £900+ in the UK — a saving of around 79%. A full set of 20 veneers costs £3,800 in Turkey vs £18,000 in the UK.',
+    answer: 'Porcelain (E-max) veneers in Turkey cost from £190 per tooth, against £800–£1,000 per tooth privately in the UK. A full set of 20 is from £3,800 in Turkey before travel, against £16,000–£20,000 in the UK.',
   },
   {
     question: 'Can I pay monthly for dental treatment?',
-    answer: 'Yes, we offer monthly payment plans starting from £82/month. Plans are available over 12, 24, or 36 months. You can pre-qualify online in under 60 seconds with no impact on your credit score.',
+    answer: 'Yes. Plans are available over 12, 24 or 36 months. 0% APR representative applies to 12- and 24-month plans, subject to status; 36-month plans carry interest, confirmed when you apply. Pre-qualification is a soft search and does not affect your credit score.',
   },
   {
     question: 'How long do I need to stay in Turkey?',
-    answer: 'For veneers, you typically need 5–7 days. Dental implants require two trips: the first for implant placement (3–5 days) and a second trip 3–6 months later for the crowns (3–4 days). All-on-4/All-on-6 treatments typically take 5–7 days for the initial visit.',
+    answer: 'For veneers or crowns, typically one trip of 5–7 days. Dental implants usually need two trips: 3–5 days for placement, then a second visit 3–6 months later for the permanent crown. All-on-4 and All-on-6 typically need 5–7 days on the first visit.',
   },
   {
     question: 'What happens if something goes wrong after I return home?',
-    answer: 'All our partner clinics offer guarantees of up to 10 years on their work. We also provide UK-based aftercare co-ordination, and any issues can be addressed either remotely or on a return visit. Our patient support team is available throughout your recovery.',
+    answer: 'Contact the treating clinic first — partner clinics give written guarantees, but their length and cover vary, and remedial work usually means a return trip. Our UK team coordinates aftercare with the clinic. Some problems may need a UK dentist, whose fees are not covered by the clinic guarantee.',
   },
   {
     question: 'Are the dentists qualified?',
-    answer: 'Yes. All our partner dentists hold Turkish Dental Association qualifications equivalent to UK GDC registration, and many hold international accreditations. Many have trained in Germany, the UK, or the USA. We only work with clinics accredited by JCI or the Turkish Ministry of Health.',
+    answer: 'Partner dentists are qualified and licensed in Turkey under the Turkish Ministry of Health. They are not registered with the UK General Dental Council, which only registers dentists practising in the UK. Ask for the treating dentist\'s name, qualifications and clinic licence in writing before you book.',
   },
 ];
 

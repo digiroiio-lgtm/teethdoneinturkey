@@ -290,7 +290,7 @@ export default function TeethInTurkeyPillarGuide() {
 
           <h2 id="dentist-qualifications" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Dentist Qualifications</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Dentists practising in Turkey hold Turkish Dental Association qualifications broadly equivalent to UK General Dental Council (GDC) registration, and many hold additional international training or postgraduate qualifications. A dentist practising in Turkey is not automatically GDC-registered in the UK — GDC registration applies to dentists practising within the UK. Ask any clinic directly for their dentists&apos; specific qualifications and registration details rather than relying on general claims.
+            Dentists practising in Turkey qualify and are licensed in Turkey, and many hold additional international training or postgraduate qualifications. A dentist practising in Turkey is not automatically GDC-registered in the UK — GDC registration applies to dentists practising within the UK. Ask any clinic directly for their dentists&apos; specific qualifications and registration details rather than relying on general claims.
           </p>
 
           <h2 id="health-tourism-authorisation" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Health Tourism Authorisation</h2>
@@ -383,7 +383,7 @@ export default function TeethInTurkeyPillarGuide() {
             { title: "All-on-4 Turkey", desc: "Full arch restoration on 4 implants from £4,500.", href: "/treatments/all-on-4-turkey" },
             { title: "All-on-6 Turkey", desc: "Maximum-stability full arch on 6 implants from £5,600.", href: "/treatments/all-on-6-turkey" },
             { title: "Full Smile Makeover", desc: "Combined veneers, whitening and contouring from £3,500.", href: "/treatments/full-smile-makeover-turkey" },
-            { title: "Monthly Payment Options", desc: "See what your treatment costs per month at 12, 24 or 36 months.", href: "/monthly-payment" },
+            { title: "Monthly Payment Options", desc: "See what your treatment costs per month at 0% over 12 or 24 months.", href: "/monthly-payment" },
           ]}
         />
 

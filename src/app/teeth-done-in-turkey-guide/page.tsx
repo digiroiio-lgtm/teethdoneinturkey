@@ -105,7 +105,7 @@ export default function TeethDoneInTurkeyGuidePage() {
                 { icon: "🦷", title: "Same Brand Materials", desc: "Ivoclar E-max veneers, Straumann implants, Nobel Biocare — same as top UK practices." },
                 { icon: "🌍", title: "Expert Dentists", desc: "Many Turkish dentists trained in Europe or the USA with specialist aesthetic certifications." },
                 { icon: "🗓️", title: "No Waiting Lists", desc: "Appointments within days. Compare to months or years on UK NHS waiting lists." },
-                { icon: "💳", title: "Monthly Payment", desc: "Spread costs from £82/month over 12, 24, or 36 months. 0% options available." },
+                { icon: "💳", title: "Monthly Payment", desc: "Spread costs over 12 or 24 months at 0% APR representative; 36-month plans carry interest." },
               ].map(item => (
                 <div key={item.title} className="flex gap-3 bg-gray-50 rounded-xl p-4 border border-gray-200">
                   <span className="text-2xl flex-shrink-0">{item.icon}</span>
@@ -263,14 +263,14 @@ export default function TeethDoneInTurkeyGuidePage() {
           <section id="finance">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Finance & Monthly Payment Options</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Even at Turkish prices, a full smile makeover or implant treatment is a significant investment. That&apos;s why we offer UK-based monthly payment plans, allowing you to spread costs over 12, 24, or 36 months.
+              Even at Turkish prices, a full smile makeover or implant treatment is a significant investment. That&apos;s why we offer UK-based monthly payment plans, allowing you to spread costs over 12, 24 or 36 months. 0% APR representative applies to the 12- and 24-month plans; 36-month plans carry interest.
             </p>
             <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200 mb-4">
               <div className="grid grid-cols-3 gap-4 text-center">
                 {[
-                  { term: "12 months", monthly: "£282/mo", example: "Veneers £3,800" },
-                  { term: "24 months", monthly: "£158/mo", example: "Implants package" },
-                  { term: "36 months", monthly: "£82/mo", example: "Smile makeover" },
+                  { term: "12 months at 0%", monthly: "£317/mo", example: "20 veneers, £3,800" },
+                  { term: "24 months at 0%", monthly: "£159/mo", example: "20 veneers, £3,800" },
+                  { term: "24 months at 0%", monthly: "£188/mo", example: "All-on-4 arch, £4,500" },
                 ].map(item => (
                   <div key={item.term} className="bg-white rounded-xl p-3">
                     <p className="text-xs text-gray-500">{item.term}</p>
@@ -315,7 +315,7 @@ export default function TeethDoneInTurkeyGuidePage() {
                 { href: "/treatments/all-on-4-turkey", label: "All-on-4 Implants", desc: "Full arch from £4,500" },
                 { href: "/treatments/all-on-6-turkey", label: "All-on-6 Implants", desc: "Full arch from £5,600" },
                 { href: "/treatments/full-smile-makeover-turkey", label: "Smile Makeover", desc: "Complete transformation" },
-                { href: "/monthly-payment", label: "Monthly Payment", desc: "From £82/month" },
+                { href: "/monthly-payment", label: "Monthly Payment", desc: "0% APR over 12 or 24 months" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-[#1e40af] hover:shadow-sm transition-all group">
                   <p className="font-bold text-gray-900 group-hover:text-[#1e40af] text-sm">{item.label}</p>

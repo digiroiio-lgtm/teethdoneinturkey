@@ -49,8 +49,22 @@ export function isNoindex(source) {
  * the footer or a CTA button is not a substantive modification of 70 pages, and
  * counting it would re-introduce exactly the bulk-lastmod-bump problem we are
  * trying to remove.
+ *
+ * Shared *content data* is the exception: when a page imports prices, travel
+ * budgets or a cluster's follow-up answers from src/lib, a change there changes
+ * what the page says, so those files (and the data files they import) count.
  */
+// src/lib modules that hold page content rather than code or chrome.
+const CONTENT_DATA = /^(prices|travel|[a-z]+-cluster)\.ts$/;
+
+function resolveContentData(specifier, libDir) {
+  const name = specifier.replace(/^@\/lib\//, '');
+  const file = path.join(libDir, `${name}.ts`);
+  return CONTENT_DATA.test(path.basename(file)) && fs.existsSync(file) ? file : null;
+}
+
 function collectRouteFiles(pageFile, routeDir) {
+  const libDir = path.resolve(routeDir.slice(0, routeDir.indexOf(`${path.sep}app`)), 'lib');
   const seen = new Set();
   const queue = [pageFile];
 
@@ -60,11 +74,17 @@ function collectRouteFiles(pageFile, routeDir) {
     seen.add(file);
 
     const source = fs.readFileSync(file, 'utf8');
+    for (const match of source.matchAll(/from\s+["'](@\/lib\/[^"']+)["']/g)) {
+      const data = resolveContentData(match[1], libDir);
+      if (data) queue.push(data);
+    }
     for (const match of source.matchAll(/from\s+["'](\.[^"']+)["']/g)) {
       const resolved = resolveLocalImport(path.dirname(file), match[1]);
-      // Stay inside this route's own folder, and never follow into a nested route.
+      // Stay inside this route's own folder (or src/lib content data reached
+      // from it), and never follow into a nested route.
       if (!resolved) continue;
-      if (!resolved.startsWith(routeDir + path.sep)) continue;
+      const inLibData = resolved.startsWith(libDir + path.sep) && CONTENT_DATA.test(path.basename(resolved));
+      if (!inLibData && !resolved.startsWith(routeDir + path.sep)) continue;
       if (path.basename(resolved) === PAGE_FILE) continue;
       queue.push(resolved);
     }

@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     question: "Can I pay monthly for teeth in Turkey?",
-    answer: "Yes. Monthly payment plans are available from £82/month with 0% interest over 12, 24 or 36 months, according to this site's monthly payment page. Exact monthly figures depend on the treatment total and the term you choose.",
+    answer: "Yes. Plans run over 12, 24 or 36 months; 0% APR representative applies to 12 and 24 months, and 36-month plans carry interest. At 0% over 24 months, 20 E-max veneers (£3,800) come to about £159 a month. Finance starts at £500.",
   },
 ];
 
@@ -149,7 +149,7 @@ export default function TurkeyTeethCostPricePage() {
               "Individual treatments start from £130 (zirconia crown) and £190 (E-max veneer); implants start from £250.",
               "All-inclusive packages (hotel + transfers) start from £2,800 for a 20-crown Hollywood Smile.",
               "Full-arch implant options: All-on-4 from £4,500/arch, All-on-6 from £5,600/arch — both all-inclusive.",
-              "0% finance is available from £82/month over 12, 24 or 36 months.",
+              "0% APR finance is available over 12 or 24 months (36 months carries interest); finance starts at £500.",
               "Flights, and some optional add-ons, are not included in package prices — confirm exactly what's covered before booking.",
             ]}
           />
@@ -241,7 +241,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="finance" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Finance &amp; Monthly Payment</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Where finance is factually available on this site, monthly payment plans start from £82/month with 0% interest over 12, 24 or 36 months. Monthly figures scale with the total treatment cost and the term selected — see{" "}
+            Where finance is factually available on this site, monthly payment plans are available at 0% APR representative over 12 or 24 months, and over 36 months with interest; finance starts at £500. Monthly figures scale with the total treatment cost and the term selected — see{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">what each treatment costs per month</Link>{" "}
             or{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how UK dental finance works, including dental loans and bad credit</Link>{" "}
