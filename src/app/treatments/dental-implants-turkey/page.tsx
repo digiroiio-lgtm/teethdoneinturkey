@@ -9,11 +9,11 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/dental-implants-turkey" },
   title: "Dental Implants Turkey – From £250",
-  description: "Get permanent dental implants in Turkey from £250. Same Straumann and Nobel Biocare brands as UK at 90% less. JCI clinics, 10-year guarantee.",
+  description: "Get permanent dental implants in Turkey from £250. Same Straumann and Nobel Biocare brands as UK at 90% less. Registered clinics, 10-year guarantee.",
 };
 
 const faqs = [
-  { question: "Are dental implants in Turkey safe?", answer: "Yes. Our partner clinics use premium implant systems (Straumann, Nobel Biocare) and follow the same surgical protocols as UK clinics. All clinics are JCI-accredited or Ministry of Health certified." },
+  { question: "Are dental implants in Turkey safe?", answer: "Yes. Our partner clinics use premium implant systems (Straumann, Nobel Biocare) and follow the same surgical protocols as UK clinics. All partner clinics are registered with the Turkish Ministry of Health." },
   { question: "How many trips do I need to Turkey for implants?", answer: "Usually two trips. The first (3–5 days) is for implant placement. After 3–6 months of osseointegration, you return for the crown fitting (3–4 days). Some cases with good bone density can be done as a single trip." },
   { question: "What brands of implants are used?", answer: "Our partner clinics use Straumann, Nobel Biocare, Astra Tech, and other premium implant brands — the same systems used in top UK practices." },
   { question: "How long do dental implants last?", answer: "With proper care, implants can last a lifetime. The crown on top may need replacing after 15–20 years. Our clinics offer a 10-year guarantee on implant work." },

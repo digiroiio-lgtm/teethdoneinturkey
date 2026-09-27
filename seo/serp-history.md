@@ -282,6 +282,74 @@ elsewhere), and the "hundreds of UK patients" line in the `/reviews` CTA.
 
 ---
 
+### Addendum 2, same day — JCI accreditation claim withdrawn
+
+On the owner's instruction, and with no evidence of JCI accreditation available,
+the accreditation claim flagged in Addendum 1 was converted to the Turkish
+Ministry of Health registration wording the site already used elsewhere.
+
+**It was not one badge.** The audit found the claim asserted in **16 places**,
+all first-person: the homepage hero strip and `TrustBar`, the OG image (so it
+travelled into every social share), the meta descriptions of three `/treatments/*`
+pages, `/about-us` twice ("We connect UK patients with rigorously vetted,
+JCI-accredited dental clinics" and "We partner exclusively with dental clinics
+that have achieved JCI accreditation"), `/book-consultation` ("All partner
+clinics hold international healthcare accreditation equivalent to top UK
+standards"), `/turkey-teeth-clinic`, `/teeth-done-in-turkey-guide` x3, the shared
+`FAQSection` default, `/guides/cant-afford-root-canal-uk`,
+`/guides/teeth-in-turkey` and `/blog/full-mouth-implants-uk-vs-turkey`.
+
+Same shape as the £82/month defect and the 500+/5.0 rating defect fixed earlier
+today: one unevidenced assertion, hard-coded independently across the site. It is
+now in one module, `src/lib/accreditation.ts`, with the reasoning recorded.
+
+**Why this one was worse than a generic overclaim.** JCI is voluntary,
+expensive and independently inspected, so it is publicly falsifiable - anyone can
+search the JCI directory. And the site's **own** `/blog/best-dental-clinics-turkey`
+already explained, correctly, that "relatively few dental-only clinics hold it -
+most JCI-accredited organisations in Turkey are hospitals" and that "Ministry of
+Health health-tourism authorisation is the requirement that actually applies to
+every clinic legally treating international patients, so check that first." The
+site was advising readers to apply a standard it was simultaneously claiming for
+itself without support, and contradicting its own guidance in doing so.
+
+**What was deliberately NOT changed.** Roughly 30 further JCI mentions are
+reader-facing *advice* ("look for JCI accreditation when choosing a clinic") or
+*explanation* of what JCI is, across `/turkey-teeth-clinic`,
+`/why-choose-turkey-for-dental-work`, `/blog/best-dental-clinics-turkey`,
+`/blog/risks-of-turkey-teeth` and others. That advice is accurate, useful, and
+independent of whether these particular clinics hold the accreditation. Only
+first-person claims were touched. A crawl of all 79 live pages confirms **zero**
+first-person JCI claims remain.
+
+Two further items fixed in passing, both the same defect class:
+- The homepage hero strip also carried **"5-star reviews"** - a fourth copy of
+  the unsourced rating claim, missed in Addendum 1 because it was worded
+  differently from "5.0 average" / "500+". Replaced.
+- The shared `FAQSection` safety answer opened "Turkey has world-class
+  JCI-accredited dental clinics", which the site's own page above contradicts.
+  Rewritten around Ministry of Health licensing and the health tourism
+  authorisation, which is the status that actually applies.
+
+**Still only a safer unverified claim, not a verified one.** Ministry of Health
+registration is a licensing baseline every legally operating Turkish clinic must
+hold, so it is far more defensible than JCI - but it has not been evidenced here
+either. The durable fix is to publish the partner clinic's Ministry registration
+number and its health tourism authorisation number, both documents the clinic
+already holds. The new wording is deliberately modest and tells the reader to ask
+for them.
+
+**New finding, not actioned.** The homepage hero headline reads "Premium Dental
+Treatments from **£1,850**". That figure appears **exactly once in the entire
+codebase** - no page prices anything at £1,850. The cheapest packages the site
+actually publishes are 8 zirconia veneers at £1,040 and 10 zirconia at £1,300, so
+the headline both overstates the entry price and matches nothing. Left alone
+because a headline price may be a deliberate positioning decision rather than an
+error, but it needs either a package that justifies it or correction - it is the
+most prominent number on the site.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

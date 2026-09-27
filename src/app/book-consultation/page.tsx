@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CLINIC_REGISTRATION_LABEL, CLINIC_REGISTRATION_DESC } from "@/lib/accreditation";
 import BookingForm from "./BookingForm";
 
 export const metadata: Metadata = {
@@ -76,7 +77,7 @@ export default function BookConsultationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { icon: "🏆", title: "JCI-Accredited Clinics", desc: "All partner clinics hold international healthcare accreditation equivalent to top UK standards." },
+              { icon: "🏥", title: CLINIC_REGISTRATION_LABEL, desc: CLINIC_REGISTRATION_DESC },
               { icon: "💳", title: "Finance Available", desc: "Spread costs from £53/month with 0% options. Soft credit check, no impact on your score." },
               { icon: "🇬🇧", title: "UK Support Throughout", desc: "A UK-based patient coordinator supports you before, during, and after your treatment." },
             ].map(item => (

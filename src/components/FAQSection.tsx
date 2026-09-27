@@ -10,7 +10,7 @@ interface FAQItem {
 const defaultFaqs: FAQItem[] = [
   {
     question: 'Is it safe to get teeth done in Turkey?',
-    answer: 'Yes, Turkey has world-class JCI-accredited dental clinics with highly trained dentists, many of whom have trained or practised in Europe. The clinics use the same brand-name materials as UK practices (Straumann implants, Ivoclar veneers) and follow strict sterilisation protocols. Hundreds of thousands of international patients visit Turkey for dental work each year with excellent outcomes.',
+    answer: 'Safety depends on the clinic you choose rather than on the country. Clinics in Turkey are licensed by the Turkish Ministry of Health, and any clinic legally treating international patients also needs a separate health tourism authorisation — that is the status worth checking first, because JCI accreditation is voluntary and most JCI-accredited organisations in Turkey are hospitals rather than dental clinics. A well-run clinic uses the same brand-name materials as UK practices (Straumann implants, Ivoclar veneers) and follows the same sterilisation protocols. Turkey treats a large number of international dental patients each year, and outcomes at registered clinics are broadly comparable to equivalent private treatment in the UK.',
   },
   {
     question: 'How much do veneers cost in Turkey?',
@@ -30,7 +30,7 @@ const defaultFaqs: FAQItem[] = [
   },
   {
     question: 'Are the dentists qualified?',
-    answer: 'Yes. All our partner dentists hold Turkish Dental Association qualifications equivalent to UK GDC registration, and many hold international accreditations. Many have trained in Germany, the UK, or the USA. We only work with clinics accredited by JCI or the Turkish Ministry of Health.',
+    answer: 'Yes. All our partner dentists hold Turkish Dental Association qualifications equivalent to UK GDC registration, and many hold international accreditations. Many have trained in Germany, the UK, or the USA. We only work with clinics registered with the Turkish Ministry of Health.',
   },
 ];
 

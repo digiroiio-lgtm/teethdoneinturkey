@@ -59,7 +59,7 @@ export default function TeethDoneInTurkeyGuidePage() {
 
       <div className="bg-blue-50 border-y border-blue-200 py-4">
         <div className="max-w-4xl mx-auto px-4 flex flex-wrap justify-center gap-6 text-sm text-blue-800 font-medium">
-          <span>✓ JCI-Accredited Clinics</span>
+          <span>✓ Ministry of Health Registered Clinics</span>
           <span>✓ Save Up to 70%</span>
           <span>✓ English-Speaking Dentists</span>
           <span>✓ 10-Year Guarantee</span>
@@ -101,7 +101,7 @@ export default function TeethDoneInTurkeyGuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { icon: "💰", title: "Save Up to 70–90%", desc: "Veneers from £190/tooth. Implants from £250. Full smile makeovers from £2,800." },
-                { icon: "🏥", title: "World-Class Clinics", desc: "JCI-accredited clinics with digital dentistry, same-day labs, and state-of-the-art equipment." },
+                { icon: "🏥", title: "Modern Clinics", desc: "Ministry of Health registered clinics with digital dentistry, same-day labs, and state-of-the-art equipment." },
                 { icon: "🦷", title: "Same Brand Materials", desc: "Ivoclar E-max veneers, Straumann implants, Nobel Biocare — same as top UK practices." },
                 { icon: "🌍", title: "Expert Dentists", desc: "Many Turkish dentists trained in Europe or the USA with specialist aesthetic certifications." },
                 { icon: "🗓️", title: "No Waiting Lists", desc: "Appointments within days. Compare to months or years on UK NHS waiting lists." },
@@ -193,7 +193,7 @@ export default function TeethDoneInTurkeyGuidePage() {
               <h3 className="font-bold text-gray-900 mb-3">How We Keep You Safe</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 {[
-                  "We only partner with JCI-accredited or Ministry of Health-certified clinics",
+                  "We only partner with clinics registered with the Turkish Ministry of Health",
                   "Every clinic has been personally visited and vetted by our team",
                   "All clinics use premium brand-name materials (Straumann, Ivoclar, Nobel Biocare)",
                   "Written treatment plan and guarantee provided before any work begins",

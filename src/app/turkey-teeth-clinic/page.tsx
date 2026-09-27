@@ -179,7 +179,7 @@ export default function TurkeyTeethClinicPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { icon: "🏆", title: "JCI Accredited", desc: "Or equivalent international accreditation, verified directly with the certifying body." },
+                { icon: "🏥", title: "Ministry of Health Registered", desc: "Registered with the Turkish Ministry of Health. Any further accreditation a clinic claims should be verified directly with the body that issued it." },
                 { icon: "🔍", title: "In-Person Assessment", desc: "Our team has visited every partner clinic. We've seen the labs, met the dentists, and reviewed case files." },
                 { icon: "📊", title: "Patient Outcome Tracking", desc: "We monitor outcomes and patient feedback. Clinics that don't maintain our standards are removed." },
                 { icon: "🇬🇧", title: "UK Patient Experience", desc: "Every partner clinic has a dedicated English-speaking UK patient coordinator and clear aftercare protocols." },

@@ -25,7 +25,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Who We Are</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Teeth Done in Turkey is a UK-based dental tourism service dedicated to helping British patients access premium dental treatments in Turkey at a fraction of UK prices. We connect UK patients with rigorously vetted, JCI-accredited dental clinics in Istanbul and Antalya.
+              Teeth Done in Turkey is a UK-based dental tourism service dedicated to helping British patients access premium dental treatments in Turkey at a fraction of UK prices. We connect UK patients with vetted dental clinics in Istanbul and Antalya that are registered with the Turkish Ministry of Health.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Our team has personally visited every clinic we recommend. We only work with practices that meet our strict criteria for quality, hygiene, and patient care — clinics that use the same world-class materials as top UK dentists (Straumann implants, Ivoclar E-max veneers) but charge a fraction of the UK price.
@@ -37,7 +37,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { icon: "💰", title: "Save Up to 70%", desc: "Lower cost of living and operational costs mean significant savings without compromising quality." },
-                { icon: "🏆", title: "World-Class Clinics", desc: "JCI-accredited clinics with state-of-the-art equipment and highly trained specialists." },
+                { icon: "🏥", title: "Registered Clinics", desc: "Turkish Ministry of Health registered clinics with CBCT scanning, digital smile design and in-house or partner labs." },
                 { icon: "🇬🇧", title: "English-Speaking Staff", desc: "All our partner clinics have English-speaking dentists and patient co-ordinators." },
                 { icon: "✈️", title: "Short Flight", desc: "Istanbul is just 3.5 hours from London. Combine your treatment with a city break." },
                 { icon: "🔬", title: "Same Materials", desc: "Straumann, Nobel Biocare, Ivoclar — the same premium brands used in top UK practices." },
@@ -57,7 +57,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Clinic Partners</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              We partner exclusively with dental clinics that have achieved JCI accreditation or equivalent international certification. Our partner clinics are located in Istanbul (European side) and Antalya, offering modern facilities, CBCT scanning, digital smile design, and same-day temporaries.
+              We partner with dental clinics registered with the Turkish Ministry of Health, the licence required to operate a clinic in Turkey. Our partner clinics are located in Istanbul (European side) and Antalya, offering modern facilities, CBCT scanning, digital smile design, and same-day temporaries. If a clinic&apos;s accreditations matter to you, ask to see its Ministry registration and, for international patients, its health tourism authorisation &mdash; and verify any accreditation directly with the body that issued it.
             </p>
             <p className="text-gray-600 leading-relaxed">
               All partner dentists hold qualifications equivalent to UK GDC registration, and many have completed advanced training in Germany, the United States, or Italy. We personally inspect every clinic annually to ensure standards are maintained.

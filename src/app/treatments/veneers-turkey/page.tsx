@@ -9,7 +9,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/veneers-turkey" },
   title: "Veneers Turkey – From £190 Per Tooth",
-  description: "Get porcelain or E-max veneers in Turkey from £190 per tooth. Compare to £900+ in the UK. JCI-accredited clinics, English-speaking dentists, 10-year guarantee.",
+  description: "Get porcelain or E-max veneers in Turkey from £190 per tooth. Compare to £900+ in the UK. Registered clinics, English-speaking dentists, 10-year guarantee.",
 };
 
 const faqs = [

@@ -1,3 +1,4 @@
+import { CLINIC_REGISTRATION_LABEL } from '@/lib/accreditation';
 import {
   TRUSTPILOT_URL,
   TRUSTPILOT_RATING,
@@ -13,14 +14,12 @@ import {
 // partner clinic's, so the badge names the clinic rather than implying it is a
 // rating of this website.
 //
-// STILL UNVERIFIED and deliberately left as-is pending evidence from the owner:
-// 'JCI-Accredited Clinics'. JCI accreditation is a specific, publicly checkable
-// status and should either be evidenced with the accredited entity's name or
-// softened to the Turkish Ministry of Health registration the site cites
-// elsewhere.
+// 'JCI-Accredited Clinics' was also replaced, on the owner's instruction
+// 2026-09-27, with the Ministry of Health registration wording — no evidence of
+// JCI accreditation was available. See src/lib/accreditation.ts.
 export default function TrustBar() {
   const items = [
-    { icon: '✓', label: 'JCI-Accredited Clinics' },
+    { icon: '✓', label: CLINIC_REGISTRATION_LABEL },
     { icon: '📷', label: 'Real Before & After Photos' },
     { icon: '💳', label: 'Monthly Payment Options' },
     { icon: '🩺', label: 'Medically Reviewed by a Dentist' },

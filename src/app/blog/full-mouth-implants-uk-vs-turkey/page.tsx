@@ -413,7 +413,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
               The NHS advises weighing exactly this before arranging dental care abroad.
             </p>
             <p>
-              Partner clinics used on this site hold JCI accreditation or Turkish Ministry of Health certification and
+              Partner clinics used on this site are registered with the Turkish Ministry of Health and
               provide written guarantees. We only work with clinics our team has assessed, and we do not recommend
               clinics on price alone.{" "}
               <Link href="/blog/risks-of-turkey-teeth" className="text-[#1e40af] font-semibold hover:underline">

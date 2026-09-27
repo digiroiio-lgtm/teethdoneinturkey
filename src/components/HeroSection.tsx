@@ -22,7 +22,7 @@ export default function HeroSection() {
           Premium Dental Treatments from £1,850
         </p>
         <p className="animate-fade-in-up text-lg text-blue-200 mb-8 max-w-2xl mx-auto">
-          Save up to 70% vs UK prices &nbsp;|&nbsp; UK patient support &nbsp;•&nbsp; Modern JCI-accredited clinics &nbsp;•&nbsp; 5-star reviews
+          Save up to 70% vs UK prices &nbsp;|&nbsp; UK patient support &nbsp;•&nbsp; Turkish Ministry of Health registered clinics &nbsp;•&nbsp; Medically reviewed content
         </p>
 
         <div className="animate-fade-in-up flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

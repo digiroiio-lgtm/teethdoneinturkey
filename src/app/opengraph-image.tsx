@@ -39,7 +39,7 @@ export default async function OpengraphImage() {
             display: "flex",
           }}
         >
-          JCI-Accredited Clinics · Monthly Payment Plans
+          Ministry of Health Registered Clinics · Monthly Payment Plans
         </div>
       </div>
     ),

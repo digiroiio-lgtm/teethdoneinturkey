@@ -379,7 +379,7 @@ export default function TeethInTurkeyPillarGuide() {
             { title: "Veneers or Crowns?", desc: "How much tooth each removes, and what is irreversible.", href: "/guides/turkey-teeth-veneers-or-crowns" },
             { title: "Dental Finance Options UK", desc: "Payment plan, finance and loan differences explained.", href: "/finance-options-uk" },
             { title: "About Teeth Done in Turkey", desc: "Who we are and how our UK patient support works.", href: "/about-us" },
-            { title: "Dental Implants Turkey", desc: "Implants from £250, JCI-accredited clinics.", href: "/treatments/dental-implants-turkey" },
+            { title: "Dental Implants Turkey", desc: "Implants from £250 at Ministry of Health registered clinics.", href: "/treatments/dental-implants-turkey" },
             { title: "All-on-4 Turkey", desc: "Full arch restoration on 4 implants from £4,500.", href: "/treatments/all-on-4-turkey" },
             { title: "All-on-6 Turkey", desc: "Maximum-stability full arch on 6 implants from £5,600.", href: "/treatments/all-on-6-turkey" },
             { title: "Full Smile Makeover", desc: "Combined veneers, whitening and contouring from £3,500.", href: "/treatments/full-smile-makeover-turkey" },
