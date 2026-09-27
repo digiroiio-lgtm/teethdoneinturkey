@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     question: "Can I get 0% finance for dental implants or veneers?",
-    answer: "0% representative APR finance is available for treatment booked through this site, typically from £82/month over 12, 24 or 36 months, covering veneers, implants, All-on-4/All-on-6 and full smile makeovers. Eligibility depends on an affordability and credit assessment; a soft-search pre-qualification check lets you see an indicative decision without it appearing on your credit file.",
+    answer: "0% representative APR finance is available for treatment booked through this site, typically from £53/month over 12, 24 or 36 months, covering veneers, implants, All-on-4/All-on-6 and full smile makeovers. Eligibility depends on an affordability and credit assessment; a soft-search pre-qualification check lets you see an indicative decision without it appearing on your credit file.",
   },
   {
     question: "What if I have a poor credit history? Can I still get dental finance?",
@@ -148,7 +148,7 @@ export default function CantAffordDentalTreatmentUKPage() {
             items={[
               "NHS charges in England are fixed at £27.90, £76.60 or £306.80 per course of treatment (from 1 April 2026), but veneers, whitening and (in almost all cases) implants are not covered.",
               "UK private dental prices for implants and veneers are frequently several times the NHS charge, which is why payment plans and finance exist for private work.",
-              "0% representative APR finance from £82/month is one way to spread a UK-priced quote or a Turkey treatment plan.",
+              "0% representative APR finance from £53/month is one way to spread a UK-priced quote or a Turkey treatment plan.",
               "The same implant and veneer brands used in UK practices are typically 65 to 90 percent cheaper in Turkey, even after flights and accommodation.",
               "No dental finance option should ever promise guaranteed approval. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
             ]}
@@ -169,7 +169,7 @@ export default function CantAffordDentalTreatmentUKPage() {
 
           <h2 id="payment-plans" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Dental Payment Plans</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A dental payment plan lets you spread a specific treatment&apos;s cost over fixed monthly instalments instead of paying the full amount upfront. For treatment booked through this site, 0% representative APR finance is available from £82/month over 12, 24 or 36 months, with a soft-search pre-qualification step that will not affect your credit score. See{" "}
+            A dental payment plan lets you spread a specific treatment&apos;s cost over fixed monthly instalments instead of paying the full amount upfront. For treatment booked through this site, 0% representative APR finance is available from £53/month over 12, 24 or 36 months, with a soft-search pre-qualification step that will not affect your credit score. See{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">Monthly Payment</Link>{" "}
             for treatment-by-treatment monthly figures.
           </p>
@@ -219,7 +219,7 @@ export default function CantAffordDentalTreatmentUKPage() {
 
           <h2 id="monthly-cost" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What Treatment Actually Costs Per Month</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Whichever route you take, the practical question is usually the monthly figure. On this site, financed Turkey treatment starts from £6/month for a single veneer and £14/month for a single implant, rising to £150/month for a full All-on-6 arch, all on a 36-month 0% plan. Use the{" "}
+            Whichever route you take, the practical question is usually the monthly figure. On this site, the smallest financeable plans start at £53/month for 10 E-max veneers (£1,900) and £78/month for a 20-crown Hollywood Smile package (£2,800), rising to £156/month for a full All-on-6 arch (£5,600), all on a 36-month 0% APR representative plan. Single-unit work — one veneer at £190 or one Osstem implant and crown at £250 — falls below the minimum providers will lend and is normally paid outright. Use the{" "}
             <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">Price Calculator</Link>{" "}
             to build a monthly estimate for your own treatment combination.
           </p>
@@ -285,7 +285,7 @@ export default function CantAffordDentalTreatmentUKPage() {
             { title: "Severe Toothache Can't Afford a Dentist?", desc: "Causes, NHS 111 options and temporary pain relief explained.", href: "/guides/severe-toothache-cant-afford-dentist" },
             { title: "Can't Afford a Root Canal UK?", desc: "NHS Band 2 costs, extraction comparison and Turkey cost comparison.", href: "/guides/cant-afford-root-canal-uk" },
             { title: "Dental Finance Options UK", desc: "0% representative APR finance, eligibility and how pre-qualification works.", href: "/finance-options-uk" },
-            { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, from £82/month.", href: "/monthly-payment" },
+            { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, from £53/month.", href: "/monthly-payment" },
           ]}
         />
       </div>

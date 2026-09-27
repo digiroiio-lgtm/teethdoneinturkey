@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "Are Turkish dental implants guaranteed?", a: "Yes. Our partner clinics provide written guarantees of 5–10 years on all implant work. This covers the implant itself and the crown." },
-  { q: "Can I get implants on finance?", a: "Yes. We offer monthly payment plans from £82/month, allowing UK patients to spread the cost of their treatment over 12, 24, or 36 months." },
+  { q: "Can I get implants on finance?", a: "Yes. We offer monthly payment plans from £53/month, allowing UK patients to spread the cost of their treatment over 12, 24, or 36 months." },
   { q: "What happens if something goes wrong after I return home?", a: "Our UK team provides ongoing support, and our partner clinics are available via WhatsApp and video call for follow-up. Any issues covered under guarantee will be addressed at no additional cost." },
 ];
 

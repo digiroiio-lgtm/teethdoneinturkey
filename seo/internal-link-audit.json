@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T13:03:09.514Z",
+  "generatedAt": "2026-09-27T08:30:02.397Z",
   "registrySize": 29,
-  "pagesScanned": 96,
+  "pagesScanned": 98,
   "results": [
     {
       "page": "/guides/teeth-in-turkey",
@@ -329,7 +329,7 @@
     },
     {
       "page": "/finance-options-uk",
-      "incomingTotal": 24,
+      "incomingTotal": 25,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -415,6 +415,10 @@
         {
           "from": "/monthly-payment",
           "anchorText": "how dental finance works in the UK, including dental loans and bad credit"
+        },
+        {
+          "from": "/monthly-payment",
+          "anchorText": "our UK dental finance page"
         },
         {
           "from": "/monthly-payment",
@@ -821,7 +825,7 @@
     },
     {
       "page": "/treatments/dental-implants-turkey",
-      "incomingTotal": 45,
+      "incomingTotal": 44,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -977,10 +981,6 @@
           "anchorText": ""
         },
         {
-          "from": "/monthly-payment",
-          "anchorText": ""
-        },
-        {
           "from": "/",
           "anchorText": ""
         },
@@ -1009,7 +1009,7 @@
     },
     {
       "page": "/treatments/veneers-turkey",
-      "incomingTotal": 44,
+      "incomingTotal": 43,
       "incomingFromHighAuth": 2,
       "sources": [
         {
@@ -1149,10 +1149,6 @@
           "anchorText": ""
         },
         {
-          "from": "/monthly-payment",
-          "anchorText": ""
-        },
-        {
           "from": "/",
           "anchorText": ""
         },
@@ -1193,7 +1189,7 @@
     },
     {
       "page": "/treatments/all-on-4-turkey",
-      "incomingTotal": 29,
+      "incomingTotal": 30,
       "incomingFromHighAuth": 2,
       "sources": [
         {
@@ -1278,6 +1274,10 @@
         },
         {
           "from": "/guides/teeth-in-turkey",
+          "anchorText": ""
+        },
+        {
+          "from": "/monthly-payment",
           "anchorText": ""
         },
         {
@@ -1393,7 +1393,7 @@
     },
     {
       "page": "/book-consultation",
-      "incomingTotal": 56,
+      "incomingTotal": 57,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -1521,6 +1521,10 @@
           "anchorText": "Book Free Consultation"
         },
         {
+          "from": "/editorial-policy",
+          "anchorText": "book a free consultation"
+        },
+        {
           "from": "/finance-options-uk",
           "anchorText": "Check My Eligibility"
         },
@@ -1625,12 +1629,16 @@
     },
     {
       "page": "/free-treatment-plan",
-      "incomingTotal": 9,
+      "incomingTotal": 10,
       "incomingFromHighAuth": 5,
       "sources": [
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
           "anchorText": "Free Treatment Plan"
+        },
+        {
+          "from": "/editorial-policy",
+          "anchorText": "free treatment plan request"
         },
         {
           "from": "/finance-options-uk",

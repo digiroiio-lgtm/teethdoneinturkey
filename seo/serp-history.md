@@ -7,6 +7,202 @@ rewritten again.
 
 ---
 
+## 2026-09-27 (finance figure integrity — GSC unavailable)
+
+**Search Console could not be read this run.** The Supermetrics connection that
+every previous run used for GSC returned `TRIAL_EXPIRED`: the free trial on team
+"Team digiroiio" expired **2026-09-17**. There is no second route to the data —
+no service-account or OAuth credential for the Search Console API in the repo or
+the environment, and no cached export. GA4 is behind the same connection and is
+equally unavailable.
+
+So this run used **no new query evidence**, and deliberately took none of the
+three actions the 09-11 runs queued up, because every one of them explicitly
+requires a fresh head-to-head query check first:
+
+- **Packages** (`turkey teeth packages` split across five URLs, no owner). The
+  09-11 note says to establish which URL Google prefers *before* creating
+  `/packages/turkey-teeth-packages`. Creating it blind would repeat the 09-08
+  regression on a query already split five ways. **Not done.**
+- **`/prices/dental-implants-turkey-cost` vs `/blog/full-mouth-implants-uk-vs-turkey`**
+  (the suspected suppressed-duplicate pair). Needs lifetime-impression evidence
+  to tell suppression from a page that has not entered the SERP. **Not done.**
+- **Cost-cluster duplication** (`/prices/teeth-done-in-turkey-cost`). Same.
+  **Not done.**
+
+Also outstanding and still unverifiable: whether the 09-11 cost-merge reversal
+and finance repositioning worked. Both were due to be judged around 09-25.
+**Nothing can be measured until the data connection is restored.**
+
+### What was done instead: the page's own numbers were wrong
+
+The one class of work that needs no query data is factual correctness, and an
+audit of the finance cluster found a defect chain originating in a single line of
+a shared component.
+
+`MonthlyPaymentTable.tsx` priced **"Veneers Package (10 veneers)" at £2,800** and
+derived **£82/month** from it. Three things wrong at once:
+
+| | Claim | Reality on this site |
+|---|---|---|
+| Treatment | £2,800 = "10 veneers" | £2,800 is the **Hollywood Smile 20-zirconia-crown** package (hotel + transfers), per `/prices/veneers-turkey-cost`, `/prices/hollywood-smile-turkey-package`, `/blog/hollywood-smile-turkey-cost` and `/finance-options-uk`. 10 veneers are **£1,900** (E-max) / £1,300 (zirconia). |
+| Arithmetic | £2,800 → £82/mo, £122/mo | £2,800 / 36 = **£78**, / 24 = **£117**. £82 and £122 both reconcile to ~£2,950 — a total this site publishes nowhere. |
+| Propagation | — | **"from £82/month" appeared on 27 live locations**, including three MONEY pages (`/prices/turkey-teeth-cost`, `/prices/veneers-turkey-cost`, `/prices/dental-implants-turkey-cost`), `/finance-options-uk`, `/book-consultation`, the blog index and `public/llms.txt`. |
+
+`/finance-options-uk` was contradicting **itself**: its `treatmentFinance` table
+(built 09-11) correctly showed £78 for £2,800 and carried a comment stating
+"£2,800 / 36 = £78", while its three plan cards immediately above still read
+£82 / £122 / £233.
+
+The true entry figure is **better than the claim**: the cheapest financeable
+package the site prices is 10 E-max veneers at £1,900 = **£53/month** over 36.
+So the site was simultaneously overstating its cheapest monthly payment by 55%
+and contradicting its own canonical price page.
+
+This mattered most on `/monthly-payment` specifically, because GA4 on 09-11
+showed it is the **single most-cited URL on the site in AI search** (6 of 12
+chatgpt.com sessions). Whatever that page says is what answer engines quote about
+this brand's finance — and it had **no structured data at all**.
+
+### Decisions taken this run
+
+- **OPTIMISE EXISTING — `/monthly-payment` (MONEY, priority 9.4/10).** URL,
+  canonical, title and lane all deliberately unchanged; the 09-11 split
+  (`/finance-options-uk` = generic finance, this page = per-treatment monthly
+  figures, `/blog/can-you-pay-monthly-for-teeth-in-turkey` = the question intent)
+  is intact and was reinforced, not blurred.
+  - **Corrected every wrong figure.** The veneer term cards read £267 / £140 /
+    £95 for 12 / 24 / 36 months on a £3,800 treatment — implying £3,204, £3,360
+    and £3,420, none of them £3,800, and all three contradicting the £106 the
+    same page published two sections earlier. Now £317 / £159 / £106. Single
+    implants were "£420–£600 all-inclusive" against the canonical £250 (Osstem)
+    and £930 (Straumann); All-on-6 both arches was £11,000 → £306 against the
+    £5,600 per-arch price that gives £11,200 → £312. Both realigned.
+  - **"65–82% cheaper" was wrong at both ends** of its own comparison table,
+    which actually spans **62.5%** (All-on-4) to **87.5%** (Osstem implant /
+    Hollywood Smile). Restated as "roughly 62% to 87%". The "nearly 5× cheaper
+    per month" claim compared a 0% Turkey figure against an interest-bearing UK
+    one; restated like-for-like as £445/mo vs £106/mo = **4.2×**, "roughly four
+    times".
+  - **Built the Step 7 architecture the page never had.** It discussed monthly
+    payments with no deposit, no APR and no total repayable anywhere, so not one
+    monthly figure on it could be checked by a reader. Added four worked
+    scenarios (£1,900 / £2,800 / £3,800 / £4,500) each showing treatment cost →
+    deposit → balance financed → payment across **6 / 12 / 18 / 24 / 36 months**
+    → total repayable.
+  - **Built the Step 8 patient-case architecture** (30-day objective #7, which
+    was at zero across the whole site bar one page). Three **Example Treatment
+    Scenario** cards: treatment, price, deposit, balance, example monthly, total
+    repayable, days in Turkey, trips, inclusions and clinical rationale. All
+    explicitly labelled illustrative, built from prices already published here;
+    **no names, initials or reviews attached to any of them**, so nothing reads
+    as a fabricated patient or testimonial.
+  - **YMYL wording (Step 13).** Removed a false-scarcity line on a credit
+    product ("⚡ Limited finance approvals available each month — apply early to
+    secure your slot"). "Providers who consider all profiles" and "most
+    situations considered" now state what adverse credit actually means (higher
+    APR, larger deposit, or declined). "Risk reversal guarantee" renamed to what
+    it is. The 5–10 year clinic **warranty** is now separated from a clinical
+    guarantee of outcome, with exclusions named. "Clinically identical results"
+    → the supportable claim (same brands). Resolved the contradiction between
+    "no credit search until you apply" and "pre-qualification uses a soft credit
+    search", and between "0% on 12- and 24-month terms" and the 36-month 0%
+    figures used throughout.
+  - **Fixed a misleading regulatory claim.** A trust card titled
+    "GDC-Registered Partners" had the subtitle "Dentists registered with
+    international equivalent bodies" — i.e. its own subtitle contradicted its
+    title, and Turkish dentists are not GDC-registered. Now names the Turkish
+    Dental Association and Ministry of Health and says explicitly that this is
+    not GDC registration.
+  - **Added the missing schema.** WebPage + BreadcrumbList + FAQPage (8
+    questions), all verified **server-rendered** against a production build.
+    Hand-rolled rather than reusing `<ArticleJsonLd>`, which emits
+    `BlogPosting` — wrong type for a commercial finance page.
+  - Description trimmed 179 → **155 chars** to stop SERP truncation.
+- **FIX (site-wide factual consistency).** Corrected the £82 claim at all 27
+  live locations across 17 files plus `llms.txt`, each to the figure its own
+  context supports — £53 for a generic "from", £106 where the context is a full
+  20-veneer set. Root cause fixed in the component so it cannot re-propagate.
+- **FIX.** `/teeth-done-in-turkey-guide` carried a three-card term comparison
+  that was entirely scrambled: £282/mo labelled "Veneers £3,800" (£3,800/12 =
+  £317), £158/mo labelled "Implants package" but actually the 24-month figure
+  for £3,800, and £82/mo labelled "Smile makeover" (£3,800/36 = £106). All three
+  now priced off the same £3,800 treatment.
+- **FIX.** `/guides/cant-afford-dental-treatment-uk` advertised finance "from
+  £6/month for a single veneer and £14/month for a single implant" — both below
+  the minimum any provider will lend, so not financeable at all — and "£150/month
+  for a full All-on-6 arch" when £5,600/36 = £156. Rewritten around plans that
+  can actually be financed, with the single-unit minimum stated. Same
+  unfinanceable £6/month figure removed from `/finance-options-uk`'s meta
+  description.
+- **CANNIBALISATION — cut, not expanded.** The bad-credit content on
+  `/monthly-payment` was deliberately **reduced to a pointer**.
+  `/finance-options-uk` owns generic finance and bad credit (15 impr @ 7.6 on
+  `teeth on finance bad credit` as of 09-11); duplicating it here would have
+  competed with the site's best-positioned query. No new URL was created.
+- **TECHNICAL (found incidentally).** `seo/route-lastmod.json` was **already
+  stale at HEAD**: 31 routes had stale fingerprints and **`/editorial-policy`
+  and `/medical-reviewers/mustafa-akca` were missing from the manifest
+  entirely — and therefore missing from the sitemap** since they were created on
+  09-21. The prebuild regeneration picked both up; the manifest now covers all
+  79 routes and `--check` passes.
+
+### Technical health check
+
+- **79 sitemap URLs, every one verified 200** against a production build (up
+  from 77 indexable, +2 from the manifest fix).
+- Full internal-link crawl of all 79 pages, **96 distinct link targets: 0 broken,
+  0 pointing at a redirect**.
+- `/monthly-payment` WebPage, BreadcrumbList and FAQPage confirmed in the
+  **server HTML**, not injected client-side.
+- Canonical self-referencing and `index, follow` confirmed on every page touched.
+- Title 49 chars, description 155 chars — no truncation.
+- typecheck clean; lint clean (3 pre-existing unused-variable warnings, none in
+  changed code); production build clean.
+- All 60+ monetary figures written this run were verified programmatically
+  (total ÷ term, rounded up) rather than by hand; the check script is in the
+  session scratchpad.
+
+### What to check next run
+
+1. **RESTORE THE DATA CONNECTION FIRST.** Until GSC is readable this routine
+   cannot do its actual job — no striking-distance analysis, no verification of
+   the 09-11 changes, no cannibalisation evidence. Either renew Supermetrics or
+   add a Google service account with Search Console read access. Everything below
+   is blocked on it.
+2. **Judge the 09-11 changes, now three weeks old and overdue.** Did
+   `/prices/turkey-teeth-cost` absorb the cost family off position 34? Did
+   `/guides/turkey-teeth-cost` fall out? Did `/monthly-payment` break out of 0
+   impressions? Did the generic finance queries move off positions 59–89? Do
+   **not** rewrite any of them before reading this.
+3. **Packages** remains the top untouched cluster, still needing the head-to-head
+   check before `/packages/turkey-teeth-packages` is created.
+4. **Price-consistency sweep — the £82 defect is unlikely to be the only one.**
+   Two more contradictions were found while auditing and deliberately left for a
+   dedicated pass rather than widening this run: `/blog/full-set-veneers-turkey-cost`
+   prices 10 zirconia veneers at £2,200 against £1,300 on
+   `/prices/veneers-turkey-cost`, and `/finance-options-uk` lists a single
+   implant "+ crown" at £250 while `/prices/dental-implants-turkey-cost`
+   distinguishes £250 Osstem from £930 Straumann. A single canonical price
+   source, imported by every page, would stop this class of bug recurring — the
+   £82 defect existed precisely because five pages hard-coded the same number.
+5. **Unsubstantiated trust claims, left deliberately untouched.** "Rated 4.9/5",
+   "2,500+ patients treated", "10,000+ international patients", "patients from
+   40+ countries" appear across the site with no source. These are the owner's
+   business claims, not arithmetic errors, so they were not silently deleted —
+   but under Step 15 they need substantiating or removing, and "2,500+" is used
+   for two different claims (patients treated, and patients who used finance).
+6. **GA4 key events are still unverified and still block value-led scoring** —
+   0 conversions have ever been recorded, and an unconfigured key event looks
+   identical to a genuine 0%.
+7. `AGENTS.md` instructs reading `node_modules/next/dist/docs/` before writing
+   code. **That directory does not exist** in the installed package (Next
+   15.5.15, a standard release with no bundled docs), so the instruction cannot
+   be followed as written. Established in-repo App Router conventions were
+   followed instead. Worth correcting the file or vendoring the docs it means.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

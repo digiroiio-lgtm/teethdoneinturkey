@@ -18,15 +18,23 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/finance-options-uk" },
   title: { absolute: "Turkey Teeth Finance: Pay Monthly & Payment Plans for UK Patients" },
-  description: "Pay monthly for Turkey teeth from £6/month. Finance available for veneers, implants and full-mouth treatment. Bad credit considered. 0% APR representative.",
+  description: "Pay monthly for Turkey teeth from £53/month. Finance available for veneers, implants and full-mouth treatment. Bad credit considered. 0% APR representative.",
 };
 
+// Monthly figures on these three cards are the cheapest financeable package this
+// site publishes — 10 E-max veneers at £1,900 (/prices/veneers-turkey-cost) —
+// divided across the term at 0% APR representative, rounded up:
+//   £1,900 / 36 = £53, £1,900 / 24 = £80, £1,900 / 12 = £159.
+// They previously read £82 / £122 / £233, which came from the mislabelled
+// '10 veneers = £2,800' row of MonthlyPaymentTable and contradicted the
+// treatmentFinance table further down THIS page, which already used £78 for
+// £2,800. Corrected 2026-09-27.
 const options = [
   {
     name: "36-Month Plan",
     badge: "Most Popular",
     rate: "0% APR representative",
-    monthly: "From £82/mo",
+    monthly: "From £53/mo",
     desc: "Spread the full cost over 3 years with nothing extra to pay. Our most popular option for larger treatments.",
     best: "Full smile makeovers, All-on-4, All-on-6",
   },
@@ -34,7 +42,7 @@ const options = [
     name: "24-Month Plan",
     badge: null,
     rate: "0% APR representative",
-    monthly: "From £122/mo",
+    monthly: "From £80/mo",
     desc: "A balance between manageable monthly payments and a shorter repayment term.",
     best: "Veneers (8–16 teeth), single arch implants",
   },
@@ -42,7 +50,7 @@ const options = [
     name: "12-Month Plan",
     badge: "Lowest Total Cost",
     rate: "0% APR representative",
-    monthly: "From £233/mo",
+    monthly: "From £159/mo",
     desc: "Pay off your treatment in 12 months. The fastest path to completion with no interest.",
     best: "Smaller treatments, single implants, whitening packages",
   },
@@ -151,7 +159,7 @@ export default function FinanceOptionsUKPage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Can You Pay Monthly for Turkey Teeth? Finance &amp; Payment Plans Explained</h1>
-          <p className="text-xl text-blue-200">Yes — spread the cost of dental treatment in Turkey over 12, 24 or 36 months. 0% APR representative plans from £82/month, bad credit considered.</p>
+          <p className="text-xl text-blue-200">Yes — spread the cost of dental treatment in Turkey over 12, 24 or 36 months. 0% APR representative plans from £53/month, bad credit considered.</p>
         </div>
       </div>
 

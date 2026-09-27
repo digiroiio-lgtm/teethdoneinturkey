@@ -107,7 +107,7 @@ export default function FullSetVeneersCostPage() {
           </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Can I Spread the Cost?</h2>
-          <p>Yes. We offer monthly payment plans that allow you to pay for your Turkey veneer treatment from £82/month over 36 months — meaning you can have your dream smile now and pay gradually from home.</p>
+          <p>Yes. A full set of 20 E-max veneers at £3,800 works out at <strong>£106 a month over 36 months</strong> at 0% APR representative, or £159 a month over 24. A smaller set costs less: 10 veneers at £1,900 is £53 a month over 36 months. Paying a deposit reduces those figures, because only the remaining balance is financed. These are example calculations rather than a credit offer — finance is subject to status, a credit check and lender approval, and not everyone will qualify.</p>
           <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What&apos;s Included in the Turkey Veneer Price?</h2>
