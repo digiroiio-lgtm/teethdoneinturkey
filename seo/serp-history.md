@@ -203,6 +203,85 @@ this brand's finance — and it had **no structured data at all**.
 
 ---
 
+### Addendum, same day — Trustpilot rating sourced, and a fake-review finding
+
+The owner supplied the clinic's Trustpilot profile, which resolves open item 5
+above (the unsourced "4.9/5" rating) and turns up a worse problem next to it.
+
+**Source:** https://www.trustpilot.com/review/akdenizdental.com — **Akdeniz
+Dental Clinic, 4.7 out of 5 from 94 reviews**, 43 in the last 12 months,
+distribution 95% 5-star / 0% 4-star / 0% 3-star / 2% 2-star / 3% 1-star, profile
+claimed May 2022. Figures taken from the owner's screenshots on 2026-09-27; they
+could **not** be independently re-fetched, because the network egress policy in
+this environment blocks `www.trustpilot.com`.
+
+**The rating is the clinic's, not the site's.** teethdoneinturkey.co.uk has no
+Trustpilot profile; Akdeniz is the partner clinic whose founding owner is this
+site's medical reviewer. Every display attributes it by name and says explicitly
+that it is not a rating of the website. **No `AggregateRating` markup was
+emitted** — marking up a third-party platform's score for another organisation
+as your own is precisely the "fake ratings" failure Step 15 forbids, and Google's
+structured-data guidelines do not permit it. It is cited as visible linked text.
+
+Claims replaced against that source:
+
+| Where | Was | Now |
+|---|---|---|
+| `TrustBar` (homepage) | "500+ UK Patient Reviews" | 4.7/5 on Trustpilot, 94 reviews, linked |
+| `TrustBar` (homepage) | "5-Star Google Rating" | removed — no Google rating evidence exists |
+| `/reviews` hero | "5.0 average from 500+ reviews" | 4.7 from 94, linked and attributed |
+| `/reviews` | — | new section: full star distribution, 12-month count, verified-on date, live-score link |
+| `public/llms.txt` | "Real UK patient reviews" ×2 | the sourced Trustpilot figure |
+
+The figure now lives in **one** module, `src/lib/trustpilot.ts`, rather than
+being hard-coded per page — the direct lesson from the £82 defect fixed earlier
+the same day, which existed because five pages each wrote the same number by
+hand. It carries a drift warning: a live rating changes, so either the constant
+is refreshed or the display is swapped for Trustpilot's own widget.
+
+#### The finding: the on-page testimonials are authored, not quoted
+
+While replacing the rating I checked the testimonials the score sat next to.
+**"Claire Thompson, Birmingham, Dental Implants x3, September 2024"** appears on
+**both** `/` and `/reviews` with the same name, city, treatment, date and UK
+comparison (£7,500) — but reads *"Three implants for **£750**"* on the homepage
+and *"for **£1,350**"* on `/reviews`. A verbatim patient review cannot exist in
+two contradictory versions. (£750 is the figure consistent with site pricing:
+3 × £250 Osstem. £1,350 matches nothing canonical.)
+
+There are 8 such named entries on `/reviews` and 3 on `/`, all 5-star, all with
+full names, cities and 2024 dates, and none with a stated source.
+
+**What was done, and deliberately not done.** The homepage asserted *"Real
+reviews from real patients — no filters, no fake reviews"* directly beneath
+them. That assertion is falsified by the contradiction above, so **the claim was
+removed** and replaced with the linked Trustpilot score — removing an
+unsupportable claim is squarely in scope. The **testimonials themselves were left
+in place**: deleting eleven blocks of the owner's content on suspicion is the
+owner's decision, not this agent's, and if they are anonymised real feedback,
+deleting them destroys legitimate content. Both files carry a code comment
+recording the evidence and the open question.
+
+**This is now the site's highest-risk open item, ahead of everything else in
+this log.** Under the UK Digital Markets, Competition and Consumers Act 2024,
+publishing invented consumer reviews — or commissioning them — is unlawful and
+directly enforceable by the CMA, with penalties reaching 10% of global turnover.
+It cannot stay unresolved. Three routes, in order of preference:
+1. If they are invented: delete them, and quote real Trustpilot reviews instead
+   (public, attributable, and the profile has ~89 five-star reviews to draw on).
+2. If they are real: state where they were collected, hold consent for the names,
+   and fix the £750/£1,350 discrepancy to whichever is true.
+3. If they are composites of real cases: relabel them the way the Example
+   Treatment Scenarios on `/monthly-payment` are — explicitly illustrative, with
+   no invented names attached.
+
+Still unsubstantiated and untouched: "JCI-Accredited Clinics" in `TrustBar` (a
+specific, publicly checkable status — evidence it with the accredited entity's
+name, or soften it to the Turkish Ministry of Health registration the site cites
+elsewhere), and the "hundreds of UK patients" line in the `/reviews` CTA.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

@@ -4,6 +4,7 @@ import TrustBar from "@/components/TrustBar";
 import TreatmentCard from "@/components/TreatmentCard";
 import PriceTable from "@/components/PriceTable";
 import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
+import { TRUSTPILOT_URL, TRUSTPILOT_RATING, TRUSTPILOT_COUNT, TRUSTPILOT_SUBJECT } from "@/lib/trustpilot";
 import TestimonialCard from "@/components/TestimonialCard";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -81,6 +82,19 @@ const treatments = [
   },
 ];
 
+// UNRESOLVED 2026-09-27 — same provenance problem as /reviews, and here there is
+// direct evidence the text is authored rather than quoted: "Claire Thompson,
+// Birmingham, Dental Implants x3, September 2024" appears on BOTH this page and
+// /reviews with the same name, city, treatment, date and UK comparison (£7,500),
+// but says "Three implants for £750" here and "for £1,350" there. A verbatim
+// patient review cannot exist in two contradictory versions. (£750 is the one
+// consistent with site pricing: 3 x £250 Osstem.)
+//
+// The sentence beneath the heading previously read "Real reviews from real
+// patients — no filters, no fake reviews", which that contradiction falsifies;
+// it has been replaced with the linked Trustpilot score, which is checkable. The
+// testimonials themselves were left for the owner to resolve — see the note in
+// src/app/reviews/page.tsx and the UK DMCC Act 2024 point there.
 const testimonials = [
   {
     name: "Sarah Mitchell",
@@ -181,7 +195,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-3">What Our UK Patients Say</h2>
-            <p className="text-gray-600">Real reviews from real patients — no filters, no fake reviews.</p>
+            <p className="text-gray-600">
+              For an independently verified score, {TRUSTPILOT_SUBJECT} holds{" "}
+              <a href={TRUSTPILOT_URL} target="_blank" rel="noopener noreferrer" className="text-[#1e40af] font-semibold hover:underline">
+                {TRUSTPILOT_RATING} out of 5 from {TRUSTPILOT_COUNT} reviews on Trustpilot
+              </a>.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
