@@ -7,6 +7,7 @@ import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -96,6 +97,7 @@ const jsonLd = {
       image: `${SITE_URL}/opengraph-image`,
       author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
       publisher: { "@id": `${SITE_URL}/#organization` },
+      reviewedBy: REVIEWER_PERSON,
     },
     {
       "@type": "BreadcrumbList",

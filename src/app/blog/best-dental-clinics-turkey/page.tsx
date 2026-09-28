@@ -3,6 +3,7 @@ import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 import FAQSection from "@/components/FAQSection";
+import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -145,6 +146,7 @@ export default function BestClinicsBlogPage() {
           { name: "Blog", path: "/blog" },
           { name: "Best Dental Clinics in Turkey", path: "/blog/best-dental-clinics-turkey" },
         ]}
+              reviewer={REVIEWER_PERSON}
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
