@@ -7,6 +7,7 @@ import GuideTOC from "@/components/GuideTOC";
 import FAQSection from "@/components/FAQSection";
 import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
+import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -96,7 +97,8 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             { name: "Blog", path: "/blog" },
             { name: "Full Mouth Dental Implants Turkey Cost 2026", path: "/blog/full-mouth-implants-uk-vs-turkey" },
           ]}
-        />
+                reviewer={REVIEWER_PERSON}
+      />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>

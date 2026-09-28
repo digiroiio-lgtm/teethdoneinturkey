@@ -5,6 +5,7 @@ import ArticleJsonLd from "@/components/ArticleJsonLd";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -48,6 +49,7 @@ export default function DoTurkeyTeethLookFakePage() {
           { name: "Blog", path: "/blog" },
           { name: "Do Turkey Teeth Look Fake?", path: "/blog/do-turkey-teeth-look-fake" },
         ]}
+              reviewer={REVIEWER_PERSON}
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">

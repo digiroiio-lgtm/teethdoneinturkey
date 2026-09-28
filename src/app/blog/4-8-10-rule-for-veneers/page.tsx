@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -25,6 +26,7 @@ export default function Rule4810VeneersPage() {
           { name: "Blog", path: "/blog" },
           { name: "The 4-8-10 Rule for Veneers: Turkey", path: "/blog/4-8-10-rule-for-veneers" },
         ]}
+              reviewer={REVIEWER_PERSON}
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
