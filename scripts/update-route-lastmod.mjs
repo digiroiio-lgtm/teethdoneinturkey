@@ -101,7 +101,7 @@ for (const route of added) console.log(`  + ${route}`);
 for (const route of changed) console.log(`  ~ ${route}`);
 for (const route of removed) console.log(`  - ${route}`);
 
-const toNotify = [...added, ...changed];
+const toNotify = [...added, ...changed, ...removed];
 if (toNotify.length) {
   const { ping } = await import('./indexnow-ping.mjs');
   await ping(toNotify);
