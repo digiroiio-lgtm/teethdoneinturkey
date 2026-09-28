@@ -17,7 +17,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const MANIFEST = path.join(ROOT, 'seo', 'route-lastmod.json');
 const HOST = 'www.teethdoneinturkey.co.uk';
 const BASE = `https://${HOST}`;
-const KEY = '7e8fa3d2b9e5c741f0a1b2c3d4e5f678';
+const KEY = process.env.INDEXNOW_KEY ?? '7e8fa3d2b9e5c741f0a1b2c3d4e5f678';
 const KEY_LOCATION = `${BASE}/${KEY}.txt`;
 
 export async function ping(paths) {
