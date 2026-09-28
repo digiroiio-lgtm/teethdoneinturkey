@@ -39,7 +39,6 @@ const OVERRIDES: Record<string, Rule> = {
   // Hubs and conversion surfaces
   '/about-us': { priority: 0.6, changeFrequency: 'monthly' },
   '/contact': { priority: 0.6, changeFrequency: 'monthly' },
-  '/book-consultation': { priority: 0.9, changeFrequency: 'weekly' },
   '/reviews': { priority: 0.8, changeFrequency: 'weekly' },
   '/before-after': { priority: 0.7, changeFrequency: 'weekly' },
   '/turkey-teeth-before-after': { priority: 0.8, changeFrequency: 'weekly' },
