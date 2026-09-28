@@ -3,6 +3,7 @@ import BookingForm from "./BookingForm";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/book-consultation" },
+  robots: { index: false, follow: true },
   title: "Book Free Dental Consultation Turkey",
   description: "Book a free dental consultation for treatment in Turkey. No obligation. Get a personalised treatment plan and cost estimate within 24 hours.",
 };
