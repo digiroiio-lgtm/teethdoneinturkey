@@ -63,7 +63,7 @@ export default function EditorialPolicyPage() {
               <p className="text-sm font-semibold text-blue-900 mb-1">Verified Medical Reviewer</p>
               <p className="text-gray-700 mb-2">
                 <strong><Link href="/medical-reviewers/mustafa-akca" className="text-blue-700 hover:underline">Dt. Mustafa Akça</Link></strong><br />
-                Dentist &amp; Medical Reviewer — Akdeniz Dental Clinic, Antalya
+                Dentist &amp; Medical Reviewer — <a href="https://akdenizdental.com/our-team" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">Akdeniz Dental Clinic</a>, Antalya
               </p>
               <p className="text-gray-600 text-sm">
                 Reviewer attribution and review dates are shown only on pages for which the review has actually been completed and recorded.
