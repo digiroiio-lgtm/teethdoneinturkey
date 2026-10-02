@@ -26,7 +26,13 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
+.env
+.env*
+!.env.example
+
+# Search Console credentials (see docs/gsc-access.md) — never commit these
+gsc-service-account*.json
+*service-account*.json
 
 # vercel
 .vercel

@@ -7,6 +7,154 @@ rewritten again.
 
 ---
 
+## 2026-10-02 (no GSC data — feedback loop restored instead)
+
+**This run could not do evidence-led SEO work, and did not pretend to.** Step 1
+of the routine is "read current Search Console data". There is no Search Console
+data. The run's primary action was therefore to fix that, because every future
+run has the same blocker and four runs have already shipped without noticing it.
+
+### The blocker
+
+GSC reached this repo only through the Supermetrics connector. Every query now
+returns:
+
+```
+[TRIAL_EXPIRED] Your free trial on team Team digiroiio has expired on 2026-09-17
+```
+
+Checked for any other route and found none: no `GSC_*` or service-account
+environment variables, no credentialed `gcloud` account, no API key in
+`.env.example`. The property `sc-domain:teethdoneinturkey.co.uk` is still listed
+and still authenticated in the connector — it is the subscription that lapsed,
+not the Google authorisation.
+
+**The gap this created.** This log stops at 2026-09-11 while commits continued to
+2026-10-01. Four build runs (09-19 internal-link architecture, 09-21 entity and
+crawl hardening, 09-28 technical/IndexNow, 10-01 reviewer affiliation) were made
+with no measurement before or after. None of them is recorded here, so the
+week-over-week memory the routine depends on has a three-week hole in it. Nothing
+in this run can close that hole retroactively — only new data can.
+
+**Consequences for the backlog.** The two actions the 09-11 run queued as next
+are both blocked on exactly the data that is missing:
+
+- **Packages consolidation.** The queued instruction was explicit: *"before
+  creating `/packages/turkey-teeth-packages`, establish which of the five current
+  URLs Google actually prefers on `turkey teeth packages`."* That head-to-head
+  check is a GSC query. **HELD.** `turkey teeth packages` was last seen split
+  five ways across positions 7.5 to 99.7. Creating the sixth URL blind, without
+  knowing which page holds 7.5, is precisely the move that caused the 09-08
+  regression. Note `/guides/turkey-teeth-packages` already exists, so the
+  architecture's preferred `/packages/` path would also be a demand-moving URL
+  change — the other half of the 09-08 mistake.
+- **Finance cannibalisation.** `teeth on finance bad credit` across two URLs and
+  `pay monthly turkey teeth` across three. Deciding an owner per query needs
+  current positions. The 09-11 rewrites have now had three weeks to settle —
+  long enough to judge — but there is no instrument to judge them with. **HELD.**
+
+### Decisions taken this run
+
+- **BUILD (infrastructure, priority 9.5/10).** `scripts/gsc-fetch.mjs` — queries
+  the Search Analytics API directly. No npm dependency and no paid connector:
+  it signs an RS256 JWT with `node:crypto` and uses `fetch`. Supports a service
+  account (preferred for unattended runs) or an OAuth refresh token. Writes
+  `seo/gsc-snapshot.json` with the three windows the routine reads (24h / 7d /
+  28d) plus equal-length prior periods, impressions bucketed 1-3 / 4-10 / 11-20 /
+  21-30 / 31+, every query × landing-page row, and day-by-day totals.
+  - `dataState: 'all'`, so a query that broke out yesterday is visible; each
+    window carries a `partial` flag so the run cannot read not-yet-final days as
+    a decline.
+  - CTR and average position are recomputed from summed clicks and impressions,
+    never averaged across rows — averaging a ratio across rows is invalid and
+    would misreport every total.
+  - Verified: the no-credentials path exits 1 with an actionable message; the
+    JWT signing path was tested against Google's token endpoint with a locally
+    generated key and was parsed and rejected as "account not found", which
+    confirms assertion encoding and signature are correct. The 403 path names the
+    real cause (identity not a user on the property) rather than returning zero
+    rows.
+  - **Not yet runnable.** It needs credentials, which only the site owner can
+    create. `docs/gsc-access.md` has both routes step by step; the step people
+    miss is adding the service account as a user on the property itself.
+- **FIX (credential exposure, found while documenting the above).** `.gitignore`
+  ignored only `.env*.local`, so a plain `.env` holding the new `GSC_*` secrets
+  would have been committable — a leak path created by the very workflow being
+  documented. Now ignores `.env` and `.env*` (with `!.env.example` kept tracked)
+  plus `*service-account*.json`. Verified with `git check-ignore`: both
+  credential shapes ignored, `.env.example` still tracked.
+- **DO NOTHING — content.** No page was edited. With no positions, "optimise the
+  striking-distance query" has no input, and the pages worth touching are the
+  ones most likely to be damaged by guessing. Choosing not to spend the daily
+  build budget was the correct call, not an omission.
+
+### Technical health check
+
+Run offline, since it needs no GSC:
+
+- `tsc --noEmit` clean. Lint: 3 pre-existing unused-variable warnings
+  (`/about-us`, `/blog/best-dental-clinics-turkey`, `/blog`), none in this diff.
+- Production build clean, 98 pages compiled.
+- Internal-link audit across 98 pages, 29 registry entries: **0 broken links,
+  0 orphans**, all required incoming links present.
+- **FIX — sitemap freshness manifest was stale on 40 routes.** `seo/route-lastmod.json`
+  was already out of date at `HEAD`: 40 routes had changed content fingerprints
+  still carrying an older `lastmod`, so the sitemap was under-reporting real
+  changes and suppressing recrawl of content that genuinely moved. Regenerated;
+  manifest now current at 78 routes.
+  - **Deliberately not stamped with today's date.** A plain regeneration writes
+    `now`, which would have claimed 2026-10-02 freshness for 40 pages and made
+    this run look like a 40-page content update. Every one of the 40 traces to a
+    single commit, `35b1fda` (`feat(geo): add pricing reference block to llms.txt`) of **2026-09-28** (verified by
+    `git log` per route — all 40 resolved to that date, none later), so the
+    manifest was regenerated with `--now=2026-09-28T20:37:45Z`, that commit's own
+    timestamp. 0 routes now read 2026-10-02. This keeps lastmod carrying real
+    information, which is the entire design premise of the manifest.
+- **Note — IndexNow egress blocked in this environment.** The lastmod script
+  chains an IndexNow ping, which returned `403 Host not in allowlist:
+  api.indexnow.org`. No URLs were submitted. Harmless here (and fortunate, given
+  the date question above), but a scheduled run that is expected to ping IndexNow
+  needs `api.indexnow.org` added to the environment's network egress allowlist.
+- Confirmed `/turkey-teeth-cost`, `/turkey-teeth-price`, `/veneers-turkey-cost`
+  and `/dental-implants-turkey-cost` are `permanentRedirect` stubs, not
+  duplicate pages — they look like cost-intent duplicates in a route listing but
+  are not, and should not be counted as cannibalisation.
+
+### Observed without GSC — cost-intent surface, for triage once data returns
+
+Six *distinct* pages (redirect stubs excluded) carry cost intent:
+`/guides/turkey-teeth-cost`, `/prices/turkey-teeth-cost`,
+`/prices/teeth-done-in-turkey-cost`, `/guides/turkey-teeth-cost-in-pounds`,
+`/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey`,
+`/guides/full-set-of-teeth-turkey-cost`. The guide-vs-price split is the intended
+architecture; the other four are not obviously differentiated. **Recorded, not
+acted on** — this is a cannibalisation hypothesis, and the 09-08 regression came
+from acting on one of these without a head-to-head check first.
+
+### What to check next run
+
+1. **Did credentials land?** `npm run seo:gsc:check` answers in one call. Until it
+   passes, every item below is still blocked and the run should say so rather
+   than substituting judgement for data.
+2. **First real data in three weeks will be a step change, not a trend.** Do not
+   read 09-11 → 10-02 movement as the effect of the 09-11 changes; four
+   undocumented runs sit in between. Re-baseline, then measure forward.
+3. **Packages head-to-head** — which of the five URLs owns `turkey teeth
+   packages`, and specifically which holds position 7.5. Then consolidate onto
+   the winner. Do not create `/packages/turkey-teeth-packages`.
+4. **Finance owner-per-query** for `teeth on finance bad credit` and `pay monthly
+   turkey teeth`.
+5. **Did the 09-11 full-mouth implant retitle work?** `full mouth dental implants
+   turkey price` was 33.7, `full mouth dental implant turkey costs` 30.8,
+   `full set of teeth implants cost turkey` 38.0.
+6. Generic UK finance intent (`teeth on finance` 75, `0% dental finance` 19) —
+   the 09-11 repositioning of `/finance-options-uk` targeted it; check whether it
+   moved.
+7. Still 0 GA4 conversions ever recorded; the key-event configuration check
+   flagged on 09-11 remains open and still blocks lead-value prioritisation.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and
