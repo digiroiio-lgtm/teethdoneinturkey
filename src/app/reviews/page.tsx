@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/reviews" },
   title: { absolute: "Turkey Teeth Reviews: Real UK Patient Experiences" },
-  description: "Real reviews from UK patients who had veneers, implants and smile makeovers in Turkey. Honest experiences — the process, results, and what they'd do differently.",
+  description: "Real reviews from UK patients who had veneers, implants and smile makeovers in Turkey. Honest experiences: the process, results and what they'd do differently.",
 };
 
 const reviews = [

@@ -6,7 +6,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/turkey-teeth-clinic" },
-  title: { absolute: "How to Choose a Dental Clinic in Turkey: UK Patient Checklist" },
+  title: { absolute: "How to Choose a Dental Clinic in Turkey: UK Checklist" },
   description: "Not all Turkish dental clinics are equal. The full checklist: accreditation, named dentists, materials, guarantees, aftercare and how to spot red flags.",
 };
 

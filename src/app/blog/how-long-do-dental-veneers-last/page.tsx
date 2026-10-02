@@ -10,8 +10,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/how-long-do-dental-veneers-last" },
-  title: { absolute: "How Long Do Turkey Teeth Last? Veneers, Crowns & Implants Explained" },
-  description: "E-max veneers last 10–15 years, zirconia crowns 15–20, implants 20+ years. What affects the lifespan of Turkey teeth — material, prep quality, aftercare and habits.",
+  title: { absolute: "How Long Do Turkey Teeth Last? Veneers, Crowns, Implants" },
+  description: "E-max veneers last 10–15 years, zirconia crowns 15–20, implants 20+. What affects how long Turkey teeth last: material, prep quality, aftercare and habits.",
 };
 
 const faqs = [
@@ -43,8 +43,8 @@ export default function VeneersLastBlogPage() {
       <ArticleJsonLd
         id="article-schema-how-long-do-dental-veneers-last"
         path="/blog/how-long-do-dental-veneers-last"
-        headline="How Long Do Turkey Teeth Last? Veneers, Crowns & Implants Explained"
-        description="E-max veneers last 10–15 years, zirconia crowns 15–20, implants 20+ years. What affects the lifespan of Turkey teeth — material, prep quality, aftercare and habits."
+        headline="How Long Do Turkey Teeth Last? Veneers, Crowns, Implants"
+        description="E-max veneers last 10–15 years, zirconia crowns 15–20, implants 20+. What affects how long Turkey teeth last: material, prep quality, aftercare and habits."
         datePublished="2024-11-01"
         dateModified="2026-09-04"
         breadcrumbs={[

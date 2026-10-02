@@ -5,9 +5,9 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/editorial-policy" },
-  title: "Editorial & Medical Review Policy | Teeth Done in Turkey",
+  title: "Editorial & Medical Review Policy",
   description:
-    "How health and treatment information on Teeth Done in Turkey is written, medically reviewed, and kept up to date — including our price verification process and what this site is and is not.",
+    "How health and treatment information is written, medically reviewed and kept up to date, including our price verification process and what this site is not.",
 };
 
 export default function EditorialPolicyPage() {
