@@ -303,6 +303,7 @@ export default function TurkishVeneersSafetyPage() {
             { title: "Best Veneers in Turkey", desc: "E-max vs zirconia vs composite — which is right for you?", href: "/guides/best-veneers-turkey" },
             { title: "Veneers Turkey Cost 2026", desc: "Per-tooth and full-set veneer prices in Turkey.", href: "/prices/veneers-turkey-cost" },
             { title: "Veneers Turkey Treatment", desc: "Treatment page: what the process involves, materials and timeline.", href: "/treatments/veneers-turkey" },
+            { title: "Will UK Dentists Fix Turkey Teeth?", desc: "What UK dentists will and will not do after treatment abroad.", href: "/blog/will-uk-dentists-fix-turkey-teeth" },
           ]}
         />
       </div>
