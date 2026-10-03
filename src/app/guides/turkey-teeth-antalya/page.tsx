@@ -17,7 +17,7 @@ const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-antalya`;
 const TITLE = "Turkey Teeth in Antalya: Complete UK Patient Guide 2026";
 const H1 = "Turkey Teeth in Antalya: Complete UK Patient Guide 2026";
 const DESCRIPTION =
-  "What it is actually like to go to Antalya from the UK for dental treatment — treatment options, clinic choice, the patient journey, travel, safety and UK aftercare.";
+  "What it is like to go to Antalya from the UK for dental treatment: treatment options, clinic choice, the patient journey, travel, safety and UK aftercare.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 
@@ -269,7 +269,7 @@ export default function TurkeyTeethAntalyaPage() {
           <h2 id="payment" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Paying for Treatment in Antalya</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             Treatment is quoted in GBP for UK patients and can be paid by card or bank transfer. A deposit is usually required to secure your dates. For patients who prefer to spread the cost, 0% representative APR finance is available for treatment booked through this site — monthly payments start from approximately £70/month on a 36-month plan. See{" "}
-            <Link href="/guides/turkey-teeth-monthly-payments" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Monthly Payments</Link>{" "}
+            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Finance Options</Link>{" "}
             for illustrative payment examples, or{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Dental Finance Options UK</Link>{" "}
             for eligibility details.

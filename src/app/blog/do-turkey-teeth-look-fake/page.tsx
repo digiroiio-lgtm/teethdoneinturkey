@@ -11,8 +11,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/do-turkey-teeth-look-fake" },
-  title: { absolute: "Do Turkey Teeth Look Fake? How Natural-Looking Results Are Achieved" },
-  description: "Turkey teeth don't have to look fake. Shade, translucency, tooth shape and proportion are all planned. What makes the difference between a natural result and an obvious one.",
+  title: { absolute: "Do Turkey Teeth Look Fake? How to Get Natural Results" },
+  description: "Turkey teeth don't have to look fake. Shade, translucency, shape and proportion are all planned. What separates a natural result from an obvious one.",
 };
 
 const faqs = [
@@ -40,8 +40,8 @@ export default function DoTurkeyTeethLookFakePage() {
       <ArticleJsonLd
         id="article-schema-do-turkey-teeth-look-fake"
         path="/blog/do-turkey-teeth-look-fake"
-        headline="Do Turkey Teeth Look Fake? How Natural-Looking Results Are Achieved"
-        description="Turkey teeth don't have to look fake. Shade, translucency, tooth shape and proportion are all planned. What makes the difference between a natural result and an obvious one."
+        headline="Do Turkey Teeth Look Fake? How to Get Natural Results"
+        description="Turkey teeth don't have to look fake. Shade, translucency, shape and proportion are all planned. What separates a natural result from an obvious one."
         datePublished="2026-09-18"
         dateModified="2026-09-18"
         breadcrumbs={[

@@ -7,8 +7,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/medical-reviewers/mustafa-akca" },
-  title: { absolute: "Dt. Mustafa Akça — Dental Medical Reviewer | Teeth Done in Turkey" },
-  description: "Dt. Mustafa Akça is a dentist and medical reviewer for Teeth Done in Turkey. Founding owner of Akdeniz Dental Clinic, Antalya. Graduate of Istanbul Medipol University, 2018.",
+  title: { absolute: "Dt. Mustafa Akça — Dental Medical Reviewer" },
+  description: "Dt. Mustafa Akça is a dentist and medical reviewer for Teeth Done in Turkey and founding owner of Akdeniz Dental Clinic, Antalya (Istanbul Medipol, 2018).",
 };
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";

@@ -13,10 +13,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-packages`;
-const TITLE = "Turkey Teeth Packages: What Is Included and What Does It Really Cost?";
+const TITLE = "Turkey Teeth Packages: What Is Included & Real Cost";
 const H1 = "Turkey Teeth Packages: What Is Actually Included and What Does It Cost?";
 const DESCRIPTION =
-  "Package price is not the same as total cost. This guide explains exactly what Turkey dental packages include, what they leave out, and what to check before you book.";
+  "Package price is not the same as total cost. What Turkey dental packages include, what they leave out, and what to check before you book.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 
@@ -140,7 +140,7 @@ export default function TurkeyTeethPackagesPage() {
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             For a full breakdown of everything you actually spend from door to door, see{" "}
-            <Link href="/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey" className="text-[#1e40af] font-semibold hover:underline">How Much Does It Cost to Get Your Teeth Done in Turkey?</Link>
+            <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost: Complete 2026 Price Guide</Link>
           </p>
 
           <h2 id="whats-included" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What Is Usually Included in a Turkey Dental Package?</h2>
@@ -229,10 +229,9 @@ export default function TurkeyTeethPackagesPage() {
         <RelatedLinksGrid
           title="Related Pages"
           links={[
-            { title: "How Much Does It Cost to Get Your Teeth Done in Turkey?", desc: "Total trip cost guide: treatment, flights, hotel and transfers.", href: "/guides/how-much-does-it-cost-to-get-your-teeth-done-in-turkey" },
             { title: "Veneers Turkey Packages: What Is Included?", desc: "Veneer-specific package breakdown — treatment-only vs package vs total trip, by tooth count.", href: "/guides/veneers-turkey-packages" },
             { title: "Turkey Teeth Cost: Complete 2026 Price Guide", desc: "Treatment-only prices: veneers, crowns, implants and full mouth.", href: "/prices/turkey-teeth-cost" },
-            { title: "Antalya Teeth Prices", desc: "Location-specific cost guide for UK patients travelling to Antalya.", href: "/guides/antalya-teeth-prices" },
+            { title: "Turkey Teeth Antalya Guide", desc: "Location-specific guide for UK patients travelling to Antalya.", href: "/guides/turkey-teeth-antalya" },
             { title: "Free Treatment Plan", desc: "Get a written, itemised quote with all inclusions confirmed.", href: "/free-treatment-plan" },
           ]}
         />

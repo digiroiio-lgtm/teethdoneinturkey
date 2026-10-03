@@ -17,7 +17,7 @@ export const revalidate = 86400;
 // wording preserved throughout.
 export const metadata: Metadata = {
   alternates: { canonical: "/finance-options-uk" },
-  title: { absolute: "Turkey Teeth Finance: Pay Monthly & Payment Plans for UK Patients" },
+  title: { absolute: "Turkey Teeth Finance: Pay Monthly Plans for UK Patients" },
   description: "Pay monthly for Turkey teeth from £6/month. Finance available for veneers, implants and full-mouth treatment. Bad credit considered. 0% APR representative.",
 };
 

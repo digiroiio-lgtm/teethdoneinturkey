@@ -308,6 +308,7 @@ export default function DentalImplantsGuidePage() {
           links={[
             { title: "Full Mouth Dental Implants Turkey Cost", desc: "All-on-4 and All-on-6 prices across both arches, and what the package includes.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
             { title: "Dental Implants Cost: UK vs Turkey", desc: "Detailed cost comparison with brand-by-brand pricing.", href: "/blog/implants-cost-uk-vs-turkey" },
+            { title: "Single Tooth Implant Cost in Turkey", desc: "What one implant costs in Turkey versus the UK.", href: "/blog/single-tooth-implant-turkey-cost" },
             { title: "Same-Day Dental Implants in Turkey", desc: "How same-day implants work and who is suitable.", href: "/blog/same-day-dental-implants-turkey" },
             { title: "Dental Implant Recovery Time", desc: "A full recovery timeline from surgery to final crown.", href: "/blog/dental-implant-recovery-time" },
             { title: "Signs of Dental Implant Failure", desc: "Symptoms, causes and what to do if something feels wrong.", href: "/blog/signs-of-dental-implant-failure" },

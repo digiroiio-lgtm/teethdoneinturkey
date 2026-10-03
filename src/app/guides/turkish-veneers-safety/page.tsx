@@ -14,10 +14,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkish-veneers-safety`;
-const TITLE = "Are Turkish Veneers Safe? Risks, Tooth Shaving & How to Choose Safely";
+const TITLE = "Are Turkish Veneers Safe? Risks & How to Choose Safely";
 const H1 = "Are Turkish Veneers Safe? Risks, Tooth Preparation & How to Choose Safely";
 const DESCRIPTION =
-  "A clinical safety guide for UK patients: what makes veneer treatment unsafe, what risks to look for, how to choose a safe clinic, and what to do if something goes wrong.";
+  "A clinical safety guide for UK patients: what makes veneer treatment unsafe, the risks to look for, how to choose a safe clinic and what to do if it goes wrong.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 
@@ -303,6 +303,7 @@ export default function TurkishVeneersSafetyPage() {
             { title: "Best Veneers in Turkey", desc: "E-max vs zirconia vs composite — which is right for you?", href: "/guides/best-veneers-turkey" },
             { title: "Veneers Turkey Cost 2026", desc: "Per-tooth and full-set veneer prices in Turkey.", href: "/prices/veneers-turkey-cost" },
             { title: "Veneers Turkey Treatment", desc: "Treatment page: what the process involves, materials and timeline.", href: "/treatments/veneers-turkey" },
+            { title: "Will UK Dentists Fix Turkey Teeth?", desc: "What UK dentists will and will not do after treatment abroad.", href: "/blog/will-uk-dentists-fix-turkey-teeth" },
           ]}
         />
       </div>
