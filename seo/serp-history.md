@@ -7,6 +7,186 @@ rewritten again.
 
 ---
 
+## 2026-10-03 (run blocked — no Search Console data)
+
+**Read this before doing anything else next run.** This run could not perform its
+core function. The daily routine is defined around Search Console as the feedback
+loop, and that loop is currently severed.
+
+### The blocker
+
+Every Google Search Console query is refused:
+
+```
+[TRIAL_EXPIRED] Your free trial on team Team digiroiio has expired on
+2026-09-17 (ID: 1943513).
+```
+
+This is an account-level block, not a query problem. It was confirmed twice —
+once on a full 28-day query/page/position pull, and once on a bare 7-day
+impressions-and-clicks total with no dimensions. Both refused identically.
+
+No fallback exists in this environment:
+
+- no Search Console service-account or OAuth credentials (`.env.example` holds
+  only `RESEND_API_KEY` and `FORM_RECIPIENT_EMAIL`);
+- no `GOOGLE_*` / `GSC_*` environment variables set;
+- `gcloud auth list` reports no credentialed accounts.
+
+Supermetrics is the only route to GSC and it is shut. **Resolving this is the
+highest-priority action for the site owner** — either renew at
+supermetrics.com/pricing, or provision a Search Console API service account with
+read access to `sc-domain:teethdoneinturkey.co.uk`, which would remove the
+Supermetrics dependency from this routine altogether.
+
+### Why this matters more than it looks
+
+The last real query-level analysis in this file is **2026-09-11 — 22 days ago**.
+In that window roughly 40 commits reached `main`, including URL consolidations,
+301 merges, a cluster retitle and an internal-link rearchitecture. **None of
+those changes has been measured.** The site has been repeatedly restructured
+with the feedback loop disconnected, which is precisely the condition that
+produced the 2026-09-08 regression recorded below.
+
+### Every flagged next priority is blocked by the outage
+
+The 2026-09-11 run left five explicit next actions. Each one requires per-query,
+per-URL GSC data, so none could be executed:
+
+1. **Packages** (the top untouched cluster). The instruction was explicit:
+   *establish which of the five current URLs Google actually prefers on
+   `turkey teeth packages` before creating `/packages/turkey-teeth-packages`*.
+   That head-to-head check is impossible without GSC. Creating the page blind
+   would add a sixth URL to a query already split five ways — the exact mistake
+   the 09-11 run deliberately refused to make.
+2. **Finance cannibalisation.** `teeth on finance bad credit` (the account's
+   best query, ~pos 8) split across two URLs and `pay monthly turkey teeth`
+   across three. Deciding an owner per query needs current per-URL data.
+3. **Full-mouth implant retitle verification** — did the cluster move off
+   position 24–38? Unanswerable.
+4. **`/prices/dental-implants-turkey-cost` and
+   `/prices/all-on-6-dental-implants-turkey-package`** zero-lifetime-impression
+   check. Unanswerable.
+5. **GA4 key-event configuration** — still open, still blocks any
+   business-value-led prioritisation.
+
+**No speculative content was published.** Choosing "today's highest-value
+striking-distance opportunity" without query data would mean inventing the
+evidence the whole process depends on.
+
+### What was done instead: YMYL claim correction on `/monthly-payment`
+
+Classified **OPTIMISE EXISTING / MONEY**. Chosen because it is correct
+independently of ranking data, is confined to one file, changes no URL and no
+canonical intent, and therefore carries no cannibalisation or regression risk.
+
+This URL was the right target for a trust fix specifically: per the GA4 note in
+the 09-11 entry it is **the single most-cited landing page in AI search** — 6 of
+the site's 12 chatgpt.com / ai-assistant sessions land here. Unsupported figures
+on this page are the ones AI assistants repeat as fact, so fabricated social
+proof here does disproportionate GEO damage.
+
+Removed, as unverifiable (no auditable source exists for any of them):
+
+| Claim | Where |
+|---|---|
+| "Rated 4.9/5 by UK patients" | hero trust bar |
+| "2,500+ patients treated" | hero trust bar |
+| "4.9★ Average patient rating" | stat grid |
+| "2,500+ UK patients treated" | stat grid |
+| "Over 2,500 UK patients have used our finance options" | body copy |
+| "The most common feedback is…" | body copy (unverifiable claim about feedback) |
+| "ISO Certified Clinics" | trust layer |
+| "10,000+ International Patients / 40+ countries" | trust layer |
+
+**Corrected as factually wrong — the most important change here:**
+"GDC-Registered Partners — Dentists registered with international equivalent
+bodies" became "Registered Turkish Dentists — Partner dentists are licensed to
+practise in Turkey. They are not GDC-registered — the GDC only registers
+dentists practising in the UK." Partner dentists are not GDC-registered, so the
+original wording misrepresented a regulatory credential on a YMYL page. The
+replacement is the disclosure a UK patient actually needs.
+
+Also tightened the unqualified hero line "0% interest available" to "0% APR
+representative on qualifying plans", matching the properly qualified wording the
+page's own FAQ already used.
+
+Replacements were drawn only from facts already stated on the page: the
+soft-search check with no credit-score impact, the statutory 14-day cooling-off
+period, the 12–36 month term range, UK patient support and no commitment until
+travel. **No new number or entity was introduced anywhere on the page.**
+
+Deliberately **not** done: the page renders `<MedicalReviewBadge />` with no
+props, so it shows the honest "no named review" fallback while the site has a
+verified reviewer (Dt. Mustafa Akça). Passing the reviewer props would assert a
+review that has not happened — the same class of unsupported claim just removed.
+**Owner action:** have the reviewer actually review this page, then pass the
+props.
+
+### Not done, and why — the site-wide finance-claims problem
+
+The same audit found a **larger and more serious defect that was deliberately
+left alone**: the site advertises "0% APR over 36 months" across **26 files**,
+and a "from £82/month" headline in **21 files** (33 occurrences). Per the owner
+confirmation recorded in open PR #22, 0% APR applies to **12- and 24-month plans
+only — 36-month plans carry interest**, and the £82 headline is itself a
+36-month-derived figure. If that is right, the live site is running a misleading
+financial promotion on a regulated topic, and every 36-month monthly figure on
+it (£82, £106, £125, £222, £10) is wrong.
+
+This was not fixed here because fixing it properly requires the single-source
+price and finance logic that **PR #22 already implements**, and duplicating that
+across 26 files in a parallel branch would collide with PR #22 and worsen the
+branch sprawl that is already the site's biggest structural risk.
+**This needs PR #22 to land, not a second parallel attempt.**
+
+### Technical findings (no GSC needed)
+
+- **`seo/route-lastmod.json` is 40 routes stale.** The fingerprint logic
+  correctly excludes shared components, so these are 40 genuine page edits whose
+  manifest was never committed. Consequence: the next production deploy's
+  `prebuild` will stamp all 40 with the build date at once, telling Google 40
+  pages changed on the same day. **The manifest was deliberately not regenerated
+  in this run** — doing so would have claimed today's freshness for 40 URLs this
+  run did not touch. PR #27 regenerates it and should resolve this.
+- **The CI freshness guard cannot fail.** `.github/workflows/ci.yml` runs
+  `npm run seo:lastmod` (which rewrites the manifest) immediately before
+  `npm run seo:lastmod:check` (which verifies it). The check therefore always
+  passes and can never catch a stale manifest. The regenerate step should be
+  dropped, or moved after the check.
+- **Branch and PR sprawl, still growing.** 46 remote branches and 5 open PRs
+  (#27, #22, #21, #11, #6). The 2026-09-08 entry already named this "the biggest
+  risk to the site"; it has grown since. PR #22 in particular is holding real
+  factual corrections hostage and has 3 unresolved "needs owner confirmation"
+  items, so it needs the owner, not another agent run.
+- **There is no "216-query Master Map" file in this repository.** The daily
+  prompt refers to one, but nothing matching it is committed anywhere, so each
+  run re-derives its query map from scratch. Either commit the Master Map to
+  `seo/` so runs share one baseline, or drop the reference from the prompt.
+
+### Validation
+
+`npx tsc --noEmit` clean. `npm run lint` unchanged at the 3 pre-existing
+warnings, none in the touched file. `npm run build` clean. All eight removed
+claims verified **absent from the server-rendered HTML**
+(`.next/server/app/monthly-payment.html`) and the replacements verified present
+and server-rendered, so AI answer engines read the corrected version.
+
+### What to check next run
+
+1. **Is GSC access restored?** If not, escalate again and do not substitute
+   keyword speculation for data. If it is, the first job is the backlog above,
+   starting with the packages head-to-head check.
+2. **Has PR #22 landed?** Until it does, the 36-month 0% APR promotion and the
+   £82 headline remain live and wrong.
+3. Treat the whole 09-11..10-03 window as one unmeasured block when data
+   returns — attribute cautiously, since many changes overlap in it.
+4. Re-check `/monthly-payment` once data returns: it is the AI-citation page, so
+   watch whether removing the fabricated stats changes how assistants describe
+   the site.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

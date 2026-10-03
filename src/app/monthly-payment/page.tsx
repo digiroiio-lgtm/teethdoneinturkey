@@ -53,13 +53,17 @@ export default function MonthlyPaymentPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-3">Turkey Teeth Monthly Payments: What Each Treatment Costs Per Month</h1>
           <p className="text-xl text-blue-200 mb-2">Veneers from £6, implants from £14, All-on-4 from £125, a 20-crown makeover from £78 a month</p>
-          <p className="text-blue-300 text-sm mb-8">0% interest available · No obligation · Free treatment plan included</p>
+          <p className="text-blue-300 text-sm mb-8">0% APR representative on qualifying plans · No obligation · Free treatment plan included</p>
 
-          {/* Trust signals */}
+          {/* Trust signals — every claim here must be verifiable from this page's
+              own content. Patient counts and star ratings were removed on
+              2026-10-03: no auditable source exists for them, and this URL is
+              the site's most-cited page in AI search, so unsupported figures
+              here get repeated by assistants as fact. */}
           <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm">
             {[
-              { icon: "⭐", text: "Rated 4.9/5 by UK patients" },
-              { icon: "🦷", text: "2,500+ patients treated" },
+              { icon: "🔍", text: "Soft-search check — no credit score impact" },
+              { icon: "📄", text: "14-day finance cooling-off period" },
               { icon: "🇬🇧", text: "UK patient support team" },
               { icon: "🔒", text: "No commitment until you travel" },
             ].map(item => (
@@ -254,12 +258,12 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Why UK Patients Choose Dental Finance for Turkey Treatments</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Over 2,500 UK patients have used our finance options to access dental treatment in Turkey. The most common feedback is that the monthly payment makes the decision straightforward: instead of saving for years or going without, patients can book treatment this month and start paying as little as £82/month.
+              Finance exists to turn one large payment into a predictable monthly one: instead of saving for years or going without, treatment can be booked now and paid for over 12, 24 or 36 months. The per-treatment figures above show what each option works out at per month.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { stat: "2,500+", label: "UK patients treated" },
-                { stat: "4.9★", label: "Average patient rating" },
+                { stat: "12–36", label: "Months to spread the cost" },
+                { stat: "Soft search", label: "Eligibility check with no credit score impact" },
                 { stat: "£0", label: "Upfront commitment to explore" },
               ].map(item => (
                 <div key={item.label} className="bg-white rounded-xl p-5 border border-gray-200 text-center">
@@ -321,9 +325,9 @@ export default function MonthlyPaymentPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
               {[
                 { icon: "🇬🇧", title: "UK Patient Support", desc: "Dedicated UK coordinator before, during and after treatment" },
-                { icon: "🎓", title: "GDC-Registered Partners", desc: "Dentists registered with international equivalent bodies" },
-                { icon: "🏥", title: "ISO Certified Clinics", desc: "Accredited facilities meeting international standards" },
-                { icon: "👥", title: "10,000+ International Patients", desc: "Trusted by patients from 40+ countries" },
+                { icon: "🎓", title: "Registered Turkish Dentists", desc: "Partner dentists are licensed to practise in Turkey. They are not GDC-registered — the GDC only registers dentists practising in the UK" },
+                { icon: "🔍", title: "Soft-Search Eligibility", desc: "Check your finance options with no impact on your credit score" },
+                { icon: "📄", title: "14-Day Cooling-Off", desc: "Statutory right to cancel a finance agreement at no cost" },
               ].map(item => (
                 <div key={item.title} className="bg-white rounded-xl p-4 border border-gray-200 text-center shadow-sm">
                   <div className="text-3xl mb-2">{item.icon}</div>
