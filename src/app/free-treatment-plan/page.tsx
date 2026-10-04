@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import FaqJsonLd from "@/components/FaqJsonLd";
 
 export const revalidate = 86400;
 
@@ -79,6 +80,7 @@ const faqs = [
 export default function FreeTreatmentPlanPage() {
   return (
     <>
+      <FaqJsonLd id="faq-schema-free-treatment-plan" faqs={faqs} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-yellow-400 text-[#1e40af] text-sm font-extrabold px-4 py-1 rounded-full mb-4 uppercase tracking-wide">

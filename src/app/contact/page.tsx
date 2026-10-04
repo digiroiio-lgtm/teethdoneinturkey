@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "./ContactForm";
+import FaqJsonLd from "@/components/FaqJsonLd";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
@@ -16,6 +17,7 @@ const faqs = [
 export default function ContactPage() {
   return (
     <>
+      <FaqJsonLd id="faq-schema-contact" faqs={faqs} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Contact Us</h1>

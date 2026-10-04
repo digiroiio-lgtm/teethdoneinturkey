@@ -3,6 +3,7 @@ import Link from "next/link";
 import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 import CTASection from "@/components/CTASection";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import FaqJsonLd from "@/components/FaqJsonLd";
 
 export const revalidate = 86400;
 
@@ -48,6 +49,7 @@ const financeFaqs = [
 export default function MonthlyPaymentPage() {
   return (
     <>
+      <FaqJsonLd id="faq-schema-monthly-payment" faqs={financeFaqs} />
       {/* ── Hero ── */}
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">

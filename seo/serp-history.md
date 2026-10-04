@@ -7,6 +7,183 @@ rewritten again.
 
 ---
 
+## 2026-10-04 — GSC data blackout + FAQPage schema regression repaired
+
+**This run had no Search Console data.** It is the first run in the log where
+Step 1 could not be executed, so read the method note below before trusting any
+"next priority" in the 09-11 entries: they were written against data that has
+not been refreshed since.
+
+### BLOCKER: the GSC feed has been dead for 17 days
+
+Every Search Console query now fails:
+
+```
+[TRIAL_EXPIRED] Your free trial on team Team digiroiio expired on 2026-09-17
+```
+
+The Supermetrics connector is still `AUTHENTICATED` against
+`sc-domain:teethdoneinturkey.co.uk`, so this looks like a working integration
+until a query is actually run. There is **no fallback** in the container: no
+service-account JSON, no `gcloud` credential, no GSC key in the environment.
+
+Consequences, stated plainly so no future run mistakes stale data for fresh:
+
+- The last real query-level data in this log is **2026-09-10**.
+- The three verification questions the 09-11 runs left open are **still
+  unanswered and now unanswerable**: did reversing the cost merge move
+  `/prices/turkey-teeth-cost` off position 34; did `/monthly-payment` break out
+  of 0 impressions after the title split; did the generic finance queries move
+  off positions 59–89.
+- The packages decision (09-11 item 3) requires a head-to-head check of five
+  URLs on `turkey teeth packages`. That check is impossible while blind, so
+  packages is **deferred for the third time** — correctly. Creating
+  `/packages/turkey-teeth-packages` on a 24-day-old position reading is exactly
+  the move that caused the 09-08 regression.
+
+**Fix needed (requires the account owner, not the agent):** either renew
+Supermetrics, or create a Google Cloud service account, add it as a restricted
+user on the GSC property and expose the JSON key to the environment so the agent
+can call the Search Console API directly and stop depending on a trial.
+
+### Method note: what this run allowed itself to do
+
+With no fresh evidence, this run was restricted to changes that cannot be wrong
+because of stale data. Specifically: **no URL change, no canonical change, no
+redirect, no merge, no new page, no retitling of any ranking page.** That rules
+out every item on the 09-11 next-priority lists, all of which need a
+before/after measurement. What remains legitimate is verifiable defect repair —
+things provable from the code and git history alone — which is what was done.
+
+### The finding: 8 pages silently lost their FAQPage schema on 2026-09-21
+
+`fe2f1ed` ("crawl/canonical/schema audit") included a Fix B that removed
+hand-written FAQPage JSON-LD from 10 pages, on the stated basis that each page
+"also renders `<FAQSection>`", whose SSR output would have made the manual node
+a duplicate. Google does flag duplicate structured data, so the intent was
+right.
+
+It was true for 2 of the 10. **The other 8 never imported `FAQSection`** — they
+lay out their FAQ markup inline — so the removal deleted their only structured
+data and nothing replaced it. Verified against git rather than inferred:
+
+| Page | ld+json at `9152ce4` (09-19) | ld+json at `HEAD` (before this run) |
+|---|---|---|
+| `/finance-options-uk` | 1 | **0** |
+| `/monthly-payment` | 1 | **0** |
+| `/prices/dental-implants-turkey-cost` | 1 | **0** |
+| `/prices/all-on-6-dental-implants-turkey-package` | 1 | **0** |
+| `/prices/hollywood-smile-turkey-package` | 1 | **0** |
+| `/turkey-teeth-clinic` | 1 | **0** |
+| `/free-treatment-plan` | 1 | **0** |
+| `/contact` | 1 | **0** |
+
+The loss landed squarely on the top of the priority hierarchy, which is why it
+was worth a whole run:
+
+- **FINANCE (#1).** `/finance-options-uk` holds the best positions in the
+  account (6.75–10.7 on the Turkey finance cluster, 119+ impressions as of
+  09-18) and lost 11 questions' worth of schema. `/monthly-payment` is the
+  single most AI-cited URL on the site — 6 of 12 ChatGPT sessions in the 09-11
+  GA4 read — and lost 6.
+- **COST / high-ticket (#2, #4).** The three `/prices/` package and implant-cost
+  pages lost 3–5 each.
+- **TRUST (#5) and conversion.** `/turkey-teeth-clinic`, `/free-treatment-plan`,
+  `/contact`.
+
+Comparable pages (`/prices/turkey-teeth-cost`, `/guides/turkey-teeth-packages`)
+kept theirs via `FAQSection`, so this was a parity gap, not a policy.
+
+### Decision taken this run
+
+**OPTIMISE EXISTING — technical. Priority 8.5/10.** Page types: MONEY
+(`/finance-options-uk`, `/monthly-payment`, the three `/prices/` pages), TRUST
+(`/turkey-teeth-clinic`), conversion (`/free-treatment-plan`, `/contact`).
+
+Restored the 8 FAQPage blocks through one new headless server component,
+`src/components/FaqJsonLd.tsx`, rather than re-pasting eight copies of the same
+literal — the copies are what let the schema drift out unnoticed in the first
+place. The component carries the de-duplication rule in its header comment so
+the next schema audit has one place to look: **a page emits its FAQPage block
+either by rendering `<FAQSection>` or by rendering `<FaqJsonLd>`, never both.**
+
+Each page's existing FAQ array was reused as-is (`{q, a}` shape across all 8),
+so **no FAQ copy was written, reworded or invented** — zero YMYL surface change.
+The diff is 2 lines per page: one import, one component.
+
+**Honest scope of the expected gain.** Google restricted FAQ rich results to
+authoritative government and health sites in August 2023, so this is *not* an
+SERP-snippet play and should not be scored as one. The value is GEO
+answerability (STEP 12) on the finance pages that AI assistants already cite,
+plus entity/schema parity (STEP 15) with the rest of the site. If the next run
+has GSC data back, do **not** attribute position movement to this change.
+
+### Changes completed
+
+- **Content:** none. No user-visible text changed on any page.
+- **Metadata:** none. No title, description, H1 or canonical touched.
+- **Schema:** 8 FAQPage blocks restored; 1 new shared component.
+- **Internal links:** none changed.
+- **Technical:** 8 route hashes refreshed in `seo/route-lastmod.json` via
+  `npm run seo:lastmod` — exactly the 8 changed routes, no site-wide `lastmod`
+  churn (the shared component correctly does not bump unrelated routes).
+- **URL / canonical / redirect:** deliberately none.
+
+### Verification
+
+Against a production build, not asserted:
+
+- All 8 pages server-render **exactly one** `FAQPage` block with the expected
+  question counts: finance-options-uk 11, monthly-payment 6, free-treatment-plan
+  5, all-on-6 5, hollywood-smile 5, turkey-teeth-clinic 5, contact 3,
+  dental-implants-turkey-cost 3.
+- **Zero** pages anywhere on the site emit a duplicate `FAQPage` — the defect
+  Fix B was correctly guarding against was not reintroduced.
+- All **180** `ld+json` blocks across all prerendered pages parse as valid JSON.
+- FAQPage coverage 28 → **36** pages.
+- All 8 return `index, follow` with a self-referencing canonical; 78 sitemap
+  URLs; `npm run seo:lastmod:check` reports the manifest current.
+- typecheck clean; lint clean (3 pre-existing unrelated warnings); build clean.
+
+Note: `node_modules` was empty at session start and `npm ci` was required. The
+`node_modules/next/dist/docs/` directory that `AGENTS.md` instructs us to read
+**does not exist** in next@15.5.15 as installed, so the JSON-LD pattern used
+here was matched to the repo's own existing `ArticleJsonLd` / `FAQSection`
+components rather than to any external API assumption.
+
+### Deployment log (§24)
+
+```
+2026-10-04 | 8 URLs (finance ×2, prices ×3, clinic, free-plan, contact)
+           | Restore FAQPage JSON-LD via shared FaqJsonLd component
+           | Regression from fe2f1ed Fix B: schema removed from pages that
+             never rendered FAQSection
+           | Expected effect: GEO/AI answerability + schema parity.
+             NOT expected: ranking movement (FAQ rich results restricted 2023).
+```
+
+### What to check next run
+
+1. **Is the GSC feed back?** If not, say so again and do not invent analysis.
+   Everything below needs data.
+2. Once data returns, the 09-11 backlog is still the right queue, in order:
+   the cost-merge reversal verification, `/monthly-payment` breakout, the
+   generic finance queries at 59–89, then the packages head-to-head.
+3. **The finance title has now been flipped twice** — generic-UK on 09-11
+   (`ec58eac`), back to Turkey-framed on 09-18 (`57ffb24`), each time with real
+   evidence. Both readings are true because **one URL is serving two distinct
+   intents**: UK-domestic dental finance (`teeth on finance`, `dental implant
+   finance uk`, `denture financing`, `0% dental finance` @ 19) and Turkey
+   treatment finance (`turkey teeth finance`, `pay monthly turkey teeth`). Do
+   **not** flip the title a third time. The structural answer is a separate
+   owner for the generic UK intent, but that is a NEW PAGE decision in a cluster
+   with a doorway-page risk (§9) and it needs live data to justify — hold it
+   until the feed is back.
+4. GA4 key events were still unconfigured as of 09-11, so business value remains
+   unusable for scoring. Unchanged and still open.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

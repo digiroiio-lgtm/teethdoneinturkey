@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
+import FaqJsonLd from "@/components/FaqJsonLd";
 
 export const revalidate = 86400;
 
@@ -148,6 +149,7 @@ const faqs = [
 export default function FinanceOptionsUKPage() {
   return (
     <>
+      <FaqJsonLd id="faq-schema-finance-options-uk" faqs={faqs} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Can You Pay Monthly for Turkey Teeth? Finance &amp; Payment Plans Explained</h1>
