@@ -142,9 +142,10 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
     const params = new URLSearchParams(window.location.search);
     if (params.get(SUCCESS_PARAM) === '1') {
       setIsSuccess(true);
+      window.gtag?.('event', 'generate_lead', { form_path: successPath });
       window.history.replaceState({}, '', window.location.pathname);
     }
-  }, []);
+  }, [successPath]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     if (honeypot.trim()) { e.preventDefault(); return; }
