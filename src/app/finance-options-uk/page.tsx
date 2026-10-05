@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import TrackedLink from "@/components/TrackedLink";
 import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 
 export const revalidate = 86400;
@@ -378,7 +379,7 @@ export default function FinanceOptionsUKPage() {
           </div>
 
           <div className="flex gap-4 flex-wrap">
-            <Link href="/book-consultation" className="bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Check My Eligibility</Link>
+            <TrackedLink href="/book-consultation" ctaLabel="Check My Eligibility" className="bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Check My Eligibility</TrackedLink>
             <Link href="/monthly-payment" className="border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">View Monthly Payment Table</Link>
             <Link href="/price-calculator" className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">Calculate My Treatment Cost</Link>
           </div>

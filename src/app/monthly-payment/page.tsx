@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 import CTASection from "@/components/CTASection";
+import TrackedLink from "@/components/TrackedLink";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 
 export const revalidate = 86400;
@@ -72,15 +73,15 @@ export default function MonthlyPaymentPage() {
 
           {/* Multi-CTA block */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl mx-auto">
-            <Link href="/book-consultation" className="bg-white text-[#1e40af] px-5 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors text-sm">
+            <TrackedLink href="/book-consultation" ctaLabel="Get Free Treatment Plan" className="bg-white text-[#1e40af] px-5 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors text-sm">
               ✅ Get Free Treatment Plan
-            </Link>
-            <Link href="/book-consultation" className="bg-green-500 text-white px-5 py-3 rounded-xl font-bold hover:bg-green-600 transition-colors text-sm">
+            </TrackedLink>
+            <TrackedLink href="/book-consultation" ctaLabel="Check Finance Eligibility" className="bg-green-500 text-white px-5 py-3 rounded-xl font-bold hover:bg-green-600 transition-colors text-sm">
               📋 Check Finance Eligibility
-            </Link>
-            <Link href="/book-consultation" className="border-2 border-white text-white px-5 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors text-sm">
+            </TrackedLink>
+            <TrackedLink href="/book-consultation" ctaLabel="Upload Dental X-Ray" className="border-2 border-white text-white px-5 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors text-sm">
               📤 Upload Dental X-Ray
-            </Link>
+            </TrackedLink>
             <a href="https://wa.me/905353998999" className="bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold hover:bg-green-600 transition-colors text-sm flex items-center justify-center gap-2">
               💬 WhatsApp a Treatment Coordinator
             </a>
