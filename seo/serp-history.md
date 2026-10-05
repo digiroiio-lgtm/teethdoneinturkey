@@ -7,6 +7,225 @@ rewritten again.
 
 ---
 
+## 2026-10-05 (YMYL claim integrity — run executed BLIND, no GSC data)
+
+### BLOCKER: the Search Console feedback loop has been dead for 3 weeks
+
+**No GSC data was available for this run.** Every Supermetrics `data_query` against
+`sc-domain:teethdoneinturkey.co.uk` returns `[TRIAL_EXPIRED]` — the free trial on
+team "Team digiroiio" expired **2026-09-17**. There is no fallback in the session:
+no GSC service account, and the ambient `CLOUDSDK_AUTH_ACCESS_TOKEN` is rejected
+`401 UNAUTHENTICATED` by `searchconsole.googleapis.com`.
+
+This is why the gap in this log runs 09-11 → 10-05. It also means the last three
+weeks of changes (commits #26, #27, #28) have never been measured.
+
+**Consequence for prioritisation: STEPS 1–3, 5, 6, 11 and 17–19 of the daily brief
+could not be executed.** No query, position, impression or CTR evidence exists for
+today, so no striking-distance opportunity could be identified, scored or ranked.
+Nothing in this entry should be read as evidence-led keyword prioritisation.
+
+**Explicitly NOT done, because doing it blind is the documented 09-08 failure mode:**
+
+- **Packages (was priority #3).** `turkey teeth packages` is split five ways. The
+  09-11 note required establishing *which* of the five URLs Google prefers before
+  acting. This log records only the aggregate (~25 impr, positions 7.5–99.7) and
+  not which URL holds 7.5, so the head-to-head is impossible today. No page
+  created, no canonical chosen, no merge.
+- **Finance cannibalisation (was priority #4).** `teeth on finance bad credit` on
+  two URLs, `pay monthly turkey teeth` on three. Picking an owner per query needs
+  per-query landing-page data. Not touched.
+- **`/prices/dental-implants-turkey-cost` merge (was priority #5).** Still a merge
+  candidate on the 09-11 zero-impression finding, but a 301 needs fresh data *and*
+  human approval (§28). Not merged — see below for what was done instead.
+- **`/finance-options-uk`.** Checked, not rewritten. The 09-11 reposition is
+  present and does now cover the generic UK finance intent it was missing
+  (`dental implant finance uk`, `financing for veneers`, `denture financing`).
+  Rewriting it again with no data to judge it by would be guesswork.
+
+### What was done instead: a YMYL claim-integrity defect found on the homepage
+
+With no data-led build possible, the run audited the MONEY pages for the *same*
+YMYL defect pattern the 09-11 run found and fixed on
+`/blog/full-mouth-implants-uk-vs-turkey` (a "from £250/month" claim with no
+eligibility, APR or approval wording). The pattern had recurred, and the worst
+instance was not on a price page at all.
+
+`src/components/FAQSection.tsx` ships a **`defaultFaqs` array**, and
+`src/app/page.tsx:194` renders `<FAQSection />` **with no `faqs` prop** — so the
+homepage, the highest-authority URL on the domain, was publishing those defaults
+both as visible copy and as **`FAQPage` structured data**. The homepage
+`WebPage` graph also declares a `speakable` spec with
+`cssSelector: [..., ".faq-answer"]`, which is the exact class those answers render
+into — i.e. the site was actively inviting voice and AI answer surfaces to quote
+these claims as authoritative. `/` was the only route using the defaults.
+
+Defects corrected (all four were live in homepage structured data):
+
+1. **False regulatory claim.** "All our partner dentists hold Turkish Dental
+   Association qualifications **equivalent to UK GDC registration**." Turkish
+   qualifications are not interchangeable with GDC registration, which is a UK
+   statutory status. Replaced with what is true and more useful to the patient:
+   Turkish dentists are regulated in Turkey by the Ministry of Health and the
+   Turkish Dental Association, are *not* GDC-registered, and the practical
+   consequence is recourse — you cannot complain to the GDC about a dentist
+   practising in Turkey. Also noted that Ministry of Health licensing is a legal
+   requirement for every Turkish clinic rather than a quality signal, so the
+   individual dentist's experience is the thing to ask about.
+   **The same false claim was also live on `/about-us`** — the site's own E-E-A-T
+   trust page — and was corrected there too. 0 occurrences remain site-wide.
+2. **Finance answer implying guaranteed approval.** "Yes, we offer monthly payment
+   plans starting from £82/month" — no APR, no affordability or credit assessment,
+   no lender, no "not everyone will qualify". Replaced with the site's own already
+   approved compliant wording (as used on `/prices/veneers-turkey-cost`): £82/month,
+   0% APR representative, 12/24/36 months, subject to affordability and credit
+   assessment, soft-search pre-qualification, third-party lender, **approval is not
+   guaranteed and not everyone will qualify**. STEP 7 forbids implying guaranteed
+   approval.
+3. **Unqualified safety answer.** "Yes, Turkey has world-class JCI-accredited
+   clinics … with excellent outcomes" — an unqualified Yes to a safety question on
+   a YMYL topic, with no risk disclosed. Rewritten to the honest version: safety
+   depends on the clinic, not the country; standards vary; the real risks are
+   over-treatment, compressed treatment plans and the difficulty of getting
+   corrective work done back in the UK. Points to `/blog/risks-of-turkey-teeth`.
+4. **Absolute guarantee claim.** "All our partner clinics offer guarantees of up to
+   10 years … any issues can be addressed" — conflated a clinic workmanship
+   warranty with a clinical guarantee, and silently omitted travel cost. Rewritten
+   to distinguish the two explicitly (STEP 13 "warranties versus clinical
+   guarantees"), state that terms vary and must be obtained in writing, and say
+   that flights and accommodation for a return visit are normally the patient's.
+
+### `/prices/dental-implants-turkey-cost` — OPTIMISE EXISTING (MONEY)
+
+Scope deliberately limited to claim integrity and technical parity, **not** content
+expansion, because this URL remains a merge candidate and expanding it would be
+wasted work if it is later consolidated.
+
+- Same three FAQ defects as above, corrected the same way: the flat "Yes" to
+  "Are Turkish dental implants guaranteed?", the "Yes. We offer … from £82/month"
+  finance answer, and "Any issues covered under guarantee will be addressed at no
+  additional cost".
+- **FIX (factual).** The price table carried a **contradictory duplicate row**:
+  "Single Osstem Implant + Crown" (UK £2,000–£3,000, Turkey £250, "~90%") and
+  "Osstem Implant + Crown (basic)" (UK £3,000–£4,500, same £250, "~92%") — the same
+  product at the same Turkey price against two different UK comparators, with the
+  *basic* variant given the *higher* UK price. Duplicate row removed.
+- **FIX (factual).** Savings recomputed like-for-like per the 09-11 precedent
+  (lowest-UK-vs-Turkey, then highest-UK-vs-Turkey) and stated as ranges rather than
+  a single cherry-picked figure. Straumann was the clear overstatement: "~78%"
+  against a true range of 69.0–79.3%. Now: Osstem 88–92%, Medentika 83–88%,
+  Straumann 69–79%, All-on-6 63–75%. Footnote added explaining the basis, that UK
+  figures are typical private fees not NHS band charges, that Turkey prices exclude
+  flights, and the June 2026 verification date.
+- **TECHNICAL.** The page had **no page-level schema at all** — only the global
+  `Organization`/`WebSite` from the root layout, while every sibling price page
+  carries the full graph. Added `WebPage` + `BreadcrumbList` + `FAQPage`, matching
+  the `/prices/veneers-turkey-cost` convention. Verified server-rendered.
+- Meta description was 126 chars (below the 150–160 floor in `docs/seo-directive.md`);
+  rewritten to 154 and corrected to include All-on-6 £5,600 per arch.
+
+Two further instances of the same guaranteed-approval finance wording were
+corrected: `/prices/all-on-6-dental-implants-turkey-package` and
+`/blog/full-set-veneers-turkey-cost` (the latter also dropped
+"have your dream smile now and pay gradually", which is promotional pressure on a
+credit product). 0 instances of the pattern remain site-wide.
+
+### Tooling defect found: shared-component changes do not bump `lastmod`
+
+`scripts/update-route-lastmod.mjs` hashes only each route folder's own files — by
+design, so a shared-component edit does not churn all 78 URLs. But the homepage's
+visible content *and* its `FAQPage` structured data genuinely changed here via
+`FAQSection.tsx`, and `/` was therefore left advertising a stale
+`2026-09-28` `lastmod`, contrary to §15. `/` was hand-bumped as a stopgap, which the
+later homepage edit below then superseded — `page.tsx` itself changed, so the
+generator now bumps `/` on its own and `npm run seo:lastmod:check` passes cleanly.
+**The underlying gap remains real for any future shared-component-only change:**
+the script has no dependency tracking, so editing a component would silently leave
+every consuming route advertising a stale `lastmod`. See next priorities.
+
+### INTERNAL LINKING (STEP 9) — gap found while fixing the safety answer
+
+The rewritten safety answer refers the reader to the risks guide, which exposed a
+real gap: **the homepage linked to no risk, safety or clinic-selection page at
+all.** On a YMYL topic the top-authority page was carrying only upside. Added a
+"Before You Book: Read the Risks" band between the FAQ and the closing CTA:
+
+| Source | Target | Anchor |
+|---|---|---|
+| `/` | `/blog/risks-of-turkey-teeth` | The Risks of Turkey Teeth |
+| `/` | `/guides/turkish-veneers-safety` | Are Turkish Veneers Safe? |
+| `/` | `/blog/best-dental-clinics-turkey` | How to Choose a Clinic in Turkey |
+| `/` | `/blog/uk-dentist-vs-turkey-dentist` | UK Dentist vs Turkey Dentist |
+
+Descriptive anchors, no exact-match repetition. This also gives the safety FAQ's
+textual reference a real destination immediately below it. Homepage is now 1,481
+words with a single H1 and all four targets verified 200.
+
+### Technical health check (STEP 14)
+
+Re-verified against a production build, since the 09-11 crawl predates commits
+#26/#27/#28 and the site has grown 69 → 78 sitemap URLs:
+
+- 78 sitemap URLs, **every one verified 200**.
+- Full internal-link crawl of all 78 pages, 79 distinct internal targets:
+  **0 broken links, 0 links pointing at a redirect, 0 orphan pages**.
+- Canonicals: 78/78 present and self-referencing, **0 mismatches**.
+- **0** pages with an H1 count other than 1. **0** pages without schema.
+- Titles: **0 over 60 chars** once HTML entities are decoded. (`/blog` and
+  `/guides/full-mouth-dental-implants-turkey-cost` measure 61 raw but 57 decoded —
+  `&amp;` inflates the count. Not a defect; noted so a future run does not "fix" it.)
+- Meta descriptions: 0 over 160, but **40 of 78 are below the 150-char floor**
+  (range 113–149). Commit #27 was titled "title/description length fixes" and only
+  partly closed this. Logged, not mass-edited — 40 descriptions is a bulk content
+  change with no ranking effect, and with 0 clicks recorded at query level there is
+  no CTR evidence to tune against yet.
+- Thin indexable pages (<400 words): `/travel-to-turkey` (189),
+  `/treatments` (283), `/travel-to-turkey/how-long-stay-turkey-dental` (382),
+  `/medical-reviewers/mustafa-akca` (377). The first two are hubs and are the
+  weakest indexable pages on the site. Low-value review queue per §4/§21, no action
+  taken.
+- typecheck clean. lint: 3 warnings, **all pre-existing** (verified by stashing and
+  re-running against HEAD); none introduced here. Build clean, 106 static pages.
+
+### AGENTS.md discrepancy worth resolving
+
+`AGENTS.md` instructs reading `node_modules/next/dist/docs/` before writing code,
+on the grounds that this is a fork with breaking changes. **That directory does not
+exist.** `next` resolves to stock **15.5.15** from the public registry. No fork, no
+bundled docs. This run followed the repo's own existing in-file conventions instead
+(copied the `jsonLd` graph shape from `/prices/veneers-turkey-cost` verbatim). The
+instruction should either be corrected or the fork actually vendored, because as
+written it is unfollowable and every future run will hit it.
+
+### What to check next run
+
+1. **Restore GSC access first — nothing evidence-led is possible until then.**
+   Renew Supermetrics, or add a Google service account with
+   `webmasters.readonly` scope for `sc-domain:teethdoneinturkey.co.uk`. Until this
+   is fixed every run is blind and will keep deferring the same three priorities.
+2. **Packages head-to-head** (still priority #3, now ~4 weeks deferred): which of
+   the five URLs does Google actually serve for `turkey teeth packages`? Decide an
+   owner *before* creating or merging anything.
+3. **Finance owner per query** (still priority #4) for
+   `teeth on finance bad credit` and `pay monthly turkey teeth`.
+4. **Measure the 09-11 full-mouth retitle.** It has now had ~3.5 weeks, well past
+   the 2-week hold. Did `full mouth dental implants turkey price` (was 33.7),
+   `full mouth dental implant turkey costs` (30.8) and
+   `full set of teeth implants cost turkey` (38.0) move? If not, the stated next
+   hypothesis is content depth, not another title change.
+5. **Add shared-component dependency tracking** to
+   `scripts/update-route-lastmod.mjs` so a change to a component a route imports
+   bumps that route's `lastmod` without churning the whole sitemap.
+6. Decide the 40 short meta descriptions deliberately: either relax the 150–160
+   rule in `docs/seo-directive.md` to a ceiling-only rule, or schedule the rewrite
+   as one reviewed batch. Right now the repo fails its own documented standard on
+   just over half its pages.
+7. GA4: **still 0 conversions ever recorded**, flagged on 09-11 and still open.
+   Until key events are configured there is no business-value signal to prioritise
+   on, only positions.
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

@@ -7,18 +7,56 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/dental-implants-turkey-cost" },
   title: "Dental Implants Turkey Cost: UK Guide",
-  description: "Dental implants Turkey cost 2026. Single implants from £250, All-on-4 from £4,500. Full price breakdown vs UK. Save up to 90%.",
+  description: "Dental implants Turkey cost 2026: single implants from £250, All-on-4 from £4,500, All-on-6 from £5,600 per arch. UK price comparison and payment options.",
 };
 
 const faqs = [
-  { q: "Are Turkish dental implants guaranteed?", a: "Yes. Our partner clinics provide written guarantees of 5–10 years on all implant work. This covers the implant itself and the crown." },
-  { q: "Can I get implants on finance?", a: "Yes. We offer monthly payment plans from £82/month, allowing UK patients to spread the cost of their treatment over 12, 24, or 36 months." },
-  { q: "What happens if something goes wrong after I return home?", a: "Our UK team provides ongoing support, and our partner clinics are available via WhatsApp and video call for follow-up. Any issues covered under guarantee will be addressed at no additional cost." },
+  { q: "Are Turkish dental implants guaranteed?", a: "Partner clinics provide a written guarantee on their own implant work, commonly 5–10 years, typically covering the implant fixture and the crown. Ask for the exact terms in writing before you commit, because what is covered and for how long varies by clinic and by component. A guarantee of this kind covers the clinic’s workmanship and materials — it is not a clinical guarantee that an implant will never fail, and it does not normally cover flights or accommodation for a return visit." },
+  { q: "Can I get implants on finance?", a: "Monthly payment plans are available from £82/month with 0% APR representative over 12, 24 or 36 months, subject to an affordability and credit assessment. A soft-search pre-qualification lets you check your eligibility without affecting your credit score. Finance is provided by a third-party lender: approval is not guaranteed and not everyone will qualify." },
+  { q: "What happens if something goes wrong after I return home?", a: "Our UK team co-ordinates aftercare and partner clinics offer remote follow-up by WhatsApp and video call. Where a problem falls within the clinic’s written guarantee, the corrective treatment itself is covered, but it usually has to be carried out by the clinic that did the original work and travel costs are normally yours to meet. Urgent problems should be seen by a UK dentist first; routine NHS or private charges apply for that." },
 ];
+
+const SITE_URL = "https://www.teethdoneinturkey.co.uk";
+const PAGE_URL = `${SITE_URL}/prices/dental-implants-turkey-cost`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${PAGE_URL}#webpage`,
+      url: PAGE_URL,
+      name: "Dental Implants Turkey Cost: UK Guide",
+      description:
+        "Dental implants Turkey cost 2026: single implants from £250, All-on-4 from £4,500, All-on-6 from £5,600 per arch. UK price comparison and payment options.",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": `${SITE_URL}/#business` },
+      inLanguage: "en-GB",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "Prices", item: `${SITE_URL}/prices/turkey-teeth-cost` },
+        { "@type": "ListItem", position: 3, name: "Dental Implants Turkey Cost", item: PAGE_URL },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
+};
 
 export default function ImplantsCostPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey Cost – 2026 Guide</h1>
@@ -42,11 +80,10 @@ export default function ImplantsCostPage() {
                 </thead>
                 <tbody>
                   {[
-                    { t: "Single Osstem Implant + Crown", uk: "£2,000–£3,000", turkey: "£250", s: "~90%" },
-                    { t: "Single Medentika Implant + Crown", uk: "£2,500–£3,500", turkey: "£430", s: "~85%" },
-                    { t: "Single Straumann Implant + Crown", uk: "£3,000–£4,500", turkey: "£930", s: "~78%" },
-                    { t: "Osstem Implant + Crown (basic)", uk: "£3,000–£4,500", turkey: "£250", s: "~92%" },
-                    { t: "All-on-6 Package (per arch, incl. hotel)", uk: "£15,000–£22,000", turkey: "£5,600", s: "~70%" },
+                    { t: "Single Osstem Implant + Crown", uk: "£2,000–£3,000", turkey: "£250", s: "88–92%" },
+                    { t: "Single Medentika Implant + Crown", uk: "£2,500–£3,500", turkey: "£430", s: "83–88%" },
+                    { t: "Single Straumann Implant + Crown", uk: "£3,000–£4,500", turkey: "£930", s: "69–79%" },
+                    { t: "All-on-6 Package (per arch, incl. hotel)", uk: "£15,000–£22,000", turkey: "£5,600", s: "63–75%" },
                   ].map((r, i) => (
                     <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                       <td className="px-4 py-3 font-medium">{r.t}</td>
@@ -58,6 +95,12 @@ export default function ImplantsCostPage() {
                 </tbody>
               </table>
             </div>
+            <p className="text-xs text-gray-500 mt-3">
+              Saving ranges are calculated like-for-like against the UK range shown on the same row (lowest UK price
+              against the Turkey price, then highest against the Turkey price), so the lower figure is the saving you
+              would make against the cheapest UK quote. UK figures are typical private fees, not NHS band charges.
+              Turkey prices are per unit unless stated and exclude flights. Prices last verified June 2026.
+            </p>
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">What&apos;s Included in Turkey Implant Prices?</h2>

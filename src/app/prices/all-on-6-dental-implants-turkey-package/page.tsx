@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: "What implant brand is used in the All-on-6 package?", a: "The standard package uses Osstem implants — one of the world's largest implant manufacturers, widely used across Europe and clinically proven over decades. An upgrade to Medentika (Straumann Group) or Straumann implants is available." },
   { q: "Is the titanium bar upgrade worth it?", a: "For most patients, we recommend the titanium bar reinforcement (+£1,500). It significantly improves the durability and rigidity of your final prosthesis, especially for patients with a strong bite or those who grind their teeth." },
-  { q: "Can I get All-on-6 on finance?", a: "Yes. We offer monthly payment plans to spread the cost over 12, 24, or 36 months. Contact us to see your options." },
+  { q: "Can I get All-on-6 on finance?", a: "Monthly payment plans are available over 12, 24 or 36 months, with 0% APR representative on qualifying plans, subject to an affordability and credit assessment. A soft-search pre-qualification lets you check your eligibility without affecting your credit score. Finance is provided by a third-party lender: approval is not guaranteed and not everyone will qualify." },
   { q: "What if something goes wrong after I return home?", a: "Our UK team provides ongoing aftercare support, and your Turkish clinic is available via WhatsApp and video call. All work is covered by a written guarantee." },
   { q: "Is the hotel in Antalya or Istanbul?", a: "Our partner clinics are based in Antalya. Hotel and transfer arrangements are co-ordinated for you as part of the package." },
 ];

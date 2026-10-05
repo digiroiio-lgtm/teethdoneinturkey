@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";
 import TreatmentCard from "@/components/TreatmentCard";
@@ -192,6 +193,36 @@ export default function HomePage() {
       </section>
 
       <FAQSection />
+
+      {/* Balance band: the homepage previously linked to no risk, safety or
+          clinic-selection content at all. These are the pages a patient should
+          read before committing, and the safety FAQ above refers to them. */}
+      <section className="py-14 bg-white border-t border-gray-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Before You Book: Read the Risks</h2>
+          <p className="text-gray-600 mb-6 max-w-3xl">
+            Treatment in Turkey can be a good decision, but it is still surgery and the outcome depends on the
+            clinic you choose. These are the pages worth reading before you commit to anything.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { href: "/blog/risks-of-turkey-teeth", title: "The Risks of Turkey Teeth", desc: "Over-treatment, rushed plans and what can go wrong — set out honestly." },
+              { href: "/guides/turkish-veneers-safety", title: "Are Turkish Veneers Safe?", desc: "How to judge safety at the level of the clinic rather than the country." },
+              { href: "/blog/best-dental-clinics-turkey", title: "How to Choose a Clinic in Turkey", desc: "What to check, what to ask for in writing, and the warning signs." },
+              { href: "/blog/uk-dentist-vs-turkey-dentist", title: "UK Dentist vs Turkey Dentist", desc: "Training, regulation and what differs on aftercare and recourse." },
+            ].map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="block bg-gray-50 hover:bg-blue-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 transition-colors"
+              >
+                <p className="font-semibold text-gray-900 mb-1">{l.title}</p>
+                <p className="text-sm text-gray-600">{l.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <CTASection
         title="Ready to Transform Your Smile?"

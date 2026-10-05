@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T13:03:09.514Z",
+  "generatedAt": "2026-10-05T08:35:21.224Z",
   "registrySize": 29,
-  "pagesScanned": 96,
+  "pagesScanned": 98,
   "results": [
     {
       "page": "/guides/teeth-in-turkey",
@@ -85,7 +85,7 @@
     },
     {
       "page": "/prices/turkey-teeth-cost",
-      "incomingTotal": 59,
+      "incomingTotal": 61,
       "incomingFromHighAuth": 12,
       "sources": [
         {
@@ -278,6 +278,10 @@
         },
         {
           "from": "/guides/turkey-teeth-packages",
+          "anchorText": "Turkey Teeth Cost: Complete 2026 Price Guide"
+        },
+        {
+          "from": "/guides/turkey-teeth-packages",
           "anchorText": ""
         },
         {
@@ -299,6 +303,10 @@
         {
           "from": "/prices/turkey-teeth-cost",
           "anchorText": "the full price guide"
+        },
+        {
+          "from": "/prices/veneers-antalya-cost",
+          "anchorText": ""
         },
         {
           "from": "/prices/veneers-turkey-cost",
@@ -329,8 +337,8 @@
     },
     {
       "page": "/finance-options-uk",
-      "incomingTotal": 24,
-      "incomingFromHighAuth": 4,
+      "incomingTotal": 26,
+      "incomingFromHighAuth": 5,
       "sources": [
         {
           "from": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
@@ -393,6 +401,10 @@
           "anchorText": "Dental Finance Options UK"
         },
         {
+          "from": "/guides/full-mouth-dental-implants-turkey-cost",
+          "anchorText": "Turkey Teeth Finance Options"
+        },
+        {
           "from": "/guides/no-nhs-dentist-what-to-do",
           "anchorText": ""
         },
@@ -407,6 +419,10 @@
         {
           "from": "/guides/tooth-abscess-cant-afford-dentist",
           "anchorText": ""
+        },
+        {
+          "from": "/guides/turkey-teeth-antalya",
+          "anchorText": "Turkey Teeth Finance Options"
         },
         {
           "from": "/guides/turkey-teeth-antalya",
@@ -433,7 +449,7 @@
     },
     {
       "page": "/monthly-payment",
-      "incomingTotal": 33,
+      "incomingTotal": 34,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -519,6 +535,10 @@
         {
           "from": "/guides/cant-afford-root-canal-uk",
           "anchorText": "Monthly Payment"
+        },
+        {
+          "from": "/guides/full-mouth-dental-implants-turkey-cost",
+          "anchorText": ""
         },
         {
           "from": "/guides/teeth-in-turkey",
@@ -1393,7 +1413,7 @@
     },
     {
       "page": "/book-consultation",
-      "incomingTotal": 56,
+      "incomingTotal": 57,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -1521,6 +1541,10 @@
           "anchorText": "Book Free Consultation"
         },
         {
+          "from": "/editorial-policy",
+          "anchorText": "book a free consultation"
+        },
+        {
           "from": "/finance-options-uk",
           "anchorText": "Check My Eligibility"
         },
@@ -1625,12 +1649,16 @@
     },
     {
       "page": "/free-treatment-plan",
-      "incomingTotal": 9,
+      "incomingTotal": 10,
       "incomingFromHighAuth": 5,
       "sources": [
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
           "anchorText": "Free Treatment Plan"
+        },
+        {
+          "from": "/editorial-policy",
+          "anchorText": "free treatment plan request"
         },
         {
           "from": "/finance-options-uk",

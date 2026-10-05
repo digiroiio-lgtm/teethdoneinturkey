@@ -60,7 +60,7 @@ export default function AboutPage() {
               We partner exclusively with dental clinics that have achieved JCI accreditation or equivalent international certification. Our partner clinics are located in Istanbul (European side) and Antalya, offering modern facilities, CBCT scanning, digital smile design, and same-day temporaries.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              All partner dentists hold qualifications equivalent to UK GDC registration, and many have completed advanced training in Germany, the United States, or Italy. We personally inspect every clinic annually to ensure standards are maintained.
+              Partner dentists qualify through a five-year Turkish dental degree and are regulated in Turkey by the Ministry of Health and the Turkish Dental Association; several have completed advanced training in Germany, the United States or Italy. They are not registered with the UK General Dental Council — Turkish qualifications are not interchangeable with GDC registration, which is a UK statutory status — so if something goes wrong, your recourse is with the treating clinic rather than the GDC. We inspect every partner clinic before working with them and review them annually.
             </p>
           </div>
 
