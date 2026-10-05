@@ -9,6 +9,7 @@ import AiReferralTracking from "@/components/AiReferralTracking";
 
 // GA4 (Google Analytics)
 const GA_MEASUREMENT_ID = "G-57QGPCQQKT";
+const GA_ALLOWED_HOSTS = ["teethdoneinturkey.co.uk", "www.teethdoneinturkey.co.uk"];
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -154,13 +155,23 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} antialiased font-sans`}>
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
+        {/* Production hosts only: previews (*.vercel.app), localhost and dev send
+            no GA4 hits, and window.gtag stays undefined so `window.gtag?.()` call
+            sites become no-ops. Apex is whitelisted in case it is ever served. */}
         <Script id="ga4-init" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            (function () {
+              var hosts = ${JSON.stringify(GA_ALLOWED_HOSTS)};
+              if (hosts.indexOf(window.location.hostname) === -1) return;
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = function () { window.dataLayer.push(arguments); };
+              window.gtag('js', new Date());
+              window.gtag('config', '${GA_MEASUREMENT_ID}');
+              var s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
+              document.head.appendChild(s);
+            })();
           `}
         </Script>
         <AiReferralTracking />

@@ -5,6 +5,10 @@ import { useState, useEffect } from 'react';
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const FORM_ENDPOINT = 'https://submit-form.com/9xGP4VkVm';
 const SUCCESS_PARAM = 'submitted';
+// Refresh/back-button guard for `generate_lead`. Set when the event fires and
+// cleared on the next real submission, so one successful submission = one event
+// while a genuine second submission in the same session still counts.
+const LEAD_SENT_KEY = 'tdit_generate_lead_sent';
 
 const COUNTRIES = [
   'United Kingdom',
@@ -142,7 +146,20 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
     const params = new URLSearchParams(window.location.search);
     if (params.get(SUCCESS_PARAM) === '1') {
       setIsSuccess(true);
-      window.gtag?.('event', 'generate_lead', { form_path: successPath });
+      let alreadySent = false;
+      try {
+        alreadySent = sessionStorage.getItem(LEAD_SENT_KEY) === '1';
+      } catch {
+        // Storage unavailable — fall through and send the event.
+      }
+      if (!alreadySent) {
+        window.gtag?.('event', 'generate_lead', { form_path: successPath });
+        try {
+          sessionStorage.setItem(LEAD_SENT_KEY, '1');
+        } catch {
+          // Non-fatal.
+        }
+      }
       window.history.replaceState({}, '', window.location.pathname);
     }
   }, [successPath]);
@@ -156,6 +173,11 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
     if (!country.trim()) { e.preventDefault(); setValidationError('Please select your country.'); return; }
     setValidationError('');
     setIsSubmitting(true);
+    try {
+      sessionStorage.removeItem(LEAD_SENT_KEY);
+    } catch {
+      // Non-fatal.
+    }
     // Validation passed — native POST proceeds
   };
 
