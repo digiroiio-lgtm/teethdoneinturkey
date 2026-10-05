@@ -1,0 +1,24 @@
+{
+  "$comment": "Per-site input for the site-seo-maintenance skill. Core rules live in the skill and docs/seo-directive.md; only site facts go here. Unverified values stay null.",
+  "domain": "https://www.teethdoneinturkey.co.uk",
+  "stack": "nextjs-app-router",
+  "ymyl": "high",
+  "vertical": "dental-tourism",
+  "gsc": { "property": null, "note": "Fill in the verified Search Console property before the first weekly run." },
+  "ga4": { "property": null },
+  "baseline": { "metric": "daily organic impressions", "value": null, "asOf": null, "note": "Do not record a number until it is read from GSC." },
+  "urlInventory": {
+    "command": "node scripts/audit-seo.mjs --json",
+    "sitemapManifest": "seo/route-lastmod.json"
+  },
+  "programmaticTemplates": [],
+  "authors": { "reviewerSource": "src/lib/reviewer.ts", "policyPage": "/editorial-policy" },
+  "primarySources": ["NHS / GOV.UK", "Turkish Ministry of Health", "clinic first-party price lists", "GDC / peer-reviewed dental literature"],
+  "indexnow": { "status": "unverified", "note": "Bing returned 403 in Oct 2026; sitemap is the primary path. See seo-directive §SİTE." },
+  "files": {
+    "directive": "docs/seo-directive.md",
+    "history": "seo/serp-history.md",
+    "deploymentLog": "seo/deployment-log.md",
+    "reports": "seo/reports/"
+  }
+}

@@ -36,6 +36,9 @@ jobs:
       - name: Verify sitemap freshness manifest
         run: npm run seo:lastmod:check
 
+      - name: SEO hygiene (errors only)
+        run: npm run seo:audit:check
+
       - name: Lint
         run: npm run lint
 

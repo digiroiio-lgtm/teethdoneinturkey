@@ -269,6 +269,34 @@ USER VALUE → ORIGINALITY → EVIDENCE → INTENT DIFFERENTIATION → TRUST
 
 Scale en son gelir. Bir sayfanın var olmasının ana gerekçesi yalnızca Google trafiği ise o sayfayı yayınlama. Bir sayfa kullanıcının ayrı bir problemini çözüyor, özgün bilgi sağlıyor ve güvenilir biçimde doğrulanabiliyorsa SEO ve GEO ile maksimum görünürlük için optimize et.
 
+## 31. BAKIM RUTİNİ (haftalık + aylık)
+
+Bu bölüm her site için aynı ritmi tanımlar. Çekirdek mantık ortak `site-seo-maintenance` skill'indedir, site verileri `seo/site.config.json`'dadır. İki mod da **yalnızca rapor üretir**; uygulama §28 gereği onay ister.
+
+- **Haftalık (izleme):** GSC + GA4, 7 vs önceki 7 gün, Query → Page → Intent Cluster. KPI: toplam impression, organik click, **non-brand click**, ortalama pozisyon (query bazlı), top-10 URL trafik payı, sıfır impression alan indexli URL, crawled-not-indexed trendi, yeni URL'lerin impression kazanımı, conversion. Önceki hafta değişen sayfaya gerçek veri gelmeden dokunma. Çıktı `seo/serp-history.md` + `seo/reports/`.
+- **Aylık (pruning):** `npm run seo:audit` + GSC 90 gün → LOW-VALUE kuyruğu (§4, §21) → her URL için KEEP / IMPROVE / MERGE / 301 / NOINDEX / REMOVE önerisi, gerekçe ve sinyaller. Rapor `seo/reports/YYYY-MM-DD-monthly.md`.
+- Her SEO deploy'u `seo/deployment-log.md`'ye yazılır (§24).
+
+### 31.1 Çok sinyalli karar kuralı
+Tek metrikle (ör. "0 click + <10 impression") noindex/301 kararı verilmez. NOINDEX/MERGE adayı olmak için birlikte aranır: 0 click, çok düşük impression, bağımsız keyword intent'i yok, özgün lokal/first-party bilgi yok, başka URL ile yüksek benzerlik, backlink yok, conversion yok. Önce şunlar elenir: sayfa yeni mi, seasonal mı, iç linki zayıf mı, canonical/indexing sorunu var mı.
+
+Her URL için dört soru: (1) Bağımsız search intent'i var mı? (2) Indexte kalmayı haklı çıkaracak özgün bilgi var mı? (3) Başka bir URL aynı işi daha iyi yapıyor mu? (4) İyileştirmek, birleştirmek ya da noindex etmek toplam site değerini en çok hangisi artırır?
+
+### 31.2 Lokal / programmatic sayfalar
+Her lokal URL A, B veya C'ye girer: **A Merge** (bağımsız talebi yok → il/şehir hub'ında gerçek lokal veri içeren bölüm), **B Improve** (talep var → gerçek lokal veri ekle), **C Noindex** (talep, veri ve kullanıcı değeri yok). "Unique Local Data Layer": resmi kurum bağlantıları, gerçek mahalle/bölge listesi, kaynaklı rakamlar, başvuru kanalları, güncelleme tarihi. 1.000 generic sayfa yerine 300 güçlü lokal kaynak tercih edilir.
+
+### 31.3 Cannibalization / 301
+Aynı entity ≠ aynı intent. 301 yalnızca **aynı intent + büyük ölçüde aynı bilgi + birbirini cannibalize ediyor** ise önerilir; farklı intent'ler cluster olarak kalır.
+
+### 31.4 Kaynak hiyerarşisi
+1) Primary source (resmi kurum, mevzuat, şirket), 2) first-party veri (kendi fiyat, vaka, klinik verisi), 3) güvenilir ikincil kaynak, 4) generic üçüncü taraf makale. Başka bir SEO sitesinin yazdığını kaynak gösterme, asıl kaynağı bul.
+
+### 31.5 Öncelik sırası
+Thin content cleanup > local/first-party evidence > author/reviewer > sources > internal linking > technical health > schema > llms.txt. Schema ranking üretmez, içerikte olmayan şeyi schema ile icat etme.
+
+### 31.6 Başarı ölçümü
+Indexed sayfa sayısının düşmesi başarısızlık değildir; impression, non-brand click ve conversion yükseliyorsa küçülme sağlıklıdır (§29). Baseline değeri yalnızca GSC'den okunmuşsa kaydedilir.
+
 ---
 
 ## §SİTE: teethdoneinturkey.co.uk
@@ -284,3 +312,4 @@ Yukarıdaki genel kuralların altında, bu repoya özgü doğrulanmış kurallar
 - **İç link kayıt defteri:** `src/lib/internal-links.ts` yalnızca denetim kaydıdır, sayfalara render edilmez (sayfalar kendi `RelatedLinksGrid` listelerini taşır). Link eklemek için ilgili hub sayfasının grid'ine eklenir.
 - **llms.txt / llms-full.txt:** `public/` altında. Noindex veya redirect URL listelenmez. Google ranking sinyali sayılmaz.
 - **Toplu işlem onayı:** Toplu noindex, 301, silme ve canonical değişikliği için §28 uygulanır, önce rapor ve onay.
+- **Bakım rutini:** `seo/site.config.json` (GSC/GA4 property ve baseline şu an `null`, GSC'den doğrulanana kadar doldurulmaz), `seo/deployment-log.md`, `seo/reports/`. Mekanik denetim `npm run seo:audit` (CI'da yalnızca hata veren `seo:audit:check`: sitemap'te noindex/redirect, redirect stub'a iç link). Başlık/açıklama uzunluğu ve orphan uyarıdır, otomatik düzeltilmez.
