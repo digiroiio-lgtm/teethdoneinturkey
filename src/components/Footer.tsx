@@ -80,7 +80,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-sm text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
           <p>© {new Date().getFullYear()} Teeth Done in Turkey. All rights reserved.</p>
-          <p>For UK patients seeking affordable dental care in Turkey.</p>
+          <p>For UK patients seeking affordable dental care in Turkey. <a href="https://leczeniezebowwturcji.pl" hrefLang="pl" lang="pl" className="underline hover:text-white">Informacje po polsku: leczenie zębów w Turcji</a></p>
         </div>
       </div>
     </footer>
