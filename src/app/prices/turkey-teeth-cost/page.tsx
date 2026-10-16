@@ -299,6 +299,7 @@ export default function TurkeyTeethCostPricePage() {
             { title: "Full Mouth Implants: UK vs Turkey", desc: "Full-mouth implant cost comparison in detail.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
             { title: "Why Is Dental Care Cheaper in Turkey?", desc: "The real reasons behind the price difference.", href: "/blog/why-are-dental-treatments-cheaper-in-turkey" },
             { title: "Hollywood Smile Turkey Cost", desc: "Zirconia crown package pricing in detail.", href: "/blog/hollywood-smile-turkey-cost" },
+            { title: "Turkey Teeth Packages: What Is Included?", desc: "Package price vs treatment price, and what packages leave out.", href: "/guides/turkey-teeth-packages" },
           ]}
         />
       </div>

@@ -393,6 +393,7 @@ export default function TeethInTurkeyPillarGuide() {
           title="Related Blog Articles"
           links={[
             { title: "Is It Safe to Get Teeth Done in Turkey?", desc: "Accreditation, risk factors and how to choose safely.", href: "/blog/is-it-safe-to-get-teeth-done-in-turkey" },
+            { title: "Best Dental Clinics in Turkey: Verify Before You Book", desc: "A six-step check for any clinic, and the red flags to walk away from.", href: "/blog/best-dental-clinics-turkey" },
             { title: "Turkey Teeth Explained", desc: "What the term actually means, in more detail.", href: "/blog/turkey-teeth-explained" },
             { title: "Risks of Turkey Teeth", desc: "An honest look at what can go wrong and how to protect yourself.", href: "/blog/risks-of-turkey-teeth" },
             { title: "Best Dental Clinics in Turkey", desc: "How to find and verify a quality clinic.", href: "/blog/best-dental-clinics-turkey" },

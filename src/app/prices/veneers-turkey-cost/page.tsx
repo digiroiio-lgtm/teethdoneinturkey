@@ -304,6 +304,7 @@ export default function VeneersCostPage() {
             { href: "/guides/teeth-in-turkey", title: "Complete UK Patient Guide to Teeth in Turkey", desc: "Treatments, costs, safety and travel — the full picture." },
             { href: "/treatments/veneers-turkey", title: "Dental Veneers Turkey", desc: "E-max porcelain veneers from £190/tooth. Full guide." },
             { href: "/guides/turkey-teeth-veneers-or-crowns", title: "Veneers or Crowns in Turkey?", desc: "Which treatment is right for you — explained clearly." },
+            { href: "/guides/veneers-turkey-packages", title: "Veneers Turkey Packages: What Is Included?", desc: "Treatment-only vs package vs total trip cost, by tooth count." },
           ].map(l => (
             <Link key={l.href} href={l.href} className="block bg-gray-50 hover:bg-blue-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 transition-colors">
               <p className="font-semibold text-gray-900 mb-1">{l.title}</p>
