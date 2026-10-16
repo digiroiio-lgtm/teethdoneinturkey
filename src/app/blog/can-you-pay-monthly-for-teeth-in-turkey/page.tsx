@@ -9,7 +9,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
   title: "Monthly Payment for Teeth in Turkey",
-  description: "Yes — you can pay monthly for teeth done in Turkey. Everything UK patients need to know about dental finance, monthly payment plans, and 0% interest options.",
+  description: "Yes, you can pay monthly for teeth done in Turkey. What UK patients need to know about dental finance, monthly payment plans and 0% interest options.",
 };
 
 export default function PayMonthlyTeethTurkeyPage() {
@@ -19,7 +19,7 @@ export default function PayMonthlyTeethTurkeyPage() {
         id="article-schema-can-you-pay-monthly-for-teeth-in-turkey"
         path="/blog/can-you-pay-monthly-for-teeth-in-turkey"
         headline="Monthly Payment for Teeth in Turkey"
-        description="Yes — you can pay monthly for teeth done in Turkey. Everything UK patients need to know about dental finance, monthly payment plans, and 0% interest options."
+        description="Yes, you can pay monthly for teeth done in Turkey. What UK patients need to know about dental finance, monthly payment plans and 0% interest options."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },

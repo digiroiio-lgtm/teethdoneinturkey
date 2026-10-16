@@ -9,7 +9,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/can-you-pay-monthly-for-veneers-turkey" },
   title: "Pay Monthly for Veneers Turkey",
-  description: "Yes — you can pay monthly for veneers in Turkey. A complete guide to dental finance options for UK patients, from £82/month with 0% interest options available.",
+  description: "Yes, you can pay monthly for veneers in Turkey. A guide to dental finance options for UK patients, from £82/month with 0% interest options available.",
 };
 
 export default function MonthlyVeneersPage() {
@@ -19,7 +19,7 @@ export default function MonthlyVeneersPage() {
         id="article-schema-can-you-pay-monthly-for-veneers-turkey"
         path="/blog/can-you-pay-monthly-for-veneers-turkey"
         headline="Pay Monthly for Veneers Turkey"
-        description="Yes — you can pay monthly for veneers in Turkey. A complete guide to dental finance options for UK patients, from £82/month with 0% interest options available."
+        description="Yes, you can pay monthly for veneers in Turkey. A guide to dental finance options for UK patients, from £82/month with 0% interest options available."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },

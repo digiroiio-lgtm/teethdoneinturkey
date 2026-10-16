@@ -163,7 +163,7 @@ export default function TurkeyTeethVeneersOrCrownsPage() {
 
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer</h2>
+          <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: Veneers or Crowns?</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
             Most full-mouth &ldquo;Turkey teeth&rdquo; makeovers are <strong>crowns</strong>, not veneers, even when they are advertised using the word veneers. The difference matters because a veneer removes roughly 0.3mm to 0.7mm from the front of the tooth and usually stays within enamel, while a crown is prepared on every surface and goes into dentine. Neither can be reversed, but a crowned tooth needs a crown for life. Ask any clinic to state in writing which treatment each tooth is getting before you agree to anything.
           </p>

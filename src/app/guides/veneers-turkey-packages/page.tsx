@@ -16,7 +16,7 @@ const PAGE_URL = `${SITE_URL}/guides/veneers-turkey-packages`;
 const TITLE = "Veneers Turkey Packages: What Is Included & Real Cost";
 const H1 = "Veneers Turkey Packages: What Is Included and What Does It Cost?";
 const DESCRIPTION =
-  "Veneer package prices in Turkey: what is included vs what you still pay, with treatment-only, package and total trip cost tables for 8, 10, 16 and 20 teeth.";
+  "Veneer package prices in Turkey: what is included vs what you still pay, with treatment-only, package and total trip cost tables for 8 to 20 teeth.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 

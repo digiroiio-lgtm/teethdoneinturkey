@@ -139,7 +139,7 @@ export default function CantAffordDentalTreatmentUKPage() {
 
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer</h2>
+          <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: Dental Treatment You Can&apos;t Afford</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
             If your treatment is covered by the NHS, it will cost a fixed £27.90, £76.60 or £306.80 (England, from 1 April 2026), whatever the private price would have been. If it isn&apos;t covered, such as veneers or cosmetic work, your realistic options are a payment plan or dental finance to spread a UK private quote, a lower cost material or phased plan, or treatment abroad, where the same materials and implant brands used in the UK typically cost 65 to 90 percent less. Most people end up combining two of these: a payment plan plus a lower cost provider.
           </p>

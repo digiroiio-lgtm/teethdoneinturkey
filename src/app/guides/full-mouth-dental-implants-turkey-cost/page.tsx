@@ -122,7 +122,7 @@ export default function FullMouthDentalImplantsTurkeyCostPage() {
           <MedicalReviewBadge
             />
 
-          <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer</h2>
+          <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: Full Mouth Implants Cost in Turkey</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
             All-on-4 per arch in Turkey costs <strong>£4,500–£5,500</strong>; both arches (full mouth) costs <strong>£9,000–£11,000</strong>. All-on-6 per arch costs <strong>from £5,600</strong>; both arches from <strong>£11,200</strong>. All options require two visits. Add £400–£700 for two trips (flights, hotel, transfers) for total spend. For single implant pricing, see the{" "}
             <Link href="/prices/dental-implants-turkey-cost" className="text-[#1e40af] font-semibold hover:underline">Dental Implants Turkey Cost page</Link>.

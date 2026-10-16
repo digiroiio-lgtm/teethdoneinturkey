@@ -17,7 +17,7 @@ const PAGE_URL = `${SITE_URL}/guides/severe-toothache-cant-afford-dentist`;
 const TITLE = "Severe Toothache Can't Afford a Dentist? Your Options";
 const H1 = "Severe Toothache and Can't Afford a Dentist? What to Do";
 const DESCRIPTION =
-  "Severe toothache and can't afford a dentist? NHS 111 guidance, emergency dental access, temporary relief steps, causes of severe tooth pain and what it costs.";
+  "Severe toothache and can't afford a dentist? NHS 111 guidance, emergency dental access, temporary relief steps, causes of tooth pain and costs.";
 const DATE_PUBLISHED = "2026-09-17";
 const DATE_MODIFIED = "2026-09-17";
 
@@ -141,7 +141,7 @@ export default function SevereToothacheCantAffordDentistPage() {
           </p>
 
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">
-            Quick Answer
+            Quick Answer: Severe Toothache Without a Dentist
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
             Call <strong>NHS 111 (dial 111)</strong> — they provide dental advice 24/7 and can refer you to an NHS emergency dentist at no upfront cost. For temporary relief while waiting: ibuprofen (if safe for you), clove oil applied to the tooth, and a cold compress on the jaw. These reduce pain; they do not treat the cause. If you also have facial swelling, a fever, or difficulty swallowing, go to A&amp;E — do not wait for a dental appointment.

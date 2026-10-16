@@ -17,7 +17,7 @@ const PAGE_URL = `${SITE_URL}/guides/tooth-abscess-cant-afford-dentist`;
 const TITLE = "Tooth Abscess Can't Afford a Dentist? Act Now";
 const H1 = "Tooth Abscess and Can't Afford a Dentist? Act Now — Here's How";
 const DESCRIPTION =
-  "A tooth abscess is a dental emergency. What to do if you have an abscess and can't afford a dentist: NHS 111 steps, emergency access, and urgent care guidance.";
+  "A tooth abscess is a dental emergency. What to do if you can't afford a dentist: NHS 111 steps, emergency access and urgent care guidance.";
 const DATE_PUBLISHED = "2026-09-17";
 const DATE_MODIFIED = "2026-09-17";
 
@@ -173,7 +173,7 @@ export default function ToothAbscessCantAffordDentistPage() {
           </p>
 
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">
-            Quick Answer
+            Quick Answer: Tooth Abscess Without a Dentist
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
             Call <strong>NHS 111 (dial 111)</strong> — they can refer you to an NHS emergency dental service free of charge, 24 hours a day. If you have <strong>facial swelling, a high fever, or difficulty swallowing or breathing</strong>, go to A&amp;E or call 999 immediately. A dental abscess is a bacterial infection that will not resolve without treatment and can become serious if left.

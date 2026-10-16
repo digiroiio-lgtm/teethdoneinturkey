@@ -8,8 +8,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/dental-treatment-turkey-payment-plans" },
-  title: "Dental Treatment Turkey Payment Plans",
-  description: "How payment plans work for dental treatment in Turkey. Everything UK patients need to know about spreading costs for veneers, implants, and smile makeovers.",
+  title: "Turkey Dental Payment Plans",
+  description: "How payment plans work for dental treatment in Turkey. What UK patients need to know about spreading the cost of veneers, implants and makeovers.",
 };
 
 export default function PaymentPlansTurkeyPage() {
@@ -19,7 +19,7 @@ export default function PaymentPlansTurkeyPage() {
         id="article-schema-dental-treatment-turkey-payment-plans"
         path="/blog/dental-treatment-turkey-payment-plans"
         headline="Dental Treatment Turkey Payment Plans"
-        description="How payment plans work for dental treatment in Turkey. Everything UK patients need to know about spreading costs for veneers, implants, and smile makeovers."
+        description="How payment plans work for dental treatment in Turkey. What UK patients need to know about spreading the cost of veneers, implants and makeovers."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },

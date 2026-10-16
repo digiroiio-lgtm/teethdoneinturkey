@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/price-calculator" },
   title: { absolute: "Turkey Dental Price Calculator: Estimate Cost" },
-  description: "Calculate how much your dental treatment in Turkey will cost. Veneers, implants, All-on-4, All-on-6 and more. Compare with UK prices and see how much you save.",
+  description: "Calculate what dental treatment in Turkey will cost. Veneers, implants, All-on-4, All-on-6 and more, compared with UK prices so you see your saving.",
 };
 
 export default function PriceCalculatorPage() {

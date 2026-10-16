@@ -14,7 +14,7 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-antalya`;
-const TITLE = "Turkey Teeth in Antalya: Complete UK Patient Guide 2026";
+const TITLE = "Turkey Teeth in Antalya: UK Patient Guide 2026";
 const H1 = "Turkey Teeth in Antalya: Complete UK Patient Guide 2026";
 const DESCRIPTION =
   "What it is like to go to Antalya from the UK for dental treatment: treatment options, clinic choice, the patient journey, travel, safety and UK aftercare.";

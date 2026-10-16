@@ -9,7 +9,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/e-max-vs-zirconia-veneers-turkey" },
   title: "E-max vs Zirconia Veneers in Turkey",
-  description: "Comparing E-max and zirconia veneers in Turkey for UK patients. Durability, aesthetics, cost, and which option is right for you. Full 2026 comparison guide.",
+  description: "E-max vs zirconia veneers in Turkey for UK patients: durability, aesthetics, cost and which option is right for you. Full 2026 comparison guide.",
 };
 
 export default function EmaxVsZirconiPage() {
@@ -19,7 +19,7 @@ export default function EmaxVsZirconiPage() {
         id="article-schema-e-max-vs-zirconia-veneers-turkey"
         path="/blog/e-max-vs-zirconia-veneers-turkey"
         headline="E-max vs Zirconia Veneers in Turkey"
-        description="Comparing E-max and zirconia veneers in Turkey for UK patients. Durability, aesthetics, cost, and which option is right for you. Full 2026 comparison guide."
+        description="E-max vs zirconia veneers in Turkey for UK patients: durability, aesthetics, cost and which option is right for you. Full 2026 comparison guide."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },

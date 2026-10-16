@@ -17,7 +17,7 @@ const PAGE_URL = `${SITE_URL}/guides/turkish-veneers-safety`;
 const TITLE = "Are Turkish Veneers Safe? Risks & How to Choose Safely";
 const H1 = "Are Turkish Veneers Safe? Risks, Tooth Preparation & How to Choose Safely";
 const DESCRIPTION =
-  "A clinical safety guide for UK patients: what makes veneer treatment unsafe, the risks to look for, how to choose a safe clinic and what to do if it goes wrong.";
+  "A clinical safety guide for UK patients: what makes veneers unsafe, the risks to look for, how to choose a safe clinic and what to do if it goes wrong.";
 const DATE_PUBLISHED = "2026-09-13";
 const DATE_MODIFIED = "2026-09-13";
 
@@ -132,7 +132,7 @@ export default function TurkishVeneersSafetyPage() {
           <MedicalReviewBadge
             />
 
-          <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer</h2>
+          <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: Are Turkish Veneers Safe?</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
             Veneers placed at accredited Turkish clinics by qualified dentists using established materials are clinically safe. The problems that appear in media reports and patient forums are caused by poor provider choice — not by Turkey as a destination. Excessive tooth preparation (irreversible), poor lab quality, inadequate diagnosis and absent aftercare are the main failure modes. Every one of these is avoidable by choosing a clinic correctly.
           </p>

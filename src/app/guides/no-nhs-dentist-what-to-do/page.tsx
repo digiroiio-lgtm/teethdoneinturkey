@@ -140,7 +140,7 @@ export default function NoNHSDentistPage() {
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">
-            Quick Answer
+            Quick Answer: No NHS Dentist Available
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
             If you cannot find an NHS dentist, call <strong>NHS 111</strong> (dial 111) — they provide free urgent dental advice 24 hours a day and can refer you to an NHS emergency dental service at no upfront cost. For non-emergency treatment, search <strong>NHS.uk</strong> for practices accepting new patients, try your local{" "}
