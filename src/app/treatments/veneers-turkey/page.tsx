@@ -139,6 +139,11 @@ export default function VeneersTurkeyPage() {
             <Link href="/book-consultation" className="bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Book Free Consultation</Link>
             <Link href="/prices/veneers-turkey-cost" className="border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Full Veneers Price Guide</Link>
           </div>
+          <p className="text-gray-600 text-sm">
+            Not sure how many veneers you need? See{" "}
+            <Link href="/blog/4-8-10-rule-for-veneers" className="text-[#1e40af] font-semibold hover:underline">the 4-8-10 rule for veneers</Link>{" "}
+            for how dentists plan the number of teeth.
+          </p>
 
           {/* Finance section */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
