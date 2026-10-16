@@ -8,8 +8,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/implants-cost-uk-vs-turkey" },
-  title: { absolute: "Dental Implants Cost: UK vs Turkey 2026" },
-  description: "Dental implants cost UK vs Turkey: full comparison. Single implants from £250 in Turkey vs £2,500+ in the UK. What's included, brand comparison, and tips.",
+  title: { absolute: "Turkey Dental Implants Cost vs UK: 2026 Prices" },
+  description: "Turkey teeth implants cost vs the UK: single implants from £250 in Turkey vs £2,500+ at home. What's included, brand comparison and full-mouth prices.",
 };
 
 export default function ImplantsCostUKvsTurkeyPage() {
@@ -19,7 +19,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
         id="article-schema-implants-cost-uk-vs-turkey"
         path="/blog/implants-cost-uk-vs-turkey"
         headline="Dental Implants Cost: UK vs Turkey 2026"
-        description="Dental implants cost UK vs Turkey: full comparison. Single implants from £250 in Turkey vs £2,500+ in the UK. What's included, brand comparison, and tips."
+        description="Turkey teeth implants cost vs the UK: single implants from £250 in Turkey vs £2,500+ at home. What's included, brand comparison and full-mouth prices."
         datePublished="2026-04-01"
         breadcrumbs={[
           { name: "Home", path: "/" },
