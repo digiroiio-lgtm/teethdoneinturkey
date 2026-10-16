@@ -85,7 +85,7 @@ export default function DentalImplantsTurkeyPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Dental Implants?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How Dental Implants Work</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               A dental implant is a titanium post surgically placed into the jawbone to act as an artificial tooth root. Once healed (osseointegrated), a crown is attached to create a natural-looking, fully functional replacement tooth. Unlike dentures, implants are permanent and don&apos;t require removal.
             </p>

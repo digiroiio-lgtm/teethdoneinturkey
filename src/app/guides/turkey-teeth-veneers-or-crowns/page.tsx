@@ -14,7 +14,7 @@ export const revalidate = 86400;
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/turkey-teeth-veneers-or-crowns`;
 const TITLE = "Turkey Teeth: Veneers or Crowns? What Is Removed";
-const H1 = "Turkey Teeth: Are They Veneers or Crowns, and How Much Tooth Gets Removed?";
+const H1 = "Turkey Teeth: Veneers or Crowns, and How Much Tooth Is Removed?";
 const DESCRIPTION =
   "Most Turkey teeth makeovers are crowns, not veneers. How much tooth each removes, what cannot be undone, and what to ask before you agree.";
 const DATE_PUBLISHED = "2026-09-04";

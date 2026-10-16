@@ -103,7 +103,7 @@ export default function HollywoodSmilePackagePage() {
 
           {/* What is Hollywood Smile */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is a Hollywood Smile?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Hollywood Smile Treatment Explained</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               A Hollywood Smile is a full cosmetic dental makeover using zirconia crowns or porcelain veneers to create a perfectly uniform, brilliantly white smile. Rather than masking the surface (as veneers do), zirconia crowns cap the entire tooth — making them ideal for teeth that are damaged, discoloured, or heavily restored.
             </p>

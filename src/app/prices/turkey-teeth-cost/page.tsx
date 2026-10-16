@@ -14,7 +14,7 @@ export const revalidate = 86400;
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/turkey-teeth-cost`;
 const TITLE = "How Much Do Turkey Teeth Cost? 2026 UK Price Guide";
-const H1 = "How Much Do Turkey Teeth Cost? Complete 2026 Price Guide for UK Patients";
+const H1 = "How Much Do Turkey Teeth Cost? 2026 Price Guide for UK Patients";
 const DESCRIPTION =
   "Turkey teeth cost from £130 per tooth. 2026 prices in pounds for veneers, crowns, implants and full-mouth packages, with UK comparison and finance.";
 const DATE_PUBLISHED = "2026-09-03";

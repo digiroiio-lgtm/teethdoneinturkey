@@ -151,7 +151,7 @@ export default function FinanceOptionsUKPage() {
     <>
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Can You Pay Monthly for Turkey Teeth? Finance &amp; Payment Plans Explained</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Can You Pay Monthly for Turkey Teeth? Finance &amp; Payment Plans</h1>
           <p className="text-xl text-blue-200">Yes — spread the cost of dental treatment in Turkey over 12, 24 or 36 months. 0% APR representative plans from £82/month, bad credit considered.</p>
         </div>
       </div>
