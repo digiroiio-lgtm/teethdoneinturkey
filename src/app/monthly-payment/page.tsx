@@ -25,7 +25,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/monthly-payment" },
   title: { absolute: "Turkey Teeth Monthly Payments: Cost Per Treatment" },
-  description: "What Turkey teeth cost per month, treatment by treatment: veneers from £6, implants from £14, All-on-4 from £125, a 20-crown makeover from £78. 0% APR rep.",
+  description: "What Turkey teeth cost per month: veneers from £6, implants from £14, All-on-4 from £125, a 20-crown makeover from £78. 0% APR representative.",
 };
 
 const ukVsTurkeyComparison = [

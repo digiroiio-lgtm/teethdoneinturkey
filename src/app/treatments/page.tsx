@@ -30,6 +30,16 @@ export default function TreatmentsPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4 text-gray-600 leading-relaxed mb-10">
+            <p>
+              The right treatment depends on what you want to fix. Veneers change the shape, colour and alignment of teeth that are still structurally sound. Dental implants replace missing teeth, and All-on-4 or All-on-6 restore a full arch when most teeth are failing or missing. A full smile makeover combines several of these in one trip.
+            </p>
+            <p>
+              Each page below sets out the procedure, the typical stay in Turkey and a price comparison with the UK. If you are unsure which applies to you, the{" "}
+              <Link href="/free-treatment-plan" className="text-[#1e40af] underline">free treatment plan</Link> reviews your photos and recommends one, and the{" "}
+              <Link href="/price-calculator" className="text-[#1e40af] underline">price calculator</Link> gives an estimate for several treatments side by side.
+            </p>
+          </div>
           <div className="grid grid-cols-1 gap-6">
             {treatments.map(t => (
               <Link key={t.href} href={t.href} className="group flex flex-col sm:flex-row items-start gap-6 bg-gray-50 hover:bg-blue-50 rounded-2xl p-6 border border-gray-200 hover:border-[#1e40af] transition-all">

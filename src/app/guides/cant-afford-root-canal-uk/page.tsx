@@ -16,7 +16,7 @@ const PAGE_URL = `${SITE_URL}/guides/cant-afford-root-canal-uk`;
 const TITLE = "Can't Afford a Root Canal? Your UK Options Explained";
 const H1 = "Can't Afford a Root Canal in the UK? What to Do";
 const DESCRIPTION =
-  "Root canal treatment costs £500–£1,500 at a UK private dentist. NHS cover, Band 2 charges, extraction vs root canal, payment plans and Turkey cost comparison.";
+  "Root canal costs £500–£1,500 at a UK private dentist. NHS cover, Band 2 charges, extraction vs root canal, payment plans and Turkey comparison.";
 const DATE_PUBLISHED = "2026-09-17";
 const DATE_MODIFIED = "2026-09-17";
 
@@ -139,7 +139,7 @@ export default function CantAffordRootCanalPage() {
       <article className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">
-            Quick Answer
+            Quick Answer: Root Canal Costs in the UK
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
             Root canal on the NHS costs <strong>£76.60 (Band 2, England)</strong>. Private root canal costs <strong>£500–£1,500</strong> depending on the tooth, plus £800–£1,000 for the crown usually needed after. In Turkey, the full root canal plus crown typically costs <strong>£330–£580</strong>. If you cannot access NHS and cannot afford private, payment plans from around £10/month and overseas treatment are the two realistic alternatives.

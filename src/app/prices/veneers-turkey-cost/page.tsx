@@ -10,7 +10,7 @@ const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/veneers-turkey-cost`;
 const TITLE = "Veneers Turkey Cost 2026: Price Per Tooth in Pounds";
 const DESCRIPTION =
-  "Veneers Turkey 2026: E-max from £190/tooth, zirconia crowns from £130. Prices in pounds, UK comparison, what affects the cost, and monthly payment options.";
+  "Veneers Turkey 2026: E-max from £190/tooth, zirconia crowns from £130. Prices in pounds, UK comparison, cost factors and monthly payment options.";
 const DATE_MODIFIED = "2026-09-08";
 
 export const metadata: Metadata = {

@@ -9,7 +9,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/dental-tourism-finance-explained" },
   title: "Dental Tourism Finance Explained – UK",
-  description: "How dental tourism finance works for UK patients. A complete explanation of how to fund dental treatment abroad, from monthly payment plans to medical loans.",
+  description: "How dental tourism finance works for UK patients: how to fund dental treatment abroad, from monthly payment plans to medical loans.",
 };
 
 export default function DentalTourismFinancePage() {
@@ -19,7 +19,7 @@ export default function DentalTourismFinancePage() {
         id="article-schema-dental-tourism-finance-explained"
         path="/blog/dental-tourism-finance-explained"
         headline="Dental Tourism Finance Explained – UK"
-        description="How dental tourism finance works for UK patients. A complete explanation of how to fund dental treatment abroad, from monthly payment plans to medical loans."
+        description="How dental tourism finance works for UK patients: how to fund dental treatment abroad, from monthly payment plans to medical loans."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },

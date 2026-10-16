@@ -1,7 +1,7 @@
 export default function KeyTakeaways({ title = "Key Takeaways", items }: { title?: string; items: string[] }) {
   return (
     <div className="rounded-2xl border border-blue-100 bg-blue-50/60 p-6 my-8">
-      <h2 className="text-sm font-bold uppercase tracking-wide text-[#1e40af] mb-3">{title}</h2>
+      <p className="text-sm font-bold uppercase tracking-wide text-[#1e40af] mb-3">{title}</p>
       <ul className="space-y-2">
         {items.map((item, i) => (
           <li key={i} className="flex gap-2.5 text-gray-800 text-sm leading-relaxed">

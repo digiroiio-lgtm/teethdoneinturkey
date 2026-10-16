@@ -9,7 +9,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/dental-implant-recovery-time" },
   title: "Implant Recovery Time in Turkey",
-  description: "How long does dental implant recovery take? A complete timeline for UK patients having implants in Turkey — from surgery day through to final crown fitting.",
+  description: "How long does dental implant recovery take? A full timeline for UK patients having implants in Turkey, from surgery day to final crown fitting.",
 };
 
 export default function ImplantRecoveryPage() {
@@ -19,7 +19,7 @@ export default function ImplantRecoveryPage() {
         id="article-schema-dental-implant-recovery-time"
         path="/blog/dental-implant-recovery-time"
         headline="Implant Recovery Time in Turkey"
-        description="How long does dental implant recovery take? A complete timeline for UK patients having implants in Turkey — from surgery day through to final crown fitting."
+        description="How long does dental implant recovery take? A full timeline for UK patients having implants in Turkey, from surgery day to final crown fitting."
         datePublished="2026-01-01"
         reviewer={REVIEWER_PERSON}
         breadcrumbs={[

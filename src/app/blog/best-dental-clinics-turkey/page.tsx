@@ -9,7 +9,7 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/blog/best-dental-clinics-turkey`;
-const TITLE = "Best Dental Clinics in Turkey: How to Verify One";
+const TITLE = "Best Dental Clinics in Turkey: Verify Before You Book";
 const DESCRIPTION =
   "How to identify the best dental clinics in Turkey: the three registrations to check, the questions to ask, and the red flags that rule a clinic out.";
 const DATE_PUBLISHED = "2024-10-01";
