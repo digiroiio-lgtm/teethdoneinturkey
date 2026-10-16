@@ -337,7 +337,7 @@ export default function FinanceOptionsUKPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Dental Finance with Bad Credit: What Is Actually True</h2>
+            <h2 id="bad-credit" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">Turkey Teeth Finance with Bad Credit: What Is Actually True</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               &ldquo;Bad credit dental finance&rdquo; is widely advertised, and most of what is promised cannot be
               guaranteed by anyone. Here is the honest position:
