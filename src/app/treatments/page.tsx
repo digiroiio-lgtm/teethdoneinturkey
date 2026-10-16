@@ -38,6 +38,8 @@ export default function TreatmentsPage() {
               Each page below sets out the procedure, the typical stay in Turkey and a price comparison with the UK. If you are unsure which applies to you, the{" "}
               <Link href="/free-treatment-plan" className="text-[#1e40af] underline">free treatment plan</Link> reviews your photos and recommends one, and the{" "}
               <Link href="/price-calculator" className="text-[#1e40af] underline">price calculator</Link> gives an estimate for several treatments side by side.
+              Still deciding whether Turkey is right for you? Read{" "}
+              <Link href="/why-choose-turkey-for-dental-work" className="text-[#1e40af] underline">why UK patients choose Turkey for dental work</Link>.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6">
