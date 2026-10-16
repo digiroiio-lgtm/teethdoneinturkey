@@ -36,6 +36,7 @@ suppression pattern as the 09-11 run, and the blog is the ranking asset.
 |---|---|---|---|---|
 | 2026-10-16 | /guides/full-mouth-dental-implants-turkey-cost | 301 → /blog/full-mouth-implants-uk-vs-turkey | Duplicate intent, 0 impressions in 31 days | One URL owns the intent; fewer "not indexed" URLs |
 | 2026-10-16 | /blog/full-mouth-implants-uk-vs-turkey | Added bridge-type section, dateModified | Content merged from the guide | Slightly deeper answer for cost queries |
+| 2026-10-16 | /blog/e-max-vs-zirconia-veneers-turkey, /blog/full-set-veneers-turkey-cost | Labelled £220 as full zirconia veneer, added £130 zirconia crown note + link | Same word 'zirconia' was priced £130 on cost pages and £220 on these posts (two products, owner-confirmed) | No contradictory prices for one product |
 
 ---
 

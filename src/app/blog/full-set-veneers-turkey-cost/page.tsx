@@ -70,7 +70,7 @@ export default function FullSetVeneersCostPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-500">Based on E-max at £190/tooth and zirconia at £220/tooth.</p>
+          <p className="text-sm text-gray-500">Based on E-max at £190/tooth and full zirconia veneers at £220/tooth. Zirconia crowns are a separate product, from £130/tooth (<Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] hover:underline">see the cost guide</Link>).</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Travel & Accommodation Costs</h2>
           <p>The procedure cost above doesn&apos;t include travel. Here&apos;s a realistic breakdown for a typical 6-night trip:</p>

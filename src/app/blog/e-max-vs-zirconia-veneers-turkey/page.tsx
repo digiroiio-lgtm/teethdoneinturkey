@@ -77,7 +77,7 @@ export default function EmaxVsZirconiPage() {
                   { f: "Strength & durability", emax: "⭐⭐⭐⭐", zir: "⭐⭐⭐⭐⭐" },
                   { f: "Good for bruxism (grinding)", emax: "Moderate", zir: "Excellent" },
                   { f: "Tooth preparation needed", emax: "Minimal (0.3–0.5mm)", zir: "Slightly more" },
-                  { f: "Price in Turkey", emax: "From £190/tooth", zir: "From £220/tooth" },
+                  { f: "Price in Turkey", emax: "From £190/tooth", zir: "From £220/tooth (full zirconia veneer)" },
                   { f: "Typical lifespan", emax: "10–15+ years", zir: "15+ years" },
                   { f: "Best suited for", emax: "Front teeth, natural look", zir: "Grinders, maximum durability" },
                 ].map((r, i) => (
@@ -109,7 +109,8 @@ export default function EmaxVsZirconiPage() {
           <p>For most UK patients seeking a natural-looking smile transformation, <strong>E-max is the most popular and recommended choice</strong>. Your Turkish dentist will make a specific recommendation based on your bite, tooth condition, and aesthetic goals during your consultation.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Cost Comparison in Turkey</h2>
-          <p>In Turkey, E-max veneers start from £190 per tooth and zirconia from £220 per tooth. For a full set of 20, the total difference is approximately £600 — modest relative to the overall saving vs UK prices.</p>
+          <p>In Turkey, E-max veneers start from £190 per tooth and full zirconia veneers from £220 per tooth. For a full set of 20, the total difference is approximately £600 — modest relative to the overall saving vs UK prices.</p>
+          <p>Zirconia <strong>crowns</strong> are a different product: they cover the whole tooth, remove more tooth structure and start from £130 per tooth. See the <Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] font-semibold hover:underline">veneers cost guide</Link> for the difference.</p>
           <p>Both are a fraction of UK prices, where E-max veneers typically cost £800–£1,000 per tooth and zirconia £900–£1,200.</p>
 
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
