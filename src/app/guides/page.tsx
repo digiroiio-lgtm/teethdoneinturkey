@@ -71,15 +71,6 @@ const guides = [
     href: "/guides/turkey-teeth-packages",
   },
   {
-    category: "Treatment",
-    title: "Full Mouth Dental Implants Turkey Cost: All-on-4, All-on-6 & Full Arch Prices 2026",
-    description:
-      "Full arch and full mouth implant costs in Turkey — All-on-4, All-on-6, titanium bar options, the two-visit process, and total package cost for UK patients.",
-    readingTime: "12 min",
-    updated: "13 September 2026",
-    href: "/guides/full-mouth-dental-implants-turkey-cost",
-  },
-  {
     category: "Destination",
     title: "Turkey Teeth Antalya: The Complete UK Patient Guide",
     description:

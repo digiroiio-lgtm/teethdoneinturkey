@@ -7,6 +7,38 @@ rewritten again.
 
 ---
 
+## 2026-10-16 (full-mouth cluster consolidation)
+
+GSC 2 Sep – 14 Oct: `/blog/full-mouth-implants-uk-vs-turkey` recorded 95
+impressions on 21 queries at positions ~29–36 (0 clicks). The newer
+`/guides/full-mouth-dental-implants-turkey-cost` (published 13 Sep, one inlink)
+recorded **zero impressions** over its whole first month: the same duplicate
+suppression pattern as the 09-11 run, and the blog is the ranking asset.
+
+### Decisions taken
+- **MERGE.** 301 `/guides/full-mouth-dental-implants-turkey-cost` →
+  `/blog/full-mouth-implants-uk-vs-turkey`. The one section the blog lacked
+  (zirconia bridge vs titanium bar) was added to the blog; the guide's price
+  figures were not carried over because they differ from the blog's.
+- Pointed the older `/guides/full-set-of-teeth-turkey-cost` stub directly at the
+  blog (no redirect chain). Removed the guide from the guides hub card list,
+  `not-found.tsx`, `llms.txt`, `llms-full.txt` and the `internal-links.ts` spokes.
+- Blog URL, title and body prices were not changed. Approved by the site owner.
+
+### What to check next run
+1. Does the blog hold or improve on `full mouth dental implants turkey price`
+   (36.4), `...cost` (29.5–30.9) and `full set of teeth implants cost turkey` (40.6)?
+2. Does `/guides/full-mouth-dental-implants-turkey-cost` drop out of GSC
+   "Discovered / Crawled – not indexed" and show as redirected?
+3. Do not retitle or restructure the blog page again before ~2 weeks of data.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-16 | /guides/full-mouth-dental-implants-turkey-cost | 301 → /blog/full-mouth-implants-uk-vs-turkey | Duplicate intent, 0 impressions in 31 days | One URL owns the intent; fewer "not indexed" URLs |
+| 2026-10-16 | /blog/full-mouth-implants-uk-vs-turkey | Added bridge-type section, dateModified | Content merged from the guide | Slightly deeper answer for cost queries |
+
+---
+
 ## 2026-09-11 (second run — full-mouth implant cluster)
 
 Second run of the day. The morning run (below) reversed the cost merge and

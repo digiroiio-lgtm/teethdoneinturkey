@@ -120,7 +120,6 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/treatments/all-on-6-turkey',
       '/prices/dental-implants-turkey-cost',
       '/prices/all-on-6-dental-implants-turkey-package',
-      '/guides/full-mouth-dental-implants-turkey-cost',
     ],
     support: [
       '/blog/implants-cost-uk-vs-turkey',

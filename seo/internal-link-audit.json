@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T13:03:09.514Z",
+  "generatedAt": "2026-10-16T16:38:18.072Z",
   "registrySize": 29,
-  "pagesScanned": 96,
+  "pagesScanned": 98,
   "results": [
     {
       "page": "/guides/teeth-in-turkey",
@@ -85,7 +85,7 @@
     },
     {
       "page": "/prices/turkey-teeth-cost",
-      "incomingTotal": 59,
+      "incomingTotal": 61,
       "incomingFromHighAuth": 12,
       "sources": [
         {
@@ -278,6 +278,10 @@
         },
         {
           "from": "/guides/turkey-teeth-packages",
+          "anchorText": "Turkey Teeth Cost: Complete 2026 Price Guide"
+        },
+        {
+          "from": "/guides/turkey-teeth-packages",
           "anchorText": ""
         },
         {
@@ -299,6 +303,10 @@
         {
           "from": "/prices/turkey-teeth-cost",
           "anchorText": "the full price guide"
+        },
+        {
+          "from": "/prices/veneers-antalya-cost",
+          "anchorText": ""
         },
         {
           "from": "/prices/veneers-turkey-cost",
@@ -329,8 +337,8 @@
     },
     {
       "page": "/finance-options-uk",
-      "incomingTotal": 24,
-      "incomingFromHighAuth": 4,
+      "incomingTotal": 25,
+      "incomingFromHighAuth": 5,
       "sources": [
         {
           "from": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
@@ -407,6 +415,10 @@
         {
           "from": "/guides/tooth-abscess-cant-afford-dentist",
           "anchorText": ""
+        },
+        {
+          "from": "/guides/turkey-teeth-antalya",
+          "anchorText": "Turkey Teeth Finance Options"
         },
         {
           "from": "/guides/turkey-teeth-antalya",
@@ -573,7 +585,7 @@
     },
     {
       "page": "/prices/dental-implants-turkey-cost",
-      "incomingTotal": 20,
+      "incomingTotal": 18,
       "incomingFromHighAuth": 0,
       "sources": [
         {
@@ -618,14 +630,6 @@
         },
         {
           "from": "/guides/cant-afford-root-canal-uk",
-          "anchorText": ""
-        },
-        {
-          "from": "/guides/full-mouth-dental-implants-turkey-cost",
-          "anchorText": "Dental Implants Turkey Cost page"
-        },
-        {
-          "from": "/guides/full-mouth-dental-implants-turkey-cost",
           "anchorText": ""
         },
         {
@@ -1393,7 +1397,7 @@
     },
     {
       "page": "/book-consultation",
-      "incomingTotal": 56,
+      "incomingTotal": 57,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -1521,6 +1525,10 @@
           "anchorText": "Book Free Consultation"
         },
         {
+          "from": "/editorial-policy",
+          "anchorText": "book a free consultation"
+        },
+        {
           "from": "/finance-options-uk",
           "anchorText": "Check My Eligibility"
         },
@@ -1625,12 +1633,16 @@
     },
     {
       "page": "/free-treatment-plan",
-      "incomingTotal": 9,
+      "incomingTotal": 12,
       "incomingFromHighAuth": 5,
       "sources": [
         {
           "from": "/blog/full-mouth-implants-uk-vs-turkey",
           "anchorText": "Free Treatment Plan"
+        },
+        {
+          "from": "/editorial-policy",
+          "anchorText": "free treatment plan request"
         },
         {
           "from": "/finance-options-uk",
@@ -1663,13 +1675,21 @@
         {
           "from": "/prices/turkey-teeth-cost",
           "anchorText": "free personalised treatment plan"
+        },
+        {
+          "from": "/travel-to-turkey",
+          "anchorText": "free treatment plan"
+        },
+        {
+          "from": "/treatments",
+          "anchorText": "free treatment plan"
         }
       ],
       "missingRequired": []
     },
     {
       "page": "/price-calculator",
-      "incomingTotal": 9,
+      "incomingTotal": 11,
       "incomingFromHighAuth": 5,
       "sources": [
         {
@@ -1707,13 +1727,21 @@
         {
           "from": "/prices/veneers-turkey-cost",
           "anchorText": "price calculator"
+        },
+        {
+          "from": "/travel-to-turkey",
+          "anchorText": "price calculator"
+        },
+        {
+          "from": "/treatments",
+          "anchorText": "price calculator"
         }
       ],
       "missingRequired": []
     },
     {
       "page": "/guides/dental-implants-turkey",
-      "incomingTotal": 18,
+      "incomingTotal": 17,
       "incomingFromHighAuth": 6,
       "sources": [
         {
@@ -1738,10 +1766,6 @@
         },
         {
           "from": "/blog/single-tooth-implant-turkey-cost",
-          "anchorText": ""
-        },
-        {
-          "from": "/guides/full-mouth-dental-implants-turkey-cost",
           "anchorText": ""
         },
         {
