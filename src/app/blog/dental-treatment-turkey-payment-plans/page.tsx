@@ -107,7 +107,7 @@ export default function PaymentPlansTurkeyPage() {
             <li>Have a regular income (employed, self-employed, or pension)</li>
             <li>Meet the lender&apos;s credit criteria (we work with providers for all credit profiles)</li>
           </ul>
-          <p>Bad credit, CCJs, or defaults don&apos;t automatically disqualify you — specialist lenders consider all profiles. Pre-qualify to see what&apos;s available in your situation.</p>
+          <p>Bad credit, CCJs or defaults do not automatically rule you out, but approval is always the lender&apos;s decision and cannot be guaranteed. Pre-qualifying is a soft search, so you can check where you stand without affecting your credit file. See <Link href="/finance-options-uk#bad-credit" className="text-[#1e40af] font-semibold hover:underline">how bad-credit applications work</Link>.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How to Apply</h2>
           <ol className="space-y-3 my-4 list-decimal list-inside">

@@ -97,7 +97,7 @@ export default function MonthlyVeneersPage() {
           <p>Yes — 0% interest finance is available for qualifying applicants. Eligibility depends on your credit profile and the term chosen. Our team will present all available options clearly before you commit, with no hidden fees.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What If I Have Bad Credit?</h2>
-          <p>We work with specialist lenders who consider all credit profiles, including those with imperfect credit history. Pre-qualifying takes 60 seconds and uses a soft check — so you can see what&apos;s available without any impact on your credit file.</p>
+          <p>Imperfect credit does not automatically rule you out, but approval is the lender&apos;s decision and cannot be guaranteed. Pre-qualifying takes 60 seconds and uses a soft check, so you can see where you stand without any impact on your credit file. See <Link href="/finance-options-uk#bad-credit" className="text-[#1e40af] font-semibold hover:underline">how bad-credit applications work</Link>.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why This Changes Everything</h2>
           <p>Even with finance, veneers in Turkey are dramatically cheaper than the UK. A full set of 20 veneers in Turkey financed over 36 months costs approximately £106/month. The equivalent UK treatment, even if financed, would be £500+/month for the same term. The gap is enormous.</p>
