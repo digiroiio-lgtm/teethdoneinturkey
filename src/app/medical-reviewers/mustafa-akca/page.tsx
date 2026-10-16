@@ -124,10 +124,10 @@ export default function MustafaAkcaProfilePage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Role as Medical Reviewer</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Dt. Mustafa Akça reviews clinical and safety-focused content on this site to ensure accuracy against current dental practice standards. His review covers treatment descriptions, safety guidance, aftercare protocols, risk information, and clinical claims — particularly on YMYL (Your Money or Your Life) content where accuracy directly affects patient decisions.
+              Dt. Mustafa Akça checks the clinical and safety content on this site against current dental practice. He reviews treatment descriptions, safety advice, aftercare, risk information and clinical claims. Health and money content matters most, because readers act on it.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              As the founding owner of Akdeniz Dental Clinic in Antalya, Dt. Akça works directly with international patients seeking dental treatment in Turkey. This clinical context makes him well-placed to verify that the information presented on this site reflects real-world practice.
+              Dt. Akça founded Akdeniz Dental Clinic in Antalya and treats international patients there. This gives him first-hand knowledge of whether the information on this site matches real practice.
             </p>
             <Link href="/editorial-policy" className="text-[#1e40af] font-semibold hover:underline text-sm">
               → View our full editorial & medical review methodology
