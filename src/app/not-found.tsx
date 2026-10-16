@@ -11,7 +11,7 @@ const popularLinks = [
   { label: "Dental Implants Turkey", href: "/guides/dental-implants-turkey" },
   { label: "Veneers in Turkey — Are They Safe?", href: "/guides/turkish-veneers-safety" },
   { label: "Turkey Teeth Cost (GBP)", href: "/prices/turkey-teeth-cost" },
-  { label: "Full-Mouth Implants Cost", href: "/guides/full-mouth-dental-implants-turkey-cost" },
+  { label: "Full-Mouth Implants Cost", href: "/blog/full-mouth-implants-uk-vs-turkey" },
   { label: "Teeth in Turkey: Complete UK Guide", href: "/guides/teeth-in-turkey" },
   { label: "Free Treatment Plan", href: "/free-treatment-plan" },
 ];

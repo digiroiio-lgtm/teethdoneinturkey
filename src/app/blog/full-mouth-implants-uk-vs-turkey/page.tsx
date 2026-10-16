@@ -41,6 +41,7 @@ const toc = [
   { id: "treatment-types", label: "All-on-4, All-on-6 or individual" },
   { id: "procedure", label: "The procedure, stage by stage" },
   { id: "included", label: "What's included and what isn't" },
+  { id: "bridge-type", label: "Zirconia bridge vs titanium bar" },
   { id: "brands", label: "Implant brands used" },
   { id: "trips", label: "How many trips" },
   { id: "finance", label: "Paying monthly" },
@@ -91,7 +92,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
           headline="Full Mouth Dental Implants Turkey Cost 2026"
           description="Full mouth dental implants in Turkey cost £8,000–£11,000 for All-on-4 (both arches) vs £24,000–£36,000 in the UK. 2026 prices, what's included, finance."
           datePublished="2026-04-01"
-          dateModified="2026-09-11"
+          dateModified="2026-10-16"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Blog", path: "/blog" },
@@ -103,7 +104,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
           <div className="mb-8">
             <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Full Mouth Dental Implants Turkey: Cost and Prices in 2026</h1>
-            <p className="text-gray-500 text-sm">Published April 2026 · Updated 11 September 2026 · 10 min read</p>
+            <p className="text-gray-500 text-sm">Published April 2026 · Updated 16 October 2026 · 10 min read</p>
             <MedicalReviewBadge />
           </div>
 
@@ -302,7 +303,16 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
               frequently exceeds <strong>£40,000</strong>.
             </p>
 
-            <h2 id="brands" className="text-2xl font-bold text-gray-900 mt-8 mb-4 scroll-mt-24">Implant Brands Used in Turkey</h2>
+            <h2 id="bridge-type" className="text-2xl font-bold text-gray-900 mt-8 mb-4 scroll-mt-24">Zirconia Bridge vs Titanium Bar: Which Is in Your Quote?</h2>
+            <p>
+              The permanent restoration fitted on the second trip is either a <strong>full zirconia bridge</strong> or
+              a <strong>titanium bar with acrylic or composite teeth</strong>. Zirconia is stronger, more
+              stain-resistant and looks more natural, so it is the usual choice where the budget allows. A titanium
+              bar with acrylic teeth costs less, but the acrylic needs repairing or replacing over time. Confirm in
+              writing which type your quote includes before you pay a deposit.
+            </p>
+
+                        <h2 id="brands" className="text-2xl font-bold text-gray-900 mt-8 mb-4 scroll-mt-24">Implant Brands Used in Turkey</h2>
             <p>
               The biggest misconception in dental tourism is that a lower price means an inferior implant. The brand
               matters — it affects long-term success rates, guarantee terms, and whether a UK dentist can service the
