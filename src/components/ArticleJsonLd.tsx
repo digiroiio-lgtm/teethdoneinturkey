@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const SITE_NAME = "Teeth Done in Turkey";
 
@@ -70,11 +72,33 @@ export default function ArticleJsonLd({
   // Plain <script>, not next/script: next/script defaults to afterInteractive,
   // which injects the tag client-side and leaves it out of the server HTML that
   // crawlers and AI answer engines actually read.
+  // The BreadcrumbList above must match what readers see, so the same trail
+  // is rendered as a visible breadcrumb at the top of the article.
   return (
-    <script
-      id={id}
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <>
+      <script
+        id={id}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" className="text-xs text-gray-500 mb-6">
+          <ol className="flex flex-wrap items-center gap-1.5">
+            {breadcrumbs.map((item, i) => (
+              <li key={item.path} className="flex items-center gap-1.5">
+                {i > 0 && <span aria-hidden="true">/</span>}
+                {i < breadcrumbs.length - 1 ? (
+                  <Link href={item.path} className="hover:text-gray-900 transition-colors">
+                    {item.name}
+                  </Link>
+                ) : (
+                  <span className="text-gray-700" aria-current="page">{item.name}</span>
+                )}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      </div>
+    </>
   );
 }
