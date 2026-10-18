@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import GuideTOC from "@/components/GuideTOC";
 import KeyTakeaways from "@/components/KeyTakeaways";
-import { REVIEWER_PERSON } from "@/lib/reviewer";
 import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import FAQSection from "@/components/FAQSection";
@@ -92,7 +91,6 @@ const jsonLd = {
       image: `${SITE_URL}/opengraph-image`,
       author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
       publisher: { "@id": `${SITE_URL}/#organization` },
-      reviewedBy: REVIEWER_PERSON,
     },
     {
       "@type": "BreadcrumbList",

@@ -1,3 +1,4 @@
+import ClinicalReferences from "@/components/ClinicalReferences";
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
@@ -138,6 +139,7 @@ export default function CompositeVsPorcelainPage() {
           </div>
         </div>
       </div>
+      <ClinicalReferences topic="veneers" />
     </article>
   );
 }

@@ -2,8 +2,9 @@
 // Pings the IndexNow API (Bing/Yandex) for a list of URL paths.
 //
 // Usage:
-//   node scripts/indexnow-ping.mjs /path1 /path2 ...
-//   node scripts/indexnow-ping.mjs          # pings all routes from seo/route-lastmod.json
+//   node scripts/indexnow-ping.mjs --deployed /path1 /path2 ...
+// Run only after confirming a successful production deployment. No implicit
+// whole-site submission: pass newly created or meaningfully updated paths.
 //
 // Or import ping() and call it from another script:
 //   import { ping } from './indexnow-ping.mjs';
@@ -22,32 +23,49 @@ const KEY_LOCATION = `${BASE}/${KEY}.txt`;
 
 export async function ping(paths) {
   if (!paths.length) return;
-  const urlList = paths.map(p => `${BASE}${p}`);
+  const routes = JSON.parse(fs.readFileSync(MANIFEST, 'utf8')).routes;
+  const uniquePaths = [...new Set(paths)];
+  for (const route of uniquePaths) {
+    if (!Object.hasOwn(routes, route)) {
+      throw new Error(`IndexNow: not an indexable canonical route: ${route}`);
+    }
+  }
+  // Check the public key before submitting. A changed environment key needs its
+  // matching file deployed on the same canonical host.
+  const keyResponse = await fetch(KEY_LOCATION, { signal: AbortSignal.timeout(15000), redirect: 'error' });
+  if (!keyResponse.ok || (await keyResponse.text()).trim() !== KEY) {
+    throw new Error('IndexNow: deployed key file does not match the configured key');
+  }
+  const urlList = uniquePaths.map(p => `${BASE}${p}`);
   const body = { host: HOST, key: KEY, keyLocation: KEY_LOCATION, urlList };
   try {
     const res = await fetch('https://api.indexnow.org/indexnow', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json; charset=utf-8' },
       body: JSON.stringify(body),
+      signal: AbortSignal.timeout(15000),
     });
     if (res.ok || res.status === 202) {
-      console.log(`indexnow-ping: ${res.status} — ${urlList.length} URL(s) submitted`);
+      console.log(`indexnow-ping: ${res.status} — ${urlList.length} URL(s) submitted (indexing is not guaranteed)`);
       for (const url of urlList) console.log(`  ${url}`);
     } else {
       const text = await res.text().catch(() => '');
-      console.error(`indexnow-ping: unexpected status ${res.status} — ${text.slice(0, 200)}`);
+      throw new Error(`HTTP ${res.status} — ${text.slice(0, 200)}`);
     }
   } catch (err) {
     console.error(`indexnow-ping: network error — ${err.message}`);
-    process.exit(1);
+    throw err;
   }
 }
 
 // Standalone: called directly as a script
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const cliPaths = process.argv.slice(2);
-  const paths = cliPaths.length
-    ? cliPaths
-    : Object.keys(JSON.parse(fs.readFileSync(MANIFEST, 'utf8')).routes);
-  await ping(paths);
+  const args = process.argv.slice(2);
+  const paths = args.filter(arg => arg !== '--deployed');
+  if (!args.includes('--deployed') || !paths.length) {
+    console.error('After a successful production deployment: npm run seo:indexnow -- --deployed /changed-path [...]');
+    process.exitCode = 1;
+  } else {
+    await ping(paths);
+  }
 }

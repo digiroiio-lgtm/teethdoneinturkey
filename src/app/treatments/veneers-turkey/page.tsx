@@ -4,19 +4,25 @@ import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
+import ClinicalReferences from "@/components/ClinicalReferences";
+import TreatmentSummary from "@/components/TreatmentSummary";
+import ProviderInformation from "@/components/ProviderInformation";
+import { CLINICAL_SOURCES, clinicalCitations } from "@/lib/clinical-evidence";
+import { CLINIC_ID } from "@/lib/entities";
+
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/veneers-turkey" },
   title: "Veneers Turkey – From £190 Per Tooth",
-  description: "Get porcelain or E-max veneers in Turkey from £190 per tooth vs £900+ in the UK. JCI-accredited clinics, English-speaking dentists, 10-year guarantee.",
+  description: "Explore veneers in Turkey from £190 per tooth, including tooth preparation, suitability, risks, aftercare and the difference between veneers and dental crowns.",
 };
 
 const faqs = [
-  { question: "How long do veneers last in Turkey?", answer: "E-max and porcelain veneers typically last 10–15 years with proper care. Our partner clinics offer a 10-year structural guarantee on all veneer work." },
+  { question: "How long do veneers last in Turkey?", answer: "Veneers can chip, wear or loosen and may need repair or replacement. Longevity varies with your teeth, bite and care. Ask for the clinic’s written guarantee and exclusions; it is separate from expected lifespan." },
   { question: "How many days do I need in Turkey for veneers?", answer: "You'll typically need 5–7 days for a veneer procedure — 2 days for preparation and temporaries, then 2–3 days later for fitting the final veneers." },
-  { question: "Are Turkish veneers the same quality as UK veneers?", answer: "Yes. Our partner clinics use the same Ivoclar E-max and Vita porcelain materials as top UK practices. The difference is the cost of labour and clinic overheads, not the materials or skill." },
-  { question: "Will my veneers look natural?", answer: "Absolutely. Digital Smile Design technology allows you to preview your new smile before any work begins. Our dentists are specialists in aesthetic dentistry." },
+  { question: "Are Turkish veneers the same quality as UK veneers?", answer: "A material brand or country alone does not establish treatment quality. Check the dentist’s qualifications, proposed preparation, consent process and aftercare arrangements before agreeing to treatment." },
+  { question: "Will my veneers look natural?", answer: "Appearance depends on your teeth, shade choice and treatment design. Discuss the proposed shape and shade with the dentist. A preview helps planning but cannot guarantee the final result." },
   { question: "Can I pay monthly for veneers in Turkey?", answer: "Yes. Finance is available over 12, 24, or 36 months. A full set of 20 veneers at £3,800 is available from around £106/month over 36 months. Pre-qualify with no credit impact." },
 ];
 
@@ -26,6 +32,7 @@ const PAGE_URL = `${SITE_URL}/treatments/veneers-turkey`;
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": `${PAGE_URL}#breadcrumb`,
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
     { "@type": "ListItem", position: 2, name: "Treatments", item: `${SITE_URL}/treatments` },
@@ -36,15 +43,31 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": `${PAGE_URL}#article`,
+  mainEntityOfPage: { "@id": `${PAGE_URL}#webpage` },
   headline: "Veneers Turkey – From £190 Per Tooth",
   description: "Porcelain and E-max veneers in Turkey from £190 per tooth. UK price comparison, brands, procedure and how to book.",
   url: PAGE_URL,
   datePublished: "2026-01-01",
-  dateModified: "2026-09-19",
+  dateModified: "2026-10-18",
   inLanguage: "en-GB",
-  author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
+  author: { "@id": `${SITE_URL}/#organization` },
   publisher: { "@id": `${SITE_URL}/#organization` },
+  citation: clinicalCitations("veneers"),
   about: { "@type": "MedicalProcedure", name: "Dental Veneer" },
+};
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${PAGE_URL}#webpage`,
+  url: PAGE_URL,
+  name: articleSchema.headline,
+  inLanguage: "en-GB",
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  mainEntity: { "@id": `${PAGE_URL}#article` },
+  breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+  mentions: { "@id": CLINIC_ID },
 };
 
 export default function VeneersTurkeyPage() {
@@ -52,6 +75,7 @@ export default function VeneersTurkeyPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-3">
@@ -70,6 +94,12 @@ export default function VeneersTurkeyPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <TreatmentSummary
+            question="What are dental veneers?"
+            answer="Veneers cover the front of a tooth; crowns cover the whole tooth. Suitability depends on the health of your teeth and gums and the condition of your bite. Enamel preparation is irreversible, so ask a dentist about alternatives before deciding."
+            sourceHref={CLINICAL_SOURCES.veneers.href}
+            sourceName={CLINICAL_SOURCES.veneers.publisher}
+          />
           {/* Cost comparison */}
           <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Veneers Cost: UK vs Turkey</h2>
@@ -90,10 +120,10 @@ export default function VeneersTurkeyPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Dental Veneers?</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Dental veneers are ultra-thin porcelain or composite shells bonded to the front surface of your teeth. They correct discolouration, chips, gaps, and misalignment to create a perfectly uniform, bright smile. The results are instantly transformative and long-lasting.
+              Dental veneers are facings placed on the front of teeth. They may improve the appearance of chips, staining or gaps. They differ from crowns, which cover the whole tooth; the choice requires a dental examination.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              In Turkey, veneers are performed by specialist aesthetic dentists using the same global brand materials — primarily Ivoclar E-max and Vita porcelain — as the very best UK clinics. The dramatic price difference is simply due to Turkey&apos;s lower cost base, not any compromise in quality.
+              Before treatment, discuss your oral health, bite and alternatives with a dentist. Where enamel is removed, preparation cannot be undone. The ADA guidance linked below explains why healthy teeth and gums matter before veneers are fitted.
             </p>
           </div>
 
@@ -101,8 +131,8 @@ export default function VeneersTurkeyPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Types of Veneers Available</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { name: "E-max Veneers", desc: "The gold standard. Ultra-thin, incredibly strong lithium disilicate ceramic. Natural-looking and highly translucent.", price: "From £220/tooth" },
-                { name: "Zirconia Veneers", desc: "Maximum durability. Ideal for patients who grind their teeth. Slightly less translucent but extremely strong.", price: "From £250/tooth" },
+                { name: "E-max Veneers", desc: "A lithium disilicate ceramic option. Your dentist should explain whether it is appropriate for your teeth and bite.", price: "From £220/tooth" },
+                { name: "Zirconia Veneers", desc: "Ask whether the proposed zirconia restoration is a veneer or a crown. Grinding needs assessment and may make veneers unsuitable.", price: "From £250/tooth" },
                 { name: "Composite Veneers", desc: "More affordable option applied in a single visit. Good for minor corrections but less durable than porcelain.", price: "From £90/tooth" },
               ].map(v => (
                 <div key={v.name} className="bg-gray-50 rounded-xl p-4 border border-gray-200">
@@ -119,9 +149,9 @@ export default function VeneersTurkeyPage() {
             <ol className="space-y-4">
               {[
                 { title: "Digital Smile Design", desc: "Your dentist photographs your smile and creates a digital preview so you can see results before any work begins." },
-                { title: "Tooth Preparation", desc: "A thin layer of enamel (0.3–0.5mm) is removed from the tooth surface to make room for the veneer." },
+                { title: "Tooth Preparation", desc: "The dentist explains any enamel removal needed for your proposed restoration. The amount varies; preparation is irreversible." },
                 { title: "Impressions & Temporaries", desc: "Digital impressions are sent to the in-house lab. Temporary veneers protect your teeth while your final ones are crafted." },
-                { title: "Final Fitting", desc: "Your permanent veneers are bonded with dental adhesive. Fine adjustments are made until your bite and appearance are perfect." },
+                { title: "Final Fitting", desc: "Your permanent veneers are bonded with dental adhesive. Fit, appearance and bite are checked and adjusted with your dentist." },
                 { title: "Aftercare Guidance", desc: "You receive full aftercare instructions and the clinic&apos;s contact details for any questions after you return home." },
               ].map((step, i) => (
                 <li key={i} className="flex gap-4">
@@ -186,6 +216,14 @@ export default function VeneersTurkeyPage() {
           </div>
         </div>
       </section>
+
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Suitability, risks and ongoing care</h2>
+            <p className="text-gray-600 leading-relaxed">Untreated decay, gum disease or grinding may affect whether veneers are appropriate. They can chip or need replacement. Discuss these risks and alternatives with your dentist, and arrange routine dental care after returning home. See the <a href={CLINICAL_SOURCES.veneers.href} className="text-[#1e40af] hover:underline">ADA guidance on veneers</a>.</p>
+      </section>
+
+      <ClinicalReferences topic="veneers" />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8"><ProviderInformation /></div>
 
       <FAQSection faqs={faqs} title="Veneers Turkey FAQ" />
 

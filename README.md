@@ -39,7 +39,12 @@ always ships a current sitemap. After editing page content, run:
 npm run seo:lastmod   # rewrite seo/route-lastmod.json
 ```
 
-and commit the result — CI runs `npm run seo:lastmod:check` and fails if the
+and commit the result. Manifest generation never submits URLs to IndexNow. After a
+successful production deployment, run `npm run seo:indexnow -- --deployed /changed-path`
+with the complete changed-path list. See [the GEO audit](docs/geo-audit.md) for
+evidence gaps, validation and rollout steps.
+
+CI runs `npm run seo:lastmod:check` and fails if the
 manifest is stale (a new page missing from the sitemap, or a stale `lastmod`).
 
 ## Learn More

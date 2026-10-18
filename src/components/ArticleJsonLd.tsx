@@ -1,7 +1,7 @@
 import Link from "next/link";
+import { medicalReviewFor } from "@/lib/medical-reviews";
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
-const SITE_NAME = "Teeth Done in Turkey";
 
 interface BreadcrumbItem {
   name: string;
@@ -38,6 +38,8 @@ export default function ArticleJsonLd({
   reviewer,
 }: ArticleJsonLdProps) {
   const url = `${SITE_URL}${path}`;
+  // A passed reviewer alone is not evidence of a completed review.
+  const recordedReview = medicalReviewFor(path);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -48,17 +50,29 @@ export default function ArticleJsonLd({
         headline,
         description,
         url,
-        mainEntityOfPage: url,
+        mainEntityOfPage: { "@id": `${url}#webpage` },
         inLanguage: "en-GB",
         datePublished,
         dateModified: dateModified || datePublished,
         image: `${SITE_URL}/opengraph-image`,
-        author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+        author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },
-        ...(reviewer ? { reviewedBy: { "@type": "Person", ...reviewer } } : {}),
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: headline,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        mainEntity: { "@id": `${url}#article` },
+        breadcrumb: { "@id": `${url}#breadcrumb` },
+        ...(reviewer && recordedReview ? { reviewedBy: { "@type": "Person", ...reviewer } } : {}),
       },
       {
         "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
         itemListElement: breadcrumbs.map((item, index) => ({
           "@type": "ListItem",
           position: index + 1,
@@ -79,7 +93,7 @@ export default function ArticleJsonLd({
       <script
         id={id}
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="text-xs text-gray-500 mb-6">
