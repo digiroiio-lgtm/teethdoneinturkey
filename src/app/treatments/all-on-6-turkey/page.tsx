@@ -4,6 +4,12 @@ import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
+import ClinicalReferences from "@/components/ClinicalReferences";
+import TreatmentSummary from "@/components/TreatmentSummary";
+import ProviderInformation from "@/components/ProviderInformation";
+import { CLINICAL_SOURCES, clinicalCitations } from "@/lib/clinical-evidence";
+import { CLINIC_ID } from "@/lib/entities";
+
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
@@ -26,6 +32,7 @@ const PAGE_URL = `${SITE_URL}/treatments/all-on-6-turkey`;
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": `${PAGE_URL}#breadcrumb`,
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
     { "@type": "ListItem", position: 2, name: "Treatments", item: `${SITE_URL}/treatments` },
@@ -36,15 +43,31 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": `${PAGE_URL}#article`,
+  mainEntityOfPage: { "@id": `${PAGE_URL}#webpage` },
   headline: "All-on-6 Dental Implants Turkey – From £5,600 All-Inclusive",
   description: "All-on-6 dental implants in Turkey from £5,600 all-inclusive. Superior stability over All-on-4. UK price comparison, procedure and how to book.",
   url: PAGE_URL,
   datePublished: "2026-01-01",
-  dateModified: "2026-09-19",
+  dateModified: "2026-10-18",
   inLanguage: "en-GB",
-  author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
+  author: { "@id": `${SITE_URL}/#organization` },
   publisher: { "@id": `${SITE_URL}/#organization` },
+  citation: clinicalCitations("implants"),
   about: { "@type": "MedicalProcedure", name: "All-on-6 Dental Implants" },
+};
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${PAGE_URL}#webpage`,
+  url: PAGE_URL,
+  name: articleSchema.headline,
+  inLanguage: "en-GB",
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  mainEntity: { "@id": `${PAGE_URL}#article` },
+  breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+  mentions: { "@id": CLINIC_ID },
 };
 
 export default function AllOn6Page() {
@@ -52,6 +75,7 @@ export default function AllOn6Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-3">
@@ -71,6 +95,12 @@ export default function AllOn6Page() {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <TreatmentSummary
+            question="Is All-on-6 suitable for everyone?"
+            answer="All-on-6 uses six implants to support a full arch. The appropriate number of implants depends on examination, available bone and the planned restoration. Six implants do not guarantee a better result for every patient. Confirm the temporary and final teeth included in your plan."
+            sourceHref={CLINICAL_SOURCES.implants.href}
+            sourceName={CLINICAL_SOURCES.implants.publisher}
+          />
           {/* Price comparison */}
           <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
             <h2 className="text-xl font-bold text-gray-900 mb-4">All-on-6 Cost: UK vs Turkey</h2>
@@ -185,6 +215,14 @@ export default function AllOn6Page() {
           </div>
         </div>
       </section>
+
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Implant risks, healing and maintenance</h2>
+            <p className="text-gray-600 leading-relaxed">Implant surgery can have complications, including infection, nerve injury or failure to integrate. Healing varies with your health and the procedure. Plan professional maintenance as well as daily cleaning. See <a href={CLINICAL_SOURCES.implants.href} className="text-[#1e40af] hover:underline">FDA patient guidance</a> and our <Link href="/blog/dental-implant-recovery-time" className="text-[#1e40af] hover:underline">implant recovery guide</Link>. New or worsening symptoms need advice from a dentist.</p>
+      </section>
+
+      <ClinicalReferences topic="implants" />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8"><ProviderInformation /></div>
 
       <FAQSection faqs={faqs} title="All-on-6 Turkey FAQ" />
 

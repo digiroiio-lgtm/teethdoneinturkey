@@ -160,7 +160,7 @@ const collectionJsonLd = {
   url: `${SITE_URL}/guides`,
   name: "Dental Treatment in Turkey Guides for UK Patients",
   isPartOf: { "@id": `${SITE_URL}/#website` },
-  about: { "@id": `${SITE_URL}/#business` },
+  about: { "@id": `${SITE_URL}/#organization` },
   hasPart: guides.map((g) => ({
     "@type": "Article",
     headline: g.title,

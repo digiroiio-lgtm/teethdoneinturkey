@@ -96,7 +96,7 @@ const jsonLd = {
       name: TITLE,
       description: DESCRIPTION,
       isPartOf: { "@id": `${SITE_URL}/#website` },
-      about: { "@id": `${SITE_URL}/#business` },
+      about: { "@id": `${SITE_URL}/#organization` },
       inLanguage: "en-GB",
       dateModified: DATE_MODIFIED,
     },

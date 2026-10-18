@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
+import { CLINIC_ID } from "@/lib/entities";
+import { MEDICAL_REVIEWS } from "@/lib/medical-reviews";
 
 export const revalidate = 86400;
 
@@ -30,12 +32,7 @@ const personSchema = {
         "Zirconium Restorations",
         "Smile Makeovers",
       ],
-      worksFor: {
-        "@type": "Dentist",
-        name: "Akdeniz Dental Clinic",
-        url: "https://akdenizdental.com",
-        address: { "@type": "PostalAddress", addressLocality: "Antalya", addressCountry: "TR" },
-      },
+      worksFor: { "@id": CLINIC_ID },
     },
     {
       "@type": "BreadcrumbList",
@@ -47,14 +44,7 @@ const personSchema = {
   ],
 };
 
-const reviewedPages = [
-  { title: "Is It Safe to Get Teeth Done in Turkey?", href: "/blog/is-it-safe-to-get-teeth-done-in-turkey" },
-  { title: "Risks of Turkey Teeth", href: "/blog/risks-of-turkey-teeth" },
-  { title: "Risks of Veneers in Turkey", href: "/blog/risks-of-veneers-in-turkey" },
-  { title: "Aftercare for Dental Work in Turkey", href: "/blog/aftercare-for-dental-work-in-turkey" },
-  { title: "Signs of Dental Implant Failure", href: "/blog/signs-of-dental-implant-failure" },
-  { title: "Dental Implant Recovery Time", href: "/blog/dental-implant-recovery-time" },
-];
+const reviewedPages = Object.entries(MEDICAL_REVIEWS).map(([href, record]) => ({ href, ...record }));
 
 export default function MustafaAkcaProfilePage() {
   return (
@@ -161,6 +151,7 @@ export default function MustafaAkcaProfilePage() {
                 <Link key={page.href} href={page.href}
                   className="text-sm text-[#1e40af] hover:underline p-3 bg-gray-50 rounded-xl border border-gray-200 block hover:bg-gray-100 transition-colors">
                   {page.title}
+                  <span className="block text-xs text-gray-500 mt-1">Last reviewed: {page.reviewedDate}</span>
                 </Link>
               ))}
             </div>

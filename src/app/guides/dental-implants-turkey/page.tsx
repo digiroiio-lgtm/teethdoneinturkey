@@ -8,7 +8,6 @@ import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -93,7 +92,6 @@ const jsonLd = {
       image: `${SITE_URL}/opengraph-image`,
       author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
       publisher: { "@id": `${SITE_URL}/#organization` },
-      reviewedBy: REVIEWER_PERSON,
       about: { "@type": "MedicalProcedure", name: "Dental Implant" },
     },
     {

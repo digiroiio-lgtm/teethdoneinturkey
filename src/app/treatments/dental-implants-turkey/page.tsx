@@ -4,6 +4,12 @@ import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
+import ClinicalReferences from "@/components/ClinicalReferences";
+import TreatmentSummary from "@/components/TreatmentSummary";
+import ProviderInformation from "@/components/ProviderInformation";
+import { CLINICAL_SOURCES, clinicalCitations } from "@/lib/clinical-evidence";
+import { CLINIC_ID } from "@/lib/entities";
+
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
@@ -26,6 +32,7 @@ const PAGE_URL = `${SITE_URL}/treatments/dental-implants-turkey`;
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": `${PAGE_URL}#breadcrumb`,
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
     { "@type": "ListItem", position: 2, name: "Treatments", item: `${SITE_URL}/treatments` },
@@ -36,15 +43,31 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": `${PAGE_URL}#article`,
+  mainEntityOfPage: { "@id": `${PAGE_URL}#webpage` },
   headline: "Dental Implants Turkey – From £250",
   description: "Straumann and Nobel Biocare dental implants in Turkey from £250. UK price comparison, brands, procedure steps and how to book.",
   url: PAGE_URL,
   datePublished: "2026-01-01",
-  dateModified: "2026-09-19",
+  dateModified: "2026-10-18",
   inLanguage: "en-GB",
-  author: { "@type": "Organization", name: "Teeth Done in Turkey", url: SITE_URL },
+  author: { "@id": `${SITE_URL}/#organization` },
   publisher: { "@id": `${SITE_URL}/#organization` },
+  citation: clinicalCitations("implants"),
   about: { "@type": "MedicalProcedure", name: "Dental Implant" },
+};
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${PAGE_URL}#webpage`,
+  url: PAGE_URL,
+  name: articleSchema.headline,
+  inLanguage: "en-GB",
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  mainEntity: { "@id": `${PAGE_URL}#article` },
+  breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+  mentions: { "@id": CLINIC_ID },
 };
 
 export default function DentalImplantsTurkeyPage() {
@@ -52,6 +75,7 @@ export default function DentalImplantsTurkeyPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }} />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="mb-3">
@@ -69,6 +93,12 @@ export default function DentalImplantsTurkeyPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <TreatmentSummary
+            question="How does dental implant treatment work?"
+            answer="An implant replaces a missing tooth root and supports a crown, bridge or denture. Assessment and healing determine the treatment stages. Ask your dentist to confirm both visits, the temporary restoration and the final restoration before booking travel."
+            sourceHref={CLINICAL_SOURCES.implants.href}
+            sourceName={CLINICAL_SOURCES.implants.publisher}
+          />
           <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Implant Cost: UK vs Turkey</h2>
             <div className="grid grid-cols-2 gap-4">
@@ -160,6 +190,14 @@ export default function DentalImplantsTurkeyPage() {
           </div>
         </div>
       </section>
+
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Implant risks, healing and maintenance</h2>
+            <p className="text-gray-600 leading-relaxed">Implant surgery can have complications, including infection, nerve injury or failure to integrate. Healing varies with your health and the procedure. Plan professional maintenance as well as daily cleaning. See <a href={CLINICAL_SOURCES.implants.href} className="text-[#1e40af] hover:underline">FDA patient guidance</a> and our <Link href="/blog/dental-implant-recovery-time" className="text-[#1e40af] hover:underline">implant recovery guide</Link>. New or worsening symptoms need advice from a dentist.</p>
+      </section>
+
+      <ClinicalReferences topic="implants" />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8"><ProviderInformation /></div>
 
       <FAQSection faqs={faqs} title="Dental Implants Turkey FAQ" />
       <CTASection title="Get Your Implant Quote Today" subtitle="Free consultation with our implant specialists. Personal quote within 24 hours." buttonText="Book Free Consultation" buttonHref="/book-consultation" whatsapp={true} />

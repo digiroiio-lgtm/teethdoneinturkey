@@ -1,3 +1,4 @@
+import ClinicalReferences from "@/components/ClinicalReferences";
 import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
@@ -167,6 +168,7 @@ export default function Rule4810VeneersPage() {
           </div>
         </div>
       </div>
+      <ClinicalReferences topic="veneers" />
     </article>
   );
 }

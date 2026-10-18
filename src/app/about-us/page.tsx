@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import ProviderInformation from "@/components/ProviderInformation";
 
 export const revalidate = 86400;
 
@@ -22,6 +22,7 @@ export default function AboutPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <ProviderInformation />
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Who We Are</h2>
             <p className="text-gray-600 leading-relaxed mb-4">

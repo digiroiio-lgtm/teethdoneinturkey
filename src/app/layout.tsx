@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import AiReferralTracking from "@/components/AiReferralTracking";
+import { CLINIC } from "@/lib/entities";
 
 // GA4 (Google Analytics)
 const GA_MEASUREMENT_ID = "G-57QGPCQQKT";
@@ -96,8 +97,9 @@ export const metadata: Metadata = {
     apple: { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
   manifest: "/site.webmanifest",
-  themeColor: "#1e40af",
 };
+
+export const viewport: Viewport = { themeColor: "#1e40af" };
 
 // ---- Structured data ----------------------------------------------------------
 // Teeth Done in Turkey is an advisory / patient-coordination service, not a
@@ -138,7 +140,7 @@ const websiteSchema = {
 
 const graph = {
   "@context": "https://schema.org",
-  "@graph": [organizationSchema, websiteSchema],
+  "@graph": [organizationSchema, websiteSchema, CLINIC],
 };
 
 export default function RootLayout({

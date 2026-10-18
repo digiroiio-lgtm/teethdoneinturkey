@@ -1,0 +1,994 @@
+{
+  "baseCommit": "c98dfd024d1c7487cc5304f04df2f804075f0464",
+  "note": "Source audit candidates, not proof of claim falsity or schema validity. Shared components are inventoried separately in docs/geo-audit.md.",
+  "counts": {
+    "indexablePages": 77,
+    "articleComponentPages": 32,
+    "recordedNamedReviews": 6,
+    "schemaReviewMismatchPages": 39,
+    "pagesWithSourceComponent": 16,
+    "financeCandidatePages": 38
+  },
+  "pages": [
+    {
+      "route": "/about-us",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence"
+      ]
+    },
+    {
+      "route": "/blog/4-8-10-rule-for-veneers",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/aftercare-for-dental-work-in-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": true,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/blog/antalya-vs-istanbul-dental-clinics",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/are-veneers-in-turkey-worth-it",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/best-dental-clinics-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/can-you-pay-monthly-for-teeth-in-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/can-you-pay-monthly-for-veneers-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/composite-vs-porcelain-veneers-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/dental-holiday-packages-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/dental-implant-recovery-time",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": true,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/blog/dental-tourism-finance-explained",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/dental-treatment-turkey-payment-plans",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/do-turkey-teeth-look-fake",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/e-max-vs-zirconia-veneers-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/finance-dental-implants-turkey-uk-patients",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/full-mouth-implants-uk-vs-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/full-set-veneers-turkey-cost",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/hollywood-smile-turkey-cost",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/hollywood-smile-uk-vs-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/how-long-do-dental-veneers-last",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/implants-cost-uk-vs-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/is-it-safe-to-get-teeth-done-in-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": true,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence"
+      ]
+    },
+    {
+      "route": "/blog",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/risks-of-turkey-teeth",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": true,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence"
+      ]
+    },
+    {
+      "route": "/blog/risks-of-veneers-in-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": true,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence"
+      ]
+    },
+    {
+      "route": "/blog/same-day-dental-implants-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/signs-of-dental-implant-failure",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": true,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence"
+      ]
+    },
+    {
+      "route": "/blog/single-tooth-implant-turkey-cost",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/turkey-teeth-explained",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/uk-dentist-vs-turkey-dentist",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/veneers-turkey-cost-uk-vs-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/why-are-dental-treatments-cheaper-in-turkey",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/blog/will-uk-dentists-fix-turkey-teeth",
+      "schemaTypes": [],
+      "articleComponent": true,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/contact",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/editorial-policy",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/finance-options-uk",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence"
+      ]
+    },
+    {
+      "route": "/free-treatment-plan",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "finance terms need approved evidence"
+      ]
+    },
+    {
+      "route": "/guides/best-veneers-turkey",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/cant-afford-dental-treatment-uk",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/cant-afford-root-canal-uk",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/dental-implants-turkey",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "MedicalProcedure",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/no-nhs-dentist-what-to-do",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "CollectionPage",
+        "ListItem"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/severe-toothache-cant-afford-dentist",
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/teeth-in-turkey",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/tooth-abscess-cant-afford-dentist",
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/turkey-teeth-antalya",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/turkey-teeth-packages",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/turkey-teeth-veneers-or-crowns",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "MedicalProcedure",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/turkish-veneers-safety",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "clinical/credential claim needs evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/guides/veneers-turkey-packages",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "schema reviewer without named visible review",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/medical-reviewers/mustafa-akca",
+      "schemaTypes": [
+        "BreadcrumbList",
+        "Dentist",
+        "EducationalOrganization",
+        "ListItem",
+        "PostalAddress"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/monthly-payment",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence"
+      ]
+    },
+    {
+      "route": "/",
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem",
+        "SpeakableSpecification",
+        "WebPage"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "finance terms need approved evidence"
+      ]
+    },
+    {
+      "route": "/price-calculator",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/prices/all-on-6-dental-implants-turkey-package",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/prices/dental-implants-turkey-cost",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/prices/hollywood-smile-turkey-package",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/prices/turkey-teeth-cost",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/prices/veneers-antalya-cost",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": true,
+      "flags": [
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/prices/veneers-turkey-cost",
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem",
+        "WebPage"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/reviews",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/teeth-done-in-turkey-guide",
+      "schemaTypes": [
+        "Article",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence"
+      ]
+    },
+    {
+      "route": "/teeth-done-in-turkey-problems",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence"
+      ]
+    },
+    {
+      "route": "/travel-to-turkey/dental-holiday-turkey",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/travel-to-turkey/how-long-stay-turkey-dental",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/travel-to-turkey",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/treatments/all-on-4-turkey",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "MedicalProcedure",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/treatments/all-on-6-turkey",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "MedicalProcedure",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/treatments/dental-implants-turkey",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "MedicalProcedure",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/treatments/full-smile-makeover-turkey",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "MedicalProcedure",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/treatments",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/treatments/veneers-turkey",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "MedicalProcedure",
+        "Organization"
+      ],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence",
+        "no dated named review in source"
+      ]
+    },
+    {
+      "route": "/turkey-teeth-before-after",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": []
+    },
+    {
+      "route": "/turkey-teeth-clinic",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence"
+      ]
+    },
+    {
+      "route": "/why-choose-turkey-for-dental-work",
+      "schemaTypes": [],
+      "articleComponent": false,
+      "namedReview": false,
+      "referenceComponent": false,
+      "flags": [
+        "clinical/credential claim needs evidence",
+        "finance terms need approved evidence"
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import ClinicalReferences from "@/components/ClinicalReferences";
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";
@@ -124,7 +125,7 @@ const homePageJsonLd = {
       url: `${SITE_URL}/`,
       name: "Turkey Teeth Guide: Veneers, Implants & Costs for UK Patients",
       isPartOf: { "@id": `${SITE_URL}/#website` },
-      about: { "@id": `${SITE_URL}/#business` },
+      about: { "@id": `${SITE_URL}/#organization` },
       inLanguage: "en-GB",
       primaryImageOfPage: `${SITE_URL}/opengraph-image`,
       speakable: {
@@ -191,6 +192,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ClinicalReferences topic="makeover" />
       <FAQSection />
 
       <CTASection
