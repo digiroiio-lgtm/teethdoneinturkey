@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import AiReferralTracking from "@/components/AiReferralTracking";
+import RouteBreadcrumb from "@/components/RouteBreadcrumb";
 
 // GA4 (Google Analytics)
 const GA_MEASUREMENT_ID = "G-57QGPCQQKT";
@@ -176,7 +177,10 @@ export default function RootLayout({
         </Script>
         <AiReferralTracking />
         <Header />
-        <main>{children}</main>
+        <main>
+          <RouteBreadcrumb />
+          {children}
+        </main>
         <Footer />
         <FloatingCTA />
       </body>
