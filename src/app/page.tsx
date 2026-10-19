@@ -159,7 +159,9 @@ function ExpertQuote({
         <p className="text-gray-800 italic leading-relaxed">&ldquo;{quote}&rdquo;</p>
       </blockquote>
       <figcaption className="mt-3 text-sm text-gray-600">
-        {href ? (
+        {href && href.startsWith("http") ? (
+          <a href={href} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1e40af] hover:underline">{name}</a>
+        ) : href ? (
           <Link href={href} className="font-semibold text-[#1e40af] hover:underline">{name}</Link>
         ) : (
           <strong className="text-gray-900">{name}</strong>
@@ -303,6 +305,12 @@ export default function HomePage() {
         <p>
           The gap between implant visits lets the bone heal around the implant before the final crowns are fitted. Rushing this stage raises the risk of failure, so a clinic that promises a permanent result with no healing period deserves a follow-up question.
         </p>
+        <ExpertQuote
+          quote="Replacing missing posterior teeth is essential not only for restoring a complete smile but also for maintaining effective chewing function and a stable bite. Dental implants can provide a long-term solution when supported by adequate bone structure, careful surgical planning, and an individual assessment of each patient's oral health."
+          name="Dr. Mehmet Onur Merey"
+          href="https://akdenizdental.com/mehmet-onur-merey"
+          role="Oral & Maxillofacial Surgeon, Clinic Owner | Akdeniz Dental Clinic, Antalya"
+        />
         <p>
           These are typical ranges, not promises. Your dentist sets the exact schedule after examining you, and extra procedures such as bone grafts or gum treatment can add time. Plan flights and time off work with some flexibility, and read our{" "}
           <Link href="/travel-to-turkey" className={linkClass}>travel to Turkey guide</Link>{" "}
