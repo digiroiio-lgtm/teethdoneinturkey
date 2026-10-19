@@ -8,7 +8,9 @@ import TestimonialCard from "@/components/TestimonialCard";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Link from "next/link";
-import { REVIEWER_NAME, REVIEWER_HREF } from "@/lib/reviewer";
+import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import SourcesList from "@/components/SourcesList";
+import { REVIEWER_NAME, REVIEWER_TITLE, REVIEWER_HREF, REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -115,6 +117,7 @@ const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 // Bump only when the page content is genuinely reviewed or changed.
 const LAST_UPDATED = "2026-10-19";
 const LAST_UPDATED_LABEL = "19 October 2026";
+const LAST_REVIEWED = "2026-10-19";
 
 function AnswerSection({
   id,
@@ -194,6 +197,8 @@ const homePageJsonLd = {
         cssSelector: ["h1", "h2", ".faq-answer"],
       },
       dateModified: LAST_UPDATED,
+      lastReviewed: LAST_REVIEWED,
+      reviewedBy: REVIEWER_PERSON,
     },
     {
       "@type": "BreadcrumbList",
@@ -221,6 +226,14 @@ export default function HomePage() {
       <p className="text-center text-sm text-gray-500 py-3 bg-white">
         Last updated: <time dateTime={LAST_UPDATED}>{LAST_UPDATED_LABEL}</time>
       </p>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 bg-white">
+        <MedicalReviewBadge
+          reviewerName={REVIEWER_NAME}
+          reviewerTitle={REVIEWER_TITLE}
+          reviewerHref={REVIEWER_HREF}
+          reviewedDate={LAST_UPDATED_LABEL}
+        />
+      </div>
 
       {/* Treatment Cards */}
       <section className="py-16 bg-gray-50">
@@ -360,6 +373,42 @@ export default function HomePage() {
         </p>
       </AnswerSection>
 
+
+      <AnswerSection
+        id="treatment-types"
+        tint="white"
+        heading="What is the difference between veneers, crowns and implants?"
+        answer="Veneers are thin shells bonded to the front of a tooth to change its look, crowns cover the whole tooth to protect or rebuild it, and implants are titanium posts that replace a missing tooth root. Each solves a different problem, so the right choice depends on your own teeth."
+      >
+        <p>
+          Veneers suit teeth that are healthy but discoloured, chipped, worn or uneven, because they need only a thin layer of enamel to be shaped. Crowns suit teeth that are heavily filled, cracked or root-treated and need full coverage. Implants suit teeth that are missing or cannot be saved, and they need enough healthy bone to hold the post.
+        </p>
+        <p>
+          Many patients need a mix, such as implants at the back and veneers at the front, which is why a full examination and X-rays matter before any price is agreed. Our{" "}
+          <Link href="/treatments/veneers-turkey" className={linkClass}>veneers page</Link>,{" "}
+          <Link href="/treatments/dental-implants-turkey" className={linkClass}>dental implants page</Link>{" "}
+          and{" "}
+          <Link href="/guides/turkey-teeth-veneers-or-crowns" className={linkClass}>veneers or crowns guide</Link>{" "}
+          explain how each option works and when a dentist is likely to recommend it.
+        </p>
+      </AnswerSection>
+
+      <AnswerSection
+        id="reviews-evidence"
+        tint="gray"
+        heading="What do public reviews say about the partner clinic?"
+        answer="Akdeniz Dental Clinic in Antalya, where our two quoted dentists work, shows a 5.0 rating from 1,197 Google reviews and a 4.8 rating from 97 Trustpilot reviews, checked in October 2026. Both platforms warn that they do not verify every review, so treat the scores as one signal."
+      >
+        <p>
+          Google states that its reviews are not verified. Trustpilot shows the profile as claimed, says it does not fact-check reviews, and notes that the clinic has not invited customers to review recently, so the ratings may not represent every patient. These figures describe a single clinic, not every clinic we may coordinate.
+        </p>
+        <p>
+          A high average is a starting point, not proof of a good result for you. Read the lower-rated reviews, check whether reviewers describe the treatment you want, and ask for before-and-after photos of similar cases. Our{" "}
+          <Link href="/reviews" className={linkClass}>reviews page</Link>{" "}
+          shows how we present patient feedback.
+        </p>
+      </AnswerSection>
+
       {/* Testimonials */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -386,11 +435,24 @@ export default function HomePage() {
           The information here is general and does not replace advice from your own dentist. Clinical decisions belong to the dentist who examines you, and prices are indicative until you hold a written quote.
         </p>
         <p>
-          Pages on this site are marked as medically reviewed only where a named reviewer and a review date are recorded, and this homepage does not currently carry that mark. Read our{" "}
+          Pages on this site are marked as medically reviewed only where a named reviewer and a review date are recorded. This homepage was last reviewed by Dt. Mustafa Akça on {LAST_UPDATED_LABEL}. Read our{" "}
           <Link href="/editorial-policy" className={linkClass}>editorial and medical review policy</Link>{" "}
           for how content is written, checked and corrected.
         </p>
       </AnswerSection>
+
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SourcesList
+          sources={[
+            { label: "NHS: Dental treatment abroad", href: "https://www.nhs.uk/nhs-services/dentists/dental-treatment-abroad/" },
+            { label: "General Dental Council: Dental tourism guidance", href: "https://www.gdc-uk.org/patients/dental-tourism" },
+            { label: "Trustpilot: Akdeniz Dental Clinic (4.8, 97 reviews, checked October 2026)", href: "https://www.trustpilot.com/review/akdenizdental.com" },
+            { label: "Google Maps: Antalya Akdeniz Dental Clinic (5.0, 1,197 reviews, checked October 2026)", href: "https://www.google.com/maps/place/Antalya+Akdeniz+Dental+Clinic/@36.8881905,30.7220551,17z" },
+            { label: "Akdeniz Dental Clinic: our team", href: "https://akdenizdental.com/our-team" },
+          ]}
+        />
+      </div>
 
       <FAQSection />
 

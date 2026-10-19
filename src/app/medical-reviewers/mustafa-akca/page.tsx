@@ -48,6 +48,7 @@ const personSchema = {
 };
 
 const reviewedPages = [
+  { title: "Turkey Teeth: Veneers & Implants for UK Patients (home page)", href: "/" },
   { title: "Is It Safe to Get Teeth Done in Turkey?", href: "/blog/is-it-safe-to-get-teeth-done-in-turkey" },
   { title: "Risks of Turkey Teeth", href: "/blog/risks-of-turkey-teeth" },
   { title: "Risks of Veneers in Turkey", href: "/blog/risks-of-veneers-in-turkey" },

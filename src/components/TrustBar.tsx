@@ -1,8 +1,8 @@
 export default function TrustBar() {
   const items = [
-    { icon: '⭐⭐⭐⭐⭐', label: '500+ UK Patient Reviews' },
+    { icon: '⭐', label: '5.0 on Google (1,197 reviews, Akdeniz Dental)' },
     { icon: '✓', label: 'JCI-Accredited Clinics' },
-    { icon: '⭐', label: '5-Star Google Rating' },
+    { icon: '★', label: '4.8 on Trustpilot (97 reviews)' },
     { icon: '📷', label: 'Real Before & After Photos' },
     { icon: '💳', label: 'Monthly Payment Options' },
   ];
