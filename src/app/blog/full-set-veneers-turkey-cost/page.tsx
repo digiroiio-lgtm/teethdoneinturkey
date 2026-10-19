@@ -109,7 +109,7 @@ export default function FullSetVeneersCostPage() {
           </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Can I Spread the Cost?</h2>
-          <p>Yes. We offer monthly payment plans that allow you to pay for your Turkey veneer treatment from £82/month over 36 months — meaning you can have your dream smile now and pay gradually from home.</p>
+          <p>Yes. We offer monthly payment plans that allow you to pay for your Turkey veneer treatment from £78/month over 36 months — meaning you can have your dream smile now and pay gradually from home.</p>
           <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What&apos;s Included in the Turkey Veneer Price?</h2>

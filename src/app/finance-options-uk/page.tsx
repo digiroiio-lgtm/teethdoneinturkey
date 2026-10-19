@@ -27,7 +27,7 @@ const options = [
     name: "36-Month Plan",
     badge: "Most Popular",
     rate: "0% APR representative",
-    monthly: "From £82/mo",
+    monthly: "From £78/mo",
     desc: "Spread the full cost over 3 years with nothing extra to pay. Our most popular option for larger treatments.",
     best: "Full smile makeovers, All-on-4, All-on-6",
   },
@@ -35,7 +35,7 @@ const options = [
     name: "24-Month Plan",
     badge: null,
     rate: "0% APR representative",
-    monthly: "From £122/mo",
+    monthly: "From £117/mo",
     desc: "A balance between manageable monthly payments and a shorter repayment term.",
     best: "Veneers (8–16 teeth), single arch implants",
   },
@@ -152,7 +152,7 @@ export default function FinanceOptionsUKPage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Can You Pay Monthly for Turkey Teeth? Finance &amp; Payment Plans</h1>
-          <p className="text-xl text-blue-200">Yes — spread the cost of dental treatment in Turkey over 12, 24 or 36 months. 0% APR representative plans from £82/month, bad credit considered.</p>
+          <p className="text-xl text-blue-200">Yes — spread the cost of dental treatment in Turkey over 12, 24 or 36 months. 0% APR representative plans from £78/month, bad credit considered.</p>
         </div>
       </div>
 

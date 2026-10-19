@@ -248,7 +248,7 @@ export default function HomePage() {
         id="monthly"
         tint="gray"
         heading="Can I pay for dental treatment in Turkey monthly?"
-        answer="Yes, monthly payment plans start from £82 per month and run over 12, 24 or 36 months for treatments such as veneers and implants. You can pre-qualify online in under 60 seconds without affecting your credit score, although approval and terms depend on your circumstances."
+        answer="Yes, monthly payment plans start from £78 per month and run over 12, 24 or 36 months for treatments such as veneers and implants. You can pre-qualify online in under 60 seconds without affecting your credit score, although approval and terms depend on your circumstances."
       >
         <p>
           The table above shows typical examples. A full set of 20 veneers at £3,800 works out at £106 per month over 36 months or £158 per month over 24 months, and All-on-4 at £4,500 works out at £125 or £188. Shorter terms cost more each month but clear the balance sooner.

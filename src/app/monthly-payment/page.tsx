@@ -90,8 +90,8 @@ export default function MonthlyPaymentPage() {
           {/* Trust signals */}
           <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm">
             {[
-              { icon: "⭐", text: "Rated 4.9/5 by UK patients" },
-              { icon: "🦷", text: "2,500+ patients treated" },
+              { icon: "⭐", text: "5.0 on Google (1,197 reviews, Akdeniz Dental)" },
+              { icon: "★", text: "4.8 on Trustpilot (97 reviews)" },
               { icon: "🇬🇧", text: "UK patient support team" },
               { icon: "🔒", text: "No commitment until you travel" },
             ].map(item => (
@@ -118,7 +118,7 @@ export default function MonthlyPaymentPage() {
             </a>
           </div>
 
-          <p className="text-blue-300 text-xs mt-4">⚡ Limited finance approvals available each month — apply early to secure your slot</p>
+          <p className="text-blue-300 text-xs mt-4">Ratings are for Akdeniz Dental Clinic, Antalya, checked October 2026. Google does not verify reviews and Trustpilot does not fact-check them.</p>
         </div>
       </div>
 
@@ -311,12 +311,12 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Why UK Patients Choose Dental Finance for Turkey Treatments</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Over 2,500 UK patients have used our finance options to access dental treatment in Turkey. The most common feedback is that the monthly payment makes the decision straightforward: instead of saving for years or going without, patients can book treatment this month and start paying as little as £82/month.
+              A monthly payment can make the decision simpler: instead of saving for years or going without, you can book treatment this month and start paying from £78 a month on a 36-month plan, subject to approval. The ratings below describe the partner clinic, Akdeniz Dental Clinic in Antalya, as shown on Google and Trustpilot in October 2026.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { stat: "2,500+", label: "UK patients treated" },
-                { stat: "4.9★", label: "Average patient rating" },
+                { stat: "5.0★", label: "Google rating, 1,197 reviews (Akdeniz Dental, Oct 2026)" },
+                { stat: "4.8★", label: "Trustpilot rating, 97 reviews (Oct 2026)" },
                 { stat: "£0", label: "Upfront commitment to explore" },
               ].map(item => (
                 <div key={item.label} className="bg-white rounded-xl p-5 border border-gray-200 text-center">
@@ -408,9 +408,9 @@ export default function MonthlyPaymentPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
               {[
                 { icon: "🇬🇧", title: "UK Patient Support", desc: "Dedicated UK coordinator before, during and after treatment" },
-                { icon: "🎓", title: "GDC-Registered Partners", desc: "Dentists registered with international equivalent bodies" },
-                { icon: "🏥", title: "ISO Certified Clinics", desc: "Accredited facilities meeting international standards" },
-                { icon: "👥", title: "10,000+ International Patients", desc: "Trusted by patients from 40+ countries" },
+                { icon: "🎓", title: "Qualified Dentists", desc: "Partner dentists qualify under Turkish regulation, not UK GDC registration. Ask for each dentist's credentials" },
+                { icon: "🏥", title: "Check Accreditation", desc: "Ask each clinic for current accreditation certificates, such as JCI or Ministry of Health approval, and verify them" },
+                { icon: "📋", title: "Written Treatment Plan", desc: "A written plan and cost estimate before you commit to anything" },
               ].map(item => (
                 <div key={item.title} className="bg-white rounded-xl p-4 border border-gray-200 text-center shadow-sm">
                   <div className="text-3xl mb-2">{item.icon}</div>
