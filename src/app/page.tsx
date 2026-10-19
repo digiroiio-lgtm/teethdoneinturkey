@@ -8,6 +8,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Link from "next/link";
+import { REVIEWER_NAME, REVIEWER_HREF } from "@/lib/reviewer";
 
 export const revalidate = 86400;
 
@@ -140,6 +141,34 @@ function AnswerSection({
 }
 
 const linkClass = "text-[#1e40af] hover:underline";
+
+function ExpertQuote({
+  quote,
+  name,
+  href,
+  role,
+}: {
+  quote: string;
+  name: string;
+  href?: string;
+  role: string;
+}) {
+  return (
+    <figure className="expert-quote my-6 border-l-4 border-[#1e40af] bg-blue-50/60 rounded-r-xl px-5 py-4">
+      <blockquote>
+        <p className="text-gray-800 italic leading-relaxed">&ldquo;{quote}&rdquo;</p>
+      </blockquote>
+      <figcaption className="mt-3 text-sm text-gray-600">
+        {href ? (
+          <Link href={href} className="font-semibold text-[#1e40af] hover:underline">{name}</Link>
+        ) : (
+          <strong className="text-gray-900">{name}</strong>
+        )}
+        <span className="block">{role}</span>
+      </figcaption>
+    </figure>
+  );
+}
 
 // GEO-friendly page graph: WebPage with speakable spec so voice/AI answer
 // surfaces can safely lift Q&A. `isPartOf` ties the page to the site entity
@@ -290,6 +319,12 @@ export default function HomePage() {
         <p>
           Look for real before-and-after photos of the dentist&apos;s own cases, reviews that describe problems as well as praise, and clear answers about materials and brands. Ask whether the person who quotes you is the person who will do the work, and how aftercare is handled once you are home.
         </p>
+        <ExpertQuote
+          quote="A successful smile makeover is not simply about creating whiter or straighter teeth. It requires a personalised treatment plan that balances natural aesthetics, bite function, and long-term oral health. Every restoration should complement the patient's facial features while preserving healthy tooth structure whenever possible."
+          name={REVIEWER_NAME}
+          href={REVIEWER_HREF}
+          role="Dentist, Aesthetic Dentistry & Treatment Planning | Akdeniz Dental, Antalya"
+        />
         <p>
           Our{" "}
           <Link href="/turkey-teeth-clinic" className={linkClass}>Turkey teeth clinic page</Link>{" "}
