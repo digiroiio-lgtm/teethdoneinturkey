@@ -7,6 +7,7 @@ import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 import TestimonialCard from "@/components/TestimonialCard";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import Link from "next/link";
 
 export const revalidate = 86400;
 
@@ -110,6 +111,36 @@ const testimonials = [
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 
+// Bump only when the page content is genuinely reviewed or changed.
+const LAST_UPDATED = "2026-10-19";
+const LAST_UPDATED_LABEL = "19 October 2026";
+
+function AnswerSection({
+  id,
+  heading,
+  answer,
+  tint,
+  children,
+}: {
+  id: string;
+  heading: string;
+  answer: React.ReactNode;
+  tint: "white" | "gray";
+  children: React.ReactNode;
+}) {
+  return (
+    <section id={id} className={`py-14 ${tint === "gray" ? "bg-gray-50" : "bg-white"}`}>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">{heading}</h2>
+        <p className="text-gray-800 text-lg leading-relaxed mb-4 font-medium">{answer}</p>
+        <div className="text-gray-600 leading-relaxed space-y-4">{children}</div>
+      </div>
+    </section>
+  );
+}
+
+const linkClass = "text-[#1e40af] hover:underline";
+
 // GEO-friendly page graph: WebPage with speakable spec so voice/AI answer
 // surfaces can safely lift Q&A. `isPartOf` ties the page to the site entity
 // declared in the root layout. FAQPage schema for the on-page FAQs is emitted
@@ -131,6 +162,7 @@ const homePageJsonLd = {
         "@type": "SpeakableSpecification",
         cssSelector: ["h1", "h2", ".faq-answer"],
       },
+      dateModified: LAST_UPDATED,
     },
     {
       "@type": "BreadcrumbList",
@@ -155,6 +187,9 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }} />
       <HeroSection />
       <TrustBar />
+      <p className="text-center text-sm text-gray-500 py-3 bg-white">
+        Last updated: <time dateTime={LAST_UPDATED}>{LAST_UPDATED_LABEL}</time>
+      </p>
 
       {/* Treatment Cards */}
       <section className="py-16 bg-gray-50">
@@ -173,8 +208,114 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      <AnswerSection
+        id="cost"
+        tint="white"
+        heading="How much cheaper is dental treatment in Turkey than in the UK?"
+        answer="Dental treatment in Turkey typically costs 69% to 90% less than UK private prices for the same procedure, based on the prices listed on this site. Porcelain veneers start from £190 per tooth against around £900 in the UK, and a single dental implant starts from £250 against around £2,500."
+      >
+        <p>
+          These figures are starting points, not quotes. The final price depends on the clinic, the materials, how many teeth are treated and how complex your case is. The comparison table below sets eight common treatments side by side so you can see where the biggest differences sit.
+        </p>
+        <p>
+          When you compare a Turkish quote with a UK one, check what each includes. Ask whether flights, hotel nights, airport transfers, X-rays, follow-up visits and the guarantee are covered, because a lower headline price can hide extras. Our{" "}
+          <Link href="/prices/turkey-teeth-cost" className={linkClass}>Turkey teeth cost guide</Link>{" "}
+          breaks the numbers down treatment by treatment. A written quote based on your own X-rays and examination is the only reliable number for your mouth.
+        </p>
+      </AnswerSection>
+
       <PriceTable />
       <MonthlyPaymentTable />
+
+
+      <AnswerSection
+        id="monthly"
+        tint="gray"
+        heading="Can I pay for dental treatment in Turkey monthly?"
+        answer="Yes, monthly payment plans start from £82 per month and run over 12, 24 or 36 months for treatments such as veneers and implants. You can pre-qualify online in under 60 seconds without affecting your credit score, although approval and terms depend on your circumstances."
+      >
+        <p>
+          The table above shows typical examples. A full set of 20 veneers at £3,800 works out at £106 per month over 36 months or £158 per month over 24 months, and All-on-4 at £4,500 works out at £125 or £188. Shorter terms cost more each month but clear the balance sooner.
+        </p>
+        <p>
+          Read the finance terms carefully before you sign, including the total amount repayable and any early repayment rules. Our{" "}
+          <Link href="/monthly-payment" className={linkClass}>monthly payment page</Link>{" "}
+          explains the pre-qualification process, and the{" "}
+          <Link href="/finance-options-uk" className={linkClass}>UK finance options guide</Link>{" "}
+          covers the alternatives, including what to expect if your credit history is imperfect.
+        </p>
+      </AnswerSection>
+
+      <AnswerSection
+        id="safety"
+        tint="white"
+        heading="Is dental treatment in Turkey safe for UK patients?"
+        answer="Treatment in Turkey can be safe when you choose an accredited clinic, a named dentist and a written treatment plan, but outcomes vary by clinic, as they do in the UK. The main risks come from rushed or over-aggressive treatment, unclear guarantees and poor follow-up, rather than from the country itself."
+      >
+        <p>
+          The partner clinics described on this site are accredited by JCI or approved by the Turkish Ministry of Health, and use brand-name materials such as Straumann implants and Ivoclar veneers. Accreditation is a useful starting point, but it is not a guarantee of your individual result.
+        </p>
+        <p>
+          Before you travel, ask who will treat you, how many similar cases they have completed, what happens if a veneer or implant fails, and whether your records and X-rays will be sent to you. Our{" "}
+          <Link href="/guides/turkish-veneers-safety" className={linkClass}>Turkish veneers safety guide</Link>{" "}
+          and the article on{" "}
+          <Link href="/blog/is-it-safe-to-get-teeth-done-in-turkey" className={linkClass}>whether it is safe to get teeth done in Turkey</Link>{" "}
+          cover the risks in detail, including warning signs that a treatment plan is too aggressive.
+        </p>
+      </AnswerSection>
+
+      <AnswerSection
+        id="duration"
+        tint="gray"
+        heading="How long do I need to stay in Turkey for dental treatment?"
+        answer="Veneers usually need 5 to 7 days in Turkey, and All-on-4 or All-on-6 usually need 5 to 7 days for the first visit. Dental implants normally need two trips: 3 to 5 days for placement, then 3 to 4 days for the crowns about 3 to 6 months later."
+      >
+        <p>
+          The gap between implant visits lets the bone heal around the implant before the final crowns are fitted. Rushing this stage raises the risk of failure, so a clinic that promises a permanent result with no healing period deserves a follow-up question.
+        </p>
+        <p>
+          These are typical ranges, not promises. Your dentist sets the exact schedule after examining you, and extra procedures such as bone grafts or gum treatment can add time. Plan flights and time off work with some flexibility, and read our{" "}
+          <Link href="/travel-to-turkey" className={linkClass}>travel to Turkey guide</Link>{" "}
+          for practical tips on flights, hotels and transfers.
+        </p>
+      </AnswerSection>
+
+      <AnswerSection
+        id="choose-clinic"
+        tint="white"
+        heading="How do I choose a dental clinic in Turkey?"
+        answer="Choose a clinic by checking its accreditation, the named dentist who will treat you, an itemised written treatment plan, and the guarantee terms in writing before you pay a deposit. Avoid any clinic that quotes a firm price without seeing your X-rays or pressures you to commit the same day."
+      >
+        <p>
+          Look for real before-and-after photos of the dentist&apos;s own cases, reviews that describe problems as well as praise, and clear answers about materials and brands. Ask whether the person who quotes you is the person who will do the work, and how aftercare is handled once you are home.
+        </p>
+        <p>
+          Our{" "}
+          <Link href="/turkey-teeth-clinic" className={linkClass}>Turkey teeth clinic page</Link>{" "}
+          explains how we coordinate clinics for UK patients, and the{" "}
+          <Link href="/blog/best-dental-clinics-turkey" className={linkClass}>guide to the best dental clinics in Turkey</Link>{" "}
+          gives a longer checklist you can use whichever clinic you are considering.
+        </p>
+      </AnswerSection>
+
+      <AnswerSection
+        id="after-care"
+        tint="gray"
+        heading="What happens if something goes wrong after I return to the UK?"
+        answer="Contact your Turkish clinic first, because most guarantees depend on it, then see a UK dentist if the problem is urgent. Many UK dentists will treat pain or infection but may decline to redo or adjust work they did not carry out themselves."
+      >
+        <p>
+          Keep your treatment plan, invoices, X-rays, photographs and written guarantee. These make any remote review or return visit faster and help a UK dentist understand what was done. Our partner clinics offer guarantees of up to 10 years and UK-based aftercare coordination, but you should confirm the exact terms for your treatment in writing.
+        </p>
+        <p>
+          Read{" "}
+          <Link href="/blog/will-uk-dentists-fix-turkey-teeth" className={linkClass}>whether UK dentists will fix Turkey teeth</Link>{" "}
+          and our{" "}
+          <Link href="/blog/aftercare-for-dental-work-in-turkey" className={linkClass}>aftercare guide</Link>{" "}
+          for what to expect in the first weeks and which symptoms need prompt attention.
+        </p>
+      </AnswerSection>
 
       {/* Testimonials */}
       <section className="py-16 bg-gray-50">
@@ -190,6 +331,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+
+      <AnswerSection
+        id="how-this-page-is-written"
+        tint="white"
+        heading="Who writes this guide and how is it kept up to date?"
+        answer="Teeth Done in Turkey is a UK patient guide and coordination service, not a dental clinic. We compile prices from our partner clinics, link to official sources where we can, and show the date this page was last updated so you can judge how current the figures are."
+      >
+        <p>
+          The information here is general and does not replace advice from your own dentist. Clinical decisions belong to the dentist who examines you, and prices are indicative until you hold a written quote.
+        </p>
+        <p>
+          Pages on this site are marked as medically reviewed only where a named reviewer and a review date are recorded, and this homepage does not currently carry that mark. Read our{" "}
+          <Link href="/editorial-policy" className={linkClass}>editorial and medical review policy</Link>{" "}
+          for how content is written, checked and corrected.
+        </p>
+      </AnswerSection>
 
       <FAQSection />
 
