@@ -4,6 +4,12 @@ import MonthlyPaymentTable from "@/components/MonthlyPaymentTable";
 import CTASection from "@/components/CTASection";
 import TrackedLink from "@/components/TrackedLink";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
+import ExpertQuote from "@/components/ExpertQuote";
+
+const SITE_URL = "https://www.teethdoneinturkey.co.uk";
+// Bump only when the page content is genuinely reviewed or changed.
+const LAST_UPDATED = "2026-10-19";
+const LAST_UPDATED_LABEL = "19 October 2026";
 
 export const revalidate = 86400;
 
@@ -46,9 +52,34 @@ const financeFaqs = [
   { q: "What if I need to cancel after finance is approved?", a: "Finance can be cancelled during the statutory 14-day cooling-off period at no cost. If you cancel after this period, the finance agreement terms will apply — full details provided at the time of application." },
 ];
 
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/monthly-payment#webpage`,
+      url: `${SITE_URL}/monthly-payment`,
+      name: "Turkey Teeth Monthly Payments: Cost Per Treatment",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      inLanguage: "en-GB",
+      dateModified: LAST_UPDATED,
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE_URL}/monthly-payment#faq`,
+      mainEntity: financeFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+
 export default function MonthlyPaymentPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
       {/* ── Hero ── */}
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
@@ -91,6 +122,10 @@ export default function MonthlyPaymentPage() {
         </div>
       </div>
 
+      <p className="text-center text-sm text-gray-500 py-3 bg-white">
+        Last updated: <time dateTime={LAST_UPDATED}>{LAST_UPDATED_LABEL}</time>
+      </p>
+
       {/* ── Payment Table ── */}
       <MonthlyPaymentTable />
 
@@ -98,8 +133,8 @@ export default function MonthlyPaymentPage() {
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">UK vs Turkey Dental Cost Comparison</h2>
-          <p className="text-gray-600 mb-6">
-            See exactly how much you save on each treatment — and what it costs when spread over 36 months with UK-based monthly finance.
+          <p className="text-gray-800 font-medium mb-6">
+            Turkey prices in this table sit well below UK private prices, and spreading the Turkey price over 36 months gives monthly payments from £6 for a veneer to £306 for All-on-6 on both arches. All figures are indicative until you hold a written quote from your clinic.
           </p>
           <div className="overflow-x-auto rounded-2xl shadow-md">
             <table className="w-full bg-white text-sm">
@@ -140,8 +175,11 @@ export default function MonthlyPaymentPage() {
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">What &ldquo;Turkey Teeth on Finance&rdquo; Actually Means</h2>
+            <p className="text-gray-800 font-medium leading-relaxed mb-4">
+              Turkey teeth finance means borrowing arranged in the UK, in pounds, so you do not have to pay the full treatment cost upfront. You are assessed and repay in the UK while the clinic is paid for your treatment in Turkey. It is not a loan taken out in Turkey, and nothing is paid in lira.
+            </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              &ldquo;Turkey teeth finance&rdquo;, &ldquo;turkey teeth on finance&rdquo; and &ldquo;Turkey dental payment plan&rdquo; all describe the same thing: borrowing arranged in the UK, in pounds, so you do not have to pay the full treatment cost upfront. You are assessed and repay in the UK; the clinic is paid for your treatment in Turkey. It is not a loan taken out in Turkey, and it is not paid in lira.
+              The same idea appears under several names: &ldquo;Turkey teeth on finance&rdquo;, &ldquo;Turkey dental payment plan&rdquo; and &ldquo;pay monthly for teeth in Turkey&rdquo; all describe UK-arranged borrowing that spreads the cost of one treatment abroad.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               Two things decide what you actually pay: the treatment total and the term you choose. At 0% APR representative, a longer term simply divides the same total across more months rather than adding interest. For the difference between a payment plan, dental finance, a personal loan and NHS charges, see{" "}
@@ -166,14 +204,17 @@ export default function MonthlyPaymentPage() {
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Veneers Turkey Monthly Payment Plans</h2>
+            <p className="text-gray-800 font-medium leading-relaxed mb-4">
+              Porcelain veneers in Turkey cost <strong>£190–£250 per tooth</strong>, so a full set of 20 costs £3,800–£5,000. At the £3,800 price and a 0% plan, that is about £317 a month over 12 months, £158 over 24 months or £106 over 36 months.
+            </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Porcelain veneers in Turkey cost <strong>£190–£250 per tooth</strong> using Ivoclar E-max — the same brand used in the UK&apos;s leading cosmetic dental practices. A full set of 20 veneers (£3,800–£5,000) can be financed from:
+              The clinics we coordinate use Ivoclar E-max, a lithium-disilicate ceramic also used in UK cosmetic practices. The monthly examples below are calculated on the £3,800 price, the lower end of the 20-veneer range:
             </p>
             <div className="grid grid-cols-3 gap-4 mb-4">
               {[
-                { term: "12 months", amount: "£267/mo", label: "Fastest payoff" },
-                { term: "24 months", amount: "£140/mo", label: "Balanced" },
-                { term: "36 months", amount: "£95/mo", label: "Lowest monthly" },
+                { term: "12 months", amount: "£317/mo", label: "Fastest payoff" },
+                { term: "24 months", amount: "£158/mo", label: "Balanced" },
+                { term: "36 months", amount: "£106/mo", label: "Lowest monthly" },
               ].map(item => (
                 <div key={item.term} className="bg-white rounded-xl p-4 border border-gray-200 text-center shadow-sm">
                   <p className="text-xs text-gray-500 mb-1">{item.term}</p>
@@ -185,6 +226,12 @@ export default function MonthlyPaymentPage() {
             <p className="text-gray-600 text-sm leading-relaxed">
               All veneer finance includes a free Digital Smile Design consultation, temporary veneers during fabrication, and a 5–10 year written guarantee from our partner clinics.
             </p>
+            <ExpertQuote
+              quote="A successful smile makeover is not simply about creating whiter or straighter teeth. It requires a personalised treatment plan that balances natural aesthetics, bite function, and long-term oral health. Every restoration should complement the patient's facial features while preserving healthy tooth structure whenever possible."
+              name="Dr. Mustafa Akça"
+              href="/medical-reviewers/mustafa-akca"
+              role="Dentist, Aesthetic Dentistry & Treatment Planning | Akdeniz Dental, Antalya"
+            />
             <div className="mt-3">
               <Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ See full veneers cost breakdown</Link>
             </div>
@@ -192,8 +239,11 @@ export default function MonthlyPaymentPage() {
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Dental Implants Turkey Finance Options</h2>
+            <p className="text-gray-800 font-medium leading-relaxed mb-4">
+              A single dental implant in Turkey costs <strong>£420–£600</strong>, including consultation, CBCT scan, implant placement and the final zirconia crown. Over 36 months that is from £14 a month, and All-on-4 on one arch is from £125 a month, based on a 0% plan.
+            </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              A single dental implant in Turkey costs <strong>£420–£600 all-inclusive</strong> — including consultation, CBCT scan, implant placement, and final zirconia crown. Spread over 36 months, that&apos;s from just £14/month. For larger implant treatments:
+              Larger implant treatments scale in the same way. The table shows the Turkey price and the lowest 36-month monthly figure for each option:
             </p>
             <div className="overflow-x-auto rounded-xl">
               <table className="w-full text-sm bg-white border border-gray-200 rounded-xl overflow-hidden">
@@ -223,6 +273,12 @@ export default function MonthlyPaymentPage() {
                 </tbody>
               </table>
             </div>
+            <ExpertQuote
+              quote="Replacing missing posterior teeth is essential not only for restoring a complete smile but also for maintaining effective chewing function and a stable bite. Dental implants can provide a long-term solution when supported by adequate bone structure, careful surgical planning, and an individual assessment of each patient's oral health."
+              name="Dr. Mehmet Onur Merey"
+              href="https://akdenizdental.com/mehmet-onur-merey"
+              role="Oral & Maxillofacial Surgeon, Clinic Owner | Akdeniz Dental Clinic, Antalya"
+            />
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
               <Link href="/prices/dental-implants-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ See full implants cost breakdown</Link>
               <Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Dedicated implants finance guide</Link>
@@ -244,7 +300,7 @@ export default function MonthlyPaymentPage() {
                 <li key={item.title} className="flex gap-3 list-none bg-white rounded-xl p-4 border border-gray-200">
                   <span className="text-2xl">{item.icon}</span>
                   <div>
-                    <h3 className="font-semibold text-gray-900">{item.title}</h3>
+                    <p className="font-semibold text-gray-900">{item.title}</p>
                     <p className="text-sm text-gray-600">{item.desc}</p>
                   </div>
                 </li>
@@ -299,6 +355,36 @@ export default function MonthlyPaymentPage() {
           </div>
 
           <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How Is the Monthly Payment Calculated?</h2>
+            <p className="text-gray-800 font-medium leading-relaxed mb-4">
+              Each monthly figure is the treatment total divided by the number of months, because a 0% plan adds no interest. For example, £3,800 over 36 months is £105.56, shown as £106 a month. A plan that carries interest costs more, so always check the representative APR.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              The same arithmetic applies across this page: £3,800 over 24 months is about £158 a month, £4,500 over 36 months is £125 a month, and £2,000 over 36 months is about £56 a month. We round to the nearest pound and show &ldquo;from&rdquo; where the price depends on the clinic and the number of teeth.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Your own figure depends on your written treatment plan and the lender&apos;s offer. Treat the numbers here as a way to compare treatments, not as a quote.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">What Should I Check Before Accepting a Finance Offer?</h2>
+            <p className="text-gray-800 font-medium leading-relaxed mb-4">
+              Check the representative APR, the total amount repayable, any early-repayment charge and the cancellation terms before you sign. Pre-qualification is a soft search, but a full application appears on your credit file, so compare the written offer with your treatment plan first.
+            </p>
+            <ul className="space-y-2 text-gray-600 text-sm">
+              {[
+                "The amount borrowed matches the price in your written treatment plan, including any extras such as bone grafts or extra teeth",
+                "The monthly payment, term and total repayable are stated in pounds, and the APR is shown as a representative figure",
+                "You know the cooling-off position: finance can be cancelled within 14 days at no cost, and later cancellation follows the agreement terms",
+                "You have kept copies of the agreement, the treatment plan and the clinic's written guarantee",
+              ].map((item, i) => (
+                <li key={i} className="flex gap-2 items-start"><span className="text-green-500 mt-0.5">✓</span><span>{item}</span></li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Finance Eligibility Explained</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Our finance options are available to UK residents aged 18+. Pre-qualification uses a <strong>soft credit search</strong> that does not affect your credit score. You can check your eligibility before making any commitment to treatment.
@@ -328,7 +414,7 @@ export default function MonthlyPaymentPage() {
               ].map(item => (
                 <div key={item.title} className="bg-white rounded-xl p-4 border border-gray-200 text-center shadow-sm">
                   <div className="text-3xl mb-2">{item.icon}</div>
-                  <h3 className="font-bold text-gray-900 text-xs mb-1">{item.title}</h3>
+                  <p className="font-bold text-gray-900 text-xs mb-1">{item.title}</p>
                   <p className="text-xs text-gray-500">{item.desc}</p>
                 </div>
               ))}
@@ -342,22 +428,26 @@ export default function MonthlyPaymentPage() {
 
           <MedicalReviewBadge />
 
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Finance FAQs</h2>
-            <div className="space-y-4">
-              {financeFaqs.map(faq => (
-                <div key={faq.q} className="bg-white rounded-xl p-5 border border-gray-200">
-                  <h3 className="font-semibold text-gray-900 mb-2">{faq.q}</h3>
-                  <p className="text-gray-600 text-sm">{faq.a}</p>
-                </div>
-              ))}
+          {[
+            { title: "Finance FAQs: Eligibility and Cost", items: financeFaqs.slice(0, 3) },
+            { title: "Finance FAQs: Approval, Timing and Cancellation", items: financeFaqs.slice(3) },
+          ].map(group => (
+            <div key={group.title}>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">{group.title}</h2>
+              <div className="space-y-4">
+                {group.items.map(faq => (
+                  <div key={faq.q} className="bg-white rounded-xl p-5 border border-gray-200">
+                    <p className="font-semibold text-gray-900 mb-2">{faq.q}</p>
+                    <p className="text-gray-600 text-sm">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-
+          ))}
 
           {/* Internal links */}
           <div className="pt-8 border-t border-gray-200">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Further</h3>
+            <p className="text-lg font-bold text-gray-900 mb-4">Explore Further</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
                 { href: "/prices/veneers-turkey-cost", label: "Veneers Turkey Cost", sub: "E-max from £190/tooth" },
