@@ -105,6 +105,45 @@ export default function VeneersTurkeyPage() {
           </div>
 
           <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Veneers in Turkey: Key Figures at a Glance</h2>
+            <p className="text-gray-800 font-medium leading-relaxed mb-4">
+              A typical veneer case in Turkey costs £190 to £250 per tooth, takes 5 to 7 days, removes 0.3 to 0.5 mm of enamel and lasts 10 to 15 years for porcelain. For 20 veneers that is £3,800, against about £18,000 in the UK, a saving of roughly 79%.
+            </p>
+            <div className="overflow-x-auto rounded-xl">
+              <table className="w-full text-sm bg-white border border-gray-200 rounded-xl overflow-hidden">
+                <thead>
+                  <tr className="bg-gray-100 text-gray-700">
+                    <th className="px-4 py-3 text-left">Measure</th>
+                    <th className="px-4 py-3 text-right">Figure</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { m: "Porcelain veneer price in Turkey, per tooth", v: "From £190" },
+                    { m: "Typical UK private price, per tooth", v: "About £900" },
+                    { m: "Saving per tooth", v: "About 79%" },
+                    { m: "E-max veneer, per tooth", v: "From £220" },
+                    { m: "Zirconia veneer, per tooth", v: "From £250" },
+                    { m: "Composite veneer, per tooth", v: "From £90" },
+                    { m: "Full set of 20 veneers: Turkey vs UK", v: "£3,800 vs £18,000" },
+                    { m: "Enamel removed during preparation", v: "0.3–0.5 mm" },
+                    { m: "Time in Turkey", v: "5–7 days" },
+                    { m: "Typical lifespan of porcelain or E-max", v: "10–15 years" },
+                    { m: "Clinic structural guarantee on veneer work", v: "10 years" },
+                    { m: "Monthly cost of 20 veneers over 36 months (0% plan, subject to approval)", v: "About £106" },
+                  ].map((r, i) => (
+                    <tr key={r.m} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                      <td className="px-4 py-3 text-gray-800">{r.m}</td>
+                      <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.v}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-gray-500 mt-3">Prices last verified June 2026 and are indicative until you hold a written quote. UK figures are typical private prices, not a quote from a specific practice.</p>
+          </div>
+
+          <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Dental Veneers?</h2>
             <p className="text-gray-800 font-medium leading-relaxed mb-4">
               Dental veneers are ultra-thin porcelain or composite shells bonded to the front of your teeth to change their colour, shape or alignment. They suit teeth that are healthy but discoloured, chipped, worn, gapped or uneven. Veneers are a cosmetic treatment, not a way to treat decay or gum disease.
@@ -117,6 +156,8 @@ export default function VeneersTurkeyPage() {
               <a href="https://www.nhs.uk/conditions/veneers/" target="_blank" rel="noopener noreferrer" className={extLinkClass}>NHS guide to veneers</a>{" "}
               and the{" "}
               <a href="https://en.wikipedia.org/wiki/Veneer_(dentistry)" target="_blank" rel="noopener noreferrer" className={extLinkClass}>Wikipedia entry on dental veneers</a>.
+              For general background on travelling abroad for treatment, see Wikipedia&apos;s article on{" "}
+              <a href="https://en.wikipedia.org/wiki/Medical_tourism" target="_blank" rel="noopener noreferrer" className={extLinkClass}>medical tourism</a>.
             </p>
           </div>
 
@@ -178,14 +219,18 @@ export default function VeneersTurkeyPage() {
             <p className="text-gray-600 leading-relaxed">
               Our{" "}
               <Link href="/blog/how-long-do-dental-veneers-last" className={linkClass}>guide to how long veneers last</Link>{" "}
-              covers lifespan by material in more detail.
+              covers lifespan by material in more detail. For everyday oral-care guidance, see the CDC&apos;s{" "}
+              <a href="https://www.cdc.gov/oral-health/" target="_blank" rel="noopener noreferrer" className={extLinkClass}>oral health pages</a>{" "}
+              and MedlinePlus&apos;s{" "}
+              <a href="https://medlineplus.gov/dentalhealth.html" target="_blank" rel="noopener noreferrer" className={extLinkClass}>dental health topics</a>, and you can search peer-reviewed studies on veneer survival on{" "}
+              <a href="https://pubmed.ncbi.nlm.nih.gov/?term=porcelain+laminate+veneers+survival" target="_blank" rel="noopener noreferrer" className={extLinkClass}>PubMed</a>.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Are Veneers Right for Everyone? Risks to Know About</h2>
             <p className="text-gray-800 font-medium leading-relaxed mb-4">
-              Veneers are not suitable for everyone, and tooth preparation is irreversible because a thin layer of enamel is removed. They are usually not advised for people with untreated decay or gum disease, or with heavy grinding that is not managed. Your dentist should examine you and review X-rays before agreeing a plan.
+              Veneers are not suitable for everyone, and tooth preparation is irreversible because a thin layer of enamel is removed. They are usually not advised for people with untreated decay or gum disease, or with heavy grinding (<a href="https://en.wikipedia.org/wiki/Bruxism" target="_blank" rel="noopener noreferrer" className={extLinkClass}>bruxism</a>) that is not managed. Your dentist should examine you and review X-rays before agreeing a plan.
             </p>
             <ExpertQuote
               quote="A successful smile makeover is not simply about creating whiter or straighter teeth. It requires a personalised treatment plan that balances natural aesthetics, bite function, and long-term oral health. Every restoration should complement the patient's facial features while preserving healthy tooth structure whenever possible."
@@ -212,7 +257,9 @@ export default function VeneersTurkeyPage() {
               <Link href="/travel-to-turkey" className={linkClass}>travel to Turkey guide</Link>{" "}
               and{" "}
               <Link href="/blog/aftercare-for-dental-work-in-turkey" className={linkClass}>aftercare guide</Link>{" "}
-              explain the practical side. For UK regulator advice on treatment abroad, see the{" "}
+              explain the practical side. Check the UK government&apos;s{" "}
+              <a href="https://www.gov.uk/foreign-travel-advice/turkey" target="_blank" rel="noopener noreferrer" className={extLinkClass}>foreign travel advice for Turkey</a>{" "}
+              before you book flights. For UK regulator advice on treatment abroad, see the{" "}
               <a href="https://www.gdc-uk.org/patients/dental-tourism" target="_blank" rel="noopener noreferrer" className={extLinkClass}>General Dental Council&apos;s dental tourism guidance</a>.
             </p>
           </div>
@@ -346,6 +393,12 @@ export default function VeneersTurkeyPage() {
             { label: "NHS: Dental treatment abroad", href: "https://www.nhs.uk/nhs-services/dentists/dental-treatment-abroad/" },
             { label: "General Dental Council: Dental tourism", href: "https://www.gdc-uk.org/patients/dental-tourism" },
             { label: "Wikipedia: Veneer (dentistry)", href: "https://en.wikipedia.org/wiki/Veneer_(dentistry)" },
+            { label: "Wikipedia: Medical tourism", href: "https://en.wikipedia.org/wiki/Medical_tourism" },
+            { label: "Wikipedia: Bruxism", href: "https://en.wikipedia.org/wiki/Bruxism" },
+            { label: "GOV.UK: Foreign travel advice for Turkey", href: "https://www.gov.uk/foreign-travel-advice/turkey" },
+            { label: "CDC: Oral health", href: "https://www.cdc.gov/oral-health/" },
+            { label: "MedlinePlus: Dental health", href: "https://medlineplus.gov/dentalhealth.html" },
+            { label: "PubMed: Porcelain laminate veneer survival studies", href: "https://pubmed.ncbi.nlm.nih.gov/?term=porcelain+laminate+veneers+survival" },
           ]}
         />
       </div>
