@@ -11,13 +11,13 @@ const prices = [
   { treatment: 'Zirconia Crown', uk: '£1,200', turkey: '£130', saving: '89%' },
 ];
 
-export default function PriceTable() {
+export default function PriceTable({ intro, note }: { intro?: string; note?: string }) {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">UK vs Turkey Dental Prices</h2>
-          <p className="text-gray-600">See how much you could save with dental treatment in Turkey</p>
+          <p className="text-gray-600">{intro ?? 'See how much you could save with dental treatment in Turkey'}</p>
         </div>
         <div className="overflow-x-auto rounded-2xl shadow-xl shadow-blue-900/5 ring-1 ring-gray-100">
           <table className="w-full bg-white text-sm">
@@ -48,6 +48,7 @@ export default function PriceTable() {
             </tbody>
           </table>
         </div>
+        {note && <p className="text-sm text-gray-600 leading-relaxed mt-5">{note}</p>}
         <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/prices/turkey-teeth-cost"
             className="bg-[#1e40af] text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 hover:-translate-y-0.5 transition-all shadow-md">

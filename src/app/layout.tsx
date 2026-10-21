@@ -143,12 +143,15 @@ const graph = {
 
 export default function RootLayout({
   children,
+  structuredData,
 }: Readonly<{
   children: React.ReactNode;
+  structuredData: React.ReactNode;
 }>) {
   return (
     <html lang="en-GB">
       <head>
+        {structuredData}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}

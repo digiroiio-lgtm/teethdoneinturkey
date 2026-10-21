@@ -37,9 +37,11 @@ const defaultFaqs: FAQItem[] = [
 interface FAQSectionProps {
   faqs?: FAQItem[];
   title?: string;
+  introduction?: string;
+  emitSchema?: boolean;
 }
 
-export default function FAQSection({ faqs = defaultFaqs, title = 'Frequently Asked Questions' }: FAQSectionProps) {
+export default function FAQSection({ faqs = defaultFaqs, title = 'Frequently Asked Questions', introduction, emitSchema = true }: FAQSectionProps) {
   const [open, setOpen] = useState<number | null>(null);
 
   const faqJsonLd = {
@@ -54,12 +56,13 @@ export default function FAQSection({ faqs = defaultFaqs, title = 'Frequently Ask
 
   return (
     <section className="py-16 bg-white">
-      <script
+      {emitSchema && <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
+      />}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center tracking-tight">{title}</h2>
+        {introduction && <p className="text-gray-600 leading-relaxed mb-6">{introduction}</p>}
         <div className="space-y-3">
           {faqs.map((faq, i) => {
             const isOpen = open === i;
