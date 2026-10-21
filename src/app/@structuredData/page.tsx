@@ -32,6 +32,9 @@ const graph = {
       publisher: { "@id": `${SITE_URL}/#organization` },
       image: `${SITE_URL}/opengraph-image`,
       citation: [
+        "https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know",
+        "https://www.nidcr.nih.gov/health-info/gum-disease",
+        "https://www.nidcr.nih.gov/health-info/oral-hygiene",
         "https://www.gdc-uk.org/standards-guidance/information-for-patients-public/going-abroad-for-dental-treatment",
         "https://www.bda.org/media-centre/uk-dentists-picking-up-the-pieces-from-dental-tourism-boom/",
       ],

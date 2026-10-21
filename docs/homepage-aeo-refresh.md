@@ -36,3 +36,11 @@ The root head renders the `@structuredData` slot. Its homepage page supplies the
 ## Context.dev verification
 
 The requested checker was run for the exact production homepage URL. It returned 85/100 with the original 1,131-word-era text, omitting even the homepage date and clinic quotations that were already in the starting repository and current web retrieval. This is an observed stale snapshot, not evidence that a new deployment failed. A post-deployment check must confirm the extracted text contains `21 October 2026` and the added sections before its score can be attributed to this change.
+
+## Fresh production crawl and reference follow-up
+
+Production deployment `df15c0a` was confirmed live with the 21 October date and homepage-only head graph. The exact URL still produced the older checker snapshot. A cache-separated request for `/?aeo-review=20261021` extracted the current page and scored **90/100, Grade A**, with all five originally requested checks passing. It measured 3,991 extracted words including surrounding site content.
+
+Article markup activated an additional authoritative-citations check, which the checker previously treated as not applicable. The GDC and BDA are relevant primary professional sources, but its domain heuristic reported 0/3 recognised links. Added three verified FDA/NIH references beside the existing guidance on implant healing, clinical gum assessment and continuing oral hygiene, as well as in the references and Article citations. These US sources support clinical background, not UK regulatory status or an endorsement of the service.
+
+Follow-up local validation: lint, build, freshness-manifest check and the rendered-HTML check pass. The page now contains 3,944 main-content words under the same counting method, with all 25 passages still in range.
