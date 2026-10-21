@@ -295,7 +295,7 @@ export default function HomePage() {
           <Link href="/blog/will-uk-dentists-fix-turkey-teeth" className={linkClass}>whether UK dentists will fix Turkey teeth</Link>{" "}
           and our{" "}
           <Link href="/blog/aftercare-for-dental-work-in-turkey" className={linkClass}>aftercare guide</Link>{" "}
-          for what to expect in the first weeks and which symptoms need prompt attention. Follow your dentist’s personalised cleaning instructions; the <a href="https://www.nidcr.nih.gov/health-info/oral-hygiene" className={linkClass}>NIH oral hygiene guide</a> explains why ongoing plaque removal and professional care remain important.
+          for what to expect in the first weeks and which symptoms need prompt attention. Follow your dentist’s personalised cleaning instructions; the <a href="https://www.cdc.gov/oral-health/about/index.html" className={linkClass}>CDC oral health guide</a> recommends regular brushing, flossing and professional dental care.
         </p>
       </AnswerSection>
 
@@ -433,7 +433,7 @@ export default function HomePage() {
           sources={[
             { label: "FDA: Dental implants, components, healing and patient records", href: "https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know" },
             { label: "NIH / NIDCR: Periodontal disease and clinical assessment", href: "https://www.nidcr.nih.gov/health-info/gum-disease" },
-            { label: "NIH / NIDCR: Oral hygiene and ongoing care", href: "https://www.nidcr.nih.gov/health-info/oral-hygiene" },
+            { label: "CDC: Oral health, self-care and professional dental visits", href: "https://www.cdc.gov/oral-health/about/index.html" },
             { label: "BDA: UK dentists picking up the pieces from dental tourism boom", href: "https://www.bda.org/media-centre/uk-dentists-picking-up-the-pieces-from-dental-tourism-boom/" },
             { label: "General Dental Council: Dental tourism guidance", href: "https://www.gdc-uk.org/standards-guidance/information-for-patients-public/going-abroad-for-dental-treatment" },
             { label: "Trustpilot: Akdeniz Dental Clinic, current patient reviews", href: "https://www.trustpilot.com/review/akdenizdental.com" },
