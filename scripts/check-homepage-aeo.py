@@ -79,6 +79,12 @@ assert sum(n.get('@type') == 'FAQPage' for n in schemas) == 0, 'Duplicate FAQ sc
 for question in faq['mainEntity']:
     assert question['name'] in html
     assert question['acceptedAnswer']['text'] in html
+for url in (
+    'https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know',
+    'https://www.nidcr.nih.gov/health-info/gum-disease',
+    'https://www.nidcr.nih.gov/health-info/oral-hygiene',
+):
+    assert f'href="{url}"' in html and url in article['citation']
 assert html.count('<blockquote>') == 3
 assert 'Complex courses of treatment typically require detailed preparation' in html
 

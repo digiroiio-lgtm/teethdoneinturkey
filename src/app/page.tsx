@@ -253,7 +253,7 @@ export default function HomePage() {
         <p>
           These are typical ranges, not promises. Your dentist sets the exact schedule after examining you, and extra procedures such as bone grafts or gum treatment can add time. Plan flights and time off work with some flexibility, and read our{" "}
           <Link href="/travel-to-turkey" className={linkClass}>travel to Turkey guide</Link>{" "}
-          for practical tips on flights, hotels and transfers.
+          for practical tips on flights, hotels and transfers. The <a href="https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know" className={linkClass}>FDA’s implant guidance</a> explains that healing can take several months or longer and recommends retaining the implant brand and model in your records.
         </p>
       </AnswerSection>
 
@@ -295,7 +295,7 @@ export default function HomePage() {
           <Link href="/blog/will-uk-dentists-fix-turkey-teeth" className={linkClass}>whether UK dentists will fix Turkey teeth</Link>{" "}
           and our{" "}
           <Link href="/blog/aftercare-for-dental-work-in-turkey" className={linkClass}>aftercare guide</Link>{" "}
-          for what to expect in the first weeks and which symptoms need prompt attention.
+          for what to expect in the first weeks and which symptoms need prompt attention. Follow your dentist’s personalised cleaning instructions; the <a href="https://www.nidcr.nih.gov/health-info/oral-hygiene" className={linkClass}>NIH oral hygiene guide</a> explains why ongoing plaque removal and professional care remain important.
         </p>
       </AnswerSection>
 
@@ -359,7 +359,7 @@ export default function HomePage() {
           Share relevant history through the clinic’s agreed channel, including previous dental work and any existing X-rays requested by the dentist. Describe what you want to improve, such as a missing tooth, chewing difficulty, tooth colour or shape. Ask which assumptions the provisional estimate makes and what findings might change it.
         </p>
         <p>
-          For example, an enquiry about a whiter smile does not establish that crowns are needed. Ask the dentist to explain tooth-preserving alternatives and the consequences of each option. The GDC advises an assessment by a qualified dentist and discussion with your own dentist before travelling. Our <Link href="/book-consultation" className={linkClass}>consultation page</Link> is the starting point for coordination, rather than a substitute for that clinical assessment.
+          The <a href="https://www.nidcr.nih.gov/health-info/gum-disease" className={linkClass}>NIH guide to gum disease</a> describes clinical gum examinations and diagnostic measurements that photographs alone cannot provide. For example, an enquiry about a whiter smile does not establish that crowns are needed. Ask the dentist to explain tooth-preserving alternatives and the consequences of each option. The GDC advises an assessment by a qualified dentist and discussion with your own dentist before travelling. Our <Link href="/book-consultation" className={linkClass}>consultation page</Link> is the starting point for coordination, rather than a substitute for that clinical assessment.
         </p>
       </AnswerSection>
 
@@ -431,6 +431,9 @@ export default function HomePage() {
         <SourcesList
           introduction="The sources below support the clinic-checking and continuity-of-care guidance on this page, and link to current public review profiles. They do not endorse this coordination service or confirm an individual treatment plan. Prices and travel arrangements must be checked separately against the written quote supplied for your own case."
           sources={[
+            { label: "FDA: Dental implants, components, healing and patient records", href: "https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know" },
+            { label: "NIH / NIDCR: Periodontal disease and clinical assessment", href: "https://www.nidcr.nih.gov/health-info/gum-disease" },
+            { label: "NIH / NIDCR: Oral hygiene and ongoing care", href: "https://www.nidcr.nih.gov/health-info/oral-hygiene" },
             { label: "BDA: UK dentists picking up the pieces from dental tourism boom", href: "https://www.bda.org/media-centre/uk-dentists-picking-up-the-pieces-from-dental-tourism-boom/" },
             { label: "General Dental Council: Dental tourism guidance", href: "https://www.gdc-uk.org/standards-guidance/information-for-patients-public/going-abroad-for-dental-treatment" },
             { label: "Trustpilot: Akdeniz Dental Clinic, current patient reviews", href: "https://www.trustpilot.com/review/akdenizdental.com" },
