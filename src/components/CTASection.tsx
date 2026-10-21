@@ -3,12 +3,13 @@ import Link from 'next/link';
 interface CTASectionProps {
   title: string;
   subtitle?: string;
+  detail?: string;
   buttonText: string;
   buttonHref: string;
   whatsapp?: boolean;
 }
 
-export default function CTASection({ title, subtitle, buttonText, buttonHref, whatsapp = false }: CTASectionProps) {
+export default function CTASection({ title, subtitle, detail, buttonText, buttonHref, whatsapp = false }: CTASectionProps) {
   return (
     <section className="relative overflow-hidden hero-gradient py-16 px-4">
       <div className="pointer-events-none absolute -top-20 right-0 w-72 h-72 bg-teal-400/20 rounded-full blur-3xl animate-blob" aria-hidden="true" />
@@ -16,6 +17,7 @@ export default function CTASection({ title, subtitle, buttonText, buttonHref, wh
       <div className="relative max-w-3xl mx-auto text-center text-white">
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">{title}</h2>
         {subtitle && <p className="text-blue-100 text-lg mb-8 max-w-xl mx-auto">{subtitle}</p>}
+        {detail && <p className="text-blue-100 mb-8 max-w-xl mx-auto">{detail}</p>}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href={buttonHref}

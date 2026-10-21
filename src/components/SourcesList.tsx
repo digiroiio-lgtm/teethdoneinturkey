@@ -3,10 +3,11 @@ interface Source {
   href: string;
 }
 
-export default function SourcesList({ sources }: { sources: Source[] }) {
+export default function SourcesList({ sources, introduction }: { sources: Source[]; introduction?: string }) {
   return (
     <div className="my-10">
       <h2 className="text-lg font-bold text-gray-900 mb-3">Sources &amp; References</h2>
+      {introduction && <p className="text-sm text-gray-600 leading-relaxed mb-4">{introduction}</p>}
       <ul className="space-y-1.5 text-sm">
         {sources.map((s) => (
           <li key={s.href}>
