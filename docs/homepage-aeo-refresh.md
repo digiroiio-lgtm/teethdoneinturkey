@@ -44,3 +44,7 @@ Production deployment `df15c0a` was confirmed live with the 21 October date and 
 Article markup activated an additional authoritative-citations check, which the checker previously treated as not applicable. The GDC and BDA are relevant primary professional sources, but its domain heuristic reported 0/3 recognised links. Added three verified FDA/NIH references beside the existing guidance on implant healing, clinical gum assessment and continuing oral hygiene, as well as in the references and Article citations. These US sources support clinical background, not UK regulatory status or an endorsement of the service.
 
 Follow-up local validation: lint, build, freshness-manifest check and the rendered-HTML check pass. The page now contains 3,944 main-content words under the same counting method, with all 25 passages still in range.
+
+## Third independent clinical reference
+
+The follow-up deployment `9dc9c0d` passed CI and Vercel deployment checks. A fresh Context.dev request using `/?aeo-review=20261021-sources` read the new FDA/NIH references and 4,078 extracted words but still scored 90/100: the tool reported **2/3 authoritative citations**. This shows the two NIH URLs count as one recognised source domain. Replaced the oral hygiene reference with the CDC’s verified oral-health overview, which recommends brushing, flossing and professional dental care: https://www.cdc.gov/oral-health/about/index.html . The three references now come from FDA, NIH and CDC. No new clinical outcome claims were added.

@@ -82,7 +82,7 @@ for question in faq['mainEntity']:
 for url in (
     'https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know',
     'https://www.nidcr.nih.gov/health-info/gum-disease',
-    'https://www.nidcr.nih.gov/health-info/oral-hygiene',
+    'https://www.cdc.gov/oral-health/about/index.html',
 ):
     assert f'href="{url}"' in html and url in article['citation']
 assert html.count('<blockquote>') == 3
