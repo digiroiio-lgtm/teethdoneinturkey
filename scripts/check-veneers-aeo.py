@@ -3,6 +3,7 @@
 import json
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 
 
 class Veneers(HTMLParser):
@@ -82,6 +83,12 @@ for question in faq['mainEntity']:
     section = next(s for s in page.sections if s['heading'].strip() == question['name'])
     assert question['acceptedAnswer']['text'] in section['text']
 assert len(page.quotes) == 2 and all(q in article['citation'] for q in page.quotes)
+statistics = set(re.findall(r'£[\d,]+(?:\.\d+)?|\d+(?:\.\d+)?%', ' '.join(page.words)))
+assert len(statistics) * 200 >= len(page.words), 'Numeric evidence density fell below one per 200 words'
+for result in ('96.13%', '41.48%', '19.64%', '6.51%', '93.70%', '29.87%',
+               '17.89%', '4.4%', '96.81%', '6.1%', '1.9%', '0.45%',
+               '94.4%', '93.5%', '82.93%'):
+    assert result in article['articleBody'] and result in html
 for name in ('Eddie Crouch', 'Dr Nigel Carter OBE'):
     assert name in html and name in article['articleBody']
 for source in article['citation']:

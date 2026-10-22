@@ -13,6 +13,7 @@ export const veneerGraph = {
       mainEntityOfPage: url, image: `${site}/opengraph-image`,
       about: { "@type": "MedicalProcedure", name: "Dental veneer" },
       articleBody: veneerSections.flatMap(section => [section.title, section.answer, ...section.paragraphs,
+        ...(section.table ? [section.table.caption, section.table.columns.join(": "), ...section.table.rows.map(row => row.join(": "))] : []),
         ...(section.quote ? [section.quote.text, `${section.quote.name}, ${section.quote.role}. Public statement, ${section.quote.date}.`] : []),
       ]).join("\n\n"),
       citation: [...Object.values(veneerSources).map(source => source.href), `${site}/prices/veneers-turkey-cost`],

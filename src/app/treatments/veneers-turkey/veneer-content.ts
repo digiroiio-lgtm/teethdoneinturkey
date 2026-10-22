@@ -3,6 +3,8 @@ export const VENEER_TITLE = "Veneers Turkey: Costs, Treatment & Aftercare";
 export const VENEER_DESCRIPTION = "Compare veneers in Turkey, costs, materials, treatment stages, risks and aftercare. Prepare questions and a written plan before booking a consultation.";
 
 export const veneerSources = {
+  review: { label: "Klein et al.: systematic review of ceramic veneers (2024)", href: "https://onlinelibrary.wiley.com/doi/10.1111/jerd.13351" },
+  cohort: { label: "Beier et al.: porcelain veneers followed for up to 20 years (2012)", href: "https://pubmed.ncbi.nlm.nih.gov/22259802/" },
   cleveland: { label: "Cleveland Clinic: veneers, preparation and risks", href: "https://my.clevelandclinic.org/health/treatments/23522-dental-veneers" },
   ada: { label: "American Dental Association: veneers", href: "https://www.mouthhealthy.org/all-topics-a-z/veneers" },
   rutgers: { label: "Rutgers School of Dental Medicine: veneers and candidacy", href: "https://sdm.rutgers.edu/veneerslumineers" },
@@ -18,6 +20,7 @@ export interface VeneerSection {
   id: string; title: string; answer: string; paragraphs: string[];
   sources?: SourceKey[];
   links?: { label: string; href: string }[];
+  table?: { caption: string; columns: string[]; rows: string[][] };
   quote?: { text: string; name: string; role: string; date: string; source: SourceKey };
 }
 
@@ -114,8 +117,26 @@ export const veneerSections: VeneerSection[] = [
     answer: "Veneers are restorations that may need maintenance, repair or replacement over time; they are not a lifetime promise. Published lifespan ranges are broad and cannot predict your result. A clinic guarantee is a separate contract, so request the covered treatments, exclusions, review requirements and responsibility for travel or local care in writing.",
     paragraphs: [
       "Rutgers gives a broad replacement range of about 7 to 20 years in its patient information. That range is educational guidance, not a measured result for our partner clinics, a warranty period or an assurance that your veneers will last a particular number of years. Your dentist should explain factors relevant to your own mouth.",
+      "A historical Innsbruck study, published by Beier and colleagues in 2012, followed 318 veneers in 84 patients. Estimated survival was 94.4% at 5 years, 93.5% at 10 years and 82.93% at 20 years. This particular cohort illustrates why a short follow-up cannot establish lifetime performance; it is not a forecast for treatment in Turkey.",
       "Compare a guarantee by what it actually pays for. Ask whether a chip, debonding or replacement requires an examination at the original clinic; whether routine maintenance is excluded; and who pays for flights, accommodation and treatment in the UK. Keep the version provided before your deposit. Our lifespan guide explains the longer-term planning questions without treating a guarantee as clinical evidence.",
-    ], sources: ["rutgers"], links: [{ label: "Read the veneer lifespan guide", href: "/blog/how-long-do-dental-veneers-last" }],
+    ], sources: ["rutgers", "cohort"], links: [{ label: "Read the veneer lifespan guide", href: "/blog/how-long-do-dental-veneers-last" }],
+  },
+  {
+    id: "clinical-evidence", title: "What does long-term clinical research show about veneers?",
+    answer: "Published research reports high long-term survival for ceramic veneers, but a surviving restoration may still need maintenance. The table summarises pooled estimates from Klein and colleagues' review, first published in November 2024. These research results help frame questions about care; they do not predict an individual patient's outcome.",
+    paragraphs: [
+      "The review included 29 studies. Material groups came from different studies, not a direct randomised comparison. The estimates describe restorations, not individual patients or our partner clinics.",
+      "Survival included restorations needing maintenance. Technical problems concern the restoration, aesthetic events concern appearance, and biological events concern the tooth. Complication columns use different contributing data: do not add them together or subtract them from survival.",
+    ],
+    table: {
+      caption: "Pooled estimates at a mean 10.4-year follow-up; complication events are separate outcomes",
+      columns: ["Ceramic", "Survival", "Technical complications", "Aesthetic complications", "Biological complications"],
+      rows: [
+        ["Feldspathic", "96.13%", "41.48%", "19.64%", "6.51%"],
+        ["Leucite-reinforced glass ceramic", "93.70%", "29.87%", "17.89%", "4.4%"],
+        ["Lithium disilicate", "96.81%", "6.1%", "1.9%", "0.45%"],
+      ],
+    }, sources: ["review"],
   },
   {
     id: "care", title: "How should I care for veneers day to day?",
