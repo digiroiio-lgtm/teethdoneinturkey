@@ -76,8 +76,8 @@ article = next(n for n in graph if n['@type'] == 'Article')
 collection = next(n for n in graph if n['@type'] == 'CollectionPage')
 catalog = next(n for n in graph if n['@type'] == 'ItemList')
 faq = next(n for n in graph if n['@type'] == 'FAQPage')
-assert article['dateModified'] == collection['dateModified'] == '2026-10-21'
-assert 'dateTime="2026-10-21"' in html or 'datetime="2026-10-21"' in html
+assert article['dateModified'] == collection['dateModified'] == '2026-10-22'
+assert 'dateTime="2026-10-22"' in html or 'datetime="2026-10-22"' in html
 assert 'reviewedBy' not in article and 'lastReviewed' not in article
 assert len(catalog['itemListElement']) == catalog['numberOfItems'] == 14
 assert len(faq['mainEntity']) == 5

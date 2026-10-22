@@ -1,5 +1,5 @@
-export const GUIDES_UPDATED = "2026-10-21";
-export const GUIDES_UPDATED_LABEL = "21 October 2026";
+export const GUIDES_UPDATED = "2026-10-22";
+export const GUIDES_UPDATED_LABEL = "22 October 2026";
 export const GUIDES_TITLE = "Dental Treatment in Turkey Guides";
 export const GUIDES_DESCRIPTION = "Choose a reading path for dental treatment in Turkey: compare procedures, written quotes, clinic checks, travel and aftercare, with UK care options and sources.";
 
@@ -181,7 +181,7 @@ export const guidesFaqs = [
   { question: "What records should I keep for care after returning home?", answer: "Ask for the treatment summary, relevant imaging, materials or implant details, review schedule and written aftercare instructions. Keep the clinical contact and complaint route alongside the agreed payment and warranty terms. The FDA specifically recommends keeping the implant brand and model if implants are placed. Ask whether a concern can be assessed locally and who would pay for any return trip. Routine check-up guidance does not replace procedure-specific follow-up, and new pain or a loose restoration should be discussed with a dentist." },
 ];
 
-export const faqIntroduction = "Use these answers to understand what the library can establish, how its dates and sources should be read, and which decisions need individual advice. The same questions and answers appear in this page’s structured data. Keep clinical questions with a dentist and obtain written confirmation of personal prices and arrangements.";
+export const faqIntroduction = "Use these answers to understand what the library can establish, how its dates and sources should be read, and which decisions need individual advice. Read the relevant guide before comparing personal treatment plans. Keep clinical questions with a dentist and obtain written confirmation of personal prices and arrangements.";
 export const faqDetail = "This hub was refreshed as an editorial navigation resource. It retains the existing guide destinations and adds context for choosing between them. Linked articles carry their own scope and dates; check their original sources where information affects a treatment or payment decision.";
 export const sourcesAnswer = "Use the original sources below to check the clinical guidance, survey populations and dated charges used on this page. Government and professional-body information provides context for questions, while only your treating dentist and written quote establish personal care. The editorial team checks sources without claiming that these organisations endorse the service.";
 export const sourcesDetail = "Source links were checked for this editorial update on 21 October 2026. Historical surveys keep their publication dates, and NHS charges are labelled for England and the relevant year. The hub’s new date does not refresh a linked article automatically. Report a correction through the contact page if you notice a discrepancy.";
