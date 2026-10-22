@@ -47,3 +47,6 @@ jobs:
 
       - name: Verify rendered guide hub content, FAQ and schema isolation
         run: python3 scripts/check-guides-aeo.py
+
+      - name: Verify rendered veneer treatment content, sources and head schema
+        run: python3 scripts/check-veneers-aeo.py
