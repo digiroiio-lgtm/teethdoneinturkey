@@ -35,6 +35,13 @@ export default function VeneersTurkeyPage() {
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{section.title}</h2>
         <p className="text-gray-800 font-medium leading-relaxed mb-4">{section.answer}</p>
         {section.paragraphs.map(paragraph => <p key={paragraph} className="text-gray-600 leading-relaxed mb-4">{paragraph}</p>)}
+        {section.table && <div className="overflow-x-auto rounded-xl border border-gray-200 mb-4">
+          <table className="w-full text-sm text-left">
+            <caption className="text-left p-4 text-gray-700 font-medium">{section.table.caption}</caption>
+            <thead className="bg-blue-50"><tr>{section.table.columns.map(column => <th key={column} scope="col" className="p-3 font-semibold text-gray-900">{column}</th>)}</tr></thead>
+            <tbody>{section.table.rows.map(row => <tr key={row[0]} className="border-t border-gray-200"><th scope="row" className="p-3 font-semibold text-gray-800">{row[0]}</th>{row.slice(1).map((value, index) => <td key={index} className="p-3 text-gray-700">{value}</td>)}</tr>)}</tbody>
+          </table>
+        </div>}
         {section.quote && <blockquote cite={veneerSources[section.quote.source].href} className="my-6 border-l-4 border-blue-600 bg-blue-50 p-5 rounded-r-xl">
           <p className="text-gray-800 italic mb-3">“{section.quote.text}”</p>
           <footer className="text-sm text-gray-700">{section.quote.name}, {section.quote.role}. <a href={veneerSources[section.quote.source].href} target="_blank" rel="noopener noreferrer" className={linkClass}>Public statement, {section.quote.date}</a>.</footer>
