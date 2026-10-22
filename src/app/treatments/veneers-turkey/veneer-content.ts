@@ -1,6 +1,6 @@
 export const VENEER_UPDATED = "2026-10-22";
 export const VENEER_TITLE = "Veneers Turkey: Costs, Treatment & Aftercare";
-export const VENEER_DESCRIPTION = "Compare veneers in Turkey, indicative costs, materials, treatment stages, risks and aftercare. Prepare questions and a written plan before booking a consultation.";
+export const VENEER_DESCRIPTION = "Compare veneers in Turkey, costs, materials, treatment stages, risks and aftercare. Prepare questions and a written plan before booking a consultation.";
 
 export const veneerSources = {
   cleveland: { label: "Cleveland Clinic: veneers, preparation and risks", href: "https://my.clevelandclinic.org/health/treatments/23522-dental-veneers" },
