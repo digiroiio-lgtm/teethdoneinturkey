@@ -21,7 +21,7 @@ Schema 15/20, Quality 15/25, Technical 15/15, Freshness 5/10.
    `2026-10-22`. No new medical review, reviewer assignment or changed dates for
    linked articles are claimed. The previous blanket medical-review claim is removed.
 5. Twenty-seven H2/H3 passages each contain 75–300 words in built HTML.
-6. Rendered main content contains 3,575 words, excluding navigation/footer.
+6. Rendered main content contains 3,669 words, excluding navigation/footer.
    Each guide summary explains when to read it and what to check in a personal plan.
 7. All eight H2s begin with direct answers of 40–60 words.
 8. Two short original-source quotations identify Eddie Crouch and Sarah Pritchard,
@@ -47,3 +47,9 @@ NHS urgent-care references do not promise free appointments or confirmed access.
 
 No canonical, redirect, noindex, finance-offer or enquiry-processing changes are
 included. The score is a checker result, not a measurement of actual AI citations.
+
+First post-deployment fresh-content check: 95/100 A+, with all checks passing
+except statistical density (15 distinct data points in 3,708 checker words).
+The follow-up adds original cash differences between NHS charges and dated BDA
+repair-cost findings to the relevant cost and travel answers. Final checker
+evidence is recorded on the follow-up PR after deployment.

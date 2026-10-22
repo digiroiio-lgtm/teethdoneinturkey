@@ -82,7 +82,7 @@ export const guideGroups: Group[] = [
     id: "cost", label: "Costs and affordability", title: "How should I compare costs and payment options?",
     answer: "Compare the complete written treatment scope before comparing totals, package names or ways to pay. Check the procedures, materials, visits, accommodation, transfers and exclusions. Use NHS information to understand options at home, then make a separate household-budget decision. A treatment estimate is not a credit offer or a clinical recommendation.",
     paragraphs: [
-      "For context, NHSBSA lists England’s charges from 1 April 2026 as Band 1 £27.90, Band 2 £76.60 and Band 3 £332.10. The preceding charges were £27.40, £75.30 and £326.70. Our calculations from those figures give increases of approximately 1.8%, 1.7% and 1.7% respectively, rounded to one decimal place. These are NHS course-of-treatment charges, not private prices, overseas package rates or evidence that an appointment is available. Other UK nations have different arrangements.",
+      "For context, NHSBSA lists England’s charges from 1 April 2026 as Band 1 £27.90, Band 2 £76.60 and Band 3 £332.10. The preceding charges were £27.40, £75.30 and £326.70. Our calculations from those figures give increases of approximately 1.8%, 1.7% and 1.7% respectively, rounded to one decimal place. The cash increases per course are £0.50, £1.30 and £5.40 respectively, calculated by subtracting each preceding charge from its current equivalent. These are NHS course-of-treatment charges, not private prices, overseas package rates or evidence that an appointment is available. Other UK nations have different arrangements.",
     ],
     sources: ["nhsCosts"],
     quote: { text: "Our data shows that finances are stretched for many", name: "Sarah Pritchard", role: "Executive Director of Consumers and Competition at the Financial Conduct Authority at the time", source: "fca", date: "16 May 2025" },
@@ -130,7 +130,8 @@ export const guideGroups: Group[] = [
       paragraphs: [
         "The Antalya guide helps organise the practical journey: the appointment location, travel arrangements, accommodation, communication and recovery time. Use it after the clinic has described the proposed stages. Do not choose a flight home solely from an advertised package duration; ask the clinical team when travel is appropriate for your case.",
         "Prepare a contact sheet with the clinic, treating professional and the route for urgent questions. Confirm who pays for unexpected travel, accommodation or remedial care. Before leaving, request your treatment summary, relevant imaging, restoration details and aftercare instructions. Keep an alternative plan if an appointment changes, and leave clinical decisions about healing and readiness with the treating dentist.",
-      ],
+        "Among dentists reporting on remedial care in the BDA’s 2022 survey, 65% said repairs cost patients at least £500, 51% reported more than £1,000 and one in five (20%) reported more than £5,000. These are historical dentist reports, not current repair quotations or the probability that an overseas patient needs repairs. Use them to ask who covers follow-up costs before travelling.",
+      ], sources: ["bda"],
     }],
   },
   {
