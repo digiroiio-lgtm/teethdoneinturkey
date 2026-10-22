@@ -1,222 +1,86 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import GuideCard from "@/components/GuideCard";
 import CTASection from "@/components/CTASection";
+import {
+  GUIDES_TITLE, GUIDES_DESCRIPTION, GUIDES_UPDATED, GUIDES_UPDATED_LABEL,
+  guideGroups, guideSources, guidesFaqs, faqIntroduction, faqDetail,
+  sourcesAnswer, sourcesDetail,
+} from "./guide-content";
 
 export const revalidate = 86400;
-
-const SITE_URL = "https://www.teethdoneinturkey.co.uk";
-
 export const metadata: Metadata = {
   alternates: { canonical: "/guides" },
   title: { absolute: "Dental Treatment Turkey Guides for UK Patients" },
-  description: "Evergreen patient guides on dental treatment in Turkey: treatments, costs, safety, finance and clinic selection for UK patients.",
+  description: GUIDES_DESCRIPTION,
 };
-
-const guides = [
-  {
-    category: "Getting Started",
-    title: "Teeth in Turkey: The Complete UK Patient Guide",
-    description:
-      "The primary resource in this library — treatments, process, costs, safety, clinic evaluation and travel, covering everything a UK patient needs before booking.",
-    readingTime: "18 min",
-    updated: "3 September 2026",
-    href: "/guides/teeth-in-turkey",
-    featured: true,
-  },
-  {
-    category: "Treatment",
-    title: "Dental Implants in Turkey: Complete Guide for UK Patients",
-    description:
-      "Implant brands, the surgical process, healing timelines, single vs full-mouth options (All-on-4/All-on-6), costs, risks and aftercare.",
-    readingTime: "14 min",
-    updated: "3 September 2026",
-    href: "/guides/dental-implants-turkey",
-  },
-  {
-    category: "Cost & Finance",
-    title: "Turkey Teeth Cost: Complete 2026 Price Guide",
-    description:
-      "What drives treatment price, a full UK-vs-Turkey cost comparison, package pricing, and how to get an accurate personalised quotation.",
-    readingTime: "12 min",
-    updated: "3 September 2026",
-    href: "/prices/turkey-teeth-cost",
-  },
-  {
-    category: "Treatment",
-    title: "Turkey Teeth: Veneers or Crowns, and How Much Tooth Is Removed?",
-    description:
-      "The difference between a veneer and a crown, how much enamel each removes, what cannot be undone, and how to tell which one you are actually being quoted.",
-    readingTime: "8 min",
-    updated: "4 September 2026",
-    href: "/guides/turkey-teeth-veneers-or-crowns",
-  },
-  {
-    category: "Cost & Finance",
-    title: "Can't Afford Dental Treatment in the UK? Your Options",
-    description:
-      "NHS charges, private costs, payment plans, dental finance and treatment abroad, laid out step by step so you can work out what you can actually afford.",
-    readingTime: "9 min",
-    updated: "3 September 2026",
-    href: "/guides/cant-afford-dental-treatment-uk",
-  },
-  {
-    category: "Cost & Finance",
-    title: "Turkey Teeth Packages: What Is Included and What Does It Really Cost?",
-    description:
-      "Package price vs treatment price vs total trip cost — exactly what Turkey dental packages include, what they leave out, and what to check before booking.",
-    readingTime: "8 min",
-    updated: "13 September 2026",
-    href: "/guides/turkey-teeth-packages",
-  },
-  {
-    category: "Destination",
-    title: "Turkey Teeth Antalya: The Complete UK Patient Guide",
-    description:
-      "What it is actually like to go to Antalya for dental treatment — why UK patients choose it, the patient journey day by day, clinic selection, hotels, travel logistics and recovery.",
-    readingTime: "15 min",
-    updated: "13 September 2026",
-    href: "/guides/turkey-teeth-antalya",
-  },
-  {
-    category: "Treatment",
-    title: "Best Veneers in Turkey: E-max vs Zirconia vs Composite Compared",
-    description:
-      "Which veneer type gives the most natural result, requires least tooth preparation and offers the best value — with a full comparison table and how to choose the right dentist.",
-    readingTime: "12 min",
-    updated: "13 September 2026",
-    href: "/guides/best-veneers-turkey",
-  },
-  {
-    category: "Cost & Finance",
-    title: "Veneers Turkey Packages: What Is Included and What Does It Really Cost?",
-    description:
-      "Treatment-only vs veneer package vs total trip cost — exactly what Turkey veneer packages include, what they leave out, and what to confirm before booking.",
-    readingTime: "9 min",
-    updated: "13 September 2026",
-    href: "/guides/veneers-turkey-packages",
-  },
-  {
-    category: "Treatment",
-    title: "Turkish Veneers Safety: Risks, Red Flags and How to Stay Safe",
-    description:
-      "Are Turkish veneers safe? This guide covers why problems happen, the risks of excessive tooth preparation, lab quality, dentist experience, and how to protect yourself.",
-    readingTime: "11 min",
-    updated: "13 September 2026",
-    href: "/guides/turkish-veneers-safety",
-  },
-  {
-    category: "UK Access & Affordability",
-    title: "Can't Find an NHS Dentist? Your Step-by-Step Options",
-    description:
-      "No NHS dentist accepting patients near you? NHS 111 dental access, emergency services, Community Dental Services, dental schools and realistic alternatives for UK patients in 2026.",
-    readingTime: "8 min",
-    updated: "17 September 2026",
-    href: "/guides/no-nhs-dentist-what-to-do",
-  },
-  {
-    category: "UK Access & Affordability",
-    title: "Can't Afford a Root Canal in the UK? What to Do",
-    description:
-      "Root canal on the NHS costs £76.60. Private treatment costs £500–£1,500 plus a crown. NHS access, Band 2 costs, extraction comparison, payment plans and Turkey cost comparison.",
-    readingTime: "9 min",
-    updated: "17 September 2026",
-    href: "/guides/cant-afford-root-canal-uk",
-  },
-  {
-    category: "UK Access & Affordability",
-    title: "Tooth Abscess and Can't Afford a Dentist? Act Now",
-    description:
-      "A tooth abscess is a dental emergency. NHS 111 can refer you to emergency treatment at no upfront cost. Red flag warning signs requiring A&E, antibiotics guidance and follow-up costs.",
-    readingTime: "8 min",
-    updated: "17 September 2026",
-    href: "/guides/tooth-abscess-cant-afford-dentist",
-  },
-  {
-    category: "UK Access & Affordability",
-    title: "Severe Toothache and Can't Afford a Dentist? What to Do",
-    description:
-      "NHS 111 can refer you to an emergency dentist at no upfront cost. Causes of severe toothache explained, temporary pain relief, and what treatments cost on NHS, UK private and in Turkey.",
-    readingTime: "8 min",
-    updated: "17 September 2026",
-    href: "/guides/severe-toothache-cant-afford-dentist",
-  },
-];
-
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-    { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE_URL}/guides` },
-  ],
-};
-
-const collectionJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": `${SITE_URL}/guides#collection`,
-  url: `${SITE_URL}/guides`,
-  name: "Dental Treatment in Turkey Guides for UK Patients",
-  isPartOf: { "@id": `${SITE_URL}/#website` },
-  about: { "@id": `${SITE_URL}/#business` },
-  hasPart: guides.map((g) => ({
-    "@type": "Article",
-    headline: g.title,
-    url: `${SITE_URL}${g.href}`,
-  })),
-};
+const linkClass = "font-semibold text-[#1e40af] underline decoration-blue-200 underline-offset-4 hover:decoration-blue-600";
 
 export default function GuidesHubPage() {
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
-
-      <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
-        <div className="relative max-w-4xl mx-auto">
-          <div className="mb-4">
-            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Treatment in Turkey Guides</h1>
-          <p className="text-xl text-blue-200 max-w-2xl">
-            A permanent, medically reviewed patient guide library — not a blog archive — for UK patients researching dental treatment in Turkey.
-          </p>
-        </div>
+  return <>
+    <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
+      <div className="relative max-w-5xl mx-auto">
+        <div className="mb-4"><Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Guides" }]} /></div>
+        <p className="text-sm font-bold tracking-widest uppercase text-blue-200 mb-3">UK patient reading library</p>
+        <h1 className="text-4xl sm:text-5xl font-extrabold mb-5">{GUIDES_TITLE}</h1>
+        <p className="text-xl text-blue-100 max-w-3xl">Choose the guide that answers your next question about treatment, written costs, travel or care at home.</p>
+        <p className="mt-6 text-sm text-blue-100">Last updated: <time dateTime={GUIDES_UPDATED}>{GUIDES_UPDATED_LABEL}</time></p>
+        <p className="mt-2 text-sm text-blue-100 max-w-3xl">Prepared by the Teeth Done in Turkey editorial team. General planning information; individual clinical advice comes from a qualified dentist. <Link href="/editorial-policy" className="underline underline-offset-4">Editorial and medical-review policy</Link>.</p>
       </div>
-
-      <section className="py-14 bg-white">
+    </div>
+    <nav aria-label="Choose a guide topic" className="bg-blue-50 border-b border-blue-100">
+      <div className="max-w-5xl mx-auto px-4 py-5 flex flex-wrap gap-3">
+        {guideGroups.map(group => <a key={group.id} href={`#${group.id}`} className="rounded-full bg-white border border-blue-100 px-4 py-2 text-sm font-semibold text-[#1e40af] hover:border-blue-400">{group.label}</a>)}
+      </div>
+    </nav>
+    <article id="guides-reading-guide" aria-label="Choosing and using the patient guides">
+      {guideGroups.map((group, index) => <section id={group.id} key={group.id} className={`py-14 scroll-mt-24 ${index % 2 ? "bg-slate-50" : "bg-white"}`} aria-labelledby={`${group.id}-heading`}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12">
-            <p className="text-gray-700 leading-relaxed mb-4">
-              This resource centre helps UK patients understand dental treatment in Turkey — the treatment options available, realistic costs, safety and accreditation, how to evaluate a clinic, what to expect during your trip, and how to plan a smooth recovery. Each guide is a standalone, evergreen reference designed to answer your next question directly, without sending you back to search.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              Guides are reviewed against the site&apos;s own verified pricing and treatment data and are kept up to date as that information changes. For treatment-specific pages with live pricing, see{" "}
-              <Link href="/treatments" className="text-[#1e40af] font-semibold hover:underline">Treatments</Link>{" "}
-              and{" "}
-              <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Prices</Link>.
-              For patient stories and specific questions, see the{" "}
-              <Link href="/blog" className="text-[#1e40af] font-semibold hover:underline">Blog</Link>.
-            </p>
+          <div className="max-w-4xl mb-8">
+            <p className="text-sm font-bold text-teal-700 tracking-wider uppercase mb-2">{String(index + 1).padStart(2, "0")} / {group.label}</p>
+            <h2 id={`${group.id}-heading`} className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-5">{group.title}</h2>
+            <p className="text-gray-800 text-lg leading-relaxed mb-4">{group.answer}</p>
+            {group.paragraphs.map(paragraph => <p key={paragraph} className="text-gray-600 leading-relaxed mb-4">{paragraph}</p>)}
+            {group.quote && <figure className="my-5 border-l-4 border-teal-600 rounded-r-xl bg-teal-50 px-5 py-4">
+              <blockquote cite={guideSources[group.quote.source].url}><p className="italic text-gray-800">&ldquo;{group.quote.text}&rdquo;</p></blockquote>
+              <figcaption className="text-sm text-gray-600 mt-3">{group.quote.name}, {group.quote.role}. <a href={guideSources[group.quote.source].url} className={linkClass}>Statement published {group.quote.date}</a>.</figcaption>
+            </figure>}
+            <p className="text-sm text-gray-600">Sources: {group.sources.map((id, i) => <span key={id}>{i > 0 && "; "}<a href={guideSources[id].url} className={linkClass}>{guideSources[id].title}</a></span>)}</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {guides.map((g) => (
-              <GuideCard key={g.href} {...g} />
-            ))}
+          <div className={`grid gap-6 ${group.guides.length > 1 ? "md:grid-cols-2" : "max-w-4xl"}`}>
+            {group.guides.map(guide => <section key={guide.href} className="rounded-2xl border border-blue-100 bg-white p-6 sm:p-7 shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{guide.title}</h3>
+              {guide.paragraphs.map(paragraph => <p key={paragraph} className="text-gray-600 leading-relaxed mb-4">{paragraph}</p>)}
+              {guide.sources && <p className="text-sm text-gray-600 mb-4">Check: {guide.sources.map((id, i) => <span key={id}>{i > 0 && "; "}<a href={guideSources[id].url} className={linkClass}>{guideSources[id].title}</a></span>)}</p>}
+              <Link href={guide.href} className={linkClass}>Read the full guide <span aria-hidden="true">→</span></Link>
+            </section>)}
           </div>
         </div>
-      </section>
-
-      <CTASection
-        title="Not Sure Where to Start?"
-        subtitle="Tell us about your teeth and goals and we'll send a free, personalised treatment plan with an accurate cost estimate — no obligation."
-        buttonText="Get My Personalised Treatment Plan"
-        buttonHref="/book-consultation"
-        whatsapp={true}
-      />
-    </>
-  );
+      </section>)}
+    </article>
+    <section className="py-14 bg-blue-50" aria-labelledby="guides-faq-heading" id="guides-faq">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 id="guides-faq-heading" className="text-3xl font-extrabold text-gray-900 mb-5">How should I use the library’s advice, dates and sources?</h2>
+        <p className="text-gray-800 leading-relaxed mb-4">{faqIntroduction}</p>
+        <p className="text-gray-600 leading-relaxed mb-7">{faqDetail}</p>
+        <div className="space-y-5">{guidesFaqs.map(faq => <section key={faq.question} data-guide-faq className="rounded-xl bg-white border border-blue-100 p-6">
+          <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+          <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+        </section>)}</div>
+      </div>
+    </section>
+    <section className="py-14 bg-white" aria-labelledby="guides-sources-heading">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 id="guides-sources-heading" className="text-3xl font-extrabold text-gray-900 mb-5">Where can I check the evidence and editorial approach?</h2>
+        <p className="text-gray-800 leading-relaxed mb-4">{sourcesAnswer}</p>
+        <p className="text-gray-600 leading-relaxed mb-5">{sourcesDetail}</p>
+        <ul className="list-disc pl-5 space-y-2 text-sm">{Object.values(guideSources).map(source => <li key={source.url}><a href={source.url} className={linkClass}>{source.title}</a></li>)}</ul>
+        <p className="mt-5 text-sm"><Link href="/editorial-policy" className={linkClass}>Read our editorial policy</Link> · <Link href="/contact" className={linkClass}>Suggest a correction</Link></p>
+      </div>
+    </section>
+    <CTASection title="How can I discuss the questions I have prepared?"
+      subtitle="Send your main concerns and the questions prompted by these guides to start a treatment enquiry. The team can explain the coordination process and arrange a discussion with the clinical provider. A personal diagnosis, treatment recommendation and final price require assessment by the dentist responsible for your care."
+      detail="Keep your question list with any existing dental records and written estimates. Ask for procedures, materials, visits and exclusions to be confirmed before you make a commitment. You can take time to consider the proposal and seek an independent opinion. An enquiry does not commit you to treatment or create a credit application."
+      buttonText="Discuss My Treatment Questions" buttonHref="/book-consultation" whatsapp />
+  </>;
 }
