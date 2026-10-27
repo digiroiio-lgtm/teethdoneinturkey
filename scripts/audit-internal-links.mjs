@@ -54,7 +54,7 @@ const MONEY_PAGES = [
   '/prices/turkey-teeth-cost',
   '/finance-options-uk',
   '/monthly-payment',
-  '/prices/dental-implants-turkey-cost',
+  '/blog/implants-cost-uk-vs-turkey',
   '/prices/veneers-turkey-cost',
   '/treatments/dental-implants-turkey',
   '/treatments/veneers-turkey',

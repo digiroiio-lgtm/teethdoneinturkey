@@ -163,7 +163,7 @@ export default function MonthlyPaymentPage() {
           <p className="text-xs text-gray-500 mt-3">Monthly figures based on 36-month term. Representative example: £3,800 over 36 months = £106/month. Subject to credit approval.</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/prices/veneers-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Full veneers cost guide</Link>
-            <Link href="/prices/dental-implants-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Full implants cost guide</Link>
+            <Link href="/blog/implants-cost-uk-vs-turkey" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Full implants cost guide</Link>
             <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ All turkey teeth prices</Link>
           </div>
         </div>
@@ -280,7 +280,7 @@ export default function MonthlyPaymentPage() {
               role="Oral & Maxillofacial Surgeon, Clinic Owner | Akdeniz Dental Clinic, Antalya"
             />
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
-              <Link href="/prices/dental-implants-turkey-cost" className="text-[#1e40af] text-sm font-semibold hover:underline">→ See full implants cost breakdown</Link>
+              <Link href="/blog/implants-cost-uk-vs-turkey" className="text-[#1e40af] text-sm font-semibold hover:underline">→ See full implants cost breakdown</Link>
               <Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Dedicated implants finance guide</Link>
             </div>
           </div>
@@ -451,7 +451,7 @@ export default function MonthlyPaymentPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
                 { href: "/prices/veneers-turkey-cost", label: "Veneers Turkey Cost", sub: "E-max from £190/tooth" },
-                { href: "/prices/dental-implants-turkey-cost", label: "Implants Turkey Cost", sub: "From £420 all-in" },
+                { href: "/blog/implants-cost-uk-vs-turkey", label: "Implants Turkey Cost", sub: "From £420 all-in" },
                 { href: "/prices/turkey-teeth-cost", label: "All Turkey Teeth Prices", sub: "Complete price guide" },
                 { href: "/treatments/veneers-turkey", label: "Veneers Treatment Guide", sub: "What to expect" },
                 { href: "/treatments/dental-implants-turkey", label: "Implants Treatment Guide", sub: "Full implant process" },

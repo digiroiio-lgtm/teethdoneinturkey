@@ -165,7 +165,7 @@ export default function AllOn4Page() {
                 { title: "📘 Dental Implants Guide", href: "/guides/dental-implants-turkey", desc: "Full-mouth options, brands, timelines and risks explained." },
                 { title: "All-on-6 Implants", href: "/treatments/all-on-6-turkey", desc: "Six implants for superior stability and load distribution." },
                 { title: "Implant Package Prices", href: "/prices/all-on-6-dental-implants-turkey-package", desc: "All-inclusive packages with hotel, transfers & temps." },
-                { title: "Full Implant Cost Guide", href: "/prices/dental-implants-turkey-cost", desc: "Detailed UK vs Turkey price comparison for all implant types." },
+                { title: "Full Implant Cost Guide", href: "/blog/implants-cost-uk-vs-turkey", desc: "Detailed UK vs Turkey price comparison for all implant types." },
                 { title: "Full Mouth Implant Cost", href: "/blog/full-mouth-implants-uk-vs-turkey", desc: "What All-on-4 costs across both arches, and what the package covers." },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-blue-50 rounded-xl p-4 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition-colors block">

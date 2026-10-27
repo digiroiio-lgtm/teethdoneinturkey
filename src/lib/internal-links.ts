@@ -80,7 +80,6 @@ export const CLUSTERS: ClusterDefinition[] = [
     hub: '/prices/turkey-teeth-cost',
     spokes: [
       '/prices/veneers-turkey-cost',
-      '/prices/dental-implants-turkey-cost',
       '/prices/hollywood-smile-turkey-package',
       '/prices/all-on-6-dental-implants-turkey-package',
       '/prices/veneers-antalya-cost',
@@ -118,7 +117,6 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/treatments/dental-implants-turkey',
       '/treatments/all-on-4-turkey',
       '/treatments/all-on-6-turkey',
-      '/prices/dental-implants-turkey-cost',
       '/prices/all-on-6-dental-implants-turkey-package',
     ],
     support: [
@@ -332,13 +330,6 @@ export const LINK_REGISTRY: LinkEntry[] = [
 
   // ── Cost pages → master hub ──
   {
-    from: '/prices/dental-implants-turkey-cost',
-    to: '/guides/teeth-in-turkey',
-    anchorText: 'complete guide to teeth in Turkey',
-    placement: 'contextual',
-    priority: 'required',
-  },
-  {
     from: '/prices/veneers-turkey-cost',
     to: '/guides/teeth-in-turkey',
     anchorText: 'complete guide to teeth in Turkey',
@@ -347,13 +338,6 @@ export const LINK_REGISTRY: LinkEntry[] = [
   },
 
   // ── Cost pages → cluster hubs ──
-  {
-    from: '/prices/dental-implants-turkey-cost',
-    to: '/guides/dental-implants-turkey',
-    anchorText: 'dental implants Turkey guide',
-    placement: 'related-links',
-    priority: 'required',
-  },
   {
     from: '/prices/veneers-turkey-cost',
     to: '/guides/best-veneers-turkey',
@@ -485,10 +469,6 @@ const PAGE_META: Record<string, { title: string; desc: string }> = {
     title: 'Veneers Turkey Cost 2026',
     desc: 'E-max vs zirconia prices, per-tooth and full-set comparisons.',
   },
-  '/prices/dental-implants-turkey-cost': {
-    title: 'Dental Implants Turkey Cost 2026',
-    desc: 'Single implant, All-on-4 and All-on-6 price breakdowns.',
-  },
   '/prices/hollywood-smile-turkey-package': {
     title: 'Hollywood Smile Turkey Package',
     desc: '20 zirconia crowns, hotel and transfers in one package.',
@@ -567,7 +547,7 @@ export const MONEY_PAGES = [
   '/prices/turkey-teeth-cost',
   '/finance-options-uk',
   '/monthly-payment',
-  '/prices/dental-implants-turkey-cost',
+  '/blog/implants-cost-uk-vs-turkey',
   '/prices/veneers-turkey-cost',
   '/treatments/dental-implants-turkey',
   '/treatments/veneers-turkey',

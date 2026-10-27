@@ -62,7 +62,7 @@ export default function DentalImplantsTurkeyPage() {
           <p className="mb-6 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
-            <Link href="/prices/dental-implants-turkey-cost" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Price Guide</Link>
+            <Link href="/blog/implants-cost-uk-vs-turkey" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Price Guide</Link>
           </div>
         </div>
       </div>
@@ -147,7 +147,7 @@ export default function DentalImplantsTurkeyPage() {
                 { title: "📘 Dental Implants Guide", href: "/guides/dental-implants-turkey", desc: "The complete guide: brands, procedure, timelines and risks." },
                 { title: "All-on-4 Dental Implants", href: "/treatments/all-on-4-turkey", desc: "Full arch on 4 implants — from £4,500, same-day temporary teeth." },
                 { title: "All-on-6 Package Prices", href: "/prices/all-on-6-dental-implants-turkey-package", desc: "All-inclusive 6-implant arch package with hotel and transfers." },
-                { title: "Implant Cost Guide", href: "/prices/dental-implants-turkey-cost", desc: "UK vs Turkey price breakdown for all implant systems." },
+                { title: "Implant Cost Guide", href: "/blog/implants-cost-uk-vs-turkey", desc: "UK vs Turkey price breakdown for all implant systems." },
                 { title: "Same-Day Dental Implants", href: "/blog/same-day-dental-implants-turkey", desc: "What same-day implants involve and what to ask before you agree to them." },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-blue-50 rounded-xl p-4 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition-colors block">

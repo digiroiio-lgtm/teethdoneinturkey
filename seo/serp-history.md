@@ -7,6 +7,29 @@ rewritten again.
 
 ---
 
+## 2026-10-27 (implant-cost consolidation, approved by the site owner)
+
+`/prices/dental-implants-turkey-cost` had zero impressions since launch
+(also noted on 09-11) while `/blog/implants-cost-uk-vs-turkey` earned 592
+impressions on 2 Sep – 14 Oct. Same duplicate-suppression pattern as the
+full-mouth merge.
+
+- **MERGE.** 301 `/prices/dental-implants-turkey-cost` →
+  `/blog/implants-cost-uk-vs-turkey`; the older `/dental-implants-turkey-cost`
+  stub now points straight at the blog (no chain). Internal links in 15 pages,
+  the footer, `llms.txt`, the link registry and the audit script were updated
+  in the same change.
+- **Nothing ported.** The price page's brand rows (£250 / £430 / £930, with
+  "£250 incl. crown") conflict with the blog's single-implant range
+  (£420–£600 incl. crown), and its "5–10 year written guarantee" FAQ is
+  unsourced. Open owner question: which single-implant figure is correct.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-27 | /prices/dental-implants-turkey-cost | 301 → /blog/implants-cost-uk-vs-turkey | Duplicate intent, 0 impressions since launch | One URL owns the implant-cost intent |
+
+---
+
 ## 2026-10-16 (full-mouth cluster consolidation)
 
 GSC 2 Sep – 14 Oct: `/blog/full-mouth-implants-uk-vs-turkey` recorded 95

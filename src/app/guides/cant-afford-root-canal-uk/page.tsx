@@ -367,7 +367,7 @@ export default function CantAffordRootCanalPage() {
             {
               title: "Dental Implants Turkey Cost",
               desc: "Implant pricing from £250 per tooth — all brands and options compared.",
-              href: "/prices/dental-implants-turkey-cost",
+              href: "/blog/implants-cost-uk-vs-turkey",
             },
           ]}
         />
