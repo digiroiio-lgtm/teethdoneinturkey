@@ -33,6 +33,7 @@ const toc = [
   { id: "what-to-check", label: "What to Check Before Booking" },
   { id: "red-flags", label: "Red Flags to Watch For" },
   { id: "total-cost", label: "Package Price vs Real Total Cost" },
+  { id: "pay-monthly", label: "Paying for a Package Monthly" },
   { id: "faqs", label: "FAQs" },
 ];
 
@@ -70,6 +71,10 @@ const faqs = [
   {
     question: "What are the red flags with Turkey dental packages?",
     answer: "Red flags include: vague or verbal-only confirmations of inclusions; pressure to sign or pay a deposit before you receive a written treatment plan; package prices that don't specify the implant brand or crown material; no clear process for UK-based aftercare; and clinics that cannot provide verifiable before-and-after patient photos or independent reviews.",
+  },
+  {
+    question: "Can I pay for a Turkey teeth package monthly?",
+    answer: "Yes, subject to credit approval. Treatment can be spread over 12, 24 or 36 months, with 0% APR representative on qualifying plans. For example, a £3,800 treatment total over 36 months works out at about £106 a month. Flights and anything outside your quote are paid separately. Approval is the lender's decision and is not guaranteed, but the soft-search pre-check does not affect your credit score.",
   },
 ];
 
@@ -211,6 +216,23 @@ export default function TurkeyTeethPackagesPage() {
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             The gap between package price and total cost is not a trick — it is simply how package pricing works. As long as you account for it in your budgeting, the total cost of Turkey dental treatment remains significantly lower than comparable UK private treatment.
+          </p>
+
+          <h2 id="pay-monthly" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Can You Pay for a Turkey Teeth Package Monthly?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Yes. UK patients can spread the treatment cost over 12, 24 or 36 months, with 0% APR representative on qualifying plans. At 0% a longer term simply divides the same total into more payments. Examples on a 36-month term:
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-gray-700 mb-4">
+            <li>10 veneers, £2,800: about £78 a month</li>
+            <li>20 veneers (full smile line), £3,800: about £106 a month</li>
+            <li>All-on-4, one arch, £4,500: about £125 a month</li>
+            <li>All-on-6, one arch, £5,600: about £156 a month</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            These figures are the treatment total divided by 36 and are subject to credit approval. Flights and any treatment not in your quote are paid separately, so add them to your budget. Approval is the lender&apos;s decision and cannot be guaranteed; a soft-search pre-check does not affect your credit score. See{" "}
+            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">monthly payment examples for every treatment</Link>{" "}
+            and{" "}
+            <Link href="/finance-options-uk#bad-credit" className="text-[#1e40af] font-semibold hover:underline">how finance works with bad credit</Link>.
           </p>
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">FAQs</h2>
