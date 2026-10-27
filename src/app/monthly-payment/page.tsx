@@ -350,7 +350,7 @@ export default function MonthlyPaymentPage() {
             <p className="text-sm text-gray-500 mt-4">
               For the eligibility checklist in full and a treatment-by-treatment cost table covering veneers,
               implants and full-arch work, see our{" "}
-              <Link href="/blog/dental-treatment-turkey-payment-plans" className="text-[#1e40af] font-semibold hover:underline">step-by-step payment plans guide</Link>.
+              <Link href="/finance-options-uk#how-to-apply" className="text-[#1e40af] font-semibold hover:underline">step-by-step payment plans guide</Link>.
             </p>
           </div>
 

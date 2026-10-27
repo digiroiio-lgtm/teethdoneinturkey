@@ -200,11 +200,6 @@ export default function FinanceOptionsUKPage() {
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-8">How It Works</h2>
-            <p className="text-sm text-gray-500 mb-6">
-              This is the process in outline. For the full step-by-step application walkthrough and eligibility
-              checklist across every treatment type, see our{" "}
-              <Link href="/blog/dental-treatment-turkey-payment-plans" className="text-[#1e40af] font-semibold hover:underline">Turkey dental treatment payment plans guide</Link>.
-            </p>
             <div className="relative">
               <div className="hidden sm:block absolute left-6 top-6 bottom-6 w-px bg-blue-200" />
               <div className="space-y-6">
@@ -219,6 +214,28 @@ export default function FinanceOptionsUKPage() {
                 ))}
               </div>
             </div>
+          </div>
+
+          <div>
+            <h2 id="how-to-apply" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">Who Can Apply, and the Full Application Walkthrough</h2>
+            <p className="text-gray-700 mb-3">Finance plans are available to UK residents who:</p>
+            <ul className="list-disc list-inside space-y-1 mb-4 text-gray-700">
+              <li>Are aged 18 or over</li>
+              <li>Have a UK bank account</li>
+              <li>Have a regular income (employed, self-employed or pension)</li>
+              <li>Meet the lender&apos;s credit criteria, which is the lender&apos;s decision and cannot be guaranteed (see{" "}
+                <a href="#bad-credit" className="text-[#1e40af] font-semibold hover:underline">finance with bad credit</a>)</li>
+            </ul>
+            <p className="text-gray-700 mb-3">From first enquiry to your first payment:</p>
+            <ol className="list-decimal list-inside space-y-2 text-gray-700">
+              <li>Book a free consultation to receive your personalised treatment plan and cost.</li>
+              <li>Pre-qualify online. It takes about 60 seconds and uses a soft credit check.</li>
+              <li>Review your plan options, each shown with the full APR and total cost of credit.</li>
+              <li>Sign your credit agreement digitally.</li>
+              <li>Book your treatment in Turkey; clinic co-ordination is handled for you.</li>
+              <li>Travel and receive your dental treatment.</li>
+              <li>Monthly repayments begin on your agreed date.</li>
+            </ol>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
