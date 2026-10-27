@@ -101,7 +101,6 @@ export const CLUSTERS: ClusterDefinition[] = [
     hub: '/finance-options-uk',
     spokes: ['/monthly-payment'],
     support: [
-      '/blog/dental-treatment-turkey-payment-plans',
       '/blog/dental-tourism-finance-explained',
       '/blog/finance-dental-implants-turkey-uk-patients',
       '/blog/can-you-pay-monthly-for-teeth-in-turkey',
@@ -292,13 +291,6 @@ export const LINK_REGISTRY: LinkEntry[] = [
   },
 
   // ── Finance cluster blog posts → finance hub ──
-  {
-    from: '/blog/dental-treatment-turkey-payment-plans',
-    to: '/finance-options-uk',
-    anchorText: 'Turkey teeth finance options',
-    placement: 'related-links',
-    priority: 'required',
-  },
   {
     from: '/blog/dental-tourism-finance-explained',
     to: '/finance-options-uk',

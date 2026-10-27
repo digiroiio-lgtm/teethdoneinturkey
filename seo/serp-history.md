@@ -7,6 +7,31 @@ rewritten again.
 
 ---
 
+## 2026-10-27 (payment-plans consolidation, approved by the site owner)
+
+`/blog/dental-treatment-turkey-payment-plans` (~720 words, last touched January,
+3 inlinks) had zero impressions while `/finance-options-uk` (~2,500 words) is the
+page that earns the finance clicks and already covers plans, examples and bad
+credit. It was one of four posts with the same finance intent.
+
+- **MERGE.** 301 `/blog/dental-treatment-turkey-payment-plans` →
+  `/finance-options-uk`. Removed from the blog index, the link registry and
+  `llms.txt`; `/monthly-payment` now links to `/finance-options-uk#how-to-apply`.
+- **Ported** the two things the finance page had delegated to the post:
+  the eligibility list and the 7-step application walkthrough (new section
+  `#how-to-apply`). **Not ported:** the line "we work with providers for all
+  credit profiles" (contradicts the no-guaranteed-approval wording) and the
+  "Smile Makeover £5,000 / £139" row (conflicts with the finance page's figures).
+- Other finance posts left untouched (`can-you-pay-monthly-for-teeth-in-turkey`,
+  `dental-tourism-finance-explained`, `finance-dental-implants-turkey-uk-patients`);
+  judge them on data before any further merge.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-27 | /blog/dental-treatment-turkey-payment-plans | 301 → /finance-options-uk (+ #how-to-apply section) | Duplicate finance intent, 0 impressions | Finance intent concentrated on the page that earns clicks |
+
+---
+
 ## 2026-10-27 (implant-cost consolidation, approved by the site owner)
 
 `/prices/dental-implants-turkey-cost` had zero impressions since launch

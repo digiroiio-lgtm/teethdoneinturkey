@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-27T08:39:15.917Z",
-  "registrySize": 27,
+  "generatedAt": "2026-10-27T08:44:30.530Z",
+  "registrySize": 26,
   "pagesScanned": 105,
   "results": [
     {
@@ -321,7 +321,7 @@
     },
     {
       "page": "/finance-options-uk",
-      "incomingTotal": 26,
+      "incomingTotal": 24,
       "incomingFromHighAuth": 5,
       "sources": [
         {
@@ -346,14 +346,6 @@
         },
         {
           "from": "/blog/dental-tourism-finance-explained",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
-          "anchorText": "UK dental finance guide"
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": ""
         },
         {
@@ -433,7 +425,7 @@
     },
     {
       "page": "/monthly-payment",
-      "incomingTotal": 34,
+      "incomingTotal": 33,
       "incomingFromHighAuth": 4,
       "sources": [
         {
@@ -458,10 +450,6 @@
         },
         {
           "from": "/blog/dental-tourism-finance-explained",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": ""
         },
         {
@@ -577,7 +565,7 @@
     },
     {
       "page": "/blog/implants-cost-uk-vs-turkey",
-      "incomingTotal": 19,
+      "incomingTotal": 18,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -586,10 +574,6 @@
         },
         {
           "from": "/blog/dental-implant-recovery-time",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": ""
         },
         {
@@ -821,7 +805,7 @@
     },
     {
       "page": "/treatments/dental-implants-turkey",
-      "incomingTotal": 46,
+      "incomingTotal": 45,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -870,10 +854,6 @@
         },
         {
           "from": "/blog/dental-tourism-finance-explained",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": ""
         },
         {
@@ -1013,7 +993,7 @@
     },
     {
       "page": "/treatments/veneers-turkey",
-      "incomingTotal": 45,
+      "incomingTotal": 44,
       "incomingFromHighAuth": 2,
       "sources": [
         {
@@ -1066,10 +1046,6 @@
         },
         {
           "from": "/blog/dental-tourism-finance-explained",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": ""
         },
         {
@@ -1201,7 +1177,7 @@
     },
     {
       "page": "/treatments/all-on-4-turkey",
-      "incomingTotal": 28,
+      "incomingTotal": 27,
       "incomingFromHighAuth": 2,
       "sources": [
         {
@@ -1218,10 +1194,6 @@
         },
         {
           "from": "/blog/dental-tourism-finance-explained",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": ""
         },
         {
@@ -1393,7 +1365,7 @@
     },
     {
       "page": "/book-consultation",
-      "incomingTotal": 57,
+      "incomingTotal": 56,
       "incomingFromHighAuth": 1,
       "sources": [
         {
@@ -1438,10 +1410,6 @@
         },
         {
           "from": "/blog/dental-tourism-finance-explained",
-          "anchorText": ""
-        },
-        {
-          "from": "/blog/dental-treatment-turkey-payment-plans",
           "anchorText": ""
         },
         {
