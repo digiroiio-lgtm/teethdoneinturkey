@@ -7,6 +7,25 @@ rewritten again.
 
 ---
 
+## 2026-10-29 (single-implant price aligned site-wide, owner decision)
+
+Owner decision: a single implant with crown is **£250–£600 in Turkey depending on
+the implant brand** (entry-level Osstem at the low end, premium brands such as
+Straumann at the top). This closes the open question from the previous entries
+(£250 vs £420–£600 vs £650).
+
+- Replaced £420–£600, £250–£650 and £650 with £250–£600 (`/blog/implants-cost-uk-vs-turkey`, `/monthly-payment`, `/blog/uk-dentist-vs-turkey-dentist`, `/blog/single-tooth-implant-turkey-cost`, `/blog/finance-dental-implants-turkey-uk-patients`, `/guides/cant-afford-dental-treatment-uk`).
+- Capped Straumann "from £800 / up to £800" at about £600 (`/prices/turkey-teeth-cost`, `/guides/dental-implants-turkey`, `/guides/turkey-teeth-antalya`, `/blog/full-mouth-implants-uk-vs-turkey`, `/price-calculator`, `llms.txt`, `llms-full.txt`). **Check:** these pages' UK comparator for Straumann (£3,000–£4,500) was left unchanged.
+- Monthly figures for a single implant were below the £500 plan minimum (£7, £14, £18/mo). Now shown at £600: £17/mo over 36 months at 0% (£50 over 12, £25 over 24); 3 implants £1,800 = £50/mo.
+- "From £250" headline statements were left as they are: they remain true as the lower bound.
+- Savings percentages recomputed from the ranges (70–92%). Not changed: the Hollywood/veneer rows and the root-canal monthly figures.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-29 | 16 pages + llms files (see above) | single implant price £250–£600 by brand, monthly figures at £600 | contradictory prices across pages | consistent facts for AI answers |
+
+---
+
 ## 2026-10-29 (AI-prompt optimisation, medium prompts 10–12)
 
 Same rule: no new URLs. Unverifiable claims were qualified or removed (§23).

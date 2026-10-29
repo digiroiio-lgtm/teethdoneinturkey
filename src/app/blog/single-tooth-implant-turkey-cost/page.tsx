@@ -37,7 +37,7 @@ export default function SingleToothImplantPage() {
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
-          <p>A single dental implant in Turkey — including the titanium post, abutment, and final crown — starts from <strong>£250–£650</strong> depending on the implant brand and clinic. Compare this to £2,000–£2,800 in the UK for equivalent quality treatment: a saving of up to 90%.</p>
+          <p>A single dental implant in Turkey — including the titanium post, abutment, and final crown — costs <strong>£250–£600</strong> depending on the implant brand and clinic. Compare this to £2,000–£2,800 in the UK for equivalent quality treatment: a saving of up to 90%.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Single Implant Cost by Brand</h2>
           <div className="overflow-x-auto rounded-2xl shadow-sm my-4">
@@ -52,7 +52,7 @@ export default function SingleToothImplantPage() {
               </thead>
               <tbody>
                 {[
-                  { brand: "Straumann", turkey: "£550–£650", uk: "£2,500–£3,000", save: "78%" },
+                  { brand: "Straumann", turkey: "£550–£600", uk: "£2,500–£3,000", save: "76–78%" },
                   { brand: "Nobel Biocare", turkey: "£500–£600", uk: "£2,200–£2,800", save: "77%" },
                   { brand: "Astra Tech", turkey: "£480–£580", uk: "£2,000–£2,500", save: "76%" },
                   { brand: "Premium Turkish brands (e.g. Osstem)", turkey: "£250–£350", uk: "N/A in UK", save: "—" },

@@ -9,7 +9,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/finance-dental-implants-turkey-uk-patients" },
   title: "Finance Implants Turkey – UK Guide",
-  description: "How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from £54/month.",
+  description: "How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from about £50/month.",
 };
 
 export default function FinanceImplantsPage() {
@@ -19,7 +19,7 @@ export default function FinanceImplantsPage() {
         id="article-schema-finance-dental-implants-turkey-uk-patients"
         path="/blog/finance-dental-implants-turkey-uk-patients"
         headline="Finance Implants Turkey – UK Guide"
-        description="How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from £54/month."
+        description="How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from about £50/month."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -44,8 +44,8 @@ export default function FinanceImplantsPage() {
           <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200 my-4">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-sm">
               {[
-                { label: "Single implant", cost: "£650", monthly: "From £18/mo" },
-                { label: "3 implants", cost: "£1,950", monthly: "From £54/mo" },
+                { label: "Single implant (up to)", cost: "£600", monthly: "About £17/mo" },
+                { label: "3 implants (up to)", cost: "£1,800", monthly: "About £50/mo" },
                 { label: "All-on-4 (1 arch)", cost: "£4,500", monthly: "From £125/mo" },
                 { label: "Full mouth All-on-4", cost: "£9,000", monthly: "From £250/mo" },
               ].map(item => (

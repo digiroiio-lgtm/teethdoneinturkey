@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const ukVsTurkeyComparison = [
   { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "£190–£250", monthly: "From £6/mo" },
   { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "£3,800–£5,000", monthly: "From £106/mo" },
-  { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£420–£600", monthly: "From £14/mo" },
+  { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£250–£600", monthly: "£17/mo at £600" },
   { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,500–£5,500", monthly: "From £125/mo" },
   { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "From £5,600", monthly: "From £156/mo" },
   { treatment: "Hollywood Smile (20 zirconia crowns, inc. hotel)", uk: "£18,000–£22,000", turkey: "£2,800", monthly: "From £78/mo" },
@@ -240,7 +240,7 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Dental Implants Turkey Finance Options</h2>
             <p className="text-gray-800 font-medium leading-relaxed mb-4">
-              A single dental implant in Turkey costs <strong>£420–£600</strong>, including consultation, CBCT scan, implant placement and the final zirconia crown. Over 36 months that is from £14 a month, and All-on-4 on one arch is from £125 a month, based on a 0% plan.
+              A single dental implant in Turkey costs <strong>£250–£600</strong> depending on the implant brand, including consultation, CBCT scan, implant placement and the final zirconia crown. Payment plans start at £500, so at £600 over 36 months that is about £17 a month, and All-on-4 on one arch is from £125 a month, based on a 0% plan.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               Larger implant treatments scale in the same way. The table shows the Turkey price and the lowest 36-month monthly figure for each option:
@@ -256,7 +256,7 @@ export default function MonthlyPaymentPage() {
                 </thead>
                 <tbody>
                   {[
-                    { t: "Single Implant", p: "£500", m: "From £14/mo" },
+                    { t: "Single Implant (premium brand)", p: "£600", m: "About £17/mo" },
                     { t: "4 Implants", p: "£2,000", m: "From £56/mo" },
                     { t: "All-on-4 (single arch)", p: "£4,500", m: "From £125/mo" },
                     { t: "All-on-4 (both arches)", p: "£9,000", m: "From £250/mo" },
@@ -451,7 +451,7 @@ export default function MonthlyPaymentPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
                 { href: "/prices/veneers-turkey-cost", label: "Veneers Turkey Cost", sub: "E-max from £190/tooth" },
-                { href: "/blog/implants-cost-uk-vs-turkey", label: "Implants Turkey Cost", sub: "From £420 all-in" },
+                { href: "/blog/implants-cost-uk-vs-turkey", label: "Implants Turkey Cost", sub: "From £250 all-in" },
                 { href: "/prices/turkey-teeth-cost", label: "All Turkey Teeth Prices", sub: "Complete price guide" },
                 { href: "/treatments/veneers-turkey", label: "Veneers Treatment Guide", sub: "What to expect" },
                 { href: "/treatments/dental-implants-turkey", label: "Implants Treatment Guide", sub: "Full implant process" },
