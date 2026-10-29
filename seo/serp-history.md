@@ -7,6 +7,22 @@ rewritten again.
 
 ---
 
+## 2026-10-29 (AI-prompt optimisation, medium prompts 10–12)
+
+Same rule: no new URLs. Unverifiable claims were qualified or removed (§23).
+
+- `/blog/is-it-safe-to-get-teeth-done-in-turkey`: short answer now says "can be safe, not risk-free"; removed "over half a million patients", "equivalent to NHS-quality oversight" and "overwhelming majority excellent". Reviewer badge date left at September 2026 (no new review claimed).
+- `/blog/implants-cost-uk-vs-turkey`: meta/schema aligned to the body's £420–£600 (was "from £250"); removed "£14/month" single-implant figure (below the £500 plan minimum) and "government policy of supporting medical tourism". **Open owner question remains:** single-implant price (£250 vs £420–£600 vs £650 across pages).
+- `/reviews`: removed "5.0 average from 500+ reviews" (no verifiable source); labelled the eight accounts as patient-submitted and unverified. **Owner action:** confirm the testimonials are real and consented; add a genuine Google/Trustpilot rating only with its source link.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-29 | /blog/is-it-safe-to-get-teeth-done-in-turkey | short answer, FAQ, sources, claims qualified | prompt 10 | AI answer citation |
+| 2026-10-29 | /blog/implants-cost-uk-vs-turkey | short answer, FAQ, sources, price alignment, dateModified | prompt 11 | AI answer citation |
+| 2026-10-29 | /reviews | intro answer, FAQ, sources, removed unverified rating | prompt 12 | AI answer citation, lower trust risk |
+
+---
+
 ## 2026-10-29 (AI-prompt optimisation for 9 tracked prompts)
 
 Nine UK prompts were added to the AI visibility tracker. All nine already had an

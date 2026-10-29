@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTASection from "@/components/CTASection";
+import FAQSection from "@/components/FAQSection";
+import SourcesList from "@/components/SourcesList";
 
 export const revalidate = 86400;
 
@@ -22,6 +24,25 @@ const reviews = [
   { name: "Paul Harris", location: "Cardiff", treatment: "Dental Implants x2", rating: 5, review: "Two implants came to £900. Same would have cost me £5,000 in Cardiff. The procedure was straightforward, the clinic was brand new and extremely clean. Already planning my return visit for two more implants.", date: "August 2024" },
 ];
 
+const faqs = [
+  {
+    question: "Are Teeth Done in Turkey reviews genuine?",
+    answer: "The accounts on this page are patient-submitted experiences published by us. They have not been independently verified, and the prices quoted are the figures each patient reports. Read independent review sites and ask any clinic or co-ordinator for verifiable before-and-after cases before you decide.",
+  },
+  {
+    question: "How can I check a Turkey dental clinic's reviews?",
+    answer: "Look for reviews on independent platforms such as Google Maps and Trustpilot rather than only on a clinic's own site, read the critical ones as well as the five-star ones, and check whether reviewers describe the same treatment you need. Be cautious of identical wording, no negative reviews at all, or reviews that mention only price.",
+  },
+  {
+    question: "What do UK patients say about Turkey teeth?",
+    answer: "The patient accounts here mention lower cost than UK quotes, clean modern clinics, Digital Smile Design previews, airport transfers and WhatsApp contact with a co-ordinator. They are self-reported and not a measure of complication rates, so also read the risks and what UK dentists say about repair work.",
+  },
+  {
+    question: "Do patients report any problems with Turkey teeth?",
+    answer: "Patient-reported problems in the wider public record include over-aggressive tooth preparation, mismatched shades and difficulty arranging follow-up from the UK. Our guides on the risks of Turkey teeth and on whether UK dentists will fix them cover these in more detail.",
+  },
+];
+
 export default function ReviewsPage() {
   return (
     <>
@@ -36,11 +57,22 @@ export default function ReviewsPage() {
               </svg>
             ))}
           </div>
-          <p className="text-blue-200 mt-2">5.0 average from 500+ reviews</p>
+          <p className="text-blue-200 mt-2">Patient-submitted accounts · Last reviewed 29 October 2026</p>
         </div>
       </div>
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto mb-10 text-gray-700 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">What do UK patients say about teeth done in Turkey?</h2>
+            <p>
+              The accounts below describe lower costs than UK quotes, clean modern clinics, a Digital Smile Design preview
+              and WhatsApp contact with a co-ordinator. They are patient-submitted, not independently verified, and the
+              prices are the figures each patient reports. They are experiences, not a measure of complication rates.
+              Check independent reviews and read the{" "}
+              <Link href="/blog/risks-of-turkey-teeth" className="text-[#1e40af] font-semibold hover:underline">risks of Turkey teeth</Link>{" "}
+              before you decide.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.map(r => <TestimonialCard key={r.name} {...r} />)}
           </div>
@@ -51,6 +83,18 @@ export default function ReviewsPage() {
           </p>
         </div>
       </section>
+      <section className="bg-white py-10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SourcesList
+            introduction="Independent places to check clinic reviews and UK guidance. These sites do not endorse this site."
+            sources={[
+              { label: "General Dental Council: going abroad for dental treatment", href: "https://www.gdc-uk.org/standards-guidance/information-for-patients-public/going-abroad-for-dental-treatment" },
+              { label: "British Dental Association: UK dentists picking up the pieces from the dental tourism boom", href: "https://www.bda.org/media-centre/uk-dentists-picking-up-the-pieces-from-dental-tourism-boom/" },
+            ]}
+          />
+        </div>
+      </section>
+      <FAQSection faqs={faqs} title="Turkey Teeth Reviews: FAQs" />
       <CTASection title="Ready to Write Your Own Success Story?" subtitle="Join hundreds of UK patients who've transformed their smiles in Turkey. Book your free consultation today." buttonText="Book Free Consultation" buttonHref="/book-consultation" whatsapp={true} />
     </>
   );
