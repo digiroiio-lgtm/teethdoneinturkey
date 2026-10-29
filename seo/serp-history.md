@@ -7,6 +7,23 @@ rewritten again.
 
 ---
 
+## 2026-10-29 (Straumann UK comparator aligned, owner decision)
+
+After capping Straumann at about £600, the paired UK comparator (£3,000–£4,500,
+unsourced) was replaced with the site's single-implant UK range of
+£2,000–£3,000 used on every other page. Savings shown as ~70–80%. Changed in
+`/prices/turkey-teeth-cost`, `/guides/dental-implants-turkey`,
+`/guides/turkey-teeth-antalya`, `llms.txt` and `llms-full.txt`. Not changed:
+the "Implant + Bone Graft" row (£3,000–£4,500) on
+`/blog/implants-cost-uk-vs-turkey`, a different treatment. **Assumption:** no
+UK Straumann-specific figure was provided, so the generic range was reused.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-29 | 3 pages + llms files | Straumann UK £3,000–£4,500 → £2,000–£3,000 | consistency with £250–£600 Turkey range | consistent facts for AI answers |
+
+---
+
 ## 2026-10-29 (single-implant price aligned site-wide, owner decision)
 
 Owner decision: a single implant with crown is **£250–£600 in Turkey depending on

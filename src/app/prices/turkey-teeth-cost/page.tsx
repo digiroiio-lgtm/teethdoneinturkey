@@ -113,7 +113,7 @@ const costRows = [
   { treatment: "Porcelain (E-max) Veneer (per tooth)", turkey: "From £190", uk: "£800–£1,000", saving: "~78%" },
   { treatment: "Composite Veneer/Bonding (per tooth)", turkey: "From £90", uk: "£300–£500", saving: "~75%" },
   { treatment: "Dental Implant (Osstem, + crown)", turkey: "From £250", uk: "£2,000–£3,000", saving: "~88%" },
-  { treatment: "Dental Implant (Straumann, + crown)", turkey: "Up to ~£600", uk: "£3,000–£4,500", saving: "~80%+" },
+  { treatment: "Dental Implant (Straumann, + crown)", turkey: "Up to ~£600", uk: "£2,000–£3,000", saving: "~70–80%" },
   { treatment: "All-on-4 (per arch, all-inclusive)", turkey: "From £4,500", uk: "£15,000+", saving: "70%+" },
   { treatment: "All-on-6 (per arch, all-inclusive)", turkey: "From £5,600", uk: "£15,000–£22,000", saving: "~70%" },
   { treatment: "Hollywood Smile — 20 crowns (package)", turkey: "£2,800", uk: "£20,000–£30,000", saving: "~87%" },
