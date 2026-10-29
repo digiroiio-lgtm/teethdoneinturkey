@@ -354,6 +354,46 @@ export default function FinanceOptionsUKPage() {
           </div>
 
           <div>
+            <h2 id="best-options-veneers-implants" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">Best Pay Monthly Options for Veneers or Implants in Turkey</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              For most UK patients the cheapest pay-monthly route for veneers or implants in Turkey is a 0% APR
+              representative payment plan over 36 months, because it adds nothing to the treatment price. A personal loan
+              suits amounts or terms a plan does not cover, and a 0% credit card only works if you can clear the balance
+              inside the promotional period. Approval is never guaranteed for any of them.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="text-left font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Your situation</th>
+                    <th className="text-left font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Usually the better fit</th>
+                    <th className="text-left font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Why</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { s: "Full set of veneers (£3,800, about £106/mo over 36 months)", o: "0% payment plan", w: "Fixed instalments, no interest on a 0% APR representative plan, and the figure above is just the price divided by 36." },
+                    { s: "One arch of implants (All-on-4 £4,500, All-on-6 £5,600)", o: "0% payment plan, or a loan for a longer term", w: "Higher totals raise the monthly figure; a longer loan term lowers it but adds interest, so compare the total repayable." },
+                    { s: "Single implant or a total under £500", o: "Loan, card or savings", w: "Payment plans on this site start at £500, so a single implant priced from £250 falls below the minimum on its own." },
+                    { s: "You can clear the balance within 12–24 months and have good credit", o: "0% purchase credit card", w: "Interest-free only inside the promotional period; the standard rate applies to what remains afterwards." },
+                  ].map(row => (
+                    <tr key={row.s} className="odd:bg-white even:bg-gray-50/60">
+                      <td className="px-4 py-3 border-b border-gray-100 text-gray-900 font-semibold">{row.s}</td>
+                      <td className="px-4 py-3 border-b border-gray-100 text-gray-700">{row.o}</td>
+                      <td className="px-4 py-3 border-b border-gray-100 text-gray-600">{row.w}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-gray-500 mt-4">
+              Implant treatment is often staged, with a second trip months after placement. Ask your clinic what each
+              payment covers before you apply so the agreement matches the whole treatment plan. Monthly figures follow
+              the treatment prices above and are indicative; confirm your own quote before applying.
+            </p>
+          </div>
+
+          <div>
             <h2 id="bad-credit" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">Turkey Teeth Finance with Bad Credit: What Is Actually True</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               &ldquo;Bad credit dental finance&rdquo; is widely advertised, and most of what is promised cannot be

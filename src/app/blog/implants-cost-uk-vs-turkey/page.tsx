@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import FAQSection from "@/components/FAQSection";
+import SourcesList from "@/components/SourcesList";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
@@ -9,18 +11,43 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/implants-cost-uk-vs-turkey" },
   title: { absolute: "Turkey Dental Implants Cost vs UK: 2026 Prices" },
-  description: "Turkey teeth implants cost vs the UK: single implants from £250 in Turkey vs £2,500+ at home. What's included, brand comparison and full-mouth prices.",
+  description: "Dental implant cost in Turkey vs UK: a single implant with crown is £420–£600 in Turkey vs £2,000–£3,000 UK private. What is included and full-arch prices.",
 };
+
+const faqs = [
+  {
+    question: "How much do dental implants cost in Turkey vs the UK?",
+    answer: "A single implant with crown costs £420–£600 in Turkey with Straumann implants, compared with £2,000–£3,000 at a UK private clinic. An All-on-4 arch is £4,500–£5,500 in Turkey vs £12,000–£18,000 in the UK. UK figures are indicative private ranges and vary by clinic and city. Turkey prices were checked on 29 October 2026 and are confirmed in a personalised quote.",
+  },
+  {
+    question: "Are Turkish dental implants cheaper because they are lower quality?",
+    answer: "Not necessarily. Clinics can use the same international implant brands as UK practices, so ask which brand and system will be used and get it in writing. The lower price mainly reflects lower local costs and overheads. Quality still depends on the dentist, the planning and the aftercare, so compare those as well as the price.",
+  },
+  {
+    question: "What is included in the Turkey implant price?",
+    answer: "Typically the CBCT scan and consultation, implant placement, anaesthetic and sedation, a temporary crown and the final crown at a return visit. Bone grafts and sinus lifts may be extra, so check your written quote. Flights and hotel are separate.",
+  },
+  {
+    question: "How many trips to Turkey do dental implants need?",
+    answer: "Most patients make two visits. The first (3–5 days) covers assessment, scan and implant placement. The second (2–3 days, after 3–6 months of healing) fits the permanent crown. Your dentist sets the healing time for your case.",
+  },
+  {
+    question: "Can I pay monthly for dental implants in Turkey?",
+    answer: "Payment plans are available subject to UK credit approval, which is never guaranteed, from £500 to £30,000 over 12, 24 or 36 months. As an illustration, one All-on-4 arch at £4,500 over 36 months at 0% APR is about £125 a month. A single implant priced below £500 falls under the plan minimum on its own.",
+  },
+];
 
 export default function ImplantsCostUKvsTurkeyPage() {
   return (
+    <>
     <article className="py-16 bg-white">
       <ArticleJsonLd
         id="article-schema-implants-cost-uk-vs-turkey"
         path="/blog/implants-cost-uk-vs-turkey"
         headline="Dental Implants Cost: UK vs Turkey 2026"
-        description="Turkey teeth implants cost vs the UK: single implants from £250 in Turkey vs £2,500+ at home. What's included, brand comparison and full-mouth prices."
+        description="Dental implant cost in Turkey vs UK: a single implant with crown is £420–£600 in Turkey vs £2,000–£3,000 UK private. What is included and full-arch prices."
         datePublished="2026-04-01"
+        dateModified="2026-10-29"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -32,13 +59,16 @@ export default function ImplantsCostUKvsTurkeyPage() {
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Dental Implants Cost: UK vs Turkey – 2026 Comparison</h1>
-          <p className="text-gray-500 text-sm">Published April 2026 · 7 min read</p>
+          <p className="text-gray-500 text-sm">Published April 2026 · Last updated 29 October 2026 · 7 min read</p>
           <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
-            Dental implants in the UK are among the most expensive dental treatments available — often beyond the reach of patients on ordinary incomes. In Turkey, the exact same procedures, using the same implant brands, are available for a fraction of the cost. This guide gives UK patients a completely transparent comparison.
+            <strong>Short answer:</strong> a single dental implant with crown costs £420–£600 in Turkey compared with £2,000–£3,000 at a UK private clinic. One All-on-4 arch is £4,500–£5,500 in Turkey vs £12,000–£18,000 in the UK. UK figures are indicative; Turkey prices were checked on 29 October 2026 and are confirmed in your quote.
+          </p>
+          <p>
+            Dental implants in the UK are among the most expensive dental treatments available. In Turkey, comparable procedures using internationally recognised implant brands are available for a fraction of the cost. This guide gives UK patients a transparent comparison.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Single Dental Implant: UK vs Turkey</h2>
@@ -95,16 +125,16 @@ export default function ImplantsCostUKvsTurkeyPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Are the Implant Brands the Same?</h2>
           <p>
-            Yes. The price difference does <strong>not</strong> mean inferior implants. Our partner clinics use internationally recognised premium implant systems — the same brands used in the UK&apos;s leading private practices:
+            The price difference does not by itself mean inferior implants. Our partner clinics use internationally recognised implant systems also used in UK private practices:
           </p>
           <ul className="list-disc list-inside space-y-2 my-3">
-            <li><strong>Straumann (Switzerland)</strong> — the world&apos;s most clinically researched implant brand</li>
+            <li><strong>Straumann (Switzerland)</strong> — a widely researched premium implant brand</li>
             <li><strong>Nobel Biocare (Sweden/Switzerland)</strong> — used in complex full-arch cases worldwide</li>
             <li><strong>Astra Tech (Dentsply Sirona)</strong> — a premium Swedish implant system</li>
             <li><strong>Osstem (South Korea)</strong> — one of the world&apos;s largest manufacturers, widely used in Europe</li>
           </ul>
           <p>
-            The cost difference reflects Turkey&apos;s lower cost of living, lower overheads for clinics, and a government policy of supporting medical tourism — not any reduction in material quality or clinical skill.
+            The cost difference mainly reflects Turkey&apos;s lower cost of living and lower clinic overheads. Ask which brand and system will be used and get it in writing, as quality also depends on the dentist, planning and aftercare.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Does the Price Include?</h2>
@@ -153,9 +183,17 @@ export default function ImplantsCostUKvsTurkeyPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Paying Monthly for Implants in Turkey</h2>
           <p>
-            A single dental implant financed over 36 months costs from <strong>£14/month</strong>. An All-on-4 (both arches) financed over 36 months costs from <strong>£250/month</strong> — still significantly less than the monthly cost of NHS or UK private finance for equivalent treatment.
+            Subject to UK credit approval, which is never guaranteed, one All-on-4 arch (£4,500) divided over 36 months at 0% APR is about £125 a month, and both arches (£9,000) about £250 a month. Payment plans start at £500, so a single implant priced below that is not financed on its own. These are illustrations, not an offer of credit.
           </p>
           <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
+
+          <SourcesList
+            introduction="UK guidance on treatment abroad. UK prices on this page are indicative private ranges, not figures from these bodies."
+            sources={[
+              { label: "General Dental Council: going abroad for dental treatment", href: "https://www.gdc-uk.org/standards-guidance/information-for-patients-public/going-abroad-for-dental-treatment" },
+              { label: "NHSBSA: NHS England dental charges, April 2026", href: "https://www.nhsbsa.nhs.uk/sites/default/files/2026-03/NHS%20England%20dental%20charges%20poster%20-%20April%202026.pdf" },
+            ]}
+          />
 
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
             <p className="font-semibold text-gray-900 mb-2">Get your personalised implant quote</p>
@@ -188,5 +226,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
         </div>
       </div>
     </article>
+    <FAQSection faqs={faqs} title="Implant Cost in Turkey vs UK: FAQs" />
+    </>
   );
 }

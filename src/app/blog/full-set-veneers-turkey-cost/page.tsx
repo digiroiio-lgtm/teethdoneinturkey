@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import FAQSection from "@/components/FAQSection";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
@@ -12,8 +13,28 @@ export const metadata: Metadata = {
   description: "Exactly how much does a full set of veneers cost in Turkey? A complete cost breakdown for 8, 10, 16, and 20 veneers, including travel, for UK patients.",
 };
 
+const faqs = [
+  {
+    question: "How much does a full set of veneers cost in Turkey in pounds?",
+    answer: "A full set of 20 E-max veneers costs £3,800 in Turkey (£190 per tooth) and 20 full zirconia veneers cost £4,400 (£220 per tooth). The UK equivalent for 20 E-max veneers is roughly £18,000–£20,000. A typical six-night trip adds £510–£1,060. These are partner-clinic prices checked on 29 October 2026 and are confirmed in your personalised quote after photo review.",
+  },
+  {
+    question: "How many veneers make up a full set?",
+    answer: "Most patients treat the 8–10 teeth that show when they smile on the upper arch. A fuller makeover covers 16 or 20 teeth. Your dentist decides the number after examining your bite, gum line and tooth shape, so the quote can differ from the table.",
+  },
+  {
+    question: "Does the Turkey veneer price include flights and hotel?",
+    answer: "No. The per-tooth price covers the clinical treatment listed on this page. Flights, accommodation, food and travel insurance are separate and typically add £510–£1,060 for a six-night stay. Airport transfers are often arranged by the clinic.",
+  },
+  {
+    question: "Can I pay monthly for a full set of veneers in Turkey?",
+    answer: "Monthly payment plans are available subject to a UK credit check and approval, which is never guaranteed. As an illustration only, £3,800 divided over 36 months at 0% APR is about £106 a month. Your real offer depends on your application, so pre-qualify to see actual terms.",
+  },
+];
+
 export default function FullSetVeneersCostPage() {
   return (
+    <>
     <article className="py-16 bg-white">
       <ArticleJsonLd
         id="article-schema-full-set-veneers-turkey-cost"
@@ -21,6 +42,7 @@ export default function FullSetVeneersCostPage() {
         headline="Full Set of Veneers in Turkey – Cost"
         description="Exactly how much does a full set of veneers cost in Turkey? A complete cost breakdown for 8, 10, 16, and 20 veneers, including travel, for UK patients."
         datePublished="2026-01-01"
+        dateModified="2026-10-29"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -32,11 +54,13 @@ export default function FullSetVeneersCostPage() {
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Veneers</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Full Set of Veneers in Turkey: Cost Breakdown 2026</h1>
-          <p className="text-gray-500 text-sm">Published January 2026 · 6 min read</p>
+          <p className="text-gray-500 text-sm">Published January 2026 · Last updated 29 October 2026 · 6 min read</p>
           <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
+          <p><strong>Short answer:</strong> a full set of 20 veneers costs £3,800 (E-max) to £4,400 (zirconia) in Turkey, compared with roughly £18,000–£20,000 in the UK. Including a typical six-night trip, the all-in cost is about £4,300–£4,860 for E-max. Prices checked 29 October 2026; your quote is confirmed after photo review.</p>
+
           <p>One of the most common questions we receive is: <strong>&quot;How much will a full set of veneers cost me in Turkey, all-in?&quot;</strong> This guide breaks down exactly what you&apos;d pay — including the procedure, flights, accommodation, and transfers — so you can make an informed decision.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Is a &quot;Full Set&quot; of Veneers?</h2>
@@ -109,7 +133,33 @@ export default function FullSetVeneersCostPage() {
           </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Can I Spread the Cost?</h2>
-          <p>Yes. We offer monthly payment plans that allow you to pay for your Turkey veneer treatment from £78/month over 36 months — meaning you can have your dream smile now and pay gradually from home.</p>
+          <p>Yes, subject to UK credit approval, which is never guaranteed. Dividing the E-max prices above over 36 months at 0% APR gives the illustrative monthly figures below. Your real offer depends on your application.</p>
+          <div className="overflow-x-auto rounded-2xl shadow-sm my-4">
+            <table className="w-full bg-white text-sm">
+              <thead>
+                <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
+                  <th className="px-4 py-3 text-left">E-max veneers</th>
+                  <th className="px-4 py-3 text-right">Turkey price</th>
+                  <th className="px-4 py-3 text-right">Illustrative monthly (36 months, 0%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { n: "8 veneers", price: 1520 },
+                  { n: "10 veneers", price: 1900 },
+                  { n: "16 veneers", price: 3040 },
+                  { n: "20 veneers", price: 3800 },
+                ].map((r, i) => (
+                  <tr key={r.n} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    <td className="px-4 py-3 font-medium">{r.n}</td>
+                    <td className="px-4 py-3 text-right">£{r.price.toLocaleString("en-GB")}</td>
+                    <td className="px-4 py-3 text-right text-[#1e40af] font-bold">£{(r.price / 36).toFixed(0)}/month</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-gray-500">Simple division of the price by 36, for illustration. Not an offer of credit.</p>
           <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What&apos;s Included in the Turkey Veneer Price?</h2>
@@ -161,5 +211,7 @@ export default function FullSetVeneersCostPage() {
         </div>
       </div>
     </article>
+    <FAQSection faqs={faqs} title="Full Set of Veneers in Turkey: FAQs" />
+    </>
   );
 }
