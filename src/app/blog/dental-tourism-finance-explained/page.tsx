@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import FAQSection from "@/components/FAQSection";
+import SourcesList from "@/components/SourcesList";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
@@ -12,8 +14,28 @@ export const metadata: Metadata = {
   description: "How dental tourism finance works for UK patients: how to fund dental treatment abroad, from monthly payment plans to medical loans.",
 };
 
+const faqs = [
+  {
+    question: "How does dental finance work if I get treatment abroad?",
+    answer: "You borrow in the UK, in pounds, from a UK lender, and repay monthly from your UK bank account. The money pays your clinic in Turkey and the finance agreement is separate from the treatment contract. Options include dental finance plans, personal loans, 0% purchase credit cards and savings. Approval depends on a credit check and is never guaranteed.",
+  },
+  {
+    question: "Is dental finance for treatment abroad regulated in the UK?",
+    answer: "Consumer credit from a UK lender is regulated by the Financial Conduct Authority, so check that the lender is FCA authorised and read the credit agreement for the APR, total cost of credit and early repayment terms. The treatment itself is carried out by a Turkish clinic and is not covered by UK dental regulation.",
+  },
+  {
+    question: "Does applying for dental finance affect my credit score?",
+    answer: "A pre-qualification soft search does not leave a footprint that other lenders can see. A full application usually involves a hard search that is recorded on your credit file, so only proceed once you are happy with the terms shown.",
+  },
+  {
+    question: "Which is cheaper: a dental finance plan, a loan or a credit card?",
+    answer: "A 0% purchase credit card or a 0% finance plan costs nothing extra if you repay within the promotional period. A personal loan is useful for larger amounts or longer terms but charges interest. Compare the representative APR and total amount payable, not just the monthly payment.",
+  },
+];
+
 export default function DentalTourismFinancePage() {
   return (
+    <>
     <article className="py-16 bg-white">
       <ArticleJsonLd
         id="article-schema-dental-tourism-finance-explained"
@@ -21,6 +43,7 @@ export default function DentalTourismFinancePage() {
         headline="Dental Tourism Finance Explained – UK"
         description="How dental tourism finance works for UK patients: how to fund dental treatment abroad, from monthly payment plans to medical loans."
         datePublished="2026-01-01"
+        dateModified="2026-10-29"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -32,11 +55,13 @@ export default function DentalTourismFinancePage() {
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Finance</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Dental Tourism Finance Explained: A UK Patient Guide</h1>
-          <p className="text-gray-500 text-sm">Published January 2026 · 7 min read</p>
+          <p className="text-gray-500 text-sm">Published January 2026 · Last updated 29 October 2026 · 7 min read</p>
           <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
+          <p><strong>Short answer:</strong> dental finance for treatment abroad works like any UK credit: you borrow in pounds from a UK lender and repay monthly from your UK bank account, while the funds pay your clinic in Turkey. The main routes are a dental finance plan, a personal loan, a 0% credit card or savings. Approval depends on a credit check and is never guaranteed.</p>
+
           <p>Dental tourism offers remarkable savings — but even the reduced costs of treatment in Turkey can represent a significant sum for many UK patients. Dental tourism finance bridges this gap, making premium dental treatment genuinely accessible through manageable monthly payments.</p>
           <p>This guide explains the different finance options available, how each works, and which might be right for your situation.</p>
 
@@ -50,9 +75,9 @@ export default function DentalTourismFinancePage() {
             <ul className="text-sm text-gray-700 space-y-1">
               <li>→ 0% interest options available for qualifying applicants</li>
               <li>→ Soft credit check pre-qualification (no impact on score)</li>
-              <li>→ Apply in 60 seconds with instant decision</li>
+              <li>→ Pre-qualify in about 60 seconds; a full application and lender decision follow</li>
               <li>→ All repayments in GBP — no currency risk</li>
-              <li>→ FCA-regulated process</li>
+              <li>→ Credit provided by FCA-authorised lenders, which you should check on the FCA register</li>
             </ul>
           </div>
 
@@ -63,7 +88,7 @@ export default function DentalTourismFinancePage() {
             <ul className="text-sm text-gray-700 space-y-1">
               <li>→ Loan amounts typically £1,000–£25,000</li>
               <li>→ Terms of 12–60 months</li>
-              <li>→ Rates from ~6% APR for good credit, higher for lower scores</li>
+              <li>→ Rates vary widely with your credit profile; compare the representative APR</li>
               <li>→ Fixed monthly payments throughout the term</li>
               <li>→ Hard credit check required for full application</li>
             </ul>
@@ -98,10 +123,10 @@ export default function DentalTourismFinancePage() {
               </thead>
               <tbody>
                 {[
-                  { opt: "Dental Finance Plan", speed: "Instant", zero: "✓", bad: "✓", best: "Most patients" },
+                  { opt: "Dental Finance Plan", speed: "Pre-qualify in minutes", zero: "Some applicants", bad: "Considered, not guaranteed", best: "Most patients" },
                   { opt: "Personal Loan", speed: "1–3 days", zero: "✗", bad: "Limited", best: "Good credit / larger amounts" },
                   { opt: "0% Credit Card", speed: "1–2 days", zero: "✓", bad: "✗", best: "Good credit, repaying quickly" },
-                  { opt: "Savings", speed: "Months", zero: "N/A", bad: "✓", best: "No urgency, avoid interest" },
+                  { opt: "Savings", speed: "Months", zero: "N/A", bad: "No credit check", best: "No urgency, avoid interest" },
                 ].map((r, i) => (
                   <tr key={r.opt} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3 font-medium">{r.opt}</td>
@@ -122,6 +147,14 @@ export default function DentalTourismFinancePage() {
             <li><strong>Your home is not at risk</strong> — dental finance plans are unsecured personal credit, not secured against your property</li>
             <li><strong>Finance does not affect your Turkey treatment</strong> — your clinic in Turkey is paid normally; finance is a UK-side arrangement</li>
           </ul>
+
+          <SourcesList
+            introduction="Regulator guidance on dental treatment abroad. It does not endorse this site or any lender."
+            sources={[
+              { label: "General Dental Council: going abroad for dental treatment", href: "https://www.gdc-uk.org/standards-guidance/information-for-patients-public/going-abroad-for-dental-treatment" },
+              { label: "Financial Conduct Authority: check the FCA Register", href: "https://register.fca.org.uk/" },
+            ]}
+          />
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
             <p className="font-bold text-xl mb-2">Check your finance options for free</p>
@@ -163,5 +196,7 @@ export default function DentalTourismFinancePage() {
         </div>
       </div>
     </article>
+    <FAQSection faqs={faqs} title="Dental Finance Abroad: FAQs" />
+    </>
   );
 }

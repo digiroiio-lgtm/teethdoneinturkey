@@ -12,6 +12,23 @@ export const metadata: Metadata = {
   description: "Yes, you can pay monthly for teeth done in Turkey. What UK patients need to know about dental finance, monthly payment plans and 0% interest options.",
 };
 
+const faqs = [
+              { q: "Is 0% interest available?", a: "Yes, for qualifying applicants. Your credit profile and term length determine eligibility. All options are presented clearly before you commit." },
+              { q: "Does applying affect my credit score?", a: "Pre-qualification uses a soft check — no impact. Only a full application creates a footprint on your credit file." },
+              { q: "I have bad credit — can I still apply?", a: "You can apply, and pre-qualifying is a soft search that does not affect your credit score. Approval is the lender's decision, so nobody can guarantee it with a poor credit history. A deposit or a smaller treatment total can improve the odds. Our finance page explains how bad-credit applications work." },
+              { q: "Can I pay off early?", a: "Yes, most plans allow early repayment. Exact terms are confirmed in your credit agreement before you sign." },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(faq => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function PayMonthlyTeethTurkeyPage() {
   return (
     <article className="py-16 bg-white">
@@ -21,6 +38,7 @@ export default function PayMonthlyTeethTurkeyPage() {
         headline="Monthly Payment for Teeth in Turkey"
         description="Yes, you can pay monthly for teeth done in Turkey. What UK patients need to know about dental finance, monthly payment plans and 0% interest options."
         datePublished="2026-01-01"
+        dateModified="2026-10-29"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -32,14 +50,14 @@ export default function PayMonthlyTeethTurkeyPage() {
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Finance</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Can You Pay Monthly for Teeth in Turkey?</h1>
-          <p className="text-gray-500 text-sm">Published January 2026 · 6 min read</p>
+          <p className="text-gray-500 text-sm">Published January 2026 · Last updated 29 October 2026 · 6 min read</p>
           <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <div className="bg-green-50 border border-green-200 rounded-2xl p-4">
             <p className="font-bold text-green-800 text-lg">✓ Yes — monthly payment plans are available for teeth done in Turkey</p>
-            <p className="text-green-700 text-sm mt-1">UK-based finance. Apply in 60 seconds. 0% options available.</p>
+            <p className="text-green-700 text-sm mt-1">Subject to UK credit approval, which is never guaranteed. Pre-qualifying uses a soft search. 0% APR options are available for some applicants.</p>
           </div>
 
           <p>One of the most common barriers to getting dental treatment — even at significantly lower Turkish prices — is finding the upfront cost. Monthly payment plans solve this by letting you pay over 12, 24, or 36 months while your treatment is completed in Turkey.</p>
@@ -79,10 +97,8 @@ export default function PayMonthlyTeethTurkeyPage() {
                 {[
                   { t: "10 Veneers", cost: "£1,900", m12: "£158", m24: "£79", m36: "£53" },
                   { t: "20 Veneers", cost: "£3,800", m12: "£317", m24: "£158", m36: "£106" },
-                  { t: "Single Implant", cost: "£650", m12: "£54", m24: "£27", m36: "£18" },
                   { t: "All-on-4 (one arch)", cost: "£4,500", m12: "£375", m24: "£188", m36: "£125" },
                   { t: "Full Mouth All-on-4", cost: "£9,000", m12: "£750", m24: "£375", m36: "£250" },
-                  { t: "Smile Makeover", cost: "£5,000", m12: "£417", m24: "£208", m36: "£139" },
                 ].map((r, i) => (
                   <tr key={r.t} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3 font-medium">{r.t}</td>
@@ -95,7 +111,7 @@ export default function PayMonthlyTeethTurkeyPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-400">* Representative figures. Exact rates depend on credit assessment and lender terms.</p>
+          <p className="text-xs text-gray-400">* Illustrative: price divided by the number of months at 0% APR. Exact rates depend on credit assessment and lender terms. For single-implant and other treatment prices, see <Link href="/finance-options-uk" className="underline">our finance guide</Link>.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Even With Finance, Turkey Is Dramatically Cheaper Than the UK</h2>
           <p>Consider 20 veneers financed over 36 months:</p>
@@ -114,13 +130,12 @@ export default function PayMonthlyTeethTurkeyPage() {
           <p>The monthly savings are as significant as the headline savings.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">FAQs About Monthly Payment</h2>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
+          />
           <div className="space-y-3 my-4">
-            {[
-              { q: "Is 0% interest available?", a: "Yes, for qualifying applicants. Your credit profile and term length determine eligibility. All options are presented clearly before you commit." },
-              { q: "Does applying affect my credit score?", a: "Pre-qualification uses a soft check — no impact. Only a full application creates a footprint on your credit file." },
-              { q: "I have bad credit — can I still apply?", a: "You can apply, and pre-qualifying is a soft search that does not affect your credit score. Approval is the lender's decision, so nobody can guarantee it with a poor credit history. A deposit or a smaller treatment total can improve the odds. Our finance page explains how bad-credit applications work." },
-              { q: "Can I pay off early?", a: "Yes, most plans allow early repayment. Exact terms are confirmed in your credit agreement before you sign." },
-            ].map(faq => (
+            {faqs.map(faq => (
               <div key={faq.q} className="bg-gray-50 rounded-xl p-4 border border-gray-200">
                 <p className="font-semibold text-gray-900 text-sm mb-1">{faq.q}</p>
                 <p className="text-gray-600 text-sm">{faq.a}</p>

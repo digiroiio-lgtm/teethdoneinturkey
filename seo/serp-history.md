@@ -7,6 +7,33 @@ rewritten again.
 
 ---
 
+## 2026-10-29 (AI-prompt optimisation for 9 tracked prompts)
+
+Nine UK prompts were added to the AI visibility tracker. All nine already had an
+owning page, so **no new URL was created** (new finance/cost URLs would
+cannibalise the existing cluster). Thin pages were given a direct answer, FAQ
+(visible = FAQPage JSON-LD), dated `dateModified` and sourced context.
+`/prices/turkey-teeth-cost` (prompt 6) already had quick answer + FAQ: untouched.
+`/finance-options-uk` body untouched except one new section.
+
+Removed from `/blog/can-you-pay-monthly-for-teeth-in-turkey`: the Single Implant
+(£650) and Smile Makeover (£5,000) rows, which conflicted with other pages'
+published prices (open owner question remains). "Bad credit ✓" in the
+finance-explained table was qualified to "Considered, not guaranteed".
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-29 | /blog/full-set-veneers-turkey-cost | short answer, FAQ, 36-month illustration table, dateModified | prompt 7 | AI answer citation |
+| 2026-10-29 | /blog/hollywood-smile-turkey-cost | short answer, FAQ, qualified finance line, dateModified | prompt 8 | AI answer citation |
+| 2026-10-29 | /blog/will-uk-dentists-fix-turkey-teeth | short answer, FAQ, sources (GDC, BDA, NHSBSA), dateModified | prompt 9 | AI answer citation |
+| 2026-10-29 | /blog/can-you-pay-monthly-for-teeth-in-turkey | FAQPage JSON-LD, removed 2 conflicting rows, dateModified | prompt 1 | AI answer citation |
+| 2026-10-29 | /blog/dental-tourism-finance-explained | short answer, FAQ, sources, qualified claims, dateModified | prompt 4 | AI answer citation |
+| 2026-10-29 | /finance-options-uk | new section #best-options-veneers-implants | prompt 3 | AI answer citation |
+
+Re-measure in the prompt tracker after 2 weeks before further rewrites.
+
+---
+
 ## 2026-10-27 (payment-plans consolidation, approved by the site owner)
 
 `/blog/dental-treatment-turkey-payment-plans` (~720 words, last touched January,

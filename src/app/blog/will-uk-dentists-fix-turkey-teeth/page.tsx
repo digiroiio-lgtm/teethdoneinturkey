@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import FAQSection from "@/components/FAQSection";
+import SourcesList from "@/components/SourcesList";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
@@ -12,8 +14,32 @@ export const metadata: Metadata = {
   description: "Will UK dentists treat or fix dental work done in Turkey? An honest guide to what to expect from UK dentists regarding Turkey dental tourism work.",
 };
 
+const faqs = [
+  {
+    question: "Will UK dentists treat or fix Turkey teeth?",
+    answer: "Generally yes. UK dentists assess, X-ray and monitor dental work done abroad, treat pain or infection, and can re-bond or replace a failed veneer or crown, usually on a private fee basis. They will not usually guarantee work they did not carry out. Availability varies by practice, so ask before booking.",
+  },
+  {
+    question: "Will the NHS fix Turkey teeth?",
+    answer: "An NHS dentist will treat clinical need such as pain, infection or structural failure under the standard NHS charge bands. Elective cosmetic work, including redoing veneers, is not provided on the NHS. NHS dentist availability is limited in many areas, so access is not guaranteed.",
+  },
+  {
+    question: "Can a UK dentist refuse to treat me because I had work done in Turkey?",
+    answer: "Individual practices decide whom they accept as new patients and the General Dental Council does not prohibit UK dentists from treating dental tourism patients. Some practices may decline to take on remedial or elective work they did not plan. If one practice refuses, ask another and say upfront what was done and where.",
+  },
+  {
+    question: "What should I bring to a UK dentist after treatment in Turkey?",
+    answer: "Bring your written treatment record, the brands and materials used, X-rays and scans taken in Turkey, and your clinic's guarantee documents. Ask your Turkish clinic to email these before you travel home.",
+  },
+  {
+    question: "Who pays if Turkey dental work needs fixing?",
+    answer: "Problems covered by your Turkish clinic's written guarantee should go back to that clinic, remotely or on a return visit. If you see a UK dentist for the same problem, expect to pay their private fee and keep the receipt in case the Turkish clinic agrees to reimburse. Check what your guarantee actually covers before you travel.",
+  },
+];
+
 export default function UKDentistsFixTurkeyTeethPage() {
   return (
+    <>
     <article className="py-16 bg-white">
       <ArticleJsonLd
         id="article-schema-will-uk-dentists-fix-turkey-teeth"
@@ -21,6 +47,7 @@ export default function UKDentistsFixTurkeyTeethPage() {
         headline="Will UK Dentists Fix Turkey Teeth?"
         description="Will UK dentists treat or fix dental work done in Turkey? An honest guide to what to expect from UK dentists regarding Turkey dental tourism work."
         datePublished="2026-01-01"
+        dateModified="2026-10-29"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -32,11 +59,13 @@ export default function UKDentistsFixTurkeyTeethPage() {
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Safety</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Will UK Dentists Fix Turkey Teeth?</h1>
-          <p className="text-gray-500 text-sm">Published January 2026 · 6 min read</p>
+          <p className="text-gray-500 text-sm">Published January 2026 · Last updated 29 October 2026 · 6 min read</p>
           <MedicalReviewBadge />
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
+          <p><strong>Short answer:</strong> yes, UK dentists generally will treat patients who had work done in Turkey. They will assess and monitor it, treat pain or infection, and repair or replace failed work, usually privately, but they will not guarantee it. Acceptance varies by practice and NHS availability is limited, so ask before you book.</p>
+
           <p>If you&apos;ve had dental work done in Turkey and have a question, issue, or simply want a check-up when you return home, you may wonder: will a UK dentist treat you? Will they fix any problems? Or will they refuse to touch &quot;Turkey teeth&quot;?</p>
           <p>This is a common concern — and the answer is more straightforward than you might expect.</p>
 
@@ -95,6 +124,15 @@ export default function UKDentistsFixTurkeyTeethPage() {
           <p>Any issue covered by your Turkish clinic&apos;s guarantee should be addressed by that clinic — either remotely or on a return visit. Our partner clinics offer 10-year guarantees and are responsive to UK patient aftercare requests via WhatsApp and video call.</p>
           <p>Your Turkish clinic remains your primary resource for any workmanship issues. UK dentists provide general monitoring and emergency care, not remedial coverage of guarantee claims.</p>
 
+          <SourcesList
+            introduction="Official and professional sources on UK dentists and treatment abroad. They do not endorse this site or any clinic."
+            sources={[
+              { label: "General Dental Council: going abroad for dental treatment", href: "https://www.gdc-uk.org/standards-guidance/information-for-patients-public/going-abroad-for-dental-treatment" },
+              { label: "British Dental Association: UK dentists picking up the pieces from the dental tourism boom", href: "https://www.bda.org/media-centre/uk-dentists-picking-up-the-pieces-from-dental-tourism-boom/" },
+              { label: "NHSBSA: NHS England dental charges, April 2026", href: "https://www.nhsbsa.nhs.uk/sites/default/files/2026-03/NHS%20England%20dental%20charges%20poster%20-%20April%202026.pdf" },
+            ]}
+          />
+
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
             <p className="font-semibold text-gray-900 mb-2">We provide UK-based aftercare support</p>
             <p className="text-gray-600 text-sm mb-4">Book through us and you have ongoing UK support throughout your treatment journey — not just clinic booking.</p>
@@ -131,5 +169,7 @@ export default function UKDentistsFixTurkeyTeethPage() {
         </div>
       </div>
     </article>
+    <FAQSection faqs={faqs} title="UK Dentists and Turkey Teeth: FAQs" />
+    </>
   );
 }
