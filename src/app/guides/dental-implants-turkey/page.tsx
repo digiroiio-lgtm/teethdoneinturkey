@@ -49,7 +49,7 @@ const toc = [
 const faqs = [
   {
     question: "How much do dental implants cost in Turkey?",
-    answer: "On Teeth Done in Turkey's price pages, a single Osstem implant with crown starts from £250, versus £2,000–£3,000 for an equivalent implant and crown in the UK. Premium implant brands (such as Straumann) and multi-implant treatments such as All-on-4 (from £4,500 per arch) or All-on-6 (from £5,600 per arch) cost more — see the Turkey Teeth Cost Guide for a full breakdown.",
+    answer: "On Teeth Done in Turkey's price pages, a single Osstem implant with crown starts from £250, versus £2,000–£3,000 for an equivalent implant and crown in the UK. Premium implant brands (such as Straumann, up to about £600 with crown) and multi-implant treatments such as All-on-4 (from £4,500 per arch) or All-on-6 (from £5,600 per arch) cost more — see the Turkey Teeth Cost Guide for a full breakdown.",
   },
   {
     question: "Are dental implants in Turkey safe?",
@@ -109,7 +109,7 @@ const jsonLd = {
 
 const implantPriceRows = [
   { item: "Single Osstem implant + crown", turkey: "From £250", uk: "£2,000–£3,000" },
-  { item: "Single premium implant + crown (e.g. Straumann)", turkey: "From ~£800", uk: "£3,000–£4,500" },
+  { item: "Single premium implant + crown (e.g. Straumann)", turkey: "Up to ~£600", uk: "£3,000–£4,500" },
   { item: "All-on-4 (per arch, all-inclusive)", turkey: "From £4,500", uk: "£15,000+" },
   { item: "All-on-6 (per arch, all-inclusive)", turkey: "From £5,600", uk: "£15,000–£22,000" },
 ];
@@ -242,7 +242,7 @@ export default function DentalImplantsGuidePage() {
 
           <h2 id="costs" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Cost of Implants in Turkey</h2>
           <p className="text-gray-700 leading-relaxed mb-2">
-            <strong>How much do dental implants cost in Turkey?</strong> A single implant with a crown starts from £250 in Turkey using an entry-level brand such as Osstem, rising to roughly £800+ for premium brands such as Straumann — compared with £2,000–£4,500 for an equivalent single implant and crown in the UK.
+            <strong>How much do dental implants cost in Turkey?</strong> A single implant with a crown starts from £250 in Turkey using an entry-level brand such as Osstem, rising to about £600 for premium brands such as Straumann — compared with £2,000–£4,500 for an equivalent single implant and crown in the UK.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Full-mouth treatments are priced per arch rather than per implant: All-on-4 from £4,500 and All-on-6 from £5,600, both all-inclusive of hotel and transfers on this site&apos;s treatment pages. For a complete breakdown of what drives the final price — including diagnostics, bone grafting, temporary vs permanent restorations, and finance options — see the full <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost Guide</Link>.

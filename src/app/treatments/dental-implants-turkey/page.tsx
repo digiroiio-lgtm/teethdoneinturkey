@@ -17,7 +17,7 @@ const faqs = [
   { question: "How many trips do I need to Turkey for implants?", answer: "Usually two trips. The first (3–5 days) is for implant placement. After 3–6 months of osseointegration, you return for the crown fitting (3–4 days). Some cases with good bone density can be done as a single trip." },
   { question: "What brands of implants are used?", answer: "Our partner clinics use Straumann, Nobel Biocare, Astra Tech, and other premium implant brands — the same systems used in top UK practices." },
   { question: "How long do dental implants last?", answer: "With proper care, implants can last a lifetime. The crown on top may need replacing after 15–20 years. Our clinics offer a 10-year guarantee on implant work." },
-  { question: "Can I pay monthly for dental implants in Turkey?", answer: "Yes. Finance is available over 12, 24, or 36 months. A single implant at £250 is available from approximately £7/month over 36 months. Pre-qualify with no impact on your credit score." },
+  { question: "Can I pay monthly for dental implants in Turkey?", answer: "Yes. Finance is available over 12, 24, or 36 months. A single implant priced at £600 is about £17/month over 36 months at 0% APR; payment plans start at £500, so implants priced below that are not financed on their own. Pre-qualify with no impact on your credit score." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -78,8 +78,8 @@ export default function DentalImplantsTurkeyPage() {
               </div>
               <div className="text-center p-4 bg-green-50 rounded-xl">
                 <p className="text-sm text-gray-500 mb-1">Turkey Price (per implant)</p>
-                <p className="text-3xl font-extrabold text-green-600">£250</p>
-                <p className="text-xs text-green-600 font-semibold">Save 82%</p>
+                <p className="text-3xl font-extrabold text-green-600">£250–£600</p>
+                <p className="text-xs text-green-600 font-semibold">Depends on implant brand</p>
               </div>
             </div>
           </div>
@@ -126,9 +126,9 @@ export default function DentalImplantsTurkeyPage() {
             <p className="text-gray-600 mb-4">Finance your implants over 12, 24, or 36 months with no upfront fees.</p>
             <div className="grid grid-cols-3 gap-3 mb-4">
               {[
-                { label: "Single implant / 12mo", price: "£21/mo" },
-                { label: "Single implant / 24mo", price: "£11/mo" },
-                { label: "Single implant / 36mo", price: "£7/mo" },
+                { label: "£600 implant / 12mo", price: "£50/mo" },
+                { label: "£600 implant / 24mo", price: "£25/mo" },
+                { label: "£600 implant / 36mo", price: "£17/mo" },
               ].map(p => (
                 <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
                   <p className="text-xs text-gray-500 mb-1">{p.label}</p>

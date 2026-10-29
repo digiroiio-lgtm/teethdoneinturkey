@@ -162,7 +162,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             </div>
             <p className="text-sm text-gray-500">
               The individual-implant row is calculated from this site&apos;s own per-unit prices: 20 implants with crowns at
-              £250 each on an entry-level Osstem system, up to £800 each on Straumann. It is shown for completeness —
+              £250 each on an entry-level Osstem system, up to £600 each on a premium brand. It is shown for completeness —
               see below for why it is rarely the right treatment plan. All figures are indicative until a clinician has
               reviewed your scan.
             </p>
@@ -201,7 +201,7 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
                   best: "Best for: patients with good bone volume wanting maximum durability",
                 },
                 {
-                  name: "Individual implants — £250–£800 each",
+                  name: "Individual implants — £250–£600 each",
                   desc: "Each missing tooth gets its own implant and crown. Across a full mouth this is several times the price of a full-arch bridge, takes longer, and requires enough bone at every site. It is rarely recommended for a full mouth, and is normally reserved for replacing a small number of teeth.",
                   best: "Best for: replacing one or a few teeth, not a whole jaw",
                 },

@@ -11,13 +11,13 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/implants-cost-uk-vs-turkey" },
   title: { absolute: "Turkey Dental Implants Cost vs UK: 2026 Prices" },
-  description: "Dental implant cost in Turkey vs UK: a single implant with crown is £420–£600 in Turkey vs £2,000–£3,000 UK private. What is included and full-arch prices.",
+  description: "Dental implant cost in Turkey vs UK: a single implant with crown is £250–£600 in Turkey by brand vs £2,000–£3,000 UK private. What is included and full-arch prices.",
 };
 
 const faqs = [
   {
     question: "How much do dental implants cost in Turkey vs the UK?",
-    answer: "A single implant with crown costs £420–£600 in Turkey with Straumann implants, compared with £2,000–£3,000 at a UK private clinic. An All-on-4 arch is £4,500–£5,500 in Turkey vs £12,000–£18,000 in the UK. UK figures are indicative private ranges and vary by clinic and city. Turkey prices were checked on 29 October 2026 and are confirmed in a personalised quote.",
+    answer: "A single implant with crown costs £250–£600 in Turkey depending on the implant brand (entry-level brands such as Osstem at the lower end, premium brands at the upper end), compared with £2,000–£3,000 at a UK private clinic. An All-on-4 arch is £4,500–£5,500 in Turkey vs £12,000–£18,000 in the UK. UK figures are indicative private ranges and vary by clinic and city. Turkey prices were checked on 29 October 2026 and are confirmed in a personalised quote.",
   },
   {
     question: "Are Turkish dental implants cheaper because they are lower quality?",
@@ -45,7 +45,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
         id="article-schema-implants-cost-uk-vs-turkey"
         path="/blog/implants-cost-uk-vs-turkey"
         headline="Dental Implants Cost: UK vs Turkey 2026"
-        description="Dental implant cost in Turkey vs UK: a single implant with crown is £420–£600 in Turkey vs £2,000–£3,000 UK private. What is included and full-arch prices."
+        description="Dental implant cost in Turkey vs UK: a single implant with crown is £250–£600 in Turkey by brand vs £2,000–£3,000 UK private. What is included and full-arch prices."
         datePublished="2026-04-01"
         dateModified="2026-10-29"
         breadcrumbs={[
@@ -65,7 +65,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
-            <strong>Short answer:</strong> a single dental implant with crown costs £420–£600 in Turkey compared with £2,000–£3,000 at a UK private clinic. One All-on-4 arch is £4,500–£5,500 in Turkey vs £12,000–£18,000 in the UK. UK figures are indicative; Turkey prices were checked on 29 October 2026 and are confirmed in your quote.
+            <strong>Short answer:</strong> a single dental implant with crown costs £250–£600 in Turkey depending on the implant brand, compared with £2,000–£3,000 at a UK private clinic. One All-on-4 arch is £4,500–£5,500 in Turkey vs £12,000–£18,000 in the UK. UK figures are indicative; Turkey prices were checked on 29 October 2026 and are confirmed in your quote.
           </p>
           <p>
             Dental implants in the UK are among the most expensive dental treatments available. In Turkey, comparable procedures using internationally recognised implant brands are available for a fraction of the cost. This guide gives UK patients a transparent comparison.
@@ -79,14 +79,14 @@ export default function ImplantsCostUKvsTurkeyPage() {
               <p className="text-xs text-gray-500">per implant (inc. crown)</p>
             </div>
             <div className="bg-green-50 rounded-2xl p-5 text-center border border-green-200">
-              <p className="text-sm text-gray-500 mb-1">Turkey (Straumann)</p>
-              <p className="text-3xl font-extrabold text-green-600">£420–£600</p>
-              <p className="text-xs text-green-600 font-semibold">Save up to £2,400 per implant</p>
+              <p className="text-sm text-gray-500 mb-1">Turkey (by implant brand)</p>
+              <p className="text-3xl font-extrabold text-green-600">£250–£600</p>
+              <p className="text-xs text-green-600 font-semibold">Save up to £2,750 per implant</p>
             </div>
           </div>
 
           <p>
-            For a patient needing 4 implants, that saving is between £6,400 and £9,600 — easily covering multiple trips to Turkey with funds to spare. For full-arch treatments the comparison becomes even more stark.
+            For a patient needing 4 implants, that saving is roughly £5,600 to £11,000, depending on brand and clinic — easily covering multiple trips to Turkey with funds to spare. For full-arch treatments the comparison becomes even more stark.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Full Comparison Table</h2>
@@ -102,10 +102,10 @@ export default function ImplantsCostUKvsTurkeyPage() {
               </thead>
               <tbody>
                 {[
-                  { t: "Single Implant (incl. crown)", uk: "£2,000–£3,000", tr: "£420–£600", s: "78–82%" },
+                  { t: "Single Implant (incl. crown)", uk: "£2,000–£3,000", tr: "£250–£600", s: "70–92%" },
                   { t: "Implant + Bone Graft", uk: "£3,000–£4,500", tr: "£700–£1,000", s: "77–79%" },
-                  { t: "2 Implants", uk: "£4,000–£6,000", tr: "£840–£1,200", s: "78–80%" },
-                  { t: "4 Implants", uk: "£8,000–£12,000", tr: "£1,680–£2,400", s: "78–80%" },
+                  { t: "2 Implants", uk: "£4,000–£6,000", tr: "£500–£1,200", s: "70–92%" },
+                  { t: "4 Implants", uk: "£8,000–£12,000", tr: "£1,000–£2,400", s: "70–92%" },
                   { t: "All-on-4 (per arch)", uk: "£12,000–£18,000", tr: "£4,500–£5,500", s: "67–72%" },
                   { t: "All-on-6 (per arch)", uk: "£15,000–£22,000", tr: "From £5,600", s: "66–71%" },
                   { t: "Full Mouth (2 arches All-on-4)", uk: "£24,000–£36,000", tr: "£8,000–£11,000", s: "67–72%" },
@@ -169,7 +169,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
             <li>Sinus lift (if needed): £1,000–£2,000</li>
           </ul>
           <p>
-            A single tooth replacement in the UK can therefore cost <strong>£3,000–£5,000</strong> once all items are included. In Turkey, the same treatment — including scan, surgery, and the final crown — is <strong>£420–£700 all-in</strong>.
+            A single tooth replacement in the UK can therefore cost <strong>£3,000–£5,000</strong> once all items are included. In Turkey, the same treatment — including scan, surgery, and the final crown — is <strong>£250–£700 all-in</strong> depending on brand.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How Long Is the Treatment in Turkey?</h2>

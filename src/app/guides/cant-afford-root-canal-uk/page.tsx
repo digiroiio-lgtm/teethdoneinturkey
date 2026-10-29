@@ -45,7 +45,7 @@ const costRows = [
   { treatment: "Root canal (molar)", nhs: "£76.60 (Band 2)", private: "£900–£1,500", turkey: "£250–£300", monthly: "From £7/mo" },
   { treatment: "Crown (porcelain)", nhs: "£306.80 (Band 3)", private: "£800–£1,000", turkey: "£130–£280", monthly: "From £4/mo" },
   { treatment: "Root canal + crown (total)", nhs: "£306.80 (Band 3)", private: "£1,300–£2,500", turkey: "£330–£580", monthly: "From £10/mo" },
-  { treatment: "Single implant (if extraction)", nhs: "Not available (routine)", private: "£2,000–£3,000", turkey: "£250–£600", monthly: "From £7/mo" },
+  { treatment: "Single implant (if extraction)", nhs: "Not available (routine)", private: "£2,000–£3,000", turkey: "£250–£600", monthly: "£17/mo at £600" },
 ];
 
 const faqs = [

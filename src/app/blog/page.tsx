@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const posts = [
   // Finance cluster (growth hack - highlighted)
   { href: "/blog/can-you-pay-monthly-for-teeth-in-turkey", title: "Can You Pay Monthly for Teeth in Turkey?", excerpt: "Yes — spread the cost of dental treatment in Turkey from £78/month with UK-based finance plans.", date: "January 2026", tag: "Finance" },
-  { href: "/blog/finance-dental-implants-turkey-uk-patients", title: "Finance Dental Implants Turkey – UK Patient Guide", excerpt: "How to finance dental implants in Turkey. Monthly options from £54/month for single implants.", date: "January 2026", tag: "Finance" },
+  { href: "/blog/finance-dental-implants-turkey-uk-patients", title: "Finance Dental Implants Turkey – UK Patient Guide", excerpt: "How to finance dental implants in Turkey. Monthly options from about £17/month for a single implant at £600.", date: "January 2026", tag: "Finance" },
   { href: "/blog/dental-tourism-finance-explained", title: "Dental Tourism Finance Explained", excerpt: "A complete guide to funding dental treatment abroad — monthly plans, loans, 0% credit, and which to choose.", date: "January 2026", tag: "Finance" },
   // Core cluster
   { href: "/blog/why-are-dental-treatments-cheaper-in-turkey", title: "Why Are Dental Treatments Cheaper in Turkey?", excerpt: "The real reason dental work costs 70–80% less in Turkey. It's not lower quality — it's lower overheads.", date: "January 2026", tag: "Guide" },
@@ -30,7 +30,7 @@ const posts = [
   { href: "/blog/same-day-dental-implants-turkey", title: "Same Day Dental Implants Turkey", excerpt: "Everything UK patients need to know about same day (immediate loading) dental implants in Turkey.", date: "January 2026", tag: "Implants" },
   { href: "/blog/dental-implant-recovery-time", title: "Dental Implant Recovery Time: Complete Timeline", excerpt: "A complete recovery timeline from surgery day to final crown — what to expect at every stage.", date: "January 2026", tag: "Implants" },
   { href: "/blog/signs-of-dental-implant-failure", title: "Signs of Dental Implant Failure: What to Watch For", excerpt: "How to recognise implant failure symptoms, what causes them, and what to do if you notice warning signs.", date: "January 2026", tag: "Implants" },
-  { href: "/blog/single-tooth-implant-turkey-cost", title: "Single Tooth Implant Turkey Cost 2026", excerpt: "From £250 for a dental implant in Turkey vs £2,500+ in the UK. Full cost breakdown.", date: "January 2026", tag: "Implants" },
+  { href: "/blog/single-tooth-implant-turkey-cost", title: "Single Tooth Implant Turkey Cost 2026", excerpt: "£250–£600 for a dental implant in Turkey depending on brand vs £2,000–£3,000 in the UK. Full cost breakdown.", date: "January 2026", tag: "Implants" },
   // Safety cluster
   { href: "/blog/risks-of-turkey-teeth", title: "Risks of Turkey Teeth: What UK Patients Should Know", excerpt: "An honest guide to the real risks of getting dental work in Turkey — and how to avoid every one of them.", date: "January 2026", tag: "Safety" },
   { href: "/blog/aftercare-for-dental-work-in-turkey", title: "Aftercare for Dental Work in Turkey", excerpt: "Complete aftercare guide for UK patients returning home after veneers or implants in Turkey.", date: "January 2026", tag: "Aftercare" },

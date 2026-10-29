@@ -43,7 +43,7 @@ const toc = [
 const ukVsTurkeyRows = [
   { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "£190–£250", monthly: "From £6/mo" },
   { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "£3,800–£5,000", monthly: "From £106/mo" },
-  { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£420–£600", monthly: "From £14/mo" },
+  { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£250–£600", monthly: "£17/mo at £600" },
   { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,500–£5,500", monthly: "From £125/mo" },
   { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "From £5,600", monthly: "From £156/mo" },
 ];
@@ -221,7 +221,7 @@ export default function CantAffordDentalTreatmentUKPage() {
 
           <h2 id="monthly-cost" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What Treatment Actually Costs Per Month</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Whichever route you take, the practical question is usually the monthly figure. On this site, financed Turkey treatment starts from £6/month for a single veneer and £14/month for a single implant, rising to £150/month for a full All-on-6 arch, all on a 36-month 0% plan. Use the{" "}
+            Whichever route you take, the practical question is usually the monthly figure. On this site, financed Turkey treatment starts from £6/month for a single veneer and about £17/month for a single implant at £600, rising to £150/month for a full All-on-6 arch, all on a 36-month 0% plan. Use the{" "}
             <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">Price Calculator</Link>{" "}
             to build a monthly estimate for your own treatment combination.
           </p>
