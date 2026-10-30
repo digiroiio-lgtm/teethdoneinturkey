@@ -187,7 +187,7 @@ export default function ToothAbscessCantAffordDentistPage() {
               "Call NHS 111 (dial 111) immediately if you cannot access a dentist — they can refer you to an NHS emergency dental service at no upfront cost.",
               "Go to A&E (or call 999) if you have facial swelling, fever, difficulty swallowing or breathing — these are signs the infection is spreading and can become life-threatening.",
               "Antibiotics treat the infection temporarily but not the underlying tooth problem; they buy time, not a cure.",
-              "After emergency treatment, the tooth usually needs root canal or extraction — 0% APR finance from around £10/month is available for follow-up work in Turkey.",
+              "After emergency treatment, the tooth usually needs root canal or extraction, and some patients consider follow-up work in Turkey. If you choose to borrow, approval is not guaranteed.",
             ]}
           />
 
@@ -346,7 +346,7 @@ export default function ToothAbscessCantAffordDentistPage() {
           </div>
 
           <p className="text-sm text-gray-500 mb-6">
-            NHS charges from April 2026 (England). NHS emergency via NHS 111 is free to access; treatment charges apply unless exempt. Turkey prices are for treatment at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). 0% representative APR finance from around £10/month over 36 months is available for follow-up treatment, subject to eligibility.
+            NHS charges from April 2026 (England). NHS emergency via NHS 111 is free to access; treatment charges apply unless exempt. Turkey prices are for treatment at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). If you choose to borrow, approval is the lender&apos;s decision and is not guaranteed.
           </p>
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">
@@ -404,7 +404,7 @@ export default function ToothAbscessCantAffordDentistPage() {
             },
             {
               title: "Dental Finance Options UK",
-              desc: "0% APR plans, soft credit checks and eligibility for dental finance.",
+              desc: "Payment plans, loans and what to check before you borrow.",
               href: "/finance-options-uk",
             },
           ]}

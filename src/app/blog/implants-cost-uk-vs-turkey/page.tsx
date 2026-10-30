@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "Can I pay monthly for dental implants in Turkey?",
-    answer: "Payment plans are available subject to UK credit approval, which is never guaranteed, from £500 to £30,000 over 12, 24 or 36 months. As an illustration, one All-on-4 arch at £4,500 over 36 months at 0% APR is about £125 a month. A single implant priced below £500 falls under the plan minimum on its own.",
+    answer: "Some patients spread the cost with credit arranged in the UK, subject to the lender's approval, which is never guaranteed. The monthly payment depends on the offer you receive, so we do not publish monthly figures. Lenders may have minimum borrowing amounts, which a single implant can fall below.",
   },
 ];
 
@@ -183,9 +183,9 @@ export default function ImplantsCostUKvsTurkeyPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Paying Monthly for Implants in Turkey</h2>
           <p>
-            Subject to UK credit approval, which is never guaranteed, one All-on-4 arch (£4,500) divided over 36 months at 0% APR is about £125 a month, and both arches (£9,000) about £250 a month. Payment plans start at £500, so a single implant priced below that is not financed on its own. These are illustrations, not an offer of credit.
+            Some patients spread the cost of implants with credit arranged in the UK. Borrowing is optional, approval is the lender&apos;s decision and is never guaranteed, and the monthly payment depends on the offer you receive, so we do not publish monthly figures. One All-on-4 arch costs £4,500 and both arches £9,000, and lenders may have minimum borrowing amounts that a single implant can fall below. This is general information, not an offer of credit.
           </p>
-          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
+          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Paying monthly: what to know</Link>
 
           <SourcesList
             introduction="UK guidance on treatment abroad. UK prices on this page are indicative private ranges, not figures from these bodies."
@@ -214,7 +214,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
                 { href: "/treatments/all-on-4-turkey", label: "All-on-4 Turkey", sub: "Full arch restoration" },
                 { href: "/treatments/all-on-6-turkey", label: "All-on-6 Turkey", sub: "6-implant full arch" },
                 { href: "/prices/turkey-teeth-cost", label: "Turkey Teeth Cost", sub: "All treatment prices" },
-                { href: "/monthly-payment", label: "Monthly Payment Plans", sub: "From £78/month" },
+                { href: "/monthly-payment", label: "Paying Monthly", sub: "What to know before you borrow" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
                   <span className="font-semibold text-gray-900 text-sm">{item.label}</span>

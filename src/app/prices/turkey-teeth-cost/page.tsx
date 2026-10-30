@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     question: "Can I pay monthly for teeth in Turkey?",
-    answer: "Yes. Monthly payment plans are available from £78/month with 0% interest over 12, 24 or 36 months, according to this site's monthly payment page. Exact monthly figures depend on the treatment total and the term you choose.",
+    answer: "Some patients do, using credit arranged in the UK. Whether you are offered credit, and on what terms, is the lender's decision and is not guaranteed. The monthly payment depends on the offer you receive, so we do not publish monthly figures.",
   },
   {
     question: "Why do implant and add-on procedure prices vary between pages on this site?",
@@ -161,7 +161,7 @@ export default function TurkeyTeethCostPricePage() {
               "Individual treatments start from £130 (zirconia crown) and £190 (E-max veneer); implants start from £250.",
               "All-inclusive packages (hotel + transfers) start from £2,800 for a 20-crown Hollywood Smile.",
               "Full-arch implant options: All-on-4 from £4,500/arch, All-on-6 from £5,600/arch — both all-inclusive.",
-              "0% finance is available from £78/month over 12, 24 or 36 months.",
+              "If you choose to borrow, the lender sets the terms; approval is not guaranteed and we do not publish monthly figures.",
               "Flights, and some optional add-ons, are not included in package prices — confirm exactly what's covered before booking.",
             ]}
           />
@@ -252,11 +252,11 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="finance" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Finance &amp; Monthly Payment</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Where finance is factually available on this site, monthly payment plans start from £78/month with 0% interest over 12, 24 or 36 months. Monthly figures scale with the total treatment cost and the term selected — see{" "}
-            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">what each treatment costs per month</Link>{" "}
+            Some patients spread the cost of treatment with credit arranged in the UK. Borrowing is optional, and the monthly payment depends on the amount borrowed, the term, the interest rate and any fees in the lender&apos;s offer, so this guide shows treatment prices rather than monthly figures. See{" "}
+            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">paying monthly: what to know</Link>{" "}
             or{" "}
-            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how UK dental finance works, including dental loans and bad credit</Link>{" "}
-            for eligibility and how to pre-qualify.
+            <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how UK dental finance works, including dental loans and difficult credit histories</Link>{" "}
+            for what to check before you borrow. We are an Introducer Appointed Representative of Ideal Sales Solutions Ltd, trading as Ideal4Finance, a credit broker; we do not lend or give credit advice.
           </p>
 
           <h2 id="accurate-quote" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Getting an Accurate, Personalised Quotation</h2>
@@ -288,14 +288,14 @@ export default function TurkeyTeethCostPricePage() {
           links={[
             { title: "Teeth in Turkey: The Complete UK Patient Guide", desc: "The primary guide covering treatment, process, safety and cost.", href: "/guides/teeth-in-turkey" },
             { title: "Dental Implants in Turkey: Complete Guide", desc: "Brands, procedure, timelines, and implant-specific costs.", href: "/guides/dental-implants-turkey" },
-            { title: "Turkey Teeth Finance", desc: "Pay monthly for Turkey teeth. 0% APR payment plans and bad credit options explained.", href: "/finance-options-uk" },
+            { title: "Turkey Teeth Finance", desc: "Paying monthly for Turkey teeth: payment plans, loans and what to check.", href: "/finance-options-uk" },
           ]}
         />
 
         <RelatedLinksGrid
           title="Related Blog Articles"
           links={[
-            { title: "Can You Pay Monthly for Teeth in Turkey?", desc: "Monthly payment plans and 0% interest options explained.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
+            { title: "Can You Pay Monthly for Teeth in Turkey?", desc: "What UK patients should know about paying monthly for treatment in Turkey.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
             { title: "Full Mouth Implants: UK vs Turkey", desc: "Full-mouth implant cost comparison in detail.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
             { title: "Why Is Dental Care Cheaper in Turkey?", desc: "The real reasons behind the price difference.", href: "/blog/why-are-dental-treatments-cheaper-in-turkey" },
             { title: "Hollywood Smile Turkey Cost", desc: "Zirconia crown package pricing in detail.", href: "/blog/hollywood-smile-turkey-cost" },

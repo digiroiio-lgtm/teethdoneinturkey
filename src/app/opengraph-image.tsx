@@ -39,7 +39,7 @@ export default async function OpengraphImage() {
             display: "flex",
           }}
         >
-          JCI-Accredited Clinics · Monthly Payment Plans
+          JCI-Accredited Clinics · UK Patient Support
         </div>
       </div>
     ),

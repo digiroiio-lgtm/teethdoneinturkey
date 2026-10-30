@@ -4,7 +4,7 @@ export default function TrustBar() {
     { icon: '✓', label: 'JCI-Accredited Clinics' },
     { icon: '★', label: '4.8 on Trustpilot (97 reviews)' },
     { icon: '📷', label: 'Real Before & After Photos' },
-    { icon: '💳', label: 'Monthly Payment Options' },
+    { icon: '💳', label: 'Payment Options Explained' },
   ];
 
   return (

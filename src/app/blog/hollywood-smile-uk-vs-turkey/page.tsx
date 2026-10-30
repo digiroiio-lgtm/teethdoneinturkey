@@ -155,9 +155,9 @@ export default function HollywoodSmileUKvsTurkeyPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Pay Monthly for Your Hollywood Smile</h2>
           <p>
-            A Hollywood Smile (20 zirconia crowns) financed over 36 months costs approximately <strong>£78/month</strong> — less than many people spend on subscription services, and far less than UK finance for equivalent treatment.
+            A Hollywood Smile (20 zirconia crowns) is priced from £2,800 in Turkey, against £18,000–£22,000 in the UK. If you choose to borrow, the lender sets the terms and the monthly payment, and approval is never guaranteed, so we do not publish monthly figures.
           </p>
-          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ See all monthly payment options</Link>
+          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Paying monthly: what to know</Link>
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
             <p className="font-bold text-xl mb-2">Get your Hollywood Smile quote</p>
@@ -177,7 +177,7 @@ export default function HollywoodSmileUKvsTurkeyPage() {
                 { href: "/treatments/dental-implants-turkey", label: "Dental Implants Turkey", sub: "Full treatment guide" },
                 { href: "/prices/veneers-turkey-cost", label: "Veneers Cost Guide", sub: "Prices & comparisons" },
                 { href: "/prices/turkey-teeth-cost", label: "Turkey Teeth Cost", sub: "All treatment prices" },
-                { href: "/monthly-payment", label: "Monthly Payment Plans", sub: "From £78/month" },
+                { href: "/monthly-payment", label: "Paying Monthly", sub: "What to know before you borrow" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
                   <span className="font-semibold text-gray-900 text-sm">{item.label}</span>

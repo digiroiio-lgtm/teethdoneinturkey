@@ -3,13 +3,14 @@ import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
+import FinanceDisclosure from "@/components/FinanceDisclosure";
 
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/finance-dental-implants-turkey-uk-patients" },
   title: "Finance Implants Turkey – UK Guide",
-  description: "How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from about £50/month.",
+  description: "How UK patients can pay for dental implants in Turkey. Payment options, what decides a monthly payment and what to check before you borrow.",
 };
 
 export default function FinanceImplantsPage() {
@@ -19,7 +20,7 @@ export default function FinanceImplantsPage() {
         id="article-schema-finance-dental-implants-turkey-uk-patients"
         path="/blog/finance-dental-implants-turkey-uk-patients"
         headline="Finance Implants Turkey – UK Guide"
-        description="How to finance dental implants in Turkey as a UK patient. Monthly payment options, 0% interest plans, and how to make implants affordable from about £50/month."
+        description="How UK patients can pay for dental implants in Turkey. Payment options, what decides a monthly payment and what to check before you borrow."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -37,108 +38,59 @@ export default function FinanceImplantsPage() {
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
-          <p>Dental implants are life-changing — but even at significantly reduced Turkish prices, a full mouth restoration represents a substantial investment. UK-based dental finance makes it possible to have your implants done in Turkey and spread the cost over time from home.</p>
+          <p>Dental implants are life-changing — but even at significantly reduced Turkish prices, a full mouth restoration represents a substantial investment. Some patients spread the cost with credit arranged in the UK. Borrowing is optional and approval is the lender&apos;s decision.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Finance Turkey Implants?</h2>
-          <p>Even after the dramatic savings from having implants in Turkey (typically 70–80% less than UK prices), some treatments — particularly All-on-4 or All-on-6 full arch restorations — involve costs of £4,500–£11,000. Finance makes this accessible with payments starting from £83/month.</p>
+          <p>Even after the dramatic savings from having implants in Turkey (typically 70–80% less than UK prices), some treatments — particularly All-on-4 or All-on-6 full arch restorations — involve costs of £4,500–£11,000. Whether to borrow, and how much, is worth thinking through carefully.</p>
           <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200 my-4">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-sm">
               {[
-                { label: "Single implant (up to)", cost: "£600", monthly: "About £17/mo" },
-                { label: "3 implants (up to)", cost: "£1,800", monthly: "About £50/mo" },
-                { label: "All-on-4 (1 arch)", cost: "£4,500", monthly: "From £125/mo" },
-                { label: "Full mouth All-on-4", cost: "£9,000", monthly: "From £250/mo" },
+                { label: "Single implant (up to)", cost: "£600" },
+                { label: "3 implants (up to)", cost: "£1,800" },
+                { label: "All-on-4 (1 arch)", cost: "£4,500" },
+                { label: "Full mouth All-on-4", cost: "£9,000" },
               ].map(item => (
                 <div key={item.label} className="bg-white rounded-xl p-3">
                   <p className="text-gray-500 text-xs">{item.label}</p>
                   <p className="font-bold text-gray-900">{item.cost}</p>
-                  <p className="text-[#1e40af] font-bold text-xs">{item.monthly}</p>
                 </div>
               ))}
             </div>
-            <p className="text-xs text-gray-400 text-center mt-3">*Over 36 months. Representative figures subject to credit assessment.</p>
+            <p className="text-xs text-gray-400 text-center mt-3">*Treatment prices, not finance quotes. If you borrow, the lender sets the terms and the monthly payment.</p>
           </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How Finance Works for Turkey Implants</h2>
-          <p>Our finance is entirely UK-based:</p>
+          <p>We are an Introducer Appointed Representative of a credit broker, Ideal4Finance. We do not lend or give credit advice. If you ask, we introduce you to the broker. In general:</p>
           <ul className="list-disc list-inside space-y-2 my-3">
-            <li>Apply online with a UK lender through our portal</li>
-            <li>Funds are disbursed in GBP — no currency risk</li>
-            <li>You pay the Turkish clinic directly; the finance covers your total treatment cost</li>
-            <li>Monthly repayments are made from your UK bank account</li>
-            <li>Full FCA-regulated process</li>
+            <li>Credit, if offered, is arranged with a UK lender and repaid in pounds sterling</li>
+            <li>You pay the Turkish clinic for your treatment; any credit agreement is separate and is between you and the lender</li>
+            <li>The lender decides whether to offer credit and on what terms; approval is not guaranteed</li>
+            <li>You can also arrange finance independently</li>
           </ul>
           <p>For the honest position on eligibility and applying with a poor credit history, see our{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">full UK dental finance guide</Link>.</p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Finance Options Available</h2>
-          <div className="overflow-x-auto rounded-2xl shadow-sm my-4">
-            <table className="w-full bg-white text-sm">
-              <thead>
-                <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
-                  <th className="px-4 py-3 text-left">Plan Type</th>
-                  <th className="px-4 py-3 text-left">Term</th>
-                  <th className="px-4 py-3 text-left">Interest</th>
-                  <th className="px-4 py-3 text-left">Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { type: "0% Interest", term: "12 months", int: "0%", note: "For qualifying applicants" },
-                  { type: "Low Rate", term: "24 months", int: "Low APR", note: "Competitive rates for good credit" },
-                  { type: "Flexible", term: "36 months", int: "Low APR", note: "Lowest monthly payments" },
-                  { type: "Bad Credit", term: "12–36 months", int: "Specialist rates", note: "All profiles considered" },
-                ].map((r, i) => (
-                  <tr key={r.type} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="px-4 py-3 font-medium">{r.type}</td>
-                    <td className="px-4 py-3">{r.term}</td>
-                    <td className="px-4 py-3">{r.int}</td>
-                    <td className="px-4 py-3 text-gray-500 text-xs">{r.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Decides a Monthly Payment</h2>
+          <p>The amount borrowed, the length of the agreement, the interest rate and any fees. A longer term usually lowers the monthly amount but can raise the total you repay, so compare the total repayable. We do not publish monthly figures because they depend on the offer you receive.</p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">The Wider Case: Even Financed, Turkey Is Cheaper</h2>
-          <p>The comparison between financed Turkey implants and UK NHS/private implants demonstrates the ongoing value:</p>
-          <div className="overflow-x-auto rounded-2xl shadow-sm my-4">
-            <table className="w-full bg-white text-sm">
-              <thead>
-                <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
-                  <th className="px-4 py-3 text-left">Scenario</th>
-                  <th className="px-4 py-3 text-right">Monthly Payment (36 mo.)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { s: "All-on-4 UK private (£15,000 financed)", m: "£417/month" },
-                  { s: "All-on-4 Turkey (£4,500 financed)", m: "£125/month" },
-                  { s: "Full mouth UK private (£30,000 financed)", m: "£833/month" },
-                  { s: "Full mouth Turkey All-on-4 (£9,000 financed)", m: "£250/month" },
-                ].map((r, i) => (
-                  <tr key={r.s} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="px-4 py-3">{r.s}</td>
-                    <td className="px-4 py-3 text-right font-bold text-[#1e40af]">{r.m}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why the Treatment Price Matters</h2>
+          <p>An All-on-4 arch costs roughly £12,000–£18,000 at UK private prices and from £4,500 in Turkey, and full-mouth treatment scales the same way. A lower price means less to pay or to repay, whichever route you take. For single-implant and other prices, see the <Link href="/blog/implants-cost-uk-vs-turkey" className="text-[#1e40af] font-semibold hover:underline">implant cost guide</Link>.</p>
+
+          <FinanceDisclosure className="my-6" />
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Step-by-Step: Financing Your Turkey Implants</h2>
           <ol className="space-y-2 my-3 list-decimal list-inside">
             <li>Book a free consultation — we prepare your personalised implant plan and cost</li>
-            <li>Pre-qualify for finance online (60 seconds, soft check only)</li>
-            <li>Review finance options and choose your plan</li>
-            <li>Book your Turkey treatment dates</li>
-            <li>Travel and receive treatment</li>
-            <li>Repay monthly from home</li>
+            <li>Decide whether to borrow, pay in full, or arrange credit yourself</li>
+            <li>If you want to explore finance, ask for an introduction to the broker</li>
+            <li>Read the written offer (APR, term, total repayable) and agree only if you understand it</li>
+            <li>Book your Turkey treatment dates and travel</li>
+            <li>Repay as set out in your credit agreement</li>
           </ol>
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
-            <p className="font-bold text-xl mb-2">Get your implant finance quote today</p>
-            <p className="text-blue-200 mb-4">Free consultation + finance pre-qualification. No impact on your credit score. No obligation.</p>
+            <p className="font-bold text-xl mb-2">Start with a free implant treatment plan</p>
+            <p className="text-blue-200 mb-4">Free consultation and written plan. Borrowing is optional and approval is not guaranteed. No obligation.</p>
             <Link href="/book-consultation" className="inline-block bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Get Started Free</Link>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-200">
@@ -161,12 +113,12 @@ export default function FinanceImplantsPage() {
               <span className="text-xs text-gray-500 mt-0.5">All implant prices</span>
             </Link>
             <Link href="/monthly-payment" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
-              <span className="font-semibold text-gray-900 text-sm">Monthly Payment Plans</span>
-              <span className="text-xs text-gray-500 mt-0.5">From £78/month</span>
+              <span className="font-semibold text-gray-900 text-sm">Paying Monthly: What to Know</span>
+              <span className="text-xs text-gray-500 mt-0.5">UK vs Turkey prices and what to know</span>
             </Link>
             <Link href="/finance-options-uk" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Finance & Payment Options</span>
-              <span className="text-xs text-gray-500 mt-0.5">0% APR, pay monthly, bad credit</span>
+              <span className="text-xs text-gray-500 mt-0.5">Payment plans, loans and what to check</span>
             </Link>
             </div>
           </div>

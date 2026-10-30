@@ -66,8 +66,6 @@ export default function PriceCalculator() {
     ? Math.round(((totals.ukMin - totals.turkeyMax) / totals.ukMin) * 100)
     : 0;
 
-  const monthly36 = Math.ceil(totals.turkeyMax / 36);
-
   return (
     <div className="space-y-8">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
@@ -161,12 +159,11 @@ export default function PriceCalculator() {
 
         <div className="bg-white/10 rounded-xl p-4 flex flex-col sm:flex-row gap-4 items-center justify-between">
           <div>
-            <p className="text-sm font-semibold text-blue-100">Or spread the cost from just</p>
-            <p className="text-2xl font-extrabold">£{monthly36}/month</p>
-            <p className="text-xs text-blue-200">over 36 months</p>
+            <p className="text-sm font-semibold text-blue-100">Thinking about paying monthly?</p>
+            <p className="text-xs text-blue-200">Borrowing is optional and the monthly payment depends on the lender&apos;s offer.</p>
           </div>
           <Link href="/monthly-payment" className="bg-white text-[#1e40af] px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-blue-50 transition-colors whitespace-nowrap">
-            View Payment Plans →
+            Paying Monthly: What to Know →
           </Link>
         </div>
       </div>

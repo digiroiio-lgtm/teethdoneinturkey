@@ -7,6 +7,7 @@ import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import FinanceDisclosure from "@/components/FinanceDisclosure";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
@@ -74,7 +75,7 @@ const faqs = [
   },
   {
     question: "Can I pay for a Turkey teeth package monthly?",
-    answer: "Yes, subject to credit approval. Treatment can be spread over 12, 24 or 36 months, with 0% APR representative on qualifying plans. For example, a £3,800 treatment total over 36 months works out at about £106 a month. Flights and anything outside your quote are paid separately. Approval is the lender's decision and is not guaranteed, but the soft-search pre-check does not affect your credit score.",
+    answer: "Some patients do, using credit arranged in the UK. Whether you are offered credit, and on what terms, is the lender's decision and is not guaranteed. The monthly payment depends on the offer you receive, so we do not publish figures. Flights and anything outside your quote are paid separately.",
   },
 ];
 
@@ -220,20 +221,15 @@ export default function TurkeyTeethPackagesPage() {
 
           <h2 id="pay-monthly" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Can You Pay for a Turkey Teeth Package Monthly?</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Yes. UK patients can spread the treatment cost over 12, 24 or 36 months, with 0% APR representative on qualifying plans. At 0% a longer term simply divides the same total into more payments. Examples on a 36-month term:
+            Some patients spread the treatment cost with credit arranged in the UK, repaid over a term agreed with the lender. Borrowing is optional and approval is the lender&apos;s decision. A monthly payment depends on the amount borrowed, the term, the interest rate and any fees, so we do not publish monthly figures.
           </p>
-          <ul className="list-disc pl-6 space-y-1 text-gray-700 mb-4">
-            <li>10 veneers, £2,800: about £78 a month</li>
-            <li>20 veneers (full smile line), £3,800: about £106 a month</li>
-            <li>All-on-4, one arch, £4,500: about £125 a month</li>
-            <li>All-on-6, one arch, £5,600: about £156 a month</li>
-          </ul>
           <p className="text-gray-700 leading-relaxed mb-4">
-            These figures are the treatment total divided by 36 and are subject to credit approval. Flights and any treatment not in your quote are paid separately, so add them to your budget. Approval is the lender&apos;s decision and cannot be guaranteed; a soft-search pre-check does not affect your credit score. See{" "}
-            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">monthly payment examples for every treatment</Link>{" "}
+            Flights and any treatment not in your quote are paid separately, so add them to your budget. If you want to explore finance, we can introduce you to a credit broker, Ideal4Finance. We do not lend or give credit advice. See{" "}
+            <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">paying monthly: what to know</Link>{" "}
             and{" "}
-            <Link href="/finance-options-uk#bad-credit" className="text-[#1e40af] font-semibold hover:underline">how finance works with bad credit</Link>.
+            <Link href="/finance-options-uk#bad-credit" className="text-[#1e40af] font-semibold hover:underline">what is realistic with a difficult credit history</Link>.
           </p>
+          <FinanceDisclosure className="mb-6" />
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">FAQs</h2>
         </div>

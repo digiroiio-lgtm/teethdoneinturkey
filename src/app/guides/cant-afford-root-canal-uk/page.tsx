@@ -7,6 +7,7 @@ import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import FinanceDisclosure from "@/components/FinanceDisclosure";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
 
 export const revalidate = 86400;
@@ -41,11 +42,11 @@ const toc = [
 ];
 
 const costRows = [
-  { treatment: "Root canal (front tooth)", nhs: "£76.60 (Band 2)", private: "£500–£700", turkey: "£200–£250", monthly: "From £6/mo" },
-  { treatment: "Root canal (molar)", nhs: "£76.60 (Band 2)", private: "£900–£1,500", turkey: "£250–£300", monthly: "From £7/mo" },
-  { treatment: "Crown (porcelain)", nhs: "£306.80 (Band 3)", private: "£800–£1,000", turkey: "£130–£280", monthly: "From £4/mo" },
-  { treatment: "Root canal + crown (total)", nhs: "£306.80 (Band 3)", private: "£1,300–£2,500", turkey: "£330–£580", monthly: "From £10/mo" },
-  { treatment: "Single implant (if extraction)", nhs: "Not available (routine)", private: "£2,000–£3,000", turkey: "£250–£600", monthly: "£17/mo at £600" },
+  { treatment: "Root canal (front tooth)", nhs: "£76.60 (Band 2)", private: "£500–£700", turkey: "£200–£250" },
+  { treatment: "Root canal (molar)", nhs: "£76.60 (Band 2)", private: "£900–£1,500", turkey: "£250–£300" },
+  { treatment: "Crown (porcelain)", nhs: "£306.80 (Band 3)", private: "£800–£1,000", turkey: "£130–£280" },
+  { treatment: "Root canal + crown (total)", nhs: "£306.80 (Band 3)", private: "£1,300–£2,500", turkey: "£330–£580" },
+  { treatment: "Single implant (if extraction)", nhs: "Not available (routine)", private: "£2,000–£3,000", turkey: "£250–£600" },
 ];
 
 const faqs = [
@@ -67,7 +68,7 @@ const faqs = [
   {
     question: "Can I get root canal treatment on a payment plan?",
     answer:
-      "Yes. For root canal plus crown in Turkey — the full treatment combination — finance from around £10/month over 36 months at 0% representative APR is available through this site, subject to eligibility and a soft-search credit check. A soft search does not affect your credit score.",
+      "Some patients do. Root canal plus crown in Turkey is typically £330–£580, a smaller amount than many treatments, so some people pay in full. If you want to explore credit, we can introduce you to a credit broker, Ideal4Finance. We do not lend or give credit advice, and approval is the lender's decision and is not guaranteed.",
   },
   {
     question: "How long does a root canal take in Turkey?",
@@ -142,7 +143,7 @@ export default function CantAffordRootCanalPage() {
             Quick Answer: Root Canal Costs in the UK
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
-            Root canal on the NHS costs <strong>£76.60 (Band 2, England)</strong>. Private root canal costs <strong>£500–£1,500</strong> depending on the tooth, plus £800–£1,000 for the crown usually needed after. In Turkey, the full root canal plus crown typically costs <strong>£330–£580</strong>. If you cannot access NHS and cannot afford private, payment plans from around £10/month and overseas treatment are the two realistic alternatives.
+            Root canal on the NHS costs <strong>£76.60 (Band 2, England)</strong>. Private root canal costs <strong>£500–£1,500</strong> depending on the tooth, plus £800–£1,000 for the crown usually needed after. In Turkey, the full root canal plus crown typically costs <strong>£330–£580</strong>. If you cannot access NHS and cannot afford private, payment plans and overseas treatment are the two realistic alternatives, though borrowing is optional and approval is not guaranteed.
           </p>
 
           <GuideTOC items={toc} />
@@ -153,7 +154,7 @@ export default function CantAffordRootCanalPage() {
               "UK private root canal costs £500–£700 (front teeth) to £900–£1,500 (molars), plus £800–£1,000 for the crown required after.",
               "Delaying treatment on an infected tooth risks abscess, bone loss and the tooth becoming unrestorable — meaning extraction anyway, at greater cost.",
               "Root canal + crown in Turkey typically costs £330–£580, often less than the travel cost of one treatment abroad (flights + hotel ≈ £300–£600).",
-              "0% representative APR finance from around £10/month over 36 months is available for root canal plus crown treatment booked through this site, subject to eligibility.",
+              "At £330–£580, root canal plus crown in Turkey is a smaller sum than many treatments; if you want to borrow, approval is the lender's decision and is not guaranteed.",
             ]}
           />
 
@@ -257,7 +258,6 @@ export default function CantAffordRootCanalPage() {
                   <th className="px-4 py-3 text-right font-semibold">NHS (England)</th>
                   <th className="px-4 py-3 text-right font-semibold">UK Private</th>
                   <th className="px-4 py-3 text-right font-semibold">Turkey</th>
-                  <th className="px-4 py-3 text-right font-semibold">Monthly (36mo)</th>
                 </tr>
               </thead>
               <tbody>
@@ -267,7 +267,6 @@ export default function CantAffordRootCanalPage() {
                     <td className="px-4 py-3 text-right text-gray-700">{r.nhs}</td>
                     <td className="px-4 py-3 text-right text-red-500">{r.private}</td>
                     <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.turkey}</td>
-                    <td className="px-4 py-3 text-right text-gray-700">{r.monthly}</td>
                   </tr>
                 ))}
               </tbody>
@@ -275,23 +274,24 @@ export default function CantAffordRootCanalPage() {
           </div>
 
           <p className="text-sm text-gray-500 mb-6">
-            Monthly figures are indicative at 0% representative APR over 36 months, subject to eligibility. NHS charges from April 2026 (England). Turkey prices are for treatment at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip).
+            NHS charges from April 2026 (England). Turkey prices are for treatment at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip).
           </p>
 
           <h2 id="payment-plans" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">
             Payment Plans and Finance
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            For root canal plus crown treatment booked through this site, 0% representative APR finance is available from around £10/month over 36 months. A soft-search pre-qualification check lets you see your eligibility without it appearing on your credit file. See{" "}
+            A payment plan is one way to spread the cost, but at £330–£580 for root canal plus crown in Turkey many people choose to pay in full. If you want to explore credit, we can introduce you to a credit broker, Ideal4Finance; we do not lend or give credit advice. See{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">
-              Monthly Payment
+              Paying Monthly: What to Know
             </Link>{" "}
-            for per-treatment figures, or{" "}
+            for UK and Turkey prices side by side, or{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">
               Dental Finance Options UK
             </Link>{" "}
-            for eligibility, bad credit and how the pre-qualification works.
+            for what to check and what is realistic with a difficult credit history.
           </p>
+          <FinanceDisclosure className="mb-6" />
 
           <h2 id="after-extraction" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">
             If the Tooth Needs Extracting: Your Options
@@ -375,7 +375,7 @@ export default function CantAffordRootCanalPage() {
 
       <CTASection
         title="Get a Free Treatment Plan with Monthly Breakdown"
-        subtitle="Request a free personalised quote with an itemised cost and monthly payment figure — within 24 hours, no obligation."
+        subtitle="Request a free personalised quote with an itemised cost within 24 hours, no obligation."
         buttonText="Get My Free Treatment Plan"
         buttonHref="/free-treatment-plan"
         whatsapp={true}

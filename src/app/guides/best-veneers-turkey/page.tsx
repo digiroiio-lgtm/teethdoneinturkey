@@ -342,7 +342,7 @@ export default function BestVeneersTurkeyPage() {
             { title: "Full Set of Veneers in Turkey: Cost", desc: "What a full set costs and what is included.", href: "/blog/full-set-veneers-turkey-cost" },
             { title: "The 4-8-10 Rule for Veneers", desc: "A quick rule of thumb for how many veneers you need.", href: "/blog/4-8-10-rule-for-veneers" },
             { title: "Do Turkey Teeth Look Fake?", desc: "Why some veneers look unnatural and how to avoid it.", href: "/blog/do-turkey-teeth-look-fake" },
-            { title: "Can You Pay Monthly for Veneers in Turkey?", desc: "Finance options and payment examples for veneers.", href: "/blog/can-you-pay-monthly-for-veneers-turkey" },
+            { title: "Can You Pay Monthly for Veneers in Turkey?", desc: "What to know about paying monthly for veneers, and what to check first.", href: "/blog/can-you-pay-monthly-for-veneers-turkey" },
           ]}
         />
       </div>

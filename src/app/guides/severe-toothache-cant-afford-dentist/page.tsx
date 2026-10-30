@@ -344,7 +344,7 @@ export default function SevereToothacheCantAffordDentistPage() {
           </div>
 
           <p className="text-sm text-gray-500 mb-6">
-            NHS charges from April 2026 (England). Turkey prices are at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). 0% representative APR finance from around £10/month over 36 months is available for treatment booked through this site, subject to eligibility.
+            NHS charges from April 2026 (England). Turkey prices are at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). If you choose to borrow, approval is the lender&apos;s decision and is not guaranteed.
           </p>
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">
@@ -402,7 +402,7 @@ export default function SevereToothacheCantAffordDentistPage() {
             },
             {
               title: "Dental Finance Options UK",
-              desc: "0% APR plans, soft credit checks and eligibility explained.",
+              desc: "Payment plans, loans and what to check before you borrow.",
               href: "/finance-options-uk",
             },
           ]}

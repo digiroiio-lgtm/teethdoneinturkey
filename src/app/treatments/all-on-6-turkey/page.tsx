@@ -17,7 +17,7 @@ const faqs = [
   { question: "How long does All-on-6 take in Turkey?", answer: "Your first trip is 6–8 days: Day 1 for scans, Day 2 for surgery with same-day temporaries, Days 3–6 for recovery and adjustments. After 3–6 months of osseointegration, you return for your permanent zirconia arch (3–4 days)." },
   { question: "What is included in the All-on-6 package price?", answer: "Our all-inclusive All-on-6 package (from £5,600 per arch) includes the 6 Osstem implants, temporary fixed arch, hotel accommodation, VIP airport transfers, and all clinical appointments. The permanent zirconia arch on your second visit is an additional fee." },
   { question: "Is All-on-6 possible with bone loss?", answer: "In many cases, yes — but if significant bone loss is present, a bone graft or sinus lift may be needed before implant placement. Our CBCT scan will confirm whether any preparatory work is required." },
-  { question: "Can I pay monthly for All-on-6?", answer: "Yes. Finance plans are available over 12, 24, or 36 months. An All-on-6 arch at £5,600 is available from around £156/month over 36 months. Pre-qualify with no credit impact." },
+  { question: "Can I pay monthly for All-on-6?", answer: "Some patients do, using credit arranged in the UK. Borrowing is optional, approval is the lender\'s decision and is never guaranteed, and the monthly payment depends on the offer you receive, so we do not publish monthly figures." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -137,25 +137,13 @@ export default function AllOn6Page() {
 
           {/* Finance section */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Spread the Cost – Monthly Finance</h2>
-            <p className="text-gray-600 mb-4">Finance your All-on-6 over 12, 24, or 36 months with no upfront fees.</p>
-            <div className="grid grid-cols-3 gap-3 mb-4">
-              {[
-                { label: "12 months", price: "£467/mo" },
-                { label: "24 months", price: "£233/mo" },
-                { label: "36 months", price: "£156/mo" },
-              ].map(p => (
-                <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
-                  <p className="text-xs text-gray-500 mb-1">{p.label}</p>
-                  <p className="text-lg font-extrabold text-[#1e40af]">{p.price}</p>
-                </div>
-              ))}
-            </div>
-            <Link href="/monthly-payment" className="inline-block text-[#1e40af] font-semibold hover:underline text-sm">→ View all finance options</Link>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Paying for Your Treatment</h2>
+            <p className="text-gray-600 mb-4">Some patients spread the cost with credit arranged in the UK. Borrowing is optional, approval is the lender&apos;s decision and is never guaranteed, and the monthly payment depends on the offer you receive, so we do not publish monthly figures.</p>
+            <Link href="/monthly-payment" className="inline-block text-[#1e40af] font-semibold hover:underline text-sm">→ Paying monthly: what to know</Link>
             <p className="text-sm text-gray-600 mt-3">
               Having both arches treated? See the{" "}
               <Link href="/blog/full-mouth-implants-uk-vs-turkey" className="text-[#1e40af] font-semibold hover:underline">full mouth dental implants cost breakdown</Link>{" "}
-              for both-arch pricing and a worked monthly payment example.
+              for both-arch pricing and what decides a monthly payment.
             </p>
           </div>
 

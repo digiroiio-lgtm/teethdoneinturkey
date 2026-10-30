@@ -211,7 +211,7 @@ export default function HomePage() {
         <p>
           Read the finance terms carefully before you sign, including the total amount repayable and any early repayment rules. Our{" "}
           <Link href="/monthly-payment" className={linkClass}>monthly payment page</Link>{" "}
-          explains the pre-qualification process, and the{" "}
+          explains what decides a monthly payment, and the{" "}
           <Link href="/finance-options-uk" className={linkClass}>UK finance options guide</Link>{" "}
           covers the alternatives, including what to expect if your credit history is imperfect.
         </p>
