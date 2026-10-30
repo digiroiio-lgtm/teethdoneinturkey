@@ -5,6 +5,7 @@ import ArticleJsonLd from "@/components/ArticleJsonLd";
 import FAQSection from "@/components/FAQSection";
 import SourcesList from "@/components/SourcesList";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
+import FinanceDisclosure from "@/components/FinanceDisclosure";
 
 export const revalidate = 86400;
 
@@ -25,11 +26,11 @@ const faqs = [
   },
   {
     question: "Does applying for dental finance affect my credit score?",
-    answer: "A pre-qualification soft search does not leave a footprint that other lenders can see. A full application usually involves a hard search that is recorded on your credit file, so only proceed once you are happy with the terms shown.",
+    answer: "Some eligibility checks are soft searches that other lenders cannot see, while a full application usually involves a hard search that is recorded on your credit file. Ask which applies before you proceed, and only continue once you are happy with the terms shown.",
   },
   {
     question: "Which is cheaper: a dental finance plan, a loan or a credit card?",
-    answer: "A 0% purchase credit card or a 0% finance plan costs nothing extra if you repay within the promotional period. A personal loan is useful for larger amounts or longer terms but charges interest. Compare the representative APR and total amount payable, not just the monthly payment.",
+    answer: "A 0% purchase credit card costs nothing extra if you repay within the promotional period, and some payment plans may also be interest-free depending on the lender. A personal loan is useful for larger amounts or longer terms but charges interest. Compare the representative APR and total amount payable, not just the monthly payment.",
   },
 ];
 
@@ -60,24 +61,24 @@ export default function DentalTourismFinancePage() {
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
-          <p><strong>Short answer:</strong> dental finance for treatment abroad works like any UK credit: you borrow in pounds from a UK lender and repay monthly from your UK bank account, while the funds pay your clinic in Turkey. The main routes are a dental finance plan, a personal loan, a 0% credit card or savings. Approval depends on a credit check and is never guaranteed.</p>
+          <p><strong>Short answer:</strong> dental finance for treatment abroad works like any UK credit: you borrow in pounds from a UK lender and repay monthly from your UK bank account, while the funds pay your clinic in Turkey. The main routes are a dental finance plan, a personal loan, a credit card or savings. Approval depends on a credit check and is never guaranteed.</p>
 
-          <p>Dental tourism offers remarkable savings — but even the reduced costs of treatment in Turkey can represent a significant sum for many UK patients. Dental tourism finance bridges this gap, making premium dental treatment genuinely accessible through manageable monthly payments.</p>
-          <p>This guide explains the different finance options available, how each works, and which might be right for your situation.</p>
+          <p>Dental tourism offers remarkable savings — but even the reduced costs of treatment in Turkey can represent a significant sum for many UK patients. Some patients bridge the gap with credit, while others pay from savings. Borrowing is a serious decision, so compare the total cost of each route.</p>
+          <p>This guide explains the different funding options, how each works and what to compare. It is general information, not advice on which option is right for you.</p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Option 1: Dental Tourism Finance Plans (Our Recommended Route)</h2>
-          <p>Specialist dental tourism finance plans are designed specifically for patients funding treatment abroad. These are UK-based credit products arranged through FCA-regulated lenders.</p>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Option 1: Dental Finance Plans</h2>
+          <p>Specialist dental tourism finance plans are designed specifically for patients funding treatment abroad. These are UK-based credit products, and the lender should be authorised by the FCA. Check the FCA Register.</p>
           <p><strong>How it works:</strong> You apply for a personal loan or credit facility in the UK, denominated in GBP. The funds are used to cover your treatment in Turkey. You repay monthly from your UK bank account.</p>
-          <p>For UK-specific detail on this route — plan lengths, monthly figures by treatment and the honest position on bad credit — see our{" "}
+          <p>For UK-specific detail on this route, including what to check and the honest position on a difficult credit history, see our{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">dental finance UK guide</Link>.</p>
           <div className="bg-green-50 rounded-2xl p-4 border border-green-200 my-4">
             <h3 className="font-bold text-green-800 mb-2">✓ Advantages</h3>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>→ 0% interest options available for qualifying applicants</li>
-              <li>→ Soft credit check pre-qualification (no impact on score)</li>
-              <li>→ Pre-qualify in about 60 seconds; a full application and lender decision follow</li>
-              <li>→ All repayments in GBP — no currency risk</li>
-              <li>→ Credit provided by FCA-authorised lenders, which you should check on the FCA register</li>
+              <li>→ Fixed monthly payments over an agreed term</li>
+              <li>→ Eligibility checks vary; ask whether a check is recorded on your credit file</li>
+              <li>→ Interest, fees and approval depend on the lender and your circumstances</li>
+              <li>→ Repayments in GBP, so no currency risk on the credit</li>
+              <li>→ Check that the lender is FCA authorised on the FCA register</li>
             </ul>
           </div>
 
@@ -123,7 +124,7 @@ export default function DentalTourismFinancePage() {
               </thead>
               <tbody>
                 {[
-                  { opt: "Dental Finance Plan", speed: "Pre-qualify in minutes", zero: "Some applicants", bad: "Considered, not guaranteed", best: "Most patients" },
+                  { opt: "Dental Finance Plan", speed: "Varies by lender", zero: "Depends on lender", bad: "Lender's decision", best: "Spreading one treatment" },
                   { opt: "Personal Loan", speed: "1–3 days", zero: "✗", bad: "Limited", best: "Good credit / larger amounts" },
                   { opt: "0% Credit Card", speed: "1–2 days", zero: "✓", bad: "✗", best: "Good credit, repaying quickly" },
                   { opt: "Savings", speed: "Months", zero: "N/A", bad: "No credit check", best: "No urgency, avoid interest" },
@@ -157,11 +158,12 @@ export default function DentalTourismFinancePage() {
           />
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
-            <p className="font-bold text-xl mb-2">Check your finance options for free</p>
-            <p className="text-blue-200 mb-4">Pre-qualify in 60 seconds. No impact on your credit score. See what&apos;s available for your situation today.</p>
+            <p className="font-bold text-xl mb-2">Start with a free treatment plan</p>
+            <p className="text-blue-200 mb-4">Know the full cost first. Borrowing is optional and approval is not guaranteed.</p>
+            <FinanceDisclosure className="mb-4 text-gray-700" />
             <div className="flex flex-wrap gap-3">
-              <Link href="/book-consultation" className="inline-block bg-white text-[#1e40af] px-5 py-2.5 rounded-xl font-bold hover:bg-blue-50 transition-colors text-sm">Pre-Qualify Now</Link>
-              <Link href="/monthly-payment" className="inline-block border-2 border-white text-white px-5 py-2.5 rounded-xl font-bold hover:bg-white/10 transition-colors text-sm">Monthly Payment Guide</Link>
+              <Link href="/book-consultation" className="inline-block bg-white text-[#1e40af] px-5 py-2.5 rounded-xl font-bold hover:bg-blue-50 transition-colors text-sm">Get My Free Plan</Link>
+              <Link href="/monthly-payment" className="inline-block border-2 border-white text-white px-5 py-2.5 rounded-xl font-bold hover:bg-white/10 transition-colors text-sm">Paying Monthly: What to Know</Link>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-200">
@@ -180,8 +182,8 @@ export default function DentalTourismFinancePage() {
               <span className="text-xs text-gray-500 mt-0.5">Full arch restoration</span>
             </Link>
             <Link href="/monthly-payment" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
-              <span className="font-semibold text-gray-900 text-sm">Monthly Payment Plans</span>
-              <span className="text-xs text-gray-500 mt-0.5">From £78/month</span>
+              <span className="font-semibold text-gray-900 text-sm">Paying Monthly: What to Know</span>
+              <span className="text-xs text-gray-500 mt-0.5">UK vs Turkey prices and what to know</span>
             </Link>
             <Link href="/prices/turkey-teeth-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Turkey Teeth Cost Guide</span>
@@ -189,7 +191,7 @@ export default function DentalTourismFinancePage() {
             </Link>
             <Link href="/finance-options-uk" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Finance & Payment Options</span>
-              <span className="text-xs text-gray-500 mt-0.5">0% APR, pay monthly, bad credit</span>
+              <span className="text-xs text-gray-500 mt-0.5">Payment plans, loans and what to check</span>
             </Link>
             </div>
           </div>

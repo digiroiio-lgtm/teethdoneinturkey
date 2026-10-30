@@ -101,3 +101,29 @@ Consequences for the page work (not legal advice; confirm with a compliance advi
 - Add a visible disclosure naming the principal, our IAR status and the broker-not-lender role. Draft (unpublished, needs principal approval): "[Company] is an Introducer Appointed Representative of Ideal Sales Solutions Ltd (T/A Ideal4Finance, FCA FRN [VERIFY]). We do not lend or give credit advice; we introduce you to Ideal4Finance, a credit broker. Offers come from lenders on its panel. Approval is the lender's decision and is not guaranteed. Monthly figures are examples, not quotes."
 
 Open inputs needed: principal's written approval process and approved wording/representative example, our own IAR registration details, and confirmation that £6, £17 and £78 per month match current panel offers.
+
+## 8. Change applied 2026-10-30: finance claims removed, IAR-compliant wording
+
+Owner decision: drop the aggressive finance claims and use soft, UK-compliant introducer wording.
+
+Removed everywhere (35 files incl. `public/llms.txt`, `public/llms-full.txt`, FAQ schema data):
+- "0% APR representative", "0% interest" and "interest-free" claims about our own offer
+- Every monthly figure (£6, £17, £78, £106, £125, £156 and the 12/24/36-month tables), because each was derived by dividing the price at 0%
+- "Bad credit considered", "instant decision", "pre-qualify in 60 seconds", "no impact on your credit score", "Full FCA-regulated process", "apply through our portal", the £500–£30,000 finance range, and the "Our Recommended Route" ranking of a finance product
+
+Added / reworded:
+- `src/components/FinanceDisclosure.tsx`: IAR disclosure (Introducer Appointed Representative of Ideal Sales Solutions Ltd T/A Ideal4Finance; we do not lend or give credit advice; approval not guaranteed; you can arrange finance independently). Rendered on the finance, monthly-payment, three finance blogs, the full-mouth implants, packages, root-canal, cant-afford, cost and main guide pages.
+- `PRINCIPAL_FRN` in that file is empty on purpose. It renders only once the FRN is verified on the FCA Register.
+- `MonthlyPaymentTable` replaced by `TreatmentTotalsTable` (treatment prices only).
+- `/finance-options-uk` and `/monthly-payment` rewritten; titles now "Turkey Teeth Finance: Paying Monthly for UK Patients" (52 chars) and "Paying Monthly for Turkey Teeth: What to Know" (45). URLs, canonicals and anchors `#how-to-apply`, `#bad-credit` unchanged. No redirects, noindex or sitemap change.
+- Price calculator no longer shows a "£X/month" estimate.
+
+Still open:
+- Ideal4Finance must approve the wording (directive §11; IAR promotions need principal sign-off) before this goes live.
+- Verify principal FRN and our own IAR registration, then set `PRINCIPAL_FRN`.
+- `seo/route-lastmod.json` was refreshed offline; the IndexNow ping was deliberately not sent because the content is not deployed.
+- Rankings for queries built on the removed phrases ("0% finance", "bad credit") may change; track the finance keyword group for 2–3 weeks before further edits.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-30 | finance cluster (35 files) | Removed 0% APR, monthly-figure, bad-credit and instant-decision claims; added IAR disclosure | Site is an IAR of a credit broker; promotions need principal approval | Lower compliance risk; possible movement on "0% / bad credit / £x per month" queries |

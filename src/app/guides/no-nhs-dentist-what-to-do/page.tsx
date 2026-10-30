@@ -353,7 +353,7 @@ export default function NoNHSDentistPage() {
             },
             {
               title: "Dental Finance Options UK",
-              desc: "How 0% dental finance works, eligibility, and what to do with a bad credit history.",
+              desc: "How dental finance works, what to check and what is realistic with a difficult credit history.",
               href: "/finance-options-uk",
             },
             {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FAQSection from "@/components/FAQSection";
+import FinanceDisclosure from "@/components/FinanceDisclosure";
 import CTASection from "@/components/CTASection";
 
 export const revalidate = 86400;
@@ -105,7 +106,7 @@ export default function TeethDoneInTurkeyGuidePage() {
                 { icon: "🦷", title: "Same Brand Materials", desc: "Ivoclar E-max veneers, Straumann implants, Nobel Biocare — same as top UK practices." },
                 { icon: "🌍", title: "Expert Dentists", desc: "Many Turkish dentists trained in Europe or the USA with specialist aesthetic certifications." },
                 { icon: "🗓️", title: "No Waiting Lists", desc: "Appointments within days. Compare to months or years on UK NHS waiting lists." },
-                { icon: "💳", title: "Monthly Payment", desc: "Spread costs from £78/month over 12, 24, or 36 months. 0% options available." },
+                { icon: "💳", title: "Payment Options", desc: "Some patients spread the cost with UK credit. Borrowing is optional and approval is not guaranteed." },
               ].map(item => (
                 <div key={item.title} className="flex gap-3 bg-gray-50 rounded-xl p-4 border border-gray-200">
                   <span className="text-2xl flex-shrink-0">{item.icon}</span>
@@ -261,25 +262,14 @@ export default function TeethDoneInTurkeyGuidePage() {
           </section>
 
           <section id="finance">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Finance & Monthly Payment Options</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Paying for Treatment: Finance Options</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Even at Turkish prices, a full smile makeover or implant treatment is a significant investment. That&apos;s why we offer UK-based monthly payment plans, allowing you to spread costs over 12, 24, or 36 months.
+              Even at Turkish prices, a full smile makeover or implant treatment is a significant investment. Some patients spread the cost with credit arranged in the UK. Borrowing is optional, and whether you are offered credit, and on what terms, is the lender&apos;s decision. A monthly payment depends on the amount borrowed, the term, the interest rate and any fees, so we do not publish monthly figures.
             </p>
-            <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200 mb-4">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                {[
-                  { term: "12 months", monthly: "£317/mo", example: "Smile makeover, £3,800" },
-                  { term: "24 months", monthly: "£158/mo", example: "Smile makeover, £3,800" },
-                  { term: "36 months", monthly: "£106/mo", example: "Smile makeover, £3,800" },
-                ].map(item => (
-                  <div key={item.term} className="bg-white rounded-xl p-3">
-                    <p className="text-xs text-gray-500">{item.term}</p>
-                    <p className="text-xl font-extrabold text-[#1e40af]">{item.monthly}</p>
-                    <p className="text-xs text-gray-400">{item.example}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              If you want to explore finance, we can introduce you to a credit broker, Ideal4Finance. We do not lend or give credit advice.
+            </p>
+            <FinanceDisclosure className="mb-4" />
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">→ Explore monthly payment options</Link>
           </section>
 
@@ -288,7 +278,7 @@ export default function TeethDoneInTurkeyGuidePage() {
             <ol className="space-y-5">
               {[
                 { title: "Free Initial Consultation", desc: "Submit your photos and dental goals. We prepare a personalised treatment plan and cost estimate within 24 hours — free, no obligation." },
-                { title: "Finance Pre-Approval (Optional)", desc: "Pre-qualify for monthly payment in 60 seconds. Soft credit check, no impact on your score." },
+                { title: "Finance (Optional)", desc: "If you want to explore credit, we can introduce you to a credit broker. Borrowing is optional and approval is the lender's decision." },
                 { title: "Book Your Treatment Dates", desc: "We book clinic appointments, assist with flights, and arrange accommodation and airport transfers." },
                 { title: "Arrival & Clinical Consultation", desc: "Your first day includes a full examination, X-rays, and CBCT scan (for implants). Treatment plan confirmed." },
                 { title: "Treatment", desc: "Veneers: 2 days preparation, 2–3 days fitting. Implants: placement then healing period. All-on-4/6: typically 5–7 days." },
@@ -315,7 +305,7 @@ export default function TeethDoneInTurkeyGuidePage() {
                 { href: "/treatments/all-on-4-turkey", label: "All-on-4 Implants", desc: "Full arch from £4,500" },
                 { href: "/treatments/all-on-6-turkey", label: "All-on-6 Implants", desc: "Full arch from £5,600" },
                 { href: "/treatments/full-smile-makeover-turkey", label: "Smile Makeover", desc: "Complete transformation" },
-                { href: "/monthly-payment", label: "Monthly Payment", desc: "From £78/month" },
+                { href: "/monthly-payment", label: "Paying Monthly", desc: "What to know before you borrow" },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-[#1e40af] hover:shadow-sm transition-all group">
                   <p className="font-bold text-gray-900 group-hover:text-[#1e40af] text-sm">{item.label}</p>

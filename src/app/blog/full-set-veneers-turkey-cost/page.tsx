@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "Can I pay monthly for a full set of veneers in Turkey?",
-    answer: "Monthly payment plans are available subject to a UK credit check and approval, which is never guaranteed. As an illustration only, £3,800 divided over 36 months at 0% APR is about £106 a month. Your real offer depends on your application, so pre-qualify to see actual terms.",
+    answer: "Some patients spread the cost with credit arranged in the UK, subject to a credit check and the lender's approval, which is never guaranteed. The monthly payment depends on the offer you receive, so we do not publish monthly figures.",
   },
 ];
 
@@ -133,14 +133,13 @@ export default function FullSetVeneersCostPage() {
           </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Can I Spread the Cost?</h2>
-          <p>Yes, subject to UK credit approval, which is never guaranteed. Dividing the E-max prices above over 36 months at 0% APR gives the illustrative monthly figures below. Your real offer depends on your application.</p>
+          <p>Some patients do, using credit arranged in the UK. Borrowing is optional and approval is the lender&apos;s decision, which is never guaranteed. The monthly payment depends on the amount borrowed, the term, the interest rate and any fees in the offer you receive, so we do not publish monthly figures. The E-max prices below show the amount you would need to pay or borrow.</p>
           <div className="overflow-x-auto rounded-2xl shadow-sm my-4">
             <table className="w-full bg-white text-sm">
               <thead>
                 <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
                   <th className="px-4 py-3 text-left">E-max veneers</th>
                   <th className="px-4 py-3 text-right">Turkey price</th>
-                  <th className="px-4 py-3 text-right">Illustrative monthly (36 months, 0%)</th>
                 </tr>
               </thead>
               <tbody>
@@ -153,14 +152,13 @@ export default function FullSetVeneersCostPage() {
                   <tr key={r.n} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3 font-medium">{r.n}</td>
                     <td className="px-4 py-3 text-right">£{r.price.toLocaleString("en-GB")}</td>
-                    <td className="px-4 py-3 text-right text-[#1e40af] font-bold">£{(r.price / 36).toFixed(0)}/month</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-500">Simple division of the price by 36, for illustration. Not an offer of credit.</p>
-          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
+          <p className="text-sm text-gray-500">Treatment prices, not finance quotes. Not an offer of credit.</p>
+          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Paying monthly: what to know</Link>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What&apos;s Included in the Turkey Veneer Price?</h2>
           <ul className="list-disc list-inside space-y-2">

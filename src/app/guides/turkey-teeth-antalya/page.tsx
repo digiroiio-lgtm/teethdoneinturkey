@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     question: "Can I finance treatment in Antalya?",
-    answer: "Yes. 0% representative APR finance is available for treatment booked through this site. Monthly payments start from approximately £70/month on a 36-month plan for a £2,500 treatment. The finance covers the treatment cost; flights and accommodation are typically paid separately. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
+    answer: "Some patients spread the cost with credit arranged in the UK. Borrowing is optional, approval is the lender's decision and is never guaranteed, and the monthly payment depends on the offer you receive, so we do not publish monthly figures. Flights and accommodation are typically paid separately.",
   },
 ];
 
@@ -268,7 +268,7 @@ export default function TurkeyTeethAntalyaPage() {
 
           <h2 id="payment" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Paying for Treatment in Antalya</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Treatment is quoted in GBP for UK patients and can be paid by card or bank transfer. A deposit is usually required to secure your dates. For patients who prefer to spread the cost, 0% representative APR finance is available for treatment booked through this site — monthly payments start from approximately £70/month on a 36-month plan. See{" "}
+            Treatment is quoted in GBP for UK patients and can be paid by card or bank transfer. A deposit is usually required to secure your dates. For patients who prefer to spread the cost, credit arranged in the UK is an option; it is optional, approval is the lender&apos;s decision and the monthly payment depends on the offer, so we do not publish monthly figures. See{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Finance Options</Link>{" "}
             for illustrative payment examples, or{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Dental Finance Options UK</Link>{" "}

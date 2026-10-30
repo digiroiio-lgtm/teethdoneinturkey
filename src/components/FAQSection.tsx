@@ -18,7 +18,7 @@ const defaultFaqs: FAQItem[] = [
   },
   {
     question: 'Can I pay monthly for dental treatment?',
-    answer: 'Yes, we offer monthly payment plans starting from £78/month. Plans are available over 12, 24, or 36 months. You can pre-qualify online in under 60 seconds with no impact on your credit score.',
+    answer: 'Some patients spread the cost with credit arranged in the UK. Borrowing is optional, and whether you are offered credit, and on what terms, is the lender\'s decision and is not guaranteed. If you ask, we can introduce you to a credit broker; we do not lend or give credit advice.',
   },
   {
     question: 'How long do I need to stay in Turkey?',

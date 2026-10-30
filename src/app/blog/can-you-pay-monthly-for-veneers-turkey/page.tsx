@@ -3,13 +3,14 @@ import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
+import FinanceDisclosure from "@/components/FinanceDisclosure";
 
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/can-you-pay-monthly-for-veneers-turkey" },
   title: "Pay Monthly for Veneers Turkey",
-  description: "Yes, you can pay monthly for veneers in Turkey. A guide to dental finance options for UK patients, from £78/month with 0% interest options available.",
+  description: "Some UK patients pay monthly for veneers in Turkey. A guide to the options, what decides a monthly payment and what to check before you borrow.",
 };
 
 export default function MonthlyVeneersPage() {
@@ -19,7 +20,7 @@ export default function MonthlyVeneersPage() {
         id="article-schema-can-you-pay-monthly-for-veneers-turkey"
         path="/blog/can-you-pay-monthly-for-veneers-turkey"
         headline="Pay Monthly for Veneers Turkey"
-        description="Yes, you can pay monthly for veneers in Turkey. A guide to dental finance options for UK patients, from £78/month with 0% interest options available."
+        description="Some UK patients pay monthly for veneers in Turkey. A guide to the options, what decides a monthly payment and what to check before you borrow."
         datePublished="2026-01-01"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -37,51 +38,46 @@ export default function MonthlyVeneersPage() {
         </div>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
-          <p>Yes — you can absolutely pay monthly for veneers in Turkey. We offer UK-based dental finance plans that let you spread the cost of your treatment over 12, 24, or 36 months, making your dream smile more accessible than ever.</p>
+          <p>Some UK patients spread the cost of veneers in Turkey using credit arranged in the UK. Borrowing is optional, and whether you are offered credit, and on what terms, is the lender&apos;s decision.</p>
 
           <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200 my-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Monthly Payment Examples for Turkey Veneers</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Veneer Prices in Turkey</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-gray-500 text-xs uppercase">
                     <th className="text-left py-2">Treatment</th>
-                    <th className="text-right py-2">Cost</th>
-                    <th className="text-right py-2">12 months</th>
-                    <th className="text-right py-2">24 months</th>
-                    <th className="text-right py-2">36 months</th>
+                    <th className="text-right py-2">Treatment price</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   {[
-                    { t: "10 veneers (E-max)", cost: "£1,900", m12: "£158/mo", m24: "£79/mo", m36: "£53/mo" },
-                    { t: "16 veneers (E-max)", cost: "£3,040", m12: "£253/mo", m24: "£127/mo", m36: "£84/mo" },
-                    { t: "20 veneers (E-max)", cost: "£3,800", m12: "£317/mo", m24: "£158/mo", m36: "£106/mo" },
-                    { t: "20 veneers (Zirconia)", cost: "£4,400", m12: "£367/mo", m24: "£183/mo", m36: "£122/mo" },
+                    { t: "10 veneers (E-max)", cost: "£1,900" },
+                    { t: "16 veneers (E-max)", cost: "£3,040" },
+                    { t: "20 veneers (E-max)", cost: "£3,800" },
+                    { t: "20 veneers (Zirconia)", cost: "£4,400" },
                   ].map(r => (
                     <tr key={r.t}>
                       <td className="py-2 font-medium">{r.t}</td>
-                      <td className="py-2 text-right">{r.cost}</td>
-                      <td className="py-2 text-right text-[#1e40af] font-bold">{r.m12}</td>
-                      <td className="py-2 text-right text-[#1e40af] font-bold">{r.m24}</td>
-                      <td className="py-2 text-right text-[#1e40af] font-bold">{r.m36}</td>
+                      <td className="py-2 text-right text-[#1e40af] font-bold">{r.cost}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-gray-400 mt-3">* Representative figures. Exact rates subject to credit assessment and lender terms.</p>
+            <p className="text-xs text-gray-400 mt-3">* Treatment prices, not finance quotes. If you borrow, the lender sets the interest, term and monthly payment.</p>
           </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How Does the Finance Work?</h2>
-          <p>Our finance is arranged through UK-based lenders — so you apply, receive approval, and make repayments entirely in the UK in pounds sterling. Here&apos;s how it works:</p>
+          <p>We are an Introducer Appointed Representative of a credit broker, Ideal4Finance. We do not lend or give credit advice. If you ask, we introduce you to the broker, and any credit is arranged with a UK lender and repaid in pounds sterling. Here&apos;s how it works:</p>
           <ol className="space-y-3 my-4">
             {[
-              { title: "Pre-qualify online", desc: "Apply in 60 seconds. Soft credit check only — no impact on your credit score for pre-qualification." },
-              { title: "Instant decision", desc: "Most pre-qualification decisions are instant. Know your options before you commit to anything." },
-              { title: "Book your treatment", desc: "With finance confirmed, book your treatment dates with confidence." },
+              { title: "Get a treatment plan", desc: "Start with a written plan so you know the full cost before deciding whether to borrow." },
+              { title: "Ask for an introduction", desc: "If you want to explore finance, ask for an introduction to the broker. You can also arrange credit yourself." },
+              { title: "Lender assessment", desc: "The lender decides whether to offer credit and on what terms. Approval is not guaranteed." },
+              { title: "Read the offer, then book", desc: "Check the APR, monthly payment, term and total repayable in writing before you agree and book your treatment dates." },
               { title: "Travel to Turkey", desc: "Have your veneers done in Turkey as planned. Treatment is typically completed in 5–7 days." },
-              { title: "Repay from home", desc: "Monthly repayments start on your agreed date. Simple direct debit from your UK bank account." },
+              { title: "Repay as agreed", desc: "Repayments follow the schedule in your credit agreement." },
             ].map((step, i) => (
               <li key={i} className="flex gap-3">
                 <span className="bg-[#1e40af] text-white rounded-full w-7 h-7 flex-shrink-0 flex items-center justify-center font-bold text-sm">{i + 1}</span>
@@ -93,19 +89,21 @@ export default function MonthlyVeneersPage() {
             ))}
           </ol>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Is 0% Finance Available?</h2>
-          <p>Yes — 0% interest finance is available for qualifying applicants. Eligibility depends on your credit profile and the term chosen. Our team will present all available options clearly before you commit, with no hidden fees.</p>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Decides the Monthly Payment?</h2>
+          <p>The amount borrowed, the length of the agreement, the interest rate and any fees. A longer term usually lowers the monthly amount but can raise the total you repay, so compare the total repayable. We do not publish monthly figures because they depend on the offer you receive.</p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What If I Have Bad Credit?</h2>
-          <p>Imperfect credit does not automatically rule you out, but approval is the lender&apos;s decision and cannot be guaranteed. Pre-qualifying takes 60 seconds and uses a soft check, so you can see where you stand without any impact on your credit file. See <Link href="/finance-options-uk#bad-credit" className="text-[#1e40af] font-semibold hover:underline">how bad-credit applications work</Link>.</p>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What If I Have a Difficult Credit History?</h2>
+          <p>Imperfect credit does not automatically rule you out, but approval is the lender&apos;s decision and cannot be guaranteed. Ask the broker which kind of check is used and whether it is recorded on your credit file before you apply. See <Link href="/finance-options-uk#bad-credit" className="text-[#1e40af] font-semibold hover:underline">what is realistic with a difficult credit history</Link>.</p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why This Changes Everything</h2>
-          <p>Even with finance, veneers in Turkey are dramatically cheaper than the UK. A full set of 20 veneers in Turkey financed over 36 months costs approximately £106/month. The equivalent UK treatment, even if financed, would be £500+/month for the same term. The gap is enormous.</p>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why the Treatment Price Matters</h2>
+          <p>A full set of 20 veneers costs roughly £16,000–£20,000 at UK private prices and £3,800–£5,000 in Turkey. Whatever you decide about borrowing, a lower price means less to pay or to repay.</p>
+
+          <FinanceDisclosure className="my-6" />
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
-            <p className="font-bold text-lg mb-2">Pre-qualify for veneer finance today</p>
-            <p className="text-blue-200 text-sm mb-4">60-second application. Instant decision. No impact on your credit score.</p>
-            <Link href="/book-consultation" className="inline-block bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Pre-Qualify Now</Link>
+            <p className="font-bold text-lg mb-2">Start with a free veneer treatment plan</p>
+            <p className="text-blue-200 text-sm mb-4">Know the full cost first. Borrowing is optional and approval is not guaranteed.</p>
+            <Link href="/book-consultation" className="inline-block bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Get My Free Plan</Link>
           </div>
 
           <div className="mt-6 p-5 bg-gray-50 rounded-2xl border border-gray-200">
@@ -133,8 +131,8 @@ export default function MonthlyVeneersPage() {
               <span className="text-xs text-gray-500 mt-0.5">Full treatment guide</span>
             </Link>
             <Link href="/monthly-payment" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
-              <span className="font-semibold text-gray-900 text-sm">Monthly Payment Plans</span>
-              <span className="text-xs text-gray-500 mt-0.5">From £78/month</span>
+              <span className="font-semibold text-gray-900 text-sm">Paying Monthly: What to Know</span>
+              <span className="text-xs text-gray-500 mt-0.5">UK vs Turkey prices and what to know</span>
             </Link>
             <Link href="/prices/veneers-turkey-cost" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Veneers Cost Guide</span>
@@ -142,7 +140,7 @@ export default function MonthlyVeneersPage() {
             </Link>
             <Link href="/finance-options-uk" className="flex flex-col bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
               <span className="font-semibold text-gray-900 text-sm">Finance & Payment Options</span>
-              <span className="text-xs text-gray-500 mt-0.5">0% APR, pay monthly, bad credit</span>
+              <span className="text-xs text-gray-500 mt-0.5">Payment plans, loans and what to check</span>
             </Link>
             </div>
           </div>

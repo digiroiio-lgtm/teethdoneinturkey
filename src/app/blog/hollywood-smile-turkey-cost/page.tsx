@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "Can I pay monthly for a Hollywood smile in Turkey?",
-    answer: "Monthly plans are available subject to UK credit approval, which is never guaranteed. As an illustration only, £2,800 divided over 36 months at 0% APR is about £78 a month. Your real offer depends on your application.",
+    answer: "Some patients spread the cost with credit arranged in the UK, subject to the lender's approval, which is never guaranteed. The monthly payment depends on the offer you receive, so we do not publish monthly figures.",
   },
   {
     question: "Will a Hollywood smile look natural?",
@@ -144,7 +144,7 @@ export default function HollywoodSmilePage() {
           <p>For a like-for-like breakdown against UK private pricing — what each quote includes, and where the difference actually comes from — see our <Link href="/blog/hollywood-smile-uk-vs-turkey" className="text-[#1e40af] hover:underline font-semibold">Hollywood Smile cost comparison: UK vs Turkey</Link>.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Pay Monthly for Your Hollywood Smile</h2>
-          <p>Subject to UK credit approval, which is never guaranteed, a Hollywood Smile in Turkey (20 zirconia crowns, £2,800) divided over 36 months at 0% APR is about £78 a month. This is an illustration, not an offer of credit.</p>
+          <p>If you choose to borrow, the lender decides whether to offer credit and on what terms, and approval is never guaranteed. The monthly payment depends on the amount borrowed, the term, the interest rate and any fees, so we do not publish monthly figures for the £2,800 package.</p>
           <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">

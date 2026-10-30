@@ -6,6 +6,7 @@ import KeyTakeaways from "@/components/KeyTakeaways";
 import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import FAQSection from "@/components/FAQSection";
+import FinanceDisclosure from "@/components/FinanceDisclosure";
 import CTASection from "@/components/CTASection";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
 
@@ -34,18 +35,18 @@ const toc = [
   { id: "finance-vs-loan", label: "Finance, Loans and Other Terms" },
   { id: "alternative-options", label: "Ways to Reduce the Bill" },
   { id: "uk-vs-turkey", label: "Treatment Abroad as an Option" },
-  { id: "monthly-cost", label: "What Treatment Actually Costs Per Month" },
+  { id: "monthly-cost", label: "Working Out Monthly Costs" },
   { id: "next-steps", label: "Working Out What You Can Afford" },
   { id: "specific-problem", label: "Help With a Specific Problem" },
   { id: "faqs", label: "FAQs" },
 ];
 
 const ukVsTurkeyRows = [
-  { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "£190–£250", monthly: "From £6/mo" },
-  { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "£3,800–£5,000", monthly: "From £106/mo" },
-  { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£250–£600", monthly: "£17/mo at £600" },
-  { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,500–£5,500", monthly: "From £125/mo" },
-  { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "From £5,600", monthly: "From £156/mo" },
+  { treatment: "Porcelain Veneers (per tooth)", uk: "£800–£1,000", turkey: "£190–£250" },
+  { treatment: "Full Smile Makeover (20 veneers)", uk: "£16,000–£20,000", turkey: "£3,800–£5,000" },
+  { treatment: "Single Dental Implant", uk: "£2,000–£3,000", turkey: "£250–£600" },
+  { treatment: "All-on-4 (per arch)", uk: "£12,000–£18,000", turkey: "£4,500–£5,500" },
+  { treatment: "All-on-6 (per arch)", uk: "£15,000–£22,000", turkey: "From £5,600" },
 ];
 
 const faqs = [
@@ -62,7 +63,7 @@ const faqs = [
   {
     question: "Can I delay root canal treatment to save up?",
     answer:
-      "Delaying root canal on an infected tooth increases the risk of the infection progressing to an abscess, bone loss, and the tooth becoming unrestorable — meaning extraction anyway, at greater overall cost. If you need time to save, request a free treatment plan to see what monthly finance would look like (typically from £10/month over 36 months for root canal plus crown in Turkey), and ask your dentist to seal the tooth temporarily to slow progression while you arrange finance. Read the Can't Afford a Root Canal UK guide for full options.",
+      "Delaying root canal on an infected tooth increases the risk of the infection progressing to an abscess, bone loss, and the tooth becoming unrestorable — meaning extraction anyway, at greater overall cost. If you need time to save, request a free treatment plan to see the cost of root canal plus crown in Turkey, and ask your dentist to seal the tooth temporarily to slow progression while you decide how to pay. Read the Can't Afford a Root Canal UK guide for full options.",
   },
   {
     question: "I can't afford a private dentist in the UK. What are my options?",
@@ -74,15 +75,15 @@ const faqs = [
   },
   {
     question: "What is the difference between a dental payment plan, dental finance and a dental loan?",
-    answer: "A payment plan usually means a clinic or finance partner lets you spread one specific treatment's cost over fixed monthly instalments, often with 0% interest for a defined term. Dental finance is the broader term for that same kind of borrowing arranged specifically for dental treatment. A dental loan is a personal loan, which may or may not be dental specific, and can carry interest even where a 0% dental finance plan would not. See the full breakdown on our Dental Finance Options page.",
+    answer: "A payment plan usually means a clinic or finance partner lets you spread one specific treatment's cost over fixed monthly instalments for a defined term. Dental finance is the broader term for that same kind of borrowing arranged specifically for dental treatment. A dental loan is a personal loan, which may or may not be dental specific, and usually carries interest. See the full breakdown on our Dental Finance Options page.",
   },
   {
-    question: "Can I get 0% finance for dental implants or veneers?",
-    answer: "0% representative APR finance is available for treatment booked through this site, typically from £78/month over 12, 24 or 36 months, covering veneers, implants, All-on-4/All-on-6 and full smile makeovers. Eligibility depends on an affordability and credit assessment; a soft-search pre-qualification check lets you see an indicative decision without it appearing on your credit file.",
+    question: "Can I get finance for dental implants or veneers?",
+    answer: "Some patients borrow to pay for implants, veneers and larger treatments. Whether you are offered credit, and on what terms, is the lender's decision and depends on your circumstances. For treatment booked through this site, we can introduce you to a credit broker, Ideal4Finance, if you ask. We do not lend or give credit advice.",
   },
   {
     question: "What if I have a poor credit history? Can I still get dental finance?",
-    answer: "We cannot guarantee approval for any applicant, and no dental finance provider can honestly promise approval regardless of credit history. What we can tell you is that the pre-qualification step is a soft search, so checking your eligibility will not affect your credit score, and the outcome depends on your individual circumstances and the finance provider's own criteria at the time you apply.",
+    answer: "No one can guarantee approval, and no dental finance provider can honestly promise it regardless of credit history. The outcome depends on your individual circumstances and the lender's own criteria at the time you apply. Ask which kind of check is used and whether it is recorded on your credit file before you apply.",
   },
   {
     question: "Is getting dental treatment abroad actually cheaper, or just cheaper looking?",
@@ -150,9 +151,9 @@ export default function CantAffordDentalTreatmentUKPage() {
             items={[
               "NHS charges in England are fixed at £27.90, £76.60 or £306.80 per course of treatment (from 1 April 2026), but veneers, whitening and (in almost all cases) implants are not covered.",
               "UK private dental prices for implants and veneers are frequently several times the NHS charge, which is why payment plans and finance exist for private work.",
-              "0% representative APR finance from £78/month is one way to spread a UK-priced quote or a Turkey treatment plan.",
+              "Payment plans and other credit are one way to spread a UK-priced quote or a Turkey treatment plan, but borrowing is optional and has costs.",
               "The same implant and veneer brands used in UK practices are typically 65 to 90 percent cheaper in Turkey, even after flights and accommodation.",
-              "No dental finance option should ever promise guaranteed approval. A soft-search pre-qualification lets you check eligibility without affecting your credit score.",
+              "No dental finance option should ever promise guaranteed approval. Ask which kind of check is used and whether it is recorded on your credit file.",
             ]}
           />
 
@@ -171,14 +172,15 @@ export default function CantAffordDentalTreatmentUKPage() {
 
           <h2 id="payment-plans" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Dental Payment Plans</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A dental payment plan lets you spread a specific treatment&apos;s cost over fixed monthly instalments instead of paying the full amount upfront. For treatment booked through this site, 0% representative APR finance is available from £78/month over 12, 24 or 36 months, with a soft-search pre-qualification step that will not affect your credit score. See{" "}
+            A dental payment plan lets you spread a specific treatment&apos;s cost over fixed monthly instalments instead of paying the full amount upfront. Terms differ between lenders, so compare the APR and total repayable. If you are interested in treatment booked through this site, we can introduce you to a credit broker, Ideal4Finance. We do not lend or give credit advice, and approval is not guaranteed. See{" "}
             <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">Monthly Payment</Link>{" "}
-            for treatment-by-treatment monthly figures.
+            for UK and Turkey treatment prices side by side.
           </p>
+          <FinanceDisclosure className="mb-6" />
 
           <h2 id="finance-vs-loan" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Finance, Loans and Other Terms</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            &ldquo;Payment plan,&rdquo; &ldquo;dental finance&rdquo; and &ldquo;dental loan&rdquo; get used interchangeably online, but they are not identical. A payment plan and dental finance both usually mean borrowing arranged specifically for one dental treatment, often at 0% for a fixed term. A personal loan taken out to cover dental costs is a separate product, generally not dental specific, and can carry interest where a purpose-built 0% dental finance plan would not. A dental membership or maintenance plan (paying a clinic a fixed monthly fee for routine check-ups) is different again, and is not the same as financing a one-off treatment. For a full glossary and eligibility details, see{" "}
+            &ldquo;Payment plan,&rdquo; &ldquo;dental finance&rdquo; and &ldquo;dental loan&rdquo; get used interchangeably online, but they are not identical. A payment plan and dental finance both usually mean borrowing arranged specifically for one dental treatment, for a fixed term. A personal loan taken out to cover dental costs is a separate product, generally not dental specific, and usually carries interest. A dental membership or maintenance plan (paying a clinic a fixed monthly fee for routine check-ups) is different again, and is not the same as financing a one-off treatment. For a full glossary and eligibility details, see{" "}
             <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Dental Finance Options UK</Link>.
           </p>
 
@@ -198,7 +200,6 @@ export default function CantAffordDentalTreatmentUKPage() {
                   <th className="px-4 py-3 text-left font-semibold">Treatment</th>
                   <th className="px-4 py-3 text-right font-semibold">UK Price</th>
                   <th className="px-4 py-3 text-right font-semibold">Turkey Price</th>
-                  <th className="px-4 py-3 text-right font-semibold">From (monthly)</th>
                 </tr>
               </thead>
               <tbody>
@@ -207,7 +208,6 @@ export default function CantAffordDentalTreatmentUKPage() {
                     <td className="px-4 py-3 font-medium text-gray-800">{r.treatment}</td>
                     <td className="px-4 py-3 text-right text-red-500">{r.uk}</td>
                     <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.turkey}</td>
-                    <td className="px-4 py-3 text-right text-gray-700">{r.monthly}</td>
                   </tr>
                 ))}
               </tbody>
@@ -219,18 +219,18 @@ export default function CantAffordDentalTreatmentUKPage() {
             for how to evaluate a clinic and what the process actually involves before deciding it&apos;s right for you.
           </p>
 
-          <h2 id="monthly-cost" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What Treatment Actually Costs Per Month</h2>
+          <h2 id="monthly-cost" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Working Out Monthly Costs</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Whichever route you take, the practical question is usually the monthly figure. On this site, financed Turkey treatment starts from £6/month for a single veneer and about £17/month for a single implant at £600, rising to £150/month for a full All-on-6 arch, all on a 36-month 0% plan. Use the{" "}
+            Whichever route you take, the practical question is usually what you can comfortably afford each month. A monthly payment depends on the amount borrowed, the term, the interest rate and any fees in the lender&apos;s offer, so we do not publish monthly figures. Use the{" "}
             <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">Price Calculator</Link>{" "}
-            to build a monthly estimate for your own treatment combination.
+            to work out a treatment total for your own combination, then compare it with any written offer.
           </p>
 
           <h2 id="next-steps" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Working Out What You Can Afford</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            A sensible order to work through this: confirm whether the NHS covers your treatment, get a UK private quote if it doesn&apos;t, check your 0% finance eligibility with a soft-search pre-qualification, and compare that monthly figure against the same treatment financed abroad. Request a{" "}
+            A sensible order to work through this: confirm whether the NHS covers your treatment, get a UK private quote if it doesn&apos;t, decide whether you want to borrow at all, and compare the total cost of any written offer against the same treatment abroad. Request a{" "}
             <Link href="/free-treatment-plan" className="text-[#1e40af] font-semibold hover:underline">free personalised treatment plan</Link>{" "}
-            to see an itemised cost and monthly breakdown before deciding anything.
+            to see an itemised cost before deciding anything.
           </p>
 
           <h2 id="specific-problem" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">Help With a Specific Problem</h2>
@@ -286,15 +286,15 @@ export default function CantAffordDentalTreatmentUKPage() {
             { title: "Tooth Abscess Can't Afford a Dentist?", desc: "Emergency action, NHS 111 referral, A&E red flags and follow-up costs.", href: "/guides/tooth-abscess-cant-afford-dentist" },
             { title: "Severe Toothache Can't Afford a Dentist?", desc: "Causes, NHS 111 options and temporary pain relief explained.", href: "/guides/severe-toothache-cant-afford-dentist" },
             { title: "Can't Afford a Root Canal UK?", desc: "NHS Band 2 costs, extraction comparison and Turkey cost comparison.", href: "/guides/cant-afford-root-canal-uk" },
-            { title: "Dental Finance Options UK", desc: "0% representative APR finance, eligibility and how pre-qualification works.", href: "/finance-options-uk" },
-            { title: "Monthly Payment", desc: "Treatment by treatment monthly cost, from £78/month.", href: "/monthly-payment" },
+            { title: "Dental Finance Options UK", desc: "How dental finance works, what to check and what is realistic with a difficult credit history.", href: "/finance-options-uk" },
+            { title: "Monthly Payment", desc: "Turkey and UK treatment prices side by side, and what decides a monthly payment.", href: "/monthly-payment" },
           ]}
         />
       </div>
 
       <CTASection
         title="See What You Could Pay Per Month"
-        subtitle="Get a free, no-obligation treatment plan with an itemised cost and monthly payment breakdown within 24 hours."
+        subtitle="Get a free, no-obligation treatment plan with an itemised cost within 24 hours."
         buttonText="Get My Free Treatment Plan"
         buttonHref="/free-treatment-plan"
         whatsapp={true}

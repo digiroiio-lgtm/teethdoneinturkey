@@ -8,6 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import SourcesList from "@/components/SourcesList";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import { REVIEWER_PERSON } from "@/lib/reviewer";
+import FinanceDisclosure from "@/components/FinanceDisclosure";
 
 export const revalidate = 86400;
 
@@ -73,7 +74,7 @@ const faqs = [
   {
     question: "Can I pay monthly for full mouth implants in Turkey?",
     answer:
-      "Payment plans are available over 12, 24 or 36 months. As an illustration, a £9,000 All-on-4 case with a £1,000 deposit leaves £8,000 to finance — about £222 a month over 36 months at a 0% APR representative rate. Finance is not guaranteed: it is subject to a credit check and to the lender's approval, and your rate and available term depend on that assessment.",
+      "Some patients spread the cost with credit arranged in the UK, often alongside a deposit. Finance is not guaranteed: it is subject to a credit check and to the lender's approval, and the rate, term and monthly payment depend on the offer you receive, so we do not publish monthly figures.",
   },
   {
     question: "How long does full mouth implant treatment take in Turkey?",
@@ -353,62 +354,33 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
 
             <h2 id="finance" className="text-2xl font-bold text-gray-900 mt-8 mb-4 scroll-mt-24">Paying Monthly for Full Mouth Implants</h2>
             <p>
-              A full mouth case is the largest single treatment on this site, so it is the one most often spread over a
-              payment plan. The worked example below shows how a plan is structured. It is an illustration built from
-              the package prices above — not a quote, and not an offer of credit.
+              A full mouth case is the largest single treatment on this site, so it is the one patients most often ask
+              about spreading the cost of. Borrowing is optional, and whether you are offered credit, and on what terms,
+              is the lender&apos;s decision.
             </p>
             <div className="rounded-2xl border border-blue-100 bg-blue-50/60 p-6 my-6">
-              <p className="text-sm font-bold uppercase tracking-wide text-[#1e40af] mb-3">Example Treatment Scenario</p>
-              <ul className="space-y-1.5 text-sm text-gray-800 mb-4">
-                <li><strong>Treatment:</strong> All-on-4, both arches</li>
-                <li><strong>Treatment price:</strong> £9,000 (hotel and transfers included, flights not included)</li>
-                <li><strong>Deposit:</strong> £1,000</li>
-                <li><strong>Balance to finance:</strong> £8,000</li>
+              <p className="text-sm font-bold uppercase tracking-wide text-[#1e40af] mb-3">What Decides a Monthly Payment</p>
+              <ul className="space-y-1.5 text-sm text-gray-800">
+                <li><strong>Amount borrowed:</strong> the treatment price (£9,000 for All-on-4 on both arches, hotel and transfers included, flights not included) minus any deposit</li>
+                <li><strong>Term:</strong> a longer term usually lowers the monthly amount but can raise the total repayable</li>
+                <li><strong>Interest and fees:</strong> set by the lender and shown as an APR in the written offer</li>
+                <li><strong>Your circumstances:</strong> the lender decides whether to offer credit and on what terms</li>
               </ul>
-              <div className="overflow-x-auto rounded-xl bg-white">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white">
-                      <th className="px-4 py-2.5 text-left">Term</th>
-                      <th className="px-4 py-2.5 text-right">Monthly payment</th>
-                      <th className="px-4 py-2.5 text-right">Total repayable</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      { term: "6 months", m: "£1,333", t: "£9,000" },
-                      { term: "12 months", m: "£667", t: "£9,000" },
-                      { term: "18 months", m: "£444", t: "£9,000" },
-                      { term: "24 months", m: "£333", t: "£9,000" },
-                      { term: "36 months", m: "£222", t: "£9,000" },
-                    ].map((r, i) => (
-                      <tr key={r.term} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                        <td className="px-4 py-2.5 font-medium">{r.term}</td>
-                        <td className="px-4 py-2.5 text-right font-bold text-[#1e40af]">{r.m}</td>
-                        <td className="px-4 py-2.5 text-right text-gray-600">{r.t}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
               <p className="text-xs text-gray-600 mt-3 leading-relaxed">
-                Monthly figures are the £8,000 balance divided by the term at a <strong>0% APR representative</strong>{" "}
-                rate, rounded to the nearest pound, and include the £1,000 deposit in the total repayable. They are an
-                example calculation, not a credit offer. Finance is <strong>subject to a credit check and to the
-                lender&apos;s approval</strong> — approval is not guaranteed and not everyone will qualify. The rate,
-                term and deposit you are offered depend on the lender&apos;s assessment of your circumstances, and at any
-                APR above 0% the total repayable will be higher than the figures shown.
+                A deposit reduces the amount borrowed. Compare the total repayable, not just the monthly amount. This is general
+                information, not a credit offer or a quote.
               </p>
             </div>
             <p>
-              For a single arch with no deposit, All-on-4 at £4,500 works out at approximately £125 a month over 36
-              months, and All-on-6 at £5,600 at approximately £156 a month, on the same 0% APR representative basis.
+              For a single arch, All-on-4 is priced from £4,500 and All-on-6 from £5,600, so the amount to pay or borrow is
+              roughly half of a two-arch case.
             </p>
             <p>
-              <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">See monthly payment figures for every treatment →</Link>
+              <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">Paying monthly: what to know →</Link>
               <br />
-              <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Dental finance in the UK: payment plans, loans and bad credit →</Link>
+              <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">Dental finance in the UK: payment plans, loans and difficult credit histories →</Link>
             </p>
+            <FinanceDisclosure className="my-6" />
 
             <h2 id="safety" className="text-2xl font-bold text-gray-900 mt-8 mb-4 scroll-mt-24">Is Full Mouth Implant Treatment Safe in Turkey?</h2>
             <p>
@@ -470,8 +442,8 @@ export default function FullMouthImplantsUKvsTurkeyPage() {
             { title: "All-on-6 Turkey", desc: "Full-arch restoration on 6 implants, from £5,600 per arch.", href: "/treatments/all-on-6-turkey" },
             { title: "All-on-6 Package Breakdown", desc: "What the £5,600 all-inclusive package actually covers.", href: "/prices/all-on-6-dental-implants-turkey-package" },
             { title: "Dental Implants Turkey Cost", desc: "Single-implant prices by brand, and add-on costs.", href: "/blog/implants-cost-uk-vs-turkey" },
-            { title: "Monthly Payment Plans", desc: "Monthly figures for every treatment, from £78/month.", href: "/monthly-payment" },
-            { title: "Dental Finance UK", desc: "Payment plans, dental loans and what bad credit means.", href: "/finance-options-uk" },
+            { title: "Paying Monthly: What to Know", desc: "UK and Turkey prices side by side, and what decides a monthly payment.", href: "/monthly-payment" },
+            { title: "Dental Finance UK", desc: "Payment plans, dental loans and what to check before you borrow.", href: "/finance-options-uk" },
           ]}
         />
       </div>

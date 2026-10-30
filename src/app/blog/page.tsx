@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 const posts = [
   // Finance cluster (growth hack - highlighted)
-  { href: "/blog/can-you-pay-monthly-for-teeth-in-turkey", title: "Can You Pay Monthly for Teeth in Turkey?", excerpt: "Yes — spread the cost of dental treatment in Turkey from £78/month with UK-based finance plans.", date: "January 2026", tag: "Finance" },
-  { href: "/blog/finance-dental-implants-turkey-uk-patients", title: "Finance Dental Implants Turkey – UK Patient Guide", excerpt: "How to finance dental implants in Turkey. Monthly options from about £17/month for a single implant at £600.", date: "January 2026", tag: "Finance" },
-  { href: "/blog/dental-tourism-finance-explained", title: "Dental Tourism Finance Explained", excerpt: "A complete guide to funding dental treatment abroad — monthly plans, loans, 0% credit, and which to choose.", date: "January 2026", tag: "Finance" },
+  { href: "/blog/can-you-pay-monthly-for-teeth-in-turkey", title: "Can You Pay Monthly for Teeth in Turkey?", excerpt: "Some UK patients spread the cost of treatment in Turkey. What decides a monthly payment and what to check first.", date: "January 2026", tag: "Finance" },
+  { href: "/blog/finance-dental-implants-turkey-uk-patients", title: "Finance Dental Implants Turkey – UK Patient Guide", excerpt: "How UK patients can pay for dental implants in Turkey, and what to check before you borrow.", date: "January 2026", tag: "Finance" },
+  { href: "/blog/dental-tourism-finance-explained", title: "Dental Tourism Finance Explained", excerpt: "A guide to funding dental treatment abroad: payment plans, loans, credit cards and savings compared.", date: "January 2026", tag: "Finance" },
   // Core cluster
   { href: "/blog/why-are-dental-treatments-cheaper-in-turkey", title: "Why Are Dental Treatments Cheaper in Turkey?", excerpt: "The real reason dental work costs 70–80% less in Turkey. It's not lower quality — it's lower overheads.", date: "January 2026", tag: "Guide" },
   { href: "/blog/turkey-teeth-explained", title: "Turkey Teeth Explained: What UK Patients Need to Know", excerpt: "What 'turkey teeth' actually means, where the term came from, and what modern Turkish dental work really looks like.", date: "January 2026", tag: "Guide" },
@@ -23,7 +23,7 @@ const posts = [
   { href: "/blog/full-set-veneers-turkey-cost", title: "Full Set of Veneers in Turkey: Cost Breakdown 2026", excerpt: "Exactly how much a full set of veneers costs in Turkey — 8, 10, 16, or 20 veneers, all-in including travel.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/are-veneers-in-turkey-worth-it", title: "Are Veneers in Turkey Worth It?", excerpt: "An honest assessment of the quality, savings, risks, and overall value of Turkey veneers for UK patients.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/risks-of-veneers-in-turkey", title: "Risks of Veneers in Turkey: What UK Patients Should Know", excerpt: "The honest truth about what can go wrong with veneers in Turkey and how to minimise every risk.", date: "January 2026", tag: "Safety" },
-  { href: "/blog/can-you-pay-monthly-for-veneers-turkey", title: "Can You Pay Monthly for Veneers in Turkey?", excerpt: "Yes — a full set of 20 veneers in Turkey financed over 36 months from £106/month.", date: "January 2026", tag: "Finance" },
+  { href: "/blog/can-you-pay-monthly-for-veneers-turkey", title: "Can You Pay Monthly for Veneers in Turkey?", excerpt: "Some UK patients spread the cost of veneers in Turkey. What decides a monthly payment and what to check first.", date: "January 2026", tag: "Finance" },
   { href: "/blog/4-8-10-rule-for-veneers", title: "The 4-8-10 Rule for Veneers Explained", excerpt: "What the 4-8-10 rule means for veneer planning and how it applies to your Turkey treatment.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/composite-vs-porcelain-veneers-turkey", title: "Composite vs Porcelain Veneers Turkey", excerpt: "A clear comparison of composite and porcelain veneers in Turkey — cost, durability, and which is right for you.", date: "January 2026", tag: "Veneers" },
   // Implants cluster

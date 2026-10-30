@@ -17,7 +17,7 @@ const faqs = [
   { question: "How many trips do I need to Turkey for implants?", answer: "Usually two trips. The first (3–5 days) is for implant placement. After 3–6 months of osseointegration, you return for the crown fitting (3–4 days). Some cases with good bone density can be done as a single trip." },
   { question: "What brands of implants are used?", answer: "Our partner clinics use Straumann, Nobel Biocare, Astra Tech, and other premium implant brands — the same systems used in top UK practices." },
   { question: "How long do dental implants last?", answer: "With proper care, implants can last a lifetime. The crown on top may need replacing after 15–20 years. Our clinics offer a 10-year guarantee on implant work." },
-  { question: "Can I pay monthly for dental implants in Turkey?", answer: "Yes. Finance is available over 12, 24, or 36 months. A single implant priced at £600 is about £17/month over 36 months at 0% APR; payment plans start at £500, so implants priced below that are not financed on their own. Pre-qualify with no impact on your credit score." },
+  { question: "Can I pay monthly for dental implants in Turkey?", answer: "Some patients do, using credit arranged in the UK. Borrowing is optional, approval is the lender\'s decision and is never guaranteed, and the monthly payment depends on the offer you receive, so we do not publish monthly figures." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -122,21 +122,9 @@ export default function DentalImplantsTurkeyPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           {/* Finance */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Spread the Cost – Monthly Finance</h2>
-            <p className="text-gray-600 mb-4">Finance your implants over 12, 24, or 36 months with no upfront fees.</p>
-            <div className="grid grid-cols-3 gap-3 mb-4">
-              {[
-                { label: "£600 implant / 12mo", price: "£50/mo" },
-                { label: "£600 implant / 24mo", price: "£25/mo" },
-                { label: "£600 implant / 36mo", price: "£17/mo" },
-              ].map(p => (
-                <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
-                  <p className="text-xs text-gray-500 mb-1">{p.label}</p>
-                  <p className="text-lg font-extrabold text-[#1e40af]">{p.price}</p>
-                </div>
-              ))}
-            </div>
-            <Link href="/monthly-payment" className="inline-block text-[#1e40af] font-semibold hover:underline text-sm">→ View all finance options</Link>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Paying for Your Treatment</h2>
+            <p className="text-gray-600 mb-4">Some patients spread the cost with credit arranged in the UK. Borrowing is optional, approval is the lender&apos;s decision and is never guaranteed, and the monthly payment depends on the offer you receive, so we do not publish monthly figures.</p>
+            <Link href="/monthly-payment" className="inline-block text-[#1e40af] font-semibold hover:underline text-sm">→ Paying monthly: what to know</Link>
           </div>
 
           {/* Internal linking */}

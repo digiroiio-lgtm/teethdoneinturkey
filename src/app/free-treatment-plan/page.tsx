@@ -38,7 +38,7 @@ const includes = [
   "Material options (E-max, zirconia, composite) with pros and cons",
   "Number of teeth to be treated",
   "All-inclusive cost breakdown (clinic fees, hotel, transfers)",
-  "Monthly payment options if applicable",
+  "Information on payment options, if you ask",
   "Estimated trip length and suggested travel dates",
   "Clinic profile and dentist biography",
   "Patient reviews relevant to your treatment type",

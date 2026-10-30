@@ -17,7 +17,7 @@ const faqs = [
   { question: "How long does a smile makeover take in Turkey?", answer: "A typical full smile makeover takes 6–8 days: Day 1 is your consultation and digital smile preview, Days 2–3 for tooth preparation and temporaries, Days 4–5 for the lab to craft your veneers, and Days 6–7 for fitting and final adjustments before you fly home with your new smile." },
   { question: "Can I see my new smile before treatment starts?", answer: "Yes. Digital Smile Design (DSD) software creates a high-resolution 3D preview of your proposed smile before any preparation begins. You can request adjustments until you are 100% happy." },
   { question: "How long do smile makeover results last?", answer: "E-max porcelain veneers — the most common component — typically last 10–15 years with proper care. All partner clinics include a 10-year structural guarantee. Teeth whitening results typically last 2–3 years before a top-up is needed." },
-  { question: "Can I pay monthly for a smile makeover?", answer: "Yes. Finance is available over 12, 24, or 36 months. A £3,500 smile makeover is available from approximately £97/month over 36 months. Pre-qualify with no impact on your credit score." },
+  { question: "Can I pay monthly for a smile makeover?", answer: "Some patients do, using credit arranged in the UK. Borrowing is optional, approval is the lender\'s decision and is never guaranteed, and the monthly payment depends on the offer you receive, so we do not publish monthly figures." },
 ];
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
@@ -135,21 +135,9 @@ export default function SmileMakeoverPage() {
 
           {/* Finance */}
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Spread the Cost – Monthly Finance</h2>
-            <p className="text-gray-600 mb-4">Finance your smile makeover over 12, 24, or 36 months with no upfront fees.</p>
-            <div className="grid grid-cols-3 gap-3 mb-4">
-              {[
-                { label: "12 months", price: "£292/mo" },
-                { label: "24 months", price: "£146/mo" },
-                { label: "36 months", price: "£97/mo" },
-              ].map(p => (
-                <div key={p.label} className="bg-white rounded-xl p-3 border border-gray-200 text-center">
-                  <p className="text-xs text-gray-500 mb-1">{p.label}</p>
-                  <p className="text-lg font-extrabold text-[#1e40af]">{p.price}</p>
-                </div>
-              ))}
-            </div>
-            <Link href="/monthly-payment" className="inline-block text-[#1e40af] font-semibold hover:underline text-sm">→ View all finance options</Link>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Paying for Your Treatment</h2>
+            <p className="text-gray-600 mb-4">Some patients spread the cost with credit arranged in the UK. Borrowing is optional, approval is the lender&apos;s decision and is never guaranteed, and the monthly payment depends on the offer you receive, so we do not publish monthly figures.</p>
+            <Link href="/monthly-payment" className="inline-block text-[#1e40af] font-semibold hover:underline text-sm">→ Paying monthly: what to know</Link>
           </div>
 
           {/* Internal links */}
