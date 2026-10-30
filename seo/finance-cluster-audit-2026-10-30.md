@@ -141,3 +141,13 @@ Still open: Ideal4Finance or a compliance adviser should see the illustration be
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-10-30 | /prices/turkey-teeth-cost, /finance-options-uk (+2 link edits) | Added total-trip cost examples and a hypothetical repayment illustration | Restore citable numbers for AI/Google answers within IAR limits | Better fit for "total cost for a UK patient" and "how does finance work" prompts |
+
+## 10. Finance page FAQ and heading tweak (draft review)
+
+A drafted new "pay monthly" page was reviewed instead of published: it targeted the same queries as `/finance-options-uk`, so adding it as a new URL would cannibalise the existing page (directive §1, §7). Not adopted: the clinic payment-plan and deposit text (clinic terms unknown), the soft-search claim (unverified with Ideal4Finance), the link to `turkeyteethfinance.co.uk` (relationship and approval unknown), a "Z% APR" example (needs principal approval), and a title/H1 change (inside the 2–3 week measurement window after #57).
+
+Applied to `/finance-options-uk` only: two FAQs ("Can you get Turkey teeth on finance?", "Can I get a quote before applying for finance?"), the `#bad-credit` heading now reads "Turkey Teeth Finance with Bad Credit: What Is Realistic" (anchor unchanged, content already makes no approval promise), and FAQPage JSON-LD built from the visible FAQs. Google limits FAQ rich results to a narrow set of sites, so no visible SERP change is expected. The meta description was already 153 characters, so it was left alone.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-30 | /finance-options-uk | +2 FAQs, FAQPage schema, bad-credit H2 wording | Cover "turkey teeth on finance" and "finance bad credit" phrasing without a competing page | Better phrase coverage; schema helps machine reading |

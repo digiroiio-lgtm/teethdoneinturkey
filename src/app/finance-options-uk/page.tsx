@@ -65,11 +65,33 @@ const faqs = [
     q: "Do I have to use the broker you introduce?",
     a: "No. You can arrange finance independently, through your bank or another broker. Comparing offers before you commit is sensible.",
   },
+  {
+    q: "Can you get Turkey teeth on finance?",
+    a: "Some patients do, using credit arranged in the UK, such as a payment plan or a personal loan. Whether you are offered credit, and on what terms, depends on the lender and your circumstances and is never guaranteed. Compare the total repayable, not just the monthly amount, before you agree.",
+  },
+  {
+    q: "Can I get a quote before applying for finance?",
+    a: "Yes. You can request a free written treatment plan with the treatment cost before you decide anything, including whether to explore finance at all. Borrowing is optional, and a written plan helps you check that any amount borrowed matches the treatment.",
+  },
 ];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(faq => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
 
 export default function FinanceOptionsUKPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
+      />
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Can You Pay Monthly for Turkey Teeth? Finance &amp; Payment Plans</h1>
@@ -255,7 +277,7 @@ export default function FinanceOptionsUKPage() {
           </div>
 
           <div>
-            <h2 id="bad-credit" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">Finance with a Difficult Credit History: What Is Realistic</h2>
+            <h2 id="bad-credit" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">Turkey Teeth Finance with Bad Credit: What Is Realistic</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               Advertising around bad-credit dental finance often promises more than anyone can deliver. Here is the honest position:
             </p>
