@@ -179,3 +179,26 @@ Findings:
 - Hollywood Smile: only `/blog/hollywood-smile-turkey-cost` appears (47 impressions, position 26.8); the other two Hollywood pages did not show in the top 200 pages, so Search Console shows no cannibalisation there. The 0% AI-visibility score for that prompt is therefore not a Google-ranking problem.
 
 Sister site `https://turkeyteethfinance.co.uk/` (9 days of data, 1–7 impressions per query): it has one page per treatment (`/all-on-4-finance`, `/smile-makeover-finance`, `/zirconia-crowns-finance`), `/dental-finance`, `/finance-faq`, `/how-it-works`, `/our-clinic` and `/reviews`, and it already shows for "can you finance turkey teeth" and "turkey teeth finance", the same queries as this site. A per-treatment finance template on a second domain is the scaled/doorway pattern in directive §2 and §9. Relationship to this site still needs the owner's decision.
+
+## 12. Flight cost range: replaced the unsourced £300–£600 (2026-10-30)
+
+Problem: the total-cost examples used a flat £300–£600 return flight, an unsourced site figure that also looks too high for most of the year.
+
+Evidence found (web search summaries only; the fare sites themselves were not reachable from this session, so the figures are second-hand and must be re-checked by a person):
+- Cheapflights, London to Antalya: December average return about £57, August about £411.
+- Kayak, UK to Antalya: January average return about £68.
+- Other aggregators disagree on the cheapest month (January, February, June, November and December all appear) and on levels (Momondo shows about £244 from Heathrow in November), because airport, airline, booking date and lowest-vs-average methods differ.
+
+A pasted month-by-month table (per-month ranges such as "March £50–£120", "November £45–£100", with a 1 GBP = 65 TRY conversion and easyJet/Jet2 starting fares) had no source or date, and its mid-month ranges are not supported by any source found, so it was not published (directive §23: verify, qualify, remove).
+
+Applied on `/prices/turkey-teeth-cost`:
+- Flights in the two worked examples now span "about £60–£410" (winter to August), giving about £2,860–£3,210 for the 20-crown Hollywood Smile package and about £4,560–£4,910 for one All-on-4 arch.
+- New H3 `#flight-costs-by-month`: month-by-month fare *levels* (lowest / moderate / highest) tied to the UK school calendar (Easter, late-May and late-October half-term, summer holidays, Christmas), with only the three sourced averages quoted and attributed to Cheapflights and Kayak "checked on 30 October 2026".
+
+Still open:
+- A person should replace the second-hand figures with a dated Google Flights / Skyscanner month-view check from London and one regional airport (for example Manchester), then re-state the range.
+- Four other pages still say "flights and hotel ... typically £300–£600 for a 3–5 day trip" (`guides/severe-toothache-cant-afford-dentist`, `guides/tooth-abscess-cant-afford-dentist`, `guides/cant-afford-root-canal-uk` twice). That is a different claim (flights plus hotel for a non-package stay) but is also unsourced.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-30 | /prices/turkey-teeth-cost | Flight range replaced; month-by-month fare-level section added | Unsourced figure; more useful and quotable total-cost answer | Better fit for "how much do Turkey teeth cost for a UK patient" prompts |
