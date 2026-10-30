@@ -224,12 +224,31 @@ Keywords were added at 18:02 UTC with tag `finance-cluster` (UK, Google, desktop
 | turkey teeth on finance | 38 | not in the sampled top rows |
 | turkey teeth payment plan | pending | |
 | dental finance turkey | pending | |
-| turkey teeth instalments | pending | |
-| turkey teeth instalment plan | pending | |
+| turkey teeth instalments | 35 (read 18:21 UTC) | |
+| turkey teeth instalment plan | 12 (read 18:22 UTC) | |
 | pay in instalments turkey teeth | pending | |
 
-Caveat: this is not a strict pre-change baseline. #57 had been live since the morning and the #58 deployment (created 18:07 UTC) was almost certainly live at 18:16 UTC; the #59 deployment (created 18:18 UTC) came after. SERP effects lag by days, so treat these as the starting point for the 2–3 week window rather than as proof of any effect. Fill in the five pending keywords at the next check.
+Caveat: this is not a strict pre-change baseline. #57 had been live since the morning and the #58 deployment (created 18:07 UTC) was almost certainly live at 18:16 UTC; the #59 deployment (created 18:18 UTC) came after. SERP effects lag by days, so treat these as the starting point for the 2–3 week window rather than as proof of any effect. Three keywords were still unprocessed at the 18:22 UTC re-check (turkey teeth payment plan, dental finance turkey, pay in instalments turkey teeth); fill them in at the next check.
 
 Deploy status (Vercel, production): #58 commit `e9997d6` READY, #59 commit `8b80597` READY.
 
 Observation: the same Vercel team also deploys `turkeyteethfinance-co-uk` from `digiroiio-lgtm/turkeyteethfinance.co.uk`, and its latest merge (PR #28, deployed 18:14 UTC) retitled its homepage to target "finance turkey teeth". Both sites are therefore being optimised for the same finance queries by the same owner, which sharpens the open question about how the two sites should be positioned (separate brand, consolidate, or cut the per-treatment finance pages).
+
+## 14. Flight wording simplified to rounded ranges (2026-10-30)
+
+Owner decision: fare data cannot be verified to the pound from this setup, and the owner is not a fare authority, so the page should give rounded, range-style guidance by season and booking time instead of precise snapshot numbers.
+
+Owner-provided input used: early winter (November–December) returns can be found around £30–£40; July–August last-minute bookings can reach £300–£600 or more. Combined with the earlier snapshots (Skyscanner best return about £55, Kayak London January about £99 and direct August about £313, Cheapflights December about £57 and August about £411), the page now shows:
+- Winter (November–February), booked ahead: about £30–£100 (lowest fares around £30–£40)
+- Spring and autumn: "in between", with Easter, half-term and Christmas weeks dearer
+- Summer holidays (July–August), typical: about £300–£400
+- Summer holidays, last minute: about £300–£600 or more
+- Worked examples: flights about £30–£600, giving about £2,850–£3,400 (Hollywood Smile 20 crowns) and about £4,550–£5,100 (All-on-4, one arch)
+
+The per-month level table and the precise snapshot list were removed to keep the section simple. The note says the ranges are rounded and indicative, based on comparison snapshots and typical booking patterns, change daily, differ by airport, airline and baggage, and that the sites disagree. The earlier "about £50 to £410" figures from section 12 are superseded.
+
+Still open: a dated Google Flights or Skyscanner check would let the ranges be tightened and attributed more precisely; the four pages with "flights and hotel typically £300–£600" remain unsourced.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-30 | /prices/turkey-teeth-cost | Flight section rewritten as rounded seasonal and booking-time ranges; totals updated | Owner-preferred simpler, defensible wording | Clearer, quotable total-cost answer |
