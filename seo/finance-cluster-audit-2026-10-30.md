@@ -211,3 +211,25 @@ A second pasted message cited Skyscanner (best £48, annual average £113), Kaya
 - The Google Flights link is a saved search for two specific December dates, not a price-history report, so it cannot support an annual or seasonal average.
 
 Conclusion: every aggregator number is a dated snapshot that moves daily and differs by page, airport and one-way vs return. A single "annual average" combining Skyscanner, Kayak (direct only) and Google would mix incompatible measures, so it was not published. The page now says "about £50 off-peak to about £410 at the August peak" and lists the snapshots by tool and date. Totals changed to about £2,850–£3,210 (Hollywood Smile) and about £4,550–£4,910 (All-on-4, one arch).
+
+## 13. Nightwatch baseline for the nine added finance keywords (2026-10-30)
+
+Keywords were added at 18:02 UTC with tag `finance-cluster` (UK, Google, desktop). First readings arrived at 18:16 UTC for four of the nine; the other five had not been processed yet.
+
+| Keyword | First position (UTC 18:16, 30 Oct) | Search Console 30 Sep – 28 Oct |
+|---|---|---|
+| turkey teeth finance bad credit | 7 | 49 impressions, 3 clicks, position 8.2 |
+| turkey teeth finance | 10 | not in the sampled top rows |
+| can you get turkey teeth on finance | 14 | 31 impressions, position 18.4 |
+| turkey teeth on finance | 38 | not in the sampled top rows |
+| turkey teeth payment plan | pending | |
+| dental finance turkey | pending | |
+| turkey teeth instalments | pending | |
+| turkey teeth instalment plan | pending | |
+| pay in instalments turkey teeth | pending | |
+
+Caveat: this is not a strict pre-change baseline. #57 had been live since the morning and the #58 deployment (created 18:07 UTC) was almost certainly live at 18:16 UTC; the #59 deployment (created 18:18 UTC) came after. SERP effects lag by days, so treat these as the starting point for the 2–3 week window rather than as proof of any effect. Fill in the five pending keywords at the next check.
+
+Deploy status (Vercel, production): #58 commit `e9997d6` READY, #59 commit `8b80597` READY.
+
+Observation: the same Vercel team also deploys `turkeyteethfinance-co-uk` from `digiroiio-lgtm/turkeyteethfinance.co.uk`, and its latest merge (PR #28, deployed 18:14 UTC) retitled its homepage to target "finance turkey teeth". Both sites are therefore being optimised for the same finance queries by the same owner, which sharpens the open question about how the two sites should be positioned (separate brand, consolidate, or cut the per-treatment finance pages).
