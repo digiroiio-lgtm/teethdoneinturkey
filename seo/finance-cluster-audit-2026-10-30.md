@@ -252,3 +252,18 @@ Still open: a dated Google Flights or Skyscanner check would let the ranges be t
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-10-30 | /prices/turkey-teeth-cost | Flight section rewritten as rounded seasonal and booking-time ranges; totals updated | Owner-preferred simpler, defensible wording | Clearer, quotable total-cost answer |
+
+## 15. Disclosure simplified: introducer only, no APR promised (2026-10-30)
+
+Owner clarification: the arrangement with Ideal4Finance is an introducer / IAR agreement. The business only refers UK patients who apply through its UK company; it does not lend, arrange credit, advise on credit or promise any APR. Rates, terms and approval depend on each person's credit history, income and circumstances.
+
+Applied:
+- `FinanceDisclosure` rewritten shorter: IAR status; "We only introduce UK patients to Ideal4Finance. We do not lend, arrange credit or give credit advice."; "We do not promise any APR or approval. Rates, terms and approval depend on each person's credit history, income and circumstances, and are decided by the lender. Any figures on this site are illustrations or treatment prices, not finance offers."; finance is optional and can be arranged independently. The principal FRN still renders only when set.
+- `/finance-options-uk`: new FAQ "Do you promise a particular APR?"; FAQPage schema updates automatically.
+- `public/llms.txt`: finance line now says the site only introduces UK patients and promises no APR or approval.
+
+Not changed: the hypothetical repayment illustration (already labelled as not an offer and not any lender's rates). The principal's written view on it and on the disclosure wording is still outstanding, as are the FRN and the legal entity name.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-30 | FinanceDisclosure (12 pages), /finance-options-uk, llms.txt | Shorter disclosure, explicit "no APR promised", +1 FAQ | Owner confirmed introducer-only role and no APR promise | Clearer, simpler compliance wording |
