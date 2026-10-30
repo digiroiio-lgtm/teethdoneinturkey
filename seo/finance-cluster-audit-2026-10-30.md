@@ -88,3 +88,16 @@ What is already done well: the finance and monthly-payment FAQs, the bad-credit 
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-10-30 | `seo/finance-cluster-audit-2026-10-30.md` | New audit report, no site change | Baseline before finance-cluster optimisation | None on rankings |
+
+## 7. Update 2026-10-30: finance partner and our status
+
+Owner confirmed: the finance partner is Ideal Sales Solutions Ltd (T/A Ideal4Finance), a credit broker, and this site is its Introducer Appointed Representative (IAR).
+
+NOT verified: principal's FRN and permissions. The FCA Register, Companies House and ideal4finance.com could not be reached from this session (hosts not in the network allow-list). Do not publish an FRN until checked on the FCA Register.
+
+Consequences for the page work (not legal advice; confirm with a compliance adviser and the principal):
+- Finance claims on our pages are financial promotions. Headline figures (0% APR representative, from £78/£6/£17 per month), "bad credit considered", "instant decision" and "no impact on your credit score" should be approved in writing by the principal before they stay or are reworded.
+- Copy must not imply we lend, assess applications, or give credit advice. Candidates to review: "Our finance is entirely UK-based", "Full FCA-regulated process" (`/blog/finance-dental-implants-turkey-uk-patients`), "Apply online with a UK lender through our portal".
+- Add a visible disclosure naming the principal, our IAR status and the broker-not-lender role. Draft (unpublished, needs principal approval): "[Company] is an Introducer Appointed Representative of Ideal Sales Solutions Ltd (T/A Ideal4Finance, FCA FRN [VERIFY]). We do not lend or give credit advice; we introduce you to Ideal4Finance, a credit broker. Offers come from lenders on its panel. Approval is the lender's decision and is not guaranteed. Monthly figures are examples, not quotes."
+
+Open inputs needed: principal's written approval process and approved wording/representative example, our own IAR registration details, and confirmation that £6, £17 and £78 per month match current panel offers.
