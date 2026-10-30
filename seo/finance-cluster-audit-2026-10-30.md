@@ -224,11 +224,11 @@ Keywords were added at 18:02 UTC with tag `finance-cluster` (UK, Google, desktop
 | turkey teeth on finance | 38 | not in the sampled top rows |
 | turkey teeth payment plan | pending | |
 | dental finance turkey | pending | |
-| turkey teeth instalments | pending | |
-| turkey teeth instalment plan | pending | |
+| turkey teeth instalments | 35 (read 18:21 UTC) | |
+| turkey teeth instalment plan | 12 (read 18:22 UTC) | |
 | pay in instalments turkey teeth | pending | |
 
-Caveat: this is not a strict pre-change baseline. #57 had been live since the morning and the #58 deployment (created 18:07 UTC) was almost certainly live at 18:16 UTC; the #59 deployment (created 18:18 UTC) came after. SERP effects lag by days, so treat these as the starting point for the 2–3 week window rather than as proof of any effect. Fill in the five pending keywords at the next check.
+Caveat: this is not a strict pre-change baseline. #57 had been live since the morning and the #58 deployment (created 18:07 UTC) was almost certainly live at 18:16 UTC; the #59 deployment (created 18:18 UTC) came after. SERP effects lag by days, so treat these as the starting point for the 2–3 week window rather than as proof of any effect. Three keywords were still unprocessed at the 18:22 UTC re-check (turkey teeth payment plan, dental finance turkey, pay in instalments turkey teeth); fill them in at the next check.
 
 Deploy status (Vercel, production): #58 commit `e9997d6` READY, #59 commit `8b80597` READY.
 
