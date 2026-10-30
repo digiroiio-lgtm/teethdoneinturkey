@@ -151,3 +151,31 @@ Applied to `/finance-options-uk` only: two FAQs ("Can you get Turkey teeth on fi
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-10-30 | /finance-options-uk | +2 FAQs, FAQPage schema, bad-credit H2 wording | Cover "turkey teeth on finance" and "finance bad credit" phrasing without a competing page | Better phrase coverage; schema helps machine reading |
+
+## 11. Search Console baseline (30 Sep – 28 Oct 2026, before #57 went live)
+
+Source: Search Console, `sc-domain:teethdoneinturkey.co.uk`. This is the pre-change baseline for the 2–3 week measurement window (directive §25).
+
+Key pages (28 days):
+
+| Page | Clicks | Impressions | Avg position |
+|---|---|---|---|
+| /finance-options-uk | 16 | 1,117 | 14.9 |
+| /prices/turkey-teeth-cost | 3 | 1,002 | 16.4 |
+| / (home) | 3 | 483 | 33.5 |
+| /blog/can-you-pay-monthly-for-teeth-in-turkey | 1 | 190 | 9.3 |
+| /blog/can-you-pay-monthly-for-veneers-turkey | 1 | 15 | 6.3 |
+| /guides/turkey-teeth-monthly-payments (301 stub since 27 Oct) | 1 | 63 | 12.6 |
+| /blog/dental-tourism-finance-explained | 0 | 6 | 9.7 |
+| /blog/finance-dental-implants-turkey-uk-patients | 0 | 7 | 10.9 |
+
+Findings:
+- `/finance-options-uk` is the site's best click page. Its only clicks in the sampled queries came from "turkey teeth finance bad credit" (49 impressions, 3 clicks, position 8.2). #57 removed "bad credit considered" from the meta and hero but kept an on-page `#bad-credit` section, and the H2 now says "Turkey Teeth Finance with Bad Credit: What Is Realistic". Watch this query first; do not change title, H1 or meta during the window.
+- Phrases in the new FAQs already have impressions: "can you get turkey teeth on finance" (31, position 18.4), "can you get turkey teeth on a payment plan" (18, position 17.3), "can you finance turkey teeth" (15, position 19.2), "new teeth on finance" (12), "denture financing" (6).
+- The home page also shows for "pay monthly turkey teeth", "can you finance turkey teeth" and "can you get turkey teeth on a payment plan" at positions 16–43, below `/finance-options-uk`. Mild overlap, no action.
+- The two thin finance blogs (`dental-tourism-finance-explained`, `finance-dental-implants-turkey-uk-patients`) have 6–7 impressions each. The site is under 90 days old, so the 90-day low-value rule does not apply yet. Candidate for IMPROVE or MERGE after the window, with approval.
+- `can-you-pay-monthly-for-teeth-in-turkey` (190 impressions, position 9.3) is a real traffic source. Do not merge it away.
+- The 301 stub `/guides/turkey-teeth-monthly-payments` still appears in results, which is normal in the first weeks after a redirect.
+- Hollywood Smile: only `/blog/hollywood-smile-turkey-cost` appears (47 impressions, position 26.8); the other two Hollywood pages did not show in the top 200 pages, so Search Console shows no cannibalisation there. The 0% AI-visibility score for that prompt is therefore not a Google-ranking problem.
+
+Sister site `https://turkeyteethfinance.co.uk/` (9 days of data, 1–7 impressions per query): it has one page per treatment (`/all-on-4-finance`, `/smile-makeover-finance`, `/zirconia-crowns-finance`), `/dental-finance`, `/finance-faq`, `/how-it-works`, `/our-clinic` and `/reviews`, and it already shows for "can you finance turkey teeth" and "turkey teeth finance", the same queries as this site. A per-treatment finance template on a second domain is the scaled/doorway pattern in directive §2 and §9. Relationship to this site still needs the owner's decision.
