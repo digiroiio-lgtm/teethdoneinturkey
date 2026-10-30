@@ -151,7 +151,8 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: How Much Do Teeth Cost in Turkey?</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
-            Individual treatments in Turkey typically start from £130 for a zirconia crown, £190 for a porcelain veneer, and £250 for a dental implant. All-inclusive packages (hotel and transfers included) start from around £2,800. UK private-dentistry prices for the same treatments are typically 65–90% higher. Exact cost depends on the treatment, materials, and number of teeth involved.
+            Individual treatments in Turkey typically start from £130 for a zirconia crown, £190 for a porcelain veneer, and £250 for a dental implant. All-inclusive packages (hotel and transfers included) start from around £2,800. UK private-dentistry prices for the same treatments are typically 65–90% higher. Exact cost depends on the treatment, materials, and number of teeth involved. For two worked examples that add flights, see{" "}
+            <a href="#total-cost" className="text-[#1e40af] font-semibold hover:underline">what a UK patient actually pays in total</a>.
           </p>
 
           <GuideTOC items={toc} />
@@ -229,6 +230,41 @@ export default function TurkeyTeethCostPricePage() {
             All-inclusive packages on this site bundle hotel accommodation and VIP airport/clinic transfers into the quoted price. Flights from the UK are always booked and paid for separately. See{" "}
             <Link href="/travel-to-turkey" className="text-[#1e40af] font-semibold hover:underline">Travel to Turkey</Link>{" "}
             for what to expect and how long to plan for your trip.
+          </p>
+
+          <h2 id="total-cost" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What a UK Patient Actually Pays in Total</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The package price is not the whole bill, because flights are booked separately. Two worked examples, both using packages that already include hotel and airport transfers, with flights added at a typical return fare of £300–£600:
+          </p>
+          <div className="overflow-x-auto rounded-xl mb-3">
+            <table className="w-full text-sm bg-white border border-gray-200 rounded-xl overflow-hidden">
+              <thead>
+                <tr className="bg-gray-100 text-gray-700">
+                  <th className="px-4 py-3 text-left">Example</th>
+                  <th className="px-4 py-3 text-right">Package (hotel + transfers)</th>
+                  <th className="px-4 py-3 text-right">Flights (typical)</th>
+                  <th className="px-4 py-3 text-right">Total from the UK</th>
+                  <th className="px-4 py-3 text-right">UK private price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { e: "Hollywood Smile, 20 zirconia crowns", p: "£2,800", f: "£300–£600", t: "about £3,100–£3,400", u: "£20,000–£30,000" },
+                  { e: "All-on-4, one arch", p: "£4,500", f: "£300–£600", t: "about £4,800–£5,100", u: "£15,000+" },
+                ].map((r, i) => (
+                  <tr key={r.e} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    <td className="px-4 py-3 font-medium text-gray-800">{r.e}</td>
+                    <td className="px-4 py-3 text-right">{r.p}</td>
+                    <td className="px-4 py-3 text-right">{r.f}</td>
+                    <td className="px-4 py-3 text-right text-[#1e40af] font-bold">{r.t}</td>
+                    <td className="px-4 py-3 text-right text-gray-600">{r.u}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-gray-500 mb-4">
+            Indicative figures, not a quote. Package and UK prices are the ones published on this site on 30 October 2026. Flight fares vary by season, airport and how early you book, so check current fares. Anything outside your written treatment plan, such as extra treatment or additional hotel nights, is paid separately.
           </p>
 
           <h2 id="uk-vs-turkey" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">UK vs Turkey Comparison</h2>

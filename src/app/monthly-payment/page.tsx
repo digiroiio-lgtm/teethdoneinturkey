@@ -183,7 +183,9 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">What Decides a Monthly Payment</h2>
             <p className="text-gray-800 font-medium leading-relaxed mb-4">
-              A monthly payment depends on the amount you borrow, the length of the agreement, the interest rate and any fees. A longer term usually lowers the monthly amount but can raise the total you repay, so look at the total repayable as well as the monthly figure.
+              A monthly payment depends on the amount you borrow, the length of the agreement, the interest rate and any fees. A longer term usually lowers the monthly amount but can raise the total you repay, so look at the total repayable as well as the monthly figure. See the{" "}
+              <Link href="/finance-options-uk#interest-term-illustration" className="text-[#1e40af] font-semibold hover:underline">hypothetical repayment illustration</Link>{" "}
+              for how rate and term change the total.
             </p>
             <ul className="space-y-2 text-gray-600 text-sm mb-4">
               {[

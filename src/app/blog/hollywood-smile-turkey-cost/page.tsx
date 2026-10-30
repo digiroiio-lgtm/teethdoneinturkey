@@ -145,7 +145,8 @@ export default function HollywoodSmilePage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Pay Monthly for Your Hollywood Smile</h2>
           <p>If you choose to borrow, the lender decides whether to offer credit and on what terms, and approval is never guaranteed. The monthly payment depends on the amount borrowed, the term, the interest rate and any fees, so we do not publish monthly figures for the £2,800 package.</p>
-          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Explore monthly payment options</Link>
+          <p>For the full trip cost with flights added, see <Link href="/prices/turkey-teeth-cost#total-cost" className="text-[#1e40af] font-semibold hover:underline">what a UK patient actually pays in total</Link>.</p>
+          <Link href="/monthly-payment" className="text-[#1e40af] hover:underline font-semibold">→ Paying monthly: what to know</Link>
 
           <div className="mt-8 p-6 bg-[#1e40af] text-white rounded-2xl">
             <p className="font-bold text-xl mb-2">Get your Hollywood Smile quote</p>

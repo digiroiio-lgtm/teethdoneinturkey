@@ -127,3 +127,17 @@ Still open:
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-10-30 | finance cluster (35 files) | Removed 0% APR, monthly-figure, bad-credit and instant-decision claims; added IAR disclosure | Site is an IAR of a credit broker; promotions need principal approval | Lower compliance risk; possible movement on "0% / bad credit / £x per month" queries |
+
+## 9. Numeric examples added 2026-10-30 (after #57)
+
+Goal: restore concrete, citable numbers for SEO/GEO without breaking IAR limits.
+
+- `/prices/turkey-teeth-cost#total-cost`: two worked "total from the UK" examples built from all-inclusive packages (Hollywood Smile 20 crowns £2,800 and All-on-4 one arch £4,500, plus typical return flights £300–£600), shown next to the UK private prices already on that page. Labelled indicative; prices are those published on the site on 30 October 2026. The flight range is an existing unsourced site figure, so it is worded "typical" and "check current fares". `DATE_MODIFIED` on that page was left alone because the older prices were not re-verified.
+- `/finance-options-uk#interest-term-illustration`: hypothetical £3,000 repayment tables (0/10/20% APR over 24 months; 12/24/36 months at 10% APR), labelled as not an offer, not a quote and not the rates of Ideal4Finance or any lender. Figures recomputed with the effective-monthly-rate amortisation formula and match the page. Not used in title, meta description, hero, FAQ answers or `llms*.txt`.
+- Links only (no copies): `/monthly-payment` to the illustration; `/blog/hollywood-smile-turkey-cost` to `#total-cost`.
+
+Still open: Ideal4Finance or a compliance adviser should see the illustration before it is relied on; the flight fare range needs a source or a date check.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-30 | /prices/turkey-teeth-cost, /finance-options-uk (+2 link edits) | Added total-trip cost examples and a hypothetical repayment illustration | Restore citable numbers for AI/Google answers within IAR limits | Better fit for "total cost for a UK patient" and "how does finance work" prompts |

@@ -193,6 +193,68 @@ export default function FinanceOptionsUKPage() {
           </div>
 
           <div>
+            <h2 id="interest-term-illustration" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">How Interest and Term Change What You Repay (Illustration)</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The interest rate and the length of the agreement both change what you repay. The tables below use a made-up £3,000 borrowed and made-up rates, only to show the pattern. They are not our treatment prices, a quote or an offer.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="overflow-x-auto">
+                <p className="text-sm font-semibold text-gray-900 mb-2">£3,000 over 24 months, different rates</p>
+                <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="text-left font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Example APR</th>
+                      <th className="text-right font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Monthly</th>
+                      <th className="text-right font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Total repaid</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { a: "0%", m: "£125.00", t: "£3,000" },
+                      { a: "10%", m: "£137.84", t: "£3,308" },
+                      { a: "20%", m: "£150.31", t: "£3,607" },
+                    ].map(r => (
+                      <tr key={r.a} className="odd:bg-white even:bg-gray-50/60">
+                        <td className="px-4 py-3 border-b border-gray-100 text-gray-900 font-semibold">{r.a}</td>
+                        <td className="px-4 py-3 border-b border-gray-100 text-right text-gray-700">{r.m}</td>
+                        <td className="px-4 py-3 border-b border-gray-100 text-right text-gray-700">{r.t}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="overflow-x-auto">
+                <p className="text-sm font-semibold text-gray-900 mb-2">£3,000 at an example 10% APR, different terms</p>
+                <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="text-left font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Term</th>
+                      <th className="text-right font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Monthly</th>
+                      <th className="text-right font-bold text-gray-900 px-4 py-3 border-b border-gray-200">Total repaid</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { a: "12 months", m: "£263.15", t: "£3,158" },
+                      { a: "24 months", m: "£137.84", t: "£3,308" },
+                      { a: "36 months", m: "£96.20", t: "£3,463" },
+                    ].map(r => (
+                      <tr key={r.a} className="odd:bg-white even:bg-gray-50/60">
+                        <td className="px-4 py-3 border-b border-gray-100 text-gray-900 font-semibold">{r.a}</td>
+                        <td className="px-4 py-3 border-b border-gray-100 text-right text-gray-700">{r.m}</td>
+                        <td className="px-4 py-3 border-b border-gray-100 text-right text-gray-700">{r.t}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p className="text-sm text-gray-500 mt-4">
+              <strong>Hypothetical rates for illustration only.</strong> Not an offer, not a quote, and not the rates of Ideal4Finance or any lender. Amounts assume equal monthly payments and no fees. The pattern to take away: a longer term lowers the monthly payment but raises the total you repay, so compare the total repayable in any written offer.
+            </p>
+          </div>
+
+          <div>
             <h2 id="bad-credit" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">Finance with a Difficult Credit History: What Is Realistic</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               Advertising around bad-credit dental finance often promises more than anyone can deliver. Here is the honest position:
