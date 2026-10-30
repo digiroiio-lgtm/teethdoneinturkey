@@ -66,6 +66,10 @@ const faqs = [
     a: "No. You can arrange finance independently, through your bank or another broker. Comparing offers before you commit is sensible.",
   },
   {
+    q: "Do you promise a particular APR?",
+    a: "No. We only introduce UK patients to Ideal4Finance, and we do not promise any APR or approval. The rate, term and approval you are offered depend on your own credit history, income and circumstances and are decided by the lender, so different people are offered different terms. Read the written offer and compare the total repayable before you agree.",
+  },
+  {
     q: "Can you get Turkey teeth on finance?",
     a: "Some patients do, using credit arranged in the UK, such as a payment plan or a personal loan. Whether you are offered credit, and on what terms, depends on the lender and your circumstances and is never guaranteed. Compare the total repayable, not just the monthly amount, before you agree.",
   },
