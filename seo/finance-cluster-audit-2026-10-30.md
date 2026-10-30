@@ -202,3 +202,12 @@ Still open:
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-10-30 | /prices/turkey-teeth-cost | Flight range replaced; month-by-month fare-level section added | Unsourced figure; more useful and quotable total-cost answer | Better fit for "how much do Turkey teeth cost for a UK patient" prompts |
+
+### 12a. Cross-check of a second set of pasted "verified" fare figures (2026-10-30)
+
+A second pasted message cited Skyscanner (best £48, annual average £113), Kayak (UK direct average £182, £29 one-way) and a Google Flights saved-search URL, and proposed the sentence "annual return average £113 to £182, about £40 in winter, £250 to £500 at the summer peak". The pages were not reachable from this session; a fresh web search of the same sites returned different snapshots:
+- Skyscanner London to Antalya Province: best return £55 (easyJet, Luton, 20 Nov to 20 Dec), average about £109; its own text says the figures are estimates from the last four days.
+- Kayak: UK-wide direct average about £253–£256 return (not £182); London route average about £158; London January average about £99; direct August average about £313; cheapest headline fare £32 to £39 (one-way or return depending on page).
+- The Google Flights link is a saved search for two specific December dates, not a price-history report, so it cannot support an annual or seasonal average.
+
+Conclusion: every aggregator number is a dated snapshot that moves daily and differs by page, airport and one-way vs return. A single "annual average" combining Skyscanner, Kayak (direct only) and Google would mix incompatible measures, so it was not published. The page now says "about £50 off-peak to about £410 at the August peak" and lists the snapshots by tool and date. Totals changed to about £2,850–£3,210 (Hollywood Smile) and about £4,550–£4,910 (All-on-4, one arch).

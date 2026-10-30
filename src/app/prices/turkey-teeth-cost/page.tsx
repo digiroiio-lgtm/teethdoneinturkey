@@ -234,7 +234,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="total-cost" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What a UK Patient Actually Pays in Total</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The package price is not the whole bill, because flights are booked separately. Two worked examples, both using packages that already include hotel and airport transfers, with a UK–Antalya return flight added at the low and high ends of the fares quoted below (about £60 in winter, about £410 in August):
+            The package price is not the whole bill, because flights are booked separately. Two worked examples, both using packages that already include hotel and airport transfers, with a UK–Antalya return flight added at the low and high ends of the fares quoted below (about £50 off-peak, about £410 at the August peak):
           </p>
           <div className="overflow-x-auto rounded-xl mb-3">
             <table className="w-full text-sm bg-white border border-gray-200 rounded-xl overflow-hidden">
@@ -249,8 +249,8 @@ export default function TurkeyTeethCostPricePage() {
               </thead>
               <tbody>
                 {[
-                  { e: "Hollywood Smile, 20 zirconia crowns", p: "£2,800", f: "about £60–£410", t: "about £2,860–£3,210", u: "£20,000–£30,000" },
-                  { e: "All-on-4, one arch", p: "£4,500", f: "about £60–£410", t: "about £4,560–£4,910", u: "£15,000+" },
+                  { e: "Hollywood Smile, 20 zirconia crowns", p: "£2,800", f: "about £50–£410", t: "about £2,850–£3,210", u: "£20,000–£30,000" },
+                  { e: "All-on-4, one arch", p: "£4,500", f: "about £50–£410", t: "about £4,550–£4,910", u: "£15,000+" },
                 ].map((r, i) => (
                   <tr key={r.e} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-4 py-3 font-medium text-gray-800">{r.e}</td>
@@ -282,12 +282,12 @@ export default function TurkeyTeethCostPricePage() {
               </thead>
               <tbody>
                 {[
-                  { m: "January–February", l: "Among the lowest", w: "Off-season and no UK school holidays. Kayak shows about £68 as the average return from the UK in January." },
+                  { m: "January–February", l: "Among the lowest", w: "Off-season and no UK school holidays. Kayak shows about £99 as the average London return in January, and the cheapest returns found are around £40–£60." },
                   { m: "March", l: "Low to moderate", w: "Quiet before Easter. Check whether your dates fall in the Easter school holidays, which move each year." },
                   { m: "April", l: "Higher around Easter", w: "Easter school holidays push fares up. Dates outside them are usually cheaper." },
                   { m: "May", l: "Moderate", w: "Early summer season starts. The late-May half-term week is dearer." },
                   { m: "June", l: "Rising", w: "Demand builds before schools break up. Early June is usually cheaper than late June." },
-                  { m: "July–August", l: "Highest", w: "UK summer school holidays. Cheapflights shows about £411 as the average London to Antalya return in August." },
+                  { m: "July–August", l: "Highest", w: "UK summer school holidays. Kayak shows about £313 for a direct flight in August and Cheapflights about £411 for London to Antalya." },
                   { m: "September", l: "Falls", w: "Schools are back, so family demand drops and fares ease from August levels." },
                   { m: "October", l: "Moderate, with a half-term spike", w: "Outside the late-October half-term week fares are usually lower." },
                   { m: "November", l: "Low", w: "Off-season and no major UK holidays." },
@@ -303,7 +303,7 @@ export default function TurkeyTeethCostPricePage() {
             </table>
           </div>
           <p className="text-sm text-gray-500 mb-4">
-            Fare figures are search-based averages shown by Cheapflights (London to Antalya) and Kayak (UK to Antalya), checked on 30 October 2026. Fares change daily, differ by airport (London, Manchester, Birmingham and others), and low-cost airlines charge extra for hold luggage. Always compare a return fare including baggage for your own dates before booking. Package prices on this page include hotel and airport transfers in Turkey; flights are always separate.
+            Fare figures are search-based snapshots shown on 30 October 2026: Skyscanner lists a best London to Antalya return of about £55 and an average around £109; Kayak lists London averages of about £99 in January and about £313 for direct flights in August; Cheapflights lists about £57 for December and about £411 for August. These tools use different methods, so their numbers differ. Fares change daily, differ by airport (London, Manchester, Birmingham and others), and low-cost airlines charge extra for hold luggage. Always compare a return fare including baggage for your own dates before booking. Package prices on this page include hotel and airport transfers in Turkey; flights are always separate.
           </p>
 
           <h2 id="uk-vs-turkey" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">UK vs Turkey Comparison</h2>
