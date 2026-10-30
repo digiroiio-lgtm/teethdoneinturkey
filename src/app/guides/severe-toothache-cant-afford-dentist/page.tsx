@@ -344,7 +344,7 @@ export default function SevereToothacheCantAffordDentistPage() {
           </div>
 
           <p className="text-sm text-gray-500 mb-6">
-            NHS charges from April 2026 (England). Turkey prices are at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). If you choose to borrow, approval is the lender's decision and is not guaranteed.
+            NHS charges from April 2026 (England). Turkey prices are at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). If you choose to borrow, approval is the lender&apos;s decision and is not guaranteed.
           </p>
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">

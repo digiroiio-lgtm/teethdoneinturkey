@@ -346,7 +346,7 @@ export default function ToothAbscessCantAffordDentistPage() {
           </div>
 
           <p className="text-sm text-gray-500 mb-6">
-            NHS charges from April 2026 (England). NHS emergency via NHS 111 is free to access; treatment charges apply unless exempt. Turkey prices are for treatment at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). If you choose to borrow, approval is the lender's decision and is not guaranteed.
+            NHS charges from April 2026 (England). NHS emergency via NHS 111 is free to access; treatment charges apply unless exempt. Turkey prices are for treatment at partner clinics; flights and hotel are additional (typically £300–£600 for a 3–5 day trip). If you choose to borrow, approval is the lender&apos;s decision and is not guaranteed.
           </p>
 
           <h2 id="faqs" className="text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24">
