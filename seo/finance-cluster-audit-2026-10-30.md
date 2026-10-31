@@ -252,3 +252,16 @@ Still open: a dated Google Flights or Skyscanner check would let the ranges be t
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-10-30 | /prices/turkey-teeth-cost | Flight section rewritten as rounded seasonal and booking-time ranges; totals updated | Owner-preferred simpler, defensible wording | Clearer, quotable total-cost answer |
+
+## 16. Smile Gallery added to the homepage (2026-10-31)
+
+Owner request: a five-photo "Smile Gallery" on the homepage, optimised and mobile friendly, using before/after close-ups from the partner clinic's (Akdeniz Dental Clinic, Antalya) Instagram patient gallery. The owner states the patients permit posting on Instagram.
+
+- Five close-up before/after tiles were cropped from the owner's Instagram screenshots (mouth close-ups only, no faces) and exported as WebP (392 x 500, 17–32 KB each, about 125 KB in total) to `public/smile-gallery/`. Tiles with overlay text were avoided. Source resolution (about 392 px wide per tile) limits sharpness on very high-density screens; originals from the clinic would be crisper.
+- New `src/components/SmileGallery.tsx`, placed on the homepage before "What Our UK Patients Say". Five columns from 1024 px up; a horizontal scroll-snap strip below that (first card keeps the page gutter via scroll padding); plain `<img>` with width/height, lazy loading and descriptive alt text; "Before" / "After" labels; neutral caption naming the clinic and saying results vary, plus a link to `/turkey-teeth-before-after`. No treatment names, prices or outcome promises.
+- Checked in Chromium at 1280, 768 and 390 px: no horizontal page overflow, all five images load at natural 392 px.
+- `seo/route-lastmod.json` refreshed for `/` (offline, no IndexNow ping).
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-10-31 | / | Added Smile Gallery section (5 WebP before/after photos) | Original first-party imagery, visual proof for visitors | Better engagement and original-image signal; small page weight increase (about 125 KB, lazy loaded) |
