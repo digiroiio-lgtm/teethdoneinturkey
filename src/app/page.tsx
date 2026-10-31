@@ -6,6 +6,7 @@ import PriceTable from "@/components/PriceTable";
 import TestimonialCard from "@/components/TestimonialCard";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import SmileGallery from "@/components/SmileGallery";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import SourcesList from "@/components/SourcesList";
@@ -393,6 +394,9 @@ export default function HomePage() {
           In its survey of 1,000 UK dentists, the BDA reported that 86% of respondents who had examined dental tourists had treated problems after overseas care. This is a survey of dentists’ experiences, not the percentage of overseas patients who suffer complications and not a Turkey-specific failure rate. The <a href="https://www.bda.org/media-centre/uk-dentists-picking-up-the-pieces-from-dental-tourism-boom/" className={linkClass}>original BDA statement</a> gives the context. Its practical message is to plan continuity of care and possible follow-up costs before travelling.
         </p>
       </AnswerSection>
+
+      {/* Smile Gallery */}
+      <SmileGallery />
 
       {/* Testimonials */}
       <section className="py-16 bg-gray-50">
