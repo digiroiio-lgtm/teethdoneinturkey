@@ -361,6 +361,18 @@ export default function TurkeyTeethCostPricePage() {
           ]}
         />
 
+        <p className="text-sm text-gray-600 -mt-6 mb-10">
+          Polish speaker living in the UK? Our Polish-language guide to Antalya prices in pounds:{" "}
+          <a
+            href="https://leczeniezebowwturcji.pl/uk/ceny-leczenia-zebow-w-turcji-w-funtach"
+            lang="pl"
+            hrefLang="pl"
+            className="text-[#1e40af] font-semibold hover:underline"
+          >
+            Ile kosztuje leczenie zębów w Antalyi w funtach?
+          </a>
+        </p>
+
         <RelatedLinksGrid
           title="Related Blog Articles"
           links={[
