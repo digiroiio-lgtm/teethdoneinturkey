@@ -48,7 +48,7 @@ export default function SmileGallery() {
         </ul>
 
         <p className="mt-6 text-center text-sm text-gray-500 max-w-3xl mx-auto">
-          Photos are from the patient gallery of Akdeniz Dental Clinic, Antalya. Results vary with each person&apos;s starting condition and treatment plan, so a written plan from your own examination matters more than any gallery.{" "}
+          Photos are from the patient gallery of Akdeniz Dental Clinic, Antalya. Each card pairs a before photo (top) with an after photo (bottom) of the same patient&apos;s smile. Results vary with each person&apos;s starting condition and treatment plan, so a written plan from your own examination matters more than any gallery.{" "}
           <Link href="/turkey-teeth-before-after" className="text-[#1e40af] font-semibold hover:underline">See more before-and-after cases</Link>.
         </p>
       </div>
