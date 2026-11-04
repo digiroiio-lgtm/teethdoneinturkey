@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";
+import ExploreKeyPages from "@/components/ExploreKeyPages";
 import TreatmentCard from "@/components/TreatmentCard";
 import PriceTable from "@/components/PriceTable";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -145,6 +146,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <TrustBar />
+      <ExploreKeyPages />
       <p className="text-center text-sm text-gray-500 py-3 bg-white">
         Last updated: <time dateTime={LAST_UPDATED}>{LAST_UPDATED_LABEL}</time>
       </p>
