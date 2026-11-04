@@ -15,7 +15,7 @@ export default function ExploreKeyPages() {
     <nav aria-label="Explore key pages" className="bg-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-3">Explore Teeth Done in Turkey</h2>
-        <p className="text-gray-600 mb-7">Find treatment information, costs and practical support for UK patients.</p>
+        <p className="text-gray-600 mb-7">Explore dental treatment costs in Turkey, compare veneers and implant options, and read patient experiences before making a decision. Our guides explain practical considerations for UK patients, while our coordination team can help you understand the next steps and request information for your circumstances.</p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {primaryPages.map(({ href, label, description }) => (
             <li key={href}>
