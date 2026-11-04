@@ -16,8 +16,8 @@ export const revalidate = 86400;
 // without the principal's written approval.
 export const metadata: Metadata = {
   alternates: { canonical: "/finance-options-uk" },
-  title: { absolute: "Turkey Teeth Finance: Paying Monthly for UK Patients" },
-  description: "How UK patients can pay monthly for dental treatment in Turkey. Payment plans, loans and credit compared, plus what to check before you agree to finance.",
+  title: { absolute: "Turkey Teeth on Finance UK: Can You Pay Monthly?" },
+  description: "Can you pay monthly for Turkey teeth? Compare UK payment plans and personal loans, understand lender checks, APR and total repayable before borrowing.",
 };
 
 const howItWorks = [
