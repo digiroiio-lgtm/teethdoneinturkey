@@ -9,8 +9,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
-  title: "Monthly Payment for Teeth in Turkey",
-  description: "Some UK patients pay monthly for teeth done in Turkey. What to know about dental finance, payment plans and what to check before you borrow or sign.",
+  title: "Can You Pay Monthly for Turkey Teeth? UK Finance Guide",
+  description: "Find out how UK patients may spread the cost of dental treatment in Turkey. Understand payment plans, personal loans, lender decisions and borrowing checks.",
 };
 
 const faqs = [
