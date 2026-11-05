@@ -4,6 +4,8 @@ import CTASection from "@/components/CTASection";
 import TrackedLink from "@/components/TrackedLink";
 import TreatmentTotalsTable from "@/components/TreatmentTotalsTable";
 import FinanceDisclosure from "@/components/FinanceDisclosure";
+import WhatsAppLink from "@/components/WhatsAppLink";
+import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 
 export const revalidate = 86400;
 
@@ -113,6 +115,25 @@ export default function FinanceOptionsUKPage() {
             <p className="text-gray-700 leading-relaxed">
               UK patients normally pay for dental work in one of a few ways: a <strong>dental payment plan</strong> that spreads one treatment over fixed instalments; a <strong>personal loan</strong> used for the same purpose; or <strong>NHS band charges</strong>, which only apply to treatment the NHS actually provides and exclude cosmetic work such as veneers. If credit is involved, the lender decides whether to lend and on what terms, and the terms differ between lenders. Approval is never guaranteed.
             </p>
+          </div>
+
+          <div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <TrackedLink
+                href="/book-consultation"
+                ctaLabel="Finance page: free treatment plan"
+                className="bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors text-center"
+              >
+                Get a free treatment plan
+              </TrackedLink>
+              <WhatsAppLink
+                placement="finance_top"
+                className="border-2 border-green-600 text-green-700 px-6 py-3 rounded-xl font-bold hover:bg-green-50 transition-colors text-center"
+              >
+                WhatsApp us a question
+              </WhatsAppLink>
+            </div>
+            <p className="text-sm text-gray-500 mt-2">Free and no obligation. Borrowing is optional; a written plan shows the treatment cost first.</p>
           </div>
 
           <FinanceDisclosure />
@@ -324,6 +345,18 @@ export default function FinanceOptionsUKPage() {
           </div>
         </div>
       </section>
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+        <RelatedLinksGrid
+          title="Treatments People Plan Around"
+          links={[
+              { title: "Dental Implants in Turkey", desc: "Procedure, typical stay and a UK price comparison.", href: "/treatments/dental-implants-turkey" },
+              { title: "Veneers in Turkey", desc: "Materials, process and a UK price comparison.", href: "/treatments/veneers-turkey" },
+              { title: "All-on-4 Implants", desc: "Full-arch treatment, typical stay and a UK price comparison.", href: "/treatments/all-on-4-turkey" },
+              { title: "Full Smile Makeover", desc: "What a combined plan can include and how it is priced.", href: "/treatments/full-smile-makeover-turkey" },
+            ]}
+        />
+      </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h2 className="text-lg font-bold text-gray-900 mb-4">Related Guides</h2>

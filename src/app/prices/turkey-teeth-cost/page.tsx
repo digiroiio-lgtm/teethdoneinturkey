@@ -350,6 +350,17 @@ export default function TurkeyTeethCostPricePage() {
         />
 
         <RelatedLinksGrid
+          title="Treatment Guides"
+          links={[
+            { title: "Dental Implants in Turkey", desc: "Procedure, typical stay and a UK price comparison.", href: "/treatments/dental-implants-turkey" },
+            { title: "Veneers in Turkey", desc: "Materials, process and a UK price comparison.", href: "/treatments/veneers-turkey" },
+            { title: "All-on-4 Implants", desc: "Full-arch treatment, typical stay and a UK price comparison.", href: "/treatments/all-on-4-turkey" },
+            { title: "Full Smile Makeover", desc: "What a combined plan can include and how it is priced.", href: "/treatments/full-smile-makeover-turkey" },
+            { title: "All-on-6 Implants", desc: "Full-arch treatment on six implants, typical stay and a UK price comparison.", href: "/treatments/all-on-6-turkey" },
+          ]}
+        />
+
+        <RelatedLinksGrid
           title="Related Guides"
           links={[
             { title: "Teeth in Turkey: The Complete UK Patient Guide", desc: "The primary guide covering treatment, process, safety and cost.", href: "/guides/teeth-in-turkey" },
