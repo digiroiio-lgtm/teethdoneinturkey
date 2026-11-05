@@ -40,7 +40,7 @@ export default function TurkeyTeethProblemsPage() {
                 },
                 {
                   title: "Implant Complications",
-                  desc: "Dental implant failure affects approximately 2–5% of implants worldwide, regardless of where they are placed. In Turkey, the risk factors are the same as anywhere: smoking, poor bone density, uncontrolled diabetes, or infection. Using premium implant brands (Straumann, Nobel Biocare) and JCI-accredited clinics significantly reduces this risk. If a problem does occur, you will need to either return to Turkey or find a UK dentist willing to take over the case.",
+                  desc: "Dental implant failure affects approximately 2–5% of implants worldwide, regardless of where they are placed. In Turkey, the risk factors are the same as anywhere: smoking, poor bone density, uncontrolled diabetes, or infection. Using established implant brands and a clinic whose accreditation you have checked may help reduce this risk. If a problem does occur, you will need to either return to Turkey or find a UK dentist willing to take over the case.",
                 },
                 {
                   title: "Communication Difficulties",

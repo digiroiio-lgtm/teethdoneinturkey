@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     question: "Is dental treatment in Turkey really cheaper than the UK?",
-    answer: "Yes, based on the price comparisons published across this site — most individual treatments and packages show a 65–90% saving versus equivalent UK private dental prices. This reflects lower clinic overheads, staff costs and cost of living in Turkey, not lower-quality materials or less qualified dentists.",
+    answer: "Yes, based on the price comparisons published across this site — most individual treatments and packages show a 70–90% saving versus equivalent UK private dental prices. This reflects lower clinic overheads, staff costs and cost of living in Turkey, not lower-quality materials or less qualified dentists.",
   },
   {
     question: "Do Turkey teeth packages include hotel and flights?",
@@ -151,7 +151,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: How Much Do Teeth Cost in Turkey?</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
-            Individual treatments in Turkey typically start from £130 for a zirconia crown, £190 for a porcelain veneer, and £250 for a dental implant. All-inclusive packages (hotel and transfers included) start from around £2,800. UK private-dentistry prices for the same treatments are typically 65–90% higher. Exact cost depends on the treatment, materials, and number of teeth involved. For two worked examples that add flights, see{" "}
+            Individual treatments in Turkey typically start from £130 for a zirconia crown, £190 for a porcelain veneer, and £250 for a dental implant. All-inclusive packages (hotel and transfers included) start from around £2,800. UK private-dentistry prices for the same treatments are typically 70–90% higher. Exact cost depends on the treatment, materials, and number of teeth involved. For two worked examples that add flights, see{" "}
             <a href="#total-cost" className="text-[#1e40af] font-semibold hover:underline">what a UK patient actually pays in total</a>.
           </p>
 
@@ -302,7 +302,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="uk-vs-turkey" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">UK vs Turkey Comparison</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Across every treatment compared on this site, Turkey pricing is consistently 65–90% lower than equivalent UK private dental prices. The gap reflects lower clinic overheads, staff costs and general cost of living in Turkey — not lower-quality materials, since the same international implant and veneer brands used in UK practices (Straumann, Nobel Biocare, Ivoclar E-max) are used by partner clinics in Turkey.
+            Across every treatment compared on this site, Turkey pricing is consistently 70–90% lower than equivalent UK private dental prices. The gap reflects lower clinic overheads, staff costs and general cost of living in Turkey — not lower-quality materials, since the same international implant and veneer brands used in UK practices (Straumann, Nobel Biocare, Ivoclar E-max) are used by partner clinics in Turkey.
           </p>
 
           <h2 id="why-cheaper" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Why Is Dental Treatment Cheaper in Turkey?</h2>

@@ -154,7 +154,7 @@ export default function TeethInTurkeyPillarGuide() {
 
           <KeyTakeaways
             items={[
-              "Dental treatment in Turkey typically costs 65–90% less than equivalent UK private dentistry, according to this site's own published price comparisons.",
+              "Dental treatment in Turkey typically costs 70–90% less than equivalent UK private dentistry, according to this site's own published price comparisons.",
               "The most common treatments are veneers, zirconia crowns, dental implants, and full-arch restoration (All-on-4/All-on-6).",
               "Veneers/crowns typically need one trip; implants and full-arch treatment typically need two trips a few months apart.",
               "Clinic accreditation (JCI or Turkish Ministry of Health certification) and the specific material/implant brand used are the two biggest factors in both safety and price.",
@@ -264,7 +264,7 @@ export default function TeethInTurkeyPillarGuide() {
             <strong>How much do teeth cost in Turkey?</strong> Individual treatments start from £130 (zirconia crown), £190 (veneer), and £250 (dental implant). All-inclusive packages — combining treatment, hotel and transfers — start from £2,800.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Every treatment on this site is consistently 65–90% cheaper than the equivalent UK private-dentistry price. For the full, itemised breakdown and how package pricing is put together, see the{" "}
+            Every treatment on this site is consistently 70–90% cheaper than the equivalent UK private-dentistry price. For the full, itemised breakdown and how package pricing is put together, see the{" "}
             <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Cost Guide</Link>.
           </p>
 
@@ -381,7 +381,7 @@ export default function TeethInTurkeyPillarGuide() {
             { title: "Veneers or Crowns?", desc: "How much tooth each removes, and what is irreversible.", href: "/guides/turkey-teeth-veneers-or-crowns" },
             { title: "Dental Finance Options UK", desc: "Payment plan, finance and loan differences explained.", href: "/finance-options-uk" },
             { title: "About Teeth Done in Turkey", desc: "Who we are and how our UK patient support works.", href: "/about-us" },
-            { title: "Dental Implants Turkey", desc: "Implants from £250, JCI-accredited clinics.", href: "/treatments/dental-implants-turkey" },
+            { title: "Dental Implants Turkey", desc: "Implants from £250, with brand and clinic details in your written plan.", href: "/treatments/dental-implants-turkey" },
             { title: "All-on-4 Turkey", desc: "Full arch restoration on 4 implants from £4,500.", href: "/treatments/all-on-4-turkey" },
             { title: "All-on-6 Turkey", desc: "Maximum-stability full arch on 6 implants from £5,600.", href: "/treatments/all-on-6-turkey" },
             { title: "Full Smile Makeover", desc: "Combined veneers, whitening and contouring from £3,500.", href: "/treatments/full-smile-makeover-turkey" },

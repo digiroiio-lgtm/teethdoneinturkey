@@ -65,7 +65,7 @@ export default function HollywoodSmilePage() {
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p><strong>Short answer:</strong> a Hollywood smile in Turkey costs from £2,800 for 20 zirconia crowns (£3,100 for 24 crowns with Digital Smile Design), including hotel and VIP transfers. The UK private price for 20 zirconia crowns is £15,000 or more. Prices checked 29 October 2026; your quote is confirmed after photo review.</p>
 
-          <p>The &quot;Hollywood Smile&quot; — a complete, dazzling, perfectly uniform smile — has become one of the most sought-after aesthetic dental treatments in Turkey. For UK patients, Turkey offers the same world-class aesthetic results at a fraction of UK private dental prices.</p>
+          <p>The &quot;Hollywood Smile&quot; — a complete, dazzling, perfectly uniform smile — has become one of the most sought-after aesthetic dental treatments in Turkey. For UK patients, Turkey offers crown packages at a fraction of UK private dental prices; results depend on your case and the clinic&apos;s work.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Is a Hollywood Smile?</h2>
           <p>A Hollywood Smile is a comprehensive cosmetic dental treatment that creates a uniform, bright, perfectly shaped smile covering all visible teeth. It typically combines:</p>

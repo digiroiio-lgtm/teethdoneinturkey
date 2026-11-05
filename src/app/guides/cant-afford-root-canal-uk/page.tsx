@@ -78,7 +78,7 @@ const faqs = [
   {
     question: "Can root canal be done abroad safely?",
     answer:
-      "Root canal is a standard endodontic procedure performed identically worldwide. The key variables are the quality of the dental practice, the sterilisation standards, and whether the dentist is using up-to-date rotary equipment rather than older manual files. Partner clinics through this site are JCI-accredited and use modern endodontic systems; ask to confirm this before booking any overseas root canal.",
+      "Root canal is a standard endodontic procedure performed identically worldwide. The key variables are the quality of the dental practice, the sterilisation standards, and whether the dentist is using up-to-date rotary equipment rather than older manual files. Ask any clinic, including our partner clinic, to confirm its accreditation and the endodontic systems it uses before booking any overseas root canal.",
   },
 ];
 

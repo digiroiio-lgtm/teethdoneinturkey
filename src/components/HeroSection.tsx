@@ -22,7 +22,7 @@ export default function HeroSection() {
           Premium Dental Treatments from £1,850
         </p>
         <p className="animate-fade-in-up text-lg text-blue-200 mb-8 max-w-2xl mx-auto">
-          Save up to 70% vs UK prices &nbsp;|&nbsp; UK patient support &nbsp;•&nbsp; Modern JCI-accredited clinics &nbsp;•&nbsp; 5.0 Google rating
+          Save up to 90% vs UK prices &nbsp;|&nbsp; UK patient support &nbsp;•&nbsp; Antalya partner clinic &nbsp;•&nbsp; 5.0 Google rating (partner clinic)
         </p>
 
         <div className="animate-fade-in-up flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -53,7 +53,7 @@ export default function HeroSection() {
         </a>
 
         <div className="animate-fade-in-up mt-10 flex flex-wrap justify-center gap-3 text-sm text-blue-100">
-          {['Free consultation', 'All-inclusive packages', 'UK aftercare support', '10-year guarantee'].map((item) => (
+          {['Free consultation', 'All-inclusive packages', 'UK aftercare support', 'Written clinic guarantee'].map((item) => (
             <span key={item} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-3.5 py-1.5">
               <svg className="w-3.5 h-3.5 text-teal-300" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
               {item}

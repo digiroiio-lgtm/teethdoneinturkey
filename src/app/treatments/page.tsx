@@ -1,3 +1,4 @@
+import ProviderNotice from "@/components/ProviderNotice";
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
@@ -7,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments" },
   title: "Dental Treatments Turkey – UK Prices",
-  description: "Explore all dental treatments available in Turkey — veneers, dental implants, All-on-4, smile makeovers and more. Save up to 70% vs UK prices.",
+  description: "Explore all dental treatments available in Turkey — veneers, dental implants, All-on-4, smile makeovers and more. Save up to 90% vs UK prices.",
 };
 
 const treatments = [
@@ -24,12 +25,13 @@ export default function TreatmentsPage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Treatments in Turkey</h1>
-          <p className="text-xl text-blue-200">World-class dental care at up to 70% less than UK prices</p>
+          <p className="text-xl text-blue-200">Dental treatment in Turkey at up to 90% less than UK private prices</p>
         </div>
       </div>
 
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ProviderNotice className="mb-8" />
           <div className="space-y-4 text-gray-600 leading-relaxed mb-10">
             <p>
               The right treatment depends on what you want to fix. Veneers change the shape, colour and alignment of teeth that are still structurally sound. Dental implants replace missing teeth, and All-on-4 or All-on-6 restore a full arch when most teeth are failing or missing. A full smile makeover combines several of these in one trip.
