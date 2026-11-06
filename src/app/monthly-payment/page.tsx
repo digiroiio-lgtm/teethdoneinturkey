@@ -205,7 +205,7 @@ export default function MonthlyPaymentPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Cost of Dental Treatment in Turkey</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Turkish dental treatment is often <strong>65–82% cheaper</strong> than equivalent UK private prices, which is why some patients find it easier to pay in full or to borrow a smaller amount. A full smile makeover that would cost £16,000–£20,000 in the UK is priced from £3,800 in Turkey. Prices and what is included vary by clinic and treatment plan.
+              Turkish dental treatment is often <strong>70–90% cheaper</strong> than equivalent UK private prices, which is why some patients find it easier to pay in full or to borrow a smaller amount. A full smile makeover that would cost £16,000–£20,000 in the UK is priced from £3,800 in Turkey. Prices and what is included vary by clinic and treatment plan.
             </p>
             <Link href="/teeth-done-in-turkey-guide" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Read our complete Turkey dental guide</Link>
           </div>

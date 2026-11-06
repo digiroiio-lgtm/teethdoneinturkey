@@ -23,7 +23,7 @@ export default function WhyChooseTurkeyPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <p className="text-lg text-gray-700 leading-relaxed">
-            Turkey has become the world&apos;s leading destination for dental tourism — and for good reason. UK patients are saving between 60–80% on treatments like veneers, dental implants, and full smile makeovers, while receiving care from highly trained dentists in state-of-the-art clinics. Here is an honest, detailed look at why Turkey has earned its reputation.
+            Turkey has become the world&apos;s leading destination for dental tourism — and for good reason. UK patients are saving roughly 70–90% on treatments like veneers, dental implants, and full smile makeovers, while receiving care from highly trained dentists in state-of-the-art clinics. Here is an honest, detailed look at why Turkey has earned its reputation.
           </p>
 
           <div>
@@ -92,9 +92,9 @@ export default function WhyChooseTurkeyPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. JCI-Accredited Clinics</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Check Accreditation</h2>
             <p className="text-gray-600">
-              JCI (Joint Commission International) accreditation is the global gold standard for healthcare quality and patient safety — and many of Turkey&apos;s leading dental clinics hold it. This accreditation involves rigorous independent assessment of clinical protocols, infection control, patient safety practices, and outcomes data. It is the same standard used to assess hospitals in the USA, UK, and across Europe.
+              JCI (Joint Commission International) is an international healthcare accreditation body, and some Turkish hospitals and clinics hold its accreditation. Its assessment covers clinical protocols, infection control and patient safety practices. Not every clinic is accredited, so ask for current certificates, such as JCI or Turkish Ministry of Health authorisation, and verify them yourself.
             </p>
           </div>
 

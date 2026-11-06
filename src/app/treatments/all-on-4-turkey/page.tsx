@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import ProviderNotice from "@/components/ProviderNotice";
 
 export const revalidate = 86400;
 
@@ -71,6 +72,7 @@ export default function AllOn4Page() {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <ProviderNotice />
           {/* Price comparison */}
           <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
             <h2 className="text-xl font-bold text-gray-900 mb-4">All-on-4 Cost: UK vs Turkey</h2>

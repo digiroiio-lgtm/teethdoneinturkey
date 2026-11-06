@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import ProviderNotice from "@/components/ProviderNotice";
 
 export const revalidate = 86400;
 
@@ -16,7 +17,7 @@ const faqs = [
   { question: "What's included in a smile makeover?", answer: "A smile makeover is entirely bespoke. Most packages include porcelain veneers (typically 16–20 teeth), teeth whitening, gum contouring, and any crown work needed to complete the look. Your dentist designs the plan after a digital smile design consultation and photo assessment." },
   { question: "How long does a smile makeover take in Turkey?", answer: "A typical full smile makeover takes 6–8 days: Day 1 is your consultation and digital smile preview, Days 2–3 for tooth preparation and temporaries, Days 4–5 for the lab to craft your veneers, and Days 6–7 for fitting and final adjustments before you fly home with your new smile." },
   { question: "Can I see my new smile before treatment starts?", answer: "Yes. Digital Smile Design (DSD) software creates a high-resolution 3D preview of your proposed smile before any preparation begins. You can request adjustments until you are 100% happy." },
-  { question: "How long do smile makeover results last?", answer: "E-max porcelain veneers — the most common component — typically last 10–15 years with proper care. All partner clinics include a 10-year structural guarantee. Teeth whitening results typically last 2–3 years before a top-up is needed." },
+  { question: "How long do smile makeover results last?", answer: "E-max porcelain veneers — the most common component — typically last 10–15 years with proper care. Our partner clinic provides a written structural guarantee (10 years on veneer work, with the terms set out in your treatment plan). Teeth whitening results typically last 2–3 years before a top-up is needed." },
   { question: "Can I pay monthly for a smile makeover?", answer: "Some patients do, using credit arranged in the UK. Borrowing is optional, approval is the lender\'s decision and is never guaranteed, and the monthly payment depends on the offer you receive, so we do not publish monthly figures." },
 ];
 
@@ -71,6 +72,7 @@ export default function SmileMakeoverPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <ProviderNotice />
           {/* Price comparison */}
           <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Smile Makeover Cost: UK vs Turkey</h2>

@@ -7,6 +7,7 @@ import PriceTable from "@/components/PriceTable";
 import TestimonialCard from "@/components/TestimonialCard";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import ProviderNotice from "@/components/ProviderNotice";
 import SmileGallery from "@/components/SmileGallery";
 import Link from "next/link";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
@@ -157,6 +158,10 @@ export default function HomePage() {
           reviewerHref={REVIEWER_HREF}
           reviewedDate={LAST_REVIEWED_LABEL}
         />
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 bg-white">
+        <ProviderNotice />
       </div>
 
       {/* Treatment Cards */}

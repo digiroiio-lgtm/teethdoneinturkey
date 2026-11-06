@@ -3,17 +3,18 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import ProviderNotice from "@/components/ProviderNotice";
 
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/treatments/dental-implants-turkey" },
   title: "Dental Implants Turkey – From £250",
-  description: "Get permanent dental implants in Turkey from £250. Same Straumann and Nobel Biocare brands as UK at 90% less. JCI clinics, 10-year guarantee.",
+  description: "Dental implants in Turkey from £250, about 75–90% less than UK private prices depending on the implant brand. Written clinic guarantee and UK aftercare support.",
 };
 
 const faqs = [
-  { question: "Are dental implants in Turkey safe?", answer: "Yes. Our partner clinics use premium implant systems (Straumann, Nobel Biocare) and follow the same surgical protocols as UK clinics. All clinics are JCI-accredited or Ministry of Health certified." },
+  { question: "Are dental implants in Turkey safe?", answer: "Implant treatment carries risks anywhere, and safety depends on the clinic, the dentist and your own case. Your written plan should name the implant system (for example Osstem, Straumann or Nobel Biocare), the treating dentist and the guarantee. Ask the clinic for its current accreditation or Ministry of Health authorisation certificates before you pay a deposit." },
   { question: "How many trips do I need to Turkey for implants?", answer: "Usually two trips. The first (3–5 days) is for implant placement. After 3–6 months of osseointegration, you return for the crown fitting (3–4 days). Some cases with good bone density can be done as a single trip." },
   { question: "What brands of implants are used?", answer: "Our partner clinics use Straumann, Nobel Biocare, Astra Tech, and other premium implant brands — the same systems used in top UK practices." },
   { question: "How long do dental implants last?", answer: "With proper care, implants can last a lifetime. The crown on top may need replacing after 15–20 years. Our clinics offer a 10-year guarantee on implant work." },
@@ -58,7 +59,7 @@ export default function DentalImplantsTurkeyPage() {
             <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Treatments", href: "/treatments" }, { label: "Dental Implants" }]} />
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Dental Implants Turkey – From £250</h1>
-          <p className="text-xl text-blue-200 mb-2">Permanent tooth replacement using premium Straumann & Nobel Biocare implants</p>
+          <p className="text-xl text-blue-200 mb-2">Permanent tooth replacement: Osstem implants from £250, or Straumann and Nobel Biocare premium brands up to about £600</p>
           <p className="mb-6 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
@@ -69,6 +70,7 @@ export default function DentalImplantsTurkeyPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <ProviderNotice />
           <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Implant Cost: UK vs Turkey</h2>
             <div className="grid grid-cols-2 gap-4">
@@ -80,6 +82,7 @@ export default function DentalImplantsTurkeyPage() {
                 <p className="text-sm text-gray-500 mb-1">Turkey Price (per implant)</p>
                 <p className="text-3xl font-extrabold text-green-600">£250–£600</p>
                 <p className="text-xs text-green-600 font-semibold">Depends on implant brand</p>
+                <p className="text-xs text-green-700 mt-1">About 76–90% less than the UK price shown</p>
               </div>
             </div>
           </div>

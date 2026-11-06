@@ -77,7 +77,7 @@ export default function RisksTurkeyTeethPage() {
 
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
             <p className="font-semibold text-gray-900 mb-2">We&apos;ve done the risk assessment for you</p>
-            <p className="text-gray-600 text-sm mb-4">Every clinic we partner with has been personally visited and vetted against our strict quality criteria. We don&apos;t recommend any clinic we wouldn&apos;t send our own family to.</p>
+            <p className="text-gray-600 text-sm mb-4">We coordinate treatment with our partner clinic, Akdeniz Dental Clinic in Antalya. Check any clinic&apos;s credentials yourself with the list above, and ask for the treating dentist&apos;s name, its accreditation certificates and a written plan before you pay a deposit.</p>
             <div className="flex flex-wrap gap-3">
               <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-5 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-colors text-sm">Book Free Consultation</Link>
               <Link href="/blog/is-it-safe-to-get-teeth-done-in-turkey" className="inline-block border border-[#1e40af] text-[#1e40af] px-5 py-2.5 rounded-xl font-bold hover:bg-blue-50 transition-colors text-sm">Safety Guide</Link>

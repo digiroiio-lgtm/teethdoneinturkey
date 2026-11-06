@@ -41,7 +41,7 @@ export default function FinanceImplantsPage() {
           <p>Dental implants are life-changing — but even at significantly reduced Turkish prices, a full mouth restoration represents a substantial investment. Some patients spread the cost with credit arranged in the UK. Borrowing is optional and approval is the lender&apos;s decision.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Finance Turkey Implants?</h2>
-          <p>Even after the dramatic savings from having implants in Turkey (typically 70–80% less than UK prices), some treatments — particularly All-on-4 or All-on-6 full arch restorations — involve costs of £4,500–£11,000. Whether to borrow, and how much, is worth thinking through carefully.</p>
+          <p>Even after the dramatic savings from having implants in Turkey (typically 70–90% less than UK prices), some treatments — particularly All-on-4 or All-on-6 full arch restorations — involve costs of £4,500–£11,000. Whether to borrow, and how much, is worth thinking through carefully.</p>
           <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200 my-4">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-sm">
               {[

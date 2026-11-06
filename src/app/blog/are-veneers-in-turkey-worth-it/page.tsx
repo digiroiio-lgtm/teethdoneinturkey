@@ -51,7 +51,7 @@ export default function AreVeneersWorthItPage() {
             <li>The same Ivoclar E-max material is used in both countries</li>
             <li>Turkish ceramist technicians are often highly specialised — many have years of experience with high-volume aesthetic work</li>
             <li>Digital Smile Design technology eliminates aesthetic guesswork</li>
-            <li>JCI-accredited clinics follow the same sterilisation and procedural standards as NHS-approved UK facilities</li>
+            <li>Check the clinic&apos;s current accreditation (such as JCI) or Ministry of Health authorisation and ask about its sterilisation and infection-control procedures</li>
             <li>UK dentists, when examining Turkey veneer work by top clinics, consistently rate it as high quality</li>
           </ul>
           <p>The caveat is clinic selection. Not every clinic in Turkey is equal — just as not every UK dentist delivers the same standard of cosmetic work. The difference is choosing correctly, which is why using a reputable co-ordinator who has vetted clinics personally matters.</p>

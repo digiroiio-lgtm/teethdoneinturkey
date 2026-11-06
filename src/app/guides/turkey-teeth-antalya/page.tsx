@@ -149,7 +149,7 @@ export default function TurkeyTeethAntalyaPage() {
             Antalya has been the primary destination for UK dental patients in Turkey for over fifteen years, and the infrastructure reflects it. Clinics here are structured for international patients — English-speaking coordinators, established hotel partnerships, airport pickup services, and treatment scheduling designed around a 5–7 day stay. Istanbul has more clinics overall but Antalya has more clinics with direct experience of UK patient needs, communication preferences and aftercare expectations.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The pricing advantage is substantial: the same E-max porcelain veneers and Straumann or Nobel Biocare implants used in UK private practices cost 65–80% less in Antalya, not because the materials are different but because Turkish clinic overheads and cost of living are significantly lower. For full treatment prices, see the{" "}
+            The pricing advantage is substantial: the same E-max porcelain veneers and Straumann or Nobel Biocare implants used in UK private practices cost roughly 70–90% less in Antalya, not because the materials are different but because Turkish clinic overheads and cost of living are significantly lower. For full treatment prices, see the{" "}
             <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth cost guide</Link>.
           </p>
 

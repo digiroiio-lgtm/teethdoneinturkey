@@ -23,7 +23,7 @@ const schema = {
 };
 
 const faqs = [
-  { question: "Is it worth getting teeth done in Turkey?", answer: "For most UK patients, yes. You save 70–80% on dental costs while receiving the same brand materials and highly skilled dentists. The savings on a full smile makeover alone can exceed £15,000." },
+  { question: "Is it worth getting teeth done in Turkey?", answer: "For most UK patients, yes. You can save roughly 70–90% on dental costs while receiving the same brand materials and highly skilled dentists. The savings on a full smile makeover alone can exceed £15,000." },
   { question: "How much can I save getting teeth done in Turkey?", answer: "The average UK patient saves between £3,000 and £15,000 depending on the treatment. Veneers cost from £190/tooth in Turkey vs £900+ in the UK. Implants from £250 vs £2,500 in the UK." },
   { question: "How do I choose a safe clinic in Turkey?", answer: "Look for JCI accreditation or Turkish Ministry of Health certification, verified reviews on Google or Trustpilot, confirmed brand-name materials (Straumann, Nobel Biocare, Ivoclar E-max), and a written guarantee." },
   { question: "Do I need multiple trips to Turkey for dental treatment?", answer: "For veneers: typically one trip of 5–7 days. For implants: two trips (implant placement, then crown fitting 3–6 months later). All-on-4/6: one trip of 5–7 days for the initial phase." },
@@ -60,8 +60,8 @@ export default function TeethDoneInTurkeyGuidePage() {
 
       <div className="bg-blue-50 border-y border-blue-200 py-4">
         <div className="max-w-4xl mx-auto px-4 flex flex-wrap justify-center gap-6 text-sm text-blue-800 font-medium">
-          <span>✓ JCI-Accredited Clinics</span>
-          <span>✓ Save Up to 70%</span>
+          <span>✓ Named Antalya Partner Clinic</span>
+          <span>✓ Save Up to 90%</span>
           <span>✓ English-Speaking Dentists</span>
           <span>✓ 10-Year Guarantee</span>
           <span>✓ Monthly Payment Available</span>
@@ -97,12 +97,12 @@ export default function TeethDoneInTurkeyGuidePage() {
               Turkey has become the world&apos;s number one dental tourism destination for UK patients — and for good reason. Over 500,000 international patients travel to Turkey for dental work each year, drawn by a combination of world-class quality and dramatically lower prices.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
-              The savings are substantial: dental treatment in Turkey costs 60–80% less than in the UK, while the quality of care — the brands of materials used, the technology in the clinics, and the expertise of the dentists — is genuinely equivalent to the best private practices in London or Manchester.
+              The savings are substantial: dental treatment in Turkey costs roughly 70–90% less than in the UK, while the quality of care — the brands of materials used, the technology in the clinics, and the expertise of the dentists — is genuinely equivalent to the best private practices in London or Manchester.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { icon: "💰", title: "Save Up to 70–90%", desc: "Veneers from £190/tooth. Implants from £250. Full smile makeovers from £2,800." },
-                { icon: "🏥", title: "World-Class Clinics", desc: "JCI-accredited clinics with digital dentistry, same-day labs, and state-of-the-art equipment." },
+                { icon: "🏥", title: "Named Partner Clinic", desc: "Akdeniz Dental Clinic in Antalya. Facilities and services are set out in your written treatment plan." },
                 { icon: "🦷", title: "Same Brand Materials", desc: "Ivoclar E-max veneers, Straumann implants, Nobel Biocare — same as top UK practices." },
                 { icon: "🌍", title: "Expert Dentists", desc: "Many Turkish dentists trained in Europe or the USA with specialist aesthetic certifications." },
                 { icon: "🗓️", title: "No Waiting Lists", desc: "Appointments within days. Compare to months or years on UK NHS waiting lists." },
@@ -185,18 +185,18 @@ export default function TeethDoneInTurkeyGuidePage() {
           <section id="safety">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Is It Safe to Get Teeth Done in Turkey?</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              The short answer is: <strong>yes — provided you choose the right clinic</strong>. Turkey&apos;s leading dental clinics hold JCI (Joint Commission International) accreditation, the same global healthcare standard used by NHS-approved facilities. The Turkish Ministry of Health also strictly regulates dental practices.
+              The short answer is: <strong>yes — provided you choose the right clinic</strong>. Some Turkish hospitals and clinics hold JCI (Joint Commission International) accreditation, an international healthcare quality standard, and the Turkish Ministry of Health regulates dental practices. Standards still vary by clinic, so check each one.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
               Many Turkish dentists have trained in Germany, the UK, Italy, or the USA, and hold international specialist certifications. The risk is not in Turkey itself — it is in choosing a clinic based solely on the lowest price without checking credentials.
             </p>
             <div className="bg-green-50 rounded-2xl p-5 border border-green-200 mb-4">
-              <h3 className="font-bold text-gray-900 mb-3">How We Keep You Safe</h3>
+              <h3 className="font-bold text-gray-900 mb-3">How to Protect Yourself</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 {[
-                  "We only partner with JCI-accredited or Ministry of Health-certified clinics",
-                  "Every clinic has been personally visited and vetted by our team",
-                  "All clinics use premium brand-name materials (Straumann, Ivoclar, Nobel Biocare)",
+                  "Ask the clinic for its current accreditation or Ministry of Health authorisation certificates and verify them",
+                  "We coordinate treatment with one named partner clinic, Akdeniz Dental Clinic in Antalya",
+                  "Your written plan names the materials and brands to be used, so you can compare them",
                   "Written treatment plan and guarantee provided before any work begins",
                   "UK-based aftercare support for your entire recovery",
                   "10-year structural guarantees on all veneers and implant work",
@@ -322,7 +322,7 @@ export default function TeethDoneInTurkeyGuidePage() {
 
       <CTASection
         title="Start Your Smile Journey Today"
-        subtitle="Get a free, personalised treatment plan within 24 hours. No obligation. Join thousands of UK patients who've saved up to 70% on premium dental care in Turkey."
+        subtitle="Get a free, personalised treatment plan within 24 hours. No obligation. Join thousands of UK patients who've saved up to 90% on dental care in Turkey."
         buttonText="Book Free Consultation"
         buttonHref="/book-consultation"
         whatsapp={true}

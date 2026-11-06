@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     question: "I can't afford a private dentist in the UK. What are my options?",
-    answer: "Start by checking whether the treatment you need is covered by the NHS, since NHS charges are fixed and far lower than private fees. If it isn't (cosmetic work such as veneers usually isn't), the next options are a dental payment plan or finance arrangement to spread the private cost, choosing a less expensive material or a phased treatment plan, or looking at treatment abroad, which can cost 65 to 90 percent less than the same UK private treatment for the same materials and brands.",
+    answer: "Start by checking whether the treatment you need is covered by the NHS, since NHS charges are fixed and far lower than private fees. If it isn't (cosmetic work such as veneers usually isn't), the next options are a dental payment plan or finance arrangement to spread the private cost, choosing a less expensive material or a phased treatment plan, or looking at treatment abroad, which can cost 70 to 90 percent less than the same UK private treatment for the same materials and brands.",
   },
   {
     question: "Can the NHS help with the cost of dental treatment?",
@@ -87,7 +87,7 @@ const faqs = [
   },
   {
     question: "Is getting dental treatment abroad actually cheaper, or just cheaper looking?",
-    answer: "Based on the price comparisons published across this site, treatment in Turkey using the same implant and veneer brands used in UK practices (Straumann, Nobel Biocare, Ivoclar E-max) typically costs 65 to 90 percent less than the equivalent UK private price, even after adding flights and accommodation. The saving reflects lower clinic overheads and cost of living in Turkey, not lower-quality materials.",
+    answer: "Based on the price comparisons published across this site, treatment in Turkey using the same implant and veneer brands used in UK practices (Straumann, Nobel Biocare, Ivoclar E-max) typically costs 70 to 90 percent less than the equivalent UK private price, even after adding flights and accommodation. The saving reflects lower clinic overheads and cost of living in Turkey, not lower-quality materials.",
   },
 ];
 
@@ -142,7 +142,7 @@ export default function CantAffordDentalTreatmentUKPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: Dental Treatment You Can&apos;t Afford</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
-            If your treatment is covered by the NHS, it will cost a fixed £27.90, £76.60 or £306.80 (England, from 1 April 2026), whatever the private price would have been. If it isn&apos;t covered, such as veneers or cosmetic work, your realistic options are a payment plan or dental finance to spread a UK private quote, a lower cost material or phased plan, or treatment abroad, where the same materials and implant brands used in the UK typically cost 65 to 90 percent less. Most people end up combining two of these: a payment plan plus a lower cost provider.
+            If your treatment is covered by the NHS, it will cost a fixed £27.90, £76.60 or £306.80 (England, from 1 April 2026), whatever the private price would have been. If it isn&apos;t covered, such as veneers or cosmetic work, your realistic options are a payment plan or dental finance to spread a UK private quote, a lower cost material or phased plan, or treatment abroad, where the same materials and implant brands used in the UK typically cost 70 to 90 percent less. Most people end up combining two of these: a payment plan plus a lower cost provider.
           </p>
 
           <GuideTOC items={toc} />
@@ -152,7 +152,7 @@ export default function CantAffordDentalTreatmentUKPage() {
               "NHS charges in England are fixed at £27.90, £76.60 or £306.80 per course of treatment (from 1 April 2026), but veneers, whitening and (in almost all cases) implants are not covered.",
               "UK private dental prices for implants and veneers are frequently several times the NHS charge, which is why payment plans and finance exist for private work.",
               "Payment plans and other credit are one way to spread a UK-priced quote or a Turkey treatment plan, but borrowing is optional and has costs.",
-              "The same implant and veneer brands used in UK practices are typically 65 to 90 percent cheaper in Turkey, even after flights and accommodation.",
+              "The same implant and veneer brands used in UK practices are typically 70 to 90 percent cheaper in Turkey, even after flights and accommodation.",
               "No dental finance option should ever promise guaranteed approval. Ask which kind of check is used and whether it is recorded on your credit file.",
             ]}
           />

@@ -10,7 +10,7 @@ interface FAQItem {
 const defaultFaqs: FAQItem[] = [
   {
     question: 'Is it safe to get teeth done in Turkey?',
-    answer: 'Yes, Turkey has world-class JCI-accredited dental clinics with highly trained dentists, many of whom have trained or practised in Europe. The clinics use the same brand-name materials as UK practices (Straumann implants, Ivoclar veneers) and follow strict sterilisation protocols. Hundreds of thousands of international patients visit Turkey for dental work each year with excellent outcomes.',
+    answer: 'It can be, but standards vary by clinic and dentist. Turkey has many well-trained dentists and some clinics hold international accreditation, so check the treating dentist\'s credentials, the clinic\'s current accreditation or Ministry of Health authorisation, the materials named in your written plan and the guarantee terms before you book. Outcomes depend on the clinic and on your own case.',
   },
   {
     question: 'How much do veneers cost in Turkey?',
