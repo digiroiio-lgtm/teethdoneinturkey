@@ -265,3 +265,21 @@ Owner request: a five-photo "Smile Gallery" on the homepage, optimised and mobil
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-10-31 | / | Added Smile Gallery section (5 WebP before/after photos) | Original first-party imagery, visual proof for visitors | Better engagement and original-image signal; small page weight increase (about 125 KB, lazy loaded) |
+
+## 18. GA4-driven conversion work, code side (2026-11-06)
+
+GA4 (9 Oct – 5 Nov) showed: `/finance-options-uk` is the top landing page (Google 15, ChatGPT 15, direct 11 sessions); about 93% of UK sessions are on mobile; `/book-consultation` is the second most viewed page and ChatGPT and Google send people straight to it; the form converts well (14 users started, 11 submitted) so the gap is reaching the form; treatment pages are barely visited; `cta_click` fired 21 times and WhatsApp clicks were not tracked at all.
+
+Changes:
+- New `WhatsAppLink` fires GA4 `whatsapp_click` (placement, page path). Used on the finance page, the booking page and both floating WhatsApp entries.
+- `FloatingCTA`: the mobile bar's second button now reads "Free Treatment Plan" and goes to `/book-consultation` (it said "Get Quote" and went to the cost page); the round WhatsApp bubble is hidden on mobile (the bar already has WhatsApp); on `/book-consultation` and `/free-treatment-plan` the bar shows WhatsApp only.
+- `/finance-options-uk`: CTA row after the short-answer box ("Get a free treatment plan", "WhatsApp us a question", "Free and no obligation. Borrowing is optional; a written plan shows the treatment cost first.") and a "Treatments People Plan Around" link grid.
+- `/prices/turkey-teeth-cost`: "Treatment Guides" grid linking the five treatment pages (it linked to none).
+- `/book-consultation`: mobile-only "Prefer to talk? WhatsApp us" strip under the hero, a stand-alone sentence that Teeth Done in Turkey is a patient-coordination service and treatment is by the partner clinic, and the existing WhatsApp button converted to `WhatsAppLink`.
+- Separate commit: `ExploreKeyPages` (added by #65) had a 10-word opener, which failed `scripts/check-homepage-aeo.py` (needs 40–60 words) and turned CI red on `main` since #65; the opener is now 48 words.
+
+Events to watch in GA4: `cta_click` by `cta_label` ("Finance page: free treatment plan", "Mobile bar: free treatment plan"), `whatsapp_click` by `placement` (finance_top, mobile_bar, floating_bubble, booking_top, booking_side), then `form_start` and `generate_lead`. Compare 2–3 weeks against the 9 Oct – 5 Nov baseline above. Note the key-event configuration in GA4 still needs fixing by the owner (page_view and similar are flagged as key events; `generate_lead` is not).
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-06 | /finance-options-uk, /prices/turkey-teeth-cost, /book-consultation, mobile bar (all pages), / (opener fix) | CTA row, treatment link grids, tracked WhatsApp, mobile-bar CTA to the booking page | GA4: top landing page had one late CTA; mobile 93%; treatment pages under-discovered | More enquiries and form starts, measurable WhatsApp clicks |
