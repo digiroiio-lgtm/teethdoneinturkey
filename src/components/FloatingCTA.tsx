@@ -1,16 +1,22 @@
 'use client';
 
-import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import TrackedLink from '@/components/TrackedLink';
+import WhatsAppLink from '@/components/WhatsAppLink';
+
+// Pages that are already the enquiry page: the bar then shows WhatsApp only.
+const ENQUIRY_PATHS = ['/book-consultation', '/free-treatment-plan'];
 
 export default function FloatingCTA() {
+  const pathname = usePathname();
+  const onEnquiryPage = ENQUIRY_PATHS.includes(pathname);
+
   return (
     <>
       {/* Floating WhatsApp button - bottom right */}
-      <a
-        href="https://wa.me/905353998999"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-4 z-50 group flex items-center gap-2"
+      <WhatsAppLink
+        placement="floating_bubble"
+        className="fixed bottom-6 right-4 z-50 group hidden sm:flex items-center gap-2"
         aria-label="Chat on WhatsApp"
       >
         <span className="absolute inset-0 rounded-full bg-green-500 animate-pulse-ring" aria-hidden="true" />
@@ -20,24 +26,25 @@ export default function FloatingCTA() {
           </svg>
           <span className="hidden sm:inline text-sm font-semibold pr-1">WhatsApp</span>
         </span>
-      </a>
+      </WhatsAppLink>
 
       {/* Mobile bottom bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 flex shadow-[0_-4px_12px_rgba(0,0,0,0.06)]">
-        <a
-          href="https://wa.me/905353998999"
-          target="_blank"
-          rel="noopener noreferrer"
+        <WhatsAppLink
+          placement="mobile_bar"
           className="flex-1 bg-green-500 active:bg-green-600 text-white py-3 text-center text-sm font-semibold transition-colors"
         >
           💬 WhatsApp
-        </a>
-        <Link
-          href="/prices/turkey-teeth-cost"
-          className="flex-1 bg-[#1e40af] active:bg-blue-700 text-white py-3 text-center text-sm font-semibold transition-colors"
-        >
-          💰 Get Quote
-        </Link>
+        </WhatsAppLink>
+        {!onEnquiryPage && (
+          <TrackedLink
+            href="/book-consultation"
+            ctaLabel="Mobile bar: free treatment plan"
+            className="flex-1 bg-[#1e40af] active:bg-blue-700 text-white py-3 text-center text-sm font-semibold transition-colors"
+          >
+            📋 Free Treatment Plan
+          </TrackedLink>
+        )}
       </div>
     </>
   );

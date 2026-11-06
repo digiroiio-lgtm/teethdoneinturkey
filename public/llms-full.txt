@@ -63,7 +63,7 @@ Band 1: £27.90 (examination + X-ray). Band 2: £76.60 (fillings, root canal, ex
 ### FAQs
 
 Q: How much do teeth cost in Turkey?
-A: Individual treatments start from £130 for a zirconia crown, £190 for a porcelain (E-max) veneer, and £250 for a dental implant. Full packages start from £2,800 for a 20-crown Hollywood Smile and £5,600 for an All-on-6 full-arch implant package, both all-inclusive of hotel and transfers.
+A: Published starting prices are £130 per zirconia crown, £190 per E-max porcelain veneer and £250 for an Osstem implant with crown. Full packages start from £2,800 for a 20-crown Hollywood Smile and £5,600 for an All-on-6 full-arch implant package, both all-inclusive of hotel and transfers.
 
 Q: What does a full set of "turkey teeth" cost?
 A: The most common version is a 20-unit zirconia crown package at £2,800 all-inclusive of hotel and transfers, or £3,100 for 24 units. A full set of 20 E-max porcelain veneers is priced per tooth from £190, roughly £3,800 before travel. The equivalent UK private cost is £20,000–£30,000 for the crown package.
@@ -188,11 +188,11 @@ A: Yes. Partner clinics use the same Ivoclar E-max and Vita porcelain materials 
 
 URL: https://www.teethdoneinturkey.co.uk/treatments/dental-implants-turkey
 Title: Dental Implants Turkey – From £250
-Description: Dental implants in Turkey from £250, about 75–90% less than UK private prices depending on the implant brand. Written clinic guarantee and UK aftercare support.
+Description: Indicative implant prices for UK patients, with brand and crown inclusions explained.
 
 ### Price Summary
-- UK Price (per implant): £2,500 typical private
-- Turkey Price (per implant): £250 to about £600 depending on brand — about 76–90% less than the £2,500 UK price
+- UK private price example (single implant with crown): £2,000–£3,000
+- Turkey (single implant with crown): Osstem from £250; premium options such as Straumann up to about £600
 
 ### What Are Dental Implants?
 A dental implant is a titanium post surgically placed into the jawbone to act as an artificial tooth root. Once healed (osseointegrated), a crown is attached to create a natural-looking, fully functional replacement tooth. Unlike dentures, implants are permanent and don't require removal.

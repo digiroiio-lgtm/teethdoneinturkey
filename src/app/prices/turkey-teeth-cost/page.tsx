@@ -16,12 +16,9 @@ const PAGE_URL = `${SITE_URL}/prices/turkey-teeth-cost`;
 const TITLE = "How Much Do Turkey Teeth Cost? 2026 UK Price Guide";
 const H1 = "How Much Do Turkey Teeth Cost? 2026 Price Guide for UK Patients";
 const DESCRIPTION =
-  "Turkey teeth cost from £130 per tooth. 2026 prices in pounds for veneers, crowns, implants and full-mouth packages, with UK comparison and finance.";
+  "Turkey teeth prices start at £130 per crown, £190 per veneer and £250 for an Osstem implant with crown. Compare full packages and travel costs for UK patients.";
 const DATE_PUBLISHED = "2026-09-03";
-// Content last revised 2026-09-08. The 2026-09-11 change moved this page from
-// /guides/turkey-teeth-cost to this URL without altering the substance, so the
-// modified date is deliberately not bumped.
-const DATE_MODIFIED = "2026-09-08";
+const DATE_MODIFIED = "2026-11-04";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/turkey-teeth-cost" },
@@ -49,7 +46,7 @@ const toc = [
 const faqs = [
   {
     question: "How much do teeth cost in Turkey?",
-    answer: "Individual treatments on this site start from £130 for a zirconia crown, £190 for a porcelain (E-max) veneer, and £250 for a dental implant. Full packages start from £2,800 for a 20-crown Hollywood Smile and £5,600 for an All-on-6 full-arch implant package, both all-inclusive of hotel and transfers. Your own price depends on which treatment, how many teeth, and which materials you choose.",
+    answer: "Published starting prices are £130 per zirconia crown, £190 per E-max porcelain veneer and £250 for an Osstem implant with crown. Full packages start from £2,800 for a 20-crown Hollywood Smile and £5,600 for an All-on-6 full-arch implant package, both all-inclusive of hotel and transfers. Your own price depends on which treatment, how many teeth, and which materials you choose.",
   },
   {
     question: "What does a full set of “turkey teeth” cost?",
@@ -61,7 +58,7 @@ const faqs = [
   },
   {
     question: "Is dental treatment in Turkey really cheaper than the UK?",
-    answer: "Yes, based on the price comparisons published across this site — most individual treatments and packages show a 70–90% saving versus equivalent UK private dental prices. This reflects lower clinic overheads, staff costs and cost of living in Turkey, not lower-quality materials or less qualified dentists.",
+    answer: "The examples in this guide show lower published treatment prices in Turkey than the UK private prices used for comparison. The difference depends on the procedure and what each quote includes. Compare the same treatment, materials, travel and aftercare costs.",
   },
   {
     question: "Do Turkey teeth packages include hotel and flights?",
@@ -151,7 +148,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="quick-answer" className="text-xl font-bold text-gray-900 mt-6 mb-2 scroll-mt-24">Quick Answer: How Much Do Teeth Cost in Turkey?</h2>
           <p className="text-gray-700 leading-relaxed mb-6 bg-blue-50/60 border border-blue-100 rounded-xl p-4">
-            Individual treatments in Turkey typically start from £130 for a zirconia crown, £190 for a porcelain veneer, and £250 for a dental implant. All-inclusive packages (hotel and transfers included) start from around £2,800. UK private-dentistry prices for the same treatments are typically 70–90% higher. Exact cost depends on the treatment, materials, and number of teeth involved. For two worked examples that add flights, see{" "}
+            Published starting prices are £130 per zirconia crown, £190 per E-max porcelain veneer and £250 for an Osstem implant with crown. A 20-crown zirconia package starts at £2,800 including hotel and transfers. These are indicative starting prices. Your total depends on the number of teeth, the materials and any additional treatment. Flights are separate. For two worked examples, see{" "}
             <a href="#total-cost" className="text-[#1e40af] font-semibold hover:underline">what a UK patient actually pays in total</a>.
           </p>
 
@@ -210,7 +207,7 @@ export default function TurkeyTeethCostPricePage() {
             </table>
           </div>
           <p className="text-xs text-gray-500 mb-4">
-            Figures shown are the ones consistently used across this site&apos;s own price pages as of {DATE_MODIFIED}. See{" "}
+            Figures shown are the ones consistently used across this site&apos;s own price pages at the time of price verification. See{" "}
             <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] hover:underline">the full price guide</Link>{" "}
             for package-specific detail and payment breakdowns.
           </p>
@@ -302,7 +299,7 @@ export default function TurkeyTeethCostPricePage() {
 
           <h2 id="uk-vs-turkey" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">UK vs Turkey Comparison</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Across every treatment compared on this site, Turkey pricing is consistently 70–90% lower than equivalent UK private dental prices. The gap reflects lower clinic overheads, staff costs and general cost of living in Turkey — not lower-quality materials, since the same international implant and veneer brands used in UK practices (Straumann, Nobel Biocare, Ivoclar E-max) are used by partner clinics in Turkey.
+            Compare like-for-like written quotes, including the implant brand or crown material, the number of teeth, any extra procedures and aftercare. Add flights and any separate accommodation or transfers to the Turkey quote before comparing the total with a UK private quote.
           </p>
 
           <h2 id="why-cheaper" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Why Is Dental Treatment Cheaper in Turkey?</h2>
@@ -349,6 +346,17 @@ export default function TurkeyTeethCostPricePage() {
             { label: "NHS — Going abroad for dental care", href: "https://www.nhs.uk/live-well/seasonal-health/going-abroad-for-dental-care/" },
             { label: "USHAŞ — Turkey Health Tourism Authority", href: "https://ushas.gov.tr/" },
             { label: "T.C. Sağlık Bakanlığı — Turkish Ministry of Health", href: "https://www.saglik.gov.tr/" },
+          ]}
+        />
+
+        <RelatedLinksGrid
+          title="Treatment Guides"
+          links={[
+            { title: "Dental Implants in Turkey", desc: "Procedure, typical stay and a UK price comparison.", href: "/treatments/dental-implants-turkey" },
+            { title: "Veneers in Turkey", desc: "Materials, process and a UK price comparison.", href: "/treatments/veneers-turkey" },
+            { title: "All-on-4 Implants", desc: "Full-arch treatment, typical stay and a UK price comparison.", href: "/treatments/all-on-4-turkey" },
+            { title: "Full Smile Makeover", desc: "What a combined plan can include and how it is priced.", href: "/treatments/full-smile-makeover-turkey" },
+            { title: "All-on-6 Implants", desc: "Full-arch treatment on six implants, typical stay and a UK price comparison.", href: "/treatments/all-on-6-turkey" },
           ]}
         />
 

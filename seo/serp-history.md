@@ -7,6 +7,14 @@ rewritten again.
 
 ---
 
+## 2026-11-04 (UK price answer and implant summary)
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-04 | `/prices/turkey-teeth-cost`, `llms.txt`, `llms-full.txt` | Clarify starting prices and package inclusions, qualify UK comparisons, align implant brand and crown details | Cost intent and inconsistent summaries | Clearer search snippets and more consistent answers |
+
+---
+
 ## 2026-10-29 (Straumann UK comparator aligned, owner decision)
 
 After capping Straumann at about £600, the paired UK comparator (£3,000–£4,500,
