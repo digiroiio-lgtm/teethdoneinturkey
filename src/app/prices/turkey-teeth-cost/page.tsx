@@ -13,10 +13,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/turkey-teeth-cost`;
-const TITLE = "How Much Do Turkey Teeth Cost? 2026 UK Price Guide";
+const TITLE = "How Much Are Turkey Teeth? 2026 Prices in £ for UK Patients";
 const H1 = "How Much Do Turkey Teeth Cost? 2026 Price Guide for UK Patients";
 const DESCRIPTION =
-  "Turkey teeth prices start at £130 per crown, £190 per veneer and £250 for an Osstem implant with crown. Compare full packages and travel costs for UK patients.";
+  "How much do Turkey teeth cost in 2026? Crowns from £130, veneers from £190 and implants from £250. Full-mouth package prices and travel costs for UK patients.";
 const DATE_PUBLISHED = "2026-09-03";
 const DATE_MODIFIED = "2026-11-04";
 
