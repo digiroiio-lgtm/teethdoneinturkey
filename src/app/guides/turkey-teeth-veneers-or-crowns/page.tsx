@@ -271,7 +271,7 @@ export default function TurkeyTeethVeneersOrCrownsPage() {
           </ul>
           <p className="text-gray-700 leading-relaxed mb-4">
             For reference, the packages on this site are labelled by what they actually are: our{" "}
-            <Link href="/prices/hollywood-smile-turkey-package" className="text-[#1e40af] font-semibold hover:underline">Hollywood Smile packages</Link>{" "}
+            <Link href="/blog/hollywood-smile-turkey-cost#package-breakdown" className="text-[#1e40af] font-semibold hover:underline">Hollywood Smile packages</Link>{" "}
             are described as zirconia <em>crown</em> packages, while{" "}
             <Link href="/treatments/veneers-turkey" className="text-[#1e40af] font-semibold hover:underline">E-max veneer treatment</Link>{" "}
             is priced and described separately.

@@ -19,6 +19,10 @@ const faqs = [
     answer: "A Hollywood smile with 20 zirconia crowns starts at £2,800 in Turkey and a 24-crown package with Digital Smile Design is £3,100, both including hotel and VIP transfers. Individual zirconia crowns are £130 per tooth. The UK private equivalent for 20 zirconia crowns is £15,000 or more. Prices checked 29 October 2026 and confirmed in your personalised quote.",
   },
   {
+    question: "What is the difference between the 20-crown and 24-crown packages?",
+    answer: "The 20-crown package covers the upper arch and the front lower teeth, which suits patients whose back lower teeth are less visible. The 24-crown package covers more of the visible upper and lower teeth and adds Digital Smile Design and a professional clean. Both include hotel nights and VIP airport transfers; the exact number of nights is set out in your written quote. Your dentist confirms how many crowns you actually need after reviewing your photos and X-rays.",
+  },
+  {
     question: "Is a Hollywood smile made of veneers or crowns?",
     answer: "The term is not a single procedure. The packages on this page use zirconia crowns, which cover the whole tooth. Some clinics use veneers instead, which need less enamel removed. Ask your dentist which is clinically suitable for your teeth before you choose on price alone.",
   },
@@ -46,7 +50,7 @@ export default function HollywoodSmilePage() {
         headline="Hollywood Smile Turkey Cost 2026"
         description="How much does a Hollywood Smile cost in Turkey for UK patients? Full cost breakdown for zirconia crown packages, what's included, and how to get a naturally glamorous result."
         datePublished="2026-01-01"
-        dateModified="2026-10-29"
+        dateModified="2026-11-08"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -58,7 +62,7 @@ export default function HollywoodSmilePage() {
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Treatments</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Hollywood Smile Turkey Cost 2026 – UK Patient Guide</h1>
-          <p className="text-gray-500 text-sm">Published January 2026 · Last updated 29 October 2026 · 6 min read</p>
+          <p className="text-gray-500 text-sm">Published January 2026 · Last updated 8 November 2026 · 6 min read</p>
           <MedicalReviewBadge />
         </div>
 
@@ -92,7 +96,7 @@ export default function HollywoodSmilePage() {
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Hollywood Smile Package Breakdown</h2>
+          <h2 id="package-breakdown" className="text-2xl font-bold text-gray-900 mt-8 mb-4 scroll-mt-24">Hollywood Smile Package Breakdown</h2>
           <div className="overflow-x-auto rounded-2xl shadow-sm my-4">
             <table className="w-full bg-white text-sm">
               <thead>

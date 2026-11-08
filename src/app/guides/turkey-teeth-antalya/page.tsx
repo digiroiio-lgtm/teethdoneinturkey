@@ -246,7 +246,7 @@ export default function TurkeyTeethAntalyaPage() {
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             For a detailed breakdown of package inclusions for veneers specifically, see the{" "}
-            <Link href="/guides/veneers-turkey-packages" className="text-[#1e40af] font-semibold hover:underline">Veneers Turkey Packages guide</Link>. For generic package content across all treatments, see{" "}
+            <Link href="/prices/veneers-turkey-cost#veneer-packages" className="text-[#1e40af] font-semibold hover:underline">veneer packages section of our veneers cost guide</Link>. For generic package content across all treatments, see{" "}
             <Link href="/guides/turkey-teeth-packages" className="text-[#1e40af] font-semibold hover:underline">Turkey Teeth Packages: What Is Included</Link>.
           </p>
 

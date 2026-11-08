@@ -43,7 +43,7 @@ const treatments = [
     description: "A crown covers a prepared tooth, while a veneer covers its front surface. Ask the dentist which restoration is proposed for each tooth and why, rather than treating these names as interchangeable. Before agreeing to a full smile package, check the material, number of teeth, preparation involved and maintenance requirements. The starting price below is a planning figure; your written quote should specify the actual restoration and any additional treatment needed.",
     price: "From £130/tooth",
     ukPrice: "£900–£1,200/tooth",
-    href: "/prices/hollywood-smile-turkey-package",
+    href: "/blog/hollywood-smile-turkey-cost",
     icon: "👑",
   },
   {

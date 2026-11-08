@@ -328,7 +328,7 @@ export default function BestVeneersTurkeyPage() {
             { title: "Complete UK Patient Guide to Teeth in Turkey", desc: "Treatments, costs, safety, travel and finance — everything in one place.", href: "/guides/teeth-in-turkey" },
             { title: "Veneers Turkey Cost 2026", desc: "Per-tooth and full-set veneer prices in Turkey.", href: "/prices/veneers-turkey-cost" },
             { title: "Are Turkish Veneers Safe?", desc: "Risks, patient selection, lab quality and aftercare.", href: "/guides/turkish-veneers-safety" },
-            { title: "Veneers Turkey Packages", desc: "What a veneer package includes and full trip cost.", href: "/guides/veneers-turkey-packages" },
+            { title: "Turkey Teeth Packages", desc: "What a package includes and what you still budget for.", href: "/guides/turkey-teeth-packages" },
             { title: "Turkey Teeth: Veneers or Crowns?", desc: "The clinical difference and how much tooth is removed.", href: "/guides/turkey-teeth-veneers-or-crowns" },
           ]}
         />

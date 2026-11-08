@@ -61,6 +61,10 @@ const faqs = [
     a: "Many people pay a deposit and borrow the remainder, which reduces the amount borrowed. Whether that is available, and any minimum or maximum amount, depends on the lender.",
   },
   {
+    q: "Can I pay off a dental finance agreement early?",
+    a: "Many credit agreements allow early repayment, sometimes with a charge. The exact terms are in your written agreement, so check them before you sign.",
+  },
+  {
     q: "Is this a dental loan or a dental payment plan?",
     a: "The two terms are used loosely. A payment plan usually spreads the cost of one treatment in fixed instalments. A dental loan usually means a personal loan used for the same purpose. Either way, the interest, fees and terms are in the credit agreement, so read it before you sign.",
   },
