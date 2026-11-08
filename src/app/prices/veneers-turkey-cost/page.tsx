@@ -195,7 +195,7 @@ export default function VeneersCostPage() {
               At the 20 and 24-unit level, compare these clinical-only figures against the all-inclusive Hollywood Smile packages
               (£2,800 for 20 zirconia crowns, £3,100 for 24), which bundle hotel accommodation and VIP transfers into the price. For
               a full set, the package route is usually the cheaper way to buy the same crown work.{" "}
-              <Link href="/prices/hollywood-smile-turkey-package" className="text-[#1e40af] font-semibold underline">See the package breakdown</Link>.
+              <Link href="/blog/hollywood-smile-turkey-cost#package-breakdown" className="text-[#1e40af] font-semibold underline">See the package breakdown</Link>.
             </p>
           </div>
           <div>
@@ -260,6 +260,28 @@ export default function VeneersCostPage() {
           </div>
 
           <div>
+            <h2 id="veneer-packages" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">Veneer Packages: Treatment Price, Package Price and Total Trip</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">Three different numbers appear in Turkish veneer quotes, and mixing them up is the most common budgeting mistake:</p>
+            <ul className="space-y-2 text-gray-700 mb-4">
+              <li className="flex gap-2"><span className="text-[#1e40af] font-bold">→</span><span><strong>Treatment price:</strong> the dental work only (consultation, preparation, temporaries, lab work and fitting). This is the per-tooth price multiplied by the number of teeth.</span></li>
+              <li className="flex gap-2"><span className="text-[#1e40af] font-bold">→</span><span><strong>Package price:</strong> treatment plus hotel (usually 5 to 7 nights) and airport and clinic transfers. This typically adds about £400 to £700 to the treatment price.</span></li>
+              <li className="flex gap-2"><span className="text-[#1e40af] font-bold">→</span><span><strong>Total trip cost:</strong> the package plus flights, which no package includes, travel insurance and spending money. Budget on this figure, not the package headline.</span></li>
+            </ul>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Get these answers in writing before paying a deposit</h3>
+            <ol className="list-decimal pl-6 space-y-2 text-gray-700 mb-4">
+              <li>How many teeth are included, and is each one a veneer or a crown (for example &ldquo;20 E-max veneers&rdquo; or &ldquo;20 zirconia crowns&rdquo;)?</li>
+              <li>How many hotel nights are included, and the hotel&apos;s name? Extra nights are usually charged at the hotel&apos;s own rate.</li>
+              <li>Are airport transfers included in both directions?</li>
+              <li>Are temporary veneers and any scan you need included, or charged separately?</li>
+              <li>What happens if a veneer chips or comes off after you are home, and who is your UK point of contact?</li>
+            </ol>
+            <p className="text-gray-700 leading-relaxed">
+              Treat it as a red flag if inclusions are only confirmed verbally, if you are asked for a deposit before a written plan names the material, or if a very low per-tooth price comes with no material or lab named. For packages across all treatments, see the{" "}
+              <Link href="/guides/turkey-teeth-packages" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth packages guide</Link>.
+            </p>
+          </div>
+
+          <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Are You Being Quoted Veneers or Crowns?</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               This is the most important question on any veneer quote, and it changes the clinical outcome far more than the price does. A veneer is a thin shell bonded to the front of the tooth, removing roughly 0.3mm to 0.7mm. A crown covers the whole tooth and is prepared on every surface. Zirconia is a crown material, so a quote for zirconia units is crown work regardless of the wording used.
@@ -291,7 +313,7 @@ export default function VeneersCostPage() {
 
           <div className="flex gap-4 flex-wrap">
             <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get My Veneer Quote</Link>
-            <Link href="/prices/hollywood-smile-turkey-package" className="inline-block border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Hollywood Smile Packages</Link>
+            <Link href="/blog/hollywood-smile-turkey-cost#package-breakdown" className="inline-block border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Hollywood Smile Packages</Link>
             <Link href="/prices/turkey-teeth-cost" className="inline-block border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">Full Turkey Teeth Price Guide</Link>
           </div>
         </div>
@@ -307,7 +329,7 @@ export default function VeneersCostPage() {
             { href: "/guides/teeth-in-turkey", title: "Complete UK Patient Guide to Teeth in Turkey", desc: "Treatments, costs, safety and travel — the full picture." },
             { href: "/treatments/veneers-turkey", title: "Dental Veneers Turkey", desc: "E-max porcelain veneers from £190/tooth. Full guide." },
             { href: "/guides/turkey-teeth-veneers-or-crowns", title: "Veneers or Crowns in Turkey?", desc: "Which treatment is right for you — explained clearly." },
-            { href: "/guides/veneers-turkey-packages", title: "Veneers Turkey Packages: What Is Included?", desc: "Treatment-only vs package vs total trip cost, by tooth count." },
+            { href: "/guides/turkey-teeth-packages", title: "Turkey Teeth Packages: What Is Included?", desc: "Package price vs treatment price and what to check, across all treatments." },
           ].map(l => (
             <Link key={l.href} href={l.href} className="block bg-gray-50 hover:bg-blue-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 transition-colors">
               <p className="font-semibold text-gray-900 mb-1">{l.title}</p>

@@ -47,7 +47,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
         headline="Dental Implants Cost: UK vs Turkey 2026"
         description="Dental implant cost in Turkey vs UK: a single implant with crown is £250–£600 in Turkey by brand vs £2,000–£3,000 UK private. What is included and full-arch prices."
         datePublished="2026-04-01"
-        dateModified="2026-10-29"
+        dateModified="2026-11-08"
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },
@@ -59,7 +59,7 @@ export default function ImplantsCostUKvsTurkeyPage() {
         <div className="mb-8">
           <span className="inline-block bg-blue-100 text-[#1e40af] text-xs font-semibold px-2 py-0.5 rounded mb-3">Implants</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Dental Implants Cost: UK vs Turkey – 2026 Comparison</h1>
-          <p className="text-gray-500 text-sm">Published April 2026 · Last updated 29 October 2026 · 7 min read</p>
+          <p className="text-gray-500 text-sm">Published April 2026 · Last updated 8 November 2026 · 7 min read</p>
           <MedicalReviewBadge />
         </div>
 
@@ -180,6 +180,9 @@ export default function ImplantsCostUKvsTurkeyPage() {
             <li><strong>First visit (3–5 days):</strong> Assessment, CBCT scan, implant placement, temporary crown fitted before you fly home</li>
             <li><strong>Second visit (2–3 days, after 3–6 months):</strong> Permanent zirconia or porcelain crown fitted</li>
           </ol>
+          <p>
+            Budget for both trips, which matters most for a single implant. As a worked example, a premium-brand implant with crown at about £600, plus two short trips at roughly £200–£250 each for flights and hotel, comes to around £1,050 in total, against £2,000–£3,000 for the implant alone at a UK private clinic. Your own travel costs depend on dates and airport.
+          </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Paying Monthly for Implants in Turkey</h2>
           <p>

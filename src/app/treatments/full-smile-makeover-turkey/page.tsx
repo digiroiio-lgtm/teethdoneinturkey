@@ -64,7 +64,7 @@ export default function SmileMakeoverPage() {
           <p className="mb-6 text-sm text-blue-300/70">✓ Prices last verified: June 2026</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/book-consultation" className="bg-white text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Book Free Consultation</Link>
-            <Link href="/prices/hollywood-smile-turkey-package" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Package Prices</Link>
+            <Link href="/blog/hollywood-smile-turkey-cost#package-breakdown" className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">See Package Prices</Link>
           </div>
         </div>
       </div>
@@ -147,7 +147,7 @@ export default function SmileMakeoverPage() {
               {[
                 { title: "📘 Teeth in Turkey Guide", href: "/guides/teeth-in-turkey", desc: "The complete patient guide to treatments, safety and cost." },
                 { title: "Veneers Turkey", href: "/treatments/veneers-turkey", desc: "E-max porcelain veneers from £190 per tooth." },
-                { title: "Hollywood Smile Packages", href: "/prices/hollywood-smile-turkey-package", desc: "20 or 24 crown packages with hotel and transfers included." },
+                { title: "Hollywood Smile Packages", href: "/blog/hollywood-smile-turkey-cost", desc: "20 or 24 crown packages with hotel and transfers included." },
                 { title: "Veneers Cost Guide", href: "/prices/veneers-turkey-cost", desc: "Full UK vs Turkey price comparison for all veneer types." },
               ].map(item => (
                 <Link key={item.href} href={item.href} className="bg-blue-50 rounded-xl p-4 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition-colors block">

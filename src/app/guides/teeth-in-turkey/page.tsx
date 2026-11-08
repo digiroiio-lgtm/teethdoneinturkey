@@ -54,7 +54,7 @@ const toc = [
 
 const treatmentOverviewRows = [
   { treatment: "Porcelain (E-max) veneers", use: "Cosmetic reshaping of healthy or lightly prepared teeth", from: "From £190/tooth", guide: "/treatments/veneers-turkey" },
-  { treatment: "Zirconia crowns", use: "Full-coverage restoration, used in Hollywood Smile packages", from: "From £130/tooth", guide: "/prices/hollywood-smile-turkey-package" },
+  { treatment: "Zirconia crowns", use: "Full-coverage restoration, used in Hollywood Smile packages", from: "From £130/tooth", guide: "/blog/hollywood-smile-turkey-cost" },
   { treatment: "Dental implants", use: "Permanent replacement for a missing tooth root", from: "From £250", guide: "/guides/dental-implants-turkey" },
   { treatment: "All-on-4 / All-on-6", use: "Full-arch restoration for patients missing most/all teeth in an arch", from: "From £4,500/arch", guide: "/guides/dental-implants-turkey" },
   { treatment: "Full smile makeover", use: "Combined veneers, whitening and contouring in one plan", from: "From £3,500", guide: "/treatments/full-smile-makeover-turkey" },

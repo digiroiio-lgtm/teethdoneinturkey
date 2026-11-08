@@ -259,7 +259,7 @@ export default function TurkeyTeethPackagesPage() {
         <RelatedLinksGrid
           title="Related Pages"
           links={[
-            { title: "Veneers Turkey Packages: What Is Included?", desc: "Veneer-specific package breakdown — treatment-only vs package vs total trip, by tooth count.", href: "/guides/veneers-turkey-packages" },
+            { title: "Veneer Packages: What Is Included?", desc: "Veneer-specific package breakdown and what to confirm in writing.", href: "/prices/veneers-turkey-cost#veneer-packages" },
             { title: "Turkey Teeth Cost: Complete 2026 Price Guide", desc: "Treatment-only prices: veneers, crowns, implants and full mouth.", href: "/prices/turkey-teeth-cost" },
             { title: "Turkey Teeth Antalya Guide", desc: "Location-specific guide for UK patients travelling to Antalya.", href: "/guides/turkey-teeth-antalya" },
             { title: "Free Treatment Plan", desc: "Get a written, itemised quote with all inclusions confirmed.", href: "/free-treatment-plan" },

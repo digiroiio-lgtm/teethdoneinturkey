@@ -55,7 +55,6 @@ const OVERRIDES: Record<string, Rule> = {
   '/guides/turkey-teeth-antalya': { priority: 0.95, changeFrequency: 'monthly' },
   '/guides/best-veneers-turkey': { priority: 0.92, changeFrequency: 'monthly' },
   '/guides/turkish-veneers-safety': { priority: 0.9, changeFrequency: 'monthly' },
-  '/guides/veneers-turkey-packages': { priority: 0.9, changeFrequency: 'monthly' },
   '/prices/veneers-antalya-cost': { priority: 0.92, changeFrequency: 'monthly' },
 
   // Finance / affordability cluster — commercial intent, refreshed often
