@@ -5,6 +5,7 @@ import TrackedLink from "@/components/TrackedLink";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ExpertQuote from "@/components/ExpertQuote";
 import FinanceDisclosure from "@/components/FinanceDisclosure";
+import QuickLeadForm from "@/components/QuickLeadForm";
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 // Bump only when the page content is genuinely reviewed or changed.
@@ -120,6 +121,17 @@ export default function MonthlyPaymentPage() {
       <p className="text-center text-sm text-gray-500 py-3 bg-white">
         Last updated: <time dateTime={LAST_UPDATED}>{LAST_UPDATED_LABEL}</time>
       </p>
+
+      {/* ── Quick lead form: ask for a plan without leaving the page ── */}
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-xl mx-auto px-4 sm:px-6">
+          <QuickLeadForm
+            successPath="/monthly-payment"
+            heading="Ask about paying monthly"
+            subheading="Leave your name and number and a UK patient coordinator will call or WhatsApp you with a written treatment plan and price first."
+          />
+        </div>
+      </section>
 
       {/* ── UK vs Turkey Comparison ── */}
       <section className="py-16 bg-white">

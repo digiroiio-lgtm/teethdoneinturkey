@@ -5,6 +5,7 @@ import TrackedLink from "@/components/TrackedLink";
 import TreatmentTotalsTable from "@/components/TreatmentTotalsTable";
 import FinanceDisclosure from "@/components/FinanceDisclosure";
 import WhatsAppLink from "@/components/WhatsAppLink";
+import QuickLeadForm from "@/components/QuickLeadForm";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 
 export const revalidate = 86400;
@@ -134,6 +135,13 @@ export default function FinanceOptionsUKPage() {
               </WhatsAppLink>
             </div>
             <p className="text-sm text-gray-500 mt-2">Free and no obligation. Borrowing is optional; a written plan shows the treatment cost first.</p>
+          </div>
+
+          <div className="max-w-xl">
+            <QuickLeadForm
+              successPath="/finance-options-uk"
+              subheading="Tell us what you are considering and a UK patient coordinator will call or WhatsApp you with a written treatment plan and price, before any finance decision."
+            />
           </div>
 
           <FinanceDisclosure />
