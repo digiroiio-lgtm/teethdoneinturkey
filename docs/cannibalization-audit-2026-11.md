@@ -1,6 +1,21 @@
 # Birleştirme (cannibalization) raporu: fiyat, finans, kaplama, implant
 
-Tarih: 8 Kasım 2026. Durum: **ONAY BEKLİYOR**. Bu rapordaki hiçbir 301, noindex veya silme işlemi henüz uygulanmadı (`docs/seo-directive.md` §4, §7, §28).
+Tarih: 8 Kasım 2026. Durum: **KISMEN UYGULANDI**. 8 Kasım 2026'da kullanıcı yalnızca "Yüksek" güvenli 6 URL'yi onayladı ve bunlar yönlendirildi. "Orta" güvenli 4 URL (`can-you-pay-monthly-for-teeth-in-turkey`, `guides/veneers-turkey-packages`, `prices/hollywood-smile-turkey-package`, `single-tooth-implant-turkey-cost`) **dokunulmadan duruyor** ve ayrı onay gerektiriyor (`docs/seo-directive.md` §4, §7, §28).
+
+### Uygulanan (8 Kasım 2026)
+
+| Eski URL | Yeni hedef (308 kalıcı yönlendirme) | Hedefe taşınan içerik |
+|---|---|---|
+| `/blog/dental-tourism-finance-explained` | `/finance-options-uk` | "Saving up" seçeneği, FCA Register kontrolü |
+| `/blog/finance-dental-implants-turkey-uk-patients` | `/finance-options-uk` | Yeni SSS: veneers / implants için aylık ödeme, implant tutarları, aşamalı tedavi notu |
+| `/blog/can-you-pay-monthly-for-veneers-turkey` | `/finance-options-uk` | Aynı SSS: kaplama tutarları |
+| `/blog/full-set-veneers-turkey-cost` | `/prices/veneers-turkey-cost` | 20 E-max veneer + 6 gecelik yolculuk toplam maliyet örneği |
+| `/blog/veneers-turkey-cost-uk-vs-turkey` | `/prices/veneers-turkey-cost` | Taşınacak yeni içerik yoktu, hub karşılaştırmayı zaten içeriyor |
+| `/blog/dental-holiday-packages-turkey` | `/guides/turkey-teeth-packages` | "Planning the Trip Around a Package" bölümü (Antalya / İstanbul seçimi, yolculuk ipuçları) |
+
+Kaynak sayfalardaki doğrulanmamış iddialar hub'lara **taşınmadı**: "%79 tasarruf", "aynı malzemeler", "0% 12–24 ay", "1–3 gün onay", "evinize risk yok" ve paket fiyatına otel dahil örneği. Finans sayfalarındaki uyum notu gereği faiz, hız ve onay iddiası eklenmedi.
+
+Bu URL'lere verilen bütün iç linkler güncellendi: `/blog` listesi, `best-veneers-turkey`, `monthly-payment`, `can-you-pay-monthly-for-teeth-in-turkey`, `sitemap.ts` override'ları, `internal-links.ts` kaydı ve `public/llms.txt`.
 
 ## Veri ve yöntem
 

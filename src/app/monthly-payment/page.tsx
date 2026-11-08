@@ -186,9 +186,6 @@ export default function MonthlyPaymentPage() {
               Borrowing is optional. For the difference between a payment plan, dental finance, a personal loan and NHS charges, see{" "}
               <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how dental finance works in the UK</Link>, and if you are weighing up affordability more broadly, read{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">what to do if you cannot afford dental treatment in the UK</Link>.
-              {" "}Our guide to{" "}
-              <Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] font-semibold hover:underline">funding dental treatment abroad</Link>{" "}
-              lays out the options side by side.
             </p>
           </div>
 
@@ -281,7 +278,7 @@ export default function MonthlyPaymentPage() {
             />
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
               <Link href="/blog/implants-cost-uk-vs-turkey" className="text-[#1e40af] text-sm font-semibold hover:underline">→ See full implants cost breakdown</Link>
-              <Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Dedicated implants finance guide</Link>
+              <Link href="/finance-options-uk#what-to-check" className="text-[#1e40af] text-sm font-semibold hover:underline">→ What to check before agreeing to finance</Link>
             </div>
           </div>
 
