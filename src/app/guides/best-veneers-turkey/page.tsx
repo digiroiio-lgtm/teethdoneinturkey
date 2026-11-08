@@ -339,10 +339,10 @@ export default function BestVeneersTurkeyPage() {
             { title: "E-max vs Zirconia Veneers in Turkey", desc: "Strength, translucency and which material suits which smile.", href: "/blog/e-max-vs-zirconia-veneers-turkey" },
             { title: "Composite vs Porcelain Veneers in Turkey", desc: "Cost, lifespan and repairability compared.", href: "/blog/composite-vs-porcelain-veneers-turkey" },
             { title: "Are Veneers in Turkey Worth It?", desc: "An honest look at value, risk and who should avoid them.", href: "/blog/are-veneers-in-turkey-worth-it" },
-            { title: "Full Set of Veneers in Turkey: Cost", desc: "What a full set costs and what is included.", href: "/blog/full-set-veneers-turkey-cost" },
+            { title: "Veneers Turkey Cost: Price Per Tooth", desc: "Prices for 8 to 24 veneers, a full-set trip example and the UK comparison.", href: "/prices/veneers-turkey-cost" },
             { title: "The 4-8-10 Rule for Veneers", desc: "A quick rule of thumb for how many veneers you need.", href: "/blog/4-8-10-rule-for-veneers" },
             { title: "Do Turkey Teeth Look Fake?", desc: "Why some veneers look unnatural and how to avoid it.", href: "/blog/do-turkey-teeth-look-fake" },
-            { title: "Can You Pay Monthly for Veneers in Turkey?", desc: "What to know about paying monthly for veneers, and what to check first.", href: "/blog/can-you-pay-monthly-for-veneers-turkey" },
+            { title: "Paying Monthly for Veneers", desc: "Finance options for UK patients, and what to check before you borrow.", href: "/finance-options-uk" },
           ]}
         />
       </div>

@@ -12,18 +12,14 @@ export const metadata: Metadata = {
 const posts = [
   // Finance cluster (growth hack - highlighted)
   { href: "/blog/can-you-pay-monthly-for-teeth-in-turkey", title: "Can You Pay Monthly for Teeth in Turkey?", excerpt: "Some UK patients spread the cost of treatment in Turkey. What decides a monthly payment and what to check first.", date: "January 2026", tag: "Finance" },
-  { href: "/blog/finance-dental-implants-turkey-uk-patients", title: "Finance Dental Implants Turkey – UK Patient Guide", excerpt: "How UK patients can pay for dental implants in Turkey, and what to check before you borrow.", date: "January 2026", tag: "Finance" },
-  { href: "/blog/dental-tourism-finance-explained", title: "Dental Tourism Finance Explained", excerpt: "A guide to funding dental treatment abroad: payment plans, loans, credit cards and savings compared.", date: "January 2026", tag: "Finance" },
   // Core cluster
   { href: "/blog/why-are-dental-treatments-cheaper-in-turkey", title: "Why Are Dental Treatments Cheaper in Turkey?", excerpt: "The real reason dental work costs 70–80% less in Turkey. It's not lower quality — it's lower overheads.", date: "January 2026", tag: "Guide" },
   { href: "/blog/turkey-teeth-explained", title: "Turkey Teeth Explained: What UK Patients Need to Know", excerpt: "What 'turkey teeth' actually means, where the term came from, and what modern Turkish dental work really looks like.", date: "January 2026", tag: "Guide" },
   { href: "/blog/uk-dentist-vs-turkey-dentist", title: "UK Dentist vs Turkey Dentist: Key Differences", excerpt: "An honest comparison of training, materials, technology and costs between UK and Turkish dentists.", date: "January 2026", tag: "Comparison" },
   // Veneers cluster
   { href: "/blog/e-max-vs-zirconia-veneers-turkey", title: "E-max vs Zirconia Veneers in Turkey: Which Is Better?", excerpt: "The definitive comparison of E-max and zirconia veneers for UK patients. Durability, aesthetics, and which to choose.", date: "January 2026", tag: "Veneers" },
-  { href: "/blog/full-set-veneers-turkey-cost", title: "Full Set of Veneers in Turkey: Cost Breakdown 2026", excerpt: "Exactly how much a full set of veneers costs in Turkey — 8, 10, 16, or 20 veneers, all-in including travel.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/are-veneers-in-turkey-worth-it", title: "Are Veneers in Turkey Worth It?", excerpt: "An honest assessment of the quality, savings, risks, and overall value of Turkey veneers for UK patients.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/risks-of-veneers-in-turkey", title: "Risks of Veneers in Turkey: What UK Patients Should Know", excerpt: "The honest truth about what can go wrong with veneers in Turkey and how to minimise every risk.", date: "January 2026", tag: "Safety" },
-  { href: "/blog/can-you-pay-monthly-for-veneers-turkey", title: "Can You Pay Monthly for Veneers in Turkey?", excerpt: "Some UK patients spread the cost of veneers in Turkey. What decides a monthly payment and what to check first.", date: "January 2026", tag: "Finance" },
   { href: "/blog/4-8-10-rule-for-veneers", title: "The 4-8-10 Rule for Veneers Explained", excerpt: "What the 4-8-10 rule means for veneer planning and how it applies to your Turkey treatment.", date: "January 2026", tag: "Veneers" },
   { href: "/blog/composite-vs-porcelain-veneers-turkey", title: "Composite vs Porcelain Veneers Turkey", excerpt: "A clear comparison of composite and porcelain veneers in Turkey — cost, durability, and which is right for you.", date: "January 2026", tag: "Veneers" },
   // Implants cluster
@@ -42,9 +38,7 @@ const posts = [
   // Travel & cost cluster
   { href: "/blog/hollywood-smile-turkey-cost", title: "Hollywood Smile Turkey Cost 2026", excerpt: "Full cost breakdown for a Hollywood Smile in Turkey. From £2,800 for 20 zirconia crowns vs £15,000+ in the UK.", date: "January 2026", tag: "Treatments" },
   { href: "/blog/antalya-vs-istanbul-dental-clinics", title: "Antalya vs Istanbul for Dental Treatment", excerpt: "Which Turkish city is better for your dental treatment? An honest comparison for UK patients.", date: "January 2026", tag: "Travel" },
-  { href: "/blog/dental-holiday-packages-turkey", title: "Dental Holiday Packages Turkey", excerpt: "How dental holiday packages work — what's included, how much they cost, and how to book.", date: "January 2026", tag: "Travel" },
   // Existing posts
-  { href: "/blog/veneers-turkey-cost-uk-vs-turkey", title: "Veneers Turkey Cost: UK vs Turkey Price Comparison 2026", excerpt: "A detailed breakdown of what veneers cost in Turkey vs the UK, what's included, and whether you're getting the same quality.", date: "Updated September 2026", tag: "Pricing" },
   { href: "/blog/is-it-safe-to-get-teeth-done-in-turkey", title: "Is It Safe to Get Teeth Done in Turkey? 2026 Guide", excerpt: "The honest answer to the most common question about Turkish dental tourism. Accreditation, safety records, and how to choose wisely.", date: "Updated September 2026", tag: "Safety" },
   { href: "/blog/how-long-do-dental-veneers-last", title: "How Long Do Turkey Teeth Last? Veneers and Crowns Compared", excerpt: "E-max 10–15 years, zirconia crowns 15–20, composite 5–7 — and why most \"turkey teeth\" are crowns rather than veneers.", date: "Updated September 2026", tag: "Veneers" },
   { href: "/blog/best-dental-clinics-turkey", title: "Best Dental Clinics in Turkey: How to Verify One", excerpt: "Nobody can honestly rank Turkish clinics — but you can verify one in twenty minutes. The registrations to check, the questions to ask, the red flags.", date: "Updated September 2026", tag: "Clinics" },

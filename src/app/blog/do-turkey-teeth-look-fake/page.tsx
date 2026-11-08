@@ -11,8 +11,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/do-turkey-teeth-look-fake" },
-  title: { absolute: "Why Do Turkey Teeth Look Fake? How to Get a Natural Result" },
-  description: "Why do Turkey teeth look fake? Shade, translucency, shape and proportion decide it. What separates a natural result from an obvious one, and what to ask.",
+  title: { absolute: "Do Turkey Teeth Look Fake? Why, and How to Avoid It" },
+  description: "Why do some Turkey teeth look fake? Too-white shades, identical shapes and no translucency. See what a natural-looking result needs and what to ask your clinic.",
 };
 
 const faqs = [

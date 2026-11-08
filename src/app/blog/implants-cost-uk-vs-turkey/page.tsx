@@ -10,8 +10,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/implants-cost-uk-vs-turkey" },
-  title: { absolute: "Turkey Dental Implants Cost vs UK: 2026 Prices" },
-  description: "Dental implant cost in Turkey vs UK: a single implant with crown is £250–£600 in Turkey by brand vs £2,000–£3,000 UK private. What is included and full-arch prices.",
+  title: { absolute: "Dental Implants Turkey vs UK Cost 2026: £250 vs £2,000+" },
+  description: "A single dental implant with crown costs £250–£600 in Turkey vs £2,000–£3,000 privately in the UK. Prices by implant brand, All-on-4 costs and what is included.",
 };
 
 const faqs = [

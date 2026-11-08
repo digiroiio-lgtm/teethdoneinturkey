@@ -86,9 +86,7 @@ export const CLUSTERS: ClusterDefinition[] = [
     ],
     support: [
       '/blog/implants-cost-uk-vs-turkey',
-      '/blog/veneers-turkey-cost-uk-vs-turkey',
       '/blog/full-mouth-implants-uk-vs-turkey',
-      '/blog/full-set-veneers-turkey-cost',
       '/blog/hollywood-smile-turkey-cost',
       '/blog/hollywood-smile-uk-vs-turkey',
       '/blog/single-tooth-implant-turkey-cost',
@@ -101,10 +99,7 @@ export const CLUSTERS: ClusterDefinition[] = [
     hub: '/finance-options-uk',
     spokes: ['/monthly-payment'],
     support: [
-      '/blog/dental-tourism-finance-explained',
-      '/blog/finance-dental-implants-turkey-uk-patients',
       '/blog/can-you-pay-monthly-for-teeth-in-turkey',
-      '/blog/can-you-pay-monthly-for-veneers-turkey',
     ],
     commercial: ['/free-treatment-plan', '/book-consultation'],
   },
@@ -139,8 +134,6 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/prices/veneers-antalya-cost',
     ],
     support: [
-      '/blog/veneers-turkey-cost-uk-vs-turkey',
-      '/blog/full-set-veneers-turkey-cost',
       '/blog/are-veneers-in-turkey-worth-it',
       '/blog/do-turkey-teeth-look-fake',
       '/blog/e-max-vs-zirconia-veneers-turkey',
@@ -148,7 +141,6 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/blog/how-long-do-dental-veneers-last',
       '/blog/4-8-10-rule-for-veneers',
       '/blog/risks-of-veneers-in-turkey',
-      '/blog/can-you-pay-monthly-for-veneers-turkey',
     ],
     commercial: ['/book-consultation', '/free-treatment-plan'],
   },
@@ -180,7 +172,6 @@ export const CLUSTERS: ClusterDefinition[] = [
       '/travel-to-turkey/how-long-stay-turkey-dental',
     ],
     support: [
-      '/blog/dental-holiday-packages-turkey',
       '/blog/antalya-vs-istanbul-dental-clinics',
       '/travel-to-turkey/dental-holiday-turkey',
       '/guides/turkey-teeth-packages',
@@ -292,28 +283,7 @@ export const LINK_REGISTRY: LinkEntry[] = [
 
   // ── Finance cluster blog posts → finance hub ──
   {
-    from: '/blog/dental-tourism-finance-explained',
-    to: '/finance-options-uk',
-    anchorText: 'Turkey teeth finance options',
-    placement: 'related-links',
-    priority: 'required',
-  },
-  {
     from: '/blog/can-you-pay-monthly-for-teeth-in-turkey',
-    to: '/finance-options-uk',
-    anchorText: 'Turkey teeth finance options',
-    placement: 'related-links',
-    priority: 'required',
-  },
-  {
-    from: '/blog/finance-dental-implants-turkey-uk-patients',
-    to: '/finance-options-uk',
-    anchorText: 'Turkey teeth finance options',
-    placement: 'related-links',
-    priority: 'required',
-  },
-  {
-    from: '/blog/can-you-pay-monthly-for-veneers-turkey',
     to: '/finance-options-uk',
     anchorText: 'Turkey teeth finance options',
     placement: 'related-links',
@@ -369,20 +339,6 @@ export const LINK_REGISTRY: LinkEntry[] = [
   },
 
   // ── Veneers blog posts → veneers cluster hub ──
-  {
-    from: '/blog/veneers-turkey-cost-uk-vs-turkey',
-    to: '/guides/best-veneers-turkey',
-    anchorText: 'best veneers in Turkey guide',
-    placement: 'related-links',
-    priority: 'required',
-  },
-  {
-    from: '/blog/full-set-veneers-turkey-cost',
-    to: '/guides/best-veneers-turkey',
-    anchorText: 'best veneers in Turkey guide',
-    placement: 'related-links',
-    priority: 'required',
-  },
   {
     from: '/blog/are-veneers-in-turkey-worth-it',
     to: '/guides/best-veneers-turkey',

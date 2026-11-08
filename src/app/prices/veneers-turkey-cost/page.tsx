@@ -8,10 +8,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/veneers-turkey-cost`;
-const TITLE = "Veneers Turkey Cost 2026: Price Per Tooth in Pounds";
+const TITLE = "Turkey Veneers Price 2026: From £190 Per Tooth";
 const DESCRIPTION =
-  "Veneers Turkey 2026: E-max from £190/tooth, zirconia crowns from £130. Prices in pounds, UK comparison, cost factors and monthly payment options.";
-const DATE_MODIFIED = "2026-09-08";
+  "Turkey veneers price list for 2026: E-max from £190 per tooth, zirconia crowns from £130. Full sets of 8 to 24 teeth, UK comparison and what changes the cost.";
+const DATE_MODIFIED = "2026-11-08";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/veneers-turkey-cost" },
@@ -277,6 +277,9 @@ export default function VeneersCostPage() {
               Veneer treatment is normally completed in a single trip of 5 to 7 days, so the realistic total is the treatment price plus return flights and, where hotel is not bundled, accommodation. Even adding £500 to £700 for a week, a full E-max set remains a fraction of the UK private equivalent. See{" "}
               <Link href="/travel-to-turkey/how-long-stay-turkey-dental" className="text-[#1e40af] font-semibold hover:underline">how long you need to stay</Link>{" "}
               for the day by day breakdown.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-3">
+              <strong>Worked example, a full set of 20 E-max veneers:</strong> £3,800 treatment, plus a typical six-night trip of about £510 to £1,100 (return flights £80 to £200, a mid-range hotel £240 to £480, transfers often free or £20 to £40, food £150 to £300 and travel insurance £40 to £80). That is roughly £4,300 to £4,900 in total, against £16,000 or more for the treatment alone privately in the UK. Travel figures are typical ranges checked in October 2026, not quotes.
             </p>
             <p className="text-gray-700 leading-relaxed">
               If you choose to spread the cost, the lender sets the terms and approval is not guaranteed. See{" "}

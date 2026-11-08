@@ -72,7 +72,6 @@ const OVERRIDES: Record<string, Rule> = {
   // Blog posts that outperform their cluster default
   '/blog/turkey-teeth-explained': { priority: 0.8, changeFrequency: 'monthly' },
   '/blog/full-mouth-implants-uk-vs-turkey': { priority: 0.9, changeFrequency: 'weekly' },
-  '/blog/veneers-turkey-cost-uk-vs-turkey': { priority: 0.75, changeFrequency: 'monthly' },
   '/blog/is-it-safe-to-get-teeth-done-in-turkey': { priority: 0.75, changeFrequency: 'monthly' },
   '/blog/best-dental-clinics-turkey': { priority: 0.75, changeFrequency: 'monthly' },
   '/blog/risks-of-turkey-teeth': { priority: 0.75, changeFrequency: 'monthly' },
@@ -81,8 +80,6 @@ const OVERRIDES: Record<string, Rule> = {
   '/blog/hollywood-smile-uk-vs-turkey': { priority: 0.75, changeFrequency: 'monthly' },
   '/blog/dental-implant-recovery-time': { priority: 0.65, changeFrequency: 'monthly' },
   '/blog/signs-of-dental-implant-failure': { priority: 0.65, changeFrequency: 'monthly' },
-  '/blog/dental-tourism-finance-explained': { priority: 0.65, changeFrequency: 'monthly' },
-  '/blog/dental-holiday-packages-turkey': { priority: 0.65, changeFrequency: 'monthly' },
   '/blog/4-8-10-rule-for-veneers': { priority: 0.6, changeFrequency: 'monthly' },
 };
 
