@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { trackLeadFormError, trackLeadFormValidSubmit } from '@/lib/lead-tracking';
 
 // Short 3-field lead form (name, phone, treatment) for high-intent landing
 // pages such as /finance-options-uk and /monthly-payment, so visitors can ask
@@ -73,11 +74,17 @@ export default function QuickLeadForm({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     if (honeypot.trim()) { e.preventDefault(); return; }
-    if (!name.trim()) { e.preventDefault(); setError('Please enter your name.'); return; }
-    if (!PHONE_REGEX.test(phone.trim())) { e.preventDefault(); setError('Please enter a valid phone number.'); return; }
-    if (!treatment) { e.preventDefault(); setError('Please choose a treatment (or "Not sure yet").'); return; }
+    const fail = (field: string, msg: string) => {
+      e.preventDefault();
+      setError(msg);
+      trackLeadFormError('quick', successPath, field);
+    };
+    if (!name.trim()) { fail('name', 'Please enter your name.'); return; }
+    if (!PHONE_REGEX.test(phone.trim())) { fail('phone', 'Please enter a valid phone number.'); return; }
+    if (!treatment) { fail('treatment', 'Please choose a treatment (or "Not sure yet").'); return; }
     setError('');
     setIsSubmitting(true);
+    trackLeadFormValidSubmit('quick', successPath);
     try {
       sessionStorage.removeItem(LEAD_SENT_KEY);
     } catch {
