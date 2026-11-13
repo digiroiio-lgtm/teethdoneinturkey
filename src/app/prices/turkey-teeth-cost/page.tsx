@@ -8,6 +8,7 @@ import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import QuickLeadForm from "@/components/QuickLeadForm";
 
 export const revalidate = 86400;
 
@@ -390,6 +391,15 @@ export default function TurkeyTeethCostPricePage() {
             { title: "Hollywood Smile Turkey Cost", desc: "Zirconia crown package pricing in detail.", href: "/blog/hollywood-smile-turkey-cost" },
             { title: "Turkey Teeth Packages: What Is Included?", desc: "Package price vs treatment price, and what packages leave out.", href: "/guides/turkey-teeth-packages" },
           ]}
+        />
+      </div>
+
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <QuickLeadForm
+          successPath="/prices/turkey-teeth-cost"
+          heading="Get an itemised price for your treatment"
+          subheading="Leave your name and number and a UK patient coordinator will call or WhatsApp you to talk through a written treatment plan and cost."
+          note="Free and no obligation. Your details are used only to answer your request."
         />
       </div>
 

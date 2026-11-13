@@ -29,6 +29,8 @@ interface QuickLeadFormProps {
   heading?: string;
   subheading?: string;
   submitLabel?: string;
+  /** Small print under the button. Defaults to the finance-page wording; pass a plain one on non-finance pages. */
+  note?: string;
 }
 
 export default function QuickLeadForm({
@@ -37,6 +39,7 @@ export default function QuickLeadForm({
   heading = 'Get your free treatment plan',
   subheading = 'Leave your name and number and a UK patient coordinator will call or WhatsApp you.',
   submitLabel = 'Send my free plan request →',
+  note = "Free and no obligation. We do not make lending decisions; borrowing is optional and any credit is subject to the lender's own checks.",
 }: QuickLeadFormProps) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState('');
@@ -181,7 +184,7 @@ export default function QuickLeadForm({
                 {isSubmitting ? 'Sending…' : submitLabel}
               </button>
               <p className="text-xs text-gray-500">
-                Free and no obligation. We do not make lending decisions; borrowing is optional and any credit is subject to the lender&apos;s own checks.
+                {note}
               </p>
             </div>
           </form>
