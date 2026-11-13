@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import QuickLeadForm from "@/components/QuickLeadForm";
 
 export const revalidate = 86400;
 
@@ -337,6 +338,14 @@ export default function VeneersCostPage() {
             </Link>
           ))}
         </div>
+      </div>
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <QuickLeadForm
+          successPath="/prices/veneers-turkey-cost"
+          heading="Get your free veneer quote"
+          subheading="Tell us how many veneers you are considering and a UK patient coordinator will call or WhatsApp you with a written quote."
+          note="Free and no obligation. Your details are used only to answer your request."
+        />
       </div>
       <CTASection title="Find Out Exactly What Your Veneers Will Cost" subtitle="Send us your photos and we'll prepare a personalised veneer quote within 24 hours — free, no obligation." buttonText="Get Free Quote" buttonHref="/book-consultation" whatsapp={true} />
     </>

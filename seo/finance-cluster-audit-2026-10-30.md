@@ -283,3 +283,22 @@ Events to watch in GA4: `cta_click` by `cta_label` ("Finance page: free treatmen
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-11-06 | /finance-options-uk, /prices/turkey-teeth-cost, /book-consultation, mobile bar (all pages), / (opener fix) | CTA row, treatment link grids, tracked WhatsApp, mobile-bar CTA to the booking page | GA4: top landing page had one late CTA; mobile 93%; treatment pages under-discovered | More enquiries and form starts, measurable WhatsApp clicks |
+
+## 19. Short lead form on the main high-intent pages (2026-11-13)
+
+A rendered audit of the 64 sitemap pages found the short 3-field `QuickLeadForm` (added to the finance pages in #69) on only 3 of 64 pages. `/free-treatment-plan`, the page built for requesting a plan, had no form at all, and the most-seen price and treatment pages carried two links to `/book-consultation` and no form. GA4 (9 Oct – 5 Nov) showed 14 users starting the form and 11 sending it, so the gap is visitors reaching a form, not the form itself.
+
+Changes:
+- `/free-treatment-plan`: form after "How It Works"; the hero "Start My Free Plan" button now scrolls to it; the hero WhatsApp button uses the tracked `WhatsAppLink` (placement `plan_hero`).
+- `/prices/turkey-teeth-cost`, `/prices/veneers-turkey-cost`, `/treatments/dental-implants-turkey`: form just above the closing CTA block.
+- `QuickLeadForm` gets an optional `note` prop. The finance pages keep the existing lending wording; the other pages say "Free and no obligation. Your details are used only to answer your request." No finance, approval or price promises on the new placements.
+
+Watch in GA4: `generate_lead` by `form_path` and `form_type` = `quick` (`/free-treatment-plan`, `/prices/turkey-teeth-cost`, `/prices/veneers-turkey-cost`, `/treatments/dental-implants-turkey`), `whatsapp_click` placement `plan_hero`, and `form_start` on `/book-consultation` (the hero button no longer sends people there from the plan page). Compare 2–3 weeks against the 9 Oct – 5 Nov baseline. Titles, H1s, H2 text and metadata were not changed, so the 20 Nov ranking check is not disturbed by copy edits (the form adds an H2 per page).
+
+Not changed: `/finance-options-uk` (position drifted 14.9 → 18.4 → 21.3 over three weeks; to be re-checked on 20 Nov together with the effect of the #70 redirect), and the GA4 admin clean-up (key events, internal-traffic and `vercel.com` referral filters), which is the owner's.
+
+Noted, not touched: `/free-treatment-plan` still lists "Dental Implants £380/implant" while the implant page says from £250; worth aligning in a copy pass.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-13 | /free-treatment-plan, /prices/turkey-teeth-cost, /prices/veneers-turkey-cost, /treatments/dental-implants-turkey | Added the short lead form; tracked WhatsApp on the plan page | Form on 3 of 64 pages; high-intent pages had links only | More plan requests from the pages that already get the impressions |

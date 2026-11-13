@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import QuickLeadForm from "@/components/QuickLeadForm";
 
 export const revalidate = 86400;
 
@@ -150,6 +151,14 @@ export default function DentalImplantsTurkeyPage() {
       </section>
 
       <FAQSection faqs={faqs} title="Dental Implants Turkey FAQ" />
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <QuickLeadForm
+          successPath="/treatments/dental-implants-turkey"
+          heading="Get your free implant quote"
+          subheading="Leave your name and number and a UK patient coordinator will call or WhatsApp you to talk through your implant options and a written quote."
+          note="Free and no obligation. Your details are used only to answer your request."
+        />
+      </div>
       <CTASection title="Get Your Implant Quote Today" subtitle="Free consultation with our implant specialists. Personal quote within 24 hours." buttonText="Book Free Consultation" buttonHref="/book-consultation" whatsapp={true} />
     </>
   );

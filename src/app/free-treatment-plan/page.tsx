@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import QuickLeadForm from "@/components/QuickLeadForm";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 export const revalidate = 86400;
 
@@ -87,12 +89,12 @@ export default function FreeTreatmentPlanPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Get Your Free Dental Treatment Plan</h1>
           <p className="text-xl text-blue-200 mb-8">Send us your photos and receive a personalised treatment plan, cost breakdown, and clinic recommendation within 24 hours.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book-consultation" className="bg-white text-[#1e40af] px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors shadow-lg">
+            <a href="#quick-plan" className="bg-white text-[#1e40af] px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors shadow-lg">
               Start My Free Plan →
-            </Link>
-            <a href="https://wa.me/905353998999" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors">
-              WhatsApp Us
             </a>
+            <WhatsAppLink placement="plan_hero" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors">
+              WhatsApp Us
+            </WhatsAppLink>
           </div>
         </div>
       </div>
@@ -111,6 +113,15 @@ export default function FreeTreatmentPlanPage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="max-w-xl mx-auto">
+            <QuickLeadForm
+              successPath="/free-treatment-plan"
+              heading="Request your free treatment plan"
+              subheading="Leave your name and number and a UK patient coordinator will call or WhatsApp you. You can send photos and X-rays on WhatsApp afterwards."
+              note="Free and no obligation. Your details are used only to answer your request."
+            />
           </div>
 
           <div>
