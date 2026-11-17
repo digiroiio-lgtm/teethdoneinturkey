@@ -302,3 +302,15 @@ Noted, not touched: `/free-treatment-plan` still lists "Dental Implants £380/im
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-11-13 | /free-treatment-plan, /prices/turkey-teeth-cost, /prices/veneers-turkey-cost, /treatments/dental-implants-turkey | Added the short lead form; tracked WhatsApp on the plan page | Form on 3 of 64 pages; high-intent pages had links only | More plan requests from the pages that already get the impressions |
+
+## 20. UK-only baseline and forms on the veneers page and guides hub (2026-11-17)
+
+Search Console for 19 Oct – 15 Nov, all countries, showed about 105 clicks. Filtered to the United Kingdom it is 42 clicks, 7,421 impressions, CTR 0.57% and an average position of 21.5. Turkey (19 clicks on 262 impressions), Poland (12 on 39) and Germany (10 on 348) together made about 39% of all clicks, mostly desktop, on a small set of long-tail queries with 67–100% CTR (for example "signs of failed ımplant turkey antalya", "are veneers from turkey worth it?"). On 12–13 Nov alone, 38 clicks arrived (28 from Poland, Germany and Turkey, 6 from the UK) while GA4 recorded 4 Google organic sessions for those two days. Those clicks are not UK demand and are not used as a baseline. Later checks filter on `country = gbr`. The source of the non-UK clicks is unconfirmed.
+
+Page-level UK view (28 days): `/prices/turkey-teeth-cost` about 2,810 impressions, 9 clicks, position ~12.4 with head queries at 7–11; `/blog/implants-cost-uk-vs-turkey` about 914 impressions, 0 clicks, position ~18.2, competing with the cost page on generic cost queries; `/finance-options-uk` about 565 impressions, 2 clicks, with its key queries at positions 7–12 (the page average is pulled down by long-tail veneer and denture finance queries at 30–80). Title, meta and H1 proposals for these three pages are drafted but not applied; they wait for the 20 Nov check.
+
+Change in this PR: the short `QuickLeadForm` is added to `/treatments/veneers-turkey` (17 GA4 sessions) and `/guides` (12 sessions), where it previously had no form. `QuickLeadForm` gets an optional `headingAs` prop; both pages use `'p'` so the form adds no H2 and the homepage, guides and veneers AEO checks (75–300 words per H2 section) still pass. No title, H1 or metadata changes. Events: `generate_lead` with `form_path` `/treatments/veneers-turkey` or `/guides`, plus `lead_form_error` and `lead_form_submit_valid`.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-17 | /treatments/veneers-turkey, /guides | Added the short lead form (heading as a paragraph) | 29 GA4 sessions on pages with no form | More plan requests from existing visitors |

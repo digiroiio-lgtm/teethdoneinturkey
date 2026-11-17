@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import CTASection from "@/components/CTASection";
+import QuickLeadForm from "@/components/QuickLeadForm";
 import {
   GUIDES_TITLE, GUIDES_DESCRIPTION, GUIDES_UPDATED, GUIDES_UPDATED_LABEL,
   guideGroups, guideSources, guidesFaqs, faqIntroduction, faqDetail,
@@ -76,6 +77,17 @@ export default function GuidesHubPage() {
         <p className="text-gray-600 leading-relaxed mb-5">{sourcesDetail}</p>
         <ul className="list-disc pl-5 space-y-2 text-sm">{Object.values(guideSources).map(source => <li key={source.url}><a href={source.url} className={linkClass}>{source.title}</a></li>)}</ul>
         <p className="mt-5 text-sm"><Link href="/editorial-policy" className={linkClass}>Read our editorial policy</Link> · <Link href="/contact" className={linkClass}>Suggest a correction</Link></p>
+      </div>
+    </section>
+    <section className="pb-14 bg-white">
+      <div className="max-w-xl mx-auto px-4 sm:px-6">
+        <QuickLeadForm
+          successPath="/guides"
+          headingAs="p"
+          heading="Prefer a quick call-back?"
+          subheading="Leave your name and number and a UK patient coordinator will call or WhatsApp you about your questions."
+          note="Free and no obligation. Your details are used only to answer your request."
+        />
       </div>
     </section>
     <CTASection title="How can I discuss the questions I have prepared?"

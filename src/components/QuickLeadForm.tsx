@@ -32,6 +32,8 @@ interface QuickLeadFormProps {
   submitLabel?: string;
   /** Small print under the button. Defaults to the finance-page wording; pass a plain one on non-finance pages. */
   note?: string;
+  /** Heading element. Use 'p' on pages whose H2 sections are word-count checked (the form then adds no extra section). */
+  headingAs?: 'h2' | 'p';
 }
 
 export default function QuickLeadForm({
@@ -40,6 +42,7 @@ export default function QuickLeadForm({
   heading = 'Get your free treatment plan',
   subheading = 'Leave your name and number and a UK patient coordinator will call or WhatsApp you.',
   submitLabel = 'Send my free plan request →',
+  headingAs = 'h2',
   note = "Free and no obligation. We do not make lending decisions; borrowing is optional and any credit is subject to the lender's own checks.",
 }: QuickLeadFormProps) {
   const [isSuccess, setIsSuccess] = useState(false);
@@ -99,7 +102,11 @@ export default function QuickLeadForm({
   const redirectUrl = `https://www.teethdoneinturkey.co.uk${successPath}?${SUCCESS_PARAM}=1#${anchorId}`;
 
   return (
-    <div id={anchorId} className="scroll-mt-24 bg-white border-2 border-[#1e40af]/20 rounded-2xl shadow-sm p-6 text-left">
+    <div
+      id={anchorId}
+      className="scroll-mt-24 bg-white border-2 border-[#1e40af]/20 rounded-2xl shadow-sm p-6 text-left"
+      {...(headingAs === 'p' ? { role: 'region', 'aria-label': heading } : {})}
+    >
       {isSuccess ? (
         <div className="text-center">
           <div className="text-4xl mb-3">✅</div>
@@ -110,7 +117,11 @@ export default function QuickLeadForm({
         </div>
       ) : (
         <>
-          <h2 className="text-xl font-bold text-gray-900 mb-1">{heading}</h2>
+          {headingAs === 'p' ? (
+            <p className="text-xl font-bold text-gray-900 mb-1">{heading}</p>
+          ) : (
+            <h2 className="text-xl font-bold text-gray-900 mb-1">{heading}</h2>
+          )}
           <p className="text-sm text-gray-600 mb-5">{subheading}</p>
           <form action={FORM_ENDPOINT} method="POST" onSubmit={handleSubmit} noValidate>
             <input type="hidden" name="_redirect" value={redirectUrl} />
