@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import QuickLeadForm from "@/components/QuickLeadForm";
 import { veneerFaqs, veneerSections, veneerSources, VENEER_DESCRIPTION, VENEER_TITLE, VENEER_UPDATED } from "./veneer-content";
 
 export const revalidate = 86400;
@@ -69,6 +70,15 @@ export default function VeneersTurkeyPage() {
         <p className="text-gray-800 font-medium leading-relaxed mb-4">Request a consultation to discuss your goals and obtain the information needed for an individual proposal. Tell the team which teeth concern you, what records you already hold and when you hope to travel. Ask for the treating provider&apos;s details and an itemised plan before deciding whether to proceed with any treatment.</p>
         <p className="text-gray-600 leading-relaxed mb-5">Use the price and safety questions above when reviewing the response. An initial conversation can explain the process; final clinical recommendations require the treating dentist&apos;s assessment and your informed consent. Take the time you need to compare the proposed care and follow-up arrangements.</p>
         <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold">Request my consultation</Link>
+        <div className="mt-6 max-w-xl">
+          <QuickLeadForm
+            successPath="/treatments/veneers-turkey"
+            headingAs="p"
+            heading="Prefer a quick call-back?"
+            subheading="Leave your name and number and a UK patient coordinator will call or WhatsApp you about a written veneer plan."
+            note="Free and no obligation. Your details are used only to answer your request."
+          />
+        </div>
       </section>
     </div>
   </>;
