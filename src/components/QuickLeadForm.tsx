@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { trackLeadFormError, trackLeadFormValidSubmit } from '@/lib/lead-tracking';
+import { trackLeadFormError, trackLeadFormValidSubmit, useLeadFormTracking } from '@/lib/lead-tracking';
 
 // Short 3-field lead form (name, phone, treatment) for high-intent landing
 // pages such as /finance-options-uk and /monthly-payment, so visitors can ask
@@ -52,6 +52,7 @@ export default function QuickLeadForm({
   const [phone, setPhone] = useState('');
   const [treatment, setTreatment] = useState('');
   const [honeypot, setHoneypot] = useState('');
+  const tracking = useLeadFormTracking('quick', successPath);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -123,7 +124,15 @@ export default function QuickLeadForm({
             <h2 className="text-xl font-bold text-gray-900 mb-1">{heading}</h2>
           )}
           <p className="text-sm text-gray-600 mb-5">{subheading}</p>
-          <form action={FORM_ENDPOINT} method="POST" onSubmit={handleSubmit} noValidate>
+          <form
+            ref={tracking.ref}
+            action={FORM_ENDPOINT}
+            method="POST"
+            onSubmit={handleSubmit}
+            onFocus={tracking.onFocus}
+            onBlur={tracking.onBlur}
+            noValidate
+          >
             <input type="hidden" name="_redirect" value={redirectUrl} />
             <input type="hidden" name="form_type" value="quick" />
             <input type="hidden" name="source_page" value={successPath} />

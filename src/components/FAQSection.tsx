@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 interface FAQItem {
   question: string;
@@ -75,7 +76,10 @@ export default function FAQSection({ faqs = defaultFaqs, title = 'Frequently Ask
               >
                 <button
                   className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors"
-                  onClick={() => setOpen(isOpen ? null : i)}
+                  onClick={() => {
+                    if (!isOpen) trackEvent('faq_open', { question: faq.question.slice(0, 80), position: i + 1 });
+                    setOpen(isOpen ? null : i);
+                  }}
                   aria-expanded={isOpen}
                 >
                   <span>{faq.question}</span>

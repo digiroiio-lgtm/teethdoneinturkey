@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { trackLeadFormError, trackLeadFormValidSubmit } from '@/lib/lead-tracking';
+import { trackLeadFormError, trackLeadFormValidSubmit, useLeadFormTracking } from '@/lib/lead-tracking';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const FORM_ENDPOINT = 'https://submit-form.com/9xGP4VkVm';
@@ -141,6 +141,7 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
   const [country, setCountry] = useState('');
   const [message, setMessage] = useState('');
   const [honeypot, setHoneypot] = useState('');
+  const tracking = useLeadFormTracking('full', successPath);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -205,7 +206,15 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
   const redirectUrl = `https://www.teethdoneinturkey.co.uk${successPath}?${SUCCESS_PARAM}=1`;
 
   return (
-    <form action={FORM_ENDPOINT} method="POST" onSubmit={handleSubmit} noValidate>
+    <form
+      ref={tracking.ref}
+      action={FORM_ENDPOINT}
+      method="POST"
+      onSubmit={handleSubmit}
+      onFocus={tracking.onFocus}
+      onBlur={tracking.onBlur}
+      noValidate
+    >
       <input type="hidden" name="_redirect" value={redirectUrl} />
       <div className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

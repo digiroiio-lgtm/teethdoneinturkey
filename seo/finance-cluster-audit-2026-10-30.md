@@ -314,3 +314,13 @@ Change in this PR: the short `QuickLeadForm` is added to `/treatments/veneers-tu
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-11-17 | /treatments/veneers-turkey, /guides | Added the short lead form (heading as a paragraph) | 29 GA4 sessions on pages with no form | More plan requests from existing visitors |
+
+## 21. More GA4 events for user experience and conversion (2026-11-23)
+
+Before this change `whatsapp_click` was sent only from the five places that used `WhatsAppLink` (finance page, booking page, mobile bar, floating bubble, plan page), so the footer, the homepage hero, the closing CTA block used on many pages, `/contact` and `/monthly-payment` WhatsApp links were not counted. Most links to the booking page were plain links with no `cta_click`. The form funnel stopped at `lead_form_error` and `lead_form_submit_valid`.
+
+Added (no visible content or metadata change): site-wide `scroll_depth` (25/50/75/90%), `time_on_page` (15/30/60/120/300 s), `web_vitals` (LCP, INP, CLS, FCP, TTFB with rating), automatic `whatsapp_click`, `cta_click`, `email_click` and `phone_click` for links not already tracked, `cta_view` and `whatsapp_view` (for click-through rates per placement), `faq_open`, and the form funnel `lead_form_view`, `lead_form_start`, `lead_form_field_complete` and `lead_form_abandon`. Clicks now also carry `page_type`, `scroll_percent` and `seconds_on_page`. Only field names are sent, never typed values. Event dictionary, GA4 admin setup (key events, custom dimensions and metrics) and report recipes: `docs/ga4-events.md`.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-23 | all pages (layout, TrackedLink, WhatsAppLink, FAQSection, LeadForm, QuickLeadForm) | New GA4 events and form funnel; no content, title or metadata change | WhatsApp and CTA clicks were mostly untracked; no view of drop-off inside forms | Measurable click-through and form drop-off; a basis for conversion changes |
