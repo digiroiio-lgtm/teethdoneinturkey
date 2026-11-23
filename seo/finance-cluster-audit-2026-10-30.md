@@ -324,3 +324,11 @@ Added (no visible content or metadata change): site-wide `scroll_depth` (25/50/7
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-11-23 | all pages (layout, TrackedLink, WhatsAppLink, FAQSection, LeadForm, QuickLeadForm) | New GA4 events and form funnel; no content, title or metadata change | WhatsApp and CTA clicks were mostly untracked; no view of drop-off inside forms | Measurable click-through and form drop-off; a basis for conversion changes |
+
+## 22. Implant price aligned on the plan page (2026-11-23)
+
+`/free-treatment-plan` listed "Dental Implants From £380/implant" while the implant page, the price guide and the price table use "from £250" (Osstem, with crown). The owner confirmed £250 as the reference figure; the plan page now says "From £250/implant". No other page carried the £380 implant figure (the two other £380 mentions are veneer arithmetic: 8 to 10 veneers at £190).
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-23 | /free-treatment-plan | Implant "from" price £380 to £250 | Same figure as the implant page and the price guide | One consistent implant starting price across the site |
