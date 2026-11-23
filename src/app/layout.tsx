@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import AiReferralTracking from "@/components/AiReferralTracking";
+import AnalyticsEvents from "@/components/AnalyticsEvents";
 
 // GA4 (Google Analytics)
 const GA_MEASUREMENT_ID = "G-57QGPCQQKT";
@@ -178,6 +179,7 @@ export default function RootLayout({
           `}
         </Script>
         <AiReferralTracking />
+        <AnalyticsEvents />
         <Header />
         <main>{children}</main>
         <Footer />
