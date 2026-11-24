@@ -26,7 +26,7 @@ export default async function OpengraphImage() {
           <span>Teeth Done in Turkey</span>
         </div>
         <div style={{ fontSize: 30, marginTop: 24, color: "#bfdbfe", display: "flex" }}>
-          Veneers &amp; Dental Implants for UK Patients — Save up to 70%
+          Veneers &amp; Dental Implants for UK Patients — Save up to 90%
         </div>
         <div
           style={{
@@ -39,7 +39,7 @@ export default async function OpengraphImage() {
             display: "flex",
           }}
         >
-          JCI-Accredited Clinics · UK Patient Support
+          Antalya Partner Clinic · UK Patient Support
         </div>
       </div>
     ),

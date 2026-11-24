@@ -40,16 +40,16 @@ export default function AntalyaVsIstanbulPage() {
           <p>Turkey&apos;s two primary dental tourism destinations are Istanbul and Antalya. Both offer excellent dental treatment, but they cater to slightly different patient profiles and offer different experiences. Here&apos;s how to decide which is right for you.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Istanbul: The Specialist Hub</h2>
-          <p>Istanbul is Turkey&apos;s largest city and the centre of its premium dental tourism industry. The city hosts the highest concentration of JCI-accredited, internationally-recognised dental clinics in the country, with many dentists who have trained internationally and treat very high volumes of UK and European patients.</p>
+          <p>Istanbul is Turkey&apos;s largest city and the centre of its premium dental tourism industry. The city has a large number of dental clinics that treat international patients, and many of its dentists have trained internationally. Accreditation varies from clinic to clinic, so check each clinic&apos;s current certificates.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
             <div className="bg-green-50 rounded-xl p-4 border border-green-200">
               <h3 className="font-bold text-green-700 mb-2">✓ Istanbul advantages</h3>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>→ Highest concentration of specialist clinics</li>
-                <li>→ Most JCI-accredited options</li>
+                <li>→ Large choice of clinics (check each one&apos;s accreditation)</li>
                 <li>→ Widest choice of specialist dentists</li>
                 <li>→ Best for complex cases</li>
-                <li>→ World-class city tourism</li>
+                <li>→ Major city for sightseeing</li>
                 <li>→ Direct flights from most UK airports</li>
               </ul>
             </div>

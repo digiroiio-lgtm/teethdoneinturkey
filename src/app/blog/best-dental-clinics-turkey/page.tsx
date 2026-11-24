@@ -259,7 +259,7 @@ export default function BestClinicsBlogPage() {
 
           <div className="mt-10 p-6 bg-blue-50 rounded-2xl border border-blue-200">
             <p className="font-semibold text-gray-900 mb-2">We&apos;ve done the vetting for you.</p>
-            <p className="text-gray-600 text-sm mb-4">Our partner clinics have been personally visited by our team, hold Ministry of Health health-tourism authorisation, name the treating dentist and the material brand on every plan, and issue a written guarantee. Tell us what you need and we&apos;ll match you.</p>
+            <p className="text-gray-600 text-sm mb-4">Ask any clinic, including our partner clinic Akdeniz Dental Clinic, for its Ministry of Health health-tourism authorisation, the named treating dentist and material brand on every plan, and a written guarantee. Tell us what you need and we will explain the options.</p>
             <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get Matched with a Clinic</Link>
           </div>
         </div>

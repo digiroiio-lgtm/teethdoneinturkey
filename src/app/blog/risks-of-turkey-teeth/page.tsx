@@ -42,7 +42,7 @@ export default function RisksTurkeyTeethPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Risk 1: Poor Clinic Selection</h2>
           <p><strong>Likelihood:</strong> Moderate — if you don&apos;t do due diligence<br /><strong>Severity:</strong> Can be high</p>
-          <p>This is the root cause of the vast majority of negative experiences. Turkey has thousands of dental clinics, ranging from world-class JCI-accredited practices to unregistered providers with no accountability. The price range reflects this spectrum.</p>
+          <p>This is the root cause of the vast majority of negative experiences. Turkey has thousands of dental clinics, ranging from clinics with independently verified accreditation to unregistered providers with no accountability. The price range reflects this spectrum.</p>
           <p><strong>How to avoid:</strong> Never select a clinic based solely on price. Verify JCI accreditation or Ministry of Health registration. Check international patient reviews on Google and Trustpilot. Use a vetted dental tourism co-ordinator.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Risk 2: Unnecessary Tooth Reduction</h2>
@@ -77,7 +77,7 @@ export default function RisksTurkeyTeethPage() {
 
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
             <p className="font-semibold text-gray-900 mb-2">We&apos;ve done the risk assessment for you</p>
-            <p className="text-gray-600 text-sm mb-4">Every clinic we partner with has been personally visited and vetted against our strict quality criteria. We don&apos;t recommend any clinic we wouldn&apos;t send our own family to.</p>
+            <p className="text-gray-600 text-sm mb-4">We coordinate treatment with our partner clinic, Akdeniz Dental Clinic in Antalya. Check any clinic&apos;s credentials yourself with the list above, and ask for the treating dentist&apos;s name, its accreditation certificates and a written plan before you pay a deposit.</p>
             <div className="flex flex-wrap gap-3">
               <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-5 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-colors text-sm">Book Free Consultation</Link>
               <Link href="/blog/is-it-safe-to-get-teeth-done-in-turkey" className="inline-block border border-[#1e40af] text-[#1e40af] px-5 py-2.5 rounded-xl font-bold hover:bg-blue-50 transition-colors text-sm">Safety Guide</Link>

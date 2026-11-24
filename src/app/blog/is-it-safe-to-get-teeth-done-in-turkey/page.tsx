@@ -67,7 +67,7 @@ export default function SafetyBlogPage() {
           <p>As with any medical procedure, anywhere in the world, your choice of provider is everything.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Turkish Dental Accreditation</h2>
-          <p>Turkey&apos;s leading dental clinics hold <strong>JCI (Joint Commission International) accreditation</strong>, an international healthcare accreditation. It is voluntary and not every clinic has it, so ask the clinic directly and verify it. The Turkish Ministry of Health also licenses dental practices. The UK General Dental Council does not regulate dentists in Turkey.</p>
+          <p>Some dental clinics in Turkey hold <strong>JCI (Joint Commission International) accreditation</strong>, an international healthcare accreditation. It is voluntary and not every clinic has it, so ask the clinic directly and verify it. The Turkish Ministry of Health also licenses dental practices. The UK General Dental Council does not regulate dentists in Turkey.</p>
           <p>Many top Turkish dentists have trained in Germany, the USA, Italy, or other European countries, and hold international specialist certifications in areas like implantology and aesthetic dentistry.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Could Go Wrong?</h2>
@@ -99,7 +99,7 @@ export default function SafetyBlogPage() {
 
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
             <p className="font-semibold text-gray-900 mb-2">We only work with clinics we trust.</p>
-            <p className="text-gray-600 text-sm mb-4">Every clinic we recommend has been personally visited by our team and meets our strict safety and quality criteria. Book a free consultation to learn more.</p>
+            <p className="text-gray-600 text-sm mb-4">We coordinate treatment with our partner clinic, Akdeniz Dental Clinic in Antalya. Check its credentials yourself and ask for a written plan. Book a free consultation to learn more.</p>
             <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Book Free Consultation</Link>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-200">

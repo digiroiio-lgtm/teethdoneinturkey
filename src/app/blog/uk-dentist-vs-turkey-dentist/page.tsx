@@ -47,7 +47,7 @@ export default function UKvsTurkeyDentistPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Regulatory Framework</h2>
           <p>In the UK, dentists must be registered with the General Dental Council (GDC) and practices registered with the Care Quality Commission (CQC). In Turkey, dentists are regulated by the Turkish Dentists Union and practices by the Turkish Ministry of Health. For internationally-facing clinics, JCI (Joint Commission International) accreditation provides an additional layer of quality assurance recognised globally.</p>
-          <p><strong>Verdict:</strong> Different regulators, but top Turkish clinics with JCI accreditation meet internationally recognised standards. Always verify accreditation before booking.</p>
+          <p><strong>Verdict:</strong> Different regulators, but a clinic with current JCI accreditation has been inspected against international standards. Always verify accreditation before booking.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Materials & Technology</h2>
           <p>This is where the comparison is most directly relevant to treatment outcomes. The top Turkish dental clinics use:</p>

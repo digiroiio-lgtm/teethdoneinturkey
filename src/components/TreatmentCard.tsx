@@ -24,7 +24,7 @@ export default function TreatmentCard({ title, description, price, ukPrice, href
         </div>
         <p className="text-xs text-gray-500">
           <span className="line-through text-red-400">{ukPrice} in UK</span>
-          &nbsp;— save up to 70%
+          &nbsp;— save up to 90%
         </p>
       </div>
       <Link

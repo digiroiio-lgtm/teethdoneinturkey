@@ -14,7 +14,7 @@ export default function Footer() {
               </span>
               <span className="text-white font-bold text-xl">Teeth Done in Turkey</span>
             </Link>
-            <p className="text-sm text-gray-400 mb-4">Premium dental treatments in Turkey for UK patients. Save up to 70% vs UK prices.</p>
+            <p className="text-sm text-gray-400 mb-4">Patient coordination for UK patients having dental treatment in Turkey. Clinical care is provided by our partner clinic, Akdeniz Dental Clinic, Antalya.</p>
             <a href="https://wa.me/905353998999" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 hover:-translate-y-0.5 transition-all shadow-sm">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

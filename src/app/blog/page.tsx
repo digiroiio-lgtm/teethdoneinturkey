@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const posts = [
   // Finance cluster (growth hack - highlighted)
   // Core cluster
-  { href: "/blog/why-are-dental-treatments-cheaper-in-turkey", title: "Why Are Dental Treatments Cheaper in Turkey?", excerpt: "The real reason dental work costs 70–80% less in Turkey. It's not lower quality — it's lower overheads.", date: "January 2026", tag: "Guide" },
+  { href: "/blog/why-are-dental-treatments-cheaper-in-turkey", title: "Why Are Dental Treatments Cheaper in Turkey?", excerpt: "The real reason dental work costs roughly 70–90% less in Turkey. It's not lower quality — it's lower overheads.", date: "January 2026", tag: "Guide" },
   { href: "/blog/turkey-teeth-explained", title: "Turkey Teeth Explained: What UK Patients Need to Know", excerpt: "What 'turkey teeth' actually means, where the term came from, and what modern Turkish dental work really looks like.", date: "January 2026", tag: "Guide" },
   { href: "/blog/uk-dentist-vs-turkey-dentist", title: "UK Dentist vs Turkey Dentist: Key Differences", excerpt: "An honest comparison of training, materials, technology and costs between UK and Turkish dentists.", date: "January 2026", tag: "Comparison" },
   // Veneers cluster

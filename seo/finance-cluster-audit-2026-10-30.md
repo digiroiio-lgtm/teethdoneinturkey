@@ -266,6 +266,20 @@ Owner request: a five-photo "Smile Gallery" on the homepage, optimised and mobil
 |---|---|---|---|---|
 | 2026-10-31 | / | Added Smile Gallery section (5 WebP before/after photos) | Original first-party imagery, visual proof for visitors | Better engagement and original-image signal; small page weight increase (about 125 KB, lazy loaded) |
 
+## 17. Consistency and credibility pass (2026-11-05)
+
+Triggered by an external review of three points. Findings and actions:
+
+1. **Savings percentages.** All 58 price-table rows on the site (UK price, Turkey price, stated saving) were checked by script and are arithmetically consistent, so the implant table (UK £2,500, Turkey £250, 90%) was already right. The wrong "82%" came from `public/llms-full.txt` ("Save ~82%") and a generic "65–82% cheaper" sentence on `/monthly-payment`. Fixes: the implant page now shows "about 76–90% less than the UK price shown" next to "£250–£600 depending on brand"; its meta description no longer says "Straumann and Nobel Biocare at 90% less" (the 90% applies to the £250 entry brand, premium brands are about 76–78%); the implant hero now says Osstem from £250 and Straumann or Nobel Biocare up to about £600. One canonical range is used in general copy: **70–90%** (the site's own table runs 69–90%), with **up to 90%** as the headline maximum, replacing "65–90%", "65 to 90 percent", "65–82%", "60–80%", generic "70–80%" and "up to 70%". Row-specific ranges (for example "~70–80%" on the Straumann row) were left because they match their own prices.
+2. **Monthly figures on the implant page.** The £21, £11 and £7 examples (a £250 implant over 12, 24 and 36 months) are not present in `main`: the finance clean-up in #57 removed per-month amounts site-wide, and a scan finds none left. The finance policy is therefore the same on both pages (no monthly figures; terms come from the lender). The review most likely read an older version.
+3. **Clinic role and credibility.** New `ProviderNotice` ("Who does what"): Teeth Done in Turkey is a patient-coordination service that does not provide treatment; clinical care is provided by the partner clinic, Akdeniz Dental Clinic in Antalya, by dentists qualified under Turkish regulation (not UK GDC registration); prices, materials, treating dentist and guarantee are set out in the clinic's written plan; ask for accreditation or Ministry of Health certificates before paying a deposit; link to the editorial policy. Shown on the homepage, About, the treatments hub and the four main treatment pages (the veneers page was not touched because of its separate AEO script), plus a footer line. Owner answers: JCI status of the clinic is unconfirmed and no certificate is available, so every statement that our partner clinics are JCI-accredited, "world-class", or "personally visited and vetted by our team" was replaced with neutral, verifiable wording ("ask for current certificates"). The written clinic guarantee was confirmed by the owner, so it stays, worded as a written guarantee whose terms are in the treatment plan. Generic educational mentions of JCI as something to look for were kept.
+
+Still open: no named-dentist profiles beyond the existing medical reviewer and clinic-owner mentions; if the clinic can supply its current accreditation or authorisation certificates (with numbers and dates), they can be published and the stronger claims restored with evidence. Remaining unsourced comparisons (for example "highest concentration of JCI-accredited clinics" on the Antalya vs Istanbul post) were not touched in this pass.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-05 | 25+ pages, ProviderNotice, footer, llms-full | Savings wording unified (70–90%, up to 90%); implant meta/hero fixed; partner JCI and visited claims neutralised; clinic-role notice added | External review of consistency and credibility | Fewer unverifiable claims, clearer provider roles |
+
 ## 18. GA4-driven conversion work, code side (2026-11-06)
 
 GA4 (9 Oct – 5 Nov) showed: `/finance-options-uk` is the top landing page (Google 15, ChatGPT 15, direct 11 sessions); about 93% of UK sessions are on mobile; `/book-consultation` is the second most viewed page and ChatGPT and Google send people straight to it; the form converts well (14 users started, 11 submitted) so the gap is reaching the form; treatment pages are barely visited; `cta_click` fired 21 times and WhatsApp clicks were not tracked at all.
@@ -332,3 +346,13 @@ Added (no visible content or metadata change): site-wide `scroll_depth` (25/50/7
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-11-23 | /free-treatment-plan | Implant "from" price £380 to £250 | Same figure as the implant page and the price guide | One consistent implant starting price across the site |
+
+## 23. Sprint 1 step 1: #67 brought up to date and the last unsourced claims removed (2026-11-24)
+
+Main moved on (#70 turned `finance-dental-implants-turkey-uk-patients` into a redirect, #72 added a form to the implant page), so #67 was merged with main: the stub is kept as on main, the implant page keeps both the provider notice and the lead form, the manifest is regenerated. A scan of `main` for unsourced wording found more than #67 covered, so these were neutralised in the same PR: "world-class" (Istanbul/dental holiday/why-Turkey/risks pages), "number one dental tourism destination" and "over 500,000 patients" (complete guide, why-Turkey page and its meta description), "most JCI-accredited options" and "highest concentration of JCI-accredited clinics" (Antalya vs Istanbul), "Turkey's leading dental clinics hold JCI" (is-it-safe), "top Turkish clinics with JCI accreditation meet international standards" (UK vs Turkey dentist). The `FAQSection` built-in default answers (JCI, 79% saving, 10-year guarantee) were deleted; every page passes its own FAQs, so `faqs` is now a required prop.
+
+Left on purpose: educational mentions that tell patients to ask for and verify accreditation. Still open (owner): the TrustBar and hero ratings ("5.0 on Google, 1,197 reviews, Akdeniz Dental", "4.8 on Trustpilot, 97 reviews") need a current source and the right scope before they stay; footer legal links and the privacy, cookie and terms pages are Sprint 1 step 2 and need the company details.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-24 | antalya-vs-istanbul, dental-holiday-turkey, teeth-done-in-turkey-guide, why-choose-turkey (incl. meta), is-it-safe, uk-dentist-vs-turkey, risks-of-turkey-teeth, FAQSection | Unsourced superlative and accreditation claims replaced with neutral, checkable wording | Owner confirmed JCI status is unverified; seo-directive section 11 and 23 | Fewer unverifiable claims on YMYL pages |

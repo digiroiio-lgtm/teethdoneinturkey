@@ -23,7 +23,7 @@ export default function DentalHolidayPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Istanbul for Dental Treatment?</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Istanbul is Turkey&apos;s largest city and home to hundreds of world-class dental clinics catering to international patients. It&apos;s just 3–4 hours from most UK airports, has excellent hotels near the clinic districts, and is a genuinely exciting city to visit while you&apos;re recovering.
+              Istanbul is Turkey&apos;s largest city and home to many dental clinics that treat international patients. It&apos;s just 3–4 hours from most UK airports, has excellent hotels near the clinic districts, and is a genuinely exciting city to visit while you&apos;re recovering.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Antalya is the alternative — a beautiful Mediterranean resort city with a more relaxed atmosphere, slightly cheaper hotels, and a strong cluster of dental clinics catering to European tourists. It&apos;s particularly popular for patients who want to combine treatment with a beach holiday.
