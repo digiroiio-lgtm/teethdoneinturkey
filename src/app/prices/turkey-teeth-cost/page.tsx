@@ -8,15 +8,16 @@ import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import QuickLeadForm from "@/components/QuickLeadForm";
 
 export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/turkey-teeth-cost`;
-const TITLE = "How Much Do Turkey Teeth Cost? 2026 UK Price Guide";
+const TITLE = "How Much Are Turkey Teeth? 2026 Prices in £ for UK Patients";
 const H1 = "How Much Do Turkey Teeth Cost? 2026 Price Guide for UK Patients";
 const DESCRIPTION =
-  "Turkey teeth prices start at £130 per crown, £190 per veneer and £250 for an Osstem implant with crown. Compare full packages and travel costs for UK patients.";
+  "How much do Turkey teeth cost in 2026? Crowns from £130, veneers from £190 and implants from £250. Full-mouth package prices and travel costs for UK patients.";
 const DATE_PUBLISHED = "2026-09-03";
 const DATE_MODIFIED = "2026-11-04";
 
@@ -384,12 +385,21 @@ export default function TurkeyTeethCostPricePage() {
         <RelatedLinksGrid
           title="Related Blog Articles"
           links={[
-            { title: "Can You Pay Monthly for Teeth in Turkey?", desc: "What UK patients should know about paying monthly for treatment in Turkey.", href: "/blog/can-you-pay-monthly-for-teeth-in-turkey" },
+            { title: "Turkey Teeth Finance and Payment Plans", desc: "What UK patients should know about paying monthly for treatment in Turkey.", href: "/finance-options-uk" },
             { title: "Full Mouth Implants: UK vs Turkey", desc: "Full-mouth implant cost comparison in detail.", href: "/blog/full-mouth-implants-uk-vs-turkey" },
             { title: "Why Is Dental Care Cheaper in Turkey?", desc: "The real reasons behind the price difference.", href: "/blog/why-are-dental-treatments-cheaper-in-turkey" },
             { title: "Hollywood Smile Turkey Cost", desc: "Zirconia crown package pricing in detail.", href: "/blog/hollywood-smile-turkey-cost" },
             { title: "Turkey Teeth Packages: What Is Included?", desc: "Package price vs treatment price, and what packages leave out.", href: "/guides/turkey-teeth-packages" },
           ]}
+        />
+      </div>
+
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <QuickLeadForm
+          successPath="/prices/turkey-teeth-cost"
+          heading="Get an itemised price for your treatment"
+          subheading="Leave your name and number and a UK patient coordinator will call or WhatsApp you to talk through a written treatment plan and cost."
+          note="Free and no obligation. Your details are used only to answer your request."
         />
       </div>
 

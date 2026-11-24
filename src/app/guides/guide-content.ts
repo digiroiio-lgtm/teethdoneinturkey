@@ -109,7 +109,7 @@ export const guideGroups: Group[] = [
         ],
       },
       {
-        title: "What extra detail matters in a veneer package?", href: "/guides/veneers-turkey-packages",
+        title: "What extra detail matters in a veneer package?", href: "/prices/veneers-turkey-cost#veneer-packages",
         paragraphs: [
           "A veneer package needs a clear restoration type, material and tooth count, alongside the agreed stay and transfers. Use this guide when a package combines cosmetic wording with a fixed number of units. Confirm that the proposed procedure is a veneer rather than a crown and that every tooth has a clinical reason for treatment.",
           "Ask about temporary restorations, laboratory stages, appearance discussions, bite checks and any preparatory treatment. If your plan involves fewer teeth or another procedure, obtain an individual quote instead of multiplying a package average. Read the written aftercare and repair terms with the price, including whether a later appointment could require travel. A lower price per unit does not decide what your teeth need.",

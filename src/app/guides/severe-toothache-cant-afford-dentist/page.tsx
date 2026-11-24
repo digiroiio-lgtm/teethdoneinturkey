@@ -14,10 +14,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/severe-toothache-cant-afford-dentist`;
-const TITLE = "Severe Toothache Can't Afford a Dentist? Your Options";
+const TITLE = "Severe Toothache, Can't Afford a Dentist? What to Do Now";
 const H1 = "Severe Toothache and Can't Afford a Dentist? What to Do";
 const DESCRIPTION =
-  "Severe toothache and can't afford a dentist? NHS 111 guidance, emergency dental access, temporary relief steps, causes of tooth pain and costs.";
+  "Severe toothache and can't afford a dentist? When to call NHS 111 or 999, how to get urgent NHS dental care, safe pain relief and lower-cost treatment options.";
 const DATE_PUBLISHED = "2026-09-17";
 const DATE_MODIFIED = "2026-09-17";
 

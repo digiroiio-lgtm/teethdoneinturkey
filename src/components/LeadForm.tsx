@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { trackLeadFormError, trackLeadFormValidSubmit, useLeadFormTracking } from '@/lib/lead-tracking';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const FORM_ENDPOINT = 'https://submit-form.com/9xGP4VkVm';
@@ -140,6 +141,7 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
   const [country, setCountry] = useState('');
   const [message, setMessage] = useState('');
   const [honeypot, setHoneypot] = useState('');
+  const tracking = useLeadFormTracking('full', successPath);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -166,13 +168,18 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     if (honeypot.trim()) { e.preventDefault(); return; }
-    if (!name.trim()) { e.preventDefault(); setValidationError('Please enter your name.'); return; }
-    if (!phone.trim()) { e.preventDefault(); setValidationError('Please enter your phone number.'); return; }
-    if (!whatsapp.trim()) { e.preventDefault(); setValidationError('Please enter your WhatsApp number.'); return; }
-    if (!email.trim() || !EMAIL_REGEX.test(email.trim())) { e.preventDefault(); setValidationError('Please enter a valid email address.'); return; }
-    if (!country.trim()) { e.preventDefault(); setValidationError('Please select your country.'); return; }
+    const fail = (field: string, msg: string) => {
+      e.preventDefault();
+      setValidationError(msg);
+      trackLeadFormError('full', successPath, field);
+    };
+    if (!name.trim()) { fail('name', 'Please enter your name.'); return; }
+    if (!phone.trim()) { fail('phone', 'Please enter your phone number.'); return; }
+    if (!email.trim() || !EMAIL_REGEX.test(email.trim())) { fail('email', 'Please enter a valid email address.'); return; }
+    if (!country.trim()) { fail('country', 'Please select your country.'); return; }
     setValidationError('');
     setIsSubmitting(true);
+    trackLeadFormValidSubmit('full', successPath);
     try {
       sessionStorage.removeItem(LEAD_SENT_KEY);
     } catch {
@@ -199,7 +206,15 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
   const redirectUrl = `https://www.teethdoneinturkey.co.uk${successPath}?${SUCCESS_PARAM}=1`;
 
   return (
-    <form action={FORM_ENDPOINT} method="POST" onSubmit={handleSubmit} noValidate>
+    <form
+      ref={tracking.ref}
+      action={FORM_ENDPOINT}
+      method="POST"
+      onSubmit={handleSubmit}
+      onFocus={tracking.onFocus}
+      onBlur={tracking.onBlur}
+      noValidate
+    >
       <input type="hidden" name="_redirect" value={redirectUrl} />
       <div className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -233,15 +248,14 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Your WhatsApp Number *</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number <span className="font-normal text-gray-500">(if different)</span></label>
             <input
               type="tel"
               name="whatsapp"
-              required
               value={whatsapp}
               onChange={e => setWhatsapp(e.target.value)}
               className={inputClass}
-              placeholder="+44 7700 900000"
+              placeholder="Leave blank if same as phone"
             />
           </div>
           <div>

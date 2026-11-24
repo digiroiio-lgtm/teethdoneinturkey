@@ -255,7 +255,7 @@ export default function VeneersAntalyaCostPage() {
           </div>
           <p className="text-gray-600 text-sm mb-4">
             For a treatment-specific breakdown of veneer package inclusions, see{" "}
-            <Link href="/guides/veneers-turkey-packages" className="text-[#1e40af] font-semibold hover:underline">Veneers Turkey Packages: What Is Included?</Link>
+            <Link href="/prices/veneers-turkey-cost#veneer-packages" className="text-[#1e40af] font-semibold hover:underline">veneer packages: what is included</Link>
           </p>
 
           <h2 id="whats-included" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">What Is Included and What Is Not</h2>
@@ -363,7 +363,7 @@ export default function VeneersAntalyaCostPage() {
             { title: "Turkey Teeth Antalya: The Complete UK Patient Guide", desc: "What to expect in Antalya — clinics, hotels, travel and treatment timeline.", href: "/guides/turkey-teeth-antalya" },
             { title: "Veneers Turkey Cost: National Price Guide", desc: "UK-wide Turkey veneer prices — per tooth, by count, inclusions and exclusions.", href: "/prices/veneers-turkey-cost" },
             { title: "Best Veneers in Turkey: E-max vs Zirconia Compared", desc: "Which type of veneer gives the best result and at what cost.", href: "/guides/best-veneers-turkey" },
-            { title: "Veneers Turkey Packages: What Is Included?", desc: "What veneer packages include vs what you still need to budget for.", href: "/guides/veneers-turkey-packages" },
+            { title: "Turkey Teeth Packages: What Is Included?", desc: "Package price vs treatment price, and what packages leave out.", href: "/guides/turkey-teeth-packages" },
             { title: "Turkish Veneers Safety Guide", desc: "Risks, red flags and how to protect yourself when getting veneers in Turkey.", href: "/guides/turkish-veneers-safety" },
           ]}
         />

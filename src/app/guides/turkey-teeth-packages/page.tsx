@@ -19,7 +19,7 @@ const H1 = "Turkey Teeth Packages: What Is Included and What Does It Cost?";
 const DESCRIPTION =
   "Package price is not the same as total cost. What Turkey dental packages include, what they leave out, and what to check before you book.";
 const DATE_PUBLISHED = "2026-09-13";
-const DATE_MODIFIED = "2026-09-13";
+const DATE_MODIFIED = "2026-11-08";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides/turkey-teeth-packages" },
@@ -211,6 +211,18 @@ export default function TurkeyTeethPackagesPage() {
             <li>No named UK-based point of contact for aftercare queries once you return home.</li>
           </ul>
 
+          <h2 id="planning-the-trip" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Planning the Trip Around a Package</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Most packages run through partner hotels in Antalya or Istanbul. Antalya suits patients who want a quieter resort stay, Istanbul a city break; compare the two in our{" "}
+            <Link href="/blog/antalya-vs-istanbul-dental-clinics" className="text-[#1e40af] font-semibold hover:underline">Antalya vs Istanbul guide</Link>. Whichever you choose:
+          </p>
+          <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+            <li>Book flights that can be changed, because your clinic timetable can shift depending on how treatment progresses.</li>
+            <li>Allow a spare day at the end in case the final fitting needs a small adjustment.</li>
+            <li>Tell your travel insurer about the dental treatment; standard holiday cover may exclude it.</li>
+            <li>Keep treatment days light and plan excursions for your free days.</li>
+          </ul>
+
           <h2 id="total-cost" className="text-2xl font-bold text-gray-900 mt-10 mb-3 scroll-mt-24">Package Price vs Real Total Cost</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             A package quoted at £4,500 for a full veneer makeover will typically cost a UK patient £4,800–£5,200 in total once flights and any incidentals are added. For implant patients whose second visit is not included, add another £250–£500 to the total.
@@ -247,7 +259,7 @@ export default function TurkeyTeethPackagesPage() {
         <RelatedLinksGrid
           title="Related Pages"
           links={[
-            { title: "Veneers Turkey Packages: What Is Included?", desc: "Veneer-specific package breakdown — treatment-only vs package vs total trip, by tooth count.", href: "/guides/veneers-turkey-packages" },
+            { title: "Veneer Packages: What Is Included?", desc: "Veneer-specific package breakdown and what to confirm in writing.", href: "/prices/veneers-turkey-cost#veneer-packages" },
             { title: "Turkey Teeth Cost: Complete 2026 Price Guide", desc: "Treatment-only prices: veneers, crowns, implants and full mouth.", href: "/prices/turkey-teeth-cost" },
             { title: "Turkey Teeth Antalya Guide", desc: "Location-specific guide for UK patients travelling to Antalya.", href: "/guides/turkey-teeth-antalya" },
             { title: "Free Treatment Plan", desc: "Get a written, itemised quote with all inclusions confirmed.", href: "/free-treatment-plan" },

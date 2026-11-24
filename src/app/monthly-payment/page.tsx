@@ -5,6 +5,7 @@ import TrackedLink from "@/components/TrackedLink";
 import MedicalReviewBadge from "@/components/MedicalReviewBadge";
 import ExpertQuote from "@/components/ExpertQuote";
 import FinanceDisclosure from "@/components/FinanceDisclosure";
+import QuickLeadForm from "@/components/QuickLeadForm";
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 // Bump only when the page content is genuinely reviewed or changed.
@@ -121,6 +122,17 @@ export default function MonthlyPaymentPage() {
         Last updated: <time dateTime={LAST_UPDATED}>{LAST_UPDATED_LABEL}</time>
       </p>
 
+      {/* ── Quick lead form: ask for a plan without leaving the page ── */}
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-xl mx-auto px-4 sm:px-6">
+          <QuickLeadForm
+            successPath="/monthly-payment"
+            heading="Ask about paying monthly"
+            subheading="Leave your name and number and a UK patient coordinator will call or WhatsApp you with a written treatment plan and price first."
+          />
+        </div>
+      </section>
+
       {/* ── UK vs Turkey Comparison ── */}
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,9 +186,6 @@ export default function MonthlyPaymentPage() {
               Borrowing is optional. For the difference between a payment plan, dental finance, a personal loan and NHS charges, see{" "}
               <Link href="/finance-options-uk" className="text-[#1e40af] font-semibold hover:underline">how dental finance works in the UK</Link>, and if you are weighing up affordability more broadly, read{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">what to do if you cannot afford dental treatment in the UK</Link>.
-              {" "}Our guide to{" "}
-              <Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] font-semibold hover:underline">funding dental treatment abroad</Link>{" "}
-              lays out the options side by side.
             </p>
           </div>
 
@@ -269,7 +278,7 @@ export default function MonthlyPaymentPage() {
             />
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
               <Link href="/blog/implants-cost-uk-vs-turkey" className="text-[#1e40af] text-sm font-semibold hover:underline">→ See full implants cost breakdown</Link>
-              <Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] text-sm font-semibold hover:underline">→ Dedicated implants finance guide</Link>
+              <Link href="/finance-options-uk#what-to-check" className="text-[#1e40af] text-sm font-semibold hover:underline">→ What to check before agreeing to finance</Link>
             </div>
           </div>
 

@@ -5,6 +5,7 @@ import TrackedLink from "@/components/TrackedLink";
 import TreatmentTotalsTable from "@/components/TreatmentTotalsTable";
 import FinanceDisclosure from "@/components/FinanceDisclosure";
 import WhatsAppLink from "@/components/WhatsAppLink";
+import QuickLeadForm from "@/components/QuickLeadForm";
 import RelatedLinksGrid from "@/components/RelatedLinksGrid";
 
 export const revalidate = 86400;
@@ -60,6 +61,10 @@ const faqs = [
     a: "Many people pay a deposit and borrow the remainder, which reduces the amount borrowed. Whether that is available, and any minimum or maximum amount, depends on the lender.",
   },
   {
+    q: "Can I pay off a dental finance agreement early?",
+    a: "Many credit agreements allow early repayment, sometimes with a charge. The exact terms are in your written agreement, so check them before you sign.",
+  },
+  {
     q: "Is this a dental loan or a dental payment plan?",
     a: "The two terms are used loosely. A payment plan usually spreads the cost of one treatment in fixed instalments. A dental loan usually means a personal loan used for the same purpose. Either way, the interest, fees and terms are in the credit agreement, so read it before you sign.",
   },
@@ -70,6 +75,10 @@ const faqs = [
   {
     q: "Can you get Turkey teeth on finance?",
     a: "Some patients do, using credit arranged in the UK, such as a payment plan or a personal loan. Whether you are offered credit, and on what terms, depends on the lender and your circumstances and is never guaranteed. Compare the total repayable, not just the monthly amount, before you agree.",
+  },
+  {
+    q: "Can I pay monthly for veneers or dental implants?",
+    a: "Any credit is for the treatment in your written plan, whether that is veneers, implants or a full-arch treatment such as All-on-4, and the process is the same: get the full price first, then decide whether to borrow. As a guide to the amounts involved, 20 E-max veneers cost about £3,800 and an All-on-4 arch from £4,500 in Turkey, against roughly £16,000–£20,000 and £12,000–£18,000 at UK private prices. Implant treatment is often staged over two trips, so check that any agreement covers the whole plan. The lender sets the terms and any monthly payment.",
   },
   {
     q: "Can I get a quote before applying for finance?",
@@ -136,6 +145,13 @@ export default function FinanceOptionsUKPage() {
             <p className="text-sm text-gray-500 mt-2">Free and no obligation. Borrowing is optional; a written plan shows the treatment cost first.</p>
           </div>
 
+          <div className="max-w-xl">
+            <QuickLeadForm
+              successPath="/finance-options-uk"
+              subheading="Tell us what you are considering and a UK patient coordinator will call or WhatsApp you with a written treatment plan and price, before any finance decision."
+            />
+          </div>
+
           <FinanceDisclosure />
 
           <div>
@@ -181,6 +197,7 @@ export default function FinanceOptionsUKPage() {
                 { term: "Personal loan", desc: "A loan that is not dental specific and can be used to cover dental costs. It usually carries interest, so compare the total repayable." },
                 { term: "Credit card", desc: "Some people use a credit card, sometimes one with an introductory offer. Check what happens to the balance once any offer period ends." },
                 { term: "NHS dental charges", desc: "Fixed charges (£27.90, £76.60 or £306.80 in England from 1 April 2026) for treatment the NHS actually provides. Cosmetic work such as veneers isn't covered." },
+                { term: "Saving up", desc: "Paying from savings avoids interest altogether. Treatment in Turkey usually costs less than the same work privately in the UK, so saving for it can take less time." },
                 { term: "Clinic membership plan", desc: "A fixed monthly fee to a dental practice covering routine check-ups and hygiene visits, not a way of financing a one-off treatment like implants or veneers." },
               ].map(item => (
                 <div key={item.term} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
@@ -192,9 +209,8 @@ export default function FinanceOptionsUKPage() {
             <p className="text-sm text-gray-500 mt-4">
               For the full picture, including whether the NHS can help before you consider financing private treatment, see the{" "}
               <Link href="/guides/cant-afford-dental-treatment-uk" className="text-[#1e40af] font-semibold hover:underline">Can&apos;t Afford Dental Treatment in the UK guide</Link>.
-              {" "}If you&apos;d rather see every funding route set out side by side, our{" "}
-              <Link href="/blog/dental-tourism-finance-explained" className="text-[#1e40af] font-semibold hover:underline">dental tourism finance explained guide</Link>{" "}
-              compares them in full.
+              {" "}Whichever route you consider, check that the lender or broker is authorised on the{" "}
+              <a href="https://register.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-[#1e40af] font-semibold hover:underline">FCA Register</a>.
             </p>
           </div>
 
@@ -209,9 +225,9 @@ export default function FinanceOptionsUKPage() {
               <Link href="/prices/turkey-teeth-cost" className="text-[#1e40af] font-semibold hover:underline">full cost breakdown by treatment</Link>{" "}
               and a{" "}
               <Link href="/price-calculator" className="text-[#1e40af] font-semibold hover:underline">price calculator</Link>{" "}
-              are available. If implants are your main cost, our{" "}
-              <Link href="/blog/finance-dental-implants-turkey-uk-patients" className="text-[#1e40af] font-semibold hover:underline">guide to financing dental implants in Turkey</Link>{" "}
-              goes deeper.
+              are available. If implants are your main cost, the{" "}
+              <Link href="/blog/implants-cost-uk-vs-turkey" className="text-[#1e40af] font-semibold hover:underline">implant cost guide</Link>{" "}
+              shows prices by implant brand and for full-arch treatment.
             </p>
             <p className="text-sm text-gray-500 mt-3">
               Implant treatment is often staged, with a second trip months after placement. Ask your clinic what each payment covers so any agreement matches the whole treatment plan.

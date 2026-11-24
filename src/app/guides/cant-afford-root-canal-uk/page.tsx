@@ -14,10 +14,10 @@ export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/guides/cant-afford-root-canal-uk`;
-const TITLE = "Can't Afford a Root Canal? Your UK Options Explained";
+const TITLE = "Need a Root Canal but Can't Afford It? UK Options 2026";
 const H1 = "Can't Afford a Root Canal in the UK? What to Do";
 const DESCRIPTION =
-  "Root canal costs £500–£1,500 at a UK private dentist. NHS cover, Band 2 charges, extraction vs root canal, payment plans and Turkey comparison.";
+  "Need a root canal but can't afford it? Private UK root canals cost £500–£1,500. Compare NHS Band 2, payment plans, extraction vs saving the tooth, and Turkey.";
 const DATE_PUBLISHED = "2026-09-17";
 const DATE_MODIFIED = "2026-09-17";
 

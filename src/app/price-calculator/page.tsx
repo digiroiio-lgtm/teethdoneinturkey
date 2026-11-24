@@ -37,7 +37,7 @@ export default function PriceCalculatorPage() {
               { title: "Veneers Turkey", href: "/treatments/veneers-turkey", desc: "E-max and zirconia veneers from £190/tooth" },
               { title: "Dental Implants Turkey", href: "/treatments/dental-implants-turkey", desc: "Single implants £250–£600 depending on brand" },
               { title: "All-on-6 Package", href: "/prices/all-on-6-dental-implants-turkey-package", desc: "Full arch on 6 implants from £5,600 all-inclusive" },
-              { title: "Hollywood Smile", href: "/prices/hollywood-smile-turkey-package", desc: "20 or 24 zirconia crowns from £2,800" },
+              { title: "Hollywood Smile", href: "/blog/hollywood-smile-turkey-cost", desc: "20 or 24 zirconia crowns from £2,800" },
               { title: "Monthly Payment", href: "/monthly-payment", desc: "UK and Turkey prices, and what decides a monthly payment" },
               { title: "Free Treatment Plan", href: "/free-treatment-plan", desc: "Get a personalised plan and exact quote in 24h" },
             ].map(item => (

@@ -297,3 +297,52 @@ Events to watch in GA4: `cta_click` by `cta_label` ("Finance page: free treatmen
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-11-06 | /finance-options-uk, /prices/turkey-teeth-cost, /book-consultation, mobile bar (all pages), / (opener fix) | CTA row, treatment link grids, tracked WhatsApp, mobile-bar CTA to the booking page | GA4: top landing page had one late CTA; mobile 93%; treatment pages under-discovered | More enquiries and form starts, measurable WhatsApp clicks |
+
+## 19. Short lead form on the main high-intent pages (2026-11-13)
+
+A rendered audit of the 64 sitemap pages found the short 3-field `QuickLeadForm` (added to the finance pages in #69) on only 3 of 64 pages. `/free-treatment-plan`, the page built for requesting a plan, had no form at all, and the most-seen price and treatment pages carried two links to `/book-consultation` and no form. GA4 (9 Oct – 5 Nov) showed 14 users starting the form and 11 sending it, so the gap is visitors reaching a form, not the form itself.
+
+Changes:
+- `/free-treatment-plan`: form after "How It Works"; the hero "Start My Free Plan" button now scrolls to it; the hero WhatsApp button uses the tracked `WhatsAppLink` (placement `plan_hero`).
+- `/prices/turkey-teeth-cost`, `/prices/veneers-turkey-cost`, `/treatments/dental-implants-turkey`: form just above the closing CTA block.
+- `QuickLeadForm` gets an optional `note` prop. The finance pages keep the existing lending wording; the other pages say "Free and no obligation. Your details are used only to answer your request." No finance, approval or price promises on the new placements.
+
+Watch in GA4: `generate_lead` by `form_path` and `form_type` = `quick` (`/free-treatment-plan`, `/prices/turkey-teeth-cost`, `/prices/veneers-turkey-cost`, `/treatments/dental-implants-turkey`), `whatsapp_click` placement `plan_hero`, and `form_start` on `/book-consultation` (the hero button no longer sends people there from the plan page). Compare 2–3 weeks against the 9 Oct – 5 Nov baseline. Titles, H1s, H2 text and metadata were not changed, so the 20 Nov ranking check is not disturbed by copy edits (the form adds an H2 per page).
+
+Not changed: `/finance-options-uk` (position drifted 14.9 → 18.4 → 21.3 over three weeks; to be re-checked on 20 Nov together with the effect of the #70 redirect), and the GA4 admin clean-up (key events, internal-traffic and `vercel.com` referral filters), which is the owner's.
+
+Noted, not touched: `/free-treatment-plan` still lists "Dental Implants £380/implant" while the implant page says from £250; worth aligning in a copy pass.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-13 | /free-treatment-plan, /prices/turkey-teeth-cost, /prices/veneers-turkey-cost, /treatments/dental-implants-turkey | Added the short lead form; tracked WhatsApp on the plan page | Form on 3 of 64 pages; high-intent pages had links only | More plan requests from the pages that already get the impressions |
+
+## 20. UK-only baseline and forms on the veneers page and guides hub (2026-11-17)
+
+Search Console for 19 Oct – 15 Nov, all countries, showed about 105 clicks. Filtered to the United Kingdom it is 42 clicks, 7,421 impressions, CTR 0.57% and an average position of 21.5. Turkey (19 clicks on 262 impressions), Poland (12 on 39) and Germany (10 on 348) together made about 39% of all clicks, mostly desktop, on a small set of long-tail queries with 67–100% CTR (for example "signs of failed ımplant turkey antalya", "are veneers from turkey worth it?"). On 12–13 Nov alone, 38 clicks arrived (28 from Poland, Germany and Turkey, 6 from the UK) while GA4 recorded 4 Google organic sessions for those two days. Those clicks are not UK demand and are not used as a baseline. Later checks filter on `country = gbr`. The source of the non-UK clicks is unconfirmed.
+
+Page-level UK view (28 days): `/prices/turkey-teeth-cost` about 2,810 impressions, 9 clicks, position ~12.4 with head queries at 7–11; `/blog/implants-cost-uk-vs-turkey` about 914 impressions, 0 clicks, position ~18.2, competing with the cost page on generic cost queries; `/finance-options-uk` about 565 impressions, 2 clicks, with its key queries at positions 7–12 (the page average is pulled down by long-tail veneer and denture finance queries at 30–80). Title, meta and H1 proposals for these three pages are drafted but not applied; they wait for the 20 Nov check.
+
+Change in this PR: the short `QuickLeadForm` is added to `/treatments/veneers-turkey` (17 GA4 sessions) and `/guides` (12 sessions), where it previously had no form. `QuickLeadForm` gets an optional `headingAs` prop; both pages use `'p'` so the form adds no H2 and the homepage, guides and veneers AEO checks (75–300 words per H2 section) still pass. No title, H1 or metadata changes. Events: `generate_lead` with `form_path` `/treatments/veneers-turkey` or `/guides`, plus `lead_form_error` and `lead_form_submit_valid`.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-17 | /treatments/veneers-turkey, /guides | Added the short lead form (heading as a paragraph) | 29 GA4 sessions on pages with no form | More plan requests from existing visitors |
+
+## 21. More GA4 events for user experience and conversion (2026-11-23)
+
+Before this change `whatsapp_click` was sent only from the five places that used `WhatsAppLink` (finance page, booking page, mobile bar, floating bubble, plan page), so the footer, the homepage hero, the closing CTA block used on many pages, `/contact` and `/monthly-payment` WhatsApp links were not counted. Most links to the booking page were plain links with no `cta_click`. The form funnel stopped at `lead_form_error` and `lead_form_submit_valid`.
+
+Added (no visible content or metadata change): site-wide `scroll_depth` (25/50/75/90%), `time_on_page` (15/30/60/120/300 s), `web_vitals` (LCP, INP, CLS, FCP, TTFB with rating), automatic `whatsapp_click`, `cta_click`, `email_click` and `phone_click` for links not already tracked, `cta_view` and `whatsapp_view` (for click-through rates per placement), `faq_open`, and the form funnel `lead_form_view`, `lead_form_start`, `lead_form_field_complete` and `lead_form_abandon`. Clicks now also carry `page_type`, `scroll_percent` and `seconds_on_page`. Only field names are sent, never typed values. Event dictionary, GA4 admin setup (key events, custom dimensions and metrics) and report recipes: `docs/ga4-events.md`.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-23 | all pages (layout, TrackedLink, WhatsAppLink, FAQSection, LeadForm, QuickLeadForm) | New GA4 events and form funnel; no content, title or metadata change | WhatsApp and CTA clicks were mostly untracked; no view of drop-off inside forms | Measurable click-through and form drop-off; a basis for conversion changes |
+
+## 22. Implant price aligned on the plan page (2026-11-23)
+
+`/free-treatment-plan` listed "Dental Implants From £380/implant" while the implant page, the price guide and the price table use "from £250" (Osstem, with crown). The owner confirmed £250 as the reference figure; the plan page now says "From £250/implant". No other page carried the £380 implant figure (the two other £380 mentions are veneer arithmetic: 8 to 10 veneers at £190).
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-23 | /free-treatment-plan | Implant "from" price £380 to £250 | Same figure as the implant page and the price guide | One consistent implant starting price across the site |

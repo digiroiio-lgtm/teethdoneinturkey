@@ -83,7 +83,7 @@ export const veneerSections: VeneerSection[] = [
       "Do not compare two totals until you know they describe the same work. For example, a 20-unit zirconia crown package is different from 20 E-max veneers even if both advertisements show a similar white smile. The material, preparation and clinical reason may differ. Ask the dentist to explain any change from the online proposal before giving consent.",
       "A practical comparison sheet has columns for tooth number, current condition, proposed treatment, material and reason. Mark any tooth that has no explanation and take the sheet to a second consultation if needed. Our dedicated veneers-or-crowns guide provides more background, while the package page helps you identify what a crown package includes. Neither substitutes for an individual examination.",
     ],
-    links: [{ label: "Understand veneers versus crowns", href: "/guides/turkey-teeth-veneers-or-crowns" }, { label: "Compare Hollywood smile crown packages", href: "/prices/hollywood-smile-turkey-package" }],
+    links: [{ label: "Understand veneers versus crowns", href: "/guides/turkey-teeth-veneers-or-crowns" }, { label: "Compare Hollywood smile crown packages", href: "/blog/hollywood-smile-turkey-cost#package-breakdown" }],
   },
   {
     id: "number", title: "How many veneers do I actually need?",

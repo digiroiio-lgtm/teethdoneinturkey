@@ -3,15 +3,16 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import QuickLeadForm from "@/components/QuickLeadForm";
 
 export const revalidate = 86400;
 
 const SITE_URL = "https://www.teethdoneinturkey.co.uk";
 const PAGE_URL = `${SITE_URL}/prices/veneers-turkey-cost`;
-const TITLE = "Veneers Turkey Cost 2026: Price Per Tooth in Pounds";
+const TITLE = "Turkey Veneers Price 2026: From £190 Per Tooth";
 const DESCRIPTION =
-  "Veneers Turkey 2026: E-max from £190/tooth, zirconia crowns from £130. Prices in pounds, UK comparison, cost factors and monthly payment options.";
-const DATE_MODIFIED = "2026-09-08";
+  "Turkey veneers price list for 2026: E-max from £190 per tooth, zirconia crowns from £130. Full sets of 8 to 24 teeth, UK comparison and what changes the cost.";
+const DATE_MODIFIED = "2026-11-08";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/prices/veneers-turkey-cost" },
@@ -195,7 +196,7 @@ export default function VeneersCostPage() {
               At the 20 and 24-unit level, compare these clinical-only figures against the all-inclusive Hollywood Smile packages
               (£2,800 for 20 zirconia crowns, £3,100 for 24), which bundle hotel accommodation and VIP transfers into the price. For
               a full set, the package route is usually the cheaper way to buy the same crown work.{" "}
-              <Link href="/prices/hollywood-smile-turkey-package" className="text-[#1e40af] font-semibold underline">See the package breakdown</Link>.
+              <Link href="/blog/hollywood-smile-turkey-cost#package-breakdown" className="text-[#1e40af] font-semibold underline">See the package breakdown</Link>.
             </p>
           </div>
           <div>
@@ -260,6 +261,28 @@ export default function VeneersCostPage() {
           </div>
 
           <div>
+            <h2 id="veneer-packages" className="text-2xl font-bold text-gray-900 mb-4 scroll-mt-24">Veneer Packages: Treatment Price, Package Price and Total Trip</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">Three different numbers appear in Turkish veneer quotes, and mixing them up is the most common budgeting mistake:</p>
+            <ul className="space-y-2 text-gray-700 mb-4">
+              <li className="flex gap-2"><span className="text-[#1e40af] font-bold">→</span><span><strong>Treatment price:</strong> the dental work only (consultation, preparation, temporaries, lab work and fitting). This is the per-tooth price multiplied by the number of teeth.</span></li>
+              <li className="flex gap-2"><span className="text-[#1e40af] font-bold">→</span><span><strong>Package price:</strong> treatment plus hotel (usually 5 to 7 nights) and airport and clinic transfers. This typically adds about £400 to £700 to the treatment price.</span></li>
+              <li className="flex gap-2"><span className="text-[#1e40af] font-bold">→</span><span><strong>Total trip cost:</strong> the package plus flights, which no package includes, travel insurance and spending money. Budget on this figure, not the package headline.</span></li>
+            </ul>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Get these answers in writing before paying a deposit</h3>
+            <ol className="list-decimal pl-6 space-y-2 text-gray-700 mb-4">
+              <li>How many teeth are included, and is each one a veneer or a crown (for example &ldquo;20 E-max veneers&rdquo; or &ldquo;20 zirconia crowns&rdquo;)?</li>
+              <li>How many hotel nights are included, and the hotel&apos;s name? Extra nights are usually charged at the hotel&apos;s own rate.</li>
+              <li>Are airport transfers included in both directions?</li>
+              <li>Are temporary veneers and any scan you need included, or charged separately?</li>
+              <li>What happens if a veneer chips or comes off after you are home, and who is your UK point of contact?</li>
+            </ol>
+            <p className="text-gray-700 leading-relaxed">
+              Treat it as a red flag if inclusions are only confirmed verbally, if you are asked for a deposit before a written plan names the material, or if a very low per-tooth price comes with no material or lab named. For packages across all treatments, see the{" "}
+              <Link href="/guides/turkey-teeth-packages" className="text-[#1e40af] font-semibold hover:underline">Turkey teeth packages guide</Link>.
+            </p>
+          </div>
+
+          <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Are You Being Quoted Veneers or Crowns?</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               This is the most important question on any veneer quote, and it changes the clinical outcome far more than the price does. A veneer is a thin shell bonded to the front of the tooth, removing roughly 0.3mm to 0.7mm. A crown covers the whole tooth and is prepared on every surface. Zirconia is a crown material, so a quote for zirconia units is crown work regardless of the wording used.
@@ -278,6 +301,9 @@ export default function VeneersCostPage() {
               <Link href="/travel-to-turkey/how-long-stay-turkey-dental" className="text-[#1e40af] font-semibold hover:underline">how long you need to stay</Link>{" "}
               for the day by day breakdown.
             </p>
+            <p className="text-gray-700 leading-relaxed mb-3">
+              <strong>Worked example, a full set of 20 E-max veneers:</strong> £3,800 treatment, plus a typical six-night trip of about £510 to £1,100 (return flights £80 to £200, a mid-range hotel £240 to £480, transfers often free or £20 to £40, food £150 to £300 and travel insurance £40 to £80). That is roughly £4,300 to £4,900 in total, against £16,000 or more for the treatment alone privately in the UK. Travel figures are typical ranges checked in October 2026, not quotes.
+            </p>
             <p className="text-gray-700 leading-relaxed">
               If you choose to spread the cost, the lender sets the terms and approval is not guaranteed. See{" "}
               <Link href="/monthly-payment" className="text-[#1e40af] font-semibold hover:underline">paying monthly: what to know</Link>{" "}
@@ -288,7 +314,7 @@ export default function VeneersCostPage() {
 
           <div className="flex gap-4 flex-wrap">
             <Link href="/book-consultation" className="inline-block bg-[#1e40af] text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">Get My Veneer Quote</Link>
-            <Link href="/prices/hollywood-smile-turkey-package" className="inline-block border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Hollywood Smile Packages</Link>
+            <Link href="/blog/hollywood-smile-turkey-cost#package-breakdown" className="inline-block border-2 border-[#1e40af] text-[#1e40af] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">Hollywood Smile Packages</Link>
             <Link href="/prices/turkey-teeth-cost" className="inline-block border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors">Full Turkey Teeth Price Guide</Link>
           </div>
         </div>
@@ -304,7 +330,7 @@ export default function VeneersCostPage() {
             { href: "/guides/teeth-in-turkey", title: "Complete UK Patient Guide to Teeth in Turkey", desc: "Treatments, costs, safety and travel — the full picture." },
             { href: "/treatments/veneers-turkey", title: "Dental Veneers Turkey", desc: "E-max porcelain veneers from £190/tooth. Full guide." },
             { href: "/guides/turkey-teeth-veneers-or-crowns", title: "Veneers or Crowns in Turkey?", desc: "Which treatment is right for you — explained clearly." },
-            { href: "/guides/veneers-turkey-packages", title: "Veneers Turkey Packages: What Is Included?", desc: "Treatment-only vs package vs total trip cost, by tooth count." },
+            { href: "/guides/turkey-teeth-packages", title: "Turkey Teeth Packages: What Is Included?", desc: "Package price vs treatment price and what to check, across all treatments." },
           ].map(l => (
             <Link key={l.href} href={l.href} className="block bg-gray-50 hover:bg-blue-50 rounded-xl p-4 border border-gray-200 hover:border-blue-300 transition-colors">
               <p className="font-semibold text-gray-900 mb-1">{l.title}</p>
@@ -312,6 +338,14 @@ export default function VeneersCostPage() {
             </Link>
           ))}
         </div>
+      </div>
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <QuickLeadForm
+          successPath="/prices/veneers-turkey-cost"
+          heading="Get your free veneer quote"
+          subheading="Tell us how many veneers you are considering and a UK patient coordinator will call or WhatsApp you with a written quote."
+          note="Free and no obligation. Your details are used only to answer your request."
+        />
       </div>
       <CTASection title="Find Out Exactly What Your Veneers Will Cost" subtitle="Send us your photos and we'll prepare a personalised veneer quote within 24 hours — free, no obligation." buttonText="Get Free Quote" buttonHref="/book-consultation" whatsapp={true} />
     </>
