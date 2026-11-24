@@ -346,3 +346,13 @@ Added (no visible content or metadata change): site-wide `scroll_depth` (25/50/7
 | DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
 |---|---|---|---|---|
 | 2026-11-23 | /free-treatment-plan | Implant "from" price £380 to £250 | Same figure as the implant page and the price guide | One consistent implant starting price across the site |
+
+## 23. Sprint 1 step 1: #67 brought up to date and the last unsourced claims removed (2026-11-24)
+
+Main moved on (#70 turned `finance-dental-implants-turkey-uk-patients` into a redirect, #72 added a form to the implant page), so #67 was merged with main: the stub is kept as on main, the implant page keeps both the provider notice and the lead form, the manifest is regenerated. A scan of `main` for unsourced wording found more than #67 covered, so these were neutralised in the same PR: "world-class" (Istanbul/dental holiday/why-Turkey/risks pages), "number one dental tourism destination" and "over 500,000 patients" (complete guide, why-Turkey page and its meta description), "most JCI-accredited options" and "highest concentration of JCI-accredited clinics" (Antalya vs Istanbul), "Turkey's leading dental clinics hold JCI" (is-it-safe), "top Turkish clinics with JCI accreditation meet international standards" (UK vs Turkey dentist). The `FAQSection` built-in default answers (JCI, 79% saving, 10-year guarantee) were deleted; every page passes its own FAQs, so `faqs` is now a required prop.
+
+Left on purpose: educational mentions that tell patients to ask for and verify accreditation. Still open (owner): the TrustBar and hero ratings ("5.0 on Google, 1,197 reviews, Akdeniz Dental", "4.8 on Trustpilot, 97 reviews") need a current source and the right scope before they stay; footer legal links and the privacy, cookie and terms pages are Sprint 1 step 2 and need the company details.
+
+| DATE | URL/TEMPLATE | CHANGE | REASON | EXPECTED EFFECT |
+|---|---|---|---|---|
+| 2026-11-24 | antalya-vs-istanbul, dental-holiday-turkey, teeth-done-in-turkey-guide, why-choose-turkey (incl. meta), is-it-safe, uk-dentist-vs-turkey, risks-of-turkey-teeth, FAQSection | Unsourced superlative and accreditation claims replaced with neutral, checkable wording | Owner confirmed JCI status is unverified; seo-directive section 11 and 23 | Fewer unverifiable claims on YMYL pages |

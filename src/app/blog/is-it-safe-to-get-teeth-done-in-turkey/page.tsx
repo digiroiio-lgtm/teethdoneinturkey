@@ -67,7 +67,7 @@ export default function SafetyBlogPage() {
           <p>As with any medical procedure, anywhere in the world, your choice of provider is everything.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Turkish Dental Accreditation</h2>
-          <p>Turkey&apos;s leading dental clinics hold <strong>JCI (Joint Commission International) accreditation</strong>, an international healthcare accreditation. It is voluntary and not every clinic has it, so ask the clinic directly and verify it. The Turkish Ministry of Health also licenses dental practices. The UK General Dental Council does not regulate dentists in Turkey.</p>
+          <p>Some dental clinics in Turkey hold <strong>JCI (Joint Commission International) accreditation</strong>, an international healthcare accreditation. It is voluntary and not every clinic has it, so ask the clinic directly and verify it. The Turkish Ministry of Health also licenses dental practices. The UK General Dental Council does not regulate dentists in Turkey.</p>
           <p>Many top Turkish dentists have trained in Germany, the USA, Italy, or other European countries, and hold international specialist certifications in areas like implantology and aesthetic dentistry.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Could Go Wrong?</h2>

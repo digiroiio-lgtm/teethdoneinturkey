@@ -8,41 +8,14 @@ interface FAQItem {
   answer: string;
 }
 
-const defaultFaqs: FAQItem[] = [
-  {
-    question: 'Is it safe to get teeth done in Turkey?',
-    answer: 'It can be, but standards vary by clinic and dentist. Turkey has many well-trained dentists and some clinics hold international accreditation, so check the treating dentist\'s credentials, the clinic\'s current accreditation or Ministry of Health authorisation, the materials named in your written plan and the guarantee terms before you book. Outcomes depend on the clinic and on your own case.',
-  },
-  {
-    question: 'How much do veneers cost in Turkey?',
-    answer: 'Veneers in Turkey cost from £190 per tooth, compared to £900+ in the UK — a saving of around 79%. A full set of 20 veneers costs £3,800 in Turkey vs £18,000 in the UK.',
-  },
-  {
-    question: 'Can I pay monthly for dental treatment?',
-    answer: 'Some patients spread the cost with credit arranged in the UK. Borrowing is optional, and whether you are offered credit, and on what terms, is the lender\'s decision and is not guaranteed. If you ask, we can introduce you to a credit broker; we do not lend or give credit advice.',
-  },
-  {
-    question: 'How long do I need to stay in Turkey?',
-    answer: 'For veneers, you typically need 5–7 days. Dental implants require two trips: the first for implant placement (3–5 days) and a second trip 3–6 months later for the crowns (3–4 days). All-on-4/All-on-6 treatments typically take 5–7 days for the initial visit.',
-  },
-  {
-    question: 'What happens if something goes wrong after I return home?',
-    answer: 'All our partner clinics offer guarantees of up to 10 years on their work. We also provide UK-based aftercare co-ordination, and any issues can be addressed either remotely or on a return visit. Our patient support team is available throughout your recovery.',
-  },
-  {
-    question: 'Are the dentists qualified?',
-    answer: 'Yes. All our partner dentists hold Turkish Dental Association qualifications equivalent to UK GDC registration, and many hold international accreditations. Many have trained in Germany, the UK, or the USA. We only work with clinics accredited by JCI or the Turkish Ministry of Health.',
-  },
-];
-
 interface FAQSectionProps {
-  faqs?: FAQItem[];
+  faqs: FAQItem[];
   title?: string;
   introduction?: string;
   emitSchema?: boolean;
 }
 
-export default function FAQSection({ faqs = defaultFaqs, title = 'Frequently Asked Questions', introduction, emitSchema = true }: FAQSectionProps) {
+export default function FAQSection({ faqs, title = 'Frequently Asked Questions', introduction, emitSchema = true }: FAQSectionProps) {
   const [open, setOpen] = useState<number | null>(null);
 
   const faqJsonLd = {

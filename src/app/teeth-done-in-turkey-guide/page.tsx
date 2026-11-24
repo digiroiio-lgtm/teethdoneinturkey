@@ -94,7 +94,7 @@ export default function TeethDoneInTurkeyGuidePage() {
           <section id="why-turkey">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Do UK Patients Choose Turkey for Dental Treatment?</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Turkey has become the world&apos;s number one dental tourism destination for UK patients — and for good reason. Over 500,000 international patients travel to Turkey for dental work each year, drawn by a combination of world-class quality and dramatically lower prices.
+              Turkey has become one of the most popular dental tourism destinations for UK patients, mainly because of lower prices. Quality still varies from clinic to clinic, so check credentials and ask for a written plan before you decide.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
               The savings are substantial: dental treatment in Turkey costs roughly 70–90% less than in the UK, while the quality of care — the brands of materials used, the technology in the clinics, and the expertise of the dentists — is genuinely equivalent to the best private practices in London or Manchester.

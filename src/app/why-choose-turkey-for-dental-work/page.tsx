@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   alternates: { canonical: "/why-choose-turkey-for-dental-work" },
   title: "Why Choose Turkey for Dental Work?",
-  description: "Discover why over 500,000 international patients choose Turkey for dental treatment every year. Quality, cost, technology, and UK support explained.",
+  description: "Discover why many UK patients consider Turkey for dental treatment: lower prices, modern technology and UK support, plus the checks to make before you book.",
 };
 
 export default function WhyChooseTurkeyPage() {
@@ -16,7 +16,7 @@ export default function WhyChooseTurkeyPage() {
       <div className="hero-gradient text-white py-16 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Why Choose Turkey for Dental Work?</h1>
-          <p className="text-xl text-blue-200">Over 500,000 international patients visit Turkey for dental treatment every year — here&apos;s why</p>
+          <p className="text-xl text-blue-200">Why many UK patients consider Turkey for dental treatment, and what to check first</p>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ export default function WhyChooseTurkeyPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. World-Class Dental Technology</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Modern Dental Technology</h2>
             <p className="text-gray-600 mb-4">
               Turkish dental clinics — particularly in Istanbul and Antalya — have invested heavily in cutting-edge technology over the past decade. The best clinics operate with:
             </p>
@@ -104,7 +104,7 @@ export default function WhyChooseTurkeyPage() {
               Istanbul is just 3.5 hours from London — shorter than flying to many European holiday destinations. Antalya is 4 hours. Both cities have excellent direct flight connections from London, Manchester, Birmingham, Edinburgh, and other major UK airports, with multiple daily departures. Return flights can be found from as little as £80–£150.
             </p>
             <p className="text-gray-600">
-              Many patients combine their dental treatment with a short city break or beach holiday, making the trip enjoyable rather than purely medical. Turkey&apos;s world-class hotels, cuisine, and climate are an added bonus.
+              Many patients combine their dental treatment with a short city break or beach holiday, making the trip enjoyable rather than purely medical. Turkey&apos;s hotels, cuisine, and climate are an added bonus.
             </p>
           </div>
 

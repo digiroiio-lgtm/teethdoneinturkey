@@ -42,7 +42,7 @@ export default function RisksTurkeyTeethPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Risk 1: Poor Clinic Selection</h2>
           <p><strong>Likelihood:</strong> Moderate — if you don&apos;t do due diligence<br /><strong>Severity:</strong> Can be high</p>
-          <p>This is the root cause of the vast majority of negative experiences. Turkey has thousands of dental clinics, ranging from world-class JCI-accredited practices to unregistered providers with no accountability. The price range reflects this spectrum.</p>
+          <p>This is the root cause of the vast majority of negative experiences. Turkey has thousands of dental clinics, ranging from clinics with independently verified accreditation to unregistered providers with no accountability. The price range reflects this spectrum.</p>
           <p><strong>How to avoid:</strong> Never select a clinic based solely on price. Verify JCI accreditation or Ministry of Health registration. Check international patient reviews on Google and Trustpilot. Use a vetted dental tourism co-ordinator.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Risk 2: Unnecessary Tooth Reduction</h2>
