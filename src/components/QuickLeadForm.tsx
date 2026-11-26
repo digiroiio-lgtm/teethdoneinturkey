@@ -1,16 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { submitLead } from '@/lib/submit-lead';
 import { trackLeadFormError, trackLeadFormValidSubmit, useLeadFormTracking } from '@/lib/lead-tracking';
 
 // Short 3-field lead form (name, phone, treatment) for high-intent landing
 // pages such as /finance-options-uk and /monthly-payment, so visitors can ask
-// for a plan without leaving the page. Posts to the same endpoint as LeadForm
+// for a plan without leaving the page. Posts to /api/contact like LeadForm
 // and fires the same `generate_lead` event (with form_type: 'quick').
-const FORM_ENDPOINT = 'https://submit-form.com/9xGP4VkVm';
-const SUCCESS_PARAM = 'submitted';
-// Same refresh/back-button guard key as LeadForm: one submission = one event.
-const LEAD_SENT_KEY = 'tdit_generate_lead_sent';
 const PHONE_REGEX = /^[+()\d\s-]{7,20}$/;
 
 const TREATMENTS = [
@@ -23,9 +20,9 @@ const TREATMENTS = [
 ];
 
 interface QuickLeadFormProps {
-  /** Page path (no trailing slash) to return to after submission, e.g. "/finance-options-uk". */
+  /** Page path used to label analytics events, e.g. "/finance-options-uk". */
   successPath: string;
-  /** Anchor id of the form block, used to scroll back to the thank-you message. */
+  /** Anchor id of the form block. */
   anchorId?: string;
   heading?: string;
   subheading?: string;
@@ -54,32 +51,10 @@ export default function QuickLeadForm({
   const [honeypot, setHoneypot] = useState('');
   const tracking = useLeadFormTracking('quick', successPath);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const params = new URLSearchParams(window.location.search);
-    if (params.get(SUCCESS_PARAM) !== '1') return;
-    setIsSuccess(true);
-    let alreadySent = false;
-    try {
-      alreadySent = sessionStorage.getItem(LEAD_SENT_KEY) === '1';
-    } catch {
-      // Storage unavailable — send the event anyway.
-    }
-    if (!alreadySent) {
-      window.gtag?.('event', 'generate_lead', { form_path: successPath, form_type: 'quick' });
-      try {
-        sessionStorage.setItem(LEAD_SENT_KEY, '1');
-      } catch {
-        // Non-fatal.
-      }
-    }
-    window.history.replaceState({}, '', `${window.location.pathname}#${anchorId}`);
-  }, [successPath, anchorId]);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    if (honeypot.trim()) { e.preventDefault(); return; }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting || honeypot.trim()) return;
     const fail = (field: string, msg: string) => {
-      e.preventDefault();
       setError(msg);
       trackLeadFormError('quick', successPath, field);
     };
@@ -89,18 +64,19 @@ export default function QuickLeadForm({
     setError('');
     setIsSubmitting(true);
     trackLeadFormValidSubmit('quick', successPath);
-    try {
-      sessionStorage.removeItem(LEAD_SENT_KEY);
-    } catch {
-      // Non-fatal.
+    const failure = await submitLead({ formType: 'quick', name, phone, treatment, website: honeypot });
+    setIsSubmitting(false);
+    if (failure) {
+      setError(failure);
+      trackLeadFormError('quick', successPath, 'server');
+      return;
     }
-    // Validation passed — native POST proceeds.
+    window.gtag?.('event', 'generate_lead', { form_path: successPath, form_type: 'quick' });
+    setIsSuccess(true);
   };
 
   const inputClass =
     'w-full border border-gray-300 rounded-lg px-4 py-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]';
-
-  const redirectUrl = `https://www.teethdoneinturkey.co.uk${successPath}?${SUCCESS_PARAM}=1#${anchorId}`;
 
   return (
     <div
@@ -126,16 +102,11 @@ export default function QuickLeadForm({
           <p className="text-sm text-gray-600 mb-5">{subheading}</p>
           <form
             ref={tracking.ref}
-            action={FORM_ENDPOINT}
-            method="POST"
             onSubmit={handleSubmit}
             onFocus={tracking.onFocus}
             onBlur={tracking.onBlur}
             noValidate
           >
-            <input type="hidden" name="_redirect" value={redirectUrl} />
-            <input type="hidden" name="form_type" value="quick" />
-            <input type="hidden" name="source_page" value={successPath} />
             <div className="space-y-3">
               <div>
                 <label htmlFor={`${anchorId}-name`} className="block text-sm font-medium text-gray-700 mb-1">Your name *</label>
