@@ -59,16 +59,26 @@ function escapeHtml(value: string): string {
     .replace(/'/g, '&#39;');
 }
 
-function buildEmailHtml(fields: {
+type EmailFields = {
   name: string;
   email: string;
   phone: string;
+  whatsapp: string;
+  country: string;
   treatmentInterest: string;
   message: string;
+  formType: string;
   pageUrl: string;
   submittedAt: string;
-}): string {
-  const { name, email, phone, treatmentInterest, message, pageUrl, submittedAt } = fields;
+};
+
+function row(label: string, value: string): string {
+  return `<tr><td style="padding:8px 0;color:#6b7280;font-size:13px;">${label}</td></tr>
+                  <tr><td style="padding:0 0 12px 0;color:#111827;font-size:15px;white-space:pre-wrap;">${escapeHtml(value)}</td></tr>`;
+}
+
+function buildEmailHtml(fields: EmailFields): string {
+  const { name, email, phone, whatsapp, country, treatmentInterest, message, formType, pageUrl, submittedAt } = fields;
   return `<!DOCTYPE html>
 <html>
   <body style="margin:0;padding:0;background-color:#f3f4f6;font-family:Arial,Helvetica,sans-serif;">
@@ -84,22 +94,19 @@ function buildEmailHtml(fields: {
             <tr>
               <td style="padding:24px;">
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                  <tr><td style="padding:8px 0;color:#6b7280;font-size:13px;">Name</td></tr>
-                  <tr><td style="padding:0 0 12px 0;color:#111827;font-size:15px;font-weight:bold;">${escapeHtml(name)}</td></tr>
-                  <tr><td style="padding:8px 0;color:#6b7280;font-size:13px;">Email</td></tr>
-                  <tr><td style="padding:0 0 12px 0;color:#111827;font-size:15px;"><a href="mailto:${escapeHtml(email)}" style="color:#1e40af;">${escapeHtml(email)}</a></td></tr>
-                  <tr><td style="padding:8px 0;color:#6b7280;font-size:13px;">Phone</td></tr>
-                  <tr><td style="padding:0 0 12px 0;color:#111827;font-size:15px;">${escapeHtml(phone || 'Not provided')}</td></tr>
-                  <tr><td style="padding:8px 0;color:#6b7280;font-size:13px;">Treatment Interest</td></tr>
-                  <tr><td style="padding:0 0 12px 0;color:#111827;font-size:15px;">${escapeHtml(treatmentInterest || 'Not selected')}</td></tr>
-                  <tr><td style="padding:8px 0;color:#6b7280;font-size:13px;">Message</td></tr>
-                  <tr><td style="padding:0 0 16px 0;color:#111827;font-size:15px;white-space:pre-wrap;">${escapeHtml(message)}</td></tr>
+                  ${row('Name', name)}
+                  ${row('Email', email || 'Not provided')}
+                  ${row('Phone', phone || 'Not provided')}
+                  ${row('WhatsApp', whatsapp || 'Same as phone')}
+                  ${row('Country', country || 'Not provided')}
+                  ${row('Treatment Interest', treatmentInterest || 'Not selected')}
+                  ${row('Message', message || '-')}
                 </table>
                 <hr style="border:none;border-top:1px solid #e5e7eb;margin:16px 0;" />
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                   <tr><td style="padding:4px 0;color:#9ca3af;font-size:12px;">Page: ${escapeHtml(pageUrl)}</td></tr>
+                  <tr><td style="padding:4px 0;color:#9ca3af;font-size:12px;">Form: ${escapeHtml(formType)}</td></tr>
                   <tr><td style="padding:4px 0;color:#9ca3af;font-size:12px;">Submitted: ${escapeHtml(submittedAt)}</td></tr>
-                  <tr><td style="padding:4px 0;color:#9ca3af;font-size:12px;">Reply-To: ${escapeHtml(email)}</td></tr>
                 </table>
               </td>
             </tr>
@@ -111,42 +118,24 @@ function buildEmailHtml(fields: {
 </html>`;
 }
 
-function buildEmailText(fields: {
-  name: string;
-  email: string;
-  phone: string;
-  treatmentInterest: string;
-  message: string;
-  pageUrl: string;
-  submittedAt: string;
-}): string {
-  const { name, email, phone, treatmentInterest, message, pageUrl, submittedAt } = fields;
+function buildEmailText(fields: EmailFields): string {
+  const { name, email, phone, whatsapp, country, treatmentInterest, message, formType, pageUrl, submittedAt } = fields;
   return `NEW DENTAL ENQUIRY
 
-Name:
-${name}
-
-Email:
-${email}
-
-Phone:
-${phone || 'Not provided'}
-
-Treatment Interest:
-${treatmentInterest || 'Not selected'}
+Name: ${name}
+Email: ${email || 'Not provided'}
+Phone: ${phone || 'Not provided'}
+WhatsApp: ${whatsapp || 'Same as phone'}
+Country: ${country || 'Not provided'}
+Treatment Interest: ${treatmentInterest || 'Not selected'}
 
 Message:
-${message}
+${message || '-'}
 
 SOURCE
-Page:
-${pageUrl}
-
-Submitted:
-${submittedAt}
-
-Reply-To:
-${email}`;
+Form: ${formType}
+Page: ${pageUrl}
+Submitted: ${submittedAt}`;
 }
 
 export async function POST(req: NextRequest) {
@@ -184,35 +173,38 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true });
   }
 
-  const name = typeof data.name === 'string' ? data.name.trim() : '';
-  const email = typeof data.email === 'string' ? data.email.trim() : '';
-  const phone = typeof data.phone === 'string' ? data.phone.trim() : '';
-  const treatmentInterest = typeof data.treatmentInterest === 'string' ? data.treatmentInterest.trim() : '';
-  const message = typeof data.message === 'string' ? data.message.trim() : '';
-  const pageUrl = typeof data.pageUrl === 'string' ? data.pageUrl.trim().slice(0, 500) : '';
+  const str = (key: string, max: number) =>
+    typeof data[key] === 'string' ? (data[key] as string).trim().slice(0, max + 1) : '';
+  const name = str('name', 200);
+  const email = str('email', 320);
+  const phone = str('phone', 50);
+  const whatsapp = str('whatsapp', 50);
+  const country = str('country', 100);
+  const treatmentInterest = str('treatmentInterest', 100) || str('treatment', 100);
+  const message = str('message', 5000);
+  const formType = str('formType', 20) || 'full';
+  const pageUrl = str('pageUrl', 500).slice(0, 500);
 
-  if (!name || !email || !message) {
-    return NextResponse.json({ error: 'Name, email, and message are required.' }, { status: 400 });
-  }
-
-  if (name.length > 200 || email.length > 320 || phone.length > 50 || treatmentInterest.length > 100 || message.length > 5000) {
-    return NextResponse.json({ error: 'One or more fields exceed the allowed length.' }, { status: 400 });
-  }
-
-  if (!EMAIL_REGEX.test(email)) {
-    return NextResponse.json({ error: 'Please provide a valid email address.' }, { status: 400 });
+  if (!name || (!email && !phone)) {
+    return NextResponse.json({ error: 'Please give your name and a phone number or email.' }, { status: 400 });
   }
 
   if (
-    HEADER_INJECTION_REGEX.test(name) ||
-    HEADER_INJECTION_REGEX.test(email) ||
-    HEADER_INJECTION_REGEX.test(phone) ||
-    HEADER_INJECTION_REGEX.test(treatmentInterest)
+    name.length > 200 || email.length > 320 || phone.length > 50 || whatsapp.length > 50 ||
+    country.length > 100 || treatmentInterest.length > 100 || message.length > 5000
   ) {
+    return NextResponse.json({ error: 'One or more fields exceed the allowed length.' }, { status: 400 });
+  }
+
+  if (email && !EMAIL_REGEX.test(email)) {
+    return NextResponse.json({ error: 'Please provide a valid email address.' }, { status: 400 });
+  }
+
+  if ([name, email, phone, whatsapp, country, treatmentInterest, formType].some(v => HEADER_INJECTION_REGEX.test(v))) {
     return NextResponse.json({ error: 'Invalid characters detected in submission.' }, { status: 400 });
   }
 
-  const duplicateKey = `${ip}:${email.toLowerCase()}`;
+  const duplicateKey = `${ip}:${(email || phone).toLowerCase()}`;
   if (isDuplicateSubmission(duplicateKey)) {
     return NextResponse.json({ error: 'Duplicate submission detected. Please wait before resubmitting.' }, { status: 429 });
   }
@@ -227,7 +219,7 @@ export async function POST(req: NextRequest) {
   }
 
   const resend = new Resend(apiKey);
-  const emailFields = { name, email, phone, treatmentInterest, message, pageUrl, submittedAt };
+  const emailFields: EmailFields = { name, email, phone, whatsapp, country, treatmentInterest, message, formType, pageUrl, submittedAt };
   const subject = treatmentInterest
     ? `New Dental Enquiry - ${treatmentInterest} - ${name}`
     : `New Dental Enquiry - ${name}`;
@@ -236,7 +228,7 @@ export async function POST(req: NextRequest) {
     const { error } = await resend.emails.send({
       from: 'Teeth Done in Turkey <forms@teethdoneinturkey.co.uk>',
       to: [recipient],
-      replyTo: email,
+      ...(email ? { replyTo: email } : {}),
       subject,
       html: buildEmailHtml(emailFields),
       text: buildEmailText(emailFields),

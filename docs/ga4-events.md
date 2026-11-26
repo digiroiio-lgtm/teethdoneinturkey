@@ -23,8 +23,8 @@ Code: `src/lib/analytics.ts` (helpers), `src/components/AnalyticsEvents.tsx` (si
 | `lead_form_start` | First field focused | `form_type`, `form_path`, `first_field` |
 | `lead_form_field_complete` | A field was left filled in, once per field | `form_type`, `form_path`, `field` |
 | `lead_form_error` | Validation blocked the submit | `form_type`, `form_path`, `error_field` |
-| `lead_form_submit_valid` | Validation passed, the browser is posting the form | `form_type`, `form_path`, `fields_completed`, `seconds_in_form` |
-| `generate_lead` | The form endpoint redirected back to the page | `form_type`, `form_path` |
+| `lead_form_submit_valid` | Validation passed, the form is being sent to `/api/contact` | `form_type`, `form_path`, `fields_completed`, `seconds_in_form` |
+| `generate_lead` | `/api/contact` accepted the lead (email sent through Resend) | `form_type`, `form_path` |
 | `lead_form_abandon` | The visitor left after starting a form and before a valid submit | `form_type`, `form_path`, `last_field`, `fields_completed`, `seconds_in_form` |
 
 Placement names set in code: `floating_bubble`, `mobile_bar`, `finance_top`, `booking_top`, `booking_side`, `plan_hero`. Links caught automatically use `header`, `footer`, `nav` or `section: <heading>`. A `data-ga-placement` attribute on an element (or a parent) overrides the automatic name.

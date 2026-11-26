@@ -9,8 +9,8 @@ import { useViewEvent } from '@/lib/use-view-event';
 //   lead_form_start          -> first field focused (first_field)
 //   lead_form_field_complete -> a field was left filled in (field name only, never the value)
 //   lead_form_error          -> validation stopped the submit (error_field)
-//   lead_form_submit_valid   -> validation passed, the browser is posting the form
-//   generate_lead            -> the form endpoint redirected back (fired in the forms)
+//   lead_form_submit_valid   -> validation passed, the form is being sent to /api/contact
+//   generate_lead            -> /api/contact accepted the lead (fired in the forms)
 //   lead_form_abandon        -> the visitor left after starting but before a valid submit (last_field)
 // valid minus generate_lead = submissions lost between our page and the endpoint.
 // Window.gtag is typed in AiReferralTracking.tsx.
@@ -49,7 +49,6 @@ export function trackLeadFormError(formType: LeadFormType, formPath: string, fie
 export function trackLeadFormValidSubmit(formType: LeadFormType, formPath: string) {
   const state = stateFor(formType, formPath);
   state.submitted = true;
-  // Beacon transport so the hit survives the native POST navigating away.
   trackEvent('lead_form_submit_valid', {
     form_type: formType,
     form_path: formPath,

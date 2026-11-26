@@ -1,15 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { submitLead } from '@/lib/submit-lead';
 import { trackLeadFormError, trackLeadFormValidSubmit, useLeadFormTracking } from '@/lib/lead-tracking';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const FORM_ENDPOINT = 'https://submit-form.com/9xGP4VkVm';
-const SUCCESS_PARAM = 'submitted';
-// Refresh/back-button guard for `generate_lead`. Set when the event fires and
-// cleared on the next real submission, so one successful submission = one event
-// while a genuine second submission in the same session still counts.
-const LEAD_SENT_KEY = 'tdit_generate_lead_sent';
 
 const COUNTRIES = [
   'United Kingdom',
@@ -124,7 +119,7 @@ const COUNTRIES = [
 ];
 
 interface LeadFormProps {
-  /** Absolute path (no trailing slash) to redirect back to after submission, e.g. "/book-consultation". */
+  /** Page path used to label analytics events, e.g. "/book-consultation". */
   successPath?: string;
   /** Label for the submit button. */
   submitLabel?: string;
@@ -143,33 +138,10 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
   const [honeypot, setHoneypot] = useState('');
   const tracking = useLeadFormTracking('full', successPath);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const params = new URLSearchParams(window.location.search);
-    if (params.get(SUCCESS_PARAM) === '1') {
-      setIsSuccess(true);
-      let alreadySent = false;
-      try {
-        alreadySent = sessionStorage.getItem(LEAD_SENT_KEY) === '1';
-      } catch {
-        // Storage unavailable — fall through and send the event.
-      }
-      if (!alreadySent) {
-        window.gtag?.('event', 'generate_lead', { form_path: successPath });
-        try {
-          sessionStorage.setItem(LEAD_SENT_KEY, '1');
-        } catch {
-          // Non-fatal.
-        }
-      }
-      window.history.replaceState({}, '', window.location.pathname);
-    }
-  }, [successPath]);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    if (honeypot.trim()) { e.preventDefault(); return; }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting || honeypot.trim()) return;
     const fail = (field: string, msg: string) => {
-      e.preventDefault();
       setValidationError(msg);
       trackLeadFormError('full', successPath, field);
     };
@@ -180,12 +152,15 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
     setValidationError('');
     setIsSubmitting(true);
     trackLeadFormValidSubmit('full', successPath);
-    try {
-      sessionStorage.removeItem(LEAD_SENT_KEY);
-    } catch {
-      // Non-fatal.
+    const error = await submitLead({ formType: 'full', name, phone, whatsapp, email, country, message, website: honeypot });
+    setIsSubmitting(false);
+    if (error) {
+      setValidationError(error);
+      trackLeadFormError('full', successPath, 'server');
+      return;
     }
-    // Validation passed — native POST proceeds
+    window.gtag?.('event', 'generate_lead', { form_path: successPath });
+    setIsSuccess(true);
   };
 
   if (isSuccess) {
@@ -203,19 +178,14 @@ export default function LeadForm({ successPath = '/contact', submitLabel = 'Send
   const inputClass =
     'w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af]';
 
-  const redirectUrl = `https://www.teethdoneinturkey.co.uk${successPath}?${SUCCESS_PARAM}=1`;
-
   return (
     <form
       ref={tracking.ref}
-      action={FORM_ENDPOINT}
-      method="POST"
       onSubmit={handleSubmit}
       onFocus={tracking.onFocus}
       onBlur={tracking.onBlur}
       noValidate
     >
-      <input type="hidden" name="_redirect" value={redirectUrl} />
       <div className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
