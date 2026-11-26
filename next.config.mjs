@@ -12,11 +12,11 @@ const ContentSecurityPolicy = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https:",
   "font-src 'self'",
-  "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://submit-form.com",
+  "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com",
   "frame-src 'none'",
   "object-src 'none'",
   "base-uri 'self'",
-  "form-action 'self' https://submit-form.com",
+  "form-action 'self'",
 ].join("; ");
 
 const nextConfig = {
